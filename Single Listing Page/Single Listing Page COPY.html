@@ -1,0 +1,1994 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Piggery Marketplace</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<style>
+
+        /* Header styles */
+        header {
+            /* background-image: url(header.png);   logicdigger css remove this
+            height: 100vh; /* Make the image responsive logicdigger css remove this */
+            width: 100%; 
+            object-fit: cover; /* Ensure the image covers the entire header */
+            filter: brightness(0.);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 99;
+        }
+
+        /***logicdigger css***/
+        .listing-title {
+    width: 100%;
+    max-width: 85%;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.heor-content {
+    width: 100%;
+    max-width: 1270px;
+    margin: 0 auto;
+    padding: 12px 25px;
+}
+
+  /***logicdigger css ***/
+        .navbar-toggler, .navbar-close {
+            display: none;
+            background-color: transparent;
+            border: none;
+            font-size: 35px;
+            cursor: pointer;
+        }
+        .navbar-nav {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            flex: 1;
+            justify-content: space-between;
+        }
+        .navbar-nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #3c5823;
+    font-weight: 600;
+}
+        .navbar-nav .icons a {
+            margin: 0 5px;
+        }
+        .navbar-collapse {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            flex: 1;
+        }
+
+        @media only screen and (min-width: 1024px) and (max-width: 1350px)  {
+          .image-item {
+            margin-bottom: 20px !important;
+          }
+          .navbar-nav .nav-link:nth-child(6) {
+            margin: 0 !important;
+          }
+          .rectangle-container{
+            display: block !important;
+            text-align: center;
+          }
+          .rectangle {
+    width: 25% !important;
+    display:inline-block !important;
+  }
+  .rectangle li img {
+    height: 10%;
+    width: 10% !important;
+    padding-right: 3%;
+}
+  .rectangle img {
+    width: 100% !important;
+  }
+        }
+        @media only screen and (min-width: 768px) and (max-width: 1024px)  {
+        .rectangle-container  .rectangle img {
+    width: 310px !important;
+}
+.sell-us-content{
+  display: block !important;
+  margin-bottom: 20px;
+}
+.rectangle-container .rectangle {
+    width: 300px !important;
+}
+.rectangle-container {
+    flex-wrap: wrap;
+}
+.rectangle-container .rectangle li img {
+    width: 10% !important;
+}
+footer {
+    height: unset !important;
+}
+.footer-columns {
+    display: block !important;
+}
+main .listing-title .title{
+  text-align: center !important;
+}
+  }
+  @media (max-width: 400px) { 
+  .search-container input[type=text] {
+    padding: 10px;
+    width: 200px !important;
+}
+.rectangle {
+        max-width: 80% !important;
+        margin: 0 auto !important;
+        margin-bottom: 20px !important;
+    }
+    .rectangle img {
+    width: 100% !important;
+    max-width: 350px;
+}
+.rectangle li img {
+    height: 10%;
+    width: 10% !important;
+    padding-right: 3%;
+}
+  }
+        @media (max-width: 1024px) {
+            .navbar-nav {
+               
+                flex-direction: column;
+                background-color: #f8f9fa;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                padding: 10px 0;
+            }
+            .navbar-collapse.show {
+  display: block !important;
+}
+.navbar-collapse {
+    display: none;
+}
+.navbar .container {
+    display: block;
+}
+.image-item {
+    margin-bottom: 20px !important;
+}
+            .navbar-nav .nav-link:nth-child(6){
+              margin: 0 !important;
+            }
+            .navbar-nav a {
+              padding: 10px 15px;
+          }
+            .navbar-nav.show {
+                display: flex;
+            }
+            .navbar-toggler {
+                display: block;
+            }
+            .navbar-close {
+                display: block;
+                align-self: flex-end;
+                margin: 10px 20px;
+                position: absolute;
+            }
+
+            span.navbar-toggler-icon {
+    float: right;
+    margin-right: 20px;
+}
+.navbar {
+    margin-top: 20px !important;
+}
+.navbar img {
+    margin-left: 20px;
+}
+        }
+
+.listing-title .title {
+    text-align: left !important;
+}
+body {
+    margin: 0;
+    padding: 0;
+}   
+.navbar .container {
+    width: 100%;
+    max-width: 1270px;
+    margin: auto;
+} 
+.heor-content {
+    width: 100%;
+    max-width: 1270px;
+    margin: 0 auto;
+}
+
+.hero-iner {
+    display: flex;
+    align-items: center;
+    height: 20vh;
+    background-size: cover;
+    background-position: bottom center;
+}
+
+.hero-section {
+    position: relative;
+}
+
+
+  /***logicdigger css end ***/
+
+    body  {
+      font-family: "Inter", sans-serif;
+        font-weight: 450;
+        font-size: 14px;
+        color: rgb(79, 79, 79);
+        width: 100%; /* Make the image responsive */
+        height: 100%; /* Make the image responsive */
+    } 
+
+.inter-font {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+    body {
+    height: 3400px;
+    }
+    .mochiy-pop-one-regular {
+  font-family: "Mochiy Pop One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+    .navbar-nav .nav-link:nth-child(6) {
+        margin-right: 280px; /*Adjust logo*/
+    }
+    .navbar-nav .nav-link:nth-child(1) {
+        margin-right: px;
+    }
+    .signup-button {
+      color: rgba(255, 255, 255, 0.952) !important;
+      background-color: #000000ce; /* Change background color to a prominent color */
+      border-radius: 20px; /* Add rounded corners */
+      padding: 10px 20px; /* Add padding to increase button size */
+      transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+    }
+    .signup-button:hover {
+background-color: #ff4632c8;
+    }
+    .navbar {
+margin-top: 38px; /* Adjust the value to move the navbar down further */
+}
+    .main-title {
+      margin-top: 30px;
+      font-size: 48px;
+      font-weight: bolder;
+      font-family: "Mochiy Pop One", sans-serif;
+      color: black;
+    }
+    .h4-title {
+      margin-top: -20px;
+      font-size: 23px;
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+    }
+    .search-container {
+      margin-top: -0px;
+    }
+    .search-container input[type=text] {
+padding: 10px;
+width: 268px;
+border: 1px solid #ccc;
+border-radius: 7.5px;
+outline: none;
+padding-top: 30px;
+background-color: rgb(252, 252, 252);
+font-family: Arial;
+font-size: 15px;
+font-weight: 500;
+text-align: center; /* Center the text vertically */
+justify-content: center; /* Center the text horizontally */
+padding: 19px;
+}
+.search-container input[type=text]::placeholder {
+    color: #c5c5c5; /* Light gray color */
+    display: flex;
+    padding: 50px;
+    font-weight: 600;
+}
+    .submit-container {
+      margin-top: -57px;
+      margin-left: 305px;
+      padding-left: 10px;
+    }
+    .submit-container button[type=submit] {
+      width: 149.33px;
+      border: 1px solid #ff4632c8;
+      background-color: #ff4632c8;
+      border-radius: 7.5px;
+      outline: none;
+      padding-top: 38px;
+      font-size: 15px;
+      font-weight: 600;
+      color: whitesmoke;
+      display: flex;
+      justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    padding: 19px;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+    }
+    .submit-container button[type=submit]:hover {
+    background-color: #ff4632e6; /* Darker color when hovered */
+    }
+    .bi-search {
+      position: absolute;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      padding: 19px;
+    }
+    .navbar-brand {
+      margin-right: 0px;
+      position: fixed;
+      height: auto;
+    }
+    .container { 
+    display:flex; /* Use flexbox */
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    }
+
+    
+    .bi-heart {
+      font-size: 20px;
+      font-weight: 900;
+      padding-right: 5px;
+    }
+    .bi-cart3 {
+      font-size: 20px;
+      font-weight: 900px;
+      padding-right: 10px;
+    }
+   
+        main {
+        /* Can use flex here */
+  height: 100vh; /* Set main height to full viewport height */
+}
+
+.heor-content {
+    padding-top: 20px; /* Adjust padding as needed to ensure breadcrumb is below the navbar */
+    padding-left: 15px; /* Adjust padding as needed */
+
+}
+
+.breadcrumb-section {
+    max-width: 1270px; /* Ensure container matches navbar width */
+    margin: 0 auto; /* Center the container */
+    padding-left: 0px; /* Align with other sections if necessary */
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.breadcrumb-container {
+    display:flex; /* Use flexbox */
+    justify-content: flex-start; /* Center the text horizontally */
+    align-items: flex-start; /* Center the text vertically */
+}
+
+.breadcrumb {
+    background: none;
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    display: flex; /* Make the breadcrumb horizontal */
+    list-style: none; /* Remove default list styles */
+}
+
+.breadcrumb-item {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: "/";
+    margin: 0 5px; /* Space between the items */
+    color: #6c757d9d; /* Color for the slash */
+}
+
+.breadcrumb a {
+    color: #6c757d9d;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb .breadcrumb-item.active {
+    color: #0f0f0f;
+    font-weight: bold;
+}
+
+/* Main Content Section */
+.main-content-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1270px; /* Ensure container matches navbar width */
+    margin: 0 auto; /* Center the container */
+    padding-left: 0px; /* Align with other sections if necessary */
+    margin-top: 30px;
+}
+
+.main-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%; /* Ensure the container takes full width */
+}
+
+.image-gallery {
+    display: flex;
+    flex-direction: row; /* Change to column to stack thumbnails and main image vertically */
+    align-items: flex-start;
+    margin-right: 20px; /* Space between image gallery and pig details */
+}
+
+.main-image img {
+    transition: opacity 0.3s ease;
+}
+
+.thumbnail-images img:hover {
+    /*cursor: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"%3E%3Cpath d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.415l-3.85-3.85a1.007 1.007 0 0 0-.115-.098zm-5.442.656a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11z"/%3E%3C/svg%3E'), auto; */
+    cursor: pointer;
+}
+
+.thumbnail-images {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between thumbnails */
+    margin-right: 20px; /* Space between thumbnails and main image */
+}
+
+.thumbnail-images img {
+    width: 108px; /* Adjust the size as needed */
+    height: 106.5px;
+    border-radius: 0px;
+}
+
+.main-image img {
+    width: 450px; /* Adjust the size as needed */
+    /* height: auto; */
+    height: 456px; /*414px*/
+    border-radius: 0px;
+}
+
+.pig-details {
+    max-width: 650px; /* Adjust the width as needed */
+    margin-left: 30px; /* Add margin to separate from the image gallery */
+}
+
+.location img {
+  height: 4%;
+  width: 4%;
+  align-items: center;
+  justify-content: center;
+  padding-right: 5px;
+}
+
+.save-icon {
+  display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 470px;
+    top: 0;
+    right: 0;
+    font-size: 14px; /* Font size for "Save" text */
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    color: black;
+}
+
+.save-icon i.bi-heart-fill {
+    margin-right: 5px; /* Space between icon and text */
+    color: #ccc;
+}
+
+.save-icon i.bi-heart-fill.red {
+            color: red; /* Set the heart icon color to red */
+        }
+
+.weight img {
+  height: 6%;
+  width: 6%;
+  align-items: center;
+  justify-content: center;
+}
+
+.price-icon img {
+  height: 6%;
+  width: 6%;
+  align-items: center;
+  justify-content: center;
+  padding-right: 5px;
+}
+
+.price-icon {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.user-profile {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.user-profile img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 10px; /* Space between the image and the text */
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column; /* Stack name and rating vertically */
+    display: flex;
+    align-items: left;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.user-profile h4 {
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    color: rgb(79, 79, 79);
+    margin: 0; /* Remove margin */
+}
+
+.user-rating {
+    display: flex;
+    align-items: center;
+    margin-top: 5px; /* Add margin to separate from the name */
+}
+
+.user-rating img {
+    width: 20px; /* Adjust the size of the star icon */
+    height: 20px;
+    margin-right: 5px; /* Space between the star and the rating text */
+}
+
+.user-rating span {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: rgb(79, 79, 79);
+    font-weight: 700;
+}
+
+.location {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.pig-details ul {
+  list-style-type: none;
+  justify-content: left;
+  padding: 0;
+  margin: 0px;
+}
+
+.pig-details ul li {
+  align-items: center;
+  justify-content: left;
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.pig-details h3 {
+    font-family: "Mochiy Pop One", sans-serif;
+    font-size: 30px;
+    color: black;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.pig-details .description {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: rgb(79, 79, 79);
+    line-height: 1.7;
+    font-weight: 420;
+    height: 96px;
+    width: 509px;
+}
+
+.read-more-link {
+  color: #6c757d9d;
+  font-family: "Inter", sans-serif;
+  margin-left: 10px;
+}
+
+.read-more-link a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.read-more-link a:hover {
+  text-decoration: underline;
+  color: #5EA91E; /* Slightly darker color for hover */
+}
+
+.button-container {
+    display: flex;
+    gap: 11px; /* Horizontal gap between buttons */
+    margin-top: 20px; /* Add some margin above the buttons */
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px; /* Vertical padding: 10, Horizontal padding: 16 */
+    border: none;
+    border-radius: 43px;
+    color: #FFFFFF;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    width: 159px;
+    height: 44px;
+}
+
+.button i {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+.add-to-cart {
+    background-color: #182110; /* Button color */
+}
+
+.contact-seller {
+    background-color: #5EA91E; /* Button color */
+}
+
+.contact-seller:hover {
+    background-color: #4e921a; /* Slightly darker green on hover */
+}
+
+.nav-links-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 0;
+    padding-bottom: 50px;
+    align-items: center;
+    max-width: 1270px; /* Ensure container matches navbar width */
+    margin: 0 auto; /* Center the container */
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+    padding: 0;
+    text-align: left;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #707070;
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    font-weight: 460;
+    padding: 0;
+    transition: color 0.3s ease, font-weight 0.3s ease, text-decoration 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #5EA91E;
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 10px; /* Adjust the offset value as needed */
+}
+
+.nav-links a:hover {
+    color: #5EA91E;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.nav-hr {
+    width: 100%;
+    border: none;
+    border-top: 1px solid #000000; /* Adjust the color and thickness as needed */
+    margin-top: 60px; /* Adjust the spacing above the hr */
+}
+
+.features-section {
+  max-width: 1270px; /* Ensure container matches navbar width */
+    margin: 0 auto; /* Center the container */
+    padding-left: 0px; /* Align with other sections if necessary */
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.features-container {
+    max-width: 1270px; /* Container width */
+    margin: 0 auto; /* Center align */
+}
+
+.feature-title {
+    font-size: 36px;
+    font-family: "Mochiy Pop One", sans-serif;
+    color: #333;
+    margin-bottom: 40px;
+    margin-top: 0px;
+}
+
+.features-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.feature-item {
+    background-color: #FFFCFB;
+    border-radius: 17px;
+    border: 1.5px solid #F3E7E3; /* Border width and color */
+    border-color: #F3E7E3;
+    width: 400px;
+    height: 104px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 23px;
+    box-sizing: border-box;
+}
+
+.feature-item img {
+    width: 84px; /* Adjust width as needed */
+    height: 84px; /* Adjust height as needed */
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.feature-item h4 {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 900;
+    color: #333;
+    margin: 0;
+}
+
+.feature-item span {
+     font-family: "Inter", sans-serif;
+     font-size: 15px;
+     margin-left: 10px;
+     font-weight: 900;
+
+}
+
+.description-section {
+    max-width: 1270px; /* Ensure container matches navbar width */
+    margin: 0 auto; /* Center the container */
+    padding: 20px 0; /* Adjust padding as needed */
+    text-align: left; /* Align text to the left */
+}
+
+.description-container {
+    max-width: 1270px; /* Container width */
+    margin: 0 auto; /* Center align */
+}
+
+.description-title {
+    font-size: 36px;
+    font-family: "Mochiy Pop One", sans-serif;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.description-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 48px; /* Space between the image and the product details */
+  margin-bottom: 80px;
+}
+
+.product-image img {
+  width: 376px; /* Image width */
+  height: 334px; /* Image height */
+  object-fit: cover;
+  border-radius: 15px; /* Optional: Add some border-radius if needed */
+  border: 1.5px solid;
+  border-color: #F3E7E3;
+}
+
+.product-details {
+  flex: 1; /* Take the remaining space */
+}
+
+.product-title {
+  font-size: 26px;
+  font-family: "Mochiy Pop One", sans-serif;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.description-text-box {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  color: rgb(79, 79, 79);
+  line-height: 1.7;
+  text-align: left;
+  font-weight: 420;
+}
+
+.description-text-box p {
+  margin: 0;
+}
+
+.adjusted-br {
+  margin-bottom: -5px; /* Adjust this value to control the space */
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between buttons */
+}
+
+.button {
+    padding: 0px 0px;
+    border-radius: 43px;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+.contact-seller {
+    background-color: #5EA91E;
+    width: 159px;
+    height: 44px;
+}
+
+.contact-seller:hover {
+  background-color: #4e921ae2;
+}
+
+.icon-only {
+    background-color: #5EA91E;
+    width: 59px;
+    height: 44px;
+}
+
+.icon-only:hover {
+    background-color: #4e921ae2; /* Slightly darker green on hover */
+}
+
+.icon-only img {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-right: 0px;
+  height: 20px;
+  width: 20px;
+}
+
+.icon-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px; /* Size of the circle */
+    height: 25px; /* Size of the circle */
+    border: 1px solid #ffffff; /* Border color */
+    border-radius: 50%; /* Makes the shape a circle */
+    color: #ffffff; /* Color of the icon */
+}
+
+.reviews-section {
+    max-width: 1270px; /* Ensure container matches navbar width */
+    margin: 0 auto; /* Center the container */
+    padding: 20px 0; /* Adjust padding as needed */
+    text-align: left; /* Align text to the left */
+}
+
+.reviews-container {
+    max-width: 1270px; /* Container width */
+    margin: 0 auto; /* Center align */
+}
+
+.reviews-title {
+    font-size: 36px;
+    font-family: "Mochiy Pop One", sans-serif;
+    color: #333;
+    margin-bottom: 40px;
+    margin-top: 0px;
+}
+
+.review-numbers-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px; /* Adjust margin as needed */
+}
+
+.star-icon {
+    width: 24px; /* Adjust the size as needed */
+    height: 24px; /* Adjust the size as needed */
+    margin-right: 10px; /* Space between icon and text */
+    margin-bottom: 5px;
+}
+
+.review-numbers {
+    font-family: "Inter", sans-serif;
+    font-size: 22.5px;
+    font-weight: 500;
+    color: #333;
+}
+
+.review-count {
+    color: #3333334b;
+}
+
+.review-rectangles-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 58px; /* Space between rectangles */
+}
+
+.review-rectangle {
+    width: 274px;
+    height: 312px;
+    border: 1px solid #EFEFEF;
+    border-radius: 18px;
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.user-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.user-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.user-info-details {
+    display: flex;
+    align-items: left;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column; /* Stack name and rating vertically */
+}
+
+.username {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 3px;
+}
+
+.stars {
+    display: flex;
+    gap: 3px;
+}
+
+.bi.bi-star-fill {
+    font-size: 18px; /* Adjust the size as needed */
+    color: #ff9d00; /* Gold color for the stars */
+}
+
+.bi.bi-star-fill:last-of-type {
+    color: #D3D3D3; /* Light grey color for the last star */
+}
+
+.review-description {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+.review-date {
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    color: #c0bebe;
+}
+
+.pagination-section {
+  max-width: 1270px; /* Ensure container matches navbar width */
+    margin: 0 auto; /* Center the container */
+    padding: 20px 0; /* Adjust padding as needed */
+    text-align: left; /* Align text to the left */
+}
+
+.pagination-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: -5px;
+}
+
+.pagination-dots .dot {
+    height: 14px;
+    width: 14px;
+    background-color: #D9D9D9;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 10px;
+    transition: background-color 0.3s;
+}
+
+.pagination-dots .dot.active {
+    background-color: #5EA91E;
+}
+
+.content {
+  text-align: center; /* Center text horizontally */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  font-size: 20px;
+  color: black;
+  font-weight: bolder;
+  font-family: Arial;
+}
+
+.text-box {
+  width: 225px; /* Adjust width of the text box 195px */
+}
+
+.text-box p {
+  font-size: 14px;
+  margin: 0;
+  text-align: left;
+  line-height: 1.6; /* Adjust this value for desired line spacing */
+}
+
+.introduction {
+  height: 100vh; /* Make the image responsive */
+            width: 100vw; /* Make the image responsive */
+            object-fit: cover; /* Ensure the image covers the entire header */
+            filter: brightness(0.);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+}
+.listings {
+  height: 100vh; /* Make the image responsive */
+            width: 100vw; /* Make the image responsive */
+            object-fit: cover; /* Ensure the image covers the entire header */
+            filter: brightness(0.);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+}
+.listing-title h2 {
+  text-align: left; /* Center text horizontally */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  max-width: 1270px;
+  font-size: 36px;
+  color: #333;
+  margin: 0 auto;
+  padding-left: 0px;
+  font-weight: bold;
+  font-family: "Mochiy Pop One", sans-serif;
+ /*  margin-top: 20vh; Adjust as needed to position content below header remove from logicdiger */
+  margin-bottom: 40px;
+  /* Add padding as well */
+}
+.rectangle-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Adjust the gap between the rectangles */
+  margin-top: 50px; /* Adjust the margin as needed */
+  margin-bottom: 50px;
+}
+
+.rectangle {
+  background-color: #ffffff;
+  border: 1px solid #cfcfcf;
+  border-radius: 20px;
+  padding: 20px; /* 95px */
+  width: 350px; /* Adjust the width as needed */
+  height: 550px; /* Adjust the height as needed */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 10px;
+  transition: all 0.3s ease; /* Delete */
+  position: relative; /* Delete */
+}
+
+.rectangle img {
+  width: 350px; /* Make the image responsive */
+  height: auto;
+  /* max-height: 50%; /* Adjust the maximum height of the image */
+  border-radius: 20px 20px 20px 20px;
+  margin-bottom: 0px;
+}
+
+.rectangle ul {
+  list-style-type: none;
+  padding-right: px; /* padding-left/right: 20px;/60px; */ 
+  text-align: left;
+  margin-top: -10px; /* Adjust the margin as needed */
+  font-size: 15px;
+}
+
+.rectangle ul li {
+  margin-bottom: 20px; /* Adjust the margin between list items */
+  display: flex;
+  align-items: center;
+}
+
+.rectangle h4 {
+  font-size: 20px;
+  font-family: "Mochiy Pop One", sans-serif;
+  font-weight: bolder;
+  color: black;
+  position: relative; /* Delete */
+  margin-bottom: 30px; /* Delete */
+}
+/* Delete */
+.rectangle h4::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0.5px;
+  background-color: rgba(0, 0, 0, 0.353);
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+/* Delete */
+.rectangle:hover {
+  border-color: #88888837;
+  background-color: #f0f0f0;
+}
+/* Delete */
+.rectangle:hover h4::after {
+  width: 100%;
+}
+
+.rectangle li img {
+  height: 10%;
+  width: 10%;
+  padding-right: 3%;
+}
+
+.price {
+  font-weight: bolder;
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+}
+
+.rectangle button {
+  width: 149.33px;
+      border: 1px solid #ff4632c8;
+      background-color: #ff4632c8;
+      border-radius: 7.5px;
+      outline: none;
+      padding-top: 38px;
+      font-size: 15px;
+      font-weight: 600;
+      color: whitesmoke;
+      display: flex;
+      justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    padding: 15px;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+}
+
+.rectangle button[type=submit]:hover {
+    background-color: #ff4632e6; /* Darker color when hovered */
+    }
+
+    footer {
+        background-color: #43662e; /* Dark green background color */
+        color: #ffffff;
+        text-align: center;
+        padding: 50px 0; /* Adjust padding to fit within 600px height */
+        height: 580px; /* Set height to 600px */
+        position: relative;
+    }
+
+    footer .footer-content {
+    padding: 0 50px; /* Add horizontal padding to match the sell-us-section */
+}
+
+    .footer-logo {
+        display: block;
+        margin: 0 auto;
+        height: auto;
+        width: 350px; /* Adjust width as necessary */
+        margin-bottom: 20px;
+    }
+
+    .footer-columns {
+        display: flex;
+        justify-content: space-around;
+        /* align-items: flex-start; /* Align items to the start to fit better within the height */
+        /* align-items: center; /*Change that perhaps?*/
+        margin-top: 5%;
+        height: calc(100% - 100px); /* Ensure columns take up the full height of the footer, accounting for padding */
+}
+
+    .footer-box {
+        max-width: 250px;
+        text-align: left;
+        font-size: 16px; /* Adjust font size to fit within the height */
+        display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    height: 100%; /* Ensure footer-box takes up the full height of the parent */
+    line-height: 1.8; /* Adjust this value for desired line spacing */
+    }
+
+    .footer-box h4 {
+        color: #ffffff;
+        margin-bottom: 15px;
+        font-size: 20px;
+    }
+
+    .footer-box p {
+        color: #d2d2d2;
+        margin: 5px 0;
+        line-height: 1.8; /* Adjust this value for desired line spacing */
+    }
+
+    .footer-nav,
+    .footer-bottom-nav {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-nav li,
+    .footer-bottom-nav li {
+        margin-bottom: 10px; /* Reduce margin to fit better */
+    }
+
+    .footer-nav a,
+    .footer-bottom-nav a {
+        color: #e1e1e1;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .footer-nav a:hover,
+    .footer-bottom-nav a:hover {
+        color: #ffffff;
+    }
+
+    .footer-box input[type=email] {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1.2px solid #e1e1e1;
+        color: #ffffff;
+        padding: 10px 0; /* Remove left padding to align placeholder */
+        width: 235px;
+        margin-top: 15px;
+        outline: none;
+        text-align: left; /* Align text to the left */
+        position: relative;
+}
+
+.email-container {
+    position: relative;
+    display: inline-block;
+}
+
+.email-container::before {
+  content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABdUlEQVR4nO3cPUoDYRRG4UEQV2NjZ6GSqAj+bEBsrWzcnI2L0NbeRgQridHGI8JIJEyKQMi9H/c8CxheOEwymRnSdZIkSZIkSZIkSZIkSZIkSVoxYBu4B+6AnVUfX0sCHph5B/aWPYZWCHj+F8Qo0YDruSB/Ufajt5UF3ALfc1EmwCh6W1ksjjKO3lYWRskHo+SDUZqKchi9rSyMkg9GaSrKUfS2shiO8mGUQEZJCM+UfBZE+QTOoreVhVHyMUpbUc6jt5WFUZqJ8gVcdBkAV8DrwOPRaqbASXSMzf5XrGa3WQ4ig2z1I5QhSB/lEnjpB1U2Df/IKvylPs/L3wjGaCOG97XWzRj5Y/xe6h9HbyuHxTF8pLtuxkgEz4z0MSZ+TOWK4VuM62aMNmKMo7eVgzHywBh5YIw8MEYTMUbR28rBGHkANwNnhn8cEPh2zGQghv93EhRkA3gzRiLAKfAEPAK70XskSZIkSZIkSZIkSZIkSZK6cD+4pa0FeKE3zwAAAABJRU5ErkJggg==');
+    position: absolute;
+    right: -15px; /* Adjust the position as needed */
+    bottom: 25px; /* Adjust the position as needed */
+    height: 15px; /* Adjust size as needed */
+    pointer-events: none; /* Ensure the icon does not interfere with input interactions */
+    color: white;
+    size: 1px;
+    transform: scale(0.3); /* Scale the image to 50% of its original size */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 25px; /* Space between the input field and social media icons */
+    gap: 10px;
+}
+
+.social-icon {
+    width: 30px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
+}
+
+.footer-box img {
+height: 35px;
+width: 35px;
+color: white;
+}
+
+    .footer-box input[type=email]::placeholder {
+        color: #b9b9b98b;
+        font-size: 16px;
+    }
+
+    hr {
+        border: 0;
+        height: 1.2px;
+        background-color: #e1e1e1;
+        margin: 80px 0;
+        margin: 120px auto 10px auto; /* Increase the top margin to move the hr line down */
+        width: 90%; /* Set the width to 1320px */
+    }
+
+    .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 12px; /* Adjust font size to fit within the height */
+        width: 90%;
+        margin: 0 auto; /* Center align the footer-bottom container */
+        color: #e1e1e1;
+        padding: 0 60px; /* Add padding to the sides */
+        padding-top: 10px; /* Add some padding at the top */
+    }
+
+    .footer-bottom p {
+        margin: 0px;
+        color: #e1e1e1;
+    }
+
+    .footer-bottom-nav {
+        display: flex;
+        gap: 20px; /* Adjust gap to fit within the height */ /*Use this on navbar as well.*/
+        color: #e1e1e1;
+    }
+
+
+  /***logicdigger css  for mobile***/
+
+
+@media only screen and (max-width: 768px) {
+    
+      footer {
+    height: unset !important;
+}
+.footer-columns {
+    display: unset !important;
+ 
+} 
+.feed-details {
+    padding: 10px !important;
+}
+.feed-section-content {
+    display: block !important;
+    width: 85%;
+}
+.rectangle {
+    margin: auto;
+    margin-bottom: 20px;
+}
+.rectangle-container {
+    display: block !important;
+}
+.listing-title .title , .feed-section-title h2, .sell-us-section-title h2{
+    text-align: center !important;
+    font-size: 25px;
+}
+.sell-us-title, .second-sell-us-title{
+  font-size: 20px;
+}
+.footer-logo {
+    width: 250px;
+    margin-bottom: 20px;
+}
+.feed-title{
+  font-size: 25px;
+}
+
+.heor-content {
+    padding: 30px;
+}
+
+
+.navbar-nav a {
+    text-decoration: none;
+    color: #000;
+    padding: 10px 20px;
+    text-align: center;
+    margin: auto;
+    font-weight: 500;
+}
+
+
+.sell-us-content {
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1200px;
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.sell-us-item {
+    display: block !important;
+}
+.footer-bottom {
+    display: block !important;
+     width: unset !important;
+}
+hr {
+    width: 100%;
+}
+.footer-bottom-nav {
+    display: block !important;
+    margin-top: 10px;
+}
+.main-title {
+    font-size: 25px;
+}
+
+.h4-title {
+    font-size: 18px;
+    padding-top: 15px;
+}
+
+.submit-container {
+    margin: unset;
+    padding: 0;
+}
+
+.search-container input[type=text] {
+    margin-bottom: 10px;
+}
+
+.hero-iner {
+    background-position: center !important;
+}
+
+}
+
+    div#navbarNavAltMarkup {
+    margin-left: 30px;
+}   
+
+  /***logicdigger css  for mobile end ***/
+</style>
+</head>
+<body>
+
+    <!-- Header -->
+  <header>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#"></a> <!-- Logo -->
+      <img src="farmifylogo.png" alt="Logo" height="50"> <!-- Adjust the height as needed -->
+            </a>
+        <span class="navbar-toggler-icon">   <button class="navbar-toggler" onclick="toggleNav()">
+          &#9776;
+      </button></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+    
+
+        <div class="navbar-nav">
+
+          <button class="navbar-close" onclick="toggleNav()">
+            &times;
+        </button>
+          <a class="nav-link disabled">Home</a>
+          <a class="nav-link disabled">Pigs for Sale</a>
+          <a class="nav-link disabled">Sell your Pig</a>
+          <a class="nav-link disabled">About us</a>
+          <a class="nav-link disabled">Contact us</a>
+          <i class="bi bi-heart"></i>
+          <i class="bi bi-cart3"></i>
+          <a class="nav-link disabled">Login</a>
+          <a class="nav-link signup-button">Sign up</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+</header>
+
+<div class="hero-section">
+   <div class="hero-iner" style="background-image: url();">
+    <div class="heor-content">
+    </div>
+      </div> <!--iner hero-->
+</div><!--hero end-->
+      <main>
+
+        <!-- Breadcrumb Section -->
+<section class="breadcrumb-section">
+    <div class="breadcrumb-container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Pigs for Sale</a></li>
+                <li class="breadcrumb-item"><a href="#">Search Results</a></li>
+                <li class="breadcrumb-item active" aria-current="page">10 Pigs for Sale in Cebu</li>
+            </ol>
+        </nav>
+    </div>
+</section>
+
+<!-- Main Content Section -->
+<section class="main-content-section">
+    <div class="main-container">
+        <div class="image-gallery">
+            <div class="thumbnail-images">
+                <img src="Rectangle 41.png" alt="Thumbnail 1" data-image="Rectangle 41.png">
+                <img src="Pig57.png" alt="Thumbnail 2" data-image="Pig57.png">
+                <img src="Pig58.png" alt="Thumbnail 3" data-image="Pig58.png">
+                <img src="Pig56.png" alt="Thumbnail 4" data-image="Pig56.png">
+            </div>
+            <div class="main-image">
+                <img src="Rectangle 41.png" alt="Main Pig Image" id="main-image">
+            </div>
+        </div>
+        <div class="pig-details">
+          <ul>
+              <li class="location">
+                  <img width="96" height="96" src="https://img.icons8.com/color/96/marker--v1.png" alt="marker--v1"/>Cebu
+                  <div class="save-icon" onclick="toggleSaveIcon(this)">
+                    <i class="bi bi-heart-fill"></i>
+                    <span>Save</span>
+                </div>
+              </li>
+          </ul>
+          <h3>10 Pigs for Sale in Cebu</h3>
+          <ul>
+              <li class="price-icon">
+                  <img width="96" height="96" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>Price: 20,000
+              </li>
+          </ul>
+          <div class="user-profile">
+              <img src="Rectangle 46.png" alt="User Profile Picture">
+              <div class="user-info-details">
+                  <h4>Darwin Rabago</h4>
+                  <div class="user-rating">
+                      <img src="https://img.icons8.com/fluency/96/star--v1.png" alt="star--v1">
+                      <span>5.0</span>
+                  </div>
+              </div>
+          </div>
+            <div class="description">
+                <p><strong>Description:</strong> Hello everyone! We have 10 robust and well-raised pigs available for sale, each weighing between 70-80kg. These pigs are perfect for various needs such as lechon, business stock, or personal needs. Raised in a clean and caring environment, our pigs are of the highest quality and health.
+                  <span class="read-more-link"><a href="#description">Read More</a></span>
+                </p>
+                <div class="button-container">
+                  <button class="button add-to-cart">
+                      <i class="bi bi-cart-plus"></i>
+                      Add to Cart
+                  </button>
+                  <button class="button contact-seller">
+                      <i class="bi bi-chat-dots"></i>
+                      Contact Seller
+                  </button>
+              </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Nav-Links section -->
+<section class="nav-links-section">
+  <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#description">Descriptions</a>
+      <a href="#reviews">Reviews</a>
+  </div>
+  <hr class="nav-hr">
+</section>
+
+<!-- Features Section -->
+<section id="features" class="features-section">
+  <div class="features-container">
+    <h2 class="feature-title">Features</h2>
+    <div class="features-grid">
+      <!-- Example feature item -->
+      <div class="feature-item">
+        <img src="Group 234.png" alt="Feature Image">
+        <h4>Age:</h4><span>12 Weeks</span>
+      </div>
+      <div class="feature-item">
+        <img src="Group 231 (1).png" alt="Feature Image">
+        <h4>Vitamins:</h4><span>Piglet Booster</span>
+      </div>
+      <div class="feature-item">
+        <img src="Group 228.png" alt="Feature Image">
+        <h4>Temperament:</h4><span>Easy to handle</span>
+      </div>
+      <div class="feature-item">
+        <img src="Group 233.png" alt="Feature Image">
+        <h4>Gender:</h4><span>Female</span>
+      </div>
+      <div class="feature-item">
+        <img src="Group 230.png" alt="Feature Image">
+        <h4>Vaccination:</h4><span>Vaccinated 01.04.24</span>
+      </div>
+      <div class="feature-item">
+        <img src="Group 227.png" alt="Feature Image">
+        <h4>Reproduction:</h4><span>7 Piglets</span>
+      </div>
+      <div class="feature-item">
+        <img src="Group 232.png" alt="Feature Image">
+        <h4>Weight:</h4><span>85kg</span>
+      </div>
+      <div class="feature-item">
+        <img src="Group 229.png" alt="Feature Image">
+        <h4>Health History:</h4><span>Mostly healthy</span>
+      </div>
+      <div class="feature-item">
+        <img src="Group 226.png" alt="Feature Image">
+        <h4>Diet & Freedom:</h4><span>VIEPro</span>
+      </div>
+    </div>
+  </div>
+  <hr class="nav-hr">
+</section>
+
+<!-- Description Section -->
+<section id="description" class="description-section">
+  <div class="description-container">
+    <h2 class="description-title">Description</h2>
+    <div class="description-content">
+      <div class="product-image">
+        <img src="Rectangle 41.png" alt="Product Image">
+      </div>
+      <div class="product-details">
+        <h3 class="product-title">10 Pigs for Sale in Cebu</h3>
+        <div class="description-text-box">
+          <p>
+            Hello everyone! We have 10 robust and well-raised pigs available for sale, each weighing between 70-80kg. These pigs are perfect for various needs such as lechon, business stock, or personal needs. Our pigs are raised in a clean and caring environment to ensure the highest quality and health.<br>
+            💉 Health Care: All pigs are vaccinated.<br class="adjusted-br"> 
+            💰 Price: 185 per kg (negotiable)<br class="adjusted-br">
+            📅 Available: Immediately<br class="adjusted-br">
+            For more details or to schedule a visit, please PM me or contact me at 9105761963 🙏</p>
+            <div class="button-container">
+              <button class="button contact-seller">
+                  <i class="bi bi-chat-dots"></i>
+                  Contact Seller
+              </button>
+              <button class="button icon-only">
+                <img src="icons8_WhatsApp .png" alt="Icon" class="button-icon">
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="nav-hr">
+</section>
+<!-- Reviews Section -->
+<section id="reviews" class="reviews-section">
+  <div class="reviews-container">
+    <h2 class="reviews-title">Reviews</h2>
+    <div class="review-numbers-container">
+      <img src="Vector (1).png" alt="Star Icon" class="star-icon">
+      <span class="review-numbers">4.8/5 <span class="review-count">(38 reviews)</span></span>
+    </div>
+    <div class="review-rectangles-container">
+      <!-- Review Rectangle 1 -->
+      <div class="review-rectangle">
+        <div class="user-container">
+          <img src="Ellipse 5.png" alt="User Image" class="user-image">
+          <div class="user-info">
+            <span class="username">John Doe</span>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+          </div>
+        </div>
+        <div class="review-description">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dignissim nulla ut libero tincidunt, nec auctor leo aliquet. Sed venenatis tempor felis, vitae sollicitudin libero ullamcorper nec.
+            Vivamus santimus ultrices Faucibus sodales sagittis natoque justo risus.</p>
+        </div>
+        <div class="review-date">
+          <span>3 days ago</span>
+        </div>
+      </div>
+
+      <div class="review-rectangles-container">
+        <!-- Review Rectangle 1 -->
+        <div class="review-rectangle">
+          <div class="user-container">
+            <img src="Ellipse 5.png" alt="User Image" class="user-image">
+            <div class="user-info">
+              <span class="username">John Doe</span>
+              <div class="stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+            </div>
+          </div>
+          <div class="review-description">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dignissim nulla ut libero tincidunt, nec auctor leo aliquet. Sed venenatis tempor felis, vitae sollicitudin libero ullamcorper nec.
+              Vivamus santimus ultrices Faucibus sodales sagittis natoque justo risus.</p>
+          </div>
+          <div class="review-date">
+            <span>3 days ago</span>
+          </div>
+        </div>
+
+        <div class="review-rectangles-container">
+          <!-- Review Rectangle 1 -->
+          <div class="review-rectangle">
+            <div class="user-container">
+              <img src="Ellipse 5.png" alt="User Image" class="user-image">
+              <div class="user-info">
+                <span class="username">John Doe</span>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+              </div>
+            </div>
+            <div class="review-description">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dignissim nulla ut libero tincidunt, nec auctor leo aliquet. Sed venenatis tempor felis, vitae sollicitudin libero ullamcorper nec.
+                Vivamus santimus ultrices Faucibus sodales sagittis natoque justo risus.</p>
+            </div>
+            <div class="review-date">
+              <span>3 days ago</span>
+            </div>
+          </div>
+
+          <div class="review-rectangles-container">
+            <!-- Review Rectangle 1 -->
+            <div class="review-rectangle">
+              <div class="user-container">
+                <img src="Ellipse 5.png" alt="User Image" class="user-image">
+                <div class="user-info">
+                  <span class="username">John Doe</span>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="review-description">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dignissim nulla ut libero tincidunt, nec auctor leo aliquet. Sed venenatis tempor felis, vitae sollicitudin libero ullamcorper nec.
+                  Vivamus santimus ultrices Faucibus sodales sagittis natoque justo risus.</p>
+              </div>
+              <div class="review-date">
+                <span>3 days ago</span>
+              </div>
+            </div>
+      <!-- Repeat for other review rectangles -->
+    </div>
+  </div>
+</section>
+
+<!-- Pagination Section -->
+<section class="pagination-section">
+  <div class="pagination-dots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+  <hr class="nav-hr">
+</section>
+
+    <!-- Listing section -->
+    <section id="listings">
+      <div class="listing-title">
+        <h2 class="title">Related sales and products</h2>
+      </div>
+      <div class="rectangle-container">
+        <div class="rectangle">
+          <img src="Rectangle 23.png" alt="Example 1">
+          <h4>Pig for Sale in Cebu</h4>
+          <ul>
+
+            <li><img width="96" height="96" src="https://img.icons8.com/color/96/marker--v1.png" alt="marker--v1"/>Location: Cebu</li>
+            <li><img width="96" height="96" src="https://img.icons8.com/color/96/weight-kg.png" alt="weight-kg"/>Weight: 80kg</li>
+            <li class="price"><img width="96" height="96" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>Price: 20,000 </li>
+            <button type="submit">More Details</button>
+          </ul>
+        </div>
+        <div class="rectangle">
+          <img src="Rectangle 33.png" alt="Example 2">
+          <h4>Pig for Sale in Cebu</h4>
+          <ul>
+            
+            <li><img width="96" height="96" src="https://img.icons8.com/color/96/marker--v1.png" alt="marker--v1"/>Location: Cebu</li>
+            <li><img width="96" height="96" src="https://img.icons8.com/color/96/weight-kg.png" alt="weight-kg"/>Weight: 80kg</li>
+            <li class="price"><img width="96" height="96" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>Price: 20,000 </li>
+            <button type="submit">More Details</button>
+          </ul>
+        </div>
+        <div class="rectangle">
+          <img src="Rectangle 22.png" alt="Example 3">
+          <h4>Pig for Sale in Cebu</h4>
+          <ul>
+            
+            <li><img width="96" height="96" src="https://img.icons8.com/color/96/marker--v1.png" alt="marker--v1"/>Location: Cebu</li>
+            <li><img width="96" height="96" src="https://img.icons8.com/color/96/weight-kg.png" alt="weight-kg"/>Weight: 80kg</li>
+            <li class="price"><img width="96" height="96" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>Price: 20,000 </li>
+            <button type="submit">More Details</button>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+
+<footer>
+  <div class="footer-content">
+      <img src="Group 193.png" alt="Piggery Logo" class="footer-logo">
+      <div class="footer-columns">
+          <div class="footer-box">
+            <h4>Our Mission</h4>
+              <p class="brand-statement">
+                Farmify piggery marketplace aims to revolutionize pig farming by providing a reliable and user-friendly platform where farmers and buyers can connect, trade, and thrive together.
+              </p>
+          </div>
+          <div class="footer-box">
+              <h4>Navigation</h4>
+              <ul class="footer-nav">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Pigs for Sale</a></li>
+                  <li><a href="#">Sell your Pig</a></li>
+                  <li><a href="#">About us</a></li>
+                  <li><a href="#">Contact</a></li>
+              </ul>
+          </div>
+          <div class="footer-box">
+              <h4>Contact</h4>
+              <p>Phone: (123) 456-7890</p>
+              <p>FAX: (123) 456-7891</p>
+              <p>123 Example Address, City, Country</p>
+          </div>
+          <div class="footer-box">
+              <h4>Stay Connected</h4>
+              <p>Stay connected with our latest news and price alerts to never miss a great deal.</p>
+              <div class="email-container">
+                <input type="email" placeholder="Email address" class="email-input">
+          </div>
+          <div class="social-icons">
+            <img src="Group 149.png" alt="Facebook" class="social-icon">
+            <img src="Group 148.png" alt="Twitter" class="social-icon">
+            <img src="Group 147.png" alt="Instagram" class="social-icon">
+        </div>
+      </div>
+  </div>
+
+  <hr>
+  <div class="footer-bottom">
+      <p>&copy; 2024 All rights reserved.</p>
+      <ul class="footer-bottom-nav">
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+      </ul>
+  </div>
+</footer>
+
+<script>
+  function toggleNav() {
+      var nav = document.querySelector('.navbar-collapse');
+      nav.classList.toggle('show');
+  }
+
+  function toggleSaveIcon(element) {
+        const icon = element.querySelector('i.bi-heart-fill');
+        icon.classList.toggle('red');
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const thumbnails = document.querySelectorAll('.thumbnail-images img');
+        const mainImage = document.getElementById('main-image');
+
+        thumbnails.forEach(function(thumb) {
+            thumb.addEventListener('mouseover', function() {
+                mainImage.src = this.getAttribute('data-image');
+            });
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+    const links = document.querySelectorAll('.nav-links a');
+
+    links.forEach(function(link) {
+        link.addEventListener('click', function() {
+            links.forEach(function(link) {
+                link.classList.remove('active');
+            });
+            this.classList.add('active');
+        });
+    });
+
+    // Handle smooth scrolling for Read More link
+    const readMoreLink = document.querySelector('.read-more-link a');
+    readMoreLink.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default anchor behavior
+        const targetSection = document.querySelector(this.getAttribute('href')); // Get the target section
+
+        if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const dots = document.querySelectorAll('.pagination-dots .dot');
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      // Remove 'active' class from all dots
+      dots.forEach(dot => dot.classList.remove('active'));
+
+      // Add 'active' class to the clicked dot
+      dot.classList.add('active');
+
+      // Implement logic to show the corresponding review rectangle set
+      // For example: hide all review rectangles and show the corresponding set
+    });
+  });
+})
+
+</script>
+</main>
+</body>
