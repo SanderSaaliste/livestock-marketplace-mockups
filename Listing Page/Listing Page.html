@@ -1,0 +1,1785 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Listing Page</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<style>
+
+        /* Header styles */
+        header {
+            /* background-image: url(header.png);   logicdigger css remove this
+            height: 100vh; /* Make the image responsive logicdigger css remove this */
+            width: 100%; 
+            object-fit: cover; /* Ensure the image covers the entire header */
+            filter: brightness(0.);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 99;
+        }
+
+        /***logicdigger css***/
+        .listing-title {
+    width: 100%;
+    max-width: 85%;
+    margin: 0 auto;
+}
+
+.heor-content {
+    width: 100%;
+    max-width: 1270px;
+    margin: 0 auto;
+    padding: 12px 25px;
+    position: relative;
+  top: -110px; /* Use a negative value to move the content higher */
+}
+
+  /***logicdigger css ***/
+        .navbar-toggler, .navbar-close {
+            display: none;
+            background-color: transparent;
+            border: none;
+            font-size: 35px;
+            cursor: pointer;
+        }
+        .navbar-nav {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            flex: 1;
+            justify-content: space-between;
+        }
+        .navbar-nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #3c5823;
+    font-weight: 600;
+}
+        .navbar-nav .icons a {
+            margin: 0 5px;
+        }
+        .navbar-collapse {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            flex: 1;
+        }
+
+        @media only screen and (min-width: 1024px) and (max-width: 1350px)  {
+          .image-item {
+            margin-bottom: 20px !important;
+          }
+          .navbar-nav .nav-link:nth-child(6) {
+            margin: 0 !important;
+          }
+          .rectangle-container{
+            display: block !important;
+            text-align: center;
+          }
+          .rectangle {
+    width: 25% !important;
+    display:inline-block !important;
+  }
+  .rectangle li img {
+    height: 10%;
+    width: 10% !important;
+    padding-right: 3%;
+}
+  .rectangle img {
+    width: 100% !important;
+  }
+        }
+        @media only screen and (min-width: 768px) and (max-width: 1024px)  {
+        .rectangle-container  .rectangle img {
+    width: 310px !important;
+}
+.sell-us-content{
+  display: block !important;
+  margin-bottom: 20px;
+}
+.rectangle-container .rectangle {
+    width: 300px !important;
+}
+.rectangle-container {
+    flex-wrap: wrap;
+}
+.rectangle-container .rectangle li img {
+    width: 10% !important;
+}
+footer {
+    height: unset !important;
+}
+.footer-columns {
+    display: block !important;
+}
+main .listing-title .title{
+  text-align: center !important;
+}
+  }
+  @media (max-width: 400px) { 
+  .search-container input[type=text] {
+    padding: 10px;
+    width: 200px !important;
+}
+.rectangle {
+        max-width: 80% !important;
+        margin: 0 auto !important;
+        margin-bottom: 20px !important;
+    }
+    .rectangle img {
+    width: 100% !important;
+    max-width: 350px;
+}
+.rectangle li img {
+    height: 10%;
+    width: 10% !important;
+    padding-right: 3%;
+}
+  }
+        @media (max-width: 1024px) {
+            .navbar-nav {
+               
+                flex-direction: column;
+                background-color: #f8f9fa;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                padding: 10px 0;
+            }
+            .navbar-collapse.show {
+  display: block !important;
+}
+.navbar-collapse {
+    display: none;
+}
+
+.navbar .container {
+    display: block;
+}
+.image-item {
+    margin-bottom: 20px !important;
+}
+            .navbar-nav .nav-link:nth-child(6){
+              margin: 0 !important;
+            }
+            .navbar-nav a {
+              padding: 10px 15px;
+          }
+            .navbar-nav.show {
+                display: flex;
+            }
+            .navbar-toggler {
+                display: block;
+            }
+            .navbar-close {
+                display: block;
+                align-self: flex-end;
+                margin: 10px 20px;
+                position: absolute;
+            }
+
+            span.navbar-toggler-icon {
+    float: right;
+    margin-right: 20px;
+}
+.navbar {
+    margin-top: 20px !important;
+}
+.navbar img {
+    margin-left: 20px;
+}
+        }
+
+.listing-title .title {
+    text-align: left !important;
+}
+body {
+    margin: 0;
+    padding: 0;
+}   
+.navbar .container {
+    width: 100%;
+    max-width: 1270px;
+    margin: auto;
+} 
+.heor-content {
+    width: 100%;
+    max-width: 1270px;
+    margin: 0 auto;
+}
+
+.hero-iner {
+    display: flex;
+    align-items: center;
+    height: 75vh; /*Adjust back-ground image*/
+    background-size: cover;
+    background-position: bottom center;
+}
+
+.hero-section {
+    position: relative;
+}
+
+.image-item1 {
+    background: #fff7ea;
+}
+.image-item2 {
+    background: #e8f3f9;
+}
+.image-item3 {
+    background: #ebf9e8;
+}
+.image-item4 {
+    background: #fff4f2;
+}
+
+  /***logicdigger css end ***/
+
+    body  {
+      font-family: "Inter", sans-serif;
+        font-weight: 450;
+        font-size: 14px;
+        color: rgb(79, 79, 79);
+        width: 100%; /* Make the image responsive */
+        height: 100%; /* Make the image responsive */
+    } 
+
+.inter-font {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+    body {
+    height: 3000px;
+    }
+    .mochiy-pop-one-regular {
+  font-family: "Mochiy Pop One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+    .navbar-nav .nav-link:nth-child(6) {
+        margin-right: 280px; /*Adjust logo*/
+    }
+    .navbar-nav .nav-link:nth-child(1) {
+        margin-right: px;
+    }
+    .signup-button {
+      color: rgba(255, 255, 255, 0.952) !important;
+      background-color: #000000ce; /* Change background color to a prominent color */
+      border-radius: 20px; /* Add rounded corners */
+      padding: 10px 20px; /* Add padding to increase button size */
+      transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+    }
+    .signup-button:hover {
+background-color: #ff4632c8;
+    }
+    .navbar {
+margin-top: 38px; /* Adjust the value to move the navbar down further */
+}
+    .main-title {
+      margin-top: 30px;
+      font-size: 45px; /*Default 48px*/
+      font-weight: bold;
+      font-family: "Mochiy Pop One", sans-serif;
+      color: black;
+      text-align: center;
+    }
+    .h4-title {
+      margin-top: -20px;
+      font-size: 23px;
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+    }
+
+    .search-container-section {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            top: 10px;
+            width: 100%;
+            max-width: 1270px;
+            margin: auto;
+        }
+
+        .search-container {
+            margin-top: 00px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgb(255, 255, 255);
+            padding: 20px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 800px;
+            height: 100%;
+        }
+
+        .search-container-row {
+            display: flex;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .search-container-below-row {
+          display: flex;
+            width: 100%;
+            margin-bottom: 10px;
+}
+
+.search-container-below-row input[type=text] {
+width: 10px;
+}
+
+.search-container-below-row input[type=text]:nth-child(3) {
+    flex: 0.95; /* Adjust width to be slightly shorter */
+    margin-right: 10px; /* Ensure margin is applied */
+}
+
+        .search-container input[type=text] {
+            padding: 19px;
+            border: 1px solid #ccc;
+            border-radius: 7.5px;
+            outline: none;
+            background-color: #fafbf266;
+            font-family: Arial;
+            font-size: 15px;
+            font-weight: 500;
+            margin-left: 10px;
+            flex: 1;
+        }
+
+        .search-container input[type=text]::placeholder {
+            color: #c5c5c5;
+            font-weight: 600;
+        }
+
+        .search-container .wide {
+            flex: 2;
+        }
+
+        .submit-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .submit-container button[type=submit] {
+            width: 149.33px;
+            border: 1px solid #ff4632c8;
+            background-color: #ff4632c8;
+            border-radius: 7.5px;
+            outline: none;
+            padding-top: 38px;
+            font-size: 15px;
+            font-weight: 600;
+            color: whitesmoke;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 19px;
+            transition: background-color 0.3s ease;
+            margin-left: 0px;
+        }
+
+        .submit-container button[type=submit]:hover {
+            background-color: #ff4632e6;
+        }
+
+        .available-listings-section {
+        background-color: #ffffff; /* Adjust background color as needed */
+        padding: 20px 0; /* Adjust padding as needed */
+        display: flex;
+        justify-content: flex-start; /* Center the content horizontally */
+        align-items: center; /* Center the content vertically */
+        flex-direction: column; /* Arrange children in a column */
+        width: 100%;
+        height: 1585px;
+    }
+
+    .available-listings-title {
+        font-size: 36px;
+        font-family: "Mochiy Pop One", sans-serif;
+        color: black;
+        text-align: center; /* Center the title text */
+        margin-bottom: 10px; /* Space below the title */
+    }
+
+    .available-listings-content {
+        width: 100%;
+        max-width: 1270px;
+        text-align: center; /* Center the content text */
+        position: relative;
+    }
+
+    .image-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    align-items: center;
+    position: relative;
+}
+
+.listing-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.overlay-title {
+    position: absolute;
+    top: 50%;
+    left: 42%; /*Adjust here*/
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    font-family: "Mochiy Pop One", sans-serif;
+    font-weight: 600;
+    margin-top: -30px;
+    line-height: 30px;
+    text-align: start;
+}
+
+.subscription-form {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    padding-right: 30px;
+}
+
+.subscription-form input[type="email"] {
+    padding: 20px;
+    border: 1px solid #ccccccac;
+    border-radius: 15px;
+    margin-right: 0px;
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    border-right: none; /* Remove right border */
+    border-radius: 15px 0 0 15px; /* Rounded corners except right side */
+}
+
+.subscription-form input[type="email"]::placeholder {
+    color: #8d8d8d; /* Light gray color for a faded look */
+    opacity: 0.6; /* Adjust opacity to make it more faded */
+}
+
+.subscription-form button {
+    padding: 20px 30px;
+    border: none;
+    background-color: #f93a3ac8;
+    color: white;
+    border-radius: 0 15px 15px 0; /* Rounded corners except left side */
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.subscription-form button:hover {
+    background-color: #f93a3ae7;
+}
+
+.rectangle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    max-width: 1270px;
+    text-align: center;
+    position: relative;
+    width: 1270px; /* Set width of the container */
+    margin: 20px auto; /* Center align the container */
+    gap: 20px; /* Add space between rectangles */
+}
+
+.rectangle:hover {
+    border-color: #88888837;
+  background-color: #f0f0f0;
+}
+
+.rectangle {
+    display: flex;
+    background-color: #ffffff;
+    border: 1px solid #ccccccac;
+    border-radius: 20px;
+    width: 800px; /* Set width of the rectangle */
+    height: 200px; /* Set height of the rectangle */
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in width and height */
+    position: relative; /* Make the rectangle a reference point for absolute positioning */
+    transition: all 0.3s ease;
+}
+
+.rectangle img {
+    width: 180px; /* Set width of the image */
+    height: 160px; /* Set height of the image */
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.listing-details {
+    display: flex;
+    justify-content: space-between; /* Ensure spacing is distributed */
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    position: relative; /* Make the listing-details a reference point for absolute positioning */
+}
+
+.listing-details h4 {
+    font-size: 20px;
+    font-family: "Mochiy Pop One", sans-serif;
+    font-weight: bolder;
+    color: black;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.rectangle ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rectangle ul li {
+    display: flex;
+    align-items: center;
+}
+
+.rectangle button {
+    margin-top: auto;
+    align-self: flex-end;
+    width: 179.33px;
+    margin-bottom: 20px;
+    border: 1px solid #0e9a3dc8;
+    background-color: #0e9a3dc8;
+    border-radius: 7.5px;
+    outline: none;
+    padding: 15px;
+    font-size: 13px;
+    font-weight: 520;
+    color: whitesmoke;
+    transition: background-color 0.3s ease;
+}
+
+.rectangle button[type=submit]:hover {
+    background-color: #0e9a3de5; /* Darker color when hovered */
+}
+
+.price {
+    font-weight: bolder;
+    font-size: 15px;
+    font-family: "Inter", sans-serif;
+}
+
+.rectangle li img {
+  height: 20px;
+  width: 20px;
+}
+
+.listing-details img {
+    align-items: flex-end;
+    vertical-align: middle; /* Example: align icon vertically in the middle */
+    height: 20px;
+    width: 20px;
+}
+
+.listing-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    position: relative; /* Make the listing-details a reference point for absolute positioning */
+}
+
+.title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.title-container h4 {
+    font-size: 20px;
+    font-family: "Mochiy Pop One", sans-serif;
+    font-weight: bolder;
+    color: black;
+    margin-bottom: 10px;
+    text-align: left;
+    flex: 1; /* Take remaining space */
+}
+
+.save-icon {
+    display: flex;
+    align-items: center;
+    top: 0;
+    right: 0;
+    font-size: 14px; /* Font size for "Save" text */
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    color: black;
+}
+
+.save-icon i.bi-heart-fill {
+    margin-right: 5px; /* Space between icon and text */
+    color: #ccc;
+}
+
+.save-icon i.bi-heart-fill.red {
+            color: red; /* Set the heart icon color to red */
+        }
+
+.results-count {
+    position: absolute;
+    top: 65px; /* Adjust this value to position it correctly */
+    left: 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    justify-content: flex-end;
+}
+
+.dropdown-container {
+  display: flex;
+  justify-content: flex-end; /* Align to the left */
+    align-items: center;
+    margin-right: auto; /* Push other content to the right */
+    margin-bottom: 0px;
+    margin-top: 100px;
+}
+
+.sort-dropdown {
+  padding: 10px;
+    border: 1px solid #ccccccac;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    font-weight: 500;
+    transition: all 1s ease-in; /* Add transition effect */
+}
+
+.sort-dropdown:focus {
+    height: auto; /* Ensure the height adjusts when the dropdown is open */
+}
+
+.listings-container {
+  display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1270px;
+    gap: 20px;
+    position: relative; /* Make listings-container a reference point */
+    margin-top: 25px;
+}
+
+.filter-box {
+    display: flex;
+    position: sticky;
+    top: 20px; /* Adjust this value to set the distance from the top of the viewport */
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ccccccac;
+    border-radius: 20px;
+    background-color: #ffffff;
+    margin-right: 20px;
+    margin-left: 00px; /* Adjust this as needed for spacing */
+    margin-top: 20px;
+    width: 400px;
+}
+
+.filter-box input[type="text"] {
+    padding: 17px;
+    border: 1px solid #ccccccac;
+    border-radius: 7.5px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    width: 280px;
+}
+
+.filter-box h4 {
+    font-size: 15px;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    margin-bottom: 20px;
+    width: 310px;
+}
+
+.filter-box button {
+    padding: 10px 20px;
+    width: 313px;
+    height: 54px;
+    border: none;
+    margin-top: 10px;
+    border-color: #ff4632c8;
+    background-color: #ff4632c8;
+    color: white;
+    border-radius: 7.5px;
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter-box button:hover {
+    background-color: #ff4632e6;
+}
+
+.filter-box .input-group {
+    display: flex;
+    gap: 10px; /* Adjust the gap between the inputs as needed */
+}
+
+.filter-box .input-group input {
+    flex: 1; /* Ensure both input fields take equal space */
+    width: 1%;
+    border-radius: 7.5px;
+}
+
+.pagination {
+    display: flex;
+    width: 800px;
+    justify-content: flex-start; /* Center the pagination within the container */
+    align-items: center;
+    margin-top: 50px;
+    gap: 10px;
+}
+
+.pagination-button {
+    padding: 10px 15px;
+    border: 1px solid #ccccccac;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #333;
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 40px;
+    text-align: center;
+}
+
+.pagination-button:hover {
+    background-color: #f0f0f0;
+}
+
+.pagination-button.active {
+            background-color: green;
+            color: white;
+        }
+
+        .pagination-button.prev-next {
+            width: 90px; /* Wider width for Previous and Next buttons */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .pagination-button.prev-next img {
+    width: 10px; /* Adjust size as needed */
+    height: 10px; /* Adjust size as needed */
+    margin-right: 5px; /* Space between the arrow and the text */
+}
+
+.pagination-button.prev-next.previous img {
+    margin-right: 5px; /* Adjust space for the left arrow */
+}
+
+.pagination-button.prev-next.next img {
+    margin-left: 5px; /* Adjust space for the right arrow */
+}
+
+        .bi-search {
+          position: absolute;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      padding: 19px;
+        }
+
+        input.wide::placeholder {
+    padding-left: 0px;
+}
+
+input.wide {
+  text-indent: 20px; /* Adjust this value as needed */
+}
+
+    .navbar-brand {
+      margin-right: 0px;
+      position: fixed;
+      height: auto;
+    }
+    .container { 
+  display:flex; /* Use flexbox */
+  justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    }
+    .bi-heart {
+      font-size: 20px;
+      font-weight: 900;
+      padding-right: 5px;
+    }
+    .bi-cart3 {
+      font-size: 20px;
+      font-weight: 900px;
+      padding-right: 10px;
+    }
+   
+        main {
+        /* Can use flex here */
+  height: 100vh; /* Set main height to full viewport height */
+}
+
+.content {
+  text-align: center; /* Center text horizontally */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  font-size: 20px;
+  color: black;
+  font-weight: bolder;
+  font-family: Arial;
+}
+
+
+.image-item {
+  text-align: center;
+  margin: 0 50px;
+}
+.image-item {
+    text-align: center;
+    margin: 0 15px;
+    padding: 25px;
+    width: 100%;
+    max-width: 242px;
+    border-radius: 30px;
+    height: 100%;
+    min-height: 287px;
+}
+.image-item h3 {
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    font-weight: 600;
+    line-height: 30px;
+}
+.image-item img {
+  margin-bottom: 20px; /* Adjust margin between image and text box */
+  width: 155px; /* Set width to 165 pixels */
+  height: 130px; /* Set height to 185 pixels */
+  margin-top: 20px;
+}
+.image-item:nth-child(4) img {
+  height: 130px; /* Adjust the height for the fourth image */
+  width: 145px;
+}
+.text-box {
+  width: 225px; /* Adjust width of the text box 195px */
+}
+
+.text-box p {
+  font-size: 14px;
+  margin: 0;
+  text-align: left;
+  line-height: 1.6; /* Adjust this value for desired line spacing */
+}
+.image-item h3 {
+  font-size: 20px;
+  color: black;
+  text-align: center;
+}
+.introduction {
+  height: 100vh; /* Make the image responsive */
+            width: 100vw; /* Make the image responsive */
+            object-fit: cover; /* Ensure the image covers the entire header */
+            filter: brightness(0.);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+}
+.listings {
+  height: 100vh; /* Make the image responsive */
+            width: 100vw; /* Make the image responsive */
+            object-fit: cover; /* Ensure the image covers the entire header */
+            filter: brightness(0.);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+}
+.listing-title h2 {
+  text-align: center; /* Center text horizontally */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  font-size: 45px;
+  color: black;
+  font-weight: bold;
+  font-family: "Mochiy Pop One", sans-serif;
+ /*  margin-top: 20vh; Adjust as needed to position content below header remove from logicdiger */
+  margin-bottom: 40px;
+  /* Add padding as well */
+}
+
+
+    .feed-section {
+  /* Styles for the feed section container */
+  padding: 20px;
+  background-color: rgba(219, 251, 113, 0.405);
+  margin-top: 100px;
+  min-height: 100vh; /* Ensure the section takes up at least 100% of the viewport height */
+      display: flex;
+      flex-direction: column; /* Align content vertically */
+      justify-content: flex-start; /* !!!<--Use this always in the beginning of the sections-->!!! */
+        align-items: center;
+}
+
+.feed-section-title h2 {
+  /* Styles for the feed section title */
+  font-size: 45px;
+  font-weight: bolder;
+  font-family: "Mochiy Pop One", sans-serif;
+  color: black;
+  margin-top: 40px;  /* Adjust if needed */
+  text-align: center; /* Center text horizontally */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+ /* margin-top: 20vh;  Adjust as needed to position content below header */
+  /* Add padding as well */
+}
+
+.feed-section-content {
+  /* Styles for the feed section content */
+  display: flex;
+  align-items: center;
+  width: 80%;
+  max-width: 1200px;
+  /* flex-wrap: wrap;  Use them again */
+  /* justify-content: center;  Use them again */
+  /* flex-grow: 1; Use them again */
+}
+
+.feed-image {
+  flex: 1; /* Take up half of the available space */
+  display: flex;
+  justify-content: center; /* Center image horizontally */
+  align-items: center; /* Center image vertically */
+}
+
+.feed-image img {
+  max-width: 100%; /* Ensure image fits within its container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 20px;
+  margin-top: 20px;
+  border: 5px solid #eee;/*  logicdigger css /
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1), 0 0 20px rgba(0, 0, 0, 0.1); Smooth border shadow */
+}
+
+.feed-details {
+  flex: 1; /* Take up half of the available space */
+  padding: 40px; /* Add some padding around the details (20px default)*/
+}
+
+.feed-title {
+  font-size: 28px;
+  font-weight: bolder;
+  font-family: "Mochiy Pop One", sans-serif;
+  color: black;
+  margin-bottom: 10px; /* Space between title and description */
+  margin-top: 20px;
+}
+
+.feed-description {
+  font-size: 16px;
+  margin-bottom: 50px; /* Space between description and price */
+  line-height: 1.6; /* Adjust this value for desired line spacing */
+  font-family: "Inter", sans-serif;
+}
+
+.feed-price {
+  font-size: 21px;
+  font-family: "Inter", sans-serif;
+  /* font-weight: bold; (Optional)*/
+  color: black;
+  display: flex;
+  align-items: center; /* Center vertically */
+}
+
+.feed-price img {
+  height: 6.5%;
+  width: 6.5%;
+  margin-right: 10px; /* Space between icon and text, adjust as needed */
+}
+
+.stars img {
+  height: 5%;
+  width: 5%;
+  margin-bottom: 10px;
+}
+
+.feed-details button {
+  width: 195px;
+  height: 55px;
+      border: 1px solid #ff4632c8;
+      background-color: #ff4632c8;
+      border-radius: 7.5px;
+      outline: none;
+      padding-top: 38px;
+      font-size: 15px;
+      font-weight: 600;
+      color: whitesmoke;
+      display: flex;
+      justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    padding: 15px;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+}
+
+.feed-details button[type=submit]:hover {
+    background-color: #ff4632e6; /* Darker color when hovered */
+    }
+
+.sell-us-section-title h2 {
+    /* Styles for the feed section title */
+    font-size: 45px;
+  font-weight: bolder;
+  color: black;
+  margin-top: 100px;  /* Adjust if needed */
+  text-align: center; /* Center text horizontally */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  margin-bottom: 10px;
+  font-family: "Mochiy Pop One", sans-serif;
+ /* margin-top: 20vh;  Adjust as needed to position content below header */
+  /* Add padding as well */
+}
+
+.sell-us-section {
+    /*  padding: 20px;  Add some padding around the section remove by logic */
+      min-height: 100vh; /* Ensure the section takes up at least 100% of the viewport height */
+      display: flex;
+      flex-direction: column; /* Align content vertically */
+      align-items: center; /* Center content horizontally */
+      justify-content: flex-start; /* Start content at the top */
+      margin-bottom: 100px;
+    }
+
+    .sell-us-content {
+      display: flex;
+      align-items: center; /* Center content vertically within each column */
+      justify-content: space-between; /* Space between image and details */
+      width: 80%; /* Adjust as needed for desired width */
+      max-width: 1200px; /* Adjust as needed for desired max width */
+      /* align-items: flex-start; /*Test*/
+    }
+
+    .sell-us-details {
+      flex: 1; /* Take up half of the available space */
+      padding: 40px; /* Add some padding around the details */
+      display: flex; /*Test*/
+      flex-direction: column; /*Test*/
+      flex-grow: 1; /*Test*/
+    }
+
+    .sell-us-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px; /* Adjust as needed for spacing */
+  align-items: center; /* This centers the items vertically */
+}
+
+.sell-us-item img {
+  margin-right: 30px; /* Adjust as needed for spacing */
+  width: 200px; /* Adjust as needed for size */
+  height: auto;
+  /* margin-top: 50px; (Adjusts the image vertically)*/
+}
+
+.sell-us-text {
+  display: flex;
+  flex-direction: column;
+}
+
+    .sell-us-title, .second-sell-us-title {
+      font-size: 25px;
+      font-weight: bolder;
+      font-family: Arial;
+      color: black;
+      margin-bottom: 10px; /* Space between title and description */
+      margin-top: 20px;
+      font-family: "Mochiy Pop One", sans-serif;
+      /* margin: 0; /*New*/
+    }
+
+    .sell-us-description, .second-sell-us-title-description {
+      font-size: 16px;
+      margin-bottom: 10px; /* Space between description and next element */
+      line-height: 1.6; /* Adjust this value for desired line spacing */
+      font-family: "Inter", sans-serif;
+      /* margin: 0; /*New*/
+    }
+
+    .sell-us-image {
+      flex: 1; /* Take up half of the available space */
+      display: flex;
+      justify-content: center; /* Center image horizontally */
+      align-items: center; /* Center image vertically */
+    }
+
+    .sell-us-image img {
+      max-width: 100%; /* Ensure image fits within its container */
+      height: auto; /* Maintain aspect ratio */
+      border-radius: 20px; /* Smooth edges */
+      margin-top: 20px;
+      max-width: 100%; /*New*/
+      height: auto; /*New*/
+    }
+
+    .get-started button {
+      width: 265px;
+      height: 60px;
+      border: 1px solid #ff4632c8;
+      background-color: #ff4632c8;
+      border-radius: 7.5px;
+      outline: none;
+      padding-top: 38px;
+      font-size: 18px;
+      font-weight: 600;
+      color: whitesmoke;
+      display: flex;
+      justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    padding: 15px;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+    }
+
+    .get-started button[type=submit]:hover {
+    background-color: #ff4632e6; /* Darker color when hovered */
+    }
+
+    footer {
+        background-color: #43662e; /* Dark green background color */
+        color: #ffffff;
+        text-align: center;
+        padding: 50px 0; /* Adjust padding to fit within 600px height */
+        height: 580px; /* Set height to 600px */
+        position: relative;
+    }
+
+    footer .footer-content {
+    padding: 0 50px; /* Add horizontal padding to match the sell-us-section */
+}
+
+    .footer-logo {
+        display: block;
+        margin: 0 auto;
+        height: auto;
+        width: 350px; /* Adjust width as necessary */
+        margin-bottom: 20px;
+    }
+
+    .footer-columns {
+        display: flex;
+        justify-content: space-around;
+        /* align-items: flex-start; /* Align items to the start to fit better within the height */
+        /* align-items: center; /*Change that perhaps?*/
+        margin-top: 5%;
+        height: calc(100% - 100px); /* Ensure columns take up the full height of the footer, accounting for padding */
+}
+
+    .footer-box {
+        max-width: 250px;
+        text-align: left;
+        font-size: 16px; /* Adjust font size to fit within the height */
+        display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    height: 100%; /* Ensure footer-box takes up the full height of the parent */
+    line-height: 1.8; /* Adjust this value for desired line spacing */
+    }
+
+    .footer-box h4 {
+        color: #ffffff;
+        margin-bottom: 15px;
+        font-size: 20px;
+    }
+
+    .footer-box p {
+        color: #d2d2d2;
+        margin: 5px 0;
+        line-height: 1.8; /* Adjust this value for desired line spacing */
+    }
+
+    .footer-nav,
+    .footer-bottom-nav {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-nav li,
+    .footer-bottom-nav li {
+        margin-bottom: 10px; /* Reduce margin to fit better */
+    }
+
+    .footer-nav a,
+    .footer-bottom-nav a {
+        color: #e1e1e1;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .footer-nav a:hover,
+    .footer-bottom-nav a:hover {
+        color: #ffffff;
+    }
+
+    .footer-box input[type=email] {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1.2px solid #e1e1e1;
+        color: #ffffff;
+        padding: 10px 0; /* Remove left padding to align placeholder */
+        width: 235px;
+        margin-top: 15px;
+        outline: none;
+        text-align: left; /* Align text to the left */
+        position: relative;
+}
+
+.email-container {
+    position: relative;
+    display: inline-block;
+}
+
+.email-container::before {
+  content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABdUlEQVR4nO3cPUoDYRRG4UEQV2NjZ6GSqAj+bEBsrWzcnI2L0NbeRgQridHGI8JIJEyKQMi9H/c8CxheOEwymRnSdZIkSZIkSZIkSZIkSZIkSVoxYBu4B+6AnVUfX0sCHph5B/aWPYZWCHj+F8Qo0YDruSB/Ufajt5UF3ALfc1EmwCh6W1ksjjKO3lYWRskHo+SDUZqKchi9rSyMkg9GaSrKUfS2shiO8mGUQEZJCM+UfBZE+QTOoreVhVHyMUpbUc6jt5WFUZqJ8gVcdBkAV8DrwOPRaqbASXSMzf5XrGa3WQ4ig2z1I5QhSB/lEnjpB1U2Df/IKvylPs/L3wjGaCOG97XWzRj5Y/xe6h9HbyuHxTF8pLtuxkgEz4z0MSZ+TOWK4VuM62aMNmKMo7eVgzHywBh5YIw8MEYTMUbR28rBGHkANwNnhn8cEPh2zGQghv93EhRkA3gzRiLAKfAEPAK70XskSZIkSZIkSZIkSZIkSZK6cD+4pa0FeKE3zwAAAABJRU5ErkJggg==');
+    position: absolute;
+    right: -15px; /* Adjust the position as needed */
+    bottom: 25px; /* Adjust the position as needed */
+    height: 15px; /* Adjust size as needed */
+    pointer-events: none; /* Ensure the icon does not interfere with input interactions */
+    color: white;
+    size: 1px;
+    transform: scale(0.3); /* Scale the image to 50% of its original size */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 25px; /* Space between the input field and social media icons */
+    gap: 10px;
+}
+
+.social-icon {
+    width: 30px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
+}
+
+.footer-box img {
+height: 35px;
+width: 35px;
+color: white;
+}
+
+    .footer-box input[type=email]::placeholder {
+        color: #b9b9b98b;
+        font-size: 16px;
+    }
+
+    hr {
+        border: 0;
+        height: 1.2px;
+        background-color: #e1e1e1;
+        margin: 80px 0;
+        margin: 120px auto 10px auto; /* Increase the top margin to move the hr line down */
+        width: 90%; /* Set the width to 1320px */
+    }
+
+    .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 12px; /* Adjust font size to fit within the height */
+        width: 90%;
+        margin: 0 auto; /* Center align the footer-bottom container */
+        color: #e1e1e1;
+        padding: 0 60px; /* Add padding to the sides */
+        padding-top: 10px; /* Add some padding at the top */
+    }
+
+    .footer-bottom p {
+        margin: 0px;
+        color: #e1e1e1;
+    }
+
+    .footer-bottom-nav {
+        display: flex;
+        gap: 20px; /* Adjust gap to fit within the height */ /*Use this on navbar as well.*/
+        color: #e1e1e1;
+    }
+
+
+  /***logicdigger css  for mobile***/
+
+
+@media only screen and (max-width: 768px) {
+    
+      footer {
+    height: unset !important;
+}
+.footer-columns {
+    display: unset !important;
+ 
+} 
+.feed-details {
+    padding: 10px !important;
+}
+.feed-section-content {
+    display: block !important;
+    width: 85%;
+}
+.rectangle {
+    margin: auto;
+    margin-bottom: 20px;
+}
+.rectangle-container {
+    display: block !important;
+}
+.listing-title .title , .feed-section-title h2, .sell-us-section-title h2{
+    text-align: center !important;
+    font-size: 25px;
+}
+.sell-us-title, .second-sell-us-title{
+  font-size: 20px;
+}
+.footer-logo {
+    width: 250px;
+    margin-bottom: 20px;
+}
+.feed-title{
+  font-size: 25px;
+}
+
+.heor-content {
+    padding: 30px;
+}
+
+
+.navbar-nav a {
+    text-decoration: none;
+    color: #000;
+    padding: 10px 20px;
+    text-align: center;
+    margin: auto;
+    font-weight: 500;
+}
+
+
+.sell-us-content {
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1200px;
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.sell-us-item {
+    display: block !important;
+}
+.footer-bottom {
+    display: block !important;
+     width: unset !important;
+}
+hr {
+    width: 100%;
+}
+.footer-bottom-nav {
+    display: block !important;
+    margin-top: 10px;
+}
+.main-title {
+    font-size: 25px;
+}
+
+.h4-title {
+    font-size: 18px;
+    padding-top: 15px;
+}
+
+.submit-container {
+    margin: unset;
+    padding: 0;
+}
+
+.search-container input[type=text] {
+    margin-bottom: 10px;
+}
+
+.hero-iner {
+    background-position: center !important;
+}
+
+}
+
+    div#navbarNavAltMarkup {
+    margin-left: 30px;
+}   
+
+  /***logicdigger css  for mobile end ***/
+
+
+
+</style>
+</head>
+<body>
+
+    <!-- Header -->
+  <header>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#"></a> <!-- Logo -->
+      <img src="farmifylogo.png" alt="Logo" height="50"> <!-- Adjust the height as needed -->
+            </a>
+        <span class="navbar-toggler-icon">   <button class="navbar-toggler" onclick="toggleNav()">
+          &#9776;
+      </button></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+    
+
+        <div class="navbar-nav">
+
+          <button class="navbar-close" onclick="toggleNav()">
+            &times;
+        </button>
+          <a class="nav-link disabled">Home</a>
+          <a class="nav-link disabled">Pigs for Sale</a>
+          <a class="nav-link disabled">Sell your Pig</a>
+          <a class="nav-link disabled">About us</a>
+          <a class="nav-link disabled">Contact us</a>
+          <i class="bi bi-heart"></i>
+          <i class="bi bi-cart3"></i>
+          <a class="nav-link disabled">Login</a>
+          <a class="nav-link signup-button">Sign up</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+</header>
+
+<div class="hero-section">
+   <div class="hero-iner" style="background-image: url(listing-background.png);">
+    <div class="heor-content">
+      <!-- Main title -->
+<h1 class="main-title">Find Your Perfect Big</h1>
+</div>
+</div> <!--iner hero-->
+</div><!--hero end-->
+
+
+    <!-- Search Container Section -->
+    <section class="search-container-section">
+        <div class="search-container">
+            <div class="search-container-row">
+              <i class="bi bi-search"></i>
+                <input type="text" class="wide" placeholder="Search...">
+                <input type="text" placeholder="Location">
+            </div>
+            <div class="search-container-below-row">
+                <input type="text" placeholder="Type">
+                <input type="text" placeholder="Age">
+                <input type="text" placeholder="Weight">
+                <div class="submit-container">
+                    <button type="submit">SEARCH</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<!-- New Available Listings Section -->
+<section class="available-listings-section">
+  <div class="available-listings-content">
+      <h2 class="available-listings-title">Available Listings</h2>
+      <div class="listings-container">
+          <div class="dropdown-container">
+                    <div class="results-count">
+          Showing "360" Results
+      </div>
+            <select class="sort-dropdown">
+              <option value="">Sort by</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="weight-asc">Weight: Low to High</option>
+              <option value="weight-desc">Weight: High to Low</option>
+            </select>
+          </div>
+
+          <div class="image-wrapper">
+              <img src="Group 222.png" alt="Never Miss a Good Price Image" class="listing-image">
+              <h4 class="overlay-title">Never Miss a <br> Good Price</h4>
+              <div class="subscription-form">
+                <input type="email" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="listings-container">
+    <div class="filter-box">
+      <input type="text" placeholder="Location">
+      <h4>Age</h4>
+      <div class="input-group">
+          <input type="text" placeholder="Min">
+          <input type="text" placeholder="Max">
+      </div>
+      <h4>Weight</h4>
+      <div class="input-group">
+          <input type="text" placeholder="Min">
+          <input type="text" placeholder="Max">
+      </div>
+      <button type="submit">Filter</button>
+  </div>
+    <div class="rectangle-container">
+        <div class="rectangle">
+            <img src="Rectangle 23.png" alt="Example 1">
+            <div class="listing-details">
+                <div class="title-container">
+                    <h4>12 Piglets for Sale</h4>
+                    <div class="save-icon" onclick="toggleSaveIcon(this)">
+                        <i class="bi bi-heart-fill"></i>
+                        <span>Save</span>
+                    </div>
+                </div>
+                <ul>
+                    <li><img width="24" height="24" src="https://img.icons8.com/color/96/marker--v1.png" alt="marker--v1"/>Location: Cebu</li>
+                    <li><img width="24" height="24" src="https://img.icons8.com/color/96/weight-kg.png" alt="weight-kg"/>Weight: 120kg</li>
+                    <li class="price"><img width="24" height="24" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>Price: 42,000</li>
+                </ul>
+                <button type="submit">Check Availability</button>
+            </div>
+        </div>
+        <div class="rectangle">
+            <img src="Rectangle 22.png" alt="Example 2">
+            <div class="listing-details">
+                <div class="title-container">
+                    <h4>Mother Pig for Sale</h4>
+                    <div class="save-icon" onclick="toggleSaveIcon(this)">
+                        <i class="bi bi-heart-fill"></i>
+                        <span>Save</span>
+                    </div>
+                </div>
+                <ul>
+                    <li><img width="24" height="24" src="https://img.icons8.com/color/96/marker--v1.png" alt="marker--v1"/>Location: Cebu</li>
+                    <li><img width="24" height="24" src="https://img.icons8.com/color/96/weight-kg.png" alt="weight-kg"/>Weight: 90kg</li>
+                    <li class="price"><img width="24" height="24" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>Price: 16,200</li>
+                </ul>
+                <button type="submit">Check Availability</button>
+            </div>
+        </div>
+        <div class="rectangle">
+          <img src="Rectangle 33.png" alt="Example 2">
+          <div class="listing-details">
+              <div class="title-container">
+                  <h4>8 Well-Cared Pigs for Sale</h4>
+                  <div class="save-icon" onclick="toggleSaveIcon(this)">
+                    <i class="bi bi-heart-fill"></i>
+                      <span>Save</span>
+                  </div>
+              </div>
+              <ul>
+                  <li><img width="24" height="24" src="https://img.icons8.com/color/96/marker--v1.png" alt="marker--v1"/>Location: Cebu</li>
+                  <li><img width="24" height="24" src="https://img.icons8.com/color/96/weight-kg.png" alt="weight-kg"/>Weight: 280kg</li>
+                  <li class="price"><img width="24" height="24" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>Price: 70,000</li>
+              </ul>
+              <button type="submit">Check Availability</button>
+          </div>
+      </div>
+      <div class="rectangle">
+        <img src="Rectangle 37.png" alt="Example 2">
+        <div class="listing-details">
+            <div class="title-container">
+                <h4>10 Full-Grown Pigs for Sale</h4>
+                <div class="save-icon" onclick="toggleSaveIcon(this)">
+                    <i class="bi bi-heart-fill"></i>
+                    <span>Save</span>
+                </div>
+            </div>
+            <ul>
+                <li><img width="24" height="24" src="https://img.icons8.com/color/96/marker--v1.png" alt="marker--v1"/>Location: Cebu</li>
+                <li><img width="24" height="24" src="https://img.icons8.com/color/96/weight-kg.png" alt="weight-kg"/>Weight: 800kg</li>
+                <li class="price"><img width="24" height="24" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>Price: 144,000</li>
+            </ul>
+            <button type="submit">Check Availability</button>
+        </div>
+    </div>
+        <div class="rectangle">
+            <img src="Rectangle 22.png" alt="Example 3">
+            <div class="listing-details">
+                <div class="title-container">
+                    <h4>3-50kg Pigs for Sale  (Price Reduced!)</h4>
+                    <div class="save-icon" onclick="toggleSaveIcon(this)">
+                        <i class="bi bi-heart-fill"></i>
+                        <span>Save</span>
+                    </div>
+                </div>
+                <ul>
+                    <li><img width="24" height="24" src="https://img.icons8.com/color/96/marker--v1.png" alt="marker--v1"/>Location: Cebu</li>
+                    <li><img width="24" height="24" src="https://img.icons8.com/color/96/weight-kg.png" alt="weight-kg"/>Weight: 150kg</li>
+                    <li class="price"><img width="24" height="24" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>Price: 39,000</li>
+                </ul>
+                <button type="submit">Check Availability</button>
+            </div>
+        </div>
+        <div class="pagination">
+            <button class="pagination-button prev-next previous">
+                <img src="https://img.icons8.com/ios-filled/50/back.png" alt="Previous">
+                Previous
+            </button>
+            <button class="pagination-button">1</button>
+            <button class="pagination-button">2</button>
+            <button class="pagination-button">3</button>
+            <button class="pagination-button">4</button>
+            <button class="pagination-button">5</button>
+            <button class="pagination-button">6</button>
+            <button class="pagination-button prev-next next">
+                Next
+                <img src="https://img.icons8.com/ios-filled/50/forward--v1.png" alt="Next">
+            </button>
+        </div>
+    </div>
+    </div>
+  </div>
+</section>
+       
+<footer>
+    <div class="footer-content">
+        <img src="Group 193.png" alt="Piggery Logo" class="footer-logo">
+        <div class="footer-columns">
+            <div class="footer-box">
+              <h4>Our Mission</h4>
+                <p class="brand-statement">
+                  Farmify piggery marketplace aims to revolutionize pig farming by providing a reliable and user-friendly platform where farmers and buyers can connect, trade, and thrive together.
+                </p>
+            </div>
+            <div class="footer-box">
+                <h4>Navigation</h4>
+                <ul class="footer-nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Pigs for Sale</a></li>
+                    <li><a href="#">Sell your Pig</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-box">
+                <h4>Contact</h4>
+                <p>Phone: (123) 456-7890</p>
+                <p>FAX: (123) 456-7891</p>
+                <p>123 Example Address, City, Country</p>
+            </div>
+            <div class="footer-box">
+                <h4>Stay Connected</h4>
+                <p>Stay connected with our latest news and price alerts to never miss a great deal.</p>
+                <div class="email-container">
+                  <input type="email" placeholder="Email address" class="email-input">
+            </div>
+            <div class="social-icons">
+              <img src="Group 149.png" alt="Facebook" class="social-icon">
+              <img src="Group 148.png" alt="Twitter" class="social-icon">
+              <img src="Group 147.png" alt="Instagram" class="social-icon">
+          </div>
+        </div>
+    </div>
+  
+    <hr>
+    <div class="footer-bottom">
+        <p>&copy; 2024 All rights reserved.</p>
+        <ul class="footer-bottom-nav">
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+        </ul>
+    </div>
+  </footer>
+
+<script>
+    function toggleNav() {
+        var nav = document.querySelector('.navbar-collapse');
+        nav.classList.toggle('show');
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const paginationContainer = document.querySelector('.pagination');
+        const paginationButtons = Array.from(paginationContainer.querySelectorAll('.pagination-button'));
+        const prevButton = paginationContainer.querySelector('.previous');
+        const nextButton = paginationContainer.querySelector('.next');
+        const totalPages = 100; // Example total number of pages
+        let currentPage = 1;
+        let startPage = 1;
+
+        function updatePagination() {
+            const visibleButtons = paginationButtons.filter(btn => !btn.classList.contains('prev-next'));
+            visibleButtons.forEach((button, index) => {
+                button.textContent = startPage + index;
+                button.classList.remove('active');
+                if (startPage + index === currentPage) {
+                    button.classList.add('active');
+                }
+            });
+
+            prevButton.disabled = startPage === 1;
+            nextButton.disabled = startPage + visibleButtons.length - 1 >= totalPages;
+        }
+
+        paginationContainer.addEventListener('click', function (event) {
+            if (event.target.closest('.pagination-button')) {
+                const clickedButton = event.target.closest('.pagination-button');
+
+                if (clickedButton.classList.contains('previous') && startPage > 1) {
+                    startPage -= 6;
+                    currentPage = startPage;
+                } else if (clickedButton.classList.contains('next') && startPage + 6 <= totalPages) {
+                    startPage += 6;
+                    currentPage = startPage;
+                } else if (!clickedButton.classList.contains('prev-next')) {
+                    currentPage = parseInt(clickedButton.textContent);
+                }
+
+                updatePagination();
+            }
+        });
+
+        updatePagination();
+    });
+
+    function toggleSaveIcon(element) {
+        const icon = element.querySelector('i.bi-heart-fill');
+        icon.classList.toggle('red');
+    }
+
+  </script>
+  </main>
+  </body>
