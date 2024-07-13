@@ -414,6 +414,7 @@ margin-top: 38px; /* Adjust the value to move the navbar down further */
     text-align: center; /* Center the text */
     max-width: 450px; /* Maximum width of the box */
     width: 100%; /* Responsive width */
+    margin-bottom: 30px;
 }
 
 .message-title {
@@ -472,9 +473,14 @@ margin-left: -30px;
 
 .guiding-text {
   display: flex;
-  width: 508px;
-  font-size: 13px;
-  font-weight: 700;
+  width: 481px;
+  padding: 10px;
+  margin: 10px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  font-size: 14px;
+  font-weight: 500;
   font-family: "Inter", sans-serif;
   margin-bottom: 7px;
 }
@@ -1218,7 +1224,7 @@ align-items: center;
       outline: none;
       font-size: 16px;
       font-weight: 500;
-      font-family: "Inter", sans-serif;;
+      font-family: "Inter", sans-serif;
       color: whitesmoke;
       display: flex;
       justify-content: center; /* Center the text horizontally */
@@ -1238,6 +1244,260 @@ align-items: center;
   align-items: center;
   justify-content: center;
   margin-top: 30px;
+}
+
+.payment-title {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1270px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.payment-title h3 {
+    display: flex;
+    width: 508px;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: "Inter", sans-serif;
+    margin-bottom: 7px;
+}
+
+.payment-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 1270px;
+        }
+
+        .payment-rectangle {
+            width: 100%;
+            max-width: 500px;
+            padding: 20px;
+            border: 1px solid #00000023;
+            border-radius: 5px;
+            background-color: #fafafa77;
+            box-shadow: inset 5px 0 5px -5px rgba(0, 0, 0, 0.1), inset -5px 0 5px -5px rgba(0, 0, 0, 0.1); /* Add inset shadows to the left and right */
+        }
+
+        .payment-rectangle h4 {
+            font-family: "Inter", sans-serif;
+            background-color: #9999990f;
+    padding: 20px;
+    margin: -20px -20px 20px -20px; /* Adjust the margins to cover the full width and top */
+    border-radius: 5px 5px 0 0; /* Only round the top corners */
+    border-bottom: 1.7px solid #99999932; /* Add a darker bottom border */
+    text-align: left; /* Adjust as per your requirement */
+        }
+
+        .payment-rectangle h4.bottom {
+            font-family: "Inter", sans-serif;
+            background-color: #fafafa77;
+            font-weight: 500;
+    padding: 20px;
+    margin: -20px -20px 20px -20px; /* Adjust the margins to cover the full width and top */
+    border-radius: 5px 5px 0 0; /* Only round the top corners */
+    border-bottom: 0.1px solid #99999932; /* Add a darker bottom border */
+    text-align: left; /* Adjust as per your requirement */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.089); /* Add a slight shadow */
+        }
+
+        .card-number-container {
+    position: relative;
+    width: 100%;
+}
+
+.bi.bi-credit-card-fill {
+    position: absolute;
+    top: 40%;
+    left: 20px;
+    transform: translateY(-50%);
+    font-size: 16px; /* Adjust icon size as needed */
+    color: #999;
+    align-items: center;
+}
+
+.card-number-container .payment-input {
+    padding-left: 10px; /* Adjust padding to make space for the icon */
+    width: calc(100% - 40px); /* Adjust width to fit within the container */
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #f5f5f5;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+    text-indent: 40px;
+    align-items: center;
+}
+
+.card-number-container .payment-input::placeholder {
+    color: #999;
+    padding-left: 10px; /* Add padding to the placeholder text */
+    font-family: "Inter", sans-serif;
+}
+
+        .payment-input {
+            width: calc(100% - 40px);
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #f5f5f5;;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            font-size: 16px;
+            font-family: "Inter", sans-serif;
+            transition: border-color 0.3s ease; /* Smooth transition for border color */
+        }
+
+        .payment-input:focus {
+         border-color: #5EA91E; /* Change border color when focused */
+         outline: none; /* Remove default outline */
+}
+
+.payment-input::placeholder {
+    color: #999;
+    font-family: "Inter", sans-serif;
+}
+
+        .payment-row {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .payment-row .payment-input {
+            width: calc(50% - 20px);
+        }
+
+        .payment-checkbox {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+            font-family: "Inter", sans-serif;
+        }
+
+        .payment-checkbox input {
+            margin-right: 10px;
+        }
+
+        .circle-checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0px;
+}
+
+.circle-checkbox-container img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.circle-checkbox {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.circle-checkbox input[type="radio"] {
+    display: none;
+}
+
+.circle-checkbox.checked {
+    background-color: black;
+}
+
+.circle-checkbox.checked::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.guiding-text {
+    margin-bottom: 5px; /* Adjust spacing as needed */
+}
+
+.guiding-text-small {
+    margin-top: 0px;
+    margin-bottom: 5px; /* Adjust spacing as needed */
+    width: 50%; /* Set the width to make it smaller */
+    margin-left: 10px;
+    font-family: "Inter", sans-serif;
+}
+
+.warning-text-name {
+    margin-top: 0px;
+    margin-bottom: 5px; /* Adjust spacing as needed */
+    width: 110px; /* Set the width to make it smaller */
+    margin-left: 10px;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    color: red;
+}
+
+.warning-text-date {
+    margin-top: 0px;
+    margin-bottom: 5px; /* Adjust spacing as needed */
+    width: 80px; /* Set the width to make it smaller */
+    margin-left: 10px;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    color: red;
+}
+
+.warning-text-number {
+    margin-top: 0px;
+    margin-bottom: 5px; /* Adjust spacing as needed */
+    width: 160px; /* Set the width to make it smaller */
+    margin-left: 10px;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    color: red;
+}
+
+.warning-text-code {
+    margin-top: 0px;
+    margin-bottom: 5px; /* Adjust spacing as needed */
+    width: 150px; /* Set the width to make it smaller */
+    margin-left: 10px;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    color: red;
+}
+
+.warning-text-container {
+    display: flex;
+    flex-direction: row;
+    text-align: flex-start;
+}
+
+.warning-text-container i {
+    color: red;
+}
+
+.payment-row .payment-input {
+    width: calc(96% - 30px);
+}
+
+.name-container {
+    margin-top: 20px;
 }
 
     footer {
@@ -1514,107 +1774,302 @@ hr {
 </style>
 </head>
 <body>
-
-    <!-- Header -->
   <header>
-
     <section class="logo-section">
-        <div class="logo">
+      <div class="logo">
         <img src="farmifylogo.png" alt="logo">
-        </div>
-        <hr class="nav-hr">
-
-</header>
-
-      <main>
-
-<!-- Pagination Section -->
-<section class="pagination-section">
-    <div class="pagination-dots">
-      <span class="dot active"></span>
-      <span class="dot"></span>
-    </div>
-  </section>
-
-  <section class="message-box">
-    <div class="message-content">
+      </div>
+      <hr class="nav-hr">
+    </section>
+  </header>
+  <main>
+    <section class="pagination-section">
+      <div class="pagination-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+      </div>
+    </section>
+    <section class="message-box">
+      <div class="message-content">
         <div class="message-title">
-            <i class="bi bi-credit-card-fill"></i></i>
-            <h3>Credit card details</h3>
+          <i class="bi bi-credit-card-fill"></i>
+          <h3>Credit card & Gcash details</h3>
         </div>
-        <p>Please provide your credit card information to receive payments on your card or to be able to purchase</p>
+        <p>Please provide your credit card and Gcash information to receive payments on your card or to be able to purchase</p>
+      </div>
+      
+      <div class="payment-rectangle">
+        <h4>Choose Payment Options</h4>
+        <h4 class="bottom">
+            <div class="circle-checkbox-container">
+                <div class="circle-checkbox">
+                    <input type="radio" name="payment-option">
+                </div>
+                Credit & Debit Cards<img width="28" height="28" src="https://img.icons8.com/color/48/visa.png" alt="visa" style="margin-left: 5px;"><img width="28" height="28" src="https://img.icons8.com/color/48/mastercard.png" alt="mastercard" style="margin-left: 5px;">
+            </div>
+        </h4>
+        <p class="guiding-text">Card number</p>
+        <div class="card-number-container">
+            <i class="bi bi-credit-card-fill"></i>
+            <input type="text" class="payment-input" id="card-number-input" placeholder="1234 5678 9123 4567">
+            <div class="warning-text-container">
+                <p class="warning-text-number">Unsupported card number</p><i class="bi bi-exclamation-triangle"></i>
+            </div>
+        </div>
+
+
+        <div class="payment-row">
+            <div class="input-group">
+                <p class="guiding-text-small">Expiration date</p>
+                <input type="text" class="payment-input" placeholder="MM/YY">
+                <div class="warning-text-container">
+                    <p class="warning-text-date">Invalid date</p><i class="bi bi-exclamation-triangle"></i>
+                </div>
+            </div>
+            <div class="input-group">
+                <p class="guiding-text-small">Security code</p>
+                <input type="text" class="payment-input" placeholder="123">
+                <div class="warning-text-container">
+                    <p class="warning-text-code">Security code too short</p><i class="bi bi-exclamation-triangle"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="name-container">
+        <div class="input-group">
+            <p class="guiding-text-small">Cardholder's name</p>
+        <input type="text" class="payment-input" placeholder="Jon Dae">
+        <div class="warning-text-container">
+            <p class="warning-text-name">Min 2 characters</p><i class="bi bi-exclamation-triangle"></i>
+        </div>
+    </div>
     </div>
 
-</section>    
+        <div class="payment-checkbox">
+            <input type="checkbox" id="save-card">
+            <label for="save-card">Save this card for future payments</label>
+        </div>
+    </div>
 
-
-<footer>
-  <div class="footer-content">
-      <img src="Group 193.png" alt="Piggery Logo" class="footer-logo">
-      <div class="footer-columns">
+    </section>
+    <footer>
+      <div class="footer-content">
+        <img src="Group 193.png" alt="Piggery Logo" class="footer-logo">
+        <div class="footer-columns">
           <div class="footer-box">
             <h4>Our Mission</h4>
-              <p class="brand-statement">
-                Farmify piggery marketplace aims to revolutionize pig farming by providing a reliable and user-friendly platform where farmers and buyers can connect, trade, and thrive together.
-              </p>
+            <p class="brand-statement">
+              Farmify piggery marketplace aims to revolutionize pig farming by providing a reliable and user-friendly platform where farmers and buyers can connect, trade, and thrive together.
+            </p>
           </div>
           <div class="footer-box">
-              <h4>Navigation</h4>
-              <ul class="footer-nav">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Pigs for Sale</a></li>
-                  <li><a href="#">Sell your Pig</a></li>
-                  <li><a href="#">About us</a></li>
-                  <li><a href="#">Contact</a></li>
-              </ul>
+            <h4>Navigation</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Pigs for Sale</a></li>
+              <li><a href="#">Sell your Pig</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
           </div>
           <div class="footer-box">
-              <h4>Contact</h4>
-              <p>Phone: (123) 456-7890</p>
-              <p>FAX: (123) 456-7891</p>
-              <p>123 Example Address, City, Country</p>
+            <h4>Contact</h4>
+            <p>Phone: (123) 456-7890</p>
+            <p>FAX: (123) 456-7891</p>
+            <p>123 Example Address, City, Country</p>
           </div>
           <div class="footer-box">
-              <h4>Stay Connected</h4>
-              <p>Stay connected with our latest news and price alerts to never miss a great deal.</p>
-              <div class="email-container">
-                <input type="email" placeholder="Email address" class="email-input">
+            <h4>Stay Connected</h4>
+            <p>Stay connected with our latest news and price alerts to never miss a great deal.</p>
+            <div class="email-container">
+              <input type="email" placeholder="Email address" class="email-input">
+            </div>
+            <div class="social-icons">
+              <img src="Group 149.png" alt="Facebook" class="social-icon">
+              <img src="Group 148.png" alt="Twitter" class="social-icon">
+              <img src="Group 147.png" alt="Instagram" class="social-icon">
+            </div>
           </div>
-          <div class="social-icons">
-            <img src="Group 149.png" alt="Facebook" class="social-icon">
-            <img src="Group 148.png" alt="Twitter" class="social-icon">
-            <img src="Group 147.png" alt="Instagram" class="social-icon">
+        </div>
+        <hr>
+        <div class="footer-bottom">
+          <p>&copy; 2024 All rights reserved.</p>
+          <ul class="footer-bottom-nav">
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
         </div>
       </div>
-  </div>
+    </footer>
 
-  <hr>
-  <div class="footer-bottom">
-      <p>&copy; 2024 All rights reserved.</p>
-      <ul class="footer-bottom-nav">
-          <li><a href="#">Terms & Conditions</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-      </ul>
-  </div>
-</footer>
+    <script>
 
-<script>
+        $(document).ready(function() {
+            $(".circle-checkbox").click(function() {
+                $(".circle-checkbox").removeClass("checked");
+                $(this).addClass("checked");
+            });
+        });
 
-  function toggleNav() {
-      var nav = document.querySelector('.navbar-collapse');
-      nav.classList.toggle('show');
-  }
+        document.getElementById('card-number-input').addEventListener('input', function() {
+    const cardNumber = this.value.replace(/\s+/g, '').replace(/[^0-9]/gi, ''); // Remove spaces and non-numeric characters
+    const formattedCardNumber = cardNumber.match(/.{1,4}/g)?.join(' ') || ''; // Add space after every 4 digits
+    this.value = formattedCardNumber;
 
-  document.querySelector('.listing-dropbox').addEventListener('change', function() {
-    if (this.value === 'placeholder') {
-        this.style.color = '#999';
-        this.style.fontFamily = '"Inter", sans-serif';
-        this.style.fontWeight = '500';
+    const icon = this.previousElementSibling;
+    const warningTextNumber = document.querySelector('.warning-text-number');
+    const exclamationIconNumber = warningTextNumber.nextElementSibling;
+    
+    if (cardNumber.length === 0) {
+        icon.className = 'bi bi-credit-card-fill';
+        icon.innerHTML = '';
+        warningTextNumber.style.display = 'none';
+        exclamationIconNumber.style.display = 'none';
+    } else if (cardNumber.startsWith('5')) {
+        if (cardNumber.length < 16) {
+            icon.className = 'bi bi-credit-card-fill';
+            icon.innerHTML = '';
+            warningTextNumber.style.display = 'flex';
+            exclamationIconNumber.style.display = 'none';
+        } else {
+            icon.className = '';
+            icon.innerHTML = '<img width="28" height="28" src="https://img.icons8.com/color/48/mastercard.png" alt="mastercard">';
+            warningTextNumber.style.display = 'none';
+            exclamationIconNumber.style.display = 'none';
+        }
+    } else if (cardNumber.startsWith('4')) {
+        if (cardNumber.length < 16) {
+            icon.className = 'bi bi-credit-card-fill';
+            icon.innerHTML = '';
+            warningTextNumber.style.display = 'flex';
+            exclamationIconNumber.style.display = 'none';
+        } else {
+            icon.className = '';
+            icon.innerHTML = '<img width="28" height="28" src="https://img.icons8.com/color/48/visa.png" alt="visa">';
+            warningTextNumber.style.display = 'none';
+            exclamationIconNumber.style.display = 'none';
+        }
     } else {
-        this.style.color = '#333';
+        icon.className = 'bi bi-credit-card-fill';
+        icon.innerHTML = '';
+        warningTextNumber.style.display = cardNumber.length < 16 ? 'flex' : 'none';
+        exclamationIconNumber.style.display = cardNumber.length < 16 ? 'none' : 'none';
     }
 });
-  
-</script>
-</main>
+
+document.getElementById('card-number-input').addEventListener('input', function() {
+    const cardNumber = this.value.replace(/\s+/g, '').replace(/[^0-9]/gi, ''); // Remove spaces and non-numeric characters
+    const formattedCardNumber = cardNumber.match(/.{1,4}/g)?.join(' ') || ''; // Add space after every 4 digits
+
+    this.value = formattedCardNumber;
+
+    const icon = this.previousElementSibling;
+
+    if (cardNumber.length === 0) {
+        icon.className = 'bi bi-credit-card-fill';
+        icon.innerHTML = '';
+    } else if (cardNumber.startsWith('5')) {
+        icon.className = '';
+        icon.innerHTML = '<img width="28" height="28" src="https://img.icons8.com/color/48/mastercard.png" alt="mastercard">';
+    } else if (cardNumber.startsWith('4')) {
+        icon.className = '';
+        icon.innerHTML = '<img width="28" height="28" src="https://img.icons8.com/color/48/visa.png" alt="visa">';
+    } else {
+        icon.className = 'bi bi-credit-card-fill';
+        icon.innerHTML = '';
+    }
+});
+
+document.getElementById('card-number-input').addEventListener('input', function() {
+    const cardNumber = this.value.replace(/\s+/g, '').replace(/[^0-9]/gi, ''); // Remove spaces and non-numeric characters
+    const formattedCardNumber = cardNumber.match(/.{1,4}/g)?.join(' ') || ''; // Add space after every 4 digits
+
+    this.value = formattedCardNumber;
+
+    const icon = this.previousElementSibling;
+
+    if (cardNumber.length === 0) {
+        icon.className = 'bi bi-credit-card-fill';
+        icon.innerHTML = '';
+    } else if (cardNumber.startsWith('5')) {
+        icon.className = '';
+        icon.innerHTML = '<img width="28" height="28" src="https://img.icons8.com/color/48/mastercard.png" alt="mastercard">';
+    } else if (cardNumber.startsWith('4')) {
+        icon.className = '';
+        icon.innerHTML = '<img width="28" height="28" src="https://img.icons8.com/color/48/visa.png" alt="visa">';
+    } else {
+        icon.className = 'bi bi-credit-card-fill';
+        icon.innerHTML = '';
+    }
+});
+
+document.getElementById('card-number-input').addEventListener('input', function() {
+    const cardNumber = this.value.replace(/\s+/g, '').replace(/[^0-9]/gi, ''); // Remove spaces and non-numeric characters
+    const formattedCardNumber = cardNumber.match(/.{1,4}/g)?.join(' ') || ''; // Add space after every 4 digits
+
+    this.value = formattedCardNumber;
+
+    const icon = this.previousElementSibling;
+
+    if (cardNumber.length === 0) {
+        icon.className = 'bi bi-credit-card-fill';
+        icon.innerHTML = '';
+    } else if (cardNumber.startsWith('5')) {
+        icon.className = '';
+        icon.innerHTML = '<img width="28" height="28" src="https://img.icons8.com/color/48/mastercard.png" alt="mastercard">';
+    } else if (cardNumber.startsWith('4')) {
+        icon.className = '';
+        icon.innerHTML = '<img width="28" height="28" src="https://img.icons8.com/color/48/visa.png" alt="visa">';
+    } else {
+        icon.className = 'bi bi-credit-card-fill';
+        icon.innerHTML = '';
+    }
+
+    if (cardNumber.length < 16) {
+        document.querySelector('.warning-text-number').style.display = 'block';
+        document.querySelector('.warning-text-number + i').style.display = 'inline';
+    } else {
+        document.querySelector('.warning-text-number').style.display = 'none';
+        document.querySelector('.warning-text-number + i').style.display = 'none';
+    }
+});
+
+document.querySelector('.payment-input[placeholder="MM/YY"]').addEventListener('input', function() {
+    const expDate = this.value.replace(/\s+/g, '').replace(/[^0-9]/gi, '');
+    if (expDate.length < 4) {
+        document.querySelector('.warning-text-date').style.display = 'block';
+        document.querySelector('.warning-text-date + i').style.display = 'inline';
+    } else {
+        document.querySelector('.warning-text-date').style.display = 'none';
+        document.querySelector('.warning-text-date + i').style.display = 'none';
+    }
+});
+
+document.querySelector('.payment-input[placeholder="123"]').addEventListener('input', function() {
+    const secCode = this.value.replace(/\s+/g, '').replace(/[^0-9]/gi, '');
+    if (secCode.length < 3) {
+        document.querySelector('.warning-text-code').style.display = 'block';
+        document.querySelector('.warning-text-code + i').style.display = 'inline';
+    } else {
+        document.querySelector('.warning-text-code').style.display = 'none';
+        document.querySelector('.warning-text-code + i').style.display = 'none';
+    }
+});
+
+document.querySelector('.payment-input[placeholder="Jon Dae"]').addEventListener('input', function() {
+    const name = this.value.trim();
+    if (name.length < 2) {
+        document.querySelector('.warning-text-name').style.display = 'block';
+        document.querySelector('.warning-text-name + i').style.display = 'inline';
+    } else {
+        document.querySelector('.warning-text-name').style.display = 'none';
+        document.querySelector('.warning-text-name + i').style.display = 'none';
+    }
+});
+
+
+        </script>
+
+  </main>
 </body>
+</html>
