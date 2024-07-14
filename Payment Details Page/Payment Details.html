@@ -1278,10 +1278,13 @@ align-items: center;
             width: 100%;
             max-width: 500px;
             padding: 20px;
+            padding-bottom: 0px;
+            margin-bottom: 20px;
             border: 1px solid #00000023;
-            border-radius: 5px;
+            border-radius: 5px 5px 0 0;
             background-color: #fafafa77;
             box-shadow: inset 5px 0 5px -5px rgba(0, 0, 0, 0.1), inset -5px 0 5px -5px rgba(0, 0, 0, 0.1); /* Add inset shadows to the left and right */
+            border-bottom: 1.7px solid #99999932;
         }
 
         .payment-rectangle h4 {
@@ -1299,7 +1302,7 @@ align-items: center;
             background-color: #fafafa77;
             font-weight: 500;
     padding: 20px;
-    margin: -20px -20px 20px -20px; /* Adjust the margins to cover the full width and top */
+    margin: -20px -20px 0px -20px; /* Adjust the margins to cover the full width and top */
     border-radius: 5px 5px 0 0; /* Only round the top corners */
     border-bottom: 0.1px solid #99999932; /* Add a darker bottom border */
     text-align: left; /* Adjust as per your requirement */
@@ -1311,9 +1314,19 @@ align-items: center;
     width: 100%;
 }
 
+.card-number-container img {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #999;
+    align-items: center;
+}
+
 .bi.bi-credit-card-fill {
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 20px;
     transform: translateY(-50%);
     font-size: 16px; /* Adjust icon size as needed */
@@ -1377,8 +1390,9 @@ align-items: center;
         .payment-checkbox {
             display: flex;
             align-items: center;
-            margin-top: 10px;
+            margin-top: 20px;
             font-family: "Inter", sans-serif;
+            padding-bottom: 20px;
         }
 
         .payment-checkbox input {
@@ -1442,6 +1456,25 @@ align-items: center;
     font-family: "Inter", sans-serif;
 }
 
+.guiding-text-email {
+    display: flex;
+  width: 481px;
+  padding: 10px;
+  margin: 10px;
+  margin-bottom: 0px;
+  margin-top: 20px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 7px;
+}
+
+.phone-number-container {
+    margin-top: 20px;
+}
+
 .warning-text-name {
     margin-top: 0px;
     margin-bottom: 5px; /* Adjust spacing as needed */
@@ -1498,6 +1531,45 @@ align-items: center;
 
 .name-container {
     margin-top: 20px;
+}
+
+.gcash-container {
+    font-family: "Inter", sans-serif;
+    background-color: #fafafa77;
+    font-weight: 500;
+    
+    width: 500px;
+    padding: 20px;
+    padding-top: 20px;
+    margin-top: 20px;
+    margin: -20px -20px 20px -20px;
+    border-radius: 0px 0px 0 0;
+    border-bottom: 0.1px solid #99999932;
+    border-top: 1.7px solid #99999932;
+    text-align: left;
+    box-shadow: inset 5px 0 5px -5px rgba(0, 0, 0, 0.1), inset -5px 0 5px -5px rgba(0, 0, 0, 0.1); /* Add inset shadows to the left and right */
+    border: 1px solid #00000023; /* Add this line to create a border around the container */
+    border-top: none; /* Remove the top border */
+    margin-bottom: 0px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.089); /* bottom shadow */
+}
+
+.bottom {
+    font-weight: 500;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.gcash-bottom-container {
+    width: 100%;
+            max-width: 500px;
+            padding: 20px;
+            padding-top: 0px;
+            border-top: none !important; /* Ensure the top border is removed */
+            border: 1px solid #00000023;
+            border-radius: 0px 0px 5px 5px;
+            background-color: #fafafa77;
+            box-shadow: inset 5px 0 5px -5px rgba(0, 0, 0, 0.1), inset -5px 0 5px -5px rgba(0, 0, 0, 0.1); /* Add inset shadows to the left and right */
 }
 
     footer {
@@ -1808,13 +1880,14 @@ hr {
                 Credit & Debit Cards<img width="28" height="28" src="https://img.icons8.com/color/48/visa.png" alt="visa" style="margin-left: 5px;"><img width="28" height="28" src="https://img.icons8.com/color/48/mastercard.png" alt="mastercard" style="margin-left: 5px;">
             </div>
         </h4>
+        <div class="credit-container">
         <p class="guiding-text">Card number</p>
         <div class="card-number-container">
             <i class="bi bi-credit-card-fill"></i>
             <input type="text" class="payment-input" id="card-number-input" placeholder="1234 5678 9123 4567">
-            <div class="warning-text-container">
-                <p class="warning-text-number">Unsupported card number</p><i class="bi bi-exclamation-triangle"></i>
-            </div>
+        </div>
+        <div class="warning-text-container">
+            <p class="warning-text-number">Unsupported card number</p><i class="bi bi-exclamation-triangle"></i>
         </div>
 
 
@@ -1850,6 +1923,34 @@ hr {
             <label for="save-card">Save this card for future payments</label>
         </div>
     </div>
+</div>
+
+<div class="gcash-container">
+    <h4 class="bottom">
+        <div class="circle-checkbox-container">
+            <div class="circle-checkbox">
+                <input type="radio" name="payment-option">
+            </div>
+            Gcash<img src="GCash_logo.png" alt="gcash-logo" style="height: 17%; width: 17%; margin-left: 5px;">
+        </div>
+    </h4>
+</div>
+
+<div class="gcash-bottom-container">
+    <p class="guiding-text-email">Email Address</p>
+    <input type="text" class="payment-input" placeholder="Please enter your email here">
+    <div class="phone-number-container">
+    <p class="guiding-text">Phone number</p>
+    <input type="text" class="payment-input" placeholder="+63 1234567891">
+</div>
+    <div class="payment-checkbox">
+        <input type="checkbox" id="save-card">
+        <label for="save-card">Save this option for future payments</label>
+    </div>
+</div>
+</div>
+
+
 
     </section>
     <footer>
@@ -1904,14 +2005,29 @@ hr {
 
     <script>
 
-        $(document).ready(function() {
-            $(".circle-checkbox").click(function() {
-                $(".circle-checkbox").removeClass("checked");
-                $(this).addClass("checked");
-            });
-        });
+$(document).ready(function() {
+    $(".circle-checkbox").click(function() {
+        $(".circle-checkbox").removeClass("checked");
+        $(this).addClass("checked");
 
-        document.getElementById('card-number-input').addEventListener('input', function() {
+        // Hide all containers first
+        $(".gcash-bottom-container").hide();
+        $(".credit-container").hide();
+
+        // Toggle the visibility of the respective container
+        if ($(this).closest("h4").text().includes("Gcash")) {
+            $(".gcash-bottom-container").slideToggle();
+        } else if ($(this).closest("h4").text().includes("Credit & Debit Cards")) {
+            $(".credit-container").slideToggle();
+        }
+    });
+
+    // Hide the containers initially
+    $(".gcash-bottom-container").hide();
+    $(".credit-container").hide();
+});
+
+document.getElementById('card-number-input').addEventListener('input', function() {
     const cardNumber = this.value.replace(/\s+/g, '').replace(/[^0-9]/gi, ''); // Remove spaces and non-numeric characters
     const formattedCardNumber = cardNumber.match(/.{1,4}/g)?.join(' ') || ''; // Add space after every 4 digits
     this.value = formattedCardNumber;
@@ -2034,14 +2150,55 @@ document.getElementById('card-number-input').addEventListener('input', function(
     }
 });
 
+// Hide warning-text-container initially
+document.querySelectorAll('.warning-text-container').forEach(container => {
+    container.style.display = 'none';
+});
+
+document.getElementById('card-number-input').addEventListener('input', function() {
+    const cardNumber = this.value.replace(/\s+/g, '').replace(/[^0-9]/gi, ''); // Remove spaces and non-numeric characters
+    const formattedCardNumber = cardNumber.match(/.{1,4}/g)?.join(' ') || ''; // Add space after every 4 digits
+
+    this.value = formattedCardNumber;
+
+    const icon = this.previousElementSibling;
+
+    if (cardNumber.length === 0) {
+        icon.className = 'bi bi-credit-card-fill';
+        icon.innerHTML = '';
+        document.querySelector('.warning-text-number').parentElement.style.display = 'none';
+    } else if (cardNumber.startsWith('5')) {
+        icon.className = '';
+        icon.innerHTML = '<img width="28" height="28" src="https://img.icons8.com/color/48/mastercard.png" alt="mastercard">';
+    } else if (cardNumber.startsWith('4')) {
+        icon.className = '';
+        icon.innerHTML = '<img width="28" height="28" src="https://img.icons8.com/color/48/visa.png" alt="visa">';
+    } else {
+        icon.className = 'bi bi-credit-card-fill';
+        icon.innerHTML = '';
+    }
+
+    if (cardNumber.length < 16) {
+        document.querySelector('.warning-text-number').style.display = 'block';
+        document.querySelector('.warning-text-number + i').style.display = 'inline';
+        document.querySelector('.warning-text-number').parentElement.style.display = 'flex';
+    } else {
+        document.querySelector('.warning-text-number').style.display = 'none';
+        document.querySelector('.warning-text-number + i').style.display = 'none';
+        document.querySelector('.warning-text-number').parentElement.style.display = 'none';
+    }
+});
+
 document.querySelector('.payment-input[placeholder="MM/YY"]').addEventListener('input', function() {
     const expDate = this.value.replace(/\s+/g, '').replace(/[^0-9]/gi, '');
     if (expDate.length < 4) {
         document.querySelector('.warning-text-date').style.display = 'block';
         document.querySelector('.warning-text-date + i').style.display = 'inline';
+        document.querySelector('.warning-text-date').parentElement.style.display = 'flex';
     } else {
         document.querySelector('.warning-text-date').style.display = 'none';
         document.querySelector('.warning-text-date + i').style.display = 'none';
+        document.querySelector('.warning-text-date').parentElement.style.display = 'none';
     }
 });
 
@@ -2050,9 +2207,11 @@ document.querySelector('.payment-input[placeholder="123"]').addEventListener('in
     if (secCode.length < 3) {
         document.querySelector('.warning-text-code').style.display = 'block';
         document.querySelector('.warning-text-code + i').style.display = 'inline';
+        document.querySelector('.warning-text-code').parentElement.style.display = 'flex';
     } else {
         document.querySelector('.warning-text-code').style.display = 'none';
         document.querySelector('.warning-text-code + i').style.display = 'none';
+        document.querySelector('.warning-text-code').parentElement.style.display = 'none';
     }
 });
 
@@ -2061,12 +2220,35 @@ document.querySelector('.payment-input[placeholder="Jon Dae"]').addEventListener
     if (name.length < 2) {
         document.querySelector('.warning-text-name').style.display = 'block';
         document.querySelector('.warning-text-name + i').style.display = 'inline';
+        document.querySelector('.warning-text-name').parentElement.style.display = 'flex';
     } else {
         document.querySelector('.warning-text-name').style.display = 'none';
         document.querySelector('.warning-text-name + i').style.display = 'none';
+        document.querySelector('.warning-text-name').parentElement.style.display = 'none';
     }
 });
 
+$(document).ready(function() {
+    $(".circle-checkbox").click(function() {
+        $(".circle-checkbox").removeClass("checked");
+        $(this).addClass("checked");
+
+        // Hide all containers first
+        $(".gcash-bottom-container").hide();
+        $(".credit-container").hide();
+
+        // Toggle the visibility of the respective container
+        if ($(this).closest("h4").text().includes("Gcash")) {
+            $(".gcash-bottom-container").slideToggle();
+        } else if ($(this).closest("h4").text().includes("Credit & Debit Cards")) {
+            $(".credit-container").slideToggle();
+        }
+    });
+
+    // Hide the containers initially
+    $(".gcash-bottom-container").hide();
+    $(".credit-container").hide();
+});
 
         </script>
 
