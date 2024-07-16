@@ -403,16 +403,16 @@ margin-top: 38px; /* Adjust the value to move the navbar down further */
     align-items: center;
     margin-top: 0px;
     flex-direction: column;
-    height: 2910px;
+    height: 950px;
 }
 
 .message-content {
     background-color: #ffffff; /* Light gray background */
     border: 1px solid #00000023; /* Green border */
-    border-radius: 30px; /* Rounded corners */
+    border-radius: 10px; /* Rounded corners */
     padding: 20px 30px; /* Padding inside the box */
     text-align: center; /* Center the text */
-    max-width: 450px; /* Maximum width of the box */
+    max-width: 480px; /* Maximum width of the box */
     width: 100%; /* Responsive width */
     margin-bottom: 30px;
 }
@@ -685,15 +685,7 @@ margin-left: -30px;
     background-color: #e3e3e3; /* Darker color when hovered */
 }
 
-.next-button-container {
-width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 1270px;
-    margin-top: 60px;
-}
+
 
 .upload-button {
     width: 120px;
@@ -975,7 +967,7 @@ align-items: center;
 
 .feed-section-title h2 {
   /* Styles for the feed section title */
-  font-size: 45px;
+  font-size: 25px;
   font-weight: bolder;
   font-family: "Mochiy Pop One", sans-serif;
   color: black;
@@ -1279,12 +1271,44 @@ align-items: center;
             max-width: 500px;
             padding: 20px;
             padding-bottom: 0px;
-            margin-bottom: 20px;
-            border: 1px solid #00000023;
-            border-radius: 5px 5px 0 0;
-            background-color: #fafafa77;
-            box-shadow: inset 5px 0 5px -5px rgba(0, 0, 0, 0.1), inset -5px 0 5px -5px rgba(0, 0, 0, 0.1); /* Add inset shadows to the left and right */
-            border-bottom: 1.7px solid #99999932;
+            margin-bottom: 0px;
+            border: 0.1px solid #00000023;
+            border-radius: 10px 10px 0 0;
+            background-color: #ffffff;
+        }
+
+        .container-text {
+            margin-top: 0px;
+            margin-bottom: 0px;
+}
+
+        .credit-containers {
+            font-family: "Inter", sans-serif;
+    background-color: #ffffff;
+    margin: -20px -20px 20px -20px; /* Adjust the margins to cover the full width and top */
+    height: 60px;
+    width: 540px;
+    font-weight: 500;
+    text-align: left;
+    padding: 0px;
+    background-color: #ffffff;
+    margin-bottom: 0px;
+    display: flex; /* Add flexbox display */
+    align-items: center; /* Center children vertically */
+        }
+
+        .payment-option {
+            font-family: "Inter", sans-serif;
+    background-color: #ffffff;
+    margin: -20px -20px 20px -20px; /* Adjust the margins to cover the full width and top */
+    width: 520px;
+    font-weight: 500;
+    text-align: left;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    border-bottom: 0.1px solid #00000023;
+    background-color: #f8f8f8;
+    margin-bottom: 20px;
         }
 
         .payment-rectangle h4 {
@@ -1293,20 +1317,19 @@ align-items: center;
     padding: 20px;
     margin: -20px -20px 20px -20px; /* Adjust the margins to cover the full width and top */
     border-radius: 5px 5px 0 0; /* Only round the top corners */
-    border-bottom: 1.7px solid #99999932; /* Add a darker bottom border */
+    border-bottom: 0.1px solid #99999932;
     text-align: left; /* Adjust as per your requirement */
         }
 
         .payment-rectangle h4.bottom {
             font-family: "Inter", sans-serif;
-            background-color: #fafafa77;
+            background-color: #ffffff;
             font-weight: 500;
     padding: 20px;
     margin: -20px -20px 0px -20px; /* Adjust the margins to cover the full width and top */
     border-radius: 5px 5px 0 0; /* Only round the top corners */
     border-bottom: 0.1px solid #99999932; /* Add a darker bottom border */
     text-align: left; /* Adjust as per your requirement */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.089); /* Add a slight shadow */
         }
 
         .card-number-container {
@@ -1322,6 +1345,11 @@ align-items: center;
     font-size: 16px;
     color: #999;
     align-items: center;
+}
+
+.bi.bi-credit-card-2-back-fill {
+  color: #000; /* Example style */
+  font-size: 22px; /* Example style */
 }
 
 .bi.bi-credit-card-fill {
@@ -1387,12 +1415,19 @@ align-items: center;
             width: calc(50% - 20px);
         }
 
+        .payment-checkbox-credit{
+            display: flex;
+    align-items: center;
+    margin-top: 20px;
+    font-family: "Inter", sans-serif;
+            padding-bottom: 20px;
+        }
+
         .payment-checkbox {
             display: flex;
             align-items: center;
             margin-top: 20px;
             font-family: "Inter", sans-serif;
-            padding-bottom: 20px;
         }
 
         .payment-checkbox input {
@@ -1400,9 +1435,10 @@ align-items: center;
         }
 
         .circle-checkbox-container {
-    display: flex;
+            display: flex;
     align-items: center;
     margin-bottom: 0px;
+    margin-left: 20px;
 }
 
 .circle-checkbox-container img {
@@ -1414,7 +1450,7 @@ align-items: center;
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    border: 2px solid #999;
+    border: 1px solid #b5b5b5;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1462,7 +1498,7 @@ align-items: center;
   padding: 10px;
   margin: 10px;
   margin-bottom: 0px;
-  margin-top: 20px;
+  margin-top: 10px;
   padding-bottom: 0px;
   padding-left: 0px;
   font-size: 14px;
@@ -1535,24 +1571,20 @@ align-items: center;
 
 .gcash-container {
     font-family: "Inter", sans-serif;
-    background-color: #fafafa77;
+    background-color: #ffffff;
+    width: 540px;
+    height: 60px !important; 
     font-weight: 500;
-    
-    width: 500px;
-    padding: 20px;
-    padding-top: 20px;
-    margin-top: 20px;
-    margin: -20px -20px 20px -20px;
-    border-radius: 0px 0px 0 0;
-    border-bottom: 0.1px solid #99999932;
-    border-top: 1.7px solid #99999932;
     text-align: left;
-    box-shadow: inset 5px 0 5px -5px rgba(0, 0, 0, 0.1), inset -5px 0 5px -5px rgba(0, 0, 0, 0.1); /* Add inset shadows to the left and right */
-    border: 1px solid #00000023; /* Add this line to create a border around the container */
-    border-top: none; /* Remove the top border */
+    padding: 0px;
+    border-left: 0.1px solid #00000023;
+    border-right: 0.1px solid #00000023;
+    border-bottom: 0.1px solid #00000023;
+    background-color: #ffffff;
     margin-bottom: 0px;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.089); /* bottom shadow */
+    display: flex; /* Add flexbox display */
 }
+
 
 .bottom {
     font-weight: 500;
@@ -1566,10 +1598,101 @@ align-items: center;
             padding: 20px;
             padding-top: 0px;
             border-top: none !important; /* Ensure the top border is removed */
-            border: 1px solid #00000023;
+            border: 0.1px solid #00000023;
+            border-radius: 0px 0px 0px 0px;
+            background-color: #ffffff;
+}
+
+.paypal-container {
+    font-family: "Inter", sans-serif;
+    background-color: #ffffff;
+    width: 540px;
+    height: 60px !important; 
+    font-weight: 500;
+    text-align: left;
+    padding: 0px;
+    border-left: 0.1px solid #00000023;
+    border-right: 0.1px solid #00000023;
+    border-bottom: 0.1px solid #00000023;
+    border-radius: 0 0 10px 10px;
+    background-color: #ffffff;
+    margin-bottom: 0px;
+    display: flex; /* Add flexbox display */
+}
+
+.paypal-bottom-container {
+    width: 100%;
+            max-width: 500px;
+            padding: 20px;
+            padding-top: 0px;
+            border-top: none !important; /* Ensure the top border is removed */
+            border: 0.1px solid #00000023;
             border-radius: 0px 0px 5px 5px;
-            background-color: #fafafa77;
-            box-shadow: inset 5px 0 5px -5px rgba(0, 0, 0, 0.1), inset -5px 0 5px -5px rgba(0, 0, 0, 0.1); /* Add inset shadows to the left and right */
+            background-color: #ffffff;
+
+}
+
+.back-button {
+  width: 120px;
+    height: 35px;
+    border: 1px solid #5EA91E;
+    background-color: #5EA91E;
+    border-radius: 43px;
+    outline: none;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    padding: 22px;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+    cursor: pointer;
+}
+
+.back-button:hover {
+  background-color: #4e921a; /* Darker color when hovered */
+}
+
+.nav-button-container {
+  display: flex;
+  justify-content: space-between; /* Distribute space between buttons */
+  align-items: center; /* Center align items vertically */
+  width: 100%; /* Full width container */
+  max-width: 341px; /* Set max width for the container */
+  margin: 0 auto; /* Center the container horizontally */
+  margin-top: 50px;
+}
+
+.back-button-container,
+.next-button-container {
+  flex: 1; /* Each button container takes up equal space */
+  display: flex;
+  justify-content: center; /* Center the button within its container */
+}
+
+.back-button, .next-button {
+  width: 120px; /* Set a fixed width for the buttons */
+  height: 35px;
+  border: 1px solid #5EA91E;
+  background-color: #5EA91E;
+  border-radius: 43px;
+  outline: none;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
+  color: whitesmoke;
+  display: flex;
+  justify-content: center; /* Center the text horizontally */
+  align-items: center; /* Center the text vertically */
+  padding: 22px;
+  transition: background-color 0.3s ease; /* Add transition for smooth hover effect */
+  cursor: pointer;
+}
+
+.back-button:hover, .next-button:hover {
+  background-color: #4e921a; /* Darker color when hovered */
 }
 
     footer {
@@ -1734,6 +1857,143 @@ color: white;
         color: #e1e1e1;
     }
 
+    .sell-us-section-title h2 {
+    /* Styles for the feed section title */
+    font-size: 32px;
+    font-weight: bolder;
+    color: black;
+    margin-top: 30px;  /* Adjust if needed */
+    text-align: center; /* Center text horizontally */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    margin-bottom: 10px;
+    font-family: "Mochiy Pop One", sans-serif;
+    /* margin-top: 20vh;  Adjust as needed to position content below header */
+    /* Add padding as well */
+}
+
+.sell-us-section {
+    /*  padding: 20px;  Add some padding around the section remove by logic */
+    min-height: 100vh; /* Ensure the section takes up at least 100% of the viewport height */
+    display: flex;
+    flex-direction: column; /* Align content vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: flex-start; /* Start content at the top */
+    margin-bottom: 100px;
+}
+
+.sell-us-content {
+    display: flex;
+    align-items: center; /* Center content vertically within each column */
+    justify-content: space-between; /* Space between image and details */
+    width: 80%; /* Adjust as needed for desired width */
+    max-width: 1200px; /* Adjust as needed for desired max width */
+    /* align-items: flex-start; /*Test*/
+}
+
+.sell-us-details {
+    flex: 1; /* Take up half of the available space */
+    padding: 40px; /* Add some padding around the details */
+    display: flex; /*Test*/
+    flex-direction: column; /*Test*/
+    flex-grow: 1; /*Test*/
+}
+
+.sell-us-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px; /* Adjust as needed for spacing */
+    align-items: center; /* This centers the items vertically */
+}
+
+.sell-us-item img {
+    margin-right: 30px; /* Adjust as needed for spacing */
+    width: 200px; /* Adjust as needed for size */
+    height: auto;
+    /* margin-top: 50px; (Adjusts the image vertically)*/
+}
+
+.sell-us-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.sell-us-title, .second-sell-us-title {
+    font-size: 25px;
+    font-weight: bolder;
+    font-family: Arial;
+    color: black;
+    margin-bottom: 10px; /* Space between title and description */
+    margin-top: 20px;
+    font-family: "Mochiy Pop One", sans-serif;
+    /* margin: 0; /*New*/
+}
+
+.sell-us-description, .second-sell-us-title-description {
+    font-size: 16px;
+    margin-bottom: 10px; /* Space between description and next element */
+    line-height: 1.6; /* Adjust this value for desired line spacing */
+    font-family: "Inter", sans-serif;
+    /* margin: 0; /*New*/
+}
+
+.sell-us-image {
+    flex: 1; /* Take up half of the available space */
+    display: flex;
+    justify-content: center; /* Center image horizontally */
+    align-items: center; /* Center image vertically */
+}
+
+.sell-us-image img {
+    max-width: 100%; /* Ensure image fits within its container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 20px; /* Smooth edges */
+    margin-top: 20px;
+    max-width: 100%; /*New*/
+    height: auto; /*New*/
+}
+
+.get-started button {
+    width: 265px;
+    height: 60px;
+    border: 1px solid #ff4632c8;
+    background-color: #ff4632c8;
+    border-radius: 7.5px;
+    outline: none;
+    padding-top: 38px;
+    font-size: 18px;
+    font-weight: 600;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    padding: 15px;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+}
+
+.get-started button[type=submit]:hover {
+    background-color: #ff4632e6; /* Darker color when hovered */
+}
+
+@media only screen and (max-width: 768px) {
+    .sell-us-title, .second-sell-us-title {
+        font-size: 20px;
+    }
+
+    .sell-us-content {
+        align-items: center;
+        justify-content: space-between;
+        width: 80%;
+        max-width: 1200px;
+        display: block;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .sell-us-item {
+        display: block !important;
+    }
+}
 
   /***logicdigger css  for mobile***/
 
@@ -1864,23 +2124,25 @@ hr {
     <section class="message-box">
       <div class="message-content">
         <div class="message-title">
-          <i class="bi bi-credit-card-fill"></i>
+            <i class="bi bi-credit-card-2-back-fill"></i>
           <h3>Credit card & Gcash details</h3>
         </div>
         <p>Please provide your credit card and Gcash information to receive payments on your card or to be able to purchase</p>
       </div>
       
       <div class="payment-rectangle">
-        <h4>Choose Payment Options</h4>
-        <h4 class="bottom">
+        <div class="payment-option">
+        <h3>Choose Payment Options</h3>
+    </div>
+        <div class="credit-containers">
             <div class="circle-checkbox-container">
                 <div class="circle-checkbox">
                     <input type="radio" name="payment-option">
                 </div>
-                Credit & Debit Cards<img width="28" height="28" src="https://img.icons8.com/color/48/visa.png" alt="visa" style="margin-left: 5px;"><img width="28" height="28" src="https://img.icons8.com/color/48/mastercard.png" alt="mastercard" style="margin-left: 5px;">
+                <p class="container-text">Credit & Debit Cards<img width="28" height="28" src="https://img.icons8.com/color/48/visa.png" alt="visa" style="margin-left: 5px;"><img width="28" height="28" src="https://img.icons8.com/color/48/mastercard.png" alt="mastercard" style="margin-left: 5px;"></p>
             </div>
-        </h4>
-        <div class="credit-container">
+        </div>
+        <div class="credit-data-container">
         <p class="guiding-text">Card number</p>
         <div class="card-number-container">
             <i class="bi bi-credit-card-fill"></i>
@@ -1918,7 +2180,7 @@ hr {
     </div>
     </div>
 
-        <div class="payment-checkbox">
+        <div class="payment-checkbox-credit">
             <input type="checkbox" id="save-card">
             <label for="save-card">Save this card for future payments</label>
         </div>
@@ -1926,14 +2188,12 @@ hr {
 </div>
 
 <div class="gcash-container">
-    <h4 class="bottom">
-        <div class="circle-checkbox-container">
-            <div class="circle-checkbox">
-                <input type="radio" name="payment-option">
-            </div>
-            Gcash<img src="GCash_logo.png" alt="gcash-logo" style="height: 17%; width: 17%; margin-left: 5px;">
+    <div class="circle-checkbox-container">
+        <div class="circle-checkbox">
+            <input type="radio" name="payment-option">
         </div>
-    </h4>
+        <p class="container-text">Gcash<img src="GCash_logo.png" alt="gcash-logo" style="height: 20%; width: 20%; margin-left: 5px;"></p>
+    </div>
 </div>
 
 <div class="gcash-bottom-container">
@@ -1950,9 +2210,69 @@ hr {
 </div>
 </div>
 
+<div class="paypal-container">
+        <div class="circle-checkbox-container">
+            <div class="circle-checkbox">
+                <input type="radio" name="payment-option">
+            </div>
+            <p class="container-text">Paypal<img width="28" height="28" src="https://img.icons8.com/color/48/paypal.png" alt="paypal"/></p>
+        </div>
+</div>
 
+<div class="paypal-bottom-container">
+    <p class="guiding-text-email">Email Address</p>
+    <input type="text" class="payment-input" placeholder="Please enter your email here">
+    <div class="phone-number-container">
+    <p class="guiding-text">Phone number</p>
+    <input type="text" class="payment-input" placeholder="+63 1234567891">
+</div>
+    <div class="payment-checkbox">
+        <input type="checkbox" id="save-card">
+        <label for="save-card">Save this option for future payments</label>
+    </div>
+</div>
+</div>
+
+
+<div class="nav-button-container">
+    <div class="back-button-container">
+      <button type="submit" class="back-button">Back</button>
+    </div>
+    <div class="next-button-container">
+      <button type="submit" class="next-button">Next</button>
+    </div>
+  </div>
 
     </section>
+
+<!--<section class="sell-us-section">
+        <div class="sell-us-section-title">
+          <h2>Here are some benefits of selling digitally</h2>
+        </div>
+        <div class="sell-us-content">
+          <div class="sell-us-details">
+            <div class="sell-us-item">
+              <img src="Group 39.png" alt="write something">
+              <div class="sell-us-text">
+                <h4 class="sell-us-title">List Your Pigs for Free</h4>
+                <p class="sell-us-description">Enjoy the benefits of listing your pigs on our platform without any upfront cost. Maximize your sales potential, and connect with buyers effortlessly on our platform.</p>
+              </div>
+            </div>
+            <div class="sell-us-item">
+              <img src="Group 38.png" alt="write something">
+              <div class="sell-us-text">
+                <h4 class="second-sell-us-title">Build Your Client Base & Track Your Sales</h4>
+                <p class="second-sell-us-title-description">Expand your reach, attract more buyers, and keep track of your sales seamlessly. Use our tools to manage inventory, monitor transactions, and gain insights into buyer behavior.</p>
+              </div>
+            </div>
+          </div>
+          <div class="sell-us-image">
+            <img src="Group 45.png" alt="A farmer analyzing the growth of his business">
+          </div>
+        </div>
+  
+  </section> 
+
     <footer>
       <div class="footer-content">
         <img src="Group 193.png" alt="Piggery Logo" class="footer-logo">
@@ -2001,7 +2321,8 @@ hr {
           </ul>
         </div>
       </div>
-    </footer>
+      
+    </footer> -->
 
     <script>
 
@@ -2012,19 +2333,23 @@ $(document).ready(function() {
 
         // Hide all containers first
         $(".gcash-bottom-container").hide();
-        $(".credit-container").hide();
+        $(".credit-data-container").hide();
+        $(".paypal-bottom-container").hide();
 
         // Toggle the visibility of the respective container
-        if ($(this).closest("h4").text().includes("Gcash")) {
+        if ($(this).closest(".gcash-container").length > 0) {
             $(".gcash-bottom-container").slideToggle();
-        } else if ($(this).closest("h4").text().includes("Credit & Debit Cards")) {
-            $(".credit-container").slideToggle();
+        } else if ($(this).closest(".credit-containers").length > 0) {
+            $(".credit-data-container").slideToggle();
+        } else if ($(this).closest(".paypal-container").length > 0) {
+            $(".paypal-bottom-container").slideToggle();
         }
     });
 
     // Hide the containers initially
     $(".gcash-bottom-container").hide();
-    $(".credit-container").hide();
+    $(".credit-data-container").hide();
+    $(".paypal-bottom-container").hide();
 });
 
 document.getElementById('card-number-input').addEventListener('input', function() {
@@ -2035,7 +2360,7 @@ document.getElementById('card-number-input').addEventListener('input', function(
     const icon = this.previousElementSibling;
     const warningTextNumber = document.querySelector('.warning-text-number');
     const exclamationIconNumber = warningTextNumber.nextElementSibling;
-    
+
     if (cardNumber.length === 0) {
         icon.className = 'bi bi-credit-card-fill';
         icon.innerHTML = '';
@@ -2235,19 +2560,23 @@ $(document).ready(function() {
 
         // Hide all containers first
         $(".gcash-bottom-container").hide();
-        $(".credit-container").hide();
+        $(".credit-data-container").hide();
+        $(".paypal-bottom-container").hide(); // Hide PayPal container
 
         // Toggle the visibility of the respective container
-        if ($(this).closest("h4").text().includes("Gcash")) {
+        if ($(this).closest(".gcash-container").length > 0) {
             $(".gcash-bottom-container").slideToggle();
-        } else if ($(this).closest("h4").text().includes("Credit & Debit Cards")) {
-            $(".credit-container").slideToggle();
+        } else if ($(this).closest(".credit-containers").length > 0) {
+            $(".credit-data-container").slideToggle();
+        } else if ($(this).closest(".paypal-container").length > 0) {
+            $(".paypal-bottom-container").slideToggle();
         }
     });
 
     // Hide the containers initially
     $(".gcash-bottom-container").hide();
-    $(".credit-container").hide();
+    $(".credit-data-container").hide();
+    $(".paypal-bottom-container").hide(); // Hide PayPal container initially
 });
 
         </script>
