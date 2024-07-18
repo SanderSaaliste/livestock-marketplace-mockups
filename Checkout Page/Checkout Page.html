@@ -1,2713 +1,2713 @@
-!DOCTYPE html
-html lang=en
-  head
-meta charset=UTF-8
-meta name=viewport content=width=device-width, initial-scale=1.0
-titleCheckout Pagetitle
-link rel=stylesheet href=httpscdn.jsdelivr.netnpmbootstrap-icons@1.11.3fontbootstrap-icons.min.css
-link rel=preconnect href=httpsfonts.googleapis.com
-link rel=preconnect href=httpsfonts.gstatic.com crossorigin
-link href=httpsfonts.googleapis.comcss2family=Interwght@100..900&family=Mochiy+Pop+One&display=swap rel=stylesheet
-script src=httpscdnjs.cloudflare.comajaxlibsjquery3.7.1jquery.min.js integrity=sha512-v2CJ7UaYy4JwqLDIrZUI4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP24hpQINQg== crossorigin=anonymous referrerpolicy=no-referrerscript
-style
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout Page</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<style>
 
-         Header styles 
+        /* Header styles */
         header {
-             background-image url(header.png);   logicdigger css remove this
-            height 100vh;  Make the image responsive logicdigger css remove this 
-            width 100%; 
-            object-fit cover;  Ensure the image covers the entire header 
-            filter brightness(0.);
-            position absolute;
-            top 0;
-            left 0;
-            z-index 99;
+            /* background-image: url(header.png);   logicdigger css remove this
+            height: 100vh; /* Make the image responsive logicdigger css remove this */
+            width: 100%; 
+            object-fit: cover; /* Ensure the image covers the entire header */
+            filter: brightness(0.);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 99;
         }
 
-        logicdigger css
+        /***logicdigger css***/
 
 .heor-content {
-    width 100%;
-    max-width 1270px;
-    margin 0 auto;
-    padding 12px 25px;
+    width: 100%;
+    max-width: 1270px;
+    margin: 0 auto;
+    padding: 12px 25px;
 }
 
-  logicdigger css 
+  /***logicdigger css ***/
         .navbar-toggler, .navbar-close {
-            display none;
-            background-color transparent;
-            border none;
-            font-size 35px;
-            cursor pointer;
+            display: none;
+            background-color: transparent;
+            border: none;
+            font-size: 35px;
+            cursor: pointer;
         }
         .navbar-nav {
-            display flex;
-            flex-direction row;
-            align-items center;
-            flex 1;
-            justify-content space-between;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            flex: 1;
+            justify-content: space-between;
         }
         .navbar-nav a {
-    margin 0 10px;
-    text-decoration none;
-    color #3c5823;
-    font-weight 600;
+    margin: 0 10px;
+    text-decoration: none;
+    color: #3c5823;
+    font-weight: 600;
 }
         .navbar-nav .icons a {
-            margin 0 5px;
+            margin: 0 5px;
         }
         .navbar-collapse {
-            display flex;
-            flex-direction row;
-            align-items center;
-            justify-content space-between;
-            flex 1;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            flex: 1;
         }
 
-        @media only screen and (min-width 1024px) and (max-width 1350px)  {
+        @media only screen and (min-width: 1024px) and (max-width: 1350px)  {
           .image-item {
-            margin-bottom 20px !important;
+            margin-bottom: 20px !important;
           }
-          .navbar-nav .nav-linknth-child(6) {
-            margin 0 !important;
+          .navbar-nav .nav-link:nth-child(6) {
+            margin: 0 !important;
           }
           .rectangle-container{
-            display block !important;
-            text-align center;
+            display: block !important;
+            text-align: center;
           }
           .rectangle {
-    width 25% !important;
-    displayinline-block !important;
+    width: 25% !important;
+    display:inline-block !important;
   }
   .rectangle li img {
-    height 10%;
-    width 10% !important;
-    padding-right 3%;
+    height: 10%;
+    width: 10% !important;
+    padding-right: 3%;
 }
   .rectangle img {
-    width 100% !important;
+    width: 100% !important;
   }
         }
-        @media only screen and (min-width 768px) and (max-width 1024px)  {
+        @media only screen and (min-width: 768px) and (max-width: 1024px)  {
         .rectangle-container  .rectangle img {
-    width 310px !important;
+    width: 310px !important;
 }
 .sell-us-content{
-  display block !important;
-  margin-bottom 20px;
+  display: block !important;
+  margin-bottom: 20px;
 }
 .rectangle-container .rectangle {
-    width 300px !important;
+    width: 300px !important;
 }
 .rectangle-container {
-    flex-wrap wrap;
+    flex-wrap: wrap;
 }
 .rectangle-container .rectangle li img {
-    width 10% !important;
+    width: 10% !important;
 }
 footer {
-    height unset !important;
+    height: unset !important;
 }
 .footer-columns {
-    display block !important;
+    display: block !important;
 }
 main .listing-title .title{
-  text-align center !important;
+  text-align: center !important;
 }
   }
-  @media (max-width 400px) { 
+  @media (max-width: 400px) { 
   .search-container input[type=text] {
-    padding 10px;
-    width 200px !important;
+    padding: 10px;
+    width: 200px !important;
 }
 .rectangle {
-        max-width 80% !important;
-        margin 0 auto !important;
-        margin-bottom 20px !important;
+        max-width: 80% !important;
+        margin: 0 auto !important;
+        margin-bottom: 20px !important;
     }
     .rectangle img {
-    width 100% !important;
-    max-width 350px;
+    width: 100% !important;
+    max-width: 350px;
 }
 .rectangle li img {
-    height 10%;
-    width 10% !important;
-    padding-right 3%;
+    height: 10%;
+    width: 10% !important;
+    padding-right: 3%;
 }
   }
-        @media (max-width 1024px) {
+        @media (max-width: 1024px) {
             .navbar-nav {
                
-                flex-direction column;
-                background-color #f8f9fa;
-                position absolute;
-                top 80px;
-                left 0;
-                width 100%;
-                padding 10px 0;
+                flex-direction: column;
+                background-color: #f8f9fa;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                padding: 10px 0;
             }
             .navbar-collapse.show {
-  display block !important;
+  display: block !important;
 }
 .navbar-collapse {
-    display none;
+    display: none;
 }
 .navbar .container {
-    display block;
+    display: block;
 }
 .image-item {
-    margin-bottom 20px !important;
+    margin-bottom: 20px !important;
 }
-            .navbar-nav .nav-linknth-child(6){
-              margin 0 !important;
+            .navbar-nav .nav-link:nth-child(6){
+              margin: 0 !important;
             }
             .navbar-nav a {
-              padding 10px 15px;
+              padding: 10px 15px;
           }
             .navbar-nav.show {
-                display flex;
+                display: flex;
             }
             .navbar-toggler {
-                display block;
+                display: block;
             }
             .navbar-close {
-                display block;
-                align-self flex-end;
-                margin 10px 20px;
-                position absolute;
+                display: block;
+                align-self: flex-end;
+                margin: 10px 20px;
+                position: absolute;
             }
 
             span.navbar-toggler-icon {
-    float right;
-    margin-right 20px;
+    float: right;
+    margin-right: 20px;
 }
 .navbar {
-    margin-top 20px !important;
+    margin-top: 20px !important;
 }
 .navbar img {
-    margin-left 20px;
+    margin-left: 20px;
 }
         }
 
 
 body {
-    margin 0;
-    padding 0;
+    margin: 0;
+    padding: 0;
 }   
 .navbar .container {
-    width 100%;
-    max-width 1270px;
-    margin auto;
+    width: 100%;
+    max-width: 1270px;
+    margin: auto;
 } 
 .heor-content {
-    width 100%;
-    max-width 1270px;
-    margin 0 auto;
+    width: 100%;
+    max-width: 1270px;
+    margin: 0 auto;
 }
 
 .hero-iner {
-    display flex;
-    align-items center;
-    height 20vh;
-    background-size cover;
-    background-position bottom center;
+    display: flex;
+    align-items: center;
+    height: 20vh;
+    background-size: cover;
+    background-position: bottom center;
 }
 
 .hero-section {
-    position relative;
+    position: relative;
 }
 
 .image-item1 {
-    background #39b84e1c;
+    background: #39b84e1c;
 }
 .image-item2 {
-    background #ffa8262c;
+    background: #ffa8262c;
 }
 .image-item3 {
-    background #2c91bd29;
+    background: #2c91bd29;
 }
 .image-item4 {
-    background #5aa3fc2b;
+    background: #5aa3fc2b;
 }
 
-  logicdigger css end 
+  /***logicdigger css end ***/
 
     body  {
-      font-family Inter, sans-serif;
-        font-weight 450;
-        font-size 14px;
-        color rgb(79, 79, 79);
-        width 100%;  Make the image responsive 
-        height 100%;  Make the image responsive 
+      font-family: "Inter", sans-serif;
+        font-weight: 450;
+        font-size: 14px;
+        color: rgb(79, 79, 79);
+        width: 100%; /* Make the image responsive */
+        height: 100%; /* Make the image responsive */
     } 
 
 .inter-font {
-  font-family Inter, sans-serif;
-  font-optical-sizing auto;
-  font-weight 600;
-  font-style normal;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
 
     body {
-    height 00px;
+    height: 00px;
     }
     .mochiy-pop-one-regular {
-  font-family Mochiy Pop One, sans-serif;
-  font-weight 400;
-  font-style normal;
+  font-family: "Mochiy Pop One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
-    .navbar-nav .nav-linknth-child(6) {
-        margin-right 280px; Adjust logo
+    .navbar-nav .nav-link:nth-child(6) {
+        margin-right: 280px; /*Adjust logo*/
     }
-    .navbar-nav .nav-linknth-child(1) {
-        margin-right px;
+    .navbar-nav .nav-link:nth-child(1) {
+        margin-right: px;
     }
     .signup-button {
-      color rgba(255, 255, 255, 0.952) !important;
-      background-color #000000ce;  Change background color to a prominent color 
-      border-radius 20px;  Add rounded corners 
-      padding 10px 20px;  Add padding to increase button size 
-      transition background-color 0.3s ease;  Add transition for smooth hover effect  
+      color: rgba(255, 255, 255, 0.952) !important;
+      background-color: #000000ce; /* Change background color to a prominent color */
+      border-radius: 20px; /* Add rounded corners */
+      padding: 10px 20px; /* Add padding to increase button size */
+      transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
     }
-    .signup-buttonhover {
-background-color #ff4632c8;
+    .signup-button:hover {
+background-color: #ff4632c8;
     }
     .navbar {
-margin-top 38px;  Adjust the value to move the navbar down further 
+margin-top: 38px; /* Adjust the value to move the navbar down further */
 }
     .main-title {
-      margin-top 30px;
-      font-size 48px;
-      font-weight bolder;
-      font-family Mochiy Pop One, sans-serif;
-      color black;
+      margin-top: 30px;
+      font-size: 48px;
+      font-weight: bolder;
+      font-family: "Mochiy Pop One", sans-serif;
+      color: black;
     }
     .h4-title {
-      margin-top -20px;
-      font-size 23px;
-      font-family Inter, sans-serif;
-      font-weight 500;
+      margin-top: -20px;
+      font-size: 23px;
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
     }
     .search-container {
-      margin-top -0px;
+      margin-top: -0px;
     }
 
     .submit-container {
-      margin-top -57px;
-      margin-left 305px;
-      padding-left 10px;
+      margin-top: -57px;
+      margin-left: 305px;
+      padding-left: 10px;
     }
     .submit-container button[type=submit] {
-      width 149.33px;
-      border 1px solid #ff4632c8;
-      background-color #ff4632c8;
-      border-radius 7.5px;
-      outline none;
-      padding-top 38px;
-      font-size 15px;
-      font-weight 600;
-      color whitesmoke;
-      display flex;
-      justify-content center;  Center the text horizontally 
-    align-items center;  Center the text vertically 
-    padding 19px;
-    transition background-color 0.3s ease;  Add transition for smooth hover effect  
+      width: 149.33px;
+      border: 1px solid #ff4632c8;
+      background-color: #ff4632c8;
+      border-radius: 7.5px;
+      outline: none;
+      padding-top: 38px;
+      font-size: 15px;
+      font-weight: 600;
+      color: whitesmoke;
+      display: flex;
+      justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    padding: 19px;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
     }
-    .submit-container button[type=submit]hover {
-    background-color #ff4632e6;  Darker color when hovered 
+    .submit-container button[type=submit]:hover {
+    background-color: #ff4632e6; /* Darker color when hovered */
     }
     .bi-search {
-      position absolute;
-      font-size 20px;
-      display flex;
-      align-items center;
-      padding 19px;
+      position: absolute;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      padding: 19px;
     }
     .navbar-brand {
-      margin-right 0px;
-      position fixed;
-      height auto;
+      margin-right: 0px;
+      position: fixed;
+      height: auto;
     }
     .container { 
-  displayflex;  Use flexbox 
-  justify-content center;  Center the text horizontally 
-    align-items center;  Center the text vertically 
+  display:flex; /* Use flexbox */
+  justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
     }
     .bi-heart {
-      font-size 20px;
-      font-weight 900;
-      padding-right 5px;
+      font-size: 20px;
+      font-weight: 900;
+      padding-right: 5px;
     }
     .bi-cart3 {
-      font-size 20px;
-      font-weight 900px;
-      padding-right 10px;
+      font-size: 20px;
+      font-weight: 900px;
+      padding-right: 10px;
     }
    
         main {
-         Can use flex here 
-  height 100vh;  Set main height to full viewport height 
+        /* Can use flex here */
+  height: 100vh; /* Set main height to full viewport height */
 }
 
 .logo-section {
-    max-width 1270px;  Ensure container matches navbar width 
-    margin 0 auto;  Center the container 
-    padding 20px 0;  Adjust padding as needed 
-    text-align center;  Align text to the left 
+    max-width: 1270px; /* Ensure container matches navbar width */
+    margin: 0 auto; /* Center the container */
+    padding: 20px 0; /* Adjust padding as needed */
+    text-align: center; /* Align text to the left */
 }
 
 .nav-hr {
-    width 100%;
-    border none;
-    border-top 0,3px solid #00000043;  Adjust the color and thickness as needed 
-    margin-top 10px;  Adjust the spacing above the hr 
+    width: 100%;
+    border: none;
+    border-top: 0,3px solid #00000043; /* Adjust the color and thickness as needed */
+    margin-top: 10px; /* Adjust the spacing above the hr */
 }
 
 .pagination-section {
-  max-width 1270px;  Ensure container matches navbar width 
-    margin 0 auto;  Center the container 
-    padding 20px 0;  Adjust padding as needed 
-    text-align left;  Align text to the left 
-    margin-top 70px;
-    padding-bottom 0px;
+  max-width: 1270px; /* Ensure container matches navbar width */
+    margin: 0 auto; /* Center the container */
+    padding: 20px 0; /* Adjust padding as needed */
+    text-align: left; /* Align text to the left */
+    margin-top: 70px;
+    padding-bottom: 0px;
 }
 
 .pagination-dots {
-    display flex;
-    justify-content center;
-    margin-top 30px;
-    margin-bottom 30px;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .pagination-dots .dot {
-    height 4px;
-    width 55px;
-    background-color #5EA91E;
-    border-radius 20px;
-    display inline-block;
-    margin 0 3px;
-    transition background-color 0.3s;
+    height: 4px;
+    width: 55px;
+    background-color: #5EA91E;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 0 3px;
+    transition: background-color 0.3s;
 }
 
 .pagination-dots .dot.active {
-    background-color #D9D9D9; 
+    background-color: #D9D9D9; 
 }
 
 .message-box {
-    width 100%;
-    display flex;
-    max-width 1270px;
-    margin 0 auto;
-    justify-content space-between;  Space between the left and right sections 
-    align-items flex-start;
-    margin-top 0px;
-    height 1950px;
+    width: 100%;
+    display: flex;
+    max-width: 1270px;
+    margin: 0 auto;
+    justify-content: space-between; /* Space between the left and right sections */
+    align-items: flex-start;
+    margin-top: 0px;
+    height: 1950px;
 }
 
 .left-section {
-    display flex;
-    flex-direction column;
-    width 60%;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
 }
 
 .right-section {
-    width 35%;
+    width: 35%;
 }
 
 .message-content {
-    background-color #ffffff;  Light gray background 
-    border 1px solid #00000023;  Green border 
-    border-radius 10px;  Rounded corners 
-    padding 20px 30px;  Padding inside the box 
-    text-align center;  Center the text 
-    max-width 480px;  Maximum width of the box 
-    width 100%;  Responsive width 
-    margin-bottom 30px;
+    background-color: #ffffff; /* Light gray background */
+    border: 1px solid #00000023; /* Green border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px 30px; /* Padding inside the box */
+    text-align: center; /* Center the text */
+    max-width: 480px; /* Maximum width of the box */
+    width: 100%; /* Responsive width */
+    margin-bottom: 30px;
 }
 
 .message-title {
-    display flex;
-    align-items center;
-    justify-content center;
-    margin-top 10px;
-    margin-bottom 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .message-title i {
-    margin-right 10px;  Space between icon and text 
-    font-size 30px;
+    margin-right: 10px; /* Space between icon and text */
+    font-size: 30px;
 }
 
 .message-content h3 {
-    margin 0;
-    font-size 18px;
-    color #000000;  Green text color 
-    font-family Inter, sans-serif;
+    margin: 0;
+    font-size: 18px;
+    color: #000000; /* Green text color */
+    font-family: "Inter", sans-serif;
 }
 
 .message-content p {
-    margin-top 10px;
-    font-size 14px;
-    color #333;  Dark gray text color 
-    display flex;
-    align-items center;
-    justify-content center;
-    font-family Inter, sans-serif;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333; /* Dark gray text color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Inter", sans-serif;
 }
 
 .message-content i {
-font-size 30px;
-color #000;
-margin-left -30px;
+font-size: 30px;
+color: #000;
+margin-left: -30px;
 }
 
 .listing-info {
-    width 100%;
-    display flex;
-    justify-content center;
-    align-items center;
-    margin-top 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }
 
 .listing-input-container {
-    width 100%;
-    display flex;
-    flex-direction column;
-    justify-content center;
-    align-items center;
-    max-width 1270px;
-    margin-top 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1270px;
+    margin-top: 30px;
 }
 
 .guiding-text {
-  display flex;
-  width 481px;
-  padding 10px;
-  margin 10px;
-  margin-bottom 0px;
-  padding-bottom 0px;
-  padding-left 0px;
-  font-size 14px;
-  font-weight 500;
-  font-family Inter, sans-serif;
-  margin-bottom 7px;
+  display: flex;
+  width: 481px;
+  padding: 10px;
+  margin: 10px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 7px;
 }
 
 .guiding-text-vitamin {
-  display flex;
-  width 55%;
-  font-size 13px;
-  font-weight 700;
-  font-family Inter, sans-serif;
-  margin-bottom 7px;
+  display: flex;
+  width: 55%;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 7px;
 }
 
 .button-guiding-text {
-    display flex;
-  width 348px;
-  padding 10px;
-  margin 10px;
-  margin-bottom 0px;
-  padding-bottom 0px;
-  padding-left 0px;
-  font-size 14px;
-  font-weight 500;
-  font-family Inter, sans-serif;
-  margin-bottom 7px;
-  justify-content center;
+    display: flex;
+  width: 348px;
+  padding: 10px;
+  margin: 10px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 7px;
+  justify-content: center;
 }
 
 .listing-input {
-    width 100%;
-    max-width 470px;
-    padding 10px 20px;
-    height 25px;
-    border 2px solid #f5f5f5;
-    border-radius 5px;
-    background-color #f5f5f5;  Slightly grey background 
-    font-size 14px;
-    color #333;
-    font-family Inter, sans-serif;
-    transition border-color 0.3s ease;  Smooth transition for border color 
+    width: 100%;
+    max-width: 470px;
+    padding: 10px 20px;
+    height: 25px;
+    border: 2px solid #f5f5f5;
+    border-radius: 5px;
+    background-color: #f5f5f5; /* Slightly grey background */
+    font-size: 14px;
+    color: #333;
+    font-family: "Inter", sans-serif;
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
 }
 
-.listing-inputplaceholder {
-    color #999;
-    font-family Inter, sans-serif;
-    font-weight 500;
+.listing-input::placeholder {
+    color: #999;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
 }
 
-.listing-inputfocus {
-    border-color #5EA91E;  Change border color when focused 
-    outline none;  Remove default outline 
+.listing-input:focus {
+    border-color: #5EA91E; /* Change border color when focused */
+    outline: none; /* Remove default outline */
 }
 
 .listing-dropbox-container {
-    width 100%;
-    display flex;
-    flex-direction column;
-    justify-content center;
-    align-items center;
-    max-width 1270px;
-    margin-top 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1270px;
+    margin-top: 30px;
 }
 
 .listing-dropbox {
-    width 100%;
-    max-width 513px;
-    padding 10px 20px;
-    height 45px;
-    border 2px solid #f5f5f5;
-    border-radius 5px;
-    background-color #f5f5f5;  Slightly grey background 
-    font-size 14px;
-    color #333;
-    font-family Inter, sans-serif;
-    transition border-color 0.3s ease;  Smooth transition for border color 
-    -webkit-appearance none;  Remove default arrow in WebKit browsers 
-    -moz-appearance none;  Remove default arrow in Firefox 
-    appearance none;  Remove default arrow in other browsers 
-    background-image url('dataimagesvg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3Awww.w3.org2000svg%27%20width%3D%2714%27%20height%3D%2714%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27%23333%27%3E%3Cpath%20d%3D%27M7%2010l5%205%205-5z%27%3E%3Csvg%3E');  Custom arrow icon 
-    background-repeat no-repeat;
-    background-position right 10px center;  Position the arrow with margin-right 10px 
-    background-size 25px 25px;  Size of the arrow icon 
-    background-image 
-        linear-gradient(to right, #33333358 1px, transparent 1px),  Vertical line 
-        url('dataimagesvg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3Awww.w3.org2000svg%27%20width%3D%2714%27%20height%3D%2714%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27%23333%27%3E%3Cpath%20d%3D%27M7%2010l5%205%205-5z%27%3E%3Csvg%3E');  Custom arrow icon 
-    background-repeat no-repeat;
-    background-position right 40px center, right 10px center;  Position the arrow with margin-right 10px and the line with margin-right 20px 
-    background-size 1px 15px, 25px 25px;  Size of the line and the arrow icon 
+    width: 100%;
+    max-width: 513px;
+    padding: 10px 20px;
+    height: 45px;
+    border: 2px solid #f5f5f5;
+    border-radius: 5px;
+    background-color: #f5f5f5; /* Slightly grey background */
+    font-size: 14px;
+    color: #333;
+    font-family: "Inter", sans-serif;
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+    -webkit-appearance: none; /* Remove default arrow in WebKit browsers */
+    -moz-appearance: none; /* Remove default arrow in Firefox */
+    appearance: none; /* Remove default arrow in other browsers */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2714%27%20height%3D%2714%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27%23333%27%3E%3Cpath%20d%3D%27M7%2010l5%205%205-5z%27/%3E%3C/svg%3E'); /* Custom arrow icon */
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Position the arrow with margin-right 10px */
+    background-size: 25px 25px; /* Size of the arrow icon */
+    background-image: 
+        linear-gradient(to right, #33333358 1px, transparent 1px), /* Vertical line */
+        url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2714%27%20height%3D%2714%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27%23333%27%3E%3Cpath%20d%3D%27M7%2010l5%205%205-5z%27/%3E%3C/svg%3E'); /* Custom arrow icon */
+    background-repeat: no-repeat;
+    background-position: right 40px center, right 10px center; /* Position the arrow with margin-right 10px and the line with margin-right 20px */
+    background-size: 1px 15px, 25px 25px; /* Size of the line and the arrow icon */
 }
 
-.listing-dropboxfocus {
-    border-color #5EA91E;  Change border color when focused 
-    outline none;  Remove default outline 
+.listing-dropbox:focus {
+    border-color: #5EA91E; /* Change border color when focused */
+    outline: none; /* Remove default outline */
 }
 
-.listing-dropbox option[value=placeholder] {
-    color #333;
-    font-family Inter, sans-serif;
-    font-weight 500;
+.listing-dropbox option[value="placeholder"] {
+    color: #333;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
 }
 
 .vitamin-dropbox-container {
-  width 48%;
-    display flex;
-    flex-direction column;
-    justify-content flex-start;
-    align-items flex-start;
-    max-width 1270px;
-    margin-top 30px;
+  width: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 1270px;
+    margin-top: 30px;
 }
 
 .vitamin-dropbox {
-  width 100%;
-    max-width 513px;
-    padding 10px 20px;
-    height 45px;
-    border 2px solid #f5f5f5;
-    border-radius 5px;
-    background-color #f5f5f5;  Slightly grey background 
-    font-size 14px;
-    color #333;
-    font-family Inter, sans-serif;
-    transition border-color 0.3s ease;  Smooth transition for border color 
-    -webkit-appearance none;  Remove default arrow in WebKit browsers 
-    -moz-appearance none;  Remove default arrow in Firefox 
-    appearance none;  Remove default arrow in other browsers 
-    background-image url('dataimagesvg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3Awww.w3.org2000svg%27%20width%3D%2714%27%20height%3D%2714%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27%23333%27%3E%3Cpath%20d%3D%27M7%2010l5%205%205-5z%27%3E%3Csvg%3E');  Custom arrow icon 
-    background-repeat no-repeat;
-    background-position right 10px center;  Position the arrow with margin-right 10px 
-    background-size 25px 25px;  Size of the arrow icon 
-    background-image 
-        linear-gradient(to right, #33333358 1px, transparent 1px),  Vertical line 
-        url('dataimagesvg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3Awww.w3.org2000svg%27%20width%3D%2714%27%20height%3D%2714%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27%23333%27%3E%3Cpath%20d%3D%27M7%2010l5%205%205-5z%27%3E%3Csvg%3E');  Custom arrow icon 
-    background-repeat no-repeat;
-    background-position right 40px center, right 10px center;  Position the arrow with margin-right 10px and the line with margin-right 20px 
-    background-size 1px 15px, 25px 25px;  Size of the line and the arrow icon 
+  width: 100%;
+    max-width: 513px;
+    padding: 10px 20px;
+    height: 45px;
+    border: 2px solid #f5f5f5;
+    border-radius: 5px;
+    background-color: #f5f5f5; /* Slightly grey background */
+    font-size: 14px;
+    color: #333;
+    font-family: "Inter", sans-serif;
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+    -webkit-appearance: none; /* Remove default arrow in WebKit browsers */
+    -moz-appearance: none; /* Remove default arrow in Firefox */
+    appearance: none; /* Remove default arrow in other browsers */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2714%27%20height%3D%2714%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27%23333%27%3E%3Cpath%20d%3D%27M7%2010l5%205%205-5z%27/%3E%3C/svg%3E'); /* Custom arrow icon */
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Position the arrow with margin-right 10px */
+    background-size: 25px 25px; /* Size of the arrow icon */
+    background-image: 
+        linear-gradient(to right, #33333358 1px, transparent 1px), /* Vertical line */
+        url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2714%27%20height%3D%2714%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27%23333%27%3E%3Cpath%20d%3D%27M7%2010l5%205%205-5z%27/%3E%3C/svg%3E'); /* Custom arrow icon */
+    background-repeat: no-repeat;
+    background-position: right 40px center, right 10px center; /* Position the arrow with margin-right 10px and the line with margin-right 20px */
+    background-size: 1px 15px, 25px 25px; /* Size of the line and the arrow icon */
 }
 
-.vitamin-dropboxfocus {
-  border-color #5EA91E;  Change border color when focused 
-  outline none;  Remove default outline 
+.vitamin-dropbox:focus {
+  border-color: #5EA91E; /* Change border color when focused */
+  outline: none; /* Remove default outline */
 }
 
 .image-container {
-  width 100%;
-    display flex;
-    flex-direction column;
-    justify-content center;
-    align-items center;
-    max-width 1270px;
-    margin-top 30px;
+  width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1270px;
+    margin-top: 30px;
 }
 
 .image-upload-box {
-    width 100%;
-    max-width 470px;
-    height 200px;
-    border 2px dashed #5fa91e8d;
-    border-radius 5px;
-    background-color #f5f5f5;
-    display flex;
-    flex-direction column;
-    justify-content center;
-    align-items center;
-    text-align center;
-    margin-top 0px;
-    padding 20px;
+    width: 100%;
+    max-width: 470px;
+    height: 200px;
+    border: 2px dashed #5fa91e8d;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 0px;
+    padding: 20px;
 }
 
 .image-upload-box i {
-    font-size 60px;
-    color #5fa91e;
-    margin-bottom 0px;
+    font-size: 60px;
+    color: #5fa91e;
+    margin-bottom: 0px;
 }
 
 .image-upload-box p {
-    font-size 16px;
-    font-family Inter, sans-serif;
-    color #333;
-    margin-bottom 15px;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    color: #333;
+    margin-bottom: 15px;
 }
 
 .language-button-container {
-  width 100%;
-    display flex;
-    flex-direction column;
-    justify-content center;
-    align-items center;
-    max-width 1270px;
-    margin-top 10px;
+  width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1270px;
+    margin-top: 10px;
 }
 
 .language-button i {
-  margin-right 8px;
+  margin-right: 8px;
 }
 
 .language-button {
-  width 120px;
-    height 35px;
-    border 1px solid #f5f5f5;
-    background-color #f5f5f5;
-    border-radius 43px;
-    outline none;
-    font-size 16px;
-    font-weight 500;
-    font-family Inter, sans-serif;;
-    color #333;
-    display flex;
-    justify-content center;  Center the text horizontally 
-    align-items center;  Center the text vertically 
-    padding 22px;
-    transition background-color 0.3s ease;  Add transition for smooth hover effect  
-    cursor pointer;
+  width: 120px;
+    height: 35px;
+    border: 1px solid #f5f5f5;
+    background-color: #f5f5f5;
+    border-radius: 43px;
+    outline: none;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;;
+    color: #333;
+    display: flex;
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    padding: 22px;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+    cursor: pointer;
 }
 
-.language-buttonhover {
-    background-color #e3e3e3;  Darker color when hovered 
+.language-button:hover {
+    background-color: #e3e3e3; /* Darker color when hovered */
 }
 
 
 
 .upload-button {
-    width 120px;
-    height 35px;
-    border 1px solid #5EA91E;
-    background-color #5EA91E;
-    border-radius 43px;
-    outline none;
-    font-size 16px;
-    font-weight 500;
-    font-family Inter, sans-serif;;
-    color whitesmoke;
-    display flex;
-    justify-content center;  Center the text horizontally 
-    align-items center;  Center the text vertically 
-    padding 22px;
-    transition background-color 0.3s ease;  Add transition for smooth hover effect  
-    cursor pointer;
+    width: 120px;
+    height: 35px;
+    border: 1px solid #5EA91E;
+    background-color: #5EA91E;
+    border-radius: 43px;
+    outline: none;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    padding: 22px;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+    cursor: pointer;
 }
 
-.upload-buttonhover {
-    background-color #4e921a;  Darker color when hovered 
+.upload-button:hover {
+    background-color: #4e921a; /* Darker color when hovered */
 }
 
 .next-button {
-  width 120px;
-    height 35px;
-    border 1px solid #5EA91E;
-    background-color #5EA91E;
-    border-radius 43px;
-    outline none;
-    font-size 16px;
-    font-weight 500;
-    font-family Inter, sans-serif;;
-    color whitesmoke;
-    display flex;
-    justify-content center;  Center the text horizontally 
-    align-items center;  Center the text vertically 
-    padding 22px;
-    transition background-color 0.3s ease;  Add transition for smooth hover effect  
-    cursor pointer;
+  width: 120px;
+    height: 35px;
+    border: 1px solid #5EA91E;
+    background-color: #5EA91E;
+    border-radius: 43px;
+    outline: none;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    padding: 22px;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+    cursor: pointer;
 }
 
-.next-buttonhover {
-  background-color #4e921a;  Darker color when hovered 
+.next-button:hover {
+  background-color: #4e921a; /* Darker color when hovered */
 }
 
 .small-image-container {
-    display flex;
-    flex-direction column;
-    gap 10px;
-    margin-top 20px;
-    align-items center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    align-items: center;
 }
 
 .upper, .lower {
-    display flex;
-    justify-content center;
-    gap 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
 .small-image-box {
-    width 250px;
-    height 150px;
-    border 2px dashed #5fa91e8d;
-    border-radius 5px;
-    background-color #f5f5f5;
-    display flex;
-    justify-content center;
-    align-items center;
-    position relative;
-    flex-direction column;
+    width: 250px;
+    height: 150px;
+    border: 2px dashed #5fa91e8d;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
 }
 
 .small-upload-button {
-    width 85px;  Smaller button size 
-    height 35px;  Smaller button size 
-    padding 0;  Adjust padding as needed 
-    font-size 13px;
+    width: 85px; /* Smaller button size */
+    height: 35px; /* Smaller button size */
+    padding: 0; /* Adjust padding as needed */
+    font-size: 13px;
 }
 
 .upload-text {
-    font-weight 700;
-    margin-bottom 5px;  Add some spacing between text and button 
-    display flex;
-    align-items center;
-    justify-content center;
+    font-weight: 700;
+    margin-bottom: 5px; /* Add some spacing between text and button */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .small-image-box i {
-    font-size 24px;
-    color #5fa91e;
-    margin-bottom 0px;
+    font-size: 24px;
+    color: #5fa91e;
+    margin-bottom: 0px;
 }
 
 .listing-description-container {
-    width 100%;
-    display flex;
-    flex-direction column;
-    justify-content center;
-    align-items center;
-    max-width 1270px;
-    margin-top 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1270px;
+    margin-top: 30px;
 }
 
 .description-input {
-    width 100%;
-    max-width 470px;
-    padding 10px 20px;
-    height 100px;  Bigger height for description 
-    border 2px solid #f5f5f5;
-    border-radius 5px;
-    background-color #f5f5f5;  Slightly grey background 
-    font-size 14px;
-    color #333;
-    font-family Inter, sans-serif;
-    transition border-color 0.3s ease;  Smooth transition for border color 
+    width: 100%;
+    max-width: 470px;
+    padding: 10px 20px;
+    height: 100px; /* Bigger height for description */
+    border: 2px solid #f5f5f5;
+    border-radius: 5px;
+    background-color: #f5f5f5; /* Slightly grey background */
+    font-size: 14px;
+    color: #333;
+    font-family: "Inter", sans-serif;
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
 }
 
-.description-inputplaceholder {
-    color #999;
-    font-family Inter, sans-serif;
-    font-weight 500;
+.description-input::placeholder {
+    color: #999;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
 }
 
-.description-inputfocus {
-    border-color #5EA91E;  Change border color when focused 
-    outline none;  Remove default outline 
+.description-input:focus {
+    border-color: #5EA91E; /* Change border color when focused */
+    outline: none; /* Remove default outline */
 }
 
 .vitamin-grid {
-  display flex;
-  flex-direction row;
-    align-items center;
-    justify-content space-between;
-    width 100%;
-    max-width 508px;
+  display: flex;
+  flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 508px;
 }
 
 .vitamin-input-container {
-  width 48%;
-    display flex;
-    flex-direction column;
-    justify-content space-between;
-    align-items flex-start;
-    max-width 1270px;
-    margin-top 30px;
+  width: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1270px;
+    margin-top: 30px;
 }
 
 .vitamin-input-container input {
-  width 82%;
-  display flex;
-  justify-content space-between;
+  width: 82%;
+  display: flex;
+  justify-content: space-between;
 
 }
 
-.vitamin-input-containerplaceholder {
-  color #999;
-    font-family Inter, sans-serif;
-    font-weight 500;
+.vitamin-input-container::placeholder {
+  color: #999;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
 }
 
-.vitamin-input-containerfocus {
-  border-color #5EA91E;  Change border color when focused 
-  outline none;  Remove default outline 
+.vitamin-input-container:focus {
+  border-color: #5EA91E; /* Change border color when focused */
+  outline: none; /* Remove default outline */
 }
 
 .features-title {
-    width 100%;
-    max-width 510px;
-    display flex;
-    align-items center;
-    flex-direction row;
-    justify-content space-between;  Align text to the left 
-    margin-top 20px;
+    width: 100%;
+    max-width: 510px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between; /* Align text to the left */
+    margin-top: 20px;
 }
 
 .features-title h3 {
-    font-size 18px;
-    font-family Inter, sans-serif;
-    font-weight 700;
-    color #333;
+    font-size: 18px;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    color: #333;
 }
 
 .tips {
-font-size 10px;
-font-family Inter, sans-serif;
-justify-content flex-end;
-align-items center;
+font-size: 10px;
+font-family: "Inter", sans-serif;
+justify-content: flex-end;
+align-items: center;
 
 }
 
 .nav-hr-bottom {
-  margin-top 60px;
-  height 0.3px;
+  margin-top: 60px;
+  height: 0.3px;
 }
 
 .content {
-  text-align center;  Center text horizontally 
-  justify-content center;  Center content horizontally 
-  align-items center;  Center content vertically 
-  font-size 20px;
-  color black;
-  font-weight bolder;
-  font-family Arial;
+  text-align: center; /* Center text horizontally */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  font-size: 20px;
+  color: black;
+  font-weight: bolder;
+  font-family: Arial;
 }
 
 .image-item {
-  text-align center;
-  margin 0 50px;
+  text-align: center;
+  margin: 0 50px;
 }
 .image-item {
-    text-align center;
-    margin 0 15px;
-    padding 25px;
-    width 100%;
-    max-width 242px;
-    border-radius 30px;
-    height 100%;
-    min-height 432px;
+    text-align: center;
+    margin: 0 15px;
+    padding: 25px;
+    width: 100%;
+    max-width: 242px;
+    border-radius: 30px;
+    height: 100%;
+    min-height: 432px;
 }
 .image-item h3 {
-    font-size 16px;
-    color black;
-    text-align center;
-    font-weight 700;
-    line-height 25px;
+    font-size: 16px;
+    color: black;
+    text-align: center;
+    font-weight: 700;
+    line-height: 25px;
 }
 .image-item img {
-  margin-bottom 30px;  Adjust margin between image and text box 
-  width 155px;  Set width to 165 pixels 
-  height 130px;  Set height to 185 pixels 
-  margin-top 20px;
+  margin-bottom: 30px; /* Adjust margin between image and text box */
+  width: 155px; /* Set width to 165 pixels */
+  height: 130px; /* Set height to 185 pixels */
+  margin-top: 20px;
 }
-.image-itemnth-child(4) img {
-  height 130px;  Adjust the height for the fourth image 
-  width 145px;
+.image-item:nth-child(4) img {
+  height: 130px; /* Adjust the height for the fourth image */
+  width: 145px;
 }
 .text-box {
-  width 225px;  Adjust width of the text box 195px 
+  width: 225px; /* Adjust width of the text box 195px */
 }
 
 .text-box p {
-  font-size 14px;
-  font-family Inter, sans-serif;
-  margin 0;
-  text-align center;
-  line-height 1.6;  Adjust this value for desired line spacing 
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  text-align: center;
+  line-height: 1.6; /* Adjust this value for desired line spacing */
 }
 .image-item h3 {
-  font-size 18px;
-  color black;
-  text-align center;
-  font-weight 800;
-  font-family Inter, sans-serif;
+  font-size: 18px;
+  color: black;
+  text-align: center;
+  font-weight: 800;
+  font-family: "Inter", sans-serif;
 }
 .introduction {
-  height 100vh;  Make the image responsive 
-            width 100vw;  Make the image responsive 
-            object-fit cover;  Ensure the image covers the entire header 
-            filter brightness(0.);
-            position absolute;
-            top 0;
-            left 0;
-            z-index -1;
+  height: 100vh; /* Make the image responsive */
+            width: 100vw; /* Make the image responsive */
+            object-fit: cover; /* Ensure the image covers the entire header */
+            filter: brightness(0.);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
 }
 
     .feed-section {
-   Styles for the feed section container 
-  padding 20px;
-  background-color #F9FFE2;
-  margin-top 100px;
-  min-height 100vh;  Ensure the section takes up at least 100% of the viewport height 
-      display flex;
-      flex-direction column;  Align content vertically 
-      justify-content flex-start;  !!!--Use this always in the beginning of the sections--!!! 
-        align-items center;
+  /* Styles for the feed section container */
+  padding: 20px;
+  background-color: #F9FFE2;
+  margin-top: 100px;
+  min-height: 100vh; /* Ensure the section takes up at least 100% of the viewport height */
+      display: flex;
+      flex-direction: column; /* Align content vertically */
+      justify-content: flex-start; /* !!!<--Use this always in the beginning of the sections-->!!! */
+        align-items: center;
 }
 
 .feed-section-title h2 {
-   Styles for the feed section title 
-  font-size 25px;
-  font-weight bolder;
-  font-family Mochiy Pop One, sans-serif;
-  color black;
-  margin-top 40px;   Adjust if needed 
-  text-align center;  Center text horizontally 
-  justify-content center;  Center content horizontally 
-  align-items center;  Center content vertically 
-  margin-top 20vh;  Adjust as needed to position content below header 
-   Add padding as well 
+  /* Styles for the feed section title */
+  font-size: 25px;
+  font-weight: bolder;
+  font-family: "Mochiy Pop One", sans-serif;
+  color: black;
+  margin-top: 40px;  /* Adjust if needed */
+  text-align: center; /* Center text horizontally */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+ /* margin-top: 20vh;  Adjust as needed to position content below header */
+  /* Add padding as well */
 }
 
 .feed-section-content {
-   Styles for the feed section content 
-  display flex;
-  align-items center;
-  width 80%;
-  max-width 1200px;
-  margin-bottom 0px;
-  margin-top 60px;
-   flex-wrap wrap;  Use them again 
-   justify-content center;  Use them again 
-   flex-grow 1; Use them again 
+  /* Styles for the feed section content */
+  display: flex;
+  align-items: center;
+  width: 80%;
+  max-width: 1200px;
+  margin-bottom: 0px;
+  margin-top: 60px;
+  /* flex-wrap: wrap;  Use them again */
+  /* justify-content: center;  Use them again */
+  /* flex-grow: 1; Use them again */
 }
 
 .feed-image {
-  flex 1;  Take up half of the available space 
-  display flex;
-  justify-content center;  Center image horizontally 
-  align-items center;  Center image vertically 
+  flex: 1; /* Take up half of the available space */
+  display: flex;
+  justify-content: center; /* Center image horizontally */
+  align-items: center; /* Center image vertically */
 }
 
 .feed-image img {
-  max-width 100%;  Ensure image fits within its container 
-  height auto;  Maintain aspect ratio 
-  border-radius 20px;
-  margin-top 20px;
+  max-width: 100%; /* Ensure image fits within its container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 20px;
+  margin-top: 20px;
 }
 
 .feed-details {
-  flex 1;  Take up half of the available space 
-  padding 40px;  Add some padding around the details (20px default)
+  flex: 1; /* Take up half of the available space */
+  padding: 40px; /* Add some padding around the details (20px default)*/
 }
 
 .feed-title {
-  font-size 30px;
-  font-weight bolder;
-  text-align center;
-  font-family Mochiy Pop One, sans-serif;
-  color black;
-  margin-bottom 30px;  Space between title and description 
-  margin-top 30px;
+  font-size: 30px;
+  font-weight: bolder;
+  text-align: center;
+  font-family: "Mochiy Pop One", sans-serif;
+  color: black;
+  margin-bottom: 30px; /* Space between title and description */
+  margin-top: 30px;
 }
 
 .feed-description {
-  font-size 16px;
-  line-height 1.6;  Adjust this value for desired line spacing 
-  font-family Inter, sans-serif;
-  text-align center;
+  font-size: 16px;
+  line-height: 1.6; /* Adjust this value for desired line spacing */
+  font-family: "Inter", sans-serif;
+  text-align: center;
 }
 
 .call-action {
-  font-size 20px;
-  font-family Inter, sans-serif;
-  font-weight 800;
-   font-weight bold; (Optional)
-  color #4d5149e0;
-  display flex;
-  align-items center;  Center vertically 
-  text-align center;
-  justify-content center;
+  font-size: 20px;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  /* font-weight: bold; (Optional)*/
+  color: #4d5149e0;
+  display: flex;
+  align-items: center; /* Center vertically */
+  text-align: center;
+  justify-content: center;
 }
 
 .feed-price img {
-  height 6.5%;
-  width 6.5%;
-  margin-right 10px;  Space between icon and text, adjust as needed 
+  height: 6.5%;
+  width: 6.5%;
+  margin-right: 10px; /* Space between icon and text, adjust as needed */
 }
 
 .stars img {
-  height 5%;
-  width 5%;
-  margin-bottom 10px;
+  height: 5%;
+  width: 5%;
+  margin-bottom: 10px;
 }
 
 .feed-details button {
-  width 238px;
-      height 35px;
-      border 1px solid #5EA91E;
-      background-color #5EA91E;
-      border-radius 43px;
-      outline none;
-      font-size 16px;
-      font-weight 500;
-      font-family Inter, sans-serif;;
-      color whitesmoke;
-      display flex;
-      justify-content center;  Center the text horizontally 
-    align-items center;  Center the text vertically 
-    padding 22px;
-    transition background-color 0.3s ease;  Add transition for smooth hover effect  
-    cursor pointer;
+  width: 238px;
+      height: 35px;
+      border: 1px solid #5EA91E;
+      background-color: #5EA91E;
+      border-radius: 43px;
+      outline: none;
+      font-size: 16px;
+      font-weight: 500;
+      font-family: "Inter", sans-serif;;
+      color: whitesmoke;
+      display: flex;
+      justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    padding: 22px;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+    cursor: pointer;
 }
 
-.feed-details button[type=submit]hover {
-   background-color #4e921a;  Darker color when hovered 
+.feed-details button[type=submit]:hover {
+   background-color: #4e921a; /* Darker color when hovered */
     }
 
 .support-icon {
-  display flex;
-  text-align center;
-  justify-content center;
-  align-items center;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 
 }
 
 .sell-us-section-title h2 {
-     Styles for the feed section title 
-    font-size 32px;
-  font-weight bolder;
-  color black;
-  text-align center;  Center text horizontally 
-  justify-content center;  Center content horizontally 
-  align-items center;  Center content vertically 
-  margin-bottom -15px;
-  font-weight 550;
-  font-family Mochiy Pop One, sans-serif;
-  margin-top 20vh;  Adjust as needed to position content below header 
-   Add padding as well 
+    /* Styles for the feed section title */
+    font-size: 32px;
+  font-weight: bolder;
+  color: black;
+  text-align: center; /* Center text horizontally */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  margin-bottom: -15px;
+  font-weight: 550;
+  font-family: "Mochiy Pop One", sans-serif;
+ /* margin-top: 20vh;  Adjust as needed to position content below header */
+  /* Add padding as well */
 }
 
 .sell-us-section-title {
-  display flex;
-    align-items center;
-    justify-content center;
-    width 100%;
-    max-width 1270px;
-    margin-bottom 60px;
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1270px;
+    margin-bottom: 60px;
 }
 
 .sell-us-section {
-      padding 20px;  Add some padding around the section remove by logic 
-      min-height 100vh;  Ensure the section takes up at least 100% of the viewport height 
-      display flex;
-      flex-direction column;  Align content vertically 
-      align-items center;  Center content horizontally 
-      justify-content flex-start;  Start content at the top 
-      margin-bottom 0px;
+    /*  padding: 20px;  Add some padding around the section remove by logic */
+      min-height: 100vh; /* Ensure the section takes up at least 100% of the viewport height */
+      display: flex;
+      flex-direction: column; /* Align content vertically */
+      align-items: center; /* Center content horizontally */
+      justify-content: flex-start; /* Start content at the top */
+      margin-bottom: 0px;
     }
 
     .sell-us-content {
-      display flex;
-      align-items center;  Center content vertically within each column 
-      justify-content space-between;  Space between image and details 
-      width 100%;  Adjust as needed for desired width 
-      max-width 1270px;  Adjust as needed for desired max width 
-       align-items flex-start; Test
+      display: flex;
+      align-items: center; /* Center content vertically within each column */
+      justify-content: space-between; /* Space between image and details */
+      width: 100%; /* Adjust as needed for desired width */
+      max-width: 1270px; /* Adjust as needed for desired max width */
+      /* align-items: flex-start; /*Test*/
     }
 
     .sell-us-details {
-      flex 1;  Take up half of the available space 
-      padding 10px;  Add some padding around the details 
-      display flex; Test
-      flex-direction column; Test
-      flex-grow 1; Test
+      flex: 1; /* Take up half of the available space */
+      padding: 10px; /* Add some padding around the details */
+      display: flex; /*Test*/
+      flex-direction: column; /*Test*/
+      flex-grow: 1; /*Test*/
     }
 
     .sell-us-item {
-  display flex;
-  align-items center;
-  margin-bottom 35px;  Adjust as needed for spacing 
-  align-items center;  This centers the items vertically 
+  display: flex;
+  align-items: center;
+  margin-bottom: 35px; /* Adjust as needed for spacing */
+  align-items: center; /* This centers the items vertically */
 }
 
 .sell-us-item img {
-  margin-right 30px;  Adjust as needed for spacing 
-  width 200px;  Adjust as needed for size 
-  height auto;
-   margin-top 50px; (Adjusts the image vertically)
+  margin-right: 30px; /* Adjust as needed for spacing */
+  width: 200px; /* Adjust as needed for size */
+  height: auto;
+  /* margin-top: 50px; (Adjusts the image vertically)*/
 }
 
 .sell-us-text {
-  display flex;
-  flex-direction column;
-  justify-content center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .step {
-    font-size 12px;
-    margin-top -8px;
-    margin-bottom -8px;
-    font-family Mochiy Pop One, sans-serif;
-    font-weight 550;
-    color #C74343;
+    font-size: 12px;
+    margin-top: -8px;
+    margin-bottom: -8px;
+    font-family: "Mochiy Pop One", sans-serif;
+    font-weight: 550;
+    color: #C74343;
 }
 
     .sell-us-title, .second-sell-us-title {
-      font-size 20px;
-      font-weight 599;
-      font-family Arial;
-      color black;
-      margin-bottom 0px;  Space between title and description 
-      margin-top 20px;
-      font-family Mochiy Pop One, sans-serif;
-       margin 0; New
+      font-size: 20px;
+      font-weight: 599;
+      font-family: Arial;
+      color: black;
+      margin-bottom: 0px; /* Space between title and description */
+      margin-top: 20px;
+      font-family: "Mochiy Pop One", sans-serif;
+      /* margin: 0; /*New*/
     }
 
     .sell-us-description, .second-sell-us-title-description {
-      font-size 14px;
-      margin-bottom -10px;  Space between description and next element 
-      line-height 1.6;  Adjust this value for desired line spacing 
-      font-family Inter, sans-serif;
-       margin 0; New
+      font-size: 14px;
+      margin-bottom: -10px; /* Space between description and next element */
+      line-height: 1.6; /* Adjust this value for desired line spacing */
+      font-family: "Inter", sans-serif;
+      /* margin: 0; /*New*/
     }
 
     .sell-us-image {
-      flex 1;  Take up half of the available space 
-      display flex;
-      justify-content center;  Center image horizontally 
-      align-items center;  Center image vertically 
+      flex: 1; /* Take up half of the available space */
+      display: flex;
+      justify-content: center; /* Center image horizontally */
+      align-items: center; /* Center image vertically */
     }
 
     .sell-us-image img {
-      max-width 100%;  Ensure image fits within its container 
-      height auto;  Maintain aspect ratio 
-      border-radius 20px;  Smooth edges 
-      margin-top 20px;
-      max-width 100%; New
-      height auto; New
+      max-width: 100%; /* Ensure image fits within its container */
+      height: auto; /* Maintain aspect ratio */
+      border-radius: 20px; /* Smooth edges */
+      margin-top: 20px;
+      max-width: 100%; /*New*/
+      height: auto; /*New*/
     }
 
     .get-started {
-      display flex;
-    align-items center;
-    justify-content center;
-    width 100%;
-    max-width 1270px;
-    margin-top 10px;
+      display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1270px;
+    margin-top: 10px;
     }
 
     .get-started button {
-      width 276px;
-      height 47px;
-      border 1px solid #5EA91E;
-      background-color #5EA91E;
-      border-radius 43px;
-      outline none;
-      font-size 16px;
-      font-weight 500;
-      font-family Inter, sans-serif;
-      color whitesmoke;
-      display flex;
-      justify-content center;  Center the text horizontally 
-    align-items center;  Center the text vertically 
-    padding 23px;
-    transition background-color 0.3s ease;  Add transition for smooth hover effect  
-    cursor pointer;
+      width: 276px;
+      height: 47px;
+      border: 1px solid #5EA91E;
+      background-color: #5EA91E;
+      border-radius: 43px;
+      outline: none;
+      font-size: 16px;
+      font-weight: 500;
+      font-family: "Inter", sans-serif;
+      color: whitesmoke;
+      display: flex;
+      justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    padding: 23px;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+    cursor: pointer;
     }
 
-    .get-started button[type=submit]hover {
-    background-color #4e921a;  Darker color when hovered 
+    .get-started button[type=submit]:hover {
+    background-color: #4e921a; /* Darker color when hovered */
     }
 
 .contact-us-button {
-  width 542.4px;
-  display flex;
-  align-items center;
-  justify-content center;
-  margin-top 30px;
+  width: 542.4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
 }
 
 .payment-title {
-    width 100%;
-    display flex;
-    flex-direction column;
-    justify-content center;
-    align-items center;
-    max-width 1270px;
-    margin-top 10px;
-    margin-bottom 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1270px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .payment-title h3 {
-    display flex;
-    width 508px;
-    font-size 18px;
-    font-weight 700;
-    font-family Inter, sans-serif;
-    margin-bottom 7px;
+    display: flex;
+    width: 508px;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: "Inter", sans-serif;
+    margin-bottom: 7px;
 }
 
 .payment-box {
-            display flex;
-            justify-content center;
-            align-items center;
-            width 100%;
-            max-width 1270px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 1270px;
         }
 
         .payment-rectangle {
-            width 100%;
-            max-width 500px;
-            padding 20px;
-            padding-bottom 0px;
-            margin-bottom 0px;
-            border 0.1px solid #00000023;
-            border-radius 10px 10px 0 0;
-            background-color #ffffff;
-            margin-top 20px;
+            width: 100%;
+            max-width: 500px;
+            padding: 20px;
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+            border: 0.1px solid #00000023;
+            border-radius: 10px 10px 0 0;
+            background-color: #ffffff;
+            margin-top: 20px;
         }
 
         .container-text {
-            margin-top 0px;
-            margin-bottom 0px;
+            margin-top: 0px;
+            margin-bottom: 0px;
 }
 
         .credit-containers {
-            font-family Inter, sans-serif;
-    background-color #ffffff;
-    margin -20px -20px 20px -20px;  Adjust the margins to cover the full width and top 
-    height 60px;
-    width 540px;
-    font-weight 500;
-    text-align left;
-    padding 0px;
-    background-color #ffffff;
-    margin-bottom 0px;
-    display flex;  Add flexbox display 
-    align-items center;  Center children vertically 
+            font-family: "Inter", sans-serif;
+    background-color: #ffffff;
+    margin: -20px -20px 20px -20px; /* Adjust the margins to cover the full width and top */
+    height: 60px;
+    width: 540px;
+    font-weight: 500;
+    text-align: left;
+    padding: 0px;
+    background-color: #ffffff;
+    margin-bottom: 0px;
+    display: flex; /* Add flexbox display */
+    align-items: center; /* Center children vertically */
         }
 
 .current-payment-option {
-    font-family Inter, sans-serif;
-    background-color #ffffff;
-    margin -20px -20px 20px 0px;  Adjust the margins to cover the full width and top 
-    width 520px;
-    font-weight 500;
-    text-align left;
-    padding 10px;
-    border-radius 10px 10px 0 0;
-    border 0.1px solid #00000023;
-    background-color #f8f8f8;
-    margin-bottom 0px;
+    font-family: "Inter", sans-serif;
+    background-color: #ffffff;
+    margin: -20px -20px 20px 0px; /* Adjust the margins to cover the full width and top */
+    width: 520px;
+    font-weight: 500;
+    text-align: left;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    border: 0.1px solid #00000023;
+    background-color: #f8f8f8;
+    margin-bottom: 0px;
 }
 
 .current-credit-containers {
-    font-family Inter, sans-serif;
-    background-color #ffffff;
-    margin -20px -20px 20px 0px;  Adjust the margins to cover the full width and top 
-    height 60px;
-    width 540px;
-    font-weight 500;
-    text-align left;
-    padding 0px;
-    margin-bottom 0px;
-    display flex;  Add flexbox display 
-    align-items center;  Center children vertically 
-    border-left 0.1px solid #00000023 !important;
-    border-right 0.1px solid #00000023 !important;
-    border-bottom 0.1px solid #00000023 !important;
-    border-radius 0 0 10px 10px;
+    font-family: "Inter", sans-serif;
+    background-color: #ffffff;
+    margin: -20px -20px 20px 0px; /* Adjust the margins to cover the full width and top */
+    height: 60px;
+    width: 540px;
+    font-weight: 500;
+    text-align: left;
+    padding: 0px;
+    margin-bottom: 0px;
+    display: flex; /* Add flexbox display */
+    align-items: center; /* Center children vertically */
+    border-left: 0.1px solid #00000023 !important;
+    border-right: 0.1px solid #00000023 !important;
+    border-bottom: 0.1px solid #00000023 !important;
+    border-radius: 0 0 10px 10px;
 }
 
 .current-gcash-container {
-    font-family Inter, sans-serif;
-    background-color #ffffff;
-    width 540px;
-    height 60px !important; 
-    font-weight 500;
-    text-align left;
-    padding 0px;
-    border-left 0.1px solid #00000023;
-    border-right 0.1px solid #00000023;
-    border-bottom 0.1px solid #00000023;
-    background-color #ffffff;
-    margin-bottom 0px;
-    display flex;  Add flexbox display 
-    border-radius 0 0 10px 10px;
+    font-family: "Inter", sans-serif;
+    background-color: #ffffff;
+    width: 540px;
+    height: 60px !important; 
+    font-weight: 500;
+    text-align: left;
+    padding: 0px;
+    border-left: 0.1px solid #00000023;
+    border-right: 0.1px solid #00000023;
+    border-bottom: 0.1px solid #00000023;
+    background-color: #ffffff;
+    margin-bottom: 0px;
+    display: flex; /* Add flexbox display */
+    border-radius: 0 0 10px 10px;
 }
 
 .current-paypal-container {
-    font-family Inter, sans-serif;
-    background-color #ffffff;
-    width 540px;
-    height 60px !important; 
-    font-weight 500;
-    text-align left;
-    padding 0px;
-    border-left 0.1px solid #00000023;
-    border-right 0.1px solid #00000023;
-    border-bottom 0.1px solid #00000023;
-    border-radius 0 0 10px 10px;
-    background-color #ffffff;
-    margin-bottom 0px;
-    display flex;  Add flexbox display 
+    font-family: "Inter", sans-serif;
+    background-color: #ffffff;
+    width: 540px;
+    height: 60px !important; 
+    font-weight: 500;
+    text-align: left;
+    padding: 0px;
+    border-left: 0.1px solid #00000023;
+    border-right: 0.1px solid #00000023;
+    border-bottom: 0.1px solid #00000023;
+    border-radius: 0 0 10px 10px;
+    background-color: #ffffff;
+    margin-bottom: 0px;
+    display: flex; /* Add flexbox display */
 }
 
         .payment-option {
-            font-family Inter, sans-serif;
-    background-color #ffffff;
-    margin -20px -20px 20px -20px;  Adjust the margins to cover the full width and top 
-    width 520px;
-    font-weight 500;
-    text-align left;
-    padding 10px;
-    border-radius 10px 10px 0 0;
-    border-bottom 0.1px solid #00000023;
-    background-color #f8f8f8;
-    margin-bottom 20px;
+            font-family: "Inter", sans-serif;
+    background-color: #ffffff;
+    margin: -20px -20px 20px -20px; /* Adjust the margins to cover the full width and top */
+    width: 520px;
+    font-weight: 500;
+    text-align: left;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    border-bottom: 0.1px solid #00000023;
+    background-color: #f8f8f8;
+    margin-bottom: 20px;
         }
 
         .payment-rectangle h4 {
-            font-family Inter, sans-serif;
-            background-color #9999990f;
-    padding 20px;
-    margin -20px -20px 20px -20px;  Adjust the margins to cover the full width and top 
-    border-radius 5px 5px 0 0;  Only round the top corners 
-    border-bottom 0.1px solid #99999932;
-    text-align left;  Adjust as per your requirement 
+            font-family: "Inter", sans-serif;
+            background-color: #9999990f;
+    padding: 20px;
+    margin: -20px -20px 20px -20px; /* Adjust the margins to cover the full width and top */
+    border-radius: 5px 5px 0 0; /* Only round the top corners */
+    border-bottom: 0.1px solid #99999932;
+    text-align: left; /* Adjust as per your requirement */
         }
 
         .payment-rectangle h4.bottom {
-            font-family Inter, sans-serif;
-            background-color #ffffff;
-            font-weight 500;
-    padding 20px;
-    margin -20px -20px 0px -20px;  Adjust the margins to cover the full width and top 
-    border-radius 5px 5px 0 0;  Only round the top corners 
-    border-bottom 0.1px solid #99999932;  Add a darker bottom border 
-    text-align left;  Adjust as per your requirement 
+            font-family: "Inter", sans-serif;
+            background-color: #ffffff;
+            font-weight: 500;
+    padding: 20px;
+    margin: -20px -20px 0px -20px; /* Adjust the margins to cover the full width and top */
+    border-radius: 5px 5px 0 0; /* Only round the top corners */
+    border-bottom: 0.1px solid #99999932; /* Add a darker bottom border */
+    text-align: left; /* Adjust as per your requirement */
         }
 
         .card-number-container {
-    position relative;
-    width 100%;
+    position: relative;
+    width: 100%;
 }
 
 .card-number-container img {
-    position absolute;
-    top 50%;
-    left 20px;
-    transform translateY(-50%);
-    font-size 16px;
-    color #999;
-    align-items center;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #999;
+    align-items: center;
 }
 
 .bi.bi-credit-card-2-back-fill {
-  color #000;  Example style 
-  font-size 22px;  Example style 
+  color: #000; /* Example style */
+  font-size: 22px; /* Example style */
 }
 
 .bi.bi-credit-card-fill {
-    position absolute;
-    top 50%;
-    left 20px;
-    transform translateY(-50%);
-    font-size 16px;  Adjust icon size as needed 
-    color #999;
-    align-items center;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    font-size: 16px; /* Adjust icon size as needed */
+    color: #999;
+    align-items: center;
 }
 
 .card-number-container .payment-input {
-    padding-left 10px;  Adjust padding to make space for the icon 
-    width calc(100% - 40px);  Adjust width to fit within the container 
-    margin 10px;
-    padding 10px;
-    border 1px solid #f5f5f5;
-    background-color #f5f5f5;
-    border-radius 5px;
-    font-size 16px;
-    font-family Inter, sans-serif;
-    transition border-color 0.3s ease;  Smooth transition for border color 
-    text-indent 40px;
-    align-items center;
+    padding-left: 10px; /* Adjust padding to make space for the icon */
+    width: calc(100% - 40px); /* Adjust width to fit within the container */
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #f5f5f5;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+    text-indent: 40px;
+    align-items: center;
 }
 
-.card-number-container .payment-inputplaceholder {
-    color #999;
-    padding-left 10px;  Add padding to the placeholder text 
-    font-family Inter, sans-serif;
+.card-number-container .payment-input::placeholder {
+    color: #999;
+    padding-left: 10px; /* Add padding to the placeholder text */
+    font-family: "Inter", sans-serif;
 }
 
         .payment-input {
-            width calc(100% - 40px);
-            margin 10px;
-            padding 10px;
-            border 1px solid #f5f5f5;;
-            background-color #f5f5f5;
-            border-radius 5px;
-            font-size 16px;
-            font-family Inter, sans-serif;
-            transition border-color 0.3s ease;  Smooth transition for border color 
+            width: calc(100% - 40px);
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #f5f5f5;;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            font-size: 16px;
+            font-family: "Inter", sans-serif;
+            transition: border-color 0.3s ease; /* Smooth transition for border color */
         }
 
-        .payment-inputfocus {
-         border-color #5EA91E;  Change border color when focused 
-         outline none;  Remove default outline 
+        .payment-input:focus {
+         border-color: #5EA91E; /* Change border color when focused */
+         outline: none; /* Remove default outline */
 }
 
-.payment-inputplaceholder {
-    color #999;
-    font-family Inter, sans-serif;
+.payment-input::placeholder {
+    color: #999;
+    font-family: "Inter", sans-serif;
 }
 
         .payment-row {
-            display flex;
-            justify-content space-between;
-            margin-top 20px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
         }
 
         .payment-row .payment-input {
-            width calc(50% - 20px);
+            width: calc(50% - 20px);
         }
 
         .payment-checkbox-credit{
-            display flex;
-    align-items center;
-    margin-top 20px;
-    font-family Inter, sans-serif;
-            padding-bottom 20px;
+            display: flex;
+    align-items: center;
+    margin-top: 20px;
+    font-family: "Inter", sans-serif;
+            padding-bottom: 20px;
         }
 
         .payment-checkbox-gcash {
-            display flex;
-            align-items center;
-            margin-top 20px;
-            font-family Inter, sans-serif;
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+            font-family: "Inter", sans-serif;
         }
 
         .payment-checkbox-paypal {
-            display flex;
-            align-items center;
-            margin-top 20px;
-            font-family Inter, sans-serif;
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+            font-family: "Inter", sans-serif;
         }
 
         .payment-checkbox input {
-            margin-right 10px;
+            margin-right: 10px;
         }
 
         .circle-checkbox-container {
-            display flex;
-    align-items center;
-    margin-bottom 0px;
-    margin-left 20px;
+            display: flex;
+    align-items: center;
+    margin-bottom: 0px;
+    margin-left: 20px;
 }
 
 .circle-checkbox-container img {
-    display inline-block;
-    vertical-align middle;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .circle-checkbox {
-    width 15px;
-    height 15px;
-    border-radius 50%;
-    border 1px solid #b5b5b5;
-    display flex;
-    align-items center;
-    justify-content center;
-    margin-right 10px;
-    cursor pointer;
-    transition background-color 0.3s ease;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid #b5b5b5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.circle-checkbox input[type=radio] {
-    display none;
+.circle-checkbox input[type="radio"] {
+    display: none;
 }
 
 .circle-checkbox.checked {
-    background-color black;
+    background-color: black;
 }
 
-.circle-checkbox.checkedbefore {
-    content '';
-    width 10px;
-    height 10px;
-    border-radius 50%;
-    background-color white;
+.circle-checkbox.checked::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
 }
 
 .input-group {
-    display flex;
-    flex-direction column;
+    display: flex;
+    flex-direction: column;
 }
 
 .guiding-text {
-    margin-bottom 5px;  Adjust spacing as needed 
+    margin-bottom: 5px; /* Adjust spacing as needed */
 }
 
 .guiding-text-small {
-    margin-top 0px;
-    margin-bottom 5px;  Adjust spacing as needed 
-    width 50%;  Set the width to make it smaller 
-    margin-left 10px;
-    font-family Inter, sans-serif;
+    margin-top: 0px;
+    margin-bottom: 5px; /* Adjust spacing as needed */
+    width: 50%; /* Set the width to make it smaller */
+    margin-left: 10px;
+    font-family: "Inter", sans-serif;
 }
 
 .guiding-text-email {
-    display flex;
-  width 481px;
-  padding 10px;
-  margin 10px;
-  margin-bottom 0px;
-  margin-top 10px;
-  padding-bottom 0px;
-  padding-left 0px;
-  font-size 14px;
-  font-weight 500;
-  font-family Inter, sans-serif;
-  margin-bottom 7px;
+    display: flex;
+  width: 481px;
+  padding: 10px;
+  margin: 10px;
+  margin-bottom: 0px;
+  margin-top: 10px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 7px;
 }
 
 .phone-number-container {
-    margin-top 20px;
+    margin-top: 20px;
 }
 
 .warning-text-name {
-    margin-top 0px;
-    margin-bottom 5px;  Adjust spacing as needed 
-    width 110px;  Set the width to make it smaller 
-    margin-left 10px;
-    font-family Inter, sans-serif;
-    font-size 12px;
-    color red;
+    margin-top: 0px;
+    margin-bottom: 5px; /* Adjust spacing as needed */
+    width: 110px; /* Set the width to make it smaller */
+    margin-left: 10px;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    color: red;
 }
 
 .warning-text-date {
-    margin-top 0px;
-    margin-bottom 5px;  Adjust spacing as needed 
-    width 80px;  Set the width to make it smaller 
-    margin-left 10px;
-    font-family Inter, sans-serif;
-    font-size 12px;
-    color red;
+    margin-top: 0px;
+    margin-bottom: 5px; /* Adjust spacing as needed */
+    width: 80px; /* Set the width to make it smaller */
+    margin-left: 10px;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    color: red;
 }
 
 .warning-text-number {
-    margin-top 0px;
-    margin-bottom 5px;  Adjust spacing as needed 
-    width 160px;  Set the width to make it smaller 
-    margin-left 10px;
-    font-family Inter, sans-serif;
-    font-size 12px;
-    color red;
+    margin-top: 0px;
+    margin-bottom: 5px; /* Adjust spacing as needed */
+    width: 160px; /* Set the width to make it smaller */
+    margin-left: 10px;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    color: red;
 }
 
 .warning-text-code {
-    margin-top 0px;
-    margin-bottom 5px;  Adjust spacing as needed 
-    width 150px;  Set the width to make it smaller 
-    margin-left 10px;
-    font-family Inter, sans-serif;
-    font-size 12px;
-    color red;
+    margin-top: 0px;
+    margin-bottom: 5px; /* Adjust spacing as needed */
+    width: 150px; /* Set the width to make it smaller */
+    margin-left: 10px;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    color: red;
 }
 
 .warning-text-container {
-    display flex;
-    flex-direction row;
-    text-align flex-start;
+    display: flex;
+    flex-direction: row;
+    text-align: flex-start;
 }
 
 .warning-text-container i {
-    color red;
+    color: red;
 }
 
 .payment-row .payment-input {
-    width calc(96% - 30px);
+    width: calc(96% - 30px);
 }
 
 .name-container {
-    margin-top 20px;
+    margin-top: 20px;
 }
 
 .gcash-container {
-    font-family Inter, sans-serif;
-    background-color #ffffff;
-    width 540px;
-    height 60px !important; 
-    font-weight 500;
-    text-align left;
-    padding 0px;
-    border-left 0.1px solid #00000023;
-    border-right 0.1px solid #00000023;
-    border-bottom 0.1px solid #00000023;
-    background-color #ffffff;
-    margin-bottom 0px;
-    display flex;  Add flexbox display 
+    font-family: "Inter", sans-serif;
+    background-color: #ffffff;
+    width: 540px;
+    height: 60px !important; 
+    font-weight: 500;
+    text-align: left;
+    padding: 0px;
+    border-left: 0.1px solid #00000023;
+    border-right: 0.1px solid #00000023;
+    border-bottom: 0.1px solid #00000023;
+    background-color: #ffffff;
+    margin-bottom: 0px;
+    display: flex; /* Add flexbox display */
 }
 
 
 .bottom {
-    font-weight 500;
-    margin-bottom 0px;
-    margin-top 0px;
+    font-weight: 500;
+    margin-bottom: 0px;
+    margin-top: 0px;
 }
 
 .gcash-bottom-container {
-    width 100%;
-            max-width 500px;
-            padding 20px;
-            padding-top 0px;
-            border-top none !important;  Ensure the top border is removed 
-            border 0.1px solid #00000023;
-            border-radius 0px 0px 0px 0px;
-            background-color #ffffff;
+    width: 100%;
+            max-width: 500px;
+            padding: 20px;
+            padding-top: 0px;
+            border-top: none !important; /* Ensure the top border is removed */
+            border: 0.1px solid #00000023;
+            border-radius: 0px 0px 0px 0px;
+            background-color: #ffffff;
 }
 
 .paypal-container {
-    font-family Inter, sans-serif;
-    background-color #ffffff;
-    width 540px;
-    height 60px !important; 
-    font-weight 500;
-    text-align left;
-    padding 0px;
-    border-left 0.1px solid #00000023;
-    border-right 0.1px solid #00000023;
-    border-bottom 0.1px solid #00000023;
-    border-radius 0 0 10px 10px;
-    background-color #ffffff;
-    margin-bottom 0px;
-    display flex;  Add flexbox display 
+    font-family: "Inter", sans-serif;
+    background-color: #ffffff;
+    width: 540px;
+    height: 60px !important; 
+    font-weight: 500;
+    text-align: left;
+    padding: 0px;
+    border-left: 0.1px solid #00000023;
+    border-right: 0.1px solid #00000023;
+    border-bottom: 0.1px solid #00000023;
+    border-radius: 0 0 10px 10px;
+    background-color: #ffffff;
+    margin-bottom: 0px;
+    display: flex; /* Add flexbox display */
 }
 
 .paypal-bottom-container {
-    width 100%;
-            max-width 500px;
-            padding 20px;
-            padding-top 0px;
-            border-top none !important;  Ensure the top border is removed 
-            border 0.1px solid #00000023;
-            border-radius 0px 0px 5px 5px;
-            background-color #ffffff;
+    width: 100%;
+            max-width: 500px;
+            padding: 20px;
+            padding-top: 0px;
+            border-top: none !important; /* Ensure the top border is removed */
+            border: 0.1px solid #00000023;
+            border-radius: 0px 0px 5px 5px;
+            background-color: #ffffff;
 
 }
 
 .back-button {
-  width 120px;
-    height 35px;
-    border 1px solid #5EA91E;
-    background-color #5EA91E;
-    border-radius 43px;
-    outline none;
-    font-size 16px;
-    font-weight 500;
-    font-family Inter, sans-serif;;
-    color whitesmoke;
-    display flex;
-    justify-content center;  Center the text horizontally 
-    align-items center;  Center the text vertically 
-    padding 22px;
-    transition background-color 0.3s ease;  Add transition for smooth hover effect  
-    cursor pointer;
+  width: 120px;
+    height: 35px;
+    border: 1px solid #5EA91E;
+    background-color: #5EA91E;
+    border-radius: 43px;
+    outline: none;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    padding: 22px;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+    cursor: pointer;
 }
 
-.back-buttonhover {
-  background-color #4e921a;  Darker color when hovered 
+.back-button:hover {
+  background-color: #4e921a; /* Darker color when hovered */
 }
 
 .nav-button-container {
-  display flex;
-  justify-content space-between;  Distribute space between buttons 
-  align-items center;  Center align items vertically 
-  width 100%;  Full width container 
-  max-width 341px;  Set max width for the container 
-  margin 0 auto;  Center the container horizontally 
-  margin-top 50px;
+  display: flex;
+  justify-content: space-between; /* Distribute space between buttons */
+  align-items: center; /* Center align items vertically */
+  width: 100%; /* Full width container */
+  max-width: 341px; /* Set max width for the container */
+  margin: 0 auto; /* Center the container horizontally */
+  margin-top: 50px;
 }
 
 .back-button-container,
 .next-button-container {
-  flex 1;  Each button container takes up equal space 
-  display flex;
-  justify-content center;  Center the button within its container 
+  flex: 1; /* Each button container takes up equal space */
+  display: flex;
+  justify-content: center; /* Center the button within its container */
 }
 
 .back-button, .next-button {
-  width 378px;  Set a fixed width for the buttons 
-  height 35px;
-  border 1px solid #292C49;
-  background-color #292C49;
-  border-radius 5px;
-  outline none;
-  font-size 16px;
-  font-weight 500;
-  font-family Inter, sans-serif;
-  color whitesmoke;
-  display flex;
-  justify-content center;  Center the text horizontally 
-  align-items center;  Center the text vertically 
-  padding 22px;
-  transition background-color 0.3s ease;  Add transition for smooth hover effect 
-  cursor pointer;
+  width: 378px; /* Set a fixed width for the buttons */
+  height: 35px;
+  border: 1px solid #292C49;
+  background-color: #292C49;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
+  color: whitesmoke;
+  display: flex;
+  justify-content: center; /* Center the text horizontally */
+  align-items: center; /* Center the text vertically */
+  padding: 22px;
+  transition: background-color 0.3s ease; /* Add transition for smooth hover effect */
+  cursor: pointer;
 }
 
-.back-buttonhover, .next-buttonhover {
-  background-color #1a1c2e;  Darker color when hovered 
+.back-button:hover, .next-button:hover {
+  background-color: #1a1c2e; /* Darker color when hovered */
 }
 
 .checkout-rectangle {
-    width 100%;
-    max-width 370px;
-    padding 20px;
-    border 0.1px solid #00000023;
-    border-radius 10px;
-    background-color #ffffff;
+    width: 100%;
+    max-width: 370px;
+    padding: 20px;
+    border: 0.1px solid #00000023;
+    border-radius: 10px;
+    background-color: #ffffff;
 }
 
 .upper-field {
-    font-family Inter, sans-serif;
-    background-color #ffffff;
-    margin -20px -20px 0px -20px;  Adjust the margins to cover the full width and top 
-    width 330px;
-    font-weight 500;
-    text-align left;
-    padding 40px;
-    border-radius 10px 10px 0 0;
-    border-bottom 0.1px solid #00000023;
-    background-color #f8f8f8;
-    display flex;
-    flex-direction row;
-    margin-bottom 10px;
+    font-family: "Inter", sans-serif;
+    background-color: #ffffff;
+    margin: -20px -20px 0px -20px; /* Adjust the margins to cover the full width and top */
+    width: 330px;
+    font-weight: 500;
+    text-align: left;
+    padding: 40px;
+    border-radius: 10px 10px 0 0;
+    border-bottom: 0.1px solid #00000023;
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
 }
 
 .small-image {
-    width 130px;
-    height auto;
-    margin-right 10px;
+    width: 130px;
+    height: auto;
+    margin-right: 10px;
 }
 
 .border-line {
-    border-top 1px solid #ccc;
-    margin 10px 0;
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
 }
 
 
 
 .fee-product-container {
-    display flex;
-    flex-direction row;
-    justify-content space-between;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .fee-text {
-    margin 5px 0;
-    padding 10px;
-    font-family Inter, sans-serif;
-    font-size 14px;
+    margin: 5px 0;
+    padding: 10px;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
 }
 
 .display-fee-text {
-    margin 5px 0;
-    padding 10px;
-    font-family Inter, sans-serif;
-    font-size 14px;
+    margin: 5px 0;
+    padding: 10px;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
 }
 
 .fee-text-total {
-    margin 5px 0;
-    padding 10px;
-    font-family Inter, sans-serif;
-    font-size 16px;
-    font-weight 600;
+    margin: 5px 0;
+    padding: 10px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 .info-text-box {
-    display none;
-    position absolute;
-    background-color #fff;
-    border 1px solid #ccc;
-    padding 10px;
-    border-radius 5px;
-    width 300px;
-    box-shadow 0 0 10px rgba(0,0,0,0.1);
-    z-index 1000;
-    font-family Inter, sans-serif;
-    font-size 12px;
-    color #333;
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    color: #333;
 }
 
 .info-icon {
-    margin-left 5px;
-    cursor pointer;
+    margin-left: 5px;
+    cursor: pointer;
 }
 
 .fee-text-container {
-    position relative;
-    display flex;
-    align-items center;
+    position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .total-container {
-    display flex;
-    flex-direction row;
-    justify-content space-between;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .display-fee-text-total {
-    margin 5px 0;
-    padding 10px;
-    font-family Inter, sans-serif;
-    font-size 16px;
-    font-weight 600;
+    margin: 5px 0;
+    padding: 10px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 .final-text {
-    margin-top 10px;
-    font-size 12px;
-    color #666;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #666;
 }
 
 .user-profile {
-    display flex;
-    align-items flex-start;
+    display: flex;
+    align-items: flex-start;
 }
 
 .user-profile img {
-    width 48px;
-    height 48px;
-    border-radius 50%;
-    margin-right 10px;  Space between the image and the text 
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 10px; /* Space between the image and the text */
 }
 
 .user-info {
-    display flex;
-    flex-direction column;  Stack name and rating vertically 
-    display flex;
-    align-items left;
-    margin-bottom 10px;
-    margin-top 10px;
+    display: flex;
+    flex-direction: column; /* Stack name and rating vertically */
+    display: flex;
+    align-items: left;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .user-profile h4 {
-    font-family Inter, sans-serif;
-    font-size 14px;
-    font-weight 500;
-    color rgb(79, 79, 79);
-    margin 0;  Remove margin 
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(79, 79, 79);
+    margin: 0; /* Remove margin */
 }
 
 .user-rating {
-    display flex;
-    align-items center;
-    margin-top 5px;  Add margin to separate from the name 
+    display: flex;
+    align-items: center;
+    margin-top: 5px; /* Add margin to separate from the name */
 }
 
 .user-rating img {
-    width 20px;  Adjust the size of the star icon 
-    height 20px;
-    margin-right 5px;  Space between the star and the rating text 
+    width: 20px; /* Adjust the size of the star icon */
+    height: 20px;
+    margin-right: 5px; /* Space between the star and the rating text */
 }
 
 .user-rating span {
-    font-family Inter, sans-serif;
-    font-size 14px;
-    color rgb(79, 79, 79);
-    font-weight 500;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: rgb(79, 79, 79);
+    font-weight: 500;
 }
 
 .user-profile-container {
-    display flex;
-    flex-direction column;
-    margin-left 10px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
 }
 
 .user-profile-container h3 {
-    width 200px;
-    font-size 17px;
+    width: 200px;
+    font-size: 17px;
 }
 
 .user-price-container {
-    display flex;
-    flex-direction row;
+    display: flex;
+    flex-direction: row;
 }
 
 .highlight {
-    font-size 16px;
-    font-weight 600;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 .bi.bi-shield-lock-fill {
-margin-right 5px;
+margin-right: 5px;
 }
 
 .display-expiration {
-    font-weight 600;
+    font-weight: 600;
 }
 
     footer {
-        background-color #43662e;  Dark green background color 
-        color #ffffff;
-        text-align center;
-        padding 50px 0;  Adjust padding to fit within 600px height 
-        height 580px;  Set height to 600px 
-        position relative;
+        background-color: #43662e; /* Dark green background color */
+        color: #ffffff;
+        text-align: center;
+        padding: 50px 0; /* Adjust padding to fit within 600px height */
+        height: 580px; /* Set height to 600px */
+        position: relative;
     }
 
     footer .footer-content {
-    padding 0 50px;  Add horizontal padding to match the sell-us-section 
+    padding: 0 50px; /* Add horizontal padding to match the sell-us-section */
 }
 
     .footer-logo {
-        display block;
-        margin 0 auto;
-        height auto;
-        width 350px;  Adjust width as necessary 
-        margin-bottom 20px;
+        display: block;
+        margin: 0 auto;
+        height: auto;
+        width: 350px; /* Adjust width as necessary */
+        margin-bottom: 20px;
     }
 
     .footer-columns {
-        display flex;
-        justify-content space-around;
-         align-items flex-start;  Align items to the start to fit better within the height 
-         align-items center; Change that perhaps
-        margin-top 5%;
-        height calc(100% - 100px);  Ensure columns take up the full height of the footer, accounting for padding 
+        display: flex;
+        justify-content: space-around;
+        /* align-items: flex-start; /* Align items to the start to fit better within the height */
+        /* align-items: center; /*Change that perhaps?*/
+        margin-top: 5%;
+        height: calc(100% - 100px); /* Ensure columns take up the full height of the footer, accounting for padding */
 }
 
     .footer-box {
-        max-width 250px;
-        text-align left;
-        font-size 16px;  Adjust font size to fit within the height 
-        display flex;
-    flex-direction column;
-    justify-content center;  Center content vertically 
-    height 100%;  Ensure footer-box takes up the full height of the parent 
-    line-height 1.8;  Adjust this value for desired line spacing 
+        max-width: 250px;
+        text-align: left;
+        font-size: 16px; /* Adjust font size to fit within the height */
+        display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    height: 100%; /* Ensure footer-box takes up the full height of the parent */
+    line-height: 1.8; /* Adjust this value for desired line spacing */
     }
 
     .footer-box h4 {
-        color #ffffff;
-        margin-bottom 15px;
-        font-size 20px;
+        color: #ffffff;
+        margin-bottom: 15px;
+        font-size: 20px;
     }
 
     .footer-box p {
-        color #d2d2d2;
-        margin 5px 0;
-        line-height 1.8;  Adjust this value for desired line spacing 
+        color: #d2d2d2;
+        margin: 5px 0;
+        line-height: 1.8; /* Adjust this value for desired line spacing */
     }
 
     .footer-nav,
     .footer-bottom-nav {
-        list-style-type none;
-        padding 0;
-        margin 0;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
     }
 
     .footer-nav li,
     .footer-bottom-nav li {
-        margin-bottom 10px;  Reduce margin to fit better 
+        margin-bottom: 10px; /* Reduce margin to fit better */
     }
 
     .footer-nav a,
     .footer-bottom-nav a {
-        color #e1e1e1;
-        text-decoration none;
-        transition color 0.3s ease;
+        color: #e1e1e1;
+        text-decoration: none;
+        transition: color 0.3s ease;
     }
 
-    .footer-nav ahover,
-    .footer-bottom-nav ahover {
-        color #ffffff;
+    .footer-nav a:hover,
+    .footer-bottom-nav a:hover {
+        color: #ffffff;
     }
 
     .footer-box input[type=email] {
-        background-color transparent;
-        border none;
-        border-bottom 1.2px solid #e1e1e1;
-        color #ffffff;
-        padding 10px 0;  Remove left padding to align placeholder 
-        width 235px;
-        margin-top 15px;
-        outline none;
-        text-align left;  Align text to the left 
-        position relative;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1.2px solid #e1e1e1;
+        color: #ffffff;
+        padding: 10px 0; /* Remove left padding to align placeholder */
+        width: 235px;
+        margin-top: 15px;
+        outline: none;
+        text-align: left; /* Align text to the left */
+        position: relative;
 }
 
 .email-container {
-    position relative;
-    display inline-block;
+    position: relative;
+    display: inline-block;
 }
 
-.email-containerbefore {
-  content url('dataimagepng;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABdUlEQVR4nO3cPUoDYRRG4UEQV2NjZ6GSqAj+bEBsrWzcnI2L0NbeRgQridHGI8JIJEyKQMi9Hc8CxheOEwymRnSdZIkSZIkSZIkSZIkSZIkSVoxYBu4B+6AnVUfX0sCHph5BaWPYZWCHj+F8Qo0YDruSBUfajt5UF3ALfc1EmwCh6W1ksjjKO3lYWRskHo+SDUZqKchi9rSyMkg9GaSrKUfS2shiO8mGUQEZJCM+UfBZE+QTOoreVhVHyMUpbUc6jt5WFUZqJ8gVcdBkAV8DrwOPRaqbASXSMzf5XrGa3WQ4ig2z1I5QhSBlEnjpB1U2DfIKvylPsL3wjGaCOG97XWzRj5Yxe6h9HbyuHxTF8pLtuxkgEz4z0MSZ+TOWK4VuM62aMNmKMo7eVgzHywBh5YIw8MEYTMUbR28rBGHkANwNnhn8cEPh2zGQghv93EhRkA3gzRiLAKfAEPAK70XskSZIkSZIkSZIkSZIkSZK6cD+4pa0FeKE3zwAAAABJRU5ErkJggg==');
-    position absolute;
-    right -15px;  Adjust the position as needed 
-    bottom 25px;  Adjust the position as needed 
-    height 15px;  Adjust size as needed 
-    pointer-events none;  Ensure the icon does not interfere with input interactions 
-    color white;
-    size 1px;
-    transform scale(0.3);  Scale the image to 50% of its original size 
+.email-container::before {
+  content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABdUlEQVR4nO3cPUoDYRRG4UEQV2NjZ6GSqAj+bEBsrWzcnI2L0NbeRgQridHGI8JIJEyKQMi9H/c8CxheOEwymRnSdZIkSZIkSZIkSZIkSZIkSVoxYBu4B+6AnVUfX0sCHph5B/aWPYZWCHj+F8Qo0YDruSB/Ufajt5UF3ALfc1EmwCh6W1ksjjKO3lYWRskHo+SDUZqKchi9rSyMkg9GaSrKUfS2shiO8mGUQEZJCM+UfBZE+QTOoreVhVHyMUpbUc6jt5WFUZqJ8gVcdBkAV8DrwOPRaqbASXSMzf5XrGa3WQ4ig2z1I5QhSB/lEnjpB1U2Df/IKvylPs/L3wjGaCOG97XWzRj5Y/xe6h9HbyuHxTF8pLtuxkgEz4z0MSZ+TOWK4VuM62aMNmKMo7eVgzHywBh5YIw8MEYTMUbR28rBGHkANwNnhn8cEPh2zGQghv93EhRkA3gzRiLAKfAEPAK70XskSZIkSZIkSZIkSZIkSZK6cD+4pa0FeKE3zwAAAABJRU5ErkJggg==');
+    position: absolute;
+    right: -15px; /* Adjust the position as needed */
+    bottom: 25px; /* Adjust the position as needed */
+    height: 15px; /* Adjust size as needed */
+    pointer-events: none; /* Ensure the icon does not interfere with input interactions */
+    color: white;
+    size: 1px;
+    transform: scale(0.3); /* Scale the image to 50% of its original size */
 }
 
 .social-icons {
-    display flex;
-    justify-content flex-start;
-    margin-top 25px;  Space between the input field and social media icons 
-    gap 10px;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 25px; /* Space between the input field and social media icons */
+    gap: 10px;
 }
 
 .social-icon {
-    width 30px;  Adjust size as needed 
-    height 30px;  Adjust size as needed 
+    width: 30px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
 }
 
 .footer-box img {
-height 35px;
-width 35px;
-color white;
+height: 35px;
+width: 35px;
+color: white;
 }
 
-    .footer-box input[type=email]placeholder {
-        color #b9b9b98b;
-        font-size 16px;
+    .footer-box input[type=email]::placeholder {
+        color: #b9b9b98b;
+        font-size: 16px;
     }
 
     hr {
-        border 0;
-        height 1.2px;
-        background-color #e1e1e1;
-        margin 80px 0;
-        margin 120px auto 10px auto;  Increase the top margin to move the hr line down 
-        width 90%;  Set the width to 1320px 
+        border: 0;
+        height: 1.2px;
+        background-color: #e1e1e1;
+        margin: 80px 0;
+        margin: 120px auto 10px auto; /* Increase the top margin to move the hr line down */
+        width: 90%; /* Set the width to 1320px */
     }
 
     .footer-bottom {
-        display flex;
-        justify-content space-between;
-        align-items center;
-        font-size 12px;  Adjust font size to fit within the height 
-        width 90%;
-        margin 0 auto;  Center align the footer-bottom container 
-        color #e1e1e1;
-        padding 0 60px;  Add padding to the sides 
-        padding-top 10px;  Add some padding at the top 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 12px; /* Adjust font size to fit within the height */
+        width: 90%;
+        margin: 0 auto; /* Center align the footer-bottom container */
+        color: #e1e1e1;
+        padding: 0 60px; /* Add padding to the sides */
+        padding-top: 10px; /* Add some padding at the top */
     }
 
     .footer-bottom p {
-        margin 0px;
-        color #e1e1e1;
+        margin: 0px;
+        color: #e1e1e1;
     }
 
     .footer-bottom-nav {
-        display flex;
-        gap 20px;  Adjust gap to fit within the height  Use this on navbar as well.
-        color #e1e1e1;
+        display: flex;
+        gap: 20px; /* Adjust gap to fit within the height */ /*Use this on navbar as well.*/
+        color: #e1e1e1;
     }
 
     .sell-us-section-title h2 {
-     Styles for the feed section title 
-    font-size 32px;
-    font-weight bolder;
-    color black;
-    margin-top 30px;   Adjust if needed 
-    text-align center;  Center text horizontally 
-    justify-content center;  Center content horizontally 
-    align-items center;  Center content vertically 
-    margin-bottom 10px;
-    font-family Mochiy Pop One, sans-serif;
-     margin-top 20vh;  Adjust as needed to position content below header 
-     Add padding as well 
+    /* Styles for the feed section title */
+    font-size: 32px;
+    font-weight: bolder;
+    color: black;
+    margin-top: 30px;  /* Adjust if needed */
+    text-align: center; /* Center text horizontally */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    margin-bottom: 10px;
+    font-family: "Mochiy Pop One", sans-serif;
+    /* margin-top: 20vh;  Adjust as needed to position content below header */
+    /* Add padding as well */
 }
 
 .sell-us-section {
-      padding 20px;  Add some padding around the section remove by logic 
-    min-height 100vh;  Ensure the section takes up at least 100% of the viewport height 
-    display flex;
-    flex-direction column;  Align content vertically 
-    align-items center;  Center content horizontally 
-    justify-content flex-start;  Start content at the top 
-    margin-bottom 100px;
+    /*  padding: 20px;  Add some padding around the section remove by logic */
+    min-height: 100vh; /* Ensure the section takes up at least 100% of the viewport height */
+    display: flex;
+    flex-direction: column; /* Align content vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: flex-start; /* Start content at the top */
+    margin-bottom: 100px;
 }
 
 .sell-us-content {
-    display flex;
-    align-items center;  Center content vertically within each column 
-    justify-content space-between;  Space between image and details 
-    width 80%;  Adjust as needed for desired width 
-    max-width 1200px;  Adjust as needed for desired max width 
-     align-items flex-start; Test
+    display: flex;
+    align-items: center; /* Center content vertically within each column */
+    justify-content: space-between; /* Space between image and details */
+    width: 80%; /* Adjust as needed for desired width */
+    max-width: 1200px; /* Adjust as needed for desired max width */
+    /* align-items: flex-start; /*Test*/
 }
 
 .sell-us-details {
-    flex 1;  Take up half of the available space 
-    padding 40px;  Add some padding around the details 
-    display flex; Test
-    flex-direction column; Test
-    flex-grow 1; Test
+    flex: 1; /* Take up half of the available space */
+    padding: 40px; /* Add some padding around the details */
+    display: flex; /*Test*/
+    flex-direction: column; /*Test*/
+    flex-grow: 1; /*Test*/
 }
 
 .sell-us-item {
-    display flex;
-    align-items flex-start;
-    margin-bottom 20px;  Adjust as needed for spacing 
-    align-items center;  This centers the items vertically 
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px; /* Adjust as needed for spacing */
+    align-items: center; /* This centers the items vertically */
 }
 
 .sell-us-item img {
-    margin-right 30px;  Adjust as needed for spacing 
-    width 200px;  Adjust as needed for size 
-    height auto;
-     margin-top 50px; (Adjusts the image vertically)
+    margin-right: 30px; /* Adjust as needed for spacing */
+    width: 200px; /* Adjust as needed for size */
+    height: auto;
+    /* margin-top: 50px; (Adjusts the image vertically)*/
 }
 
 .sell-us-text {
-    display flex;
-    flex-direction column;
+    display: flex;
+    flex-direction: column;
 }
 
 .sell-us-title, .second-sell-us-title {
-    font-size 25px;
-    font-weight bolder;
-    font-family Arial;
-    color black;
-    margin-bottom 10px;  Space between title and description 
-    margin-top 20px;
-    font-family Mochiy Pop One, sans-serif;
-     margin 0; New
+    font-size: 25px;
+    font-weight: bolder;
+    font-family: Arial;
+    color: black;
+    margin-bottom: 10px; /* Space between title and description */
+    margin-top: 20px;
+    font-family: "Mochiy Pop One", sans-serif;
+    /* margin: 0; /*New*/
 }
 
 .sell-us-description, .second-sell-us-title-description {
-    font-size 16px;
-    margin-bottom 10px;  Space between description and next element 
-    line-height 1.6;  Adjust this value for desired line spacing 
-    font-family Inter, sans-serif;
-     margin 0; New
+    font-size: 16px;
+    margin-bottom: 10px; /* Space between description and next element */
+    line-height: 1.6; /* Adjust this value for desired line spacing */
+    font-family: "Inter", sans-serif;
+    /* margin: 0; /*New*/
 }
 
 .sell-us-image {
-    flex 1;  Take up half of the available space 
-    display flex;
-    justify-content center;  Center image horizontally 
-    align-items center;  Center image vertically 
+    flex: 1; /* Take up half of the available space */
+    display: flex;
+    justify-content: center; /* Center image horizontally */
+    align-items: center; /* Center image vertically */
 }
 
 .sell-us-image img {
-    max-width 100%;  Ensure image fits within its container 
-    height auto;  Maintain aspect ratio 
-    border-radius 20px;  Smooth edges 
-    margin-top 20px;
-    max-width 100%; New
-    height auto; New
+    max-width: 100%; /* Ensure image fits within its container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 20px; /* Smooth edges */
+    margin-top: 20px;
+    max-width: 100%; /*New*/
+    height: auto; /*New*/
 }
 
 .get-started button {
-    width 265px;
-    height 60px;
-    border 1px solid #ff4632c8;
-    background-color #ff4632c8;
-    border-radius 7.5px;
-    outline none;
-    padding-top 38px;
-    font-size 18px;
-    font-weight 600;
-    color whitesmoke;
-    display flex;
-    justify-content center;  Center the text horizontally 
-    align-items center;  Center the text vertically 
-    padding 15px;
-    transition background-color 0.3s ease;  Add transition for smooth hover effect  
+    width: 265px;
+    height: 60px;
+    border: 1px solid #ff4632c8;
+    background-color: #ff4632c8;
+    border-radius: 7.5px;
+    outline: none;
+    padding-top: 38px;
+    font-size: 18px;
+    font-weight: 600;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    padding: 15px;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
 }
 
-.get-started button[type=submit]hover {
-    background-color #ff4632e6;  Darker color when hovered 
+.get-started button[type=submit]:hover {
+    background-color: #ff4632e6; /* Darker color when hovered */
 }
 
-@media only screen and (max-width 768px) {
+@media only screen and (max-width: 768px) {
     .sell-us-title, .second-sell-us-title {
-        font-size 20px;
+        font-size: 20px;
     }
 
     .sell-us-content {
-        align-items center;
-        justify-content space-between;
-        width 80%;
-        max-width 1200px;
-        display block;
-        text-align center;
-        margin-bottom 30px;
+        align-items: center;
+        justify-content: space-between;
+        width: 80%;
+        max-width: 1200px;
+        display: block;
+        text-align: center;
+        margin-bottom: 30px;
     }
 
     .sell-us-item {
-        display block !important;
+        display: block !important;
     }
 }
 
-  logicdigger css  for mobile
+  /***logicdigger css  for mobile***/
 
 
-@media only screen and (max-width 768px) {
+@media only screen and (max-width: 768px) {
     
       footer {
-    height unset !important;
+    height: unset !important;
 }
 .footer-columns {
-    display unset !important;
+    display: unset !important;
  
 } 
 .feed-details {
-    padding 10px !important;
+    padding: 10px !important;
 }
 .feed-section-content {
-    display block !important;
-    width 85%;
+    display: block !important;
+    width: 85%;
 }
 .rectangle {
-    margin auto;
-    margin-bottom 20px;
+    margin: auto;
+    margin-bottom: 20px;
 }
 .rectangle-container {
-    display block !important;
+    display: block !important;
 }
 .listing-title .title , .feed-section-title h2, .sell-us-section-title h2{
-    text-align center !important;
-    font-size 25px;
+    text-align: center !important;
+    font-size: 25px;
 }
 .sell-us-title, .second-sell-us-title{
-  font-size 20px;
+  font-size: 20px;
 }
 .footer-logo {
-    width 250px;
-    margin-bottom 20px;
+    width: 250px;
+    margin-bottom: 20px;
 }
 .feed-title{
-  font-size 25px;
+  font-size: 25px;
 }
 
 .heor-content {
-    padding 30px;
+    padding: 30px;
 }
 
 
 .navbar-nav a {
-    text-decoration none;
-    color #000;
-    padding 10px 20px;
-    text-align center;
-    margin auto;
-    font-weight 500;
+    text-decoration: none;
+    color: #000;
+    padding: 10px 20px;
+    text-align: center;
+    margin: auto;
+    font-weight: 500;
 }
 
 
 .sell-us-content {
-    align-items center;
-    justify-content space-between;
-    width 80%;
-    max-width 1200px;
-    display block;
-    text-align center;
-    margin-bottom 30px;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1200px;
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
 }
 .sell-us-item {
-    display block !important;
+    display: block !important;
 }
 .footer-bottom {
-    display block !important;
-     width unset !important;
+    display: block !important;
+     width: unset !important;
 }
 hr {
-    width 100%;
+    width: 100%;
 }
 .footer-bottom-nav {
-    display block !important;
-    margin-top 10px;
+    display: block !important;
+    margin-top: 10px;
 }
 .main-title {
-    font-size 25px;
+    font-size: 25px;
 }
 
 .h4-title {
-    font-size 18px;
-    padding-top 15px;
+    font-size: 18px;
+    padding-top: 15px;
 }
 
 .submit-container {
-    margin unset;
-    padding 0;
+    margin: unset;
+    padding: 0;
 }
 
 .search-container input[type=text] {
-    margin-bottom 10px;
+    margin-bottom: 10px;
 }
 
 .hero-iner {
-    background-position center !important;
+    background-position: center !important;
 }
 
 }
 
     div#navbarNavAltMarkup {
-    margin-left 30px;
+    margin-left: 30px;
 }   
 
-  logicdigger css  for mobile end 
-style
-head
-body
-  header
-    section class=logo-section
-      div class=logo
-        img src=farmifylogo.png alt=logo
-      div
-      hr class=nav-hr
-    section
-  header
-  main
-    section class=pagination-section
-      div class=pagination-dots
-        span class=dot activespan
-        span class=dotspan
-      div
-    section
+  /***logicdigger css  for mobile end ***/
+</style>
+</head>
+<body>
+  <header>
+    <section class="logo-section">
+      <div class="logo">
+        <img src="farmifylogo.png" alt="logo">
+      </div>
+      <hr class="nav-hr">
+    </section>
+  </header>
+  <main>
+    <section class="pagination-section">
+      <div class="pagination-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+      </div>
+    </section>
 
-section class=message-box
-    div class=left-section
-        div class=message-content
-            div class=message-title
-                i class=bi bi-credit-card-2-back-filli
-                h3Checkout pageh3
-            div
-            pTo make a purchase, please choose a payment option and proceed with the payment on the right sidep
-        div
+<section class="message-box">
+    <div class="left-section">
+        <div class="message-content">
+            <div class="message-title">
+                <i class="bi bi-credit-card-2-back-fill"></i>
+                <h3>Checkout page</h3>
+            </div>
+            <p>To make a purchase, please choose a payment option and proceed with the payment on the right side</p>
+        </div>
 
 
-        div class=current-payment-option
-            h3Current Payment Optionh3
-        div
-        div class=current-credit-containers
-            div class=circle-checkbox-container
-                div class=circle-checkbox
-                    input type=radio name=payment-option
-                div
-                p class=container-textCredit & Debit Cardsimg width=28 height=28 src=httpsimg.icons8.comcolor48visa.png alt=visa style=margin-left 5px;img width=28 height=28 src=httpsimg.icons8.comcolor48mastercard.png alt=mastercard style=margin-left 5px;p
-                p class=display-numbers-credit style=margin-left 5px;pp class=display-expiration style=margin-left 10px;p
-            div
-        div
-        div class=current-gcash-container
-            div class=circle-checkbox-container
-                div class=circle-checkbox
-                    input type=radio name=payment-option
-                div
-                p class=container-textGcashimg src=GCash_logo.png alt=gcash-logo style=height 20%; width 20%; margin-left 5px;p
-                p class=display-numbers-gcash style=margin-left 5px;p
-            div
-        div
-        div class=current-paypal-container
-            div class=circle-checkbox-container
-                div class=circle-checkbox
-                    input type=radio name=payment-option
-                div
-                p class=container-textPaypalimg width=28 height=28 src=httpsimg.icons8.comcolor48paypal.png alt=paypalp
-                p class=display-numbers-paypal style=margin-left 5px;p
-            div
-        div
+        <div class="current-payment-option">
+            <h3>Current Payment Option</h3>
+        </div>
+        <div class="current-credit-containers">
+            <div class="circle-checkbox-container">
+                <div class="circle-checkbox">
+                    <input type="radio" name="payment-option">
+                </div>
+                <p class="container-text">Credit & Debit Cards<img width="28" height="28" src="https://img.icons8.com/color/48/visa.png" alt="visa" style="margin-left: 5px;"><img width="28" height="28" src="https://img.icons8.com/color/48/mastercard.png" alt="mastercard" style="margin-left: 5px;"></p>
+                <p class="display-numbers-credit" style="margin-left: 5px;"></p><p class="display-expiration" style="margin-left: 10px;"></p>
+            </div>
+        </div>
+        <div class="current-gcash-container">
+            <div class="circle-checkbox-container">
+                <div class="circle-checkbox">
+                    <input type="radio" name="payment-option">
+                </div>
+                <p class="container-text">Gcash<img src="GCash_logo.png" alt="gcash-logo" style="height: 20%; width: 20%; margin-left: 5px;"></p>
+                <p class="display-numbers-gcash" style="margin-left: 5px;"></p>
+            </div>
+        </div>
+        <div class="current-paypal-container">
+            <div class="circle-checkbox-container">
+                <div class="circle-checkbox">
+                    <input type="radio" name="payment-option">
+                </div>
+                <p class="container-text">Paypal<img width="28" height="28" src="https://img.icons8.com/color/48/paypal.png" alt="paypal"></p>
+                <p class="display-numbers-paypal" style="margin-left: 5px;"></p>
+            </div>
+        </div>
 
-        div class=payment-rectangle
-            div class=payment-option
-                h3Choose Payment Optionsh3
-            div
-            div class=credit-containers
-                div class=circle-checkbox-container
-                    div class=circle-checkbox
-                        input type=radio name=payment-option
-                    div
-                    p class=container-textCredit & Debit Cardsimg width=28 height=28 src=httpsimg.icons8.comcolor48visa.png alt=visa style=margin-left 5px;img width=28 height=28 src=httpsimg.icons8.comcolor48mastercard.png alt=mastercard style=margin-left 5px;p
-                div
-            div
-            div class=credit-data-container
-                p class=guiding-textCard numberp
-                div class=card-number-container
-                    i class=bi bi-credit-card-filli
-                    input type=text class=payment-input id=card-number-input placeholder=1234 5678 9123 4567
-                div
-                div class=warning-text-container
-                    p class=warning-text-numberUnsupported card numberpi class=bi bi-exclamation-trianglei
-                div
+        <div class="payment-rectangle">
+            <div class="payment-option">
+                <h3>Choose Payment Options</h3>
+            </div>
+            <div class="credit-containers">
+                <div class="circle-checkbox-container">
+                    <div class="circle-checkbox">
+                        <input type="radio" name="payment-option">
+                    </div>
+                    <p class="container-text">Credit & Debit Cards<img width="28" height="28" src="https://img.icons8.com/color/48/visa.png" alt="visa" style="margin-left: 5px;"><img width="28" height="28" src="https://img.icons8.com/color/48/mastercard.png" alt="mastercard" style="margin-left: 5px;"></p>
+                </div>
+            </div>
+            <div class="credit-data-container">
+                <p class="guiding-text">Card number</p>
+                <div class="card-number-container">
+                    <i class="bi bi-credit-card-fill"></i>
+                    <input type="text" class="payment-input" id="card-number-input" placeholder="1234 5678 9123 4567">
+                </div>
+                <div class="warning-text-container">
+                    <p class="warning-text-number">Unsupported card number</p><i class="bi bi-exclamation-triangle"></i>
+                </div>
 
-                div class=payment-row
-                    div class=input-group
-                        p class=guiding-text-smallExpiration datep
-                        input type=text class=payment-input placeholder=MMYY
-                        div class=warning-text-container
-                            p class=warning-text-dateInvalid datepi class=bi bi-exclamation-trianglei
-                        div
-                    div
-                    div class=input-group
-                        p class=guiding-text-smallSecurity codep
-                        input type=text class=payment-input placeholder=123
-                        div class=warning-text-container
-                            p class=warning-text-codeSecurity code too shortpi class=bi bi-exclamation-trianglei
-                        div
-                    div
-                div
+                <div class="payment-row">
+                    <div class="input-group">
+                        <p class="guiding-text-small">Expiration date</p>
+                        <input type="text" class="payment-input" placeholder="MM/YY">
+                        <div class="warning-text-container">
+                            <p class="warning-text-date">Invalid date</p><i class="bi bi-exclamation-triangle"></i>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <p class="guiding-text-small">Security code</p>
+                        <input type="text" class="payment-input" placeholder="123">
+                        <div class="warning-text-container">
+                            <p class="warning-text-code">Security code too short</p><i class="bi bi-exclamation-triangle"></i>
+                        </div>
+                    </div>
+                </div>
 
-                div class=name-container
-                    div class=input-group
-                        p class=guiding-text-smallCardholder's namep
-                        input type=text class=payment-input placeholder=Jon Dae
-                        div class=warning-text-container
-                            p class=warning-text-nameMin 2 characterspi class=bi bi-exclamation-trianglei
-                        div
-                    div
-                div
+                <div class="name-container">
+                    <div class="input-group">
+                        <p class="guiding-text-small">Cardholder's name</p>
+                        <input type="text" class="payment-input" placeholder="Jon Dae">
+                        <div class="warning-text-container">
+                            <p class="warning-text-name">Min 2 characters</p><i class="bi bi-exclamation-triangle"></i>
+                        </div>
+                    </div>
+                </div>
 
-                div class=payment-checkbox-credit
-                    input type=checkbox id=save-card-credit
-                    label for=save-card-creditSave this card for future paymentslabel
-                div
-            div
-        div
+                <div class="payment-checkbox-credit">
+                    <input type="checkbox" id="save-card-credit">
+                    <label for="save-card-credit">Save this card for future payments</label>
+                </div>
+            </div>
+        </div>
 
-        div class=gcash-container
-            div class=circle-checkbox-container
-                div class=circle-checkbox
-                    input type=radio name=payment-option
-                div
-                p class=container-textGcashimg src=GCash_logo.png alt=gcash-logo style=height 20%; width 20%; margin-left 5px;p
-            div
-        div
+        <div class="gcash-container">
+            <div class="circle-checkbox-container">
+                <div class="circle-checkbox">
+                    <input type="radio" name="payment-option">
+                </div>
+                <p class="container-text">Gcash<img src="GCash_logo.png" alt="gcash-logo" style="height: 20%; width: 20%; margin-left: 5px;"></p>
+            </div>
+        </div>
 
-        div class=gcash-bottom-container
-            p class=guiding-text-emailEmail Addressp
-            input type=text class=payment-input placeholder=Please enter your email here
-            div class=phone-number-container
-                p class=guiding-textPhone numberp
-                input type=text class=payment-input placeholder=+63 1234567891
-            div
-            div class=payment-checkbox-gcash
-                input type=checkbox id=save-card-gcash
-                label for=save-card-gcashSave this option for future paymentslabel
-            div
-        div
+        <div class="gcash-bottom-container">
+            <p class="guiding-text-email">Email Address</p>
+            <input type="text" class="payment-input" placeholder="Please enter your email here">
+            <div class="phone-number-container">
+                <p class="guiding-text">Phone number</p>
+                <input type="text" class="payment-input" placeholder="+63 1234567891">
+            </div>
+            <div class="payment-checkbox-gcash">
+                <input type="checkbox" id="save-card-gcash">
+                <label for="save-card-gcash">Save this option for future payments</label>
+            </div>
+        </div>
 
-        div class=paypal-container
-            div class=circle-checkbox-container
-                div class=circle-checkbox
-                    input type=radio name=payment-option
-                div
-                p class=container-textPaypalimg width=28 height=28 src=httpsimg.icons8.comcolor48paypal.png alt=paypalp
-            div
-        div
+        <div class="paypal-container">
+            <div class="circle-checkbox-container">
+                <div class="circle-checkbox">
+                    <input type="radio" name="payment-option">
+                </div>
+                <p class="container-text">Paypal<img width="28" height="28" src="https://img.icons8.com/color/48/paypal.png" alt="paypal"></p>
+            </div>
+        </div>
 
-        div class=paypal-bottom-container
-            p class=guiding-text-emailEmail Addressp
-            input type=text class=payment-input placeholder=Please enter your email here
-            div class=phone-number-container
-                p class=guiding-textPhone numberp
-                input type=text class=payment-input placeholder=+63 1234567891
-            div
-            div class=payment-checkbox-paypal
-                input type=checkbox id=save-card-paypal
-                label for=save-card-paypalSave this option for future paymentslabel
-            div
-        div
-    div
+        <div class="paypal-bottom-container">
+            <p class="guiding-text-email">Email Address</p>
+            <input type="text" class="payment-input" placeholder="Please enter your email here">
+            <div class="phone-number-container">
+                <p class="guiding-text">Phone number</p>
+                <input type="text" class="payment-input" placeholder="+63 1234567891">
+            </div>
+            <div class="payment-checkbox-paypal">
+                <input type="checkbox" id="save-card-paypal">
+                <label for="save-card-paypal">Save this option for future payments</label>
+            </div>
+        </div>
+    </div>
 
-    div class=right-section
-        div class=checkout-rectangle
-            div class=upper-field
-                img src=Rectangle 41.png alt=Rectangle class=small-image
-                div class=user-profile-container
-                h310 Pigs for Sale in Cebuh3
-                div class=user-profile
-                    div class=user-info-details
-                        h4Darwin Rabagoh4
-                        div class=user-rating
-                            img src=httpsimg.icons8.comfluency96star--v1.png alt=star--v1
-                            span5.0span
-                        div
-                        div class=user-price-container
-                            p class=user-pricespan class=highlightPricespan ₱ 20,000p
-                        div
-                    div
-                div
-            div
-        div
-        div class=fee-text-container
-            p class=fee-textService feep
-            i class=bi bi-question-circle info-iconi
-            p class=display-fee-text₱ 100p
-            div class=info-text-boxThis allows us to operate our platform efficiently, provide 247 customer support for your orders, and makes monthly giveaways possible.div
-        div
+    <div class="right-section">
+        <div class="checkout-rectangle">
+            <div class="upper-field">
+                <img src="Rectangle 41.png" alt="Rectangle" class="small-image">
+                <div class="user-profile-container">
+                <h3>10 Pigs for Sale in Cebu</h3>
+                <div class="user-profile">
+                    <div class="user-info-details">
+                        <h4>Darwin Rabago</h4>
+                        <div class="user-rating">
+                            <img src="https://img.icons8.com/fluency/96/star--v1.png" alt="star--v1">
+                            <span>5.0</span>
+                        </div>
+                        <div class="user-price-container">
+                            <p class="user-price"><span class="highlight">Price:</span> ₱ 20,000</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fee-text-container">
+            <p class="fee-text">Service fee:</p>
+            <i class="bi bi-question-circle info-icon"></i>
+            <p class="display-fee-text">₱ 100</p>
+            <div class="info-text-box">This allows us to operate our platform efficiently, provide 24/7 customer support for your orders, and makes monthly giveaways possible.</div>
+        </div>
         
-            div class=border-linediv
-            div class=fee-product-container
-            p class=fee-textProductpp class=display-fee-text₱ 20,100p
-        div
-            div class=border-linediv
-            div class=total-container
-            p class=fee-text-totalTotalpp class=display-fee-text-total₱ 20,100p
-        div
-            button class=next-buttonConfirm & Paybutton
-            div class=button-guiding-text
-                i class=bi bi-shield-lock-filli SSL secure payment
-            div
-            p class=final-textYou will be charged ₱ 20,100 . Total amount includes currency and conversion fees.p
-        div
-    div
-section
+            <div class="border-line"></div>
+            <div class="fee-product-container">
+            <p class="fee-text">Product:</p><p class="display-fee-text">₱ 20,100</p>
+        </div>
+            <div class="border-line"></div>
+            <div class="total-container">
+            <p class="fee-text-total">Total:</p><p class="display-fee-text-total">₱ 20,100</p>
+        </div>
+            <button class="next-button">Confirm & Pay</button>
+            <div class="button-guiding-text">
+                <i class="bi bi-shield-lock-fill"></i> SSL secure payment
+            </div>
+            <p class="final-text">You will be charged ₱ 20,100 . Total amount includes currency and conversion fees.</p>
+        </div>
+    </div>
+</section>
 
-    section
+    </section>
 
-!--section class=sell-us-section
-        div class=sell-us-section-title
-          h2Here are some benefits of selling digitallyh2
-        div
-        div class=sell-us-content
-          div class=sell-us-details
-            div class=sell-us-item
-              img src=Group 39.png alt=write something
-              div class=sell-us-text
-                h4 class=sell-us-titleList Your Pigs for Freeh4
-                p class=sell-us-descriptionEnjoy the benefits of listing your pigs on our platform without any upfront cost. Maximize your sales potential, and connect with buyers effortlessly on our platform.p
-              div
-            div
-            div class=sell-us-item
-              img src=Group 38.png alt=write something
-              div class=sell-us-text
-                h4 class=second-sell-us-titleBuild Your Client Base & Track Your Salesh4
-                p class=second-sell-us-title-descriptionExpand your reach, attract more buyers, and keep track of your sales seamlessly. Use our tools to manage inventory, monitor transactions, and gain insights into buyer behavior.p
-              div
-            div
-          div
-          div class=sell-us-image
-            img src=Group 45.png alt=A farmer analyzing the growth of his business
-          div
-        div
+<!--<section class="sell-us-section">
+        <div class="sell-us-section-title">
+          <h2>Here are some benefits of selling digitally</h2>
+        </div>
+        <div class="sell-us-content">
+          <div class="sell-us-details">
+            <div class="sell-us-item">
+              <img src="Group 39.png" alt="write something">
+              <div class="sell-us-text">
+                <h4 class="sell-us-title">List Your Pigs for Free</h4>
+                <p class="sell-us-description">Enjoy the benefits of listing your pigs on our platform without any upfront cost. Maximize your sales potential, and connect with buyers effortlessly on our platform.</p>
+              </div>
+            </div>
+            <div class="sell-us-item">
+              <img src="Group 38.png" alt="write something">
+              <div class="sell-us-text">
+                <h4 class="second-sell-us-title">Build Your Client Base & Track Your Sales</h4>
+                <p class="second-sell-us-title-description">Expand your reach, attract more buyers, and keep track of your sales seamlessly. Use our tools to manage inventory, monitor transactions, and gain insights into buyer behavior.</p>
+              </div>
+            </div>
+          </div>
+          <div class="sell-us-image">
+            <img src="Group 45.png" alt="A farmer analyzing the growth of his business">
+          </div>
+        </div>
   
-  section 
+  </section> 
 
-    footer
-      div class=footer-content
-        img src=Group 193.png alt=Piggery Logo class=footer-logo
-        div class=footer-columns
-          div class=footer-box
-            h4Our Missionh4
-            p class=brand-statement
+    <footer>
+      <div class="footer-content">
+        <img src="Group 193.png" alt="Piggery Logo" class="footer-logo">
+        <div class="footer-columns">
+          <div class="footer-box">
+            <h4>Our Mission</h4>
+            <p class="brand-statement">
               Farmify piggery marketplace aims to revolutionize pig farming by providing a reliable and user-friendly platform where farmers and buyers can connect, trade, and thrive together.
-            p
-          div
-          div class=footer-box
-            h4Navigationh4
-            ul class=footer-nav
-              lia href=#Homeali
-              lia href=#Pigs for Saleali
-              lia href=#Sell your Pigali
-              lia href=#About usali
-              lia href=#Contactali
-            ul
-          div
-          div class=footer-box
-            h4Contacth4
-            pPhone (123) 456-7890p
-            pFAX (123) 456-7891p
-            p123 Example Address, City, Countryp
-          div
-          div class=footer-box
-            h4Stay Connectedh4
-            pStay connected with our latest news and price alerts to never miss a great deal.p
-            div class=email-container
-              input type=email placeholder=Email address class=email-input
-            div
-            div class=social-icons
-              img src=Group 149.png alt=Facebook class=social-icon
-              img src=Group 148.png alt=Twitter class=social-icon
-              img src=Group 147.png alt=Instagram class=social-icon
-            div
-          div
-        div
-        hr
-        div class=footer-bottom
-          p&copy; 2024 All rights reserved.p
-          ul class=footer-bottom-nav
-            lia href=#Terms & Conditionsali
-            lia href=#Privacy Policyali
-          ul
-        div
-      div
+            </p>
+          </div>
+          <div class="footer-box">
+            <h4>Navigation</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Pigs for Sale</a></li>
+              <li><a href="#">Sell your Pig</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-box">
+            <h4>Contact</h4>
+            <p>Phone: (123) 456-7890</p>
+            <p>FAX: (123) 456-7891</p>
+            <p>123 Example Address, City, Country</p>
+          </div>
+          <div class="footer-box">
+            <h4>Stay Connected</h4>
+            <p>Stay connected with our latest news and price alerts to never miss a great deal.</p>
+            <div class="email-container">
+              <input type="email" placeholder="Email address" class="email-input">
+            </div>
+            <div class="social-icons">
+              <img src="Group 149.png" alt="Facebook" class="social-icon">
+              <img src="Group 148.png" alt="Twitter" class="social-icon">
+              <img src="Group 147.png" alt="Instagram" class="social-icon">
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="footer-bottom">
+          <p>&copy; 2024 All rights reserved.</p>
+          <ul class="footer-bottom-nav">
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
       
-    footer --
+    </footer> -->
 
-    script
+    <script>
 
 $(document).ready(function() {
-    $(.circle-checkbox).click(function() {
-        $(.circle-checkbox).removeClass(checked);
-        $(this).addClass(checked);
+    $(".circle-checkbox").click(function() {
+        $(".circle-checkbox").removeClass("checked");
+        $(this).addClass("checked");
 
-         Hide all containers first
-        $(.gcash-bottom-container).hide();
-        $(.credit-data-container).hide();
-        $(.paypal-bottom-container).hide();
+        // Hide all containers first
+        $(".gcash-bottom-container").hide();
+        $(".credit-data-container").hide();
+        $(".paypal-bottom-container").hide();
 
-         Toggle the visibility of the respective container
-        if ($(this).closest(.gcash-container).length  0) {
-            $(.gcash-bottom-container).slideToggle();
-        } else if ($(this).closest(.credit-containers).length  0) {
-            $(.credit-data-container).slideToggle();
-        } else if ($(this).closest(.paypal-container).length  0) {
-            $(.paypal-bottom-container).slideToggle();
+        // Toggle the visibility of the respective container
+        if ($(this).closest(".gcash-container").length > 0) {
+            $(".gcash-bottom-container").slideToggle();
+        } else if ($(this).closest(".credit-containers").length > 0) {
+            $(".credit-data-container").slideToggle();
+        } else if ($(this).closest(".paypal-container").length > 0) {
+            $(".paypal-bottom-container").slideToggle();
         }
     });
 
-     Hide the containers initially
-    $(.gcash-bottom-container).hide();
-    $(.credit-data-container).hide();
-    $(.paypal-bottom-container).hide();
+    // Hide the containers initially
+    $(".gcash-bottom-container").hide();
+    $(".credit-data-container").hide();
+    $(".paypal-bottom-container").hide();
 });
 
 document.getElementById('card-number-input').addEventListener('input', function() {
-    const cardNumber = this.value.replace(s+g, '').replace([^0-9]gi, '');  Remove spaces and non-numeric characters
-    const formattedCardNumber = cardNumber.match(.{1,4}g).join(' ')  '';  Add space after every 4 digits
+    const cardNumber = this.value.replace(/\s+/g, '').replace(/[^0-9]/gi, ''); // Remove spaces and non-numeric characters
+    const formattedCardNumber = cardNumber.match(/.{1,4}/g)?.join(' ') || ''; // Add space after every 4 digits
     this.value = formattedCardNumber;
 
     const icon = this.previousElementSibling;
@@ -2720,40 +2720,40 @@ document.getElementById('card-number-input').addEventListener('input', function(
         warningTextNumber.style.display = 'none';
         exclamationIconNumber.style.display = 'none';
     } else if (cardNumber.startsWith('5')) {
-        if (cardNumber.length  16) {
+        if (cardNumber.length < 16) {
             icon.className = 'bi bi-credit-card-fill';
             icon.innerHTML = '';
             warningTextNumber.style.display = 'flex';
             exclamationIconNumber.style.display = 'none';
         } else {
             icon.className = '';
-            icon.innerHTML = 'img width=28 height=28 src=httpsimg.icons8.comcolor48mastercard.png alt=mastercard';
+            icon.innerHTML = '<img width="28" height="28" src="https://img.icons8.com/color/48/mastercard.png" alt="mastercard">';
             warningTextNumber.style.display = 'none';
             exclamationIconNumber.style.display = 'none';
         }
     } else if (cardNumber.startsWith('4')) {
-        if (cardNumber.length  16) {
+        if (cardNumber.length < 16) {
             icon.className = 'bi bi-credit-card-fill';
             icon.innerHTML = '';
             warningTextNumber.style.display = 'flex';
             exclamationIconNumber.style.display = 'none';
         } else {
             icon.className = '';
-            icon.innerHTML = 'img width=28 height=28 src=httpsimg.icons8.comcolor48visa.png alt=visa';
+            icon.innerHTML = '<img width="28" height="28" src="https://img.icons8.com/color/48/visa.png" alt="visa">';
             warningTextNumber.style.display = 'none';
             exclamationIconNumber.style.display = 'none';
         }
     } else {
         icon.className = 'bi bi-credit-card-fill';
         icon.innerHTML = '';
-        warningTextNumber.style.display = cardNumber.length  16  'flex'  'none';
-        exclamationIconNumber.style.display = cardNumber.length  16  'none'  'none';
+        warningTextNumber.style.display = cardNumber.length < 16 ? 'flex' : 'none';
+        exclamationIconNumber.style.display = cardNumber.length < 16 ? 'none' : 'none';
     }
 });
 
 document.getElementById('card-number-input').addEventListener('input', function() {
-    const cardNumber = this.value.replace(s+g, '').replace([^0-9]gi, '');  Remove spaces and non-numeric characters
-    const formattedCardNumber = cardNumber.match(.{1,4}g).join(' ')  '';  Add space after every 4 digits
+    const cardNumber = this.value.replace(/\s+/g, '').replace(/[^0-9]/gi, ''); // Remove spaces and non-numeric characters
+    const formattedCardNumber = cardNumber.match(/.{1,4}/g)?.join(' ') || ''; // Add space after every 4 digits
 
     this.value = formattedCardNumber;
 
@@ -2764,10 +2764,10 @@ document.getElementById('card-number-input').addEventListener('input', function(
         icon.innerHTML = '';
     } else if (cardNumber.startsWith('5')) {
         icon.className = '';
-        icon.innerHTML = 'img width=28 height=28 src=httpsimg.icons8.comcolor48mastercard.png alt=mastercard';
+        icon.innerHTML = '<img width="28" height="28" src="https://img.icons8.com/color/48/mastercard.png" alt="mastercard">';
     } else if (cardNumber.startsWith('4')) {
         icon.className = '';
-        icon.innerHTML = 'img width=28 height=28 src=httpsimg.icons8.comcolor48visa.png alt=visa';
+        icon.innerHTML = '<img width="28" height="28" src="https://img.icons8.com/color/48/visa.png" alt="visa">';
     } else {
         icon.className = 'bi bi-credit-card-fill';
         icon.innerHTML = '';
@@ -2775,8 +2775,8 @@ document.getElementById('card-number-input').addEventListener('input', function(
 });
 
 document.getElementById('card-number-input').addEventListener('input', function() {
-    const cardNumber = this.value.replace(s+g, '').replace([^0-9]gi, '');  Remove spaces and non-numeric characters
-    const formattedCardNumber = cardNumber.match(.{1,4}g).join(' ')  '';  Add space after every 4 digits
+    const cardNumber = this.value.replace(/\s+/g, '').replace(/[^0-9]/gi, ''); // Remove spaces and non-numeric characters
+    const formattedCardNumber = cardNumber.match(/.{1,4}/g)?.join(' ') || ''; // Add space after every 4 digits
 
     this.value = formattedCardNumber;
 
@@ -2787,10 +2787,10 @@ document.getElementById('card-number-input').addEventListener('input', function(
         icon.innerHTML = '';
     } else if (cardNumber.startsWith('5')) {
         icon.className = '';
-        icon.innerHTML = 'img width=28 height=28 src=httpsimg.icons8.comcolor48mastercard.png alt=mastercard';
+        icon.innerHTML = '<img width="28" height="28" src="https://img.icons8.com/color/48/mastercard.png" alt="mastercard">';
     } else if (cardNumber.startsWith('4')) {
         icon.className = '';
-        icon.innerHTML = 'img width=28 height=28 src=httpsimg.icons8.comcolor48visa.png alt=visa';
+        icon.innerHTML = '<img width="28" height="28" src="https://img.icons8.com/color/48/visa.png" alt="visa">';
     } else {
         icon.className = 'bi bi-credit-card-fill';
         icon.innerHTML = '';
@@ -2798,8 +2798,8 @@ document.getElementById('card-number-input').addEventListener('input', function(
 });
 
 document.getElementById('card-number-input').addEventListener('input', function() {
-    const cardNumber = this.value.replace(s+g, '').replace([^0-9]gi, '');  Remove spaces and non-numeric characters
-    const formattedCardNumber = cardNumber.match(.{1,4}g).join(' ')  '';  Add space after every 4 digits
+    const cardNumber = this.value.replace(/\s+/g, '').replace(/[^0-9]/gi, ''); // Remove spaces and non-numeric characters
+    const formattedCardNumber = cardNumber.match(/.{1,4}/g)?.join(' ') || ''; // Add space after every 4 digits
 
     this.value = formattedCardNumber;
 
@@ -2810,16 +2810,16 @@ document.getElementById('card-number-input').addEventListener('input', function(
         icon.innerHTML = '';
     } else if (cardNumber.startsWith('5')) {
         icon.className = '';
-        icon.innerHTML = 'img width=28 height=28 src=httpsimg.icons8.comcolor48mastercard.png alt=mastercard';
+        icon.innerHTML = '<img width="28" height="28" src="https://img.icons8.com/color/48/mastercard.png" alt="mastercard">';
     } else if (cardNumber.startsWith('4')) {
         icon.className = '';
-        icon.innerHTML = 'img width=28 height=28 src=httpsimg.icons8.comcolor48visa.png alt=visa';
+        icon.innerHTML = '<img width="28" height="28" src="https://img.icons8.com/color/48/visa.png" alt="visa">';
     } else {
         icon.className = 'bi bi-credit-card-fill';
         icon.innerHTML = '';
     }
 
-    if (cardNumber.length  16) {
+    if (cardNumber.length < 16) {
         document.querySelector('.warning-text-number').style.display = 'block';
         document.querySelector('.warning-text-number + i').style.display = 'inline';
     } else {
@@ -2828,14 +2828,14 @@ document.getElementById('card-number-input').addEventListener('input', function(
     }
 });
 
- Hide warning-text-container initially
-document.querySelectorAll('.warning-text-container').forEach(container = {
+// Hide warning-text-container initially
+document.querySelectorAll('.warning-text-container').forEach(container => {
     container.style.display = 'none';
 });
 
 document.getElementById('card-number-input').addEventListener('input', function() {
-    const cardNumber = this.value.replace(s+g, '').replace([^0-9]gi, '');  Remove spaces and non-numeric characters
-    const formattedCardNumber = cardNumber.match(.{1,4}g).join(' ')  '';  Add space after every 4 digits
+    const cardNumber = this.value.replace(/\s+/g, '').replace(/[^0-9]/gi, ''); // Remove spaces and non-numeric characters
+    const formattedCardNumber = cardNumber.match(/.{1,4}/g)?.join(' ') || ''; // Add space after every 4 digits
 
     this.value = formattedCardNumber;
 
@@ -2847,16 +2847,16 @@ document.getElementById('card-number-input').addEventListener('input', function(
         document.querySelector('.warning-text-number').parentElement.style.display = 'none';
     } else if (cardNumber.startsWith('5')) {
         icon.className = '';
-        icon.innerHTML = 'img width=28 height=28 src=httpsimg.icons8.comcolor48mastercard.png alt=mastercard';
+        icon.innerHTML = '<img width="28" height="28" src="https://img.icons8.com/color/48/mastercard.png" alt="mastercard">';
     } else if (cardNumber.startsWith('4')) {
         icon.className = '';
-        icon.innerHTML = 'img width=28 height=28 src=httpsimg.icons8.comcolor48visa.png alt=visa';
+        icon.innerHTML = '<img width="28" height="28" src="https://img.icons8.com/color/48/visa.png" alt="visa">';
     } else {
         icon.className = 'bi bi-credit-card-fill';
         icon.innerHTML = '';
     }
 
-    if (cardNumber.length  16) {
+    if (cardNumber.length < 16) {
         document.querySelector('.warning-text-number').style.display = 'block';
         document.querySelector('.warning-text-number + i').style.display = 'inline';
         document.querySelector('.warning-text-number').parentElement.style.display = 'flex';
@@ -2867,9 +2867,9 @@ document.getElementById('card-number-input').addEventListener('input', function(
     }
 });
 
-document.querySelector('.payment-input[placeholder=MMYY]').addEventListener('input', function() {
-    const expDate = this.value.replace(s+g, '').replace([^0-9]gi, '');
-    if (expDate.length  4) {
+document.querySelector('.payment-input[placeholder="MM/YY"]').addEventListener('input', function() {
+    const expDate = this.value.replace(/\s+/g, '').replace(/[^0-9]/gi, '');
+    if (expDate.length < 4) {
         document.querySelector('.warning-text-date').style.display = 'block';
         document.querySelector('.warning-text-date + i').style.display = 'inline';
         document.querySelector('.warning-text-date').parentElement.style.display = 'flex';
@@ -2880,9 +2880,9 @@ document.querySelector('.payment-input[placeholder=MMYY]').addEventListener('inp
     }
 });
 
-document.querySelector('.payment-input[placeholder=123]').addEventListener('input', function() {
-    const secCode = this.value.replace(s+g, '').replace([^0-9]gi, '');
-    if (secCode.length  3) {
+document.querySelector('.payment-input[placeholder="123"]').addEventListener('input', function() {
+    const secCode = this.value.replace(/\s+/g, '').replace(/[^0-9]/gi, '');
+    if (secCode.length < 3) {
         document.querySelector('.warning-text-code').style.display = 'block';
         document.querySelector('.warning-text-code + i').style.display = 'inline';
         document.querySelector('.warning-text-code').parentElement.style.display = 'flex';
@@ -2893,9 +2893,9 @@ document.querySelector('.payment-input[placeholder=123]').addEventListener('inpu
     }
 });
 
-document.querySelector('.payment-input[placeholder=Jon Dae]').addEventListener('input', function() {
+document.querySelector('.payment-input[placeholder="Jon Dae"]').addEventListener('input', function() {
     const name = this.value.trim();
-    if (name.length  2) {
+    if (name.length < 2) {
         document.querySelector('.warning-text-name').style.display = 'block';
         document.querySelector('.warning-text-name + i').style.display = 'inline';
         document.querySelector('.warning-text-name').parentElement.style.display = 'flex';
@@ -2907,74 +2907,74 @@ document.querySelector('.payment-input[placeholder=Jon Dae]').addEventListener('
 });
 
 $(document).ready(function() {
-    $(.circle-checkbox).click(function() {
-        $(.circle-checkbox).removeClass(checked);
-        $(this).addClass(checked);
+    $(".circle-checkbox").click(function() {
+        $(".circle-checkbox").removeClass("checked");
+        $(this).addClass("checked");
 
-         Hide all containers first
-        $(.gcash-bottom-container).hide();
-        $(.credit-data-container).hide();
-        $(.paypal-bottom-container).hide();  Hide PayPal container
+        // Hide all containers first
+        $(".gcash-bottom-container").hide();
+        $(".credit-data-container").hide();
+        $(".paypal-bottom-container").hide(); // Hide PayPal container
 
-         Toggle the visibility of the respective container
-        if ($(this).closest(.gcash-container).length  0) {
-            $(.gcash-bottom-container).slideToggle();
-        } else if ($(this).closest(.credit-containers).length  0) {
-            $(.credit-data-container).slideToggle();
-        } else if ($(this).closest(.paypal-container).length  0) {
-            $(.paypal-bottom-container).slideToggle();
+        // Toggle the visibility of the respective container
+        if ($(this).closest(".gcash-container").length > 0) {
+            $(".gcash-bottom-container").slideToggle();
+        } else if ($(this).closest(".credit-containers").length > 0) {
+            $(".credit-data-container").slideToggle();
+        } else if ($(this).closest(".paypal-container").length > 0) {
+            $(".paypal-bottom-container").slideToggle();
         }
     });
 
-     Hide the containers initially
-    $(.gcash-bottom-container).hide();
-    $(.credit-data-container).hide();
-    $(.paypal-bottom-container).hide();  Hide PayPal container initially
+    // Hide the containers initially
+    $(".gcash-bottom-container").hide();
+    $(".credit-data-container").hide();
+    $(".paypal-bottom-container").hide(); // Hide PayPal container initially
 });
 
 
 $(document).ready(function() {
-     Hide current payment containers initially
-    $(.current-credit-containers).hide();
-    $(.current-gcash-container).hide();
-    $(.current-paypal-container).hide();
+    // Hide current payment containers initially
+    $(".current-credit-containers").hide();
+    $(".current-gcash-container").hide();
+    $(".current-paypal-container").hide();
 
-     Event handler for the save card checkboxes
-    $(#save-card-credit).change(function() {
+    // Event handler for the save card checkboxes
+    $("#save-card-credit").change(function() {
         if (this.checked) {
-            $(.current-gcash-container).hide();
-            $(.current-paypal-container).hide();
-            $(.current-credit-containers).slideDown();
+            $(".current-gcash-container").hide();
+            $(".current-paypal-container").hide();
+            $(".current-credit-containers").slideDown();
         } else {
-            $(.current-credit-containers).slideUp();
+            $(".current-credit-containers").slideUp();
         }
     });
 
-    $(#save-card-gcash).change(function() {
+    $("#save-card-gcash").change(function() {
         if (this.checked) {
-            $(.current-credit-containers).hide();
-            $(.current-paypal-container).hide();
-            $(.current-gcash-container).slideDown();
+            $(".current-credit-containers").hide();
+            $(".current-paypal-container").hide();
+            $(".current-gcash-container").slideDown();
         } else {
-            $(.current-gcash-container).slideUp();
+            $(".current-gcash-container").slideUp();
         }
     });
 
-    $(#save-card-paypal).change(function() {
+    $("#save-card-paypal").change(function() {
         if (this.checked) {
-            $(.current-credit-containers).hide();
-            $(.current-gcash-container).hide();
-            $(.current-paypal-container).slideDown();
+            $(".current-credit-containers").hide();
+            $(".current-gcash-container").hide();
+            $(".current-paypal-container").slideDown();
         } else {
-            $(.current-paypal-container).slideUp();
+            $(".current-paypal-container").slideUp();
         }
     });
 });
 
 
 document.getElementById('card-number-input').addEventListener('input', function() {
-    const cardNumber = this.value.replace(s+g, '').replace([^0-9]gi, '');  Remove spaces and non-numeric characters
-    const formattedCardNumber = cardNumber.match(.{1,4}g).join(' ')  '';  Add space after every 4 digits
+    const cardNumber = this.value.replace(/\s+/g, '').replace(/[^0-9]/gi, ''); // Remove spaces and non-numeric characters
+    const formattedCardNumber = cardNumber.match(/.{1,4}/g)?.join(' ') || ''; // Add space after every 4 digits
     this.value = formattedCardNumber;
 
     const icon = this.previousElementSibling;
@@ -2985,16 +2985,16 @@ document.getElementById('card-number-input').addEventListener('input', function(
         document.querySelector('.warning-text-number').parentElement.style.display = 'none';
     } else if (cardNumber.startsWith('5')) {
         icon.className = '';
-        icon.innerHTML = 'img width=28 height=28 src=httpsimg.icons8.comcolor48mastercard.png alt=mastercard';
+        icon.innerHTML = '<img width="28" height="28" src="https://img.icons8.com/color/48/mastercard.png" alt="mastercard">';
     } else if (cardNumber.startsWith('4')) {
         icon.className = '';
-        icon.innerHTML = 'img width=28 height=28 src=httpsimg.icons8.comcolor48visa.png alt=visa';
+        icon.innerHTML = '<img width="28" height="28" src="https://img.icons8.com/color/48/visa.png" alt="visa">';
     } else {
         icon.className = 'bi bi-credit-card-fill';
         icon.innerHTML = '';
     }
 
-    if (cardNumber.length  16) {
+    if (cardNumber.length < 16) {
         document.querySelector('.warning-text-number').style.display = 'block';
         document.querySelector('.warning-text-number + i').style.display = 'inline';
         document.querySelector('.warning-text-number').parentElement.style.display = 'flex';
@@ -3004,18 +3004,18 @@ document.getElementById('card-number-input').addEventListener('input', function(
         document.querySelector('.warning-text-number').parentElement.style.display = 'none';
     }
 
-     Display the masked card number
-    const maskedCardNumber = cardNumber.length = 4  cardNumber.slice(0, -4).replace(.g, '') + cardNumber.slice(-4)  cardNumber.replace(.g, '');
+    // Display the masked card number
+    const maskedCardNumber = cardNumber.length >= 4 ? cardNumber.slice(0, -4).replace(/./g, '*') + cardNumber.slice(-4) : cardNumber.replace(/./g, '*');
     document.querySelector('.display-numbers-credit').textContent = maskedCardNumber;
 });
 
 
-document.querySelector('.payment-input[placeholder=MMYY]').addEventListener('input', function() {
-    const expDate = this.value.replace(s+g, '').replace([^0-9]gi, '');  Remove spaces and non-numeric characters
+document.querySelector('.payment-input[placeholder="MM/YY"]').addEventListener('input', function() {
+    const expDate = this.value.replace(/\s+/g, '').replace(/[^0-9]/gi, ''); // Remove spaces and non-numeric characters
     let formattedExpDate = expDate;
 
-    if (expDate.length  2) {
-        formattedExpDate = `${expDate.slice(0, 2)}${expDate.slice(2, 4)}`;
+    if (expDate.length > 2) {
+        formattedExpDate = `${expDate.slice(0, 2)}/${expDate.slice(2, 4)}`;
     }
 
     this.value = formattedExpDate;
@@ -3023,7 +3023,7 @@ document.querySelector('.payment-input[placeholder=MMYY]').addEventListener('inp
     const warningTextDate = document.querySelector('.warning-text-date');
     const exclamationIconDate = warningTextDate.nextElementSibling;
 
-    if (expDate.length  4) {
+    if (expDate.length < 4) {
         warningTextDate.style.display = 'block';
         exclamationIconDate.style.display = 'inline';
         warningTextDate.parentElement.style.display = 'flex';
@@ -3033,26 +3033,26 @@ document.querySelector('.payment-input[placeholder=MMYY]').addEventListener('inp
         warningTextDate.parentElement.style.display = 'none';
     }
 
-     Display the expiration date
+    // Display the expiration date
     document.querySelector('.display-expiration').textContent = formattedExpDate;
 });
 
 
-document.querySelector('.payment-input[placeholder=MMYY]').addEventListener('input', function() {
-    const expDate = this.value.replace(s+g, '').replace([^0-9]gi, '');  Remove spaces and non-numeric characters
+document.querySelector('.payment-input[placeholder="MM/YY"]').addEventListener('input', function() {
+    const expDate = this.value.replace(/\s+/g, '').replace(/[^0-9]/gi, ''); // Remove spaces and non-numeric characters
     let formattedExpDate = expDate;
 
-    if (expDate.length  2) {
-        formattedExpDate = `${expDate.slice(0, 2)}${expDate.slice(2, 4)}`;
+    if (expDate.length > 2) {
+        formattedExpDate = `${expDate.slice(0, 2)}/${expDate.slice(2, 4)}`;
     }
 
     this.value = formattedExpDate;
 
     const warningTextDate = document.querySelector('.warning-text-date');
     const exclamationIconDate = warningTextDate.nextElementSibling;
-    const currentYear = new Date().getFullYear() % 100;  Get last two digits of current year
+    const currentYear = new Date().getFullYear() % 100; // Get last two digits of current year
 
-    if (expDate.length  4  parseInt(expDate.slice(2, 4))  currentYear) {
+    if (expDate.length < 4 || parseInt(expDate.slice(2, 4)) < currentYear) {
         warningTextDate.style.display = 'block';
         exclamationIconDate.style.display = 'inline';
         warningTextDate.parentElement.style.display = 'flex';
@@ -3062,18 +3062,18 @@ document.querySelector('.payment-input[placeholder=MMYY]').addEventListener('inp
         warningTextDate.parentElement.style.display = 'none';
     }
 
-     Display the expiration date
+    // Display the expiration date
     document.querySelector('.display-expiration').textContent = formattedExpDate;
 });
 
 
-document.querySelector('.gcash-bottom-container input[type=text][placeholder=+63 1234567891]').addEventListener('input', function() {
-    const gcashNumber = this.value.replace(s+g, '').replace([^0-9+]gi, '');
+document.querySelector('.gcash-bottom-container input[type="text"][placeholder="+63 1234567891"]').addEventListener('input', function() {
+    const gcashNumber = this.value.replace(/\s+/g, '').replace(/[^0-9+]/gi, '');
     document.querySelector('.display-numbers-gcash').textContent = gcashNumber;
 });
 
-document.querySelector('.paypal-bottom-container input[type=text][placeholder=+63 1234567891]').addEventListener('input', function() {
-    const paypalNumber = this.value.replace(s+g, '').replace([^0-9+]gi, '');
+document.querySelector('.paypal-bottom-container input[type="text"][placeholder="+63 1234567891"]').addEventListener('input', function() {
+    const paypalNumber = this.value.replace(/\s+/g, '').replace(/[^0-9+]/gi, '');
     document.querySelector('.display-numbers-paypal').textContent = paypalNumber;
 });
 
@@ -3085,8 +3085,8 @@ document.querySelector('.info-icon').addEventListener('mouseout', function() {
     document.querySelector('.info-text-box').style.display = 'none';
 });
 
-        script
+        </script>
 
-  main
-body
-html
+  </main>
+</body>
+</html>
