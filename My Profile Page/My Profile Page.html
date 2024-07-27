@@ -1,0 +1,2476 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Profile</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<style>
+
+        /* Header styles */
+        header {
+            /* background-image: url(header.png);   logicdigger css remove this
+            height: 100vh; /* Make the image responsive logicdigger css remove this */
+            width: 100%; 
+            object-fit: cover; /* Ensure the image covers the entire header */
+            filter: brightness(0.);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 99;
+        }
+
+        /***logicdigger css***/
+        .listing-title {
+    width: 100%;
+    max-width: 85%;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.heor-content {
+    width: 100%;
+    max-width: 1270px;
+    margin: 0 auto;
+    padding: 12px 25px;
+}
+
+  /***logicdigger css ***/
+        .navbar-toggler, .navbar-close {
+            display: none;
+            background-color: transparent;
+            border: none;
+            font-size: 35px;
+            cursor: pointer;
+        }
+        .navbar-nav {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            flex: 1;
+            justify-content: space-between;
+        }
+        .navbar-nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #3c5823;
+    font-weight: 600;
+}
+        .navbar-nav .icons a {
+            margin: 0 5px;
+        }
+        .navbar-collapse {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            flex: 1;
+        }
+
+        @media only screen and (min-width: 1024px) and (max-width: 1350px)  {
+          .image-item {
+            margin-bottom: 20px !important;
+          }
+          .navbar-nav .nav-link:nth-child(6) {
+            margin: 0 !important;
+          }
+          .rectangle-container{
+            display: block !important;
+            text-align: center;
+          }
+          .rectangle {
+    width: 25% !important;
+    display:inline-block !important;
+  }
+  .rectangle li img {
+    height: 10%;
+    width: 10% !important;
+    padding-right: 3%;
+}
+  .rectangle img {
+    width: 100% !important;
+  }
+        }
+        @media only screen and (min-width: 768px) and (max-width: 1024px)  {
+        .rectangle-container  .rectangle img {
+    width: 310px !important;
+}
+.sell-us-content{
+  display: block !important;
+  margin-bottom: 20px;
+}
+.rectangle-container .rectangle {
+    width: 300px !important;
+}
+.rectangle-container {
+    flex-wrap: wrap;
+}
+.rectangle-container .rectangle li img {
+    width: 10% !important;
+}
+footer {
+    height: unset !important;
+}
+.footer-columns {
+    display: block !important;
+}
+main .listing-title .title{
+  text-align: center !important;
+}
+  }
+  @media (max-width: 400px) { 
+  .search-container input[type=text] {
+    padding: 10px;
+    width: 200px !important;
+}
+.rectangle {
+        max-width: 80% !important;
+        margin: 0 auto !important;
+        margin-bottom: 20px !important;
+    }
+    .rectangle img {
+    width: 100% !important;
+    max-width: 350px;
+}
+.rectangle li img {
+    height: 10%;
+    width: 10% !important;
+    padding-right: 3%;
+}
+  }
+        @media (max-width: 1024px) {
+            .navbar-nav {
+               
+                flex-direction: column;
+                background-color: #f8f9fa;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                padding: 10px 0;
+            }
+            .navbar-collapse.show {
+  display: block !important;
+}
+.navbar-collapse {
+    display: none;
+}
+.navbar .container {
+    display: block;
+}
+.image-item {
+    margin-bottom: 20px !important;
+}
+            .navbar-nav .nav-link:nth-child(6){
+              margin: 0 !important;
+            }
+            .navbar-nav a {
+              padding: 10px 15px;
+          }
+            .navbar-nav.show {
+                display: flex;
+            }
+            .navbar-toggler {
+                display: block;
+            }
+            .navbar-close {
+                display: block;
+                align-self: flex-end;
+                margin: 10px 20px;
+                position: absolute;
+            }
+
+            span.navbar-toggler-icon {
+    float: right;
+    margin-right: 20px;
+}
+.navbar {
+    margin-top: 20px !important;
+}
+.navbar img {
+    margin-left: 20px;
+}
+        }
+
+.listing-title .title {
+    text-align: left !important;
+}
+body {
+    margin: 0;
+    padding: 0;
+}   
+.navbar .container {
+    width: 100%;
+    max-width: 1270px;
+    margin: auto;
+} 
+.heor-content {
+    width: 100%;
+    max-width: 1270px;
+    margin: 0 auto;
+}
+
+.hero-iner {
+    display: flex;
+    align-items: center;
+    height: 20vh;
+    background-size: cover;
+    background-position: bottom center;
+}
+
+.hero-section {
+    position: relative;
+}
+
+
+  /***logicdigger css end ***/
+
+    body  {
+      font-family: "Inter", sans-serif;
+        font-weight: 450;
+        font-size: 14px;
+        color: rgb(79, 79, 79);
+        width: 100%; /* Make the image responsive */
+        height: 100%; /* Make the image responsive */
+    } 
+
+.inter-font {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+    body {
+    height: 3400px;
+    }
+    .mochiy-pop-one-regular {
+  font-family: "Mochiy Pop One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+    .navbar-nav .nav-link:nth-child(6) {
+        margin-right: 280px; /*Adjust logo*/
+    }
+    .navbar-nav .nav-link:nth-child(1) {
+        margin-right: px;
+    }
+    .signup-button {
+      color: rgba(255, 255, 255, 0.952) !important;
+      background-color: #000000ce; /* Change background color to a prominent color */
+      border-radius: 20px; /* Add rounded corners */
+      padding: 10px 20px; /* Add padding to increase button size */
+      transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+    }
+    .signup-button:hover {
+background-color: #ff4632c8;
+    }
+    .navbar {
+margin-top: 38px; /* Adjust the value to move the navbar down further */
+}
+    .main-title {
+      margin-top: 30px;
+      font-size: 48px;
+      font-weight: bolder;
+      font-family: "Mochiy Pop One", sans-serif;
+      color: black;
+    }
+    .h4-title {
+      margin-top: -20px;
+      font-size: 23px;
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+    }
+    .search-container {
+      margin-top: -0px;
+    }
+    .search-container input[type=text] {
+padding: 10px;
+width: 268px;
+border: 1px solid #ccc;
+border-radius: 7.5px;
+outline: none;
+padding-top: 30px;
+background-color: rgb(252, 252, 252);
+font-family: Arial;
+font-size: 15px;
+font-weight: 500;
+text-align: center; /* Center the text vertically */
+justify-content: center; /* Center the text horizontally */
+padding: 19px;
+}
+.search-container input[type=text]::placeholder {
+    color: #c5c5c5; /* Light gray color */
+    display: flex;
+    padding: 50px;
+    font-weight: 600;
+}
+    .submit-container {
+      margin-top: -57px;
+      margin-left: 305px;
+      padding-left: 10px;
+    }
+    .submit-container button[type=submit] {
+      width: 149.33px;
+      border: 1px solid #ff4632c8;
+      background-color: #ff4632c8;
+      border-radius: 7.5px;
+      outline: none;
+      padding-top: 38px;
+      font-size: 15px;
+      font-weight: 600;
+      color: whitesmoke;
+      display: flex;
+      justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    padding: 19px;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+    }
+    .submit-container button[type=submit]:hover {
+    background-color: #ff4632e6; /* Darker color when hovered */
+    }
+    .bi-search {
+      position: absolute;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      padding: 19px;
+    }
+    .navbar-brand {
+      margin-right: 0px;
+      position: fixed;
+      height: auto;
+    }
+    .container { 
+    display:flex; /* Use flexbox */
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    }
+
+    
+    .bi-heart {
+      font-size: 20px;
+      font-weight: 900;
+      padding-right: 5px;
+    }
+    .bi-cart3 {
+      font-size: 20px;
+      font-weight: 900px;
+      padding-right: 10px;
+    }
+   
+        main {
+        /* Can use flex here */
+  height: 100vh; /* Set main height to full viewport height */
+}
+
+.heor-content {
+    padding-top: 20px; /* Adjust padding as needed to ensure breadcrumb is below the navbar */
+    padding-left: 15px; /* Adjust padding as needed */
+
+}
+
+.breadcrumb-section {
+    max-width: 1270px; /* Ensure container matches navbar width */
+    margin: 0 auto; /* Center the container */
+    padding-left: 0px; /* Align with other sections if necessary */
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.breadcrumb-container {
+    display:flex; /* Use flexbox */
+    justify-content: flex-start; /* Center the text horizontally */
+    align-items: flex-start; /* Center the text vertically */
+}
+
+.breadcrumb {
+    background: none;
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    display: flex; /* Make the breadcrumb horizontal */
+    list-style: none; /* Remove default list styles */
+}
+
+.breadcrumb-item {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: "/";
+    margin: 0 5px; /* Space between the items */
+    color: #6c757d9d; /* Color for the slash */
+}
+
+.breadcrumb a {
+    color: #6c757d9d;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb .breadcrumb-item.active {
+    color: #0f0f0f;
+    font-weight: bold;
+}
+
+/* Main Content Section */
+.main-content-section {
+    display: flex;
+    align-items: flex-start;
+    max-width: 1270px; /* Ensure container matches navbar width */
+    margin: 0 auto; /* Center the container */
+    padding-left: 0px; /* Align with other sections if necessary */
+    margin-top: 0px;
+}
+
+.main-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start; /* Ensure the container takes full width */
+    margin-right: 30px;
+}
+
+.image-gallery {
+    display: flex;
+    flex-direction: row; /* Change to column to stack thumbnails and main image vertically */
+    align-items: flex-start;
+    margin-right: 20px; /* Space between image gallery and pig details */
+}
+
+.main-image img {
+    transition: opacity 0.3s ease;
+}
+
+.thumbnail-images img:hover {
+    /*cursor: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"%3E%3Cpath d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.415l-3.85-3.85a1.007 1.007 0 0 0-.115-.098zm-5.442.656a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11z"/%3E%3C/svg%3E'), auto; */
+    cursor: pointer;
+}
+
+.thumbnail-images {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between thumbnails */
+    margin-right: 20px; /* Space between thumbnails and main image */
+}
+
+.thumbnail-images img {
+    width: 108px; /* Adjust the size as needed */
+    height: 106.5px;
+    border-radius: 0px;
+}
+
+.main-image img {
+    width: 450px; /* Adjust the size as needed */
+    /* height: auto; */
+    height: 456px; /*414px*/
+    border-radius: 0px;
+}
+
+.pig-details {
+  display: flex;
+    max-width: 1270px; /* Adjust the width as needed */
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 30px;
+}
+
+.location img {
+  height: 4%;
+  width: 4%;
+  align-items: center;
+  justify-content: center;
+  padding-right: 5px;
+}
+
+.save-icon {
+  display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 470px;
+    top: 0;
+    right: 0;
+    font-size: 14px; /* Font size for "Save" text */
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    color: black;
+}
+
+.save-icon i.bi-heart-fill {
+    margin-right: 5px; /* Space between icon and text */
+    color: #ccc;
+}
+
+.save-icon i.bi-heart-fill.red {
+            color: red; /* Set the heart icon color to red */
+        }
+
+.weight img {
+  height: 6%;
+  width: 6%;
+  align-items: center;
+  justify-content: center;
+}
+
+.price-icon img {
+  height: 6%;
+  width: 6%;
+  align-items: center;
+  justify-content: center;
+  padding-right: 5px;
+}
+
+.price-icon {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.user-profile {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.user-profile img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 10px; /* Space between the image and the text */
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column; /* Stack name and rating vertically */
+    display: flex;
+    align-items: left;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.user-profile h4 {
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    color: rgb(79, 79, 79);
+    margin: 0; /* Remove margin */
+}
+
+.user-rating {
+    display: flex;
+    align-items: center;
+    margin-top: 5px; /* Add margin to separate from the name */
+}
+
+.user-rating img {
+    width: 20px; /* Adjust the size of the star icon */
+    height: 20px;
+    margin-right: 5px; /* Space between the star and the rating text */
+}
+
+.user-rating span {
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+}
+
+.location {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.pig-details ul {
+  list-style-type: none;
+  justify-content: left;
+  padding: 0;
+  margin: 0px;
+}
+
+.pig-details ul li {
+  align-items: center;
+  justify-content: left;
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.pig-details h3 {
+    font-family: "Mochiy Pop One", sans-serif;
+    font-size: 30px;
+    color: black;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.pig-details .description {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: rgb(79, 79, 79);
+    line-height: 1.7;
+    font-weight: 420;
+    height: 96px;
+    width: 509px;
+}
+
+.read-more-link {
+  color: #6c757d9d;
+  font-family: "Inter", sans-serif;
+  margin-left: 10px;
+}
+
+.read-more-link a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.read-more-link a:hover {
+  text-decoration: underline;
+  color: #5EA91E; /* Slightly darker color for hover */
+}
+
+.button-container {
+    display: flex;
+    gap: 11px; /* Horizontal gap between buttons */
+    margin-top: 20px; /* Add some margin above the buttons */
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px; /* Vertical padding: 10, Horizontal padding: 16 */
+    border: none;
+    border-radius: 43px;
+    color: #FFFFFF;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    width: 159px;
+    height: 44px;
+}
+
+.button i {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+.add-to-cart {
+    background-color: #182110; /* Button color */
+}
+
+.contact-seller {
+    background-color: #5EA91E; /* Button color */
+}
+
+.contact-seller:hover {
+    background-color: #4e921a; /* Slightly darker green on hover */
+}
+
+.nav-links-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -20px;
+    padding: 10px;
+    padding-bottom: 50px;
+    align-items: center;
+    max-width: 1270px; /* Ensure container matches navbar width */
+    margin: 0 auto; /* Center the container */
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+    padding: 0;
+    text-align: left;
+}
+
+.nav-links a {
+    text-decoration: none;
+    /* color: #707070; */
+    color: #AEAEAE;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 460;
+    padding: 0;
+    transition: color 0.3s ease, font-weight 0.3s ease, text-decoration 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #5EA91E;
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 10px; /* Adjust the offset value as needed */
+}
+
+.nav-links a:hover {
+    color: #5EA91E;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.nav-hr {
+    width: 100%;
+    border: none;
+    border-top: 1px solid #000000; /* Adjust the color and thickness as needed */
+    margin-top: 60px; /* Adjust the spacing above the hr */
+}
+
+
+
+
+
+.product-image img {
+  width: 376px; /* Image width */
+  height: 334px; /* Image height */
+  object-fit: cover;
+  border-radius: 15px; /* Optional: Add some border-radius if needed */
+  border: 1.5px solid;
+  border-color: #F3E7E3;
+}
+
+.product-details {
+  flex: 1; /* Take the remaining space */
+}
+
+.product-title {
+  font-size: 26px;
+  font-family: "Mochiy Pop One", sans-serif;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+
+
+
+
+.adjusted-br {
+  margin-bottom: -5px; /* Adjust this value to control the space */
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between buttons */
+}
+
+.button {
+    padding: 0px 0px;
+    border-radius: 43px;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+.contact-seller {
+    background-color: #5EA91E;
+    width: 159px;
+    height: 44px;
+}
+
+.contact-seller:hover {
+  background-color: #4e921ae2;
+}
+
+.icon-only {
+    background-color: #5EA91E;
+    width: 59px;
+    height: 44px;
+}
+
+.icon-only:hover {
+    background-color: #4e921ae2; /* Slightly darker green on hover */
+}
+
+.icon-only img {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-right: 0px;
+  height: 20px;
+  width: 20px;
+}
+
+.icon-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px; /* Size of the circle */
+    height: 25px; /* Size of the circle */
+    border: 1px solid #ffffff; /* Border color */
+    border-radius: 50%; /* Makes the shape a circle */
+    color: #ffffff; /* Color of the icon */
+}
+
+
+
+.star-icon {
+    width: 24px; /* Adjust the size as needed */
+    height: 24px; /* Adjust the size as needed */
+    margin-right: 10px; /* Space between icon and text */
+    margin-bottom: 5px;
+}
+
+
+
+.user-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.user-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.user-info-details {
+    display: flex;
+    align-items: left;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column; /* Stack name and rating vertically */
+}
+
+.username {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 3px;
+}
+
+.stars {
+    display: flex;
+    gap: 3px;
+}
+
+
+.bi.bi-star-fill:last-of-type {
+    color: #FFCA28; /* Light grey color for the last star */
+}
+
+
+
+.content {
+  text-align: center; /* Center text horizontally */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  font-size: 20px;
+  color: black;
+  font-weight: bolder;
+  font-family: Arial;
+}
+
+.text-box {
+  width: 225px; /* Adjust width of the text box 195px */
+}
+
+.text-box p {
+  font-size: 14px;
+  margin: 0;
+  text-align: left;
+  line-height: 1.6; /* Adjust this value for desired line spacing */
+}
+
+.introduction {
+  height: 100vh; /* Make the image responsive */
+            width: 100vw; /* Make the image responsive */
+            object-fit: cover; /* Ensure the image covers the entire header */
+            filter: brightness(0.);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+}
+.listings {
+  height: 100vh; /* Make the image responsive */
+            width: 100vw; /* Make the image responsive */
+            object-fit: cover; /* Ensure the image covers the entire header */
+            filter: brightness(0.);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+}
+
+
+.nav-links-section h2 {
+  text-align: left; /* Center text horizontally */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  max-width: 1270px;
+  font-size: 36px;
+  color: #333;
+  margin: 0 auto;
+  font-weight: bold;
+  font-family: "Inter", sans-serif;
+ /*  margin-top: 20vh; Adjust as needed to position content below header remove from logicdiger */
+ margin-top: -25px;
+  margin-bottom: 20px;
+  /* Add padding as well */
+}
+
+
+
+    .user-profile-rectangle {
+    background-color: #EFF2F4;
+    height: 440px;
+    width: 390px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 20px;
+    border-radius: 17px;
+}
+
+.user-image {
+    width: 186px;
+    height: 186px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-right: 0px;
+    margin-top: 20px;
+}
+
+.user-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    margin-top: 10px;
+    font-weight: 700;
+    font-family: "Inter", sans-serif;
+    color: #000;
+}
+
+.user-rating {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.user-rating i {
+    color: #FFCA28; /* Gold color for star */
+    margin-right: 5px;
+}
+
+.user-rating rate {
+  font-size: 28px;
+}
+
+.user-membership {
+    color: #FF3D00;
+    font-size: 22px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    margin-right: 5px;
+    
+
+}.membership-icon {
+  display: flex;
+  flex-direction: row;
+}
+
+.user-sold {
+    color: #2E68BD;
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.user-bought {
+    color: #2C8F67;
+    font-size: 20px;
+    margin-top: 0px;
+    font-weight: 600;
+}
+
+.credit-input-container {
+  width: 100%;
+    max-width: 643px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    justify-content: flex-start;
+}
+
+
+.listing-input-container {
+    width: 100%;
+    max-width: 1270px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    margin-left: 0px;
+}
+
+.credit-display-box {
+  width: 369px;
+    padding: 10px 20px;
+    height: 35px;
+    border: 2px solid #f5f5f5;
+    border-radius: 5px;
+    background-color: #f5f5f5; /* Slightly grey background */
+    font-size: 14px;
+    color: #333;
+    font-family: "Inter", sans-serif;
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+    align-items: flex-end;
+}
+
+.listing-display-box {
+    width: 600px;
+    padding: 10px 20px;
+    height: 35px;
+    border: 2px solid #f5f5f5;
+    border-radius: 5px;
+    background-color: #f5f5f5; /* Slightly grey background */
+    font-size: 14px;
+    color: #333;
+    font-family: "Inter", sans-serif;
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+.placeholder-text {
+  display: flex;
+  color: #999; /* Placeholder text color */
+  align-items: center;
+  margin-left: 0px;
+  text-indent: 20px;
+  border-radius: 10px;
+  border: 1.8px solid #d7d7d7; 
+}
+
+.small-placeholder-text {
+  display: flex;
+  color: #999; /* Placeholder text color */
+  align-items: center;
+  margin-left: 0px;
+  text-indent: 20px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.guiding-text {
+  display: flex;
+  height: 40px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #000;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 0px;
+}
+
+.next-button-container {
+width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1270px;
+    margin-top: 0px;
+}
+
+.next-button {
+  width: 100px;
+    height: 40px;
+    border: 1px solid #5EA91E;
+    background-color: #5EA91E;
+    border-radius: 43px;
+    outline: none;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    padding: 24px;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+    cursor: pointer;
+}
+
+.next-button:hover {
+  background-color: #4e921a; /* Darker color when hovered */
+}
+
+.edit-button {
+  width: 100px;
+    height: 40px;
+    border: 1px solid #292C49;
+    background-color: #292C49;
+    border-radius: 43px;
+    outline: none;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    padding: 24px;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+    cursor: pointer;
+}
+
+.edit-button:hover {
+  background-color: #191b2c; /* Darker color when hovered */
+}
+
+
+.nav-button-container {
+  display: flex;
+  flex-direction: row;
+  height: 55px;
+  gap: 15px;
+  margin-right: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-number-container {
+    position: relative;
+width: 412px;
+    border-bottom: 2.5px solid #292C49;
+    border-radius: 10px 10px 10px 10px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+.bi.bi-credit-card-fill {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    font-size: 16px; /* Adjust icon size as needed */
+    color: #999;
+    align-items: center;
+    margin-left: 0px;
+}
+
+.my-listing-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 1270px; /* Ensure container matches navbar width */
+    margin: 0 auto; /* Center the container */
+    padding-left: 0px; /* Align with other sections if necessary */
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+
+.scroll-bar-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.scrollable-rectangles {
+  height: 480px; /* Set a fixed height to enable scrolling */
+  overflow-y: scroll;
+  padding-right: 20px;
+}
+
+/* Custom scrollbar styles */
+.scrollable-rectangles::-webkit-scrollbar {
+  width: 8px; /* Width of the entire scrollbar */
+}
+
+.scrollable-rectangles::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the scrollbar track */
+  border-radius: 10px; /* Rounded corners for the track */
+}
+
+.scrollable-rectangles::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+/* Add hover effect for the scrollbar thumb */
+.scrollable-rectangles::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darker color when hovered */
+}
+
+.rectangle-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Add space between the rectangles */
+}
+
+.rectangle {
+    display: flex;
+    align-items: center;
+    width: 675px;
+    height: 142px;
+    border: 1px solid #E0E0E0;
+    border-radius: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.rectangle-image {
+    width: 146px;
+    height: 122px;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.details-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 270px;
+}
+
+.icon-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.icon-title-container i {
+    margin-right: 5px;
+    font-weight: 600;
+}
+
+.icon-title-container .title {
+    flex-grow: 1;
+    text-align: right;
+    font-weight: 700;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    color: #000;
+}
+
+.views {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;
+}
+
+.weight-container,
+.price-container {
+    display: flex;
+    align-items: center;
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    height: 100%; /* Ensure full height of parent */
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.li {
+    display: flex;
+    align-items: center;
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    height: 100%; /* Ensure full height of parent */
+}
+
+.weight-container li,
+.price-container li {
+    display: flex;
+    align-items: center;
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    height: 100%; /* Ensure full height of parent */
+    font-weight: 500;
+}
+
+.price-container li img,
+.weight-container li img {
+    /* Your CSS properties here */
+margin-right: 5px;
+}
+
+.bottom-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-top: 0px;
+    align-items: flex-end;
+    gap: 10px;
+    margin-top: 5px;
+    height: 100px;
+}
+
+.container-with-x {
+    position: relative;
+    height: 115px;
+}
+
+.container-with-x .bi-x {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 26px; /* Adjust the size of the X icon as needed */
+    cursor: pointer;
+    color: #000000a3;
+}
+
+.button-container-wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.small-edit-button {
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: #43B572;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.small-edit-button:hover {
+    background-color: #3da368;
+}
+
+.small-next-button {
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    color: #666666;
+    font-weight: 500;
+    font-size: 14px;
+    background-color: #E1E1E1;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.small-next-button:hover {
+    background-color: #d6d6d6;
+}
+
+.small-sold-button,
+.small-delete-button {
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    background-color: #FF5F4A;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.small-sold-button:hover,
+.small-delete-button:hover {
+    background-color: #e45643;
+}
+
+.upper-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-top: 0px;
+    align-items: flex-end;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.scroll-bar-graph-container {
+  display: flex;
+  flex-direction: row;
+  width: 1270px;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 1270px;
+  margin-bottom: 30px;
+}
+
+.listings-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #182110;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-family: "Inter", sans-serif;
+}
+
+.graph-container {
+  margin-left: 20px;
+}
+
+.graph-rectangle {
+  width: 400px;
+    height: 425px;
+    border: 1px solid #E0E0E0;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title-price-container {
+  display: flex;
+  width: 340px;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 80px;
+}
+
+.market-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.market-price {
+  display: flex;
+  align-items: center;
+}
+
+.price-background {
+  display: inline-flex;
+  background-color: #DDEDCB;
+  padding: 7px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 18px;
+  align-items: center;
+}
+
+.price-label img {
+  margin-right: 5px;
+}
+
+.background-price img {
+  margin-right: 5px;
+}
+
+.graph-content {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%; /* Ensure it takes full width of the container */
+    height: 100%; /* Ensure it takes full height of the container */
+}
+
+.y-axis {
+  display: flex;
+  width: 400px;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.price-label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.38);
+}
+
+.x-axis-container {
+  display: flex;
+  width: 450px;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.horizontal-line {
+  width: 330px;
+  height: 1px;
+  background-color: #cacacaa3;
+  margin-left: 0px;
+  margin-right: 40px;
+}
+
+    /* Add this CSS for vertical lines */
+    .vertical-lines {
+  position: absolute;
+  top: 0;
+  left: 35px; /* Adjust to align with your y-axis */
+  height: 100%;
+  width: calc(100% - 60px); /* Adjust to match the graph width */
+  display: flex;
+  justify-content: space-between;
+}
+
+.vertical-line-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.vertical-lines span {
+  margin-top: 5px; /* Adjust to position the text below the line */
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.344);
+}
+
+
+.vertical-lines .line {
+  width: 1px;
+  height: 100%;
+  background-color: #cacacaa3;
+}
+
+.vertical-lines .mon { left: 0%; }
+.vertical-lines .tue { left: 16.6%; }
+.vertical-lines .wed { left: 33.3%; }
+.vertical-lines .thur { left: 50%; }
+.vertical-lines .fri { left: 66.6%; }
+.vertical-lines .sat { left: 83.3%; }
+.vertical-lines .sun { left: 100%; }
+
+.x-axis {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.344);
+}
+
+.graph-dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #ff4632c8;
+  border-radius: 50%;
+  z-index: 10; /* Ensure dots appear above lines */
+}
+
+.graph-line {
+  stroke: #7CB342;
+  stroke-width: 5;
+  fill: none;
+}
+
+.tooltip {
+        position: absolute;
+        padding: 5px;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        border-radius: 3px;
+        pointer-events: none;
+        display: none;
+        font-size: 12px;
+    }
+
+
+    footer {
+        background-color: #43662e; /* Dark green background color */
+        color: #ffffff;
+        text-align: center;
+        padding: 50px 0; /* Adjust padding to fit within 600px height */
+        height: 580px; /* Set height to 600px */
+        position: relative;
+    }
+
+    footer .footer-content {
+    padding: 0 50px; /* Add horizontal padding to match the sell-us-section */
+}
+
+    .footer-logo {
+        display: block;
+        margin: 0 auto;
+        height: auto;
+        width: 350px; /* Adjust width as necessary */
+        margin-bottom: 20px;
+    }
+
+    .footer-columns {
+        display: flex;
+        justify-content: space-around;
+        /* align-items: flex-start; /* Align items to the start to fit better within the height */
+        /* align-items: center; /*Change that perhaps?*/
+        margin-top: 5%;
+        height: calc(100% - 100px); /* Ensure columns take up the full height of the footer, accounting for padding */
+}
+
+    .footer-box {
+        max-width: 250px;
+        text-align: left;
+        font-size: 16px; /* Adjust font size to fit within the height */
+        display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    height: 100%; /* Ensure footer-box takes up the full height of the parent */
+    line-height: 1.8; /* Adjust this value for desired line spacing */
+    }
+
+    .footer-box h4 {
+        color: #ffffff;
+        margin-bottom: 15px;
+        font-size: 20px;
+    }
+
+    .footer-box p {
+        color: #d2d2d2;
+        margin: 5px 0;
+        line-height: 1.8; /* Adjust this value for desired line spacing */
+    }
+
+    .footer-nav,
+    .footer-bottom-nav {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-nav li,
+    .footer-bottom-nav li {
+        margin-bottom: 10px; /* Reduce margin to fit better */
+    }
+
+    .footer-nav a,
+    .footer-bottom-nav a {
+        color: #e1e1e1;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .footer-nav a:hover,
+    .footer-bottom-nav a:hover {
+        color: #ffffff;
+    }
+
+    .footer-box input[type=email] {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1.2px solid #e1e1e1;
+        color: #ffffff;
+        padding: 10px 0; /* Remove left padding to align placeholder */
+        width: 235px;
+        margin-top: 15px;
+        outline: none;
+        text-align: left; /* Align text to the left */
+        position: relative;
+}
+
+.email-container {
+    position: relative;
+    display: inline-block;
+}
+
+.email-container::before {
+  content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABdUlEQVR4nO3cPUoDYRRG4UEQV2NjZ6GSqAj+bEBsrWzcnI2L0NbeRgQridHGI8JIJEyKQMi9H/c8CxheOEwymRnSdZIkSZIkSZIkSZIkSZIkSVoxYBu4B+6AnVUfX0sCHph5B/aWPYZWCHj+F8Qo0YDruSB/Ufajt5UF3ALfc1EmwCh6W1ksjjKO3lYWRskHo+SDUZqKchi9rSyMkg9GaSrKUfS2shiO8mGUQEZJCM+UfBZE+QTOoreVhVHyMUpbUc6jt5WFUZqJ8gVcdBkAV8DrwOPRaqbASXSMzf5XrGa3WQ4ig2z1I5QhSB/lEnjpB1U2Df/IKvylPs/L3wjGaCOG97XWzRj5Y/xe6h9HbyuHxTF8pLtuxkgEz4z0MSZ+TOWK4VuM62aMNmKMo7eVgzHywBh5YIw8MEYTMUbR28rBGHkANwNnhn8cEPh2zGQghv93EhRkA3gzRiLAKfAEPAK70XskSZIkSZIkSZIkSZIkSZK6cD+4pa0FeKE3zwAAAABJRU5ErkJggg==');
+    position: absolute;
+    right: -15px; /* Adjust the position as needed */
+    bottom: 25px; /* Adjust the position as needed */
+    height: 15px; /* Adjust size as needed */
+    pointer-events: none; /* Ensure the icon does not interfere with input interactions */
+    color: white;
+    size: 1px;
+    transform: scale(0.3); /* Scale the image to 50% of its original size */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 25px; /* Space between the input field and social media icons */
+    gap: 10px;
+}
+
+.social-icon {
+    width: 30px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
+}
+
+.footer-box img {
+height: 35px;
+width: 35px;
+color: white;
+}
+
+    .footer-box input[type=email]::placeholder {
+        color: #b9b9b98b;
+        font-size: 16px;
+    }
+
+    hr {
+        border: 0;
+        height: 1.2px;
+        background-color: #e1e1e1;
+        margin: 80px 0;
+        margin: 120px auto 10px auto; /* Increase the top margin to move the hr line down */
+        width: 90%; /* Set the width to 1320px */
+    }
+
+    .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 12px; /* Adjust font size to fit within the height */
+        width: 90%;
+        margin: 0 auto; /* Center align the footer-bottom container */
+        color: #e1e1e1;
+        padding: 0 60px; /* Add padding to the sides */
+        padding-top: 10px; /* Add some padding at the top */
+    }
+
+    .footer-bottom p {
+        margin: 0px;
+        color: #e1e1e1;
+    }
+
+    .footer-bottom-nav {
+        display: flex;
+        gap: 20px; /* Adjust gap to fit within the height */ /*Use this on navbar as well.*/
+        color: #e1e1e1;
+    }
+
+
+  /***logicdigger css  for mobile***/
+
+
+@media only screen and (max-width: 768px) {
+    
+      footer {
+    height: unset !important;
+}
+.footer-columns {
+    display: unset !important;
+ 
+} 
+.feed-details {
+    padding: 10px !important;
+}
+.feed-section-content {
+    display: block !important;
+    width: 85%;
+}
+.rectangle {
+    margin: auto;
+    margin-bottom: 20px;
+}
+.rectangle-container {
+    display: block !important;
+}
+.listing-title .title , .feed-section-title h2, .sell-us-section-title h2{
+    text-align: center !important;
+    font-size: 25px;
+}
+.sell-us-title, .second-sell-us-title{
+  font-size: 20px;
+}
+.footer-logo {
+    width: 250px;
+    margin-bottom: 20px;
+}
+.feed-title{
+  font-size: 25px;
+}
+
+.heor-content {
+    padding: 30px;
+}
+
+
+.navbar-nav a {
+    text-decoration: none;
+    color: #000;
+    padding: 10px 20px;
+    text-align: center;
+    margin: auto;
+    font-weight: 500;
+}
+
+
+.sell-us-content {
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1200px;
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.sell-us-item {
+    display: block !important;
+}
+.footer-bottom {
+    display: block !important;
+     width: unset !important;
+}
+hr {
+    width: 100%;
+}
+.footer-bottom-nav {
+    display: block !important;
+    margin-top: 10px;
+}
+.main-title {
+    font-size: 25px;
+}
+
+.h4-title {
+    font-size: 18px;
+    padding-top: 15px;
+}
+
+.submit-container {
+    margin: unset;
+    padding: 0;
+}
+
+.search-container input[type=text] {
+    margin-bottom: 10px;
+}
+
+.hero-iner {
+    background-position: center !important;
+}
+
+}
+
+    div#navbarNavAltMarkup {
+    margin-left: 30px;
+}   
+
+  /***logicdigger css  for mobile end ***/
+</style>
+</head>
+<body>
+
+    <!-- Header -->
+  <header>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#"></a> <!-- Logo -->
+      <img src="farmifylogo.png" alt="Logo" height="50"> <!-- Adjust the height as needed -->
+            </a>
+        <span class="navbar-toggler-icon">   <button class="navbar-toggler" onclick="toggleNav()">
+          &#9776;
+      </button></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+    
+
+        <div class="navbar-nav">
+
+          <button class="navbar-close" onclick="toggleNav()">
+            &times;
+        </button>
+          <a class="nav-link disabled">Home</a>
+          <a class="nav-link disabled">Pigs for Sale</a>
+          <a class="nav-link disabled">Sell your Pig</a>
+          <a class="nav-link disabled">About us</a>
+          <a class="nav-link disabled">Contact us</a>
+          <i class="bi bi-heart"></i>
+          <i class="bi bi-cart3"></i>
+          <a class="nav-link disabled">Login</a>
+          <a class="nav-link signup-button">Sign up</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+</header>
+
+<div class="hero-section">
+   <div class="hero-iner" style="background-image: url();">
+    <div class="heor-content">
+    </div>
+      </div> <!--iner hero-->
+</div><!--hero end-->
+      <main>
+
+<!-- Nav-Links section -->
+<section class="nav-links-section">
+  <h2 class="title">My Profile</h2>
+  <div class="nav-links">
+      <a href="#My Listings">My Listings</a>
+      <a href="#Transaction history">Transaction history</a>
+      <a href="#Calculator">Calculator</a>
+  </div>
+</section>
+
+<!-- Main Content Section -->
+<section class="main-content-section">
+    <div class="main-container">
+          <div class="user-profile-rectangle">
+            <img src="Group 287.png" alt="User Image" class="user-image">
+            <h3 class="user-title">Darwin Rabago</h3>
+            <div class="user-rating">
+                <i class="bi bi-star-fill"></i>
+                <span class="rate">5.0</span>
+            </div>
+            <div class="membership-icon"><p class="user-membership">1 Year member</p><img src="icons8_guarantee_2 1.png" alt=""></div>
+            <p class="user-sold">Sold: 13 qty</p>
+            <p class="user-bought">Bought: 0 qty</p>
+        </div>
+        </div>
+        <div class="pig-details">
+          <div class="listing-input-container">
+            <p class="guiding-text">Full name</p>
+            <div class="listing-display-box placeholder-text">Darwin Rabago</div>
+          </div>
+          
+          <div class="listing-input-container">
+            <p class="guiding-text">Email</p>
+            <div class="listing-display-box placeholder-text">darwinrabago@gmail.com</div>
+          </div>
+          
+          <div class="listing-input-container">
+            <p class="guiding-text">Phone</p>
+            <div class="listing-display-box placeholder-text">916 17 974</div>
+          </div>
+
+                <div class="listing-input-container">
+                  <p class="guiding-text">Address</p>
+                  <div class="listing-display-box placeholder-text">Bon Bon / Biasong</div>
+                </div>
+
+                  <div class="credit-input-container">
+                    <div class="nav-button-container">
+                      <div class="next-button-container">
+                        <button type="submit" class="edit-button">Edit</button>
+                      </div>
+                        <div class="next-button-container">
+                          <button type="submit" class="next-button">Update</button>
+                        </div>
+                      </div>
+                    <div>
+                      <div class="card-number-container">
+                    <div class="credit-display-box small-placeholder-text">1234 5678 9123 4567</div><i class="bi bi-credit-card-fill"></i>
+                  </div>
+
+                  
+                </div>
+
+
+</section>
+
+
+<section class="my-listing-section">
+  <div class="title-container">
+  <div class="listings-title">My Listings</div>
+</div>
+<div class="scroll-bar-graph-container">
+  <div class="scroll-bar-container">
+    <div class="rectangle-column scrollable-rectangles">
+      
+      <div class="rectangle">
+        <img src="Rectangle 34.png" alt="Image" class="rectangle-image">
+        <div class="details-container">
+          <div class="icon-title-container">
+            <i class="bi bi-eye"></i>
+            <span class="views">27</span>
+            <span class="title">01 Pig for Sale in Cebu</span>
+          </div>
+          <div class="weight-container">
+            <li><img width="20" height="20" src="https://img.icons8.com/color/96/weight-kg.png" alt="weight-kg"/>Weight: 80kg</li>
+          </div>
+          <div class="price-container">
+            <li class="price"><img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>Price: 20,000</li>
+          </div>
+        </div>
+        <div class="container-with-x">
+          <i class="bi bi-x"></i>
+          <div class="bottom-button-container">
+            <button class="small-edit-button">Edit</button>
+            <button class="small-next-button">View</button>
+          </div>
+        </div>
+      </div>
+      <!-- Duplicate the rectangle block to add more rectangles -->
+      <div class="rectangle">
+        <img src="Rectangle 34.png" alt="Image" class="rectangle-image">
+        <div class="details-container">
+          <div class="icon-title-container">
+            <i class="bi bi-eye"></i>
+            <span class="views">27</span>
+            <span class="title">01 Pig for Sale in Cebu</span>
+          </div>
+          <div class="weight-container">
+            <li><img width="20" height="20" src="https://img.icons8.com/color/96/weight-kg.png" alt="weight-kg"/>Weight: 80kg</li>
+          </div>
+          <div class="price-container">
+            <li class="price"><img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>Price: 20,000</li>
+          </div>
+        </div>
+        <div class="container-with-x">
+          <i class="bi bi-x"></i>
+          <div class="bottom-button-container">
+            <button class="small-edit-button">Edit</button>
+            <button class="small-next-button">View</button>
+          </div>
+        </div>
+      </div>
+      <div class="rectangle">
+        <img src="Rectangle 34.png" alt="Image" class="rectangle-image">
+        <div class="details-container">
+          <div class="icon-title-container">
+            <i class="bi bi-eye"></i>
+            <span class="views">27</span>
+            <span class="title">01 Pig for Sale in Cebu</span>
+          </div>
+          <div class="weight-container">
+            <li><img width="20" height="20" src="https://img.icons8.com/color/96/weight-kg.png" alt="weight-kg"/>Weight: 80kg</li>
+          </div>
+          <div class="price-container">
+            <li class="price"><img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>Price: 20,000</li>
+          </div>
+        </div>
+        <div class="container-with-x">
+          <i class="bi bi-x"></i>
+          <div class="bottom-button-container">
+            <button class="small-edit-button">Edit</button>
+            <button class="small-next-button">View</button>
+          </div>
+        </div>
+      </div>
+      <!-- Add more rectangles if needed -->
+
+      <div class="rectangle">
+        <img src="Rectangle 34.png" alt="Image" class="rectangle-image">
+        <div class="details-container">
+          <div class="icon-title-container">
+            <i class="bi bi-eye"></i>
+            <span class="views">27</span>
+            <span class="title">01 Pig for Sale in Cebu</span>
+          </div>
+          <div class="weight-container">
+            <li><img width="20" height="20" src="https://img.icons8.com/color/96/weight-kg.png" alt="weight-kg"/>Weight: 80kg</li>
+          </div>
+          <div class="price-container">
+            <li class="price"><img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>Price: 20,000</li>
+          </div>
+        </div>
+        <div class="container-with-x">
+          <i class="bi bi-x"></i>
+          <div class="bottom-button-container">
+            <button class="small-edit-button">Edit</button>
+            <button class="small-next-button">View</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="rectangle">
+        <img src="Rectangle 34.png" alt="Image" class="rectangle-image">
+        <div class="details-container">
+          <div class="icon-title-container">
+            <i class="bi bi-eye"></i>
+            <span class="views">27</span>
+            <span class="title">01 Pig for Sale in Cebu</span>
+          </div>
+          <div class="weight-container">
+            <li><img width="20" height="20" src="https://img.icons8.com/color/96/weight-kg.png" alt="weight-kg"/>Weight: 80kg</li>
+          </div>
+          <div class="price-container">
+            <li class="price"><img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>Price: 20,000</li>
+          </div>
+        </div>
+        <div class="container-with-x">
+          <i class="bi bi-x"></i>
+          <div class="bottom-button-container">
+            <button class="small-edit-button">Edit</button>
+            <button class="small-next-button">View</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="rectangle">
+        <img src="Rectangle 34.png" alt="Image" class="rectangle-image">
+        <div class="details-container">
+          <div class="icon-title-container">
+            <i class="bi bi-eye"></i>
+            <span class="views">27</span>
+            <span class="title">01 Pig for Sale in Cebu</span>
+          </div>
+          <div class="weight-container">
+            <li><img width="20" height="20" src="https://img.icons8.com/color/96/weight-kg.png" alt="weight-kg"/>Weight: 80kg</li>
+          </div>
+          <div class="price-container">
+            <li class="price"><img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>Price: 20,000</li>
+          </div>
+        </div>
+        <div class="container-with-x">
+          <i class="bi bi-x"></i>
+          <div class="bottom-button-container">
+            <button class="small-edit-button">Edit</button>
+            <button class="small-next-button">View</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+    
+  <div id="chart"></div>
+  <div class="tooltip" id="tooltip"></div>
+
+  <div class="graph-container">
+    <div class="graph-rectangle">
+        <div class="title-price-container">
+            <span class="market-title">Current Market Price</span>
+            <li class="market-price">
+                <span class="price-background">
+                    <img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>
+                    250
+                </span>
+            </li>
+        </div>
+        <div class="graph-content">
+            <div class="y-axis">
+                <div class="price-label">
+                    <img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>230<div class="horizontal-line"></div>
+                </div>
+                <div class="price-label">
+                    <img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>220<div class="horizontal-line"></div>
+                </div>
+                <div class="price-label">
+                    <img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>210<div class="horizontal-line"></div>
+                </div>
+                <div class="price-label">
+                    <img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>200<div class="horizontal-line"></div>
+                </div>
+                <div class="price-label">
+                    <img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>190<div class="horizontal-line"></div>
+                </div>
+                <div class="price-label">
+                    <img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>180<div class="horizontal-line"></div>
+                </div>
+                <div class="price-label">
+                    <img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>170<div class="horizontal-line"></div>
+                </div>
+            </div>
+            <div class="vertical-lines">
+                <div class="vertical-line-container">
+                    <div class="line mon"></div>
+                    <span>Mon</span>
+                </div>
+                <div class="vertical-line-container">
+                    <div class="line tue"></div>
+                    <span>Tue</span>
+                </div>
+                <div class="vertical-line-container">
+                    <div class="line wed"></div>
+                    <span>Wed</span>
+                </div>
+                <div class="vertical-line-container">
+                    <div class="line thur"></div>
+                    <span>Thur</span>
+                </div>
+                <div class="vertical-line-container">
+                    <div class="line fri"></div>
+                    <span>Fri</span>
+                </div>
+                <div class="vertical-line-container">
+                    <div class="line sat"></div>
+                    <span>Sat</span>
+                </div>
+                <div class="vertical-line-container">
+                    <div class="line sun"></div>
+                    <span>Sun</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+</section>
+
+    
+
+<footer>
+  <div class="footer-content">
+      <img src="Group 193.png" alt="Piggery Logo" class="footer-logo">
+      <div class="footer-columns">
+          <div class="footer-box">
+            <h4>Our Mission</h4>
+              <p class="brand-statement">
+                Farmify piggery marketplace aims to revolutionize pig farming by providing a reliable and user-friendly platform where farmers and buyers can connect, trade, and thrive together.
+              </p>
+          </div>
+          <div class="footer-box">
+              <h4>Navigation</h4>
+              <ul class="footer-nav">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Pigs for Sale</a></li>
+                  <li><a href="#">Sell your Pig</a></li>
+                  <li><a href="#">About us</a></li>
+                  <li><a href="#">Contact</a></li>
+              </ul>
+          </div>
+          <div class="footer-box">
+              <h4>Contact</h4>
+              <p>Phone: (123) 456-7890</p>
+              <p>FAX: (123) 456-7891</p>
+              <p>123 Example Address, City, Country</p>
+          </div>
+          <div class="footer-box">
+              <h4>Stay Connected</h4>
+              <p>Stay connected with our latest news and price alerts to never miss a great deal.</p>
+              <div class="email-container">
+                <input type="email" placeholder="Email address" class="email-input">
+          </div>
+          <div class="social-icons">
+            <img src="Group 149.png" alt="Facebook" class="social-icon">
+            <img src="Group 148.png" alt="Twitter" class="social-icon">
+            <img src="Group 147.png" alt="Instagram" class="social-icon">
+        </div>
+      </div>
+  </div>
+
+  <hr>
+  <div class="footer-bottom">
+      <p>&copy; 2024 All rights reserved.</p>
+      <ul class="footer-bottom-nav">
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+      </ul>
+  </div>
+</footer>
+
+<script>
+  function toggleNav() {
+      var nav = document.querySelector('.navbar-collapse');
+      nav.classList.toggle('show');
+  }
+
+  function toggleSaveIcon(element) {
+        const icon = element.querySelector('i.bi-heart-fill');
+        icon.classList.toggle('red');
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const thumbnails = document.querySelectorAll('.thumbnail-images img');
+        const mainImage = document.getElementById('main-image');
+
+        thumbnails.forEach(function(thumb) {
+            thumb.addEventListener('mouseover', function() {
+                mainImage.src = this.getAttribute('data-image');
+            });
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+    const links = document.querySelectorAll('.nav-links a');
+
+    links.forEach(function(link) {
+        link.addEventListener('click', function() {
+            links.forEach(function(link) {
+                link.classList.remove('active');
+            });
+            this.classList.add('active');
+        });
+    });
+
+    // Handle smooth scrolling for Read More link
+    const readMoreLink = document.querySelector('.read-more-link a');
+    readMoreLink.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default anchor behavior
+        const targetSection = document.querySelector(this.getAttribute('href')); // Get the target section
+
+        if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const dots = document.querySelectorAll('.pagination-dots .dot');
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      // Remove 'active' class from all dots
+      dots.forEach(dot => dot.classList.remove('active'));
+
+      // Add 'active' class to the clicked dot
+      dot.classList.add('active');
+
+      // Implement logic to show the corresponding review rectangle set
+      // For example: hide all review rectangles and show the corresponding set
+    });
+  });
+})
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const graphContainer = document.querySelector('.graph-content');
+  const verticalLines = document.querySelectorAll('.vertical-lines .line');
+  const horizontalLines = document.querySelectorAll('.y-axis .horizontal-line');
+
+  verticalLines.forEach((vLine, vIndex) => {
+    horizontalLines.forEach((hLine, hIndex) => {
+      const dot = document.createElement('div');
+      dot.classList.add('graph-dot');
+
+      // Calculate the position
+      const vLineRect = vLine.getBoundingClientRect();
+      const hLineRect = hLine.getBoundingClientRect();
+      const graphContainerRect = graphContainer.getBoundingClientRect();
+
+      const left = vLineRect.left - graphContainerRect.left - 4; // Adjust for half the dot's width
+      const top = hLineRect.top - graphContainerRect.top - 4; // Adjust for half the dot's height
+
+      dot.style.left = `${left}px`;
+      dot.style.top = `${top}px`;
+
+      graphContainer.appendChild(dot);
+    });
+  });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const graphContainer = document.querySelector('.graph-content');
+    const verticalLines = document.querySelectorAll('.vertical-lines .line');
+    const yAxisLabels = [230, 220, 210, 200, 190, 180, 170];
+    const maxPrice = Math.max(...yAxisLabels);
+    const minPrice = Math.min(...yAxisLabels);
+
+    const tooltip = document.getElementById('tooltip');
+    const marketPriceContainer = document.querySelector('.market-price .price-background');
+
+    const svgNS = "http://www.w3.org/2000/svg"; 
+
+    const svg = document.createElementNS(svgNS, "svg");
+    svg.setAttribute('class', 'graph-line-svg');
+    svg.style.position = 'absolute';
+    svg.style.top = 0;
+    svg.style.left = 0;
+    svg.style.width = '100%';
+    svg.style.height = '100%';
+
+    const line = document.createElementNS(svgNS, "polyline");
+    line.setAttribute('class', 'graph-line');
+    svg.appendChild(line);
+    graphContainer.appendChild(svg);
+
+    const dayLabels = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+    function getRandomPrice() {
+        return Math.floor(Math.random() * (maxPrice - minPrice + 1)) + minPrice;
+    }
+
+    function updateGraph(dayIndex, prices) {
+        const points = [];
+        const dots = graphContainer.querySelectorAll('.graph-dot');
+        dots.forEach(dot => dot.remove()); // Remove existing dots
+
+        verticalLines.forEach((vLine, index) => {
+            const vLineRect = vLine.getBoundingClientRect();
+            const graphContainerRect = graphContainer.getBoundingClientRect();
+            const left = vLineRect.left - graphContainerRect.left + vLine.offsetWidth / 2; // Adjusting to the center of the line
+            const price = prices[index];
+            const top = ((maxPrice - price) / (maxPrice - minPrice)) * (graphContainer.clientHeight - 40) + 10; // Adding padding
+            points.push(`${left},${top}`);
+
+            // Add dot element
+            if (index <= dayIndex) {
+                const dot = document.createElement('div');
+                dot.classList.add('graph-dot');
+                dot.style.left = `${left - 4}px`; // Adjust for half the dot's width
+                dot.style.top = `${top - 4}px`; // Adjust for half the dot's height
+                dot.dataset.price = price;
+                dot.dataset.day = dayLabels[index];
+
+                dot.addEventListener('mouseover', function() {
+                    tooltip.style.display = 'block';
+                    tooltip.innerText = `${dot.dataset.day} ${dot.dataset.price}`;
+                    tooltip.style.left = `${dot.style.left}`;
+                    tooltip.style.top = `${parseInt(dot.style.top) - 20}px`; // Position above the dot
+                });
+
+                dot.addEventListener('mouseout', function() {
+                    tooltip.style.display = 'none';
+                });
+
+                graphContainer.appendChild(dot);
+            }
+        });
+
+        line.setAttribute('points', points.slice(0, dayIndex + 1).join(' '));
+
+        // Update the market price
+        marketPriceContainer.innerHTML = `
+            <img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>
+            ${prices[dayIndex]}
+        `;
+    }
+
+    function startUpdateCycle() {
+        const prices = Array.from({ length: 7 }, getRandomPrice);
+        let dayIndex = 0;
+
+        function updateDay() {
+            updateGraph(dayIndex, prices);
+            dayIndex = (dayIndex + 1) % 7;
+            if (dayIndex === 0) {
+                prices.length = 0;
+                prices.push(...Array.from({ length: 7 }, getRandomPrice));
+            }
+        }
+
+        updateDay(); // Initial graph update
+        setInterval(updateDay, 5000); // Update graph every 5 seconds
+    }
+
+    startUpdateCycle();
+});
+
+</script>
+</main>
+</body>
