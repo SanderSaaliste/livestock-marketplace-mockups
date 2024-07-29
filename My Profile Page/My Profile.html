@@ -1236,7 +1236,7 @@ width: 412px;
 .rectangle {
     display: flex;
     align-items: center;
-    width: 675px;
+    width: 725px;
     height: 142px;
     border: 1px solid #E0E0E0;
     border-radius: 15px;
@@ -1255,7 +1255,7 @@ width: 412px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 270px;
+    width: 370px;
 }
 
 .icon-title-container {
@@ -1334,8 +1334,12 @@ margin-right: 5px;
 }
 
 .container-with-x {
-    position: relative;
+  display: flex;
+  justify-content: flex-end;  
+  position: relative;
     height: 115px;
+    width: 300px;
+
 }
 
 .container-with-x .bi-x {
@@ -1354,7 +1358,7 @@ margin-right: 5px;
 
 .small-edit-button {
     width: 100px;
-    height: 40px;
+    height: 43px;
     border: none;
     border-radius: 10px;
     color: white;
@@ -1369,7 +1373,7 @@ margin-right: 5px;
 
 .small-next-button {
     width: 100px;
-    height: 40px;
+    height: 43px;
     border: none;
     border-radius: 10px;
     color: #666666;
@@ -1439,11 +1443,14 @@ margin-right: 5px;
 }
 
 .graph-container {
+  display: flex;
+  width: 1270px;
+  justify-content: flex-end;
   margin-left: 20px;
 }
 
 .graph-rectangle {
-  width: 400px;
+  width: 430px;
     height: 425px;
     border: 1px solid #E0E0E0;
     border-radius: 15px;
@@ -1454,21 +1461,71 @@ margin-right: 5px;
     flex-direction: column;
 }
 
+.listing-dropbox {
+    width: 100%;
+    width: 115px;
+    height: 18.8px;
+    border: 2px solid #f5f5f5;
+    border-radius: 5px;
+    background-color: #f5f5f5; /* Slightly grey background */
+    font-size: 14px;
+    color: #333;
+    font-family: "Inter", sans-serif;
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+    -webkit-appearance: none; /* Remove default arrow in WebKit browsers */
+    -moz-appearance: none; /* Remove default arrow in Firefox */
+    appearance: none; /* Remove default arrow in other browsers */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2714%27%20height%3D%2714%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27%23333%27%3E%3Cpath%20d%3D%27M7%2010l5%205%205-5z%27/%3E%3C/svg%3E'); /* Custom arrow icon */
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Position the arrow with margin-right 10px */
+    background-size: 25px 25px; /* Size of the arrow icon */
+    background-image: 
+        linear-gradient(to right, #33333358 1px, transparent 1px), /* Vertical line */
+        url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2714%27%20height%3D%2714%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27%23333%27%3E%3Cpath%20d%3D%27M7%2010l5%205%205-5z%27/%3E%3C/svg%3E'); /* Custom arrow icon */
+    background-repeat: no-repeat;
+    background-position: right 25px center, right 1px center; /* Position the arrow with margin-right 10px and the line with margin-right 20px */
+    background-size: 1px 10px, 25px 25px; /* Size of the line and the arrow icon */
+}
+
+.listing-dropbox:focus {
+    border-color: #5EA91E; /* Change border color when focused */
+    outline: none; /* Remove default outline */
+}
+
+.listing-dropbox option[value="placeholder"] {
+    color: #333;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+}
+
 .title-price-container {
   display: flex;
-  width: 340px;
-  justify-content: flex-start;
+  width: 400px;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
   gap: 80px;
 }
 
+.title-dropbox-container {
+  display: flex;
+  flex-direction: column;
+  width: 115px;
+  align-items: flex-start;
+  margin-left: 0px;
+}
+
 .market-title {
+  display: flex;
+  flex-direction: column;
   font-size: 18px;
   font-weight: bold;
   color: #000000;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-top: 0px;
+  margin-left: 0px;
+  justify-content: center;
+  align-items: center;
 }
 
 .market-price {
@@ -1476,7 +1533,23 @@ margin-right: 5px;
   align-items: center;
 }
 
+.market-price-container {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
 .price-background {
+  display: inline-flex;
+  background-color: #2c91bd29; /*#DDEDCB;*/
+  padding: 7px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 18px;
+  align-items: center;
+}
+
+.lowest-price-background {
   display: inline-flex;
   background-color: #DDEDCB;
   padding: 7px;
@@ -1484,6 +1557,17 @@ margin-right: 5px;
   font-weight: 700;
   font-size: 18px;
   align-items: center;
+}
+
+.bottom-span {
+  display: flex;
+  flex-direction: column;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: #757575a3;
+  align-items: center;
+  justify-content: center;
 }
 
 .price-label img {
@@ -1507,7 +1591,7 @@ margin-right: 5px;
   display: flex;
   width: 400px;
   flex-direction: column;
-  gap: 30px;
+  gap: 34px;
   margin-bottom: 20px;
 }
 
@@ -1528,18 +1612,18 @@ margin-right: 5px;
 }
 
 .horizontal-line {
-  width: 330px;
-  height: 1px;
+  width: 325px;
+  height: 0.3px;
   background-color: #cacacaa3;
   margin-left: 0px;
-  margin-right: 40px;
+  margin-right: 10px;
 }
 
     /* Add this CSS for vertical lines */
     .vertical-lines {
   position: absolute;
   top: 0;
-  left: 35px; /* Adjust to align with your y-axis */
+  left: 50px; /* Adjust to align with your y-axis */
   height: 100%;
   width: calc(100% - 60px); /* Adjust to match the graph width */
   display: flex;
@@ -1554,16 +1638,19 @@ margin-right: 5px;
 }
 
 .vertical-lines span {
+  font-family: "Inter", sans-serif;
   margin-top: 5px; /* Adjust to position the text below the line */
-  font-size: 14px;
+  font-size: 13px;
   color: rgba(0, 0, 0, 0.344);
+  font-weight: 550;
 }
 
 
 .vertical-lines .line {
-  width: 1px;
-  height: 100%;
-  background-color: #cacacaa3;
+    width: 1px;
+    height: 100%;
+    background-color: #cacacaa3;
+    opacity: 0; /* Make the vertical lines invisible */
 }
 
 .vertical-lines .mon { left: 0%; }
@@ -1593,8 +1680,14 @@ margin-right: 5px;
 }
 
 .graph-line {
-  stroke: #7CB342;
+  stroke: rgb(0, 140, 255);
   stroke-width: 5;
+  fill: none;
+}
+
+.lowest-graph-line {
+  stroke: #7CB342; /*rgb(0, 140, 255);*/
+  stroke-width: 5px;
   fill: none;
 }
 
@@ -2161,13 +2254,38 @@ hr {
   <div class="graph-container">
     <div class="graph-rectangle">
         <div class="title-price-container">
-            <span class="market-title">Current Market Price</span>
+          <div class="title-dropbox-container">
+            <span class="market-title">Market Price</span>
+            <div class="listing-dropbox-container">
+              <select class="listing-dropbox">
+                  <option value="placeholder" disabled selected></option>
+                  <option value="pigs">Pigs</option>
+                  <option value="piglets">Piglets</option>
+                  <option value="lechon">Lechon</option>
+                  <option value="products">Products</option>
+              </select>
+          </div>
+        </div>
+            <div class="market-price-container">
+              <div class="span-market-price">
+                <span class="bottom-span">Average/kg</span>
             <li class="market-price">
                 <span class="price-background">
                     <img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>
                     250
                 </span>
             </li>
+          </div>
+            <div class="span-market-price">
+              <span class="bottom-span">Lowest/kg</span>
+            <li class="market-price">
+              <span class="lowest-price-background">
+                  <img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>
+                  250
+              </span>
+          </li>
+        </div>
+        </div>
         </div>
         <div class="graph-content">
             <div class="y-axis">
@@ -2383,6 +2501,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const tooltip = document.getElementById('tooltip');
     const marketPriceContainer = document.querySelector('.market-price .price-background');
+    const lowestPriceContainer = document.querySelector('.market-price .lowest-price-background');
 
     const svgNS = "http://www.w3.org/2000/svg"; 
 
@@ -2397,6 +2516,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const line = document.createElementNS(svgNS, "polyline");
     line.setAttribute('class', 'graph-line');
     svg.appendChild(line);
+
+    const lowestLine = document.createElementNS(svgNS, "polyline");
+    lowestLine.setAttribute('class', 'lowest-graph-line');
+    svg.appendChild(lowestLine);
+
     graphContainer.appendChild(svg);
 
     const dayLabels = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
@@ -2405,8 +2529,13 @@ document.addEventListener('DOMContentLoaded', function() {
         return Math.floor(Math.random() * (maxPrice - minPrice + 1)) + minPrice;
     }
 
-    function updateGraph(dayIndex, prices) {
+    function getLowestPrice(averagePrice) {
+        return averagePrice - Math.floor(Math.random() * 10 + 5); // Ensure lowest price is always smaller
+    }
+
+    function updateGraph(dayIndex, prices, lowestPrices) {
         const points = [];
+        const lowestPoints = [];
         const dots = graphContainer.querySelectorAll('.graph-dot');
         dots.forEach(dot => dot.remove()); // Remove existing dots
 
@@ -2415,10 +2544,13 @@ document.addEventListener('DOMContentLoaded', function() {
             const graphContainerRect = graphContainer.getBoundingClientRect();
             const left = vLineRect.left - graphContainerRect.left + vLine.offsetWidth / 2; // Adjusting to the center of the line
             const price = prices[index];
+            const lowestPrice = lowestPrices[index];
             const top = ((maxPrice - price) / (maxPrice - minPrice)) * (graphContainer.clientHeight - 40) + 10; // Adding padding
+            const lowestTop = ((maxPrice - lowestPrice) / (maxPrice - minPrice)) * (graphContainer.clientHeight - 40) + 10; // Adding padding
             points.push(`${left},${top}`);
+            lowestPoints.push(`${left},${lowestTop}`);
 
-            // Add dot element
+            // Add dot element for average price
             if (index <= dayIndex) {
                 const dot = document.createElement('div');
                 dot.classList.add('graph-dot');
@@ -2440,27 +2572,60 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 graphContainer.appendChild(dot);
             }
+
+            // Add dot element for lowest price
+            if (index <= dayIndex) {
+                const dot = document.createElement('div');
+                dot.classList.add('graph-dot');
+                dot.style.left = `${left - 4}px`; // Adjust for half the dot's width
+                dot.style.top = `${lowestTop - 4}px`; // Adjust for half the dot's height
+                dot.dataset.price = lowestPrice;
+                dot.dataset.day = dayLabels[index];
+
+                dot.addEventListener('mouseover', function() {
+                    tooltip.style.display = 'block';
+                    tooltip.innerText = `${dot.dataset.day} ${dot.dataset.price}`;
+                    tooltip.style.left = `${dot.style.left}`;
+                    tooltip.style.top = `${parseInt(dot.style.top) - 20}px`; // Position above the dot
+                });
+
+                dot.addEventListener('mouseout', function() {
+                    tooltip.style.display = 'none';
+                });
+
+                graphContainer.appendChild(dot);
+            }
         });
 
         line.setAttribute('points', points.slice(0, dayIndex + 1).join(' '));
+        lowestLine.setAttribute('points', lowestPoints.slice(0, dayIndex + 1).join(' '));
 
         // Update the market price
         marketPriceContainer.innerHTML = `
             <img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>
             ${prices[dayIndex]}
         `;
+
+        // Update the lowest price
+        lowestPriceContainer.innerHTML = `
+            <img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>
+            ${lowestPrices[dayIndex]}
+        `;
     }
 
     function startUpdateCycle() {
         const prices = Array.from({ length: 7 }, getRandomPrice);
+        const lowestPrices = prices.map(price => getLowestPrice(price));
         let dayIndex = 0;
 
         function updateDay() {
-            updateGraph(dayIndex, prices);
+            updateGraph(dayIndex, prices, lowestPrices);
             dayIndex = (dayIndex + 1) % 7;
             if (dayIndex === 0) {
                 prices.length = 0;
+                lowestPrices.length = 0;
                 prices.push(...Array.from({ length: 7 }, getRandomPrice));
+                lowestPrices.push(...prices.map(price => getLowestPrice(price)));
             }
         }
 
