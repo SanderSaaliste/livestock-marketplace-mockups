@@ -1085,15 +1085,42 @@ html {
   font-size: 16px;
 }
 
-.guiding-text {
-  display: flex;
-  height: 40px;
-  font-weight: 600;
-  font-size: 18px;
-  color: #000;
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin-top: 0px;
+
+
+.small-review-button {
+  width: 100px;
+    height: 43px;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    color: white;
+    border: 1px solid #434EB5;
+    background-color: #434EB5;
+    font-family: "Inter", sans-serif;;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.small-review-button:hover {
+  background-color: #353f92; /* Darker color when hovered */
+}
+
+.small-view-button {
+  width: 100px;
+    height: 43px;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #666666;
+    border: 1px solid #E1E1E1;
+    background-color: #E1E1E1;
+    font-family: "Inter", sans-serif;;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.small-view-button:hover {
+  background-color: #d6d6d6; /* Darker color when hovered */
 }
 
 .next-button-container {
@@ -1138,13 +1165,13 @@ width: 100%;
     outline: none;
     font-size: 16px;
     font-weight: 500;
-    font-family: "Inter", sans-serif;;
+    font-family: "Inter", sans-serif;
     color: whitesmoke;
     display: flex;
-    justify-content: center; /* Center the text horizontally */
-    align-items: center; /* Center the text vertically */
+    justify-content: center;
+    align-items: center;
     padding: 24px;
-    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+    transition: background-color 0.3s ease;
     cursor: pointer;
 }
 
@@ -1182,6 +1209,17 @@ width: 412px;
     color: #999;
     align-items: center;
     margin-left: 0px;
+}
+
+.history-section {
+  display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 1270px;
+    margin: 0 auto;
+    padding-left: 0px;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 .my-listing-section {
@@ -1233,6 +1271,100 @@ width: 412px;
   gap: 20px; /* Add space between the rectangles */
 }
 
+/* Hide scrollbar for client-container */
+.client-container.scrollable-rectangles::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+.client-container.scrollable-rectangles {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  padding: 0px;
+}
+
+.client-container {
+  display: flex;
+  flex-direction: column;
+    width: 1270px;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-left: 20px;
+    gap: 20px;
+}
+
+.client-rectangle {
+    display: flex;
+    align-items: center;
+    width: 470px;
+    height: 142px;
+    border: 1px solid #E0E0E0;
+    border-radius: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.rectangle-image-client {
+    width: 146px;
+    height: 122px;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.details-container-client {
+  display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 370px;
+}
+
+.details-container-client .title {
+    font-weight: 700;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    color: #000;
+}
+
+.client-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.rectangle-sold {
+  position: relative; /*Make container relative*/
+  display: flex;
+    align-items: center;
+    width: 725px;
+    height: 142px;
+    border: 1px solid #E0E0E0;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 0.1px;
+    box-sizing: border-box;
+}
+
+.sold-band {
+  position: absolute;
+  top: 15px; /* Adjust to position the band */
+  left: -30px; /* Adjust to position the band */
+  width: 150px; /* Adjust to fit the band */
+  height: 30px; /* Adjust to fit the band */
+  background-color: red; /* Base color */
+  color: white; /* White text color */
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  transform: rotate(-45deg); /* Rotate the band */
+  line-height: 30px; /* Center the text vertically */
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow */
+  opacity: 1; /* Ensure no transparency */
+  clip-path: polygon(0 0, 70% 0, calc(100% - 15px) 100%, 0 100%); /* Clip path to "cut" the band */
+  background: linear-gradient(to right, rgb(230, 0, 0) 0%, rgba(255,0,0,1) 100%);
+}
+
 .rectangle {
     display: flex;
     align-items: center;
@@ -1251,6 +1383,22 @@ width: 412px;
     margin-right: 10px;
 }
 
+.rectangle-image-sold {
+    width: 146px;
+    height: 122px;
+    border-radius: 8px;
+    margin-right: 10px;
+    opacity: 1; /* Set opacity to 50% */
+}
+
+.details-container-sold {
+  display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 390px;
+    opacity: 0.5;
+}
+
 .details-container {
     display: flex;
     flex-direction: column;
@@ -1261,7 +1409,7 @@ width: 412px;
 .icon-title-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     margin-bottom: 25px;
 }
 
@@ -1271,8 +1419,8 @@ width: 412px;
 }
 
 .icon-title-container .title {
-    flex-grow: 1;
-    text-align: right;
+  flex-grow: 1;
+    text-align: center;
     font-weight: 700;
     font-family: "Inter", sans-serif;
     font-size: 18px;
@@ -1283,6 +1431,27 @@ width: 412px;
     font-size: 16px;
     font-weight: 500;
     font-family: "Inter", sans-serif;
+}
+
+.h4-sold {
+  display: flex;
+  color: red;
+  font-weight: 800;
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  justify-content: center;
+  align-items: center;
+  width: 190px;
+}
+
+.sold-container-wrap {
+  display: flex;
+  flex-direction: row;
+}
+
+.sold-container {
+ display: flex;
+ flex-direction: column;
 }
 
 .weight-container,
@@ -1321,6 +1490,19 @@ width: 412px;
 margin-right: 5px;
 }
 
+.bottom-button-container-sold {
+  display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-top: 0px;
+    align-items: flex-end;
+    gap: 10px;
+    margin-top: 5px;
+    height: 100px;
+    opacity: 0.5;
+}
+
 .bottom-button-container {
     display: flex;
     flex-direction: row;
@@ -1333,14 +1515,31 @@ margin-right: 5px;
     height: 100px;
 }
 
+.sold-container-with-x {
+  display: flex;
+  justify-content: flex-end;  
+  position: relative;
+    height: 115px;
+    width: 300px;
+}
+
 .container-with-x {
   display: flex;
   justify-content: flex-end;  
   position: relative;
     height: 115px;
     width: 300px;
-
 }
+
+.sold-container-with-x .bi-x {
+  position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 26px; /* Adjust the size of the X icon as needed */
+    cursor: pointer;
+    color: #000000a3;
+}
+
 
 .container-with-x .bi-x {
     position: absolute;
@@ -1351,9 +1550,18 @@ margin-right: 5px;
     color: #000000a3;
 }
 
+.bi-x {
+    cursor: pointer; /* Add cursor pointer */
+}
+
 .button-container-wrap {
     display: flex;
     flex-direction: column;
+}
+
+.sold-button-container-wrap {
+  display: flex;
+  flex-direction: column;
 }
 
 .small-edit-button {
@@ -1426,9 +1634,9 @@ margin-right: 5px;
 
 .title-container {
   display: flex;
-  flex-direction: column;
+  flex-direction:row;
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: space-between;
   width: 1270px;
   margin-bottom: 30px;
 }
@@ -1440,6 +1648,16 @@ margin-right: 5px;
     justify-content: flex-start;
     align-items: flex-start;
     font-family: "Inter", sans-serif;
+}
+
+.client-title {
+  font-size: 36px;
+    font-weight: 700;
+    color: #182110;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-family: "Inter", sans-serif;
+    width: 470px;
 }
 
 .graph-container {
@@ -1702,6 +1920,471 @@ margin-right: 5px;
         font-size: 12px;
     }
 
+    .comparison-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1270px;
+    margin-top: 30px;
+    }
+
+    .comparison-rectangle {
+  height: 240px;
+  width: 684px;
+  border: 1px solid #E0E0E0;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.checkbox-container {
+  display: flex;
+  gap: 20px;
+  padding: 5px;
+  padding-left: 0px;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-item label {
+  font-weight: 600;
+  font-size: 16px;
+  color: #000;
+  font-family: "Inter", sans-serif;
+  margin-left: 5px;
+}
+
+input[type="checkbox"]#previous {
+  width: 18px;
+  height: 18px;
+  appearance: none; /* Remove default styling */
+  background-color: #fff; /* White background */
+  border: 2px solid #ababab;; /* Black border */
+  border-radius: 4px; /* Optional: rounded corners */
+  cursor: pointer;
+  position: relative;
+}
+
+/* Checkbox checked state */
+input[type="checkbox"]#previous:checked {
+  background-color: #ffffff; /* Black background when checked */
+  border: 2px solid #000; /* Black border */
+}
+
+/* Checkmark styling */
+input[type="checkbox"]#previous:checked::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 10px; /* Width of the checkmark */
+  height: 5px; /* Height of the checkmark */
+  border: solid rgb(0, 0, 0);
+  border-width: 0 2px 2px 0;
+  width: 4px; /* Adjusted width for longer right wing */
+  height: 8px; /* Adjusted height for shorter left wing */
+}
+
+input[type="checkbox"]#current {
+  width: 18px;
+  height: 18px;
+  appearance: none; /* Remove default styling */
+  background-color: #fff; /* White background */
+  border: 2px solid #ababab;; /* Black border */
+  border-radius: 4px; /* Optional: rounded corners */
+  cursor: pointer;
+  position: relative;
+}
+
+/* Checkbox checked state */
+input[type="checkbox"]#current:checked {
+  background-color: #ffffff; /* Black background when checked */
+  border: 2px solid #000; /* Black border */
+}
+
+/* Checkmark styling */
+input[type="checkbox"]#current:checked::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 10px; /* Width of the checkmark */
+  height: 5px; /* Height of the checkmark */
+  border: solid rgb(0, 0, 0);
+  border-width: 0 2px 2px 0;
+  width: 4px; /* Adjusted width for longer right wing */
+  height: 8px; /* Adjusted height for shorter left wing */
+}
+
+.divider {
+  display: flex;
+  border: none;
+  border-top: 1px solid #E0E0E0; /* Adjust the color and thickness as needed */
+  margin: 20px 0;
+  margin-left: -20px;
+  text-align: left;
+  width: 724px;
+}
+
+.column-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  margin-top: 10px;
+}
+
+.comparison-price {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 18px;
+  font-weight: 750;
+  color: #000;
+  font-family: "Inter", sans-serif;
+}
+
+.earnings-container {
+  display: flex;
+  width: 400px;
+  flex-direction: row;
+}
+
+.earnings-container p {
+  margin: 5px;
+  margin-left: 0px;
+  font-weight: 750;
+  font-family: "Inter", sans-serif;
+  color: #000;
+  font-size: 18px;
+}
+
+.comparison-details {
+  display: flex;
+  width: 400px;
+  flex-direction: column;
+  gap: 0px;
+  margin-bottom: 30px;
+}
+
+.comparison-details p {
+  margin: 2px;
+  margin-left: 0px;
+  font-weight: 750;
+  font-family: "Inter", sans-serif;
+  color: #000;
+  font-size: 18px;
+}
+
+.comparison-chart-rectangle {
+        height: 240px;
+        width: 425px;
+        border: 1px solid #E0E0E0;
+        border-radius: 16px;
+        background-color: #F9F9F9;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .comparison-chart-rectangle .title {
+        font-size: 24px;
+        font-weight: 700;
+        font-family: "Inter", sans-serif;
+        color: #000000;
+        margin-bottom: 20px;
+        text-align: center;
+        align-self: center;
+        margin-top: 5px;
+    }
+
+    .comparison-chart-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .price-chart-wrapper .mini-current-rectangle {
+  color: #FFFFFF; /* Color for 7 Pigs */ /*#4B6576;*/
+  width: 160px;
+}
+
+.price-chart-wrapper .mini-previous-rectangle {
+  color: #4B6576; /* Color for 6 Pigs */ /*#FFFFFF;*/
+  opacity: 0.5;
+}
+
+.mini-current-rectangle,
+.mini-previous-rectangle {
+    transition: width 0.5s ease; /* Smooth transition for width */
+    width: 1px; /* Start width */
+}
+
+.price-chart-wrapper .mini-current-rectangle {
+    width: 160px; /* Final width when expanded */
+}
+
+.price-chart-wrapper .mini-previous-rectangle {
+    width: 150px; /* Final width when expanded */
+}
+
+    .mini-current-rectangle,
+    .mini-previous-rectangle {
+        width: 150px;
+        height: 36px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        padding-left: 15px;
+        color: #fff;
+        font-weight: 400;
+        font-family: "Inter", sans-serif;
+        font-size: 16px;
+    }
+
+    .mini-current-rectangle {
+        background-color: #2c91bd; /*#A1D1F0;*/
+    }
+
+    .mini-previous-rectangle {
+        background-color: #a1d0f0; /*#2c91bd;*/
+    }
+
+    .price-chart-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        align-items: flex-start;
+    }
+
+    .price-chart-container li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+
+    .price-chart-container img {
+        margin-right: 10px;
+    }
+
+    .price-chart-wrapper:nth-child(2) li {
+  opacity: 0.4;
+}
+
+    .price-chart-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.price-chart-wrapper li {
+  margin-left: 20px;
+  width: 80px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.comparison-weight-container {
+  display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+.calculator-section {
+  display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 1270px;
+    margin: 0 auto;
+    padding-left: 0px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+#calculator-title {
+  display: flex;
+  font-size: 36px;
+    font-weight: 700;
+    width: 1270px;
+    color: #182110;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+}
+
+.calculator-rectangle {
+  height: 590px;
+  width: 1270px;
+  background-color: #F9FFE2;
+  border: 1px solid #E0E0E0;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  position: relative;
+}
+
+.pig-container, .feed-container, .profit-container {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.container-title {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #182110;
+  font-family: "Inter", sans-serif;
+}
+
+.vertical-line {
+  width: 1px;
+  height: 485px; /* Height of the vertical line */
+  background-color: #E0E0E0;
+  align-self: center;
+}
+
+.box-input {
+  width: 128px;
+  height: 48px;
+  border-radius: 9px;
+  border: 1.9px solid #E0E0E0;
+  background-color: #FFFFFF;
+  padding: 2px;
+  font-size: 16px;
+  color: #000000;
+  text-align: center;
+  margin-top: 0px;
+  font-family: "Inter", sans-serif;
+}
+
+.box-display {
+  width: 128px; /*134px*/
+  height: 48px; /*52px*/
+  border-radius: 9px;
+  border: 1.9px solid #E0E0E0;
+  background-color: #F1F6DC; /* Updated background color */
+  padding: 2px;
+  font-size: 16px;
+  color: #000000;
+  text-align: center;
+  margin-top: 0px;
+  display: flex;
+  pointer-events: none; /* Disable all mouse interactions */
+  user-select: none; /* Prevent text selection */
+  font-family: "Inter", sans-serif;
+}
+
+.special-input-container {
+  display: flex;
+  align-items: flex-start;
+  width: 140px;
+  flex-direction: column;
+  margin-top: 0px;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.special-display-container {
+  display: flex;
+  align-items: flex-end;
+  width: 140px;
+  flex-direction: column;
+  margin-top: 0px;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.input-display-container {
+  display: flex;
+  align-items: center;
+  width: 370px;
+  flex-direction: row;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+
+.input-display-container img {
+  margin-top: 12px;
+}
+
+.total-input-display-container {
+  display: flex;
+    align-items: center;
+    width: 370px;
+    flex-direction: row;
+    margin-top: 40px;
+    justify-content: space-between;
+}
+
+.total-input-display-container img {
+  margin-top: 12px;
+}
+
+.main-guiding-text {
+  display: flex;
+  height: 40px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #000;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 0px;
+}
+
+.guiding-text {
+  font-size: 13px;
+  font-weight: 600;
+  color: #000;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 5px;
+  margin-top: 0px;
+  margin-left: 5px;
+}
+
+.input-guiding-container {
+  display: flex;
+  flex-direction: column;
+  width: 140px;
+  align-items: flex-start;
+}
+
+.calc-title {
+  display: flex;
+  margin: 0px;
+  color: #000;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  margin-top: 10px;
+  width: 140px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+
 
     footer {
         background-color: #43662e; /* Dark green background color */
@@ -1833,7 +2516,7 @@ color: white;
         font-size: 16px;
     }
 
-    hr {
+    .footer-divider {
         border: 0;
         height: 1.2px;
         background-color: #e1e1e1;
@@ -2051,22 +2734,22 @@ hr {
         </div>
         <div class="pig-details">
           <div class="listing-input-container">
-            <p class="guiding-text">Full name</p>
+            <p class="main-guiding-text">Full name</p>
             <div class="listing-display-box placeholder-text">Darwin Rabago</div>
           </div>
           
           <div class="listing-input-container">
-            <p class="guiding-text">Email</p>
+            <p class="main-guiding-text">Email</p>
             <div class="listing-display-box placeholder-text">darwinrabago@gmail.com</div>
           </div>
           
           <div class="listing-input-container">
-            <p class="guiding-text">Phone</p>
+            <p class="main-guiding-text">Phone</p>
             <div class="listing-display-box placeholder-text">916 17 974</div>
           </div>
 
                 <div class="listing-input-container">
-                  <p class="guiding-text">Address</p>
+                  <p class="main-guiding-text">Address</p>
                   <div class="listing-display-box placeholder-text">Bon Bon / Biasong</div>
                 </div>
 
@@ -2346,10 +3029,441 @@ hr {
 </div>
 </div>
 
-
 </section>
 
-    
+
+<section class="history-section">
+  <div class="title-container">
+    <div class="listings-title">Transaction history</div>
+    <div class="client-title">Client who bought</div>
+  </div>
+  <div class="scroll-bar-graph-container">
+    <div class="scroll-bar-container">
+      <div class="rectangle-column scrollable-rectangles">
+        <div class="rectangle-sold">
+          <div class="sold-band">SOLD</div>
+          <img src="Rectangle 34.png" alt="Image" class="rectangle-image-sold">
+          <div class="details-container-sold">
+            <div class="icon-title-container">
+              <i class="bi bi-eye"></i>
+              <span class="views">27</span>
+              <span class="title">01 Pig for Sale in Cebu</span>
+            </div>
+            <div class="weight-container">
+              <li><img width="20" height="20" src="https://img.icons8.com/color/96/weight-kg.png" alt="weight-kg"/>Weight: 80kg</li>
+            </div>
+            <div class="price-container">
+              <li class="price"><img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>Price: 20,000</li>
+            </div>
+          </div>
+          <div class="sold-container-with-x">
+            <i class="bi bi-x"></i>
+            <div class="bottom-button-container-sold">
+              <button class="small-edit-button">Edit</button>
+              <button class="small-next-button">View</button>
+            </div>
+          </div>
+        </div>
+        <!-- Duplicate the rectangle block to add more rectangles -->
+        <div class="rectangle-sold">
+          <div class="sold-band">SOLD</div>
+          <img src="Rectangle 34.png" alt="Image" class="rectangle-image-sold">
+          <div class="details-container-sold">
+            <div class="icon-title-container">
+              <i class="bi bi-eye"></i>
+              <span class="views">27</span>
+              <span class="title">01 Pig for Sale in Cebu</span>
+            </div>
+            <div class="weight-container">
+              <li><img width="20" height="20" src="https://img.icons8.com/color/96/weight-kg.png" alt="weight-kg"/>Weight: 80kg</li>
+            </div>
+            <div class="price-container">
+              <li class="price"><img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>Price: 20,000</li>
+            </div>
+          </div>
+          <div class="sold-container-with-x">
+            <i class="bi bi-x"></i>
+            <div class="bottom-button-container-sold">
+              <button class="small-edit-button">Edit</button>
+              <button class="small-next-button">View</button>
+            </div>
+          </div>
+        </div>
+        <div class="rectangle-sold">
+          <div class="sold-band">SOLD</div>
+          <img src="Rectangle 34.png" alt="Image" class="rectangle-image-sold">
+          <div class="details-container-sold">
+            <div class="icon-title-container">
+              <i class="bi bi-eye"></i>
+              <span class="views">27</span>
+              <span class="title">01 Pig for Sale in Cebu</span>
+            </div>
+            <div class="weight-container">
+              <li><img width="20" height="20" src="https://img.icons8.com/color/96/weight-kg.png" alt="weight-kg"/>Weight: 80kg</li>
+            </div>
+            <div class="price-container">
+              <li class="price"><img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>Price: 20,000</li>
+            </div>
+          </div>
+          <div class="sold-container-with-x">
+            <i class="bi bi-x"></i>
+            <div class="bottom-button-container-sold">
+              <button class="small-edit-button">Edit</button>
+              <button class="small-next-button">View</button>
+            </div>
+          </div>
+        </div>
+        <!-- Add more rectangles if needed -->
+        <div class="rectangle-sold">
+          <div class="sold-band">SOLD</div>
+          <img src="Rectangle 34.png" alt="Image" class="rectangle-image-sold">
+          <div class="details-container-sold">
+            <div class="icon-title-container">
+              <i class="bi bi-eye"></i>
+              <span class="views">27</span>
+              <span class="title">01 Pig for Sale in Cebu</span>
+            </div>
+            <div class="weight-container">
+              <li><img width="20" height="20" src="https://img.icons8.com/color/96/weight-kg.png" alt="weight-kg"/>Weight: 80kg</li>
+            </div>
+            <div class="price-container">
+              <li class="price"><img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>Price: 20,000</li>
+            </div>
+          </div>
+          <div class="sold-container-with-x">
+            <i class="bi bi-x"></i>
+            <div class="bottom-button-container-sold">
+              <button class="small-edit-button">Edit</button>
+              <button class="small-next-button">View</button>
+            </div>
+          </div>
+        </div>
+        <div class="rectangle-sold">
+          <div class="sold-band">SOLD</div>
+          <img src="Rectangle 34.png" alt="Image" class="rectangle-image-sold">
+          <div class="details-container-sold">
+            <div class="icon-title-container">
+              <i class="bi bi-eye"></i>
+              <span class="views">27</span>
+              <span class="title">01 Pig for Sale in Cebu</span>
+            </div>
+            <div class="weight-container">
+              <li><img width="20" height="20" src="https://img.icons8.com/color/96/weight-kg.png" alt="weight-kg"/>Weight: 80kg</li>
+            </div>
+            <div class="price-container">
+              <li class="price"><img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>Price: 20,000</li>
+            </div>
+          </div>
+          <div class="sold-container-with-x">
+            <i class="bi bi-x"></i>
+            <div class="bottom-button-container-sold">
+              <button class="small-edit-button">Edit</button>
+              <button class="small-next-button">View</button>
+            </div>
+          </div>
+        </div>
+        <div class="rectangle-sold">
+          <div class="sold-band">SOLD</div>
+          <img src="Rectangle 34.png" alt="Image" class="rectangle-image-sold">
+          <div class="details-container-sold">
+            <div class="icon-title-container">
+              <i class="bi bi-eye"></i>
+              <span class="views">27</span>
+              <span class="title">01 Pig for Sale in Cebu</span>
+            </div>
+            <div class="weight-container">
+              <li><img width="20" height="20" src="https://img.icons8.com/color/96/weight-kg.png" alt="weight-kg"/>Weight: 80kg</li>
+            </div>
+            <div class="price-container">
+              <li class="price"><img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>Price: 20,000</li>
+            </div>
+          </div>
+          <div class="sold-container-with-x">
+            <i class="bi bi-x"></i>
+            <div class="bottom-button-container-sold">
+              <button class="small-edit-button">Edit</button>
+              <button class="small-next-button">View</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="client-container scrollable-rectangles">
+      <div class="client-rectangle">
+        <img src="Rectangle 97.png" alt="Client Image" class="rectangle-image-client">
+        <div class="details-container-client">
+          <div class="icon-title-container">
+            <span class="title">@Rosialie Simonis</span>
+          </div>
+          <div class="client-buttons">
+            <button class="small-review-button">Review</button>
+            <button class="small-view-button">Chat</button>
+          </div>
+        </div>
+      </div>
+      <div class="client-rectangle">
+        <img src="Rectangle 98.png" alt="Client Image" class="rectangle-image-client">
+        <div class="details-container-client">
+          <div class="icon-title-container">
+            <span class="title">@Timmy Zemlak</span>
+          </div>
+          <div class="client-buttons">
+            <button class="small-review-button">Review</button>
+            <button class="small-view-button">Chat</button>
+          </div>
+        </div>
+      </div>
+      <div class="client-rectangle">
+        <img src="Rectangle 99.png" alt="Client Image" class="rectangle-image-client">
+        <div class="details-container-client">
+          <div class="icon-title-container">
+            <span class="title">@Virginia Feil</span>
+          </div>
+          <div class="client-buttons">
+            <button class="small-review-button">Review</button>
+            <button class="small-view-button">Chat</button>
+          </div>
+        </div>
+      </div>
+      <div class="client-rectangle">
+        <img src="Rectangle 97.png" alt="Client Image" class="rectangle-image-client">
+        <div class="details-container-client">
+          <div class="icon-title-container">
+            <span class="title">@Rosialie Simonis</span>
+          </div>
+          <div class="client-buttons">
+            <button class="small-review-button">Review</button>
+            <button class="small-view-button">Chat</button>
+          </div>
+        </div>
+      </div>
+      <div class="client-rectangle">
+        <img src="Rectangle 98.png" alt="Client Image" class="rectangle-image-client">
+        <div class="details-container-client">
+          <div class="icon-title-container">
+            <span class="title">@Timmy Zemlak</span>
+          </div>
+          <div class="client-buttons">
+            <button class="small-review-button">Review</button>
+            <button class="small-view-button">Chat</button>
+          </div>
+        </div>
+      </div>
+      <div class="client-rectangle">
+        <img src="Rectangle 99.png" alt="Client Image" class="rectangle-image-client">
+        <div class="details-container-client">
+          <div class="icon-title-container">
+            <span class="title">@Virginia Feil</span>
+          </div>
+          <div class="client-buttons">
+            <button class="small-review-button">Review</button>
+            <button class="small-view-button">Chat</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="comparison-container">
+    <div class="comparison-rectangle">
+      <div class="checkbox-container">
+        <div class="checkbox-item">
+          <input type="checkbox" id="previous" name="previous">
+          <label for="previous">Previous</label>
+        </div>
+        <div class="checkbox-item">
+          <input type="checkbox" id="current" name="current">
+          <label for="current">Current</label>
+        </div>
+      </div>
+      <hr class="divider">
+      <div class="column-container">
+        <div class="comparison-details">
+        <p>Total Sales: 13 qty</p>
+        <p>Total Weight: 1,096 kg</p>
+        <p>Avg. Weight: 84.3 kg</p>
+      </div>
+        <div class="earnings-container">
+        <p>Total Earning: <li class="comparison-price">
+          <img width="22" height="22" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>
+          268,917
+        </li></p>
+      </div>
+      </div>
+    </div>
+
+    <div class="comparison-chart-rectangle">
+      <div class="title">Sold at price: 250/kg PHP</div>
+      <div class="comparison-chart-container">
+          <div class="price-chart-wrapper">
+              <div class="mini-current-rectangle">7 Pigs</div>
+              <li><img width="22" height="22" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>147,525</li>
+          </div>
+          <div class="price-chart-wrapper">
+              <div class="mini-previous-rectangle">6 Pigs</div>
+              <li><img width="22" height="22" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>121,392</li>
+          </div>
+      </div>
+
+<div class="comparison-weight-container">
+  <div class="price-chart-wrapper">
+    <div class="mini-current-rectangle">7 Pigs</div>
+    <li><img width="22" height="22" src="https://img.icons8.com/color/96/weight-kg.png" alt="weight-kg"/>590.1</li>
+</div>
+<div class="price-chart-wrapper">
+    <div class="mini-previous-rectangle">6 Pigs</div>
+    <li><img width="22" height="22" src="https://img.icons8.com/color/96/weight-kg.png" alt="weight-kg"/>505.8</li>
+</div>
+</div>
+</div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section class="calculator-section">
+  <div class="title-container">
+    <div id="calculator-title" class="listings-title">Calculator</div>
+  </div>
+  <div class="calculator-rectangle">
+    <div class="pig-container">
+      <h3 class="container-title">Pigs</h3>
+      <div class="input-display-container">
+        <div class="input-guiding-container">
+        <p class="guiding-text">How many pigs?</p>
+        <input type="text" class="box-input" id="pigAmount" placeholder="Enter value" oninput="updateBoxDisplay(this)">
+      </div>
+      <img width="30" height="30" src="https://img.icons8.com/parakeet/48/pig.png" alt="pig"/>
+        <div class="input-guiding-container">
+        <p class="guiding-text">Total pigs</p>
+        <input type="text" class="box-display" id="pigAmountDisplay" placeholder="10 pcs" readonly>
+      </div>
+      </div>
+
+      <div class="input-display-container">
+        <div class="input-guiding-container">
+        <p class="guiding-text">Average KG</p>
+        <input type="text" class="box-input" id="averageKg" placeholder="Enter value" oninput="updateBoxDisplay(this)">
+      </div>
+      <img width="30" height="30" src="https://img.icons8.com/material-rounded/24/scales.png" alt="scales"/>
+        <div class="input-guiding-container">
+        <p class="guiding-text">Total weight</p>
+        <input type="text" class="box-display" id="averageKgDisplay" placeholder="800 kg" readonly>
+      </div>
+      </div>
+
+      <div class="input-display-container">
+        <div class="input-guiding-container">
+        <p class="guiding-text">Market price</p>
+        <input type="text" class="box-input" id="marketPrice" placeholder="Enter value" oninput="updateBoxDisplay(this)">
+      </div>
+      <img width="30" height="30" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>
+        <div class="input-guiding-container">
+        <p class="guiding-text">Cost of a pig</p>
+        <input type="text" class="box-display" id="costPigDisplay" placeholder="20,000" readonly>
+      </div>
+      </div>
+
+      <div class="total-input-display-container">
+<h4 class="calc-title">Total revenue</h4>
+      <img width="30" height="30" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>
+        <div class="input-guiding-container">
+        <p class="guiding-text">Total amount</p>
+        <input type="text" class="box-display" id="revenueDisplay" placeholder="200,000" readonly>
+      </div>
+      </div>
+
+    </div>
+    <div class="vertical-line"></div> <!-- Vertical line between pig-container and feed-container -->
+    <div class="feed-container">
+      <h3 class="container-title">Feeds</h3>
+      <div class="input-display-container">
+        <div class="input-guiding-container">
+        <p class="guiding-text">Qty in 1 month</p>
+        <input type="text" class="box-input" id="monthlyQty" placeholder="Enter value" oninput="updateBoxDisplay(this)">
+      </div>
+      <img width="30" height="30" src="https://img.icons8.com/fluency/48/pig-food.png" alt="pig-food"/>
+        <div class="input-guiding-container">
+        <p class="guiding-text">Qty in 3 months</p>
+        <input type="text" class="box-display" id="qtyDisplay" placeholder="30 pcs" readonly>
+      </div>
+      </div>
+
+      <div class="input-display-container">
+        <div class="input-guiding-container">
+        <p class="guiding-text">Cost of 1 bag</p>
+        <input type="text" class="box-input" id="bagCost" placeholder="Enter value" oninput="updateBoxDisplay(this)">
+      </div>
+      <img width="30" height="30" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>
+      <div class="special-display-container">
+        <div class="input-guiding-container">
+        <p class="guiding-text">Cost in 1 month</p>
+        <input type="text" class="box-display" id="bagCostDisplay" placeholder="21,000" readonly>
+      </div>
+      <div class="input-guiding-container">
+        <p class="guiding-text">Cost in 3 month</p>
+        <input type="text" class="box-display" id="bagsCostDisplay" placeholder="63,000" readonly>
+      </div>
+      </div>
+      </div>
+
+      <div class="total-input-display-container">
+        <h4 class="calc-title">Total leftover</h4>
+              <img width="30" height="30" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>
+                <div class="input-guiding-container">
+                <p class="guiding-text">Total amount</p>
+                <input type="text" class="box-display" id="leftoverDisplay" placeholder="137,000" readonly>
+              </div>
+              </div>
+
+      <!-- Add content for feed-container here -->
+    </div>
+
+    <div class="vertical-line"></div> <!-- Vertical line between feed-container and profit-container -->
+
+    <div class="profit-container">
+      <h3 class="container-title">Profit</h3>
+      <div class="input-display-container">
+        <div class="special-input-container">
+        <div class="input-guiding-container">
+        <p class="guiding-text">How many pigs?</p>
+        <input type="text" class="box-input" id="howManyPigs" placeholder="Enter value" oninput="updateBoxDisplay(this)">
+      </div>
+
+      <div class="input-guiding-container">
+        <p class="guiding-text">Price bought</p>
+        <input type="text" class="box-input" id="priceBought" placeholder="Enter value" oninput="updateBoxDisplay(this)">
+      </div>
+
+      <div class="input-guiding-container">
+        <p class="guiding-text">Additional expenses</p>
+        <input type="text" class="box-input" id="additionalExpenses" placeholder="Enter value" oninput="updateBoxDisplay(this)">
+      </div>
+
+    </div>
+      <img width="30" height="30" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>
+        <div class="input-guiding-container">
+        <p class="guiding-text">Total cost of pigs</p>
+        <input type="text" class="box-display" id="totalPigDisplay" placeholder="44,340" readonly>
+      </div>
+      </div>
+
+      <div class="total-input-display-container">
+        <h4 class="calc-title">Total profit</h4>
+        <img width="30" height="30" src="https://img.icons8.com/color/48/25-percents--v1.png" alt="25-percents--v1"/>
+                <div class="input-guiding-container">
+                <p class="guiding-text">Total amount</p>
+                <input type="text" class="box-display" id="profitDisplay" placeholder="92,660" readonly>
+              </div>
+              </div>
+      
+      <!-- Add content for profit-container here -->
+    </div>
+
+  </div>
+</section>
+
 
 <footer>
   <div class="footer-content">
@@ -2391,7 +3505,7 @@ hr {
       </div>
   </div>
 
-  <hr>
+  <hr class="footer-divider">
   <div class="footer-bottom">
       <p>&copy; 2024 All rights reserved.</p>
       <ul class="footer-bottom-nav">
@@ -2634,6 +3748,530 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     startUpdateCycle();
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollableRectangles = document.querySelector('.history-section .scrollable-rectangles');
+    const rectangleColumn = document.querySelector('.history-section .rectangle-column');
+    const clientContainer = document.querySelector('.history-section .client-container');
+
+    scrollableRectangles.addEventListener('scroll', function() {
+      const scrollLeft = scrollableRectangles.scrollLeft;
+      rectangleColumn.scrollLeft = scrollLeft;
+      clientContainer.scrollLeft = scrollLeft;
+    });
+
+    rectangleColumn.addEventListener('scroll', function() {
+      const scrollLeft = rectangleColumn.scrollLeft;
+      scrollableRectangles.scrollLeft = scrollLeft;
+      clientContainer.scrollLeft = scrollLeft;
+    });
+
+    clientContainer.addEventListener('scroll', function() {
+      const scrollLeft = clientContainer.scrollLeft;
+      scrollableRectangles.scrollLeft = scrollLeft;
+      rectangleColumn.scrollLeft = scrollLeft;
+    });
+  });
+
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const scrollableRectangles = document.querySelectorAll('.history-section .scrollable-rectangles');
+
+    function syncScroll(e) {
+      scrollableRectangles.forEach(el => {
+        if (el !== e.target) {
+          el.scrollTop = e.target.scrollTop;
+        }
+      });
+    }
+
+    scrollableRectangles.forEach(el => el.addEventListener('scroll', syncScroll));
+  });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const currentCheckbox = document.getElementById('current');
+    const previousCheckbox = document.getElementById('previous');
+
+    const currentRectangles = document.querySelectorAll('.mini-current-rectangle');
+    const previousRectangles = document.querySelectorAll('.mini-previous-rectangle');
+    const priceTitleElement = document.querySelector('.comparison-chart-rectangle .title');
+    const comparisonContainer = document.querySelector('.comparison-container');
+
+    // Set the initial transition and width for the rectangles
+    currentRectangles.forEach(rectangle => {
+        rectangle.style.transition = 'width 1s ease, opacity 0.5s ease, background-color 0.5s ease, color 0.5s ease';
+        rectangle.style.width = '1px'; // Initial width set to 1px
+    });
+    previousRectangles.forEach(rectangle => {
+        rectangle.style.transition = 'width 1s ease, opacity 0.5s ease, background-color 0.5s ease, color 0.5s ease';
+        rectangle.style.width = '1px'; // Initial width set to 1px
+    });
+
+    // Function to grow rectangles without checking checkbox status
+    function growRectanglesAutomatically() {
+        currentRectangles.forEach(rectangle => {
+            rectangle.style.width = '160px'; // Grow to full width
+        });
+        previousRectangles.forEach(rectangle => {
+            rectangle.style.width = '150px'; // Grow to full width
+        });
+    }
+
+    // Function to update rectangles based on checkbox selection
+    function updateComparison() {
+        if (currentCheckbox.checked) {
+            previousRectangles.forEach(rectangle => {
+                rectangle.style.opacity = '0.5';
+                rectangle.style.backgroundColor = '#a1d0f0';
+                rectangle.style.color = '#4B6576';
+
+                const li = rectangle.closest('.price-chart-wrapper').querySelector('li');
+                li.style.opacity = '0.4';
+            });
+            
+            currentRectangles.forEach(rectangle => {
+                rectangle.style.opacity = '1';
+                rectangle.style.backgroundColor = '#2c91bd';
+                rectangle.style.color = '#FFFFFF';
+
+                const li = rectangle.closest('.price-chart-wrapper').querySelector('li');
+                li.style.opacity = '1';
+            });
+
+            // Change the price title back to 250/kg PHP
+            priceTitleElement.textContent = 'Sold at price: 250/kg PHP';
+        }
+
+        if (previousCheckbox.checked) {
+            currentRectangles.forEach(rectangle => {
+                rectangle.style.opacity = '0.5';
+                rectangle.style.backgroundColor = '#a1d0f0';
+                rectangle.style.color = '#4B6576';
+
+                const li = rectangle.closest('.price-chart-wrapper').querySelector('li');
+                li.style.opacity = '0.4';
+            });
+            
+            previousRectangles.forEach(rectangle => {
+                rectangle.style.opacity = '1';
+                rectangle.style.backgroundColor = '#2c91bd';
+                rectangle.style.color = '#FFFFFF';
+
+                const li = rectangle.closest('.price-chart-wrapper').querySelector('li');
+                li.style.opacity = '1';
+            });
+
+            // Change the price title to 240/kg PHP
+            priceTitleElement.textContent = 'Sold at price: 240/kg PHP';
+        }
+    }
+
+    // IntersectionObserver to detect when the comparison-container is in view
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                growRectanglesAutomatically();
+            }
+        });
+    }, {
+        threshold: 0.5 // Trigger when 50% of the container is visible
+    });
+
+    observer.observe(comparisonContainer);
+
+    // Checkbox change events
+    currentCheckbox.addEventListener('change', function() {
+        if (currentCheckbox.checked) {
+            previousCheckbox.checked = false;
+        }
+        updateComparison();
+    });
+
+    previousCheckbox.addEventListener('change', function() {
+        if (previousCheckbox.checked) {
+            currentCheckbox.checked = false;
+        }
+        updateComparison();
+    });
+
+    // Initial update based on the default state
+    updateComparison();
+});
+
+
+function updateBoxDisplay(input) {
+    // Get the value from the input and multiply by 1 (this keeps it the same in this case)
+    let pigCount = input.value * 1;
+
+    // Update the display field with the result followed by " pcs"
+    document.getElementById('pigAmountDisplay').placeholder = pigCount + " pcs";
+}
+
+// Optionally, you can initialize the display with the current value of the input field
+document.addEventListener('DOMContentLoaded', function() {
+    let initialInput = document.getElementById('pigAmount').value;
+    updateBoxDisplay({ value: initialInput });
+});
+
+
+function updateBoxDisplay(input) {
+    // Get the value from the input fields
+    let pigCount = document.getElementById('pigAmount').value * 1;
+    let averageKg = document.getElementById('averageKg').value * 1;
+
+    // Update the display fields
+    if (input.id === 'pigAmount' || input.id === 'averageKg') {
+        document.getElementById('averageKgDisplay').placeholder = (pigCount * averageKg) + " kg";
+    }
+
+    // Update the display field for pigAmount (as done previously)
+    if (input.id === 'pigAmount') {
+        document.getElementById('pigAmountDisplay').placeholder = pigCount + " pcs";
+    }
+
+    // You can add more conditions for other inputs as needed
+}
+
+// Initialize display with current values of input fields
+document.addEventListener('DOMContentLoaded', function() {
+    let initialPigAmount = document.getElementById('pigAmount').value;
+    let initialAverageKg = document.getElementById('averageKg').value;
+
+    updateBoxDisplay({ id: 'pigAmount', value: initialPigAmount });
+    updateBoxDisplay({ id: 'averageKg', value: initialAverageKg });
+});
+
+
+function updateBoxDisplay(input) {
+    // Get the value from the input fields
+    let pigCount = document.getElementById('pigAmount').value * 1;
+    let averageKg = document.getElementById('averageKg').value * 1;
+    let marketPrice = document.getElementById('marketPrice').value * 1;
+
+    // Update the display fields
+    if (input.id === 'pigAmount' || input.id === 'averageKg') {
+        document.getElementById('averageKgDisplay').placeholder = (pigCount * averageKg) + " kg";
+    }
+
+    if (input.id === 'marketPrice' || input.id === 'averageKg') {
+        document.getElementById('costPigDisplay').placeholder = (marketPrice * averageKg).toLocaleString() + " PHP";
+    }
+
+    // Update the display field for pigAmount (as done previously)
+    if (input.id === 'pigAmount') {
+        document.getElementById('pigAmountDisplay').placeholder = pigCount + " pcs";
+    }
+
+    // You can add more conditions for other inputs as needed
+}
+
+// Initialize display with current values of input fields
+document.addEventListener('DOMContentLoaded', function() {
+    let initialPigAmount = document.getElementById('pigAmount').value;
+    let initialAverageKg = document.getElementById('averageKg').value;
+    let initialMarketPrice = document.getElementById('marketPrice').value;
+
+    updateBoxDisplay({ id: 'pigAmount', value: initialPigAmount });
+    updateBoxDisplay({ id: 'averageKg', value: initialAverageKg });
+    updateBoxDisplay({ id: 'marketPrice', value: initialMarketPrice });
+});
+
+
+function updateBoxDisplay(input) {
+    // Get the value from the input fields
+    let pigCount = document.getElementById('pigAmount').value * 1;
+    let averageKg = document.getElementById('averageKg').value * 1;
+    let marketPrice = document.getElementById('marketPrice').value * 1;
+
+    // Calculate intermediate values
+    let totalWeight = pigCount * averageKg;
+    let costPerPig = marketPrice * averageKg;
+
+    // Update the display fields
+    if (input.id === 'pigAmount' || input.id === 'averageKg') {
+        document.getElementById('averageKgDisplay').placeholder = totalWeight + " kg";
+    }
+
+    if (input.id === 'marketPrice' || input.id === 'averageKg') {
+        document.getElementById('costPigDisplay').placeholder = costPerPig.toLocaleString() + " PHP";
+    }
+
+    if (input.id === 'pigAmount') {
+        document.getElementById('pigAmountDisplay').placeholder = pigCount + " pcs";
+    }
+
+    // Calculate the revenue based on the number of pigs and cost per pig
+    let revenue = pigCount * costPerPig;
+    document.getElementById('revenueDisplay').placeholder = revenue.toLocaleString() + " PHP";
+
+    // You can add more conditions for other inputs as needed
+}
+
+// Initialize display with current values of input fields
+document.addEventListener('DOMContentLoaded', function() {
+    let initialPigAmount = document.getElementById('pigAmount').value;
+    let initialAverageKg = document.getElementById('averageKg').value;
+    let initialMarketPrice = document.getElementById('marketPrice').value;
+
+    updateBoxDisplay({ id: 'pigAmount', value: initialPigAmount });
+    updateBoxDisplay({ id: 'averageKg', value: initialAverageKg });
+    updateBoxDisplay({ id: 'marketPrice', value: initialMarketPrice });
+});
+
+
+function updateBoxDisplay(input) {
+    // Get the value from the input fields
+    let pigCount = document.getElementById('pigAmount').value * 1;
+    let averageKg = document.getElementById('averageKg').value * 1;
+    let marketPrice = document.getElementById('marketPrice').value * 1;
+    let monthlyQty = document.getElementById('monthlyQty').value * 1;
+
+    // Calculate intermediate values
+    let totalWeight = pigCount * averageKg;
+    let costPerPig = marketPrice * averageKg;
+    let totalQty = monthlyQty * 3;
+
+    // Update the display fields
+    if (input.id === 'pigAmount' || input.id === 'averageKg') {
+        document.getElementById('averageKgDisplay').placeholder = totalWeight + " kg";
+    }
+
+    if (input.id === 'marketPrice' || input.id === 'averageKg') {
+        document.getElementById('costPigDisplay').placeholder = costPerPig.toLocaleString() + " PHP";
+    }
+
+    if (input.id === 'pigAmount') {
+        document.getElementById('pigAmountDisplay').placeholder = pigCount + " pcs";
+    }
+
+    if (input.id === 'monthlyQty') {
+        document.getElementById('qtyDisplay').placeholder = totalQty + " pcs";
+    }
+
+    // Calculate the revenue based on the number of pigs and cost per pig
+    let revenue = pigCount * costPerPig;
+    document.getElementById('revenueDisplay').placeholder = revenue.toLocaleString() + " PHP";
+
+    // You can add more conditions for other inputs as needed
+}
+
+// Initialize display with current values of input fields
+document.addEventListener('DOMContentLoaded', function() {
+    let initialPigAmount = document.getElementById('pigAmount').value;
+    let initialAverageKg = document.getElementById('averageKg').value;
+    let initialMarketPrice = document.getElementById('marketPrice').value;
+    let initialMonthlyQty = document.getElementById('monthlyQty').value;
+
+    updateBoxDisplay({ id: 'pigAmount', value: initialPigAmount });
+    updateBoxDisplay({ id: 'averageKg', value: initialAverageKg });
+    updateBoxDisplay({ id: 'marketPrice', value: initialMarketPrice });
+    updateBoxDisplay({ id: 'monthlyQty', value: initialMonthlyQty });
+});
+
+
+function updateBoxDisplay(input) {
+    // Get the values from the input fields
+    let pigCount = document.getElementById('pigAmount').value * 1;
+    let averageKg = document.getElementById('averageKg').value * 1;
+    let marketPrice = document.getElementById('marketPrice').value * 1;
+    let monthlyQty = document.getElementById('monthlyQty').value * 1;
+    let bagCost = document.getElementById('bagCost').value * 1;
+
+    // Calculate intermediate values
+    let totalWeight = pigCount * averageKg;
+    let costPerPig = marketPrice * averageKg;
+    let totalQty = monthlyQty * 3;
+    let totalBagCost = monthlyQty * bagCost;
+    let totalBagsCost = bagCost * totalQty;
+
+    // Update the display fields
+    if (input.id === 'pigAmount' || input.id === 'averageKg') {
+        document.getElementById('averageKgDisplay').placeholder = totalWeight + " kg";
+    }
+
+    if (input.id === 'marketPrice' || input.id === 'averageKg') {
+        document.getElementById('costPigDisplay').placeholder = costPerPig.toLocaleString() + " PHP";
+    }
+
+    if (input.id === 'pigAmount') {
+        document.getElementById('pigAmountDisplay').placeholder = pigCount + " pcs";
+    }
+
+    if (input.id === 'monthlyQty') {
+        document.getElementById('qtyDisplay').placeholder = totalQty + " pcs";
+        document.getElementById('bagCostDisplay').placeholder = totalBagCost.toLocaleString() + " PHP";
+    }
+
+    if (input.id === 'bagCost') {
+        document.getElementById('bagCostDisplay').placeholder = totalBagCost.toLocaleString() + " PHP";
+        document.getElementById('bagsCostDisplay').placeholder = totalBagsCost.toLocaleString() + " PHP";
+    }
+
+    // Calculate the revenue based on the number of pigs and cost per pig
+    let revenue = pigCount * costPerPig;
+    document.getElementById('revenueDisplay').placeholder = revenue.toLocaleString() + " PHP";
+}
+
+// Initialize display with current values of input fields
+document.addEventListener('DOMContentLoaded', function() {
+    let initialPigAmount = document.getElementById('pigAmount').value;
+    let initialAverageKg = document.getElementById('averageKg').value;
+    let initialMarketPrice = document.getElementById('marketPrice').value;
+    let initialMonthlyQty = document.getElementById('monthlyQty').value;
+    let initialBagCost = document.getElementById('bagCost').value;
+
+    updateBoxDisplay({ id: 'pigAmount', value: initialPigAmount });
+    updateBoxDisplay({ id: 'averageKg', value: initialAverageKg });
+    updateBoxDisplay({ id: 'marketPrice', value: initialMarketPrice });
+    updateBoxDisplay({ id: 'monthlyQty', value: initialMonthlyQty });
+    updateBoxDisplay({ id: 'bagCost', value: initialBagCost });
+});
+
+
+function updateBoxDisplay(input) {
+    // Get the values from the input fields
+    let pigCount = document.getElementById('pigAmount').value * 1;
+    let averageKg = document.getElementById('averageKg').value * 1;
+    let marketPrice = document.getElementById('marketPrice').value * 1;
+    let monthlyQty = document.getElementById('monthlyQty').value * 1;
+    let bagCost = document.getElementById('bagCost').value * 1;
+
+    // Calculate intermediate values
+    let totalWeight = pigCount * averageKg;
+    let costPerPig = marketPrice * averageKg;
+    let totalQty = monthlyQty * 3;
+    let totalBagCost = monthlyQty * bagCost;
+    let totalBagsCost = bagCost * totalQty;
+
+    // Update the display fields
+    if (input.id === 'pigAmount' || input.id === 'averageKg') {
+        document.getElementById('averageKgDisplay').placeholder = totalWeight + " kg";
+    }
+
+    if (input.id === 'marketPrice' || input.id === 'averageKg') {
+        document.getElementById('costPigDisplay').placeholder = costPerPig.toLocaleString() + " PHP";
+    }
+
+    if (input.id === 'pigAmount') {
+        document.getElementById('pigAmountDisplay').placeholder = pigCount + " pcs";
+    }
+
+    if (input.id === 'monthlyQty') {
+        document.getElementById('qtyDisplay').placeholder = totalQty + " pcs";
+        document.getElementById('bagCostDisplay').placeholder = totalBagCost.toLocaleString() + " PHP";
+    }
+
+    if (input.id === 'bagCost') {
+        document.getElementById('bagCostDisplay').placeholder = totalBagCost.toLocaleString() + " PHP";
+        document.getElementById('bagsCostDisplay').placeholder = totalBagsCost.toLocaleString() + " PHP";
+    }
+
+    // Calculate the revenue based on the number of pigs and cost per pig
+    let revenue = pigCount * costPerPig;
+    document.getElementById('revenueDisplay').placeholder = revenue.toLocaleString() + " PHP";
+
+    // Calculate the leftover amount (revenue minus total bags cost)
+    let leftover = revenue - totalBagsCost;
+    document.getElementById('leftoverDisplay').placeholder = leftover.toLocaleString() + " PHP";
+}
+
+// Initialize display with current values of input fields
+document.addEventListener('DOMContentLoaded', function() {
+    let initialPigAmount = document.getElementById('pigAmount').value;
+    let initialAverageKg = document.getElementById('averageKg').value;
+    let initialMarketPrice = document.getElementById('marketPrice').value;
+    let initialMonthlyQty = document.getElementById('monthlyQty').value;
+    let initialBagCost = document.getElementById('bagCost').value;
+
+    updateBoxDisplay({ id: 'pigAmount', value: initialPigAmount });
+    updateBoxDisplay({ id: 'averageKg', value: initialAverageKg });
+    updateBoxDisplay({ id: 'marketPrice', value: initialMarketPrice });
+    updateBoxDisplay({ id: 'monthlyQty', value: initialMonthlyQty });
+    updateBoxDisplay({ id: 'bagCost', value: initialBagCost });
+});
+
+
+function updateBoxDisplay(input) {
+    // Get the values from the input fields
+    let pigCount = document.getElementById('pigAmount').value * 1;
+    let averageKg = document.getElementById('averageKg').value * 1;
+    let marketPrice = document.getElementById('marketPrice').value * 1;
+    let monthlyQty = document.getElementById('monthlyQty').value * 1;
+    let bagCost = document.getElementById('bagCost').value * 1;
+    let howManyPigs = document.getElementById('howManyPigs').value * 1;
+    let priceBought = document.getElementById('priceBought').value * 1;
+    let additionalExpenses = document.getElementById('additionalExpenses').value * 1;
+
+    // Calculate intermediate values
+    let totalWeight = pigCount * averageKg;
+    let costPerPig = marketPrice * averageKg;
+    let totalQty = monthlyQty * 3;
+    let totalBagCost = monthlyQty * bagCost;
+    let totalBagsCost = bagCost * totalQty;
+    let revenue = pigCount * costPerPig;
+
+    // Calculate total pig cost (howManyPigs * priceBought + additionalExpenses)
+    let totalPigCost = (howManyPigs * priceBought) + additionalExpenses;
+
+    // Calculate leftover and profit
+    let leftover = revenue - totalBagsCost;
+    let profit = leftover - totalPigCost;
+
+    // Update the display fields
+    if (input.id === 'pigAmount' || input.id === 'averageKg') {
+        document.getElementById('averageKgDisplay').placeholder = totalWeight + " kg";
+    }
+
+    if (input.id === 'marketPrice' || input.id === 'averageKg') {
+        document.getElementById('costPigDisplay').placeholder = costPerPig.toLocaleString() + " PHP";
+    }
+
+    if (input.id === 'pigAmount') {
+        document.getElementById('pigAmountDisplay').placeholder = pigCount + " pcs";
+    }
+
+    if (input.id === 'monthlyQty') {
+        document.getElementById('qtyDisplay').placeholder = totalQty + " pcs";
+        document.getElementById('bagCostDisplay').placeholder = totalBagCost.toLocaleString() + " PHP";
+    }
+
+    if (input.id === 'bagCost') {
+        document.getElementById('bagCostDisplay').placeholder = totalBagCost.toLocaleString() + " PHP";
+        document.getElementById('bagsCostDisplay').placeholder = totalBagsCost.toLocaleString() + " PHP";
+    }
+
+    if (input.id === 'howManyPigs' || input.id === 'priceBought' || input.id === 'additionalExpenses') {
+        document.getElementById('totalPigDisplay').placeholder = totalPigCost.toLocaleString() + " PHP";
+    }
+
+    // Update revenue and profit displays
+    document.getElementById('revenueDisplay').placeholder = revenue.toLocaleString() + " PHP";
+    document.getElementById('leftoverDisplay').placeholder = leftover.toLocaleString() + " PHP";
+    document.getElementById('profitDisplay').placeholder = profit.toLocaleString() + " PHP";
+}
+
+// Initialize display with current values of input fields
+document.addEventListener('DOMContentLoaded', function() {
+    let initialPigAmount = document.getElementById('pigAmount').value;
+    let initialAverageKg = document.getElementById('averageKg').value;
+    let initialMarketPrice = document.getElementById('marketPrice').value;
+    let initialMonthlyQty = document.getElementById('monthlyQty').value;
+    let initialBagCost = document.getElementById('bagCost').value;
+    let initialHowManyPigs = document.getElementById('howManyPigs').value;
+    let initialPriceBought = document.getElementById('priceBought').value;
+    let initialAdditionalExpenses = document.getElementById('additionalExpenses').value;
+
+    updateBoxDisplay({ id: 'pigAmount', value: initialPigAmount });
+    updateBoxDisplay({ id: 'averageKg', value: initialAverageKg });
+    updateBoxDisplay({ id: 'marketPrice', value: initialMarketPrice });
+    updateBoxDisplay({ id: 'monthlyQty', value: initialMonthlyQty });
+    updateBoxDisplay({ id: 'bagCost', value: initialBagCost });
+    updateBoxDisplay({ id: 'howManyPigs', value: initialHowManyPigs });
+    updateBoxDisplay({ id: 'priceBought', value: initialPriceBought });
+    updateBoxDisplay({ id: 'additionalExpenses', value: initialAdditionalExpenses });
 });
 
 </script>
