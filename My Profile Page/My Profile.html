@@ -1716,6 +1716,43 @@ margin-right: 5px;
     font-weight: 500;
 }
 
+.feeds-listing-dropbox {
+  width: 100%;
+    width: 150px;
+    height: 18.8px;
+    border: 2px solid #E0E0E0;
+    border-radius: 5px;
+    background-color: #ffffff; /* Slightly grey background */
+    font-size: 14px;
+    color: #333;
+    font-family: "Inter", sans-serif;
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+    -webkit-appearance: none; /* Remove default arrow in WebKit browsers */
+    -moz-appearance: none; /* Remove default arrow in Firefox */
+    appearance: none; /* Remove default arrow in other browsers */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2714%27%20height%3D%2714%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27%23333%27%3E%3Cpath%20d%3D%27M7%2010l5%205%205-5z%27/%3E%3C/svg%3E'); /* Custom arrow icon */
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Position the arrow with margin-right 10px */
+    background-size: 25px 25px; /* Size of the arrow icon */
+    background-image: 
+        linear-gradient(to right, #33333358 1px, transparent 1px), /* Vertical line */
+        url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2714%27%20height%3D%2714%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27%23333%27%3E%3Cpath%20d%3D%27M7%2010l5%205%205-5z%27/%3E%3C/svg%3E'); /* Custom arrow icon */
+    background-repeat: no-repeat;
+    background-position: right 25px center, right 1px center; /* Position the arrow with margin-right 10px and the line with margin-right 20px */
+    background-size: 1px 10px, 25px 25px; /* Size of the line and the arrow icon */
+}
+
+.feeds-listing-dropbox:focus {
+    border-color: #5EA91E; /* Change border color when focused */
+    outline: none; /* Remove default outline */
+}
+
+.feeds-listing-dropbox option[value="placeholder"] {
+    color: #333;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+}
+
 .title-price-container {
   display: flex;
   width: 400px;
@@ -1941,6 +1978,13 @@ margin-right: 5px;
   gap: 20px;
   padding: 5px;
   padding-left: 0px;
+}
+
+.checkbox-question-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .checkbox-item {
@@ -2229,8 +2273,44 @@ input[type="checkbox"]#current:checked::before {
 }
 
 .calculator-rectangle {
+  position: relative; /* Ensures relative positioning for absolute children */
+  padding-bottom: 60px; /* Add some padding to make space for the conclusion rectangle */
+}
+
+.conclusion-rectangle {
+  position: absolute;
+  bottom: 0; /* Align it to the bottom of the calculator-rectangle */
+  left: 50%; /* Start at the center horizontally */
+  transform: translateX(-50%); /* Center it horizontally */
+  width: 500px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid #7CB342; /* Only a bottom border */
+  background-color: #5fa91e1F; /* No background color */
+  border-radius: 0px; /* No border radius */
+}
+
+#conclusionDisplay {
+  color: #5EA91E; /* Text color to match the border color */
+  font-size: 22px;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  font-weight: 700;
+}
+
+#conclusionText {
+  margin: 0;
+  color: #000;
+  font-size: 18px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+}
+
+.calculator-rectangle {
   height: 590px;
-  width: 1270px;
+  width: 1230px;
   background-color: #F9FFE2;
   border: 1px solid #E0E0E0;
   border-radius: 16px;
@@ -2248,11 +2328,20 @@ input[type="checkbox"]#current:checked::before {
   justify-content: flex-start;
 }
 
+.feeds-container-title {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #182110;
+  font-family: "Inter", sans-serif;
+}
+
 .container-title {
   font-size: 24px;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   color: #182110;
   font-family: "Inter", sans-serif;
 }
@@ -2276,6 +2365,12 @@ input[type="checkbox"]#current:checked::before {
   text-align: center;
   margin-top: 0px;
   font-family: "Inter", sans-serif;
+  transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+.box-input:focus {
+    border-color: #5EA91E; /* Change border color when focused */
+    outline: none; /* Remove default outline */
 }
 
 .box-display {
@@ -2362,11 +2457,64 @@ input[type="checkbox"]#current:checked::before {
   margin-left: 5px;
 }
 
+.display-guiding-text {
+  font-size: 13px;
+  font-weight: 600;
+  color: #000;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 5px;
+  margin-top: 0px;
+  margin-left: 5px;
+}
+
 .input-guiding-container {
   display: flex;
   flex-direction: column;
   width: 140px;
   align-items: flex-start;
+}
+
+.icon-container {
+  position: relative;
+  display: inline-block;
+}
+
+.guiding-text-question-container {
+  display: flex;
+  flex-direction: row;
+  width: 140px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.bi-question-circle.info-icon {
+  margin-right: 10px;
+    font-weight: bold; /* or any other value like 400, 700, etc. */
+}
+
+#comparison-info-icon {
+      font-size: 18px; /* Increase this value to make it bigger */
+  }
+
+.info-box {
+    display: none; /* Hide the box by default */
+    position: absolute;
+    background-color: #f9f9f9;
+    font-family: "Inter", sans-serif;
+    color: #333;
+    text-align: left;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 250px;
+    margin-top: 5px;
+    z-index: 1;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.icon-container:hover .info-box {
+  display: block; /* Show the box on hover */
 }
 
 .calc-title {
@@ -2382,7 +2530,6 @@ input[type="checkbox"]#current:checked::before {
   justify-content: center;
   text-align: center;
 }
-
 
 
 
@@ -3265,6 +3412,7 @@ hr {
   </div>
   <div class="comparison-container">
     <div class="comparison-rectangle">
+      <div class="checkbox-question-container">
       <div class="checkbox-container">
         <div class="checkbox-item">
           <input type="checkbox" id="previous" name="previous">
@@ -3275,6 +3423,11 @@ hr {
           <label for="current">Current</label>
         </div>
       </div>
+      <div class="icon-container">
+      <i id="comparison-info-icon" class="bi bi-question-circle info-icon"></i>
+      <div class="info-box">When you click on "Previous" or "Current," the stats will appear in the right box, allowing you to compare your previous sales statistics with your current ones. The left container provides an overview of your total sales, weight, and earnings.</div>
+    </div>
+    </div>
       <hr class="divider">
       <div class="column-container">
         <div class="comparison-details">
@@ -3343,14 +3496,20 @@ hr {
 
       <div class="input-display-container">
         <div class="input-guiding-container">
-        <p class="guiding-text">Average KG</p>
-        <input type="text" class="box-input" id="averageKg" placeholder="Enter value" oninput="updateBoxDisplay(this)">
-      </div>
-      <img width="30" height="30" src="https://img.icons8.com/material-rounded/24/scales.png" alt="scales"/>
+          <div class="guiding-text-question-container">
+            <p class="guiding-text">Average KG</p>
+            <div class="icon-container">
+              <i class="bi bi-question-circle info-icon"></i>
+              <div class="info-box">What is your estimated weight for one pig at the time of sale?</div>
+            </div>
+          </div>
+          <input type="text" class="box-input" id="averageKg" placeholder="Enter value" oninput="updateBoxDisplay(this)">
+        </div>
+        <img width="30" height="30" src="https://img.icons8.com/material-rounded/24/scales.png" alt="scales"/>
         <div class="input-guiding-container">
-        <p class="guiding-text">Total weight</p>
-        <input type="text" class="box-display" id="averageKgDisplay" placeholder="800 kg" readonly>
-      </div>
+          <p class="guiding-text">Total weight</p>
+          <input type="text" class="box-display" id="averageKgDisplay" placeholder="800 kg" readonly>
+        </div>
       </div>
 
       <div class="input-display-container">
@@ -3377,15 +3536,39 @@ hr {
     </div>
     <div class="vertical-line"></div> <!-- Vertical line between pig-container and feed-container -->
     <div class="feed-container">
-      <h3 class="container-title">Feeds</h3>
+      <h3 class="feeds-container-title">Feeds</h3>
+      <div class="listing-dropbox-container">
+        <p class="guiding-text">When are you selling?</p>
+        <select class="feeds-listing-dropbox">
+            <option value="placeholder" disabled selected></option>
+            <option value="months">1st Month</option>
+            <option value="months">2nd Month</option>
+            <option value="months">3rd Month</option>
+            <option value="months">4th Month</option>
+            <option value="months">5th Month</option>
+            <option value="months">6th Month</option>
+            <option value="months">7th Month</option>
+            <option value="months">8th Month</option>
+            <option value="months">9th Month</option>
+            <option value="months">10th Month</option>
+            <option value="months">11th Month</option>
+            <option value="months">12th Month</option>
+        </select>
+    </div>
       <div class="input-display-container">
         <div class="input-guiding-container">
+          <div class="guiding-text-question-container">
         <p class="guiding-text">Qty in 1 month</p>
+        <div class="icon-container">
+          <i class="bi bi-question-circle info-icon"></i>
+          <div class="info-box">How many feed bags will they consume each month?</div>
+        </div>
+      </div>
         <input type="text" class="box-input" id="monthlyQty" placeholder="Enter value" oninput="updateBoxDisplay(this)">
       </div>
       <img width="30" height="30" src="https://img.icons8.com/fluency/48/pig-food.png" alt="pig-food"/>
         <div class="input-guiding-container">
-        <p class="guiding-text">Qty in 3 months</p>
+        <p class="display-guiding-text">Qty in 3 months</p>
         <input type="text" class="box-display" id="qtyDisplay" placeholder="30 pcs" readonly>
       </div>
       </div>
@@ -3402,7 +3585,7 @@ hr {
         <input type="text" class="box-display" id="bagCostDisplay" placeholder="21,000" readonly>
       </div>
       <div class="input-guiding-container">
-        <p class="guiding-text">Cost in 3 month</p>
+        <p class="display-guiding-text">Cost in 3 month</p>
         <input type="text" class="box-display" id="bagsCostDisplay" placeholder="63,000" readonly>
       </div>
       </div>
@@ -3432,7 +3615,13 @@ hr {
       </div>
 
       <div class="input-guiding-container">
+        <div class="guiding-text-question-container">
         <p class="guiding-text">Price bought</p>
+        <div class="icon-container">
+          <i class="bi bi-question-circle info-icon"></i>
+          <div class="info-box">What was the cost of one pig when you bought it?</div>
+        </div>
+      </div>
         <input type="text" class="box-input" id="priceBought" placeholder="Enter value" oninput="updateBoxDisplay(this)">
       </div>
 
@@ -3460,6 +3649,18 @@ hr {
       
       <!-- Add content for profit-container here -->
     </div>
+
+    <div class="conclusion-rectangle">
+      <p id="conclusionText">You can invest</p>
+      <img width="30" height="30" style="margin-left: 10px; margin-right: 10px;" src="https://img.icons8.com/color/48/total-sales-1.png" alt="total-sales-1"/>
+      <p id="conclusionDisplay">
+        <span id="investmentAmount">0 PHP</span>
+        <span style="font-weight: 500; font-size: 18px; color: #5EA91E;">in</span> 
+        <span id="pigletCount" style="font-weight: 700; font-size: 22px;">0</span> 
+        <span style="font-weight: 500; font-size: 18px; color: #5EA91E;">piglets</span>
+      </p>
+    </div>
+  </div>
 
   </div>
 </section>
@@ -3902,296 +4103,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-function updateBoxDisplay(input) {
-    // Get the value from the input and multiply by 1 (this keeps it the same in this case)
-    let pigCount = input.value * 1;
 
-    // Update the display field with the result followed by " pcs"
-    document.getElementById('pigAmountDisplay').placeholder = pigCount + " pcs";
-}
-
-// Optionally, you can initialize the display with the current value of the input field
-document.addEventListener('DOMContentLoaded', function() {
-    let initialInput = document.getElementById('pigAmount').value;
-    updateBoxDisplay({ value: initialInput });
-});
-
-
-function updateBoxDisplay(input) {
-    // Get the value from the input fields
-    let pigCount = document.getElementById('pigAmount').value * 1;
-    let averageKg = document.getElementById('averageKg').value * 1;
-
-    // Update the display fields
-    if (input.id === 'pigAmount' || input.id === 'averageKg') {
-        document.getElementById('averageKgDisplay').placeholder = (pigCount * averageKg) + " kg";
-    }
-
-    // Update the display field for pigAmount (as done previously)
-    if (input.id === 'pigAmount') {
-        document.getElementById('pigAmountDisplay').placeholder = pigCount + " pcs";
-    }
-
-    // You can add more conditions for other inputs as needed
-}
-
-// Initialize display with current values of input fields
-document.addEventListener('DOMContentLoaded', function() {
-    let initialPigAmount = document.getElementById('pigAmount').value;
-    let initialAverageKg = document.getElementById('averageKg').value;
-
-    updateBoxDisplay({ id: 'pigAmount', value: initialPigAmount });
-    updateBoxDisplay({ id: 'averageKg', value: initialAverageKg });
-});
-
-
-function updateBoxDisplay(input) {
-    // Get the value from the input fields
-    let pigCount = document.getElementById('pigAmount').value * 1;
-    let averageKg = document.getElementById('averageKg').value * 1;
-    let marketPrice = document.getElementById('marketPrice').value * 1;
-
-    // Update the display fields
-    if (input.id === 'pigAmount' || input.id === 'averageKg') {
-        document.getElementById('averageKgDisplay').placeholder = (pigCount * averageKg) + " kg";
-    }
-
-    if (input.id === 'marketPrice' || input.id === 'averageKg') {
-        document.getElementById('costPigDisplay').placeholder = (marketPrice * averageKg).toLocaleString() + " PHP";
-    }
-
-    // Update the display field for pigAmount (as done previously)
-    if (input.id === 'pigAmount') {
-        document.getElementById('pigAmountDisplay').placeholder = pigCount + " pcs";
-    }
-
-    // You can add more conditions for other inputs as needed
-}
-
-// Initialize display with current values of input fields
-document.addEventListener('DOMContentLoaded', function() {
-    let initialPigAmount = document.getElementById('pigAmount').value;
-    let initialAverageKg = document.getElementById('averageKg').value;
-    let initialMarketPrice = document.getElementById('marketPrice').value;
-
-    updateBoxDisplay({ id: 'pigAmount', value: initialPigAmount });
-    updateBoxDisplay({ id: 'averageKg', value: initialAverageKg });
-    updateBoxDisplay({ id: 'marketPrice', value: initialMarketPrice });
-});
-
-
-function updateBoxDisplay(input) {
-    // Get the value from the input fields
-    let pigCount = document.getElementById('pigAmount').value * 1;
-    let averageKg = document.getElementById('averageKg').value * 1;
-    let marketPrice = document.getElementById('marketPrice').value * 1;
-
-    // Calculate intermediate values
-    let totalWeight = pigCount * averageKg;
-    let costPerPig = marketPrice * averageKg;
-
-    // Update the display fields
-    if (input.id === 'pigAmount' || input.id === 'averageKg') {
-        document.getElementById('averageKgDisplay').placeholder = totalWeight + " kg";
-    }
-
-    if (input.id === 'marketPrice' || input.id === 'averageKg') {
-        document.getElementById('costPigDisplay').placeholder = costPerPig.toLocaleString() + " PHP";
-    }
-
-    if (input.id === 'pigAmount') {
-        document.getElementById('pigAmountDisplay').placeholder = pigCount + " pcs";
-    }
-
-    // Calculate the revenue based on the number of pigs and cost per pig
-    let revenue = pigCount * costPerPig;
-    document.getElementById('revenueDisplay').placeholder = revenue.toLocaleString() + " PHP";
-
-    // You can add more conditions for other inputs as needed
-}
-
-// Initialize display with current values of input fields
-document.addEventListener('DOMContentLoaded', function() {
-    let initialPigAmount = document.getElementById('pigAmount').value;
-    let initialAverageKg = document.getElementById('averageKg').value;
-    let initialMarketPrice = document.getElementById('marketPrice').value;
-
-    updateBoxDisplay({ id: 'pigAmount', value: initialPigAmount });
-    updateBoxDisplay({ id: 'averageKg', value: initialAverageKg });
-    updateBoxDisplay({ id: 'marketPrice', value: initialMarketPrice });
-});
-
-
-function updateBoxDisplay(input) {
-    // Get the value from the input fields
-    let pigCount = document.getElementById('pigAmount').value * 1;
-    let averageKg = document.getElementById('averageKg').value * 1;
-    let marketPrice = document.getElementById('marketPrice').value * 1;
-    let monthlyQty = document.getElementById('monthlyQty').value * 1;
-
-    // Calculate intermediate values
-    let totalWeight = pigCount * averageKg;
-    let costPerPig = marketPrice * averageKg;
-    let totalQty = monthlyQty * 3;
-
-    // Update the display fields
-    if (input.id === 'pigAmount' || input.id === 'averageKg') {
-        document.getElementById('averageKgDisplay').placeholder = totalWeight + " kg";
-    }
-
-    if (input.id === 'marketPrice' || input.id === 'averageKg') {
-        document.getElementById('costPigDisplay').placeholder = costPerPig.toLocaleString() + " PHP";
-    }
-
-    if (input.id === 'pigAmount') {
-        document.getElementById('pigAmountDisplay').placeholder = pigCount + " pcs";
-    }
-
-    if (input.id === 'monthlyQty') {
-        document.getElementById('qtyDisplay').placeholder = totalQty + " pcs";
-    }
-
-    // Calculate the revenue based on the number of pigs and cost per pig
-    let revenue = pigCount * costPerPig;
-    document.getElementById('revenueDisplay').placeholder = revenue.toLocaleString() + " PHP";
-
-    // You can add more conditions for other inputs as needed
-}
-
-// Initialize display with current values of input fields
-document.addEventListener('DOMContentLoaded', function() {
-    let initialPigAmount = document.getElementById('pigAmount').value;
-    let initialAverageKg = document.getElementById('averageKg').value;
-    let initialMarketPrice = document.getElementById('marketPrice').value;
-    let initialMonthlyQty = document.getElementById('monthlyQty').value;
-
-    updateBoxDisplay({ id: 'pigAmount', value: initialPigAmount });
-    updateBoxDisplay({ id: 'averageKg', value: initialAverageKg });
-    updateBoxDisplay({ id: 'marketPrice', value: initialMarketPrice });
-    updateBoxDisplay({ id: 'monthlyQty', value: initialMonthlyQty });
-});
-
-
-function updateBoxDisplay(input) {
-    // Get the values from the input fields
-    let pigCount = document.getElementById('pigAmount').value * 1;
-    let averageKg = document.getElementById('averageKg').value * 1;
-    let marketPrice = document.getElementById('marketPrice').value * 1;
-    let monthlyQty = document.getElementById('monthlyQty').value * 1;
-    let bagCost = document.getElementById('bagCost').value * 1;
-
-    // Calculate intermediate values
-    let totalWeight = pigCount * averageKg;
-    let costPerPig = marketPrice * averageKg;
-    let totalQty = monthlyQty * 3;
-    let totalBagCost = monthlyQty * bagCost;
-    let totalBagsCost = bagCost * totalQty;
-
-    // Update the display fields
-    if (input.id === 'pigAmount' || input.id === 'averageKg') {
-        document.getElementById('averageKgDisplay').placeholder = totalWeight + " kg";
-    }
-
-    if (input.id === 'marketPrice' || input.id === 'averageKg') {
-        document.getElementById('costPigDisplay').placeholder = costPerPig.toLocaleString() + " PHP";
-    }
-
-    if (input.id === 'pigAmount') {
-        document.getElementById('pigAmountDisplay').placeholder = pigCount + " pcs";
-    }
-
-    if (input.id === 'monthlyQty') {
-        document.getElementById('qtyDisplay').placeholder = totalQty + " pcs";
-        document.getElementById('bagCostDisplay').placeholder = totalBagCost.toLocaleString() + " PHP";
-    }
-
-    if (input.id === 'bagCost') {
-        document.getElementById('bagCostDisplay').placeholder = totalBagCost.toLocaleString() + " PHP";
-        document.getElementById('bagsCostDisplay').placeholder = totalBagsCost.toLocaleString() + " PHP";
-    }
-
-    // Calculate the revenue based on the number of pigs and cost per pig
-    let revenue = pigCount * costPerPig;
-    document.getElementById('revenueDisplay').placeholder = revenue.toLocaleString() + " PHP";
-}
-
-// Initialize display with current values of input fields
-document.addEventListener('DOMContentLoaded', function() {
-    let initialPigAmount = document.getElementById('pigAmount').value;
-    let initialAverageKg = document.getElementById('averageKg').value;
-    let initialMarketPrice = document.getElementById('marketPrice').value;
-    let initialMonthlyQty = document.getElementById('monthlyQty').value;
-    let initialBagCost = document.getElementById('bagCost').value;
-
-    updateBoxDisplay({ id: 'pigAmount', value: initialPigAmount });
-    updateBoxDisplay({ id: 'averageKg', value: initialAverageKg });
-    updateBoxDisplay({ id: 'marketPrice', value: initialMarketPrice });
-    updateBoxDisplay({ id: 'monthlyQty', value: initialMonthlyQty });
-    updateBoxDisplay({ id: 'bagCost', value: initialBagCost });
-});
-
-
-function updateBoxDisplay(input) {
-    // Get the values from the input fields
-    let pigCount = document.getElementById('pigAmount').value * 1;
-    let averageKg = document.getElementById('averageKg').value * 1;
-    let marketPrice = document.getElementById('marketPrice').value * 1;
-    let monthlyQty = document.getElementById('monthlyQty').value * 1;
-    let bagCost = document.getElementById('bagCost').value * 1;
-
-    // Calculate intermediate values
-    let totalWeight = pigCount * averageKg;
-    let costPerPig = marketPrice * averageKg;
-    let totalQty = monthlyQty * 3;
-    let totalBagCost = monthlyQty * bagCost;
-    let totalBagsCost = bagCost * totalQty;
-
-    // Update the display fields
-    if (input.id === 'pigAmount' || input.id === 'averageKg') {
-        document.getElementById('averageKgDisplay').placeholder = totalWeight + " kg";
-    }
-
-    if (input.id === 'marketPrice' || input.id === 'averageKg') {
-        document.getElementById('costPigDisplay').placeholder = costPerPig.toLocaleString() + " PHP";
-    }
-
-    if (input.id === 'pigAmount') {
-        document.getElementById('pigAmountDisplay').placeholder = pigCount + " pcs";
-    }
-
-    if (input.id === 'monthlyQty') {
-        document.getElementById('qtyDisplay').placeholder = totalQty + " pcs";
-        document.getElementById('bagCostDisplay').placeholder = totalBagCost.toLocaleString() + " PHP";
-    }
-
-    if (input.id === 'bagCost') {
-        document.getElementById('bagCostDisplay').placeholder = totalBagCost.toLocaleString() + " PHP";
-        document.getElementById('bagsCostDisplay').placeholder = totalBagsCost.toLocaleString() + " PHP";
-    }
-
-    // Calculate the revenue based on the number of pigs and cost per pig
-    let revenue = pigCount * costPerPig;
-    document.getElementById('revenueDisplay').placeholder = revenue.toLocaleString() + " PHP";
-
-    // Calculate the leftover amount (revenue minus total bags cost)
-    let leftover = revenue - totalBagsCost;
-    document.getElementById('leftoverDisplay').placeholder = leftover.toLocaleString() + " PHP";
-}
-
-// Initialize display with current values of input fields
-document.addEventListener('DOMContentLoaded', function() {
-    let initialPigAmount = document.getElementById('pigAmount').value;
-    let initialAverageKg = document.getElementById('averageKg').value;
-    let initialMarketPrice = document.getElementById('marketPrice').value;
-    let initialMonthlyQty = document.getElementById('monthlyQty').value;
-    let initialBagCost = document.getElementById('bagCost').value;
-
-    updateBoxDisplay({ id: 'pigAmount', value: initialPigAmount });
-    updateBoxDisplay({ id: 'averageKg', value: initialAverageKg });
-    updateBoxDisplay({ id: 'marketPrice', value: initialMarketPrice });
-    updateBoxDisplay({ id: 'monthlyQty', value: initialMonthlyQty });
-    updateBoxDisplay({ id: 'bagCost', value: initialBagCost });
-});
 
 
 function updateBoxDisplay(input) {
@@ -4205,10 +4117,15 @@ function updateBoxDisplay(input) {
     let priceBought = document.getElementById('priceBought').value * 1;
     let additionalExpenses = document.getElementById('additionalExpenses').value * 1;
 
+    // Get the selected month value from the dropdown
+    let selectedMonthDropdown = document.querySelector('.feeds-listing-dropbox');
+    let selectedMonth = selectedMonthDropdown.options[selectedMonthDropdown.selectedIndex].text;
+    let monthNumber = parseInt(selectedMonth); // Convert the month name to a number
+
     // Calculate intermediate values
     let totalWeight = pigCount * averageKg;
     let costPerPig = marketPrice * averageKg;
-    let totalQty = monthlyQty * 3;
+    let totalQty = monthlyQty * (isNaN(monthNumber) ? 3 : monthNumber); // Default to 3 if no valid month is selected
     let totalBagCost = monthlyQty * bagCost;
     let totalBagsCost = bagCost * totalQty;
     let revenue = pigCount * costPerPig;
@@ -4233,9 +4150,14 @@ function updateBoxDisplay(input) {
         document.getElementById('pigAmountDisplay').placeholder = pigCount + " pcs";
     }
 
-    if (input.id === 'monthlyQty') {
+    if (input.id === 'monthlyQty' || input.className === 'feeds-listing-dropbox') {
         document.getElementById('qtyDisplay').placeholder = totalQty + " pcs";
         document.getElementById('bagCostDisplay').placeholder = totalBagCost.toLocaleString() + " PHP";
+        document.getElementById('bagsCostDisplay').placeholder = totalBagsCost.toLocaleString() + " PHP";
+
+        // Update the guiding texts with the selected month
+        document.querySelector('.display-guiding-text').textContent = `Qty in ${monthNumber} months`;
+        document.querySelectorAll('.display-guiding-text')[1].textContent = `Cost in ${monthNumber} months`;
     }
 
     if (input.id === 'bagCost') {
@@ -4273,6 +4195,135 @@ document.addEventListener('DOMContentLoaded', function() {
     updateBoxDisplay({ id: 'priceBought', value: initialPriceBought });
     updateBoxDisplay({ id: 'additionalExpenses', value: initialAdditionalExpenses });
 });
+
+// Update display when dropdown value changes
+document.querySelector('.feeds-listing-dropbox').addEventListener('change', function() {
+    updateBoxDisplay(this);
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const profitDisplay = document.getElementById('profitDisplay');
+    const investmentAmount = document.getElementById('investmentAmount');
+    const pigletCount = document.getElementById('pigletCount');
+
+    function updateConclusion() {
+        const profit = parseFloat(profitDisplay.placeholder.replace(/[^0-9.-]+/g, ""));
+        if (!isNaN(profit)) {
+            investmentAmount.textContent = profit.toLocaleString() + ' PHP';
+            const piglets = Math.round(profit / 3500);
+            pigletCount.textContent = piglets;
+        } else {
+            investmentAmount.textContent = '0 PHP';
+            pigletCount.textContent = '0';
+        }
+    }
+
+    updateConclusion();
+});
+
+
+function updateBoxDisplay(input) {
+    // Get the values from the input fields
+    let pigCount = document.getElementById('pigAmount').value * 1;
+    let averageKg = document.getElementById('averageKg').value * 1;
+    let marketPrice = document.getElementById('marketPrice').value * 1;
+    let monthlyQty = document.getElementById('monthlyQty').value * 1;
+    let bagCost = document.getElementById('bagCost').value * 1;
+    let howManyPigs = document.getElementById('howManyPigs').value * 1;
+    let priceBought = document.getElementById('priceBought').value * 1;
+    let additionalExpenses = document.getElementById('additionalExpenses').value * 1;
+
+    // Get the selected month value from the dropdown
+    let selectedMonthDropdown = document.querySelector('.feeds-listing-dropbox');
+    let selectedMonth = selectedMonthDropdown.options[selectedMonthDropdown.selectedIndex].text;
+    let monthNumber = parseInt(selectedMonth); // Convert the month name to a number
+
+    // Calculate intermediate values
+    let totalWeight = pigCount * averageKg;
+    let costPerPig = marketPrice * averageKg;
+    let totalQty = monthlyQty * (isNaN(monthNumber) ? 3 : monthNumber); // Default to 3 if no valid month is selected
+    let totalBagCost = monthlyQty * bagCost;
+    let totalBagsCost = bagCost * totalQty;
+    let revenue = pigCount * costPerPig;
+
+    // Calculate total pig cost (howManyPigs * priceBought + additionalExpenses)
+    let totalPigCost = (howManyPigs * priceBought) + additionalExpenses;
+
+    // Calculate leftover and profit
+    let leftover = revenue - totalBagsCost;
+    let profit = leftover - totalPigCost;
+
+    // Update the display fields
+    if (input.id === 'pigAmount' || input.id === 'averageKg') {
+        document.getElementById('averageKgDisplay').placeholder = totalWeight + " kg";
+    }
+
+    if (input.id === 'marketPrice' || input.id === 'averageKg') {
+        document.getElementById('costPigDisplay').placeholder = costPerPig.toLocaleString() + " PHP";
+    }
+
+    if (input.id === 'pigAmount') {
+        document.getElementById('pigAmountDisplay').placeholder = pigCount + " pcs";
+    }
+
+    if (input.id === 'monthlyQty' || input.className === 'feeds-listing-dropbox') {
+        document.getElementById('qtyDisplay').placeholder = totalQty + " pcs";
+        document.getElementById('bagCostDisplay').placeholder = totalBagCost.toLocaleString() + " PHP";
+        document.getElementById('bagsCostDisplay').placeholder = totalBagsCost.toLocaleString() + " PHP";
+
+        // Update the guiding texts with the selected month
+        document.querySelector('.display-guiding-text').textContent = `Qty in ${monthNumber} months`;
+        document.querySelectorAll('.display-guiding-text')[1].textContent = `Cost in ${monthNumber} months`;
+    }
+
+    if (input.id === 'bagCost') {
+        document.getElementById('bagCostDisplay').placeholder = totalBagCost.toLocaleString() + " PHP";
+        document.getElementById('bagsCostDisplay').placeholder = totalBagsCost.toLocaleString() + " PHP";
+    }
+
+    if (input.id === 'howManyPigs' || input.id === 'priceBought' || input.id === 'additionalExpenses') {
+        document.getElementById('totalPigDisplay').placeholder = totalPigCost.toLocaleString() + " PHP";
+    }
+
+    // Update revenue and profit displays
+    document.getElementById('revenueDisplay').placeholder = revenue.toLocaleString() + " PHP";
+    document.getElementById('leftoverDisplay').placeholder = leftover.toLocaleString() + " PHP";
+    document.getElementById('profitDisplay').placeholder = profit.toLocaleString() + " PHP";
+
+    // Update the conclusion rectangle
+    let profitDisplayValue = profit || 0;
+    document.getElementById('investmentAmount').textContent = profitDisplayValue.toLocaleString() + ' PHP';
+    let piglets = Math.round(profitDisplayValue / 3500);
+    document.getElementById('pigletCount').textContent = piglets;
+}
+
+// Initialize display with current values of input fields
+document.addEventListener('DOMContentLoaded', function() {
+    let initialPigAmount = document.getElementById('pigAmount').value;
+    let initialAverageKg = document.getElementById('averageKg').value;
+    let initialMarketPrice = document.getElementById('marketPrice').value;
+    let initialMonthlyQty = document.getElementById('monthlyQty').value;
+    let initialBagCost = document.getElementById('bagCost').value;
+    let initialHowManyPigs = document.getElementById('howManyPigs').value;
+    let initialPriceBought = document.getElementById('priceBought').value;
+    let initialAdditionalExpenses = document.getElementById('additionalExpenses').value;
+
+    updateBoxDisplay({ id: 'pigAmount', value: initialPigAmount });
+    updateBoxDisplay({ id: 'averageKg', value: initialAverageKg });
+    updateBoxDisplay({ id: 'marketPrice', value: initialMarketPrice });
+    updateBoxDisplay({ id: 'monthlyQty', value: initialMonthlyQty });
+    updateBoxDisplay({ id: 'bagCost', value: initialBagCost });
+    updateBoxDisplay({ id: 'howManyPigs', value: initialHowManyPigs });
+    updateBoxDisplay({ id: 'priceBought', value: initialPriceBought });
+    updateBoxDisplay({ id: 'additionalExpenses', value: initialAdditionalExpenses });
+});
+
+// Update display when dropdown value changes
+document.querySelector('.feeds-listing-dropbox').addEventListener('change', function() {
+    updateBoxDisplay(this);
+});
+
 
 </script>
 </main>
