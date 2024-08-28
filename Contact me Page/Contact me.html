@@ -639,6 +639,12 @@ margin-top: 38px; /* Adjust the value to move the navbar down further */
   font-family: "Inter", sans-serif;
 }
 
+.small-input-group {
+  display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px; /* Spacing between each group */
+    width: 376px;
+}
 
 .input-group {
     display: flex;
@@ -661,6 +667,7 @@ margin-top: 38px; /* Adjust the value to move the navbar down further */
     flex-direction: column;
 }
 
+.small-input-group input[type="text"],
 .input-group input[type="text"],
 .input-group input[type="email"],
 .input-group textarea {
@@ -670,8 +677,10 @@ margin-top: 38px; /* Adjust the value to move the navbar down further */
     padding: 10px; /* Padding inside the input fields */
     font-size: 16px; /* Adjustable based on your design */
     transition: border-color 0.3s ease;
+    height: 40px;
 }
 
+.small-input-group input[type="text"]:focus,
 .input-group input[type="text"]:focus,
 .input-group input[type="email"]:focus,
 .input-group textarea:focus {
@@ -682,6 +691,10 @@ margin-top: 38px; /* Adjust the value to move the navbar down further */
 .input-group input[type="text"] {
     width: 355px; /* Width for First and Last Name */
     height: 40px; /* Height for all inputs except textarea */
+}
+
+.small-input-group input[type="text"] {
+  width: 376px;
 }
 
 .input-group input[type="email"] {
@@ -1064,13 +1077,13 @@ hr {
 <div class="input-wrap">          
 <div class="small-text-input-group">
   <div class="guiding-text">First name</div>
-          <div class="input-group">
+          <div class="small-input-group">
             <input type="text" id="first-name" placeholder="">
           </div>
         </div>
 <div class="small-text-input-group">
   <div class="guiding-text">Last name</div>
-          <div class="input-group">
+          <div class="small-input-group">
             <input type="text" id="last-name" placeholder="">
         </div>
       </div>
