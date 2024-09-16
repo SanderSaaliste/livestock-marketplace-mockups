@@ -1,0 +1,1654 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Email Verification</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<style>
+
+        /* Header styles */
+        header {
+            /* background-image: url(header.png);   logicdigger css remove this
+            height: 100vh; /* Make the image responsive logicdigger css remove this */
+            width: 100%; 
+            object-fit: cover; /* Ensure the image covers the entire header */
+            filter: brightness(0.);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 99;
+        }
+
+        /***logicdigger css***/
+
+.heor-content {
+    width: 100%;
+    max-width: 1270px;
+    margin: 0 auto;
+    padding: 12px 25px;
+}
+
+  /***logicdigger css ***/
+        .navbar-toggler, .navbar-close {
+            display: none;
+            background-color: transparent;
+            border: none;
+            font-size: 35px;
+            cursor: pointer;
+        }
+        .navbar-nav {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            flex: 1;
+            justify-content: space-between;
+        }
+        .navbar-nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #3c5823;
+    font-weight: 600;
+}
+        .navbar-nav .icons a {
+            margin: 0 5px;
+        }
+        .navbar-collapse {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            flex: 1;
+        }
+
+        @media only screen and (min-width: 1024px) and (max-width: 1350px)  {
+          .image-item {
+            margin-bottom: 20px !important;
+          }
+          .navbar-nav .nav-link:nth-child(6) {
+            margin: 0 !important;
+          }
+          .rectangle-container{
+            display: block !important;
+            text-align: center;
+          }
+          .rectangle {
+    width: 25% !important;
+    display:inline-block !important;
+  }
+  .rectangle li img {
+    height: 10%;
+    width: 10% !important;
+    padding-right: 3%;
+}
+  .rectangle img {
+    width: 100% !important;
+  }
+        }
+        @media only screen and (min-width: 768px) and (max-width: 1024px)  {
+        .rectangle-container  .rectangle img {
+    width: 310px !important;
+}
+.sell-us-content{
+  display: block !important;
+  margin-bottom: 20px;
+}
+.rectangle-container .rectangle {
+    width: 300px !important;
+}
+.rectangle-container {
+    flex-wrap: wrap;
+}
+.rectangle-container .rectangle li img {
+    width: 10% !important;
+}
+footer {
+    height: unset !important;
+}
+.footer-columns {
+    display: block !important;
+}
+main .listing-title .title{
+  text-align: center !important;
+}
+  }
+  @media (max-width: 400px) { 
+  .search-container input[type=text] {
+    padding: 10px;
+    width: 200px !important;
+}
+.rectangle {
+        max-width: 80% !important;
+        margin: 0 auto !important;
+        margin-bottom: 20px !important;
+    }
+    .rectangle img {
+    width: 100% !important;
+    max-width: 350px;
+}
+.rectangle li img {
+    height: 10%;
+    width: 10% !important;
+    padding-right: 3%;
+}
+  }
+        @media (max-width: 1024px) {
+            .navbar-nav {
+               
+                flex-direction: column;
+                background-color: #f8f9fa;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                padding: 10px 0;
+            }
+            .navbar-collapse.show {
+  display: block !important;
+}
+.navbar-collapse {
+    display: none;
+}
+.navbar .container {
+    display: block;
+}
+.image-item {
+    margin-bottom: 20px !important;
+}
+            .navbar-nav .nav-link:nth-child(6){
+              margin: 0 !important;
+            }
+            .navbar-nav a {
+              padding: 10px 15px;
+          }
+            .navbar-nav.show {
+                display: flex;
+            }
+            .navbar-toggler {
+                display: block;
+            }
+            .navbar-close {
+                display: block;
+                align-self: flex-end;
+                margin: 10px 20px;
+                position: absolute;
+            }
+
+            span.navbar-toggler-icon {
+    float: right;
+    margin-right: 20px;
+}
+.navbar {
+    margin-top: 20px !important;
+}
+.navbar img {
+    margin-left: 20px;
+}
+        }
+
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}   
+.navbar .container {
+    width: 100%;
+    max-width: 1270px;
+    margin: auto;
+} 
+.heor-content {
+    width: 100%;
+    max-width: 1270px;
+    margin: 0 auto;
+}
+
+.hero-iner {
+    display: flex;
+    align-items: center;
+    height: 20vh;
+    background-size: cover;
+    background-position: bottom center;
+}
+
+.hero-section {
+    position: relative;
+}
+
+.image-item1 {
+    background: #39b84e1c;
+}
+.image-item2 {
+    background: #ffa8262c;
+}
+.image-item3 {
+    background: #2c91bd29;
+}
+.image-item4 {
+    background: #5aa3fc2b;
+}
+
+  /***logicdigger css end ***/
+
+    body  {
+      font-family: "Inter", sans-serif;
+        font-weight: 450;
+        font-size: 14px;
+        color: rgb(79, 79, 79);
+        width: 100%; /* Make the image responsive */
+        height: 100%; /* Make the image responsive */
+        overflow-x: hidden; /* Prevents horizontal scrolling */
+    } 
+
+.inter-font {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+    body {
+    height: auto;
+    }
+    .mochiy-pop-one-regular {
+  font-family: "Mochiy Pop One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+    .navbar-nav .nav-link:nth-child(6) {
+        margin-right: 280px; /*Adjust logo*/
+    }
+    .navbar-nav .nav-link:nth-child(1) {
+        margin-right: px;
+    }
+    .signup-button {
+      color: rgba(255, 255, 255, 0.952) !important;
+      background-color: #000000ce; /* Change background color to a prominent color */
+      border-radius: 20px; /* Add rounded corners */
+      padding: 10px 20px; /* Add padding to increase button size */
+      transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+    }
+    .signup-button:hover {
+background-color: #ff4632c8;
+    }
+    .navbar {
+margin-top: 38px; /* Adjust the value to move the navbar down further */
+}
+    .main-title {
+      margin-top: 30px;
+      font-size: 48px;
+      font-weight: bolder;
+      font-family: "Mochiy Pop One", sans-serif;
+      color: black;
+    }
+    .h4-title {
+      margin-top: -20px;
+      font-size: 23px;
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+    }
+    .search-container {
+      margin-top: -0px;
+    }
+
+    .submit-container {
+      margin-top: -57px;
+      margin-left: 305px;
+      padding-left: 10px;
+    }
+    .submit-container button[type=submit] {
+      width: 149.33px;
+      border: 1px solid #ff4632c8;
+      background-color: #ff4632c8;
+      border-radius: 7.5px;
+      outline: none;
+      padding-top: 38px;
+      font-size: 15px;
+      font-weight: 600;
+      color: whitesmoke;
+      display: flex;
+      justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    padding: 19px;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+    }
+    .submit-container button[type=submit]:hover {
+    background-color: #ff4632e6; /* Darker color when hovered */
+    }
+    .bi-search {
+      position: absolute;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      padding: 19px;
+    }
+    .navbar-brand {
+      margin-right: 0px;
+      position: fixed;
+      height: auto;
+    }
+    .container { 
+  display:flex; /* Use flexbox */
+  justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    }
+    .bi-heart {
+      font-size: 20px;
+      font-weight: 900;
+      padding-right: 5px;
+    }
+    .bi-cart3 {
+      font-size: 20px;
+      font-weight: 900px;
+      padding-right: 10px;
+    }
+   
+        main {
+        /* Can use flex here */
+  height: auto; /* Set main height to full viewport height */
+}
+
+.logo-section {
+    max-width: 1270px; /* Ensure container matches navbar width */
+    margin: 0 auto; /* Center the container */
+    padding: 20px 0; /* Adjust padding as needed */
+    text-align: center; /* Align text to the left */
+}
+
+.nav-hr {
+    width: 100%;
+    border: none;
+    border-top: 0,3px solid #00000043; /* Adjust the color and thickness as needed */
+    margin-top: 10px; /* Adjust the spacing above the hr */
+}
+
+.pagination-section {
+  max-width: 1270px; /* Ensure container matches navbar width */
+    margin: 0 auto; /* Center the container */
+    padding: 20px 0; /* Adjust padding as needed */
+    text-align: left; /* Align text to the left */
+    margin-top: 70px;
+    padding-bottom: 0px;
+}
+
+.pagination-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.pagination-dots .dot {
+    height: 4px;
+    width: 55px;
+    background-color: #D9D9D9;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 0 3px;
+    transition: background-color 0.3s;
+}
+
+.pagination-dots .dot.active {
+    background-color: #5EA91E;
+}
+
+.message-box {
+    width: 100%;
+    display: flex;
+    max-width: 1270px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    flex-direction: column;
+    height: auto
+}
+
+.message-content {
+    background-color: #ffffff; /* Light gray background */
+    border-radius: 30px; /* Rounded corners */
+    padding: 10px 30px; /* Padding inside the box */
+    text-align: center; /* Center the text */
+    max-width: 450px; /* Maximum width of the box */
+    width: 100%; /* Responsive width */
+    justify-content: center;
+    align-items: center;
+}
+
+.message-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+.message-title .bi-envelope {
+    font-size: 50px; /* Adjust the icon size */
+    color: #5EA91E; /* Green color for the envelope icon */
+    border-radius: 50%; /* Makes the border circular */
+    padding: 15px; /* Adjust padding to fit the circle */
+    display: inline-flex; /* Centers the icon within the circle */
+    justify-content: center;
+    align-items: center;
+    width: 80px; /* Set width for the circle */
+    height: 80px; /* Set height for the circle */
+    background-color: #5fa91e36; /* Fill color for the circle */
+    margin-bottom: 30px;
+}
+
+.message-content h3 {
+    margin: 0;
+    font-size: 26px;
+    color: #000000; /* Green text color */
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.message-content p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333; /* Dark gray text color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Inter", sans-serif;
+}
+
+.user-email {
+    font-size: 16px;
+    color: #333; /* Dark gray text color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.below-p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333; /* Dark gray text color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Inter", sans-serif;
+}
+
+
+
+.listing-info {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.listing-input-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1270px;
+    margin-top: 30px;
+}
+
+.guiding-text {
+  display: flex;
+  width: 508px;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 7px;
+}
+
+.guiding-text-vitamin {
+  display: flex;
+  width: 55%;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 7px;
+}
+
+.listing-input {
+    width: 100%;
+    max-width: 470px;
+    padding: 10px 20px;
+    height: 25px;
+    border: 2px solid #f5f5f5;
+    border-radius: 5px;
+    background-color: #f5f5f5; /* Slightly grey background */
+    font-size: 14px;
+    color: #333;
+    font-family: "Inter", sans-serif;
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+.listing-input::placeholder {
+    color: #999;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+}
+
+.listing-input:focus {
+    border-color: #5EA91E; /* Change border color when focused */
+    outline: none; /* Remove default outline */
+}
+
+.listing-dropbox-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1270px;
+    margin-top: 30px;
+}
+
+.listing-dropbox {
+    width: 100%;
+    max-width: 513px;
+    padding: 10px 20px;
+    height: 45px;
+    border: 2px solid #f5f5f5;
+    border-radius: 5px;
+    background-color: #f5f5f5; /* Slightly grey background */
+    font-size: 14px;
+    color: #333;
+    font-family: "Inter", sans-serif;
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+    -webkit-appearance: none; /* Remove default arrow in WebKit browsers */
+    -moz-appearance: none; /* Remove default arrow in Firefox */
+    appearance: none; /* Remove default arrow in other browsers */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2714%27%20height%3D%2714%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27%23333%27%3E%3Cpath%20d%3D%27M7%2010l5%205%205-5z%27/%3E%3C/svg%3E'); /* Custom arrow icon */
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Position the arrow with margin-right 10px */
+    background-size: 25px 25px; /* Size of the arrow icon */
+    background-image: 
+        linear-gradient(to right, #33333358 1px, transparent 1px), /* Vertical line */
+        url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2714%27%20height%3D%2714%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27%23333%27%3E%3Cpath%20d%3D%27M7%2010l5%205%205-5z%27/%3E%3C/svg%3E'); /* Custom arrow icon */
+    background-repeat: no-repeat;
+    background-position: right 40px center, right 10px center; /* Position the arrow with margin-right 10px and the line with margin-right 20px */
+    background-size: 1px 15px, 25px 25px; /* Size of the line and the arrow icon */
+}
+
+.listing-dropbox:focus {
+    border-color: #5EA91E; /* Change border color when focused */
+    outline: none; /* Remove default outline */
+}
+
+.listing-dropbox option[value="placeholder"] {
+    color: #333;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+}
+
+.vitamin-dropbox-container {
+  width: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 1270px;
+    margin-top: 30px;
+}
+
+.vitamin-dropbox {
+  width: 100%;
+    max-width: 513px;
+    padding: 10px 20px;
+    height: 45px;
+    border: 2px solid #f5f5f5;
+    border-radius: 5px;
+    background-color: #f5f5f5; /* Slightly grey background */
+    font-size: 14px;
+    color: #333;
+    font-family: "Inter", sans-serif;
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+    -webkit-appearance: none; /* Remove default arrow in WebKit browsers */
+    -moz-appearance: none; /* Remove default arrow in Firefox */
+    appearance: none; /* Remove default arrow in other browsers */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2714%27%20height%3D%2714%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27%23333%27%3E%3Cpath%20d%3D%27M7%2010l5%205%205-5z%27/%3E%3C/svg%3E'); /* Custom arrow icon */
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Position the arrow with margin-right 10px */
+    background-size: 25px 25px; /* Size of the arrow icon */
+    background-image: 
+        linear-gradient(to right, #33333358 1px, transparent 1px), /* Vertical line */
+        url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2714%27%20height%3D%2714%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27%23333%27%3E%3Cpath%20d%3D%27M7%2010l5%205%205-5z%27/%3E%3C/svg%3E'); /* Custom arrow icon */
+    background-repeat: no-repeat;
+    background-position: right 40px center, right 10px center; /* Position the arrow with margin-right 10px and the line with margin-right 20px */
+    background-size: 1px 15px, 25px 25px; /* Size of the line and the arrow icon */
+}
+
+.vitamin-dropbox:focus {
+  border-color: #5EA91E; /* Change border color when focused */
+  outline: none; /* Remove default outline */
+}
+
+.image-container {
+  width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1270px;
+    margin-top: 30px;
+}
+
+.image-upload-box {
+    width: 100%;
+    max-width: 470px;
+    height: 200px;
+    border: 2px dashed #5fa91e8d;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 0px;
+    padding: 20px;
+}
+
+.image-upload-box i {
+    font-size: 60px;
+    color: #5fa91e;
+    margin-bottom: 0px;
+}
+
+.image-upload-box p {
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.language-button-container {
+  width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1270px;
+    margin-top: 10px;
+}
+
+.language-button i {
+  margin-right: 8px;
+}
+
+.language-button {
+  width: 120px;
+    height: 35px;
+    border: 1px solid #f5f5f5;
+    background-color: #f5f5f5;
+    border-radius: 43px;
+    outline: none;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;;
+    color: #333;
+    display: flex;
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    padding: 22px;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+    cursor: pointer;
+}
+
+.language-button:hover {
+    background-color: #e3e3e3; /* Darker color when hovered */
+}
+
+.next-button-container {
+width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 1270px;
+    margin-top: 10px;
+    gap: 30px;
+}
+
+.upload-button {
+    width: 120px;
+    height: 35px;
+    border: 1px solid #5EA91E;
+    background-color: #5EA91E;
+    border-radius: 43px;
+    outline: none;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    padding: 22px;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+    cursor: pointer;
+}
+
+.upload-button:hover {
+    background-color: #4e921a; /* Darker color when hovered */
+}
+
+.next-button {
+  width: 140px;
+    height: 35px;
+    border: 1px solid #5EA91E;
+    background-color: #5EA91E;
+    border-radius: 43px;
+    outline: none;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    padding: 22px;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+    cursor: pointer;
+}
+
+.next-button:hover {
+  background-color: #4e921a; /* Darker color when hovered */
+}
+
+.review-button {
+    width: 190px;
+    height: 35px;
+    border: 1px solid white; /* Green border */
+    background-color: white; /* White background */
+    border-radius: 43px;
+    outline: none;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;
+    color: #5EA91E; /* Green text color */
+    display: flex;
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    padding: 22px;
+    transition: background-color 0.3s ease, font-size 0.3s ease; /* Add transition for smooth hover effect */ 
+    cursor: pointer;
+}
+
+.review-button i {
+    margin-left: 15px; /* Add space between the text and icon */
+}
+
+.review-button:hover {
+    font-size: 17px; /* Slightly bigger text size on hover */
+    font-weight: 600;
+}
+
+.small-image-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.upper, .lower {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.small-image-box {
+    width: 250px;
+    height: 150px;
+    border: 2px dashed #5fa91e8d;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+}
+
+.small-upload-button {
+    width: 85px; /* Smaller button size */
+    height: 35px; /* Smaller button size */
+    padding: 0; /* Adjust padding as needed */
+    font-size: 13px;
+}
+
+.upload-text {
+    font-weight: 700;
+    margin-bottom: 5px; /* Add some spacing between text and button */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.small-image-box i {
+    font-size: 24px;
+    color: #5fa91e;
+    margin-bottom: 0px;
+}
+
+.listing-description-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1270px;
+    margin-top: 30px;
+}
+
+.description-input {
+    width: 100%;
+    max-width: 470px;
+    padding: 10px 20px;
+    height: 100px; /* Bigger height for description */
+    border: 2px solid #f5f5f5;
+    border-radius: 5px;
+    background-color: #f5f5f5; /* Slightly grey background */
+    font-size: 14px;
+    color: #333;
+    font-family: "Inter", sans-serif;
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+.description-input::placeholder {
+    color: #999;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+}
+
+.description-input:focus {
+    border-color: #5EA91E; /* Change border color when focused */
+    outline: none; /* Remove default outline */
+}
+
+.vitamin-grid {
+  display: flex;
+  flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 508px;
+}
+
+.vitamin-input-container {
+  width: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1270px;
+    margin-top: 30px;
+}
+
+.vitamin-input-container input {
+  width: 82%;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.vitamin-input-container::placeholder {
+  color: #999;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+}
+
+.vitamin-input-container:focus {
+  border-color: #5EA91E; /* Change border color when focused */
+  outline: none; /* Remove default outline */
+}
+
+.features-title {
+    width: 100%;
+    max-width: 510px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between; /* Align text to the left */
+    margin-top: 20px;
+}
+
+.features-title h3 {
+    font-size: 18px;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    color: #333;
+}
+
+.tips {
+font-size: 10px;
+font-family: "Inter", sans-serif;
+justify-content: flex-end;
+align-items: center;
+
+}
+
+.nav-hr-bottom {
+  margin-top: 50px;
+  height: 0.3px;
+  width: 100%;
+}
+
+.content {
+  text-align: center; /* Center text horizontally */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  font-size: 20px;
+  color: black;
+  font-weight: bolder;
+  font-family: Arial;
+}
+
+.image-item {
+  text-align: center;
+  margin: 0 50px;
+}
+.image-item {
+    text-align: center;
+    margin: 0 15px;
+    padding: 25px;
+    width: 100%;
+    max-width: 242px;
+    border-radius: 30px;
+    height: 100%;
+    min-height: 432px;
+}
+.image-item h3 {
+    font-size: 16px;
+    color: black;
+    text-align: center;
+    font-weight: 700;
+    line-height: 25px;
+}
+.image-item img {
+  margin-bottom: 30px; /* Adjust margin between image and text box */
+  width: 155px; /* Set width to 165 pixels */
+  height: 130px; /* Set height to 185 pixels */
+  margin-top: 20px;
+}
+.image-item:nth-child(4) img {
+  height: 130px; /* Adjust the height for the fourth image */
+  width: 145px;
+}
+.text-box {
+  width: 225px; /* Adjust width of the text box 195px */
+}
+
+.text-box p {
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  text-align: center;
+  line-height: 1.6; /* Adjust this value for desired line spacing */
+}
+.image-item h3 {
+  font-size: 18px;
+  color: black;
+  text-align: center;
+  font-weight: 800;
+  font-family: "Inter", sans-serif;
+}
+.introduction {
+  height: 100vh; /* Make the image responsive */
+            width: 100vw; /* Make the image responsive */
+            object-fit: cover; /* Ensure the image covers the entire header */
+            filter: brightness(0.);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+}
+
+    .feed-section {
+  /* Styles for the feed section container */
+  padding: 20px;
+  background-color: #F9FFE2;
+  margin-top: 100px;
+  min-height: 100vh; /* Ensure the section takes up at least 100% of the viewport height */
+      display: flex;
+      flex-direction: column; /* Align content vertically */
+      justify-content: flex-start; /* !!!<--Use this always in the beginning of the sections-->!!! */
+        align-items: center;
+}
+
+.feed-section-title h2 {
+  /* Styles for the feed section title */
+  font-size: 45px;
+  font-weight: bolder;
+  font-family: "Mochiy Pop One", sans-serif;
+  color: black;
+  margin-top: 40px;  /* Adjust if needed */
+  text-align: center; /* Center text horizontally */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+ /* margin-top: 20vh;  Adjust as needed to position content below header */
+  /* Add padding as well */
+}
+
+.feed-section-content {
+  /* Styles for the feed section content */
+  display: flex;
+  align-items: center;
+  width: 80%;
+  max-width: 1200px;
+  margin-bottom: 0px;
+  margin-top: 60px;
+  /* flex-wrap: wrap;  Use them again */
+  /* justify-content: center;  Use them again */
+  /* flex-grow: 1; Use them again */
+}
+
+.feed-image {
+  flex: 1; /* Take up half of the available space */
+  display: flex;
+  justify-content: center; /* Center image horizontally */
+  align-items: center; /* Center image vertically */
+}
+
+.feed-image img {
+  max-width: 100%; /* Ensure image fits within its container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+.feed-details {
+  flex: 1; /* Take up half of the available space */
+  padding: 40px; /* Add some padding around the details (20px default)*/
+}
+
+.feed-title {
+  font-size: 30px;
+  font-weight: bolder;
+  text-align: center;
+  font-family: "Mochiy Pop One", sans-serif;
+  color: black;
+  margin-bottom: 30px; /* Space between title and description */
+  margin-top: 30px;
+}
+
+.feed-description {
+  font-size: 16px;
+  line-height: 1.6; /* Adjust this value for desired line spacing */
+  font-family: "Inter", sans-serif;
+  text-align: center;
+}
+
+.call-action {
+  font-size: 20px;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  /* font-weight: bold; (Optional)*/
+  color: #4d5149e0;
+  display: flex;
+  align-items: center; /* Center vertically */
+  text-align: center;
+  justify-content: center;
+}
+
+.feed-price img {
+  height: 6.5%;
+  width: 6.5%;
+  margin-right: 10px; /* Space between icon and text, adjust as needed */
+}
+
+.stars img {
+  height: 5%;
+  width: 5%;
+  margin-bottom: 10px;
+}
+
+.feed-details button {
+  width: 238px;
+      height: 35px;
+      border: 1px solid #5EA91E;
+      background-color: #5EA91E;
+      border-radius: 43px;
+      outline: none;
+      font-size: 16px;
+      font-weight: 500;
+      font-family: "Inter", sans-serif;;
+      color: whitesmoke;
+      display: flex;
+      justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    padding: 22px;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+    cursor: pointer;
+}
+
+.feed-details button[type=submit]:hover {
+   background-color: #4e921a; /* Darker color when hovered */
+    }
+
+.support-icon {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.sell-us-section-title h2 {
+    /* Styles for the feed section title */
+    font-size: 32px;
+  font-weight: bolder;
+  color: black;
+  text-align: center; /* Center text horizontally */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  margin-bottom: -15px;
+  font-weight: 550;
+  font-family: "Mochiy Pop One", sans-serif;
+ /* margin-top: 20vh;  Adjust as needed to position content below header */
+  /* Add padding as well */
+}
+
+.sell-us-section-title {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1270px;
+    margin-bottom: 60px;
+}
+
+.sell-us-section {
+    /*  padding: 20px;  Add some padding around the section remove by logic */
+      min-height: 100vh; /* Ensure the section takes up at least 100% of the viewport height */
+      display: flex;
+      flex-direction: column; /* Align content vertically */
+      align-items: center; /* Center content horizontally */
+      justify-content: flex-start; /* Start content at the top */
+      margin-bottom: 0px;
+    }
+
+    .sell-us-content {
+      display: flex;
+      align-items: center; /* Center content vertically within each column */
+      justify-content: space-between; /* Space between image and details */
+      width: 100%; /* Adjust as needed for desired width */
+      max-width: 1270px; /* Adjust as needed for desired max width */
+      /* align-items: flex-start; /*Test*/
+    }
+
+    .sell-us-details {
+      flex: 1; /* Take up half of the available space */
+      padding: 10px; /* Add some padding around the details */
+      display: flex; /*Test*/
+      flex-direction: column; /*Test*/
+      flex-grow: 1; /*Test*/
+    }
+
+    .sell-us-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 35px; /* Adjust as needed for spacing */
+  align-items: center; /* This centers the items vertically */
+}
+
+.sell-us-item img {
+  margin-right: 30px; /* Adjust as needed for spacing */
+  width: 200px; /* Adjust as needed for size */
+  height: auto;
+  /* margin-top: 50px; (Adjusts the image vertically)*/
+}
+
+.sell-us-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.step {
+    font-size: 12px;
+    margin-top: -8px;
+    margin-bottom: -8px;
+    font-family: "Mochiy Pop One", sans-serif;
+    font-weight: 550;
+    color: #C74343;
+}
+
+    .sell-us-title, .second-sell-us-title {
+      font-size: 20px;
+      font-weight: 599;
+      font-family: Arial;
+      color: black;
+      margin-bottom: 0px; /* Space between title and description */
+      margin-top: 20px;
+      font-family: "Mochiy Pop One", sans-serif;
+      /* margin: 0; /*New*/
+    }
+
+    .sell-us-description, .second-sell-us-title-description {
+      font-size: 14px;
+      margin-bottom: -10px; /* Space between description and next element */
+      line-height: 1.6; /* Adjust this value for desired line spacing */
+      font-family: "Inter", sans-serif;
+      /* margin: 0; /*New*/
+    }
+
+    .sell-us-image {
+      flex: 1; /* Take up half of the available space */
+      display: flex;
+      justify-content: center; /* Center image horizontally */
+      align-items: center; /* Center image vertically */
+    }
+
+    .sell-us-image img {
+      max-width: 100%; /* Ensure image fits within its container */
+      height: auto; /* Maintain aspect ratio */
+      border-radius: 20px; /* Smooth edges */
+      margin-top: 20px;
+      max-width: 100%; /*New*/
+      height: auto; /*New*/
+    }
+
+    .get-started {
+      display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1270px;
+    margin-top: 10px;
+    }
+
+    .get-started button {
+      width: 276px;
+      height: 47px;
+      border: 1px solid #5EA91E;
+      background-color: #5EA91E;
+      border-radius: 43px;
+      outline: none;
+      font-size: 16px;
+      font-weight: 500;
+      font-family: "Inter", sans-serif;;
+      color: whitesmoke;
+      display: flex;
+      justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    padding: 23px;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+    cursor: pointer;
+    }
+
+    .get-started button[type=submit]:hover {
+    background-color: #4e921a; /* Darker color when hovered */
+    }
+
+.contact-us-button {
+  width: 542.4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+    footer {
+        background-color: #43662e; /* Dark green background color */
+        color: #ffffff;
+        text-align: center;
+        padding: 50px 0; /* Adjust padding to fit within 600px height */
+        height: 580px; /* Set height to 600px */
+        position: relative;
+    }
+
+    footer .footer-content {
+    padding: 0 50px; /* Add horizontal padding to match the sell-us-section */
+}
+
+    .footer-logo {
+        display: block;
+        margin: 0 auto;
+        height: auto;
+        width: 350px; /* Adjust width as necessary */
+        margin-bottom: 20px;
+    }
+
+    .footer-columns {
+        display: flex;
+        justify-content: space-around;
+        /* align-items: flex-start; /* Align items to the start to fit better within the height */
+        /* align-items: center; /*Change that perhaps?*/
+        margin-top: 5%;
+        height: calc(100% - 100px); /* Ensure columns take up the full height of the footer, accounting for padding */
+}
+
+    .footer-box {
+        max-width: 250px;
+        text-align: left;
+        font-size: 16px; /* Adjust font size to fit within the height */
+        display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    height: 100%; /* Ensure footer-box takes up the full height of the parent */
+    line-height: 1.8; /* Adjust this value for desired line spacing */
+    }
+
+    .footer-box h4 {
+        color: #ffffff;
+        margin-bottom: 15px;
+        font-size: 20px;
+    }
+
+    .footer-box p {
+        color: #d2d2d2;
+        margin: 5px 0;
+        line-height: 1.8; /* Adjust this value for desired line spacing */
+    }
+
+    .footer-nav,
+    .footer-bottom-nav {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-nav li,
+    .footer-bottom-nav li {
+        margin-bottom: 10px; /* Reduce margin to fit better */
+    }
+
+    .footer-nav a,
+    .footer-bottom-nav a {
+        color: #e1e1e1;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .footer-nav a:hover,
+    .footer-bottom-nav a:hover {
+        color: #ffffff;
+    }
+
+    .footer-box input[type=email] {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1.2px solid #e1e1e1;
+        color: #ffffff;
+        padding: 10px 0; /* Remove left padding to align placeholder */
+        width: 235px;
+        margin-top: 15px;
+        outline: none;
+        text-align: left; /* Align text to the left */
+        position: relative;
+}
+
+.email-container {
+    position: relative;
+    display: inline-block;
+}
+
+.email-container::before {
+  content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABdUlEQVR4nO3cPUoDYRRG4UEQV2NjZ6GSqAj+bEBsrWzcnI2L0NbeRgQridHGI8JIJEyKQMi9H/c8CxheOEwymRnSdZIkSZIkSZIkSZIkSZIkSVoxYBu4B+6AnVUfX0sCHph5B/aWPYZWCHj+F8Qo0YDruSB/Ufajt5UF3ALfc1EmwCh6W1ksjjKO3lYWRskHo+SDUZqKchi9rSyMkg9GaSrKUfS2shiO8mGUQEZJCM+UfBZE+QTOoreVhVHyMUpbUc6jt5WFUZqJ8gVcdBkAV8DrwOPRaqbASXSMzf5XrGa3WQ4ig2z1I5QhSB/lEnjpB1U2Df/IKvylPs/L3wjGaCOG97XWzRj5Y/xe6h9HbyuHxTF8pLtuxkgEz4z0MSZ+TOWK4VuM62aMNmKMo7eVgzHywBh5YIw8MEYTMUbR28rBGHkANwNnhn8cEPh2zGQghv93EhRkA3gzRiLAKfAEPAK70XskSZIkSZIkSZIkSZIkSZK6cD+4pa0FeKE3zwAAAABJRU5ErkJggg==');
+    position: absolute;
+    right: -15px; /* Adjust the position as needed */
+    bottom: 25px; /* Adjust the position as needed */
+    height: 15px; /* Adjust size as needed */
+    pointer-events: none; /* Ensure the icon does not interfere with input interactions */
+    color: white;
+    size: 1px;
+    transform: scale(0.3); /* Scale the image to 50% of its original size */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 25px; /* Space between the input field and social media icons */
+    gap: 10px;
+}
+
+.social-icon {
+    width: 30px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
+}
+
+.footer-box img {
+height: 35px;
+width: 35px;
+color: white;
+}
+
+    .footer-box input[type=email]::placeholder {
+        color: #b9b9b98b;
+        font-size: 16px;
+    }
+
+    hr {
+        border: 0;
+        height: 1.2px;
+        background-color: #e1e1e1;
+        margin: 80px 0;
+        margin: 120px auto 10px auto; /* Increase the top margin to move the hr line down */
+        width: 90%; /* Set the width to 1320px */
+    }
+
+    .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 12px; /* Adjust font size to fit within the height */
+        width: 90%;
+        margin: 0 auto; /* Center align the footer-bottom container */
+        color: #e1e1e1;
+        padding: 0 60px; /* Add padding to the sides */
+        padding-top: 10px; /* Add some padding at the top */
+    }
+
+    .footer-bottom p {
+        margin: 0px;
+        color: #e1e1e1;
+    }
+
+    .footer-bottom-nav {
+        display: flex;
+        gap: 20px; /* Adjust gap to fit within the height */ /*Use this on navbar as well.*/
+        color: #e1e1e1;
+    }
+
+
+  /***logicdigger css  for mobile***/
+
+
+@media only screen and (max-width: 768px) {
+    
+      footer {
+    height: unset !important;
+}
+.footer-columns {
+    display: unset !important;
+ 
+} 
+.feed-details {
+    padding: 10px !important;
+}
+.feed-section-content {
+    display: block !important;
+    width: 85%;
+}
+.rectangle {
+    margin: auto;
+    margin-bottom: 20px;
+}
+.rectangle-container {
+    display: block !important;
+}
+.listing-title .title , .feed-section-title h2, .sell-us-section-title h2{
+    text-align: center !important;
+    font-size: 25px;
+}
+.sell-us-title, .second-sell-us-title{
+  font-size: 20px;
+}
+.footer-logo {
+    width: 250px;
+    margin-bottom: 20px;
+}
+.feed-title{
+  font-size: 25px;
+}
+
+.heor-content {
+    padding: 30px;
+}
+
+
+.navbar-nav a {
+    text-decoration: none;
+    color: #000;
+    padding: 10px 20px;
+    text-align: center;
+    margin: auto;
+    font-weight: 500;
+}
+
+
+.sell-us-content {
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1200px;
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.sell-us-item {
+    display: block !important;
+}
+.footer-bottom {
+    display: block !important;
+     width: unset !important;
+}
+hr {
+    width: 100%;
+}
+.footer-bottom-nav {
+    display: block !important;
+    margin-top: 10px;
+}
+.main-title {
+    font-size: 25px;
+}
+
+.h4-title {
+    font-size: 18px;
+    padding-top: 15px;
+}
+
+.submit-container {
+    margin: unset;
+    padding: 0;
+}
+
+.search-container input[type=text] {
+    margin-bottom: 10px;
+}
+
+.hero-iner {
+    background-position: center !important;
+}
+
+}
+
+    div#navbarNavAltMarkup {
+    margin-left: 30px;
+}   
+
+  /***logicdigger css  for mobile end ***/
+</style>
+</head>
+<body>
+
+    <!-- Header -->
+  <header>
+
+    <section class="logo-section">
+        <div class="logo">
+        <img src="farmifylogo.png" alt="logo">
+        </div>
+        <hr class="nav-hr">
+
+</header>
+
+      <main>
+
+<!-- Pagination Section -->
+<section class="pagination-section">
+    <div class="pagination-dots">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot active"></span>
+    </div>
+  </section>
+
+  <section class="message-box">
+    <div class="message-content">
+        <div class="message-title">
+            <i class="bi bi-envelope"></i>
+            <h3>Verify your email address</h3>
+        </div>
+        <p>You are almost there! We have sent a verification link to</p>
+            <span class="user-email">indrekunt1@gmail.com</span>
+            <p>In order to verify please login to your email account and click on the link you received. The link will expire in 24 hours. </p>
+    </div>
+
+    
+ 
+
+
+
+<div class="next-button-container">
+    <button type="submit" class="next-button">Resend</button>
+    <button type="submit" class="review-button">Return to Site <i class="bi bi-arrow-right"></i></button>
+</div>
+
+
+<hr class="nav-hr-bottom">
+
+<div class="language-button-container">
+  <button type="submit" class="language-button"><i class="bi bi-globe-asia-australia"></i> English</button>
+</div>
+
+</section>    
+
+<script>
+
+  function toggleNav() {
+      var nav = document.querySelector('.navbar-collapse');
+      nav.classList.toggle('show');
+  }
+
+  document.querySelector('.listing-dropbox').addEventListener('change', function() {
+    if (this.value === 'placeholder') {
+        this.style.color = '#999';
+        this.style.fontFamily = '"Inter", sans-serif';
+        this.style.fontWeight = '500';
+    } else {
+        this.style.color = '#333';
+    }
+});
+  
+</script>
+</main>
+</body>
