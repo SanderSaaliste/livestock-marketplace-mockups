@@ -1,0 +1,1859 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delivery Request</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<style>
+
+        /* Header styles */
+        header {
+            /* background-image: url(header.png);   logicdigger css remove this
+            height: 100vh; /* Make the image responsive logicdigger css remove this */
+            width: 100%; 
+            object-fit: cover; /* Ensure the image covers the entire header */
+            filter: brightness(0.);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 99;
+        }
+
+        /***logicdigger css***/
+
+.heor-content {
+    width: 100%;
+    max-width: 1270px;
+    margin: 0 auto;
+    padding: 12px 25px;
+}
+
+  /***logicdigger css ***/
+        .navbar-toggler, .navbar-close {
+            display: none;
+            background-color: transparent;
+            border: none;
+            font-size: 35px;
+            cursor: pointer;
+        }
+        .navbar-nav {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            flex: 1;
+            justify-content: space-between;
+        }
+        .navbar-nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #3c5823;
+    font-weight: 600;
+}
+        .navbar-nav .icons a {
+            margin: 0 5px;
+        }
+        .navbar-collapse {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            flex: 1;
+        }
+
+        @media only screen and (min-width: 1024px) and (max-width: 1350px)  {
+          .image-item {
+            margin-bottom: 20px !important;
+          }
+          .navbar-nav .nav-link:nth-child(6) {
+            margin: 0 !important;
+          }
+          .rectangle-container{
+            display: block !important;
+            text-align: center;
+          }
+          .rectangle {
+    width: 25% !important;
+    display:inline-block !important;
+  }
+  .rectangle li img {
+    height: 10%;
+    width: 10% !important;
+    padding-right: 3%;
+}
+  .rectangle img {
+    width: 100% !important;
+  }
+        }
+        @media only screen and (min-width: 768px) and (max-width: 1024px)  {
+        .rectangle-container  .rectangle img {
+    width: 310px !important;
+}
+.sell-us-content{
+  display: block !important;
+  margin-bottom: 20px;
+}
+.rectangle-container .rectangle {
+    width: 300px !important;
+}
+.rectangle-container {
+    flex-wrap: wrap;
+}
+.rectangle-container .rectangle li img {
+    width: 10% !important;
+}
+footer {
+    height: unset !important;
+}
+.footer-columns {
+    display: block !important;
+}
+main .listing-title .title{
+  text-align: center !important;
+}
+  }
+  @media (max-width: 400px) { 
+  .search-container input[type=text] {
+    padding: 10px;
+    width: 200px !important;
+}
+.rectangle {
+        max-width: 80% !important;
+        margin: 0 auto !important;
+        margin-bottom: 20px !important;
+    }
+    .rectangle img {
+    width: 100% !important;
+    max-width: 350px;
+}
+.rectangle li img {
+    height: 10%;
+    width: 10% !important;
+    padding-right: 3%;
+}
+  }
+        @media (max-width: 1024px) {
+            .navbar-nav {
+               
+                flex-direction: column;
+                background-color: #f8f9fa;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                padding: 10px 0;
+            }
+            .navbar-collapse.show {
+  display: block !important;
+}
+.navbar-collapse {
+    display: none;
+}
+.navbar .container {
+    display: block;
+}
+.image-item {
+    margin-bottom: 20px !important;
+}
+            .navbar-nav .nav-link:nth-child(6){
+              margin: 0 !important;
+            }
+            .navbar-nav a {
+              padding: 10px 15px;
+          }
+            .navbar-nav.show {
+                display: flex;
+            }
+            .navbar-toggler {
+                display: block;
+            }
+            .navbar-close {
+                display: block;
+                align-self: flex-end;
+                margin: 10px 20px;
+                position: absolute;
+            }
+
+            span.navbar-toggler-icon {
+    float: right;
+    margin-right: 20px;
+}
+.navbar {
+    margin-top: 20px !important;
+}
+.navbar img {
+    margin-left: 20px;
+}
+        }
+
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}   
+.navbar .container {
+    width: 100%;
+    max-width: 1270px;
+    margin: auto;
+} 
+.heor-content {
+    width: 100%;
+    max-width: 1270px;
+    margin: 0 auto;
+}
+
+.hero-iner {
+    display: flex;
+    align-items: center;
+    height: 20vh;
+    background-size: cover;
+    background-position: bottom center;
+}
+
+.hero-section {
+    position: relative;
+}
+
+.image-item1 {
+    background: #39b84e1c;
+}
+.image-item2 {
+    background: #ffa8262c;
+}
+.image-item3 {
+    background: #2c91bd29;
+}
+.image-item4 {
+    background: #5aa3fc2b;
+}
+
+  /***logicdigger css end ***/
+
+    body  {
+      font-family: "Inter", sans-serif;
+        font-weight: 450;
+        font-size: 14px;
+        color: rgb(79, 79, 79);
+        width: 100%; /* Make the image responsive */
+        height: 100%; /* Make the image responsive */
+        overflow-x: hidden; /* Prevents horizontal scrolling */
+    } 
+
+.inter-font {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+    body {
+    height: auto;
+    }
+    .mochiy-pop-one-regular {
+  font-family: "Mochiy Pop One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+    .navbar-nav .nav-link:nth-child(6) {
+        margin-right: 280px; /*Adjust logo*/
+    }
+    .navbar-nav .nav-link:nth-child(1) {
+        margin-right: px;
+    }
+    .signup-button {
+      color: rgba(255, 255, 255, 0.952) !important;
+      background-color: #000000ce; /* Change background color to a prominent color */
+      border-radius: 20px; /* Add rounded corners */
+      padding: 10px 20px; /* Add padding to increase button size */
+      transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+    }
+    .signup-button:hover {
+background-color: #ff4632c8;
+    }
+    .navbar {
+margin-top: 38px; /* Adjust the value to move the navbar down further */
+}
+    .main-title {
+      margin-top: 30px;
+      font-size: 48px;
+      font-weight: bolder;
+      font-family: "Mochiy Pop One", sans-serif;
+      color: black;
+    }
+    .h4-title {
+      margin-top: -20px;
+      font-size: 23px;
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+    }
+    .search-container {
+      margin-top: -0px;
+    }
+
+    .submit-container {
+      margin-top: -57px;
+      margin-left: 305px;
+      padding-left: 10px;
+    }
+    .submit-container button[type=submit] {
+      width: 149.33px;
+      border: 1px solid #ff4632c8;
+      background-color: #ff4632c8;
+      border-radius: 7.5px;
+      outline: none;
+      padding-top: 38px;
+      font-size: 15px;
+      font-weight: 600;
+      color: whitesmoke;
+      display: flex;
+      justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    padding: 19px;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+    }
+    .submit-container button[type=submit]:hover {
+    background-color: #ff4632e6; /* Darker color when hovered */
+    }
+    .bi-search {
+      position: absolute;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      padding: 19px;
+    }
+    .navbar-brand {
+      margin-right: 0px;
+      position: fixed;
+      height: auto;
+    }
+    .container { 
+  display:flex; /* Use flexbox */
+  justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    }
+    .bi-heart {
+      font-size: 20px;
+      font-weight: 900;
+      padding-right: 5px;
+    }
+    .bi-cart3 {
+      font-size: 20px;
+      font-weight: 900px;
+      padding-right: 10px;
+    }
+   
+        main {
+        /* Can use flex here */
+  height: auto; /* Set main height to full viewport height */
+}
+
+.logo-section {
+    max-width: 1270px; /* Ensure container matches navbar width */
+    margin: 0 auto; /* Center the container */
+    padding: 20px 0; /* Adjust padding as needed */
+    text-align: center; /* Align text to the left */
+}
+
+.nav-hr {
+    width: 100%;
+    border: none;
+    border-top: 0,3px solid #00000043; /* Adjust the color and thickness as needed */
+    margin-top: 10px; /* Adjust the spacing above the hr */
+}
+
+.pagination-section {
+  max-width: 1270px; /* Ensure container matches navbar width */
+    margin: 0 auto; /* Center the container */
+    padding: 20px 0; /* Adjust padding as needed */
+    text-align: left; /* Align text to the left */
+    margin-top: 70px;
+    padding-bottom: 0px;
+}
+
+.pagination-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.pagination-dots .dot {
+    height: 4px;
+    width: 55px;
+    background-color: #D9D9D9;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 0 3px;
+    transition: background-color 0.3s;
+}
+
+.pagination-dots .dot.active {
+    background-color: #5EA91E;
+}
+
+
+.listing-input-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1270px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.guiding-text {
+  display: flex;
+  width: 508px;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 7px;
+}
+
+.bi-chevron-down {
+    font-size: 16px; /* Adjust to your desired size */
+    cursor: pointer;
+    transition: font-size 0.3s ease;
+}
+
+
+
+.map-guiding-text {
+  display: flex;
+  width: 508px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  margin-top: 0px;
+  margin-bottom: 3px;
+  cursor: pointer;
+  transition: font-size 0.3s ease;
+}
+
+.map-guiding-text:hover {
+  font-size: 14px;
+}
+
+.map-drops {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.map-container {
+  display: none;
+  height: 300px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.map-visible {
+  display: block;
+}
+
+
+.map-button {
+    background-color: transparent;
+    border: none;
+    font-size: 13px;
+    font-weight: 700;
+    font-family: "Inter", sans-serif;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: font-size 0.3s ease;
+}
+
+.map-button span {
+    margin-right: 5px; /* Space between text and icon */
+}
+
+.map-button:hover {
+    font-size: 14px; /* Increase font size on hover */
+}
+
+
+
+        .map-guiding-text {
+            cursor: pointer;
+        }
+
+        .iframe-container {
+    display: block;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    height: 0; /* Start with height 0 */
+}
+
+.iframe-container.show {
+    height: 450px; /* Show iframe when 'show' class is added */
+}
+
+.iframe-container.none {
+    height: 0; /* Hide iframe when 'none' class is added */
+}
+
+
+.listing-input {
+    width: 100%;
+    max-width: 470px;
+    padding: 10px 20px;
+    height: 25px;
+    border: 2px solid #f5f5f5;
+    border-radius: 5px;
+    background-color: #f5f5f5; /* Slightly grey background */
+    font-size: 14px;
+    color: #333;
+    font-family: "Inter", sans-serif;
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+.listing-input::placeholder {
+    color: #999;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+}
+
+.listing-input:focus {
+    border-color: #5EA91E; /* Change border color when focused */
+    outline: none; /* Remove default outline */
+}
+
+
+.message-box {
+    width: 100%;
+    display: flex;
+    max-width: 1270px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    flex-direction: column;
+    height: auto
+}
+
+.message-content {
+    background-color: #ffffff; /* Light gray background */
+    border-radius: 30px; /* Rounded corners */
+    padding: 10px 30px; /* Padding inside the box */
+    text-align: center; /* Center the text */
+    max-width: 450px; /* Maximum width of the box */
+    width: 100%; /* Responsive width */
+    justify-content: center;
+    align-items: center;
+}
+
+.message-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+
+
+.message-title img {
+    font-size: 110px; /* Adjust the icon size */
+    color: #5EA91E; /* Green color for the envelope icon */
+    border-radius: 50%; /* Makes the border circular */
+    padding: 15px; /* Adjust padding to fit the circle */
+    display: inline-flex; /* Centers the icon within the circle */
+    justify-content: center;
+    align-items: center;
+    width: 80px; /* Set width for the circle */
+    height: 80px; /* Set height for the circle */
+    background-color: #5fa91e36; /* Fill color for the circle */
+    margin-bottom: 30px;
+}
+
+.message-content h3 {
+    margin: 0;
+    font-size: 26px;
+    color: #000000; /* Green text color */
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.message-content p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333; /* Dark gray text color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Inter", sans-serif;
+}
+
+.user-email {
+    font-size: 16px;
+    color: #333; /* Dark gray text color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.below-p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333; /* Dark gray text color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Inter", sans-serif;
+}
+
+
+
+.listing-info {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+
+.guiding-text {
+  display: flex;
+  width: 508px;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 7px;
+}
+
+.guiding-text-vitamin {
+  display: flex;
+  width: 55%;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 7px;
+}
+
+.listing-input {
+    width: 100%;
+    max-width: 470px;
+    padding: 10px 20px;
+    height: 25px;
+    border: 2px solid #f5f5f5;
+    border-radius: 5px;
+    background-color: #f5f5f5; /* Slightly grey background */
+    font-size: 14px;
+    color: #333;
+    font-family: "Inter", sans-serif;
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+.listing-input::placeholder {
+    color: #999;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+}
+
+.listing-input:focus {
+    border-color: #5EA91E; /* Change border color when focused */
+    outline: none; /* Remove default outline */
+}
+
+.listing-dropbox-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1270px;
+    margin-top: 30px;
+}
+
+.listing-dropbox {
+    width: 100%;
+    max-width: 513px;
+    padding: 10px 20px;
+    height: 45px;
+    border: 2px solid #f5f5f5;
+    border-radius: 5px;
+    background-color: #f5f5f5; /* Slightly grey background */
+    font-size: 14px;
+    color: #333;
+    font-family: "Inter", sans-serif;
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+    -webkit-appearance: none; /* Remove default arrow in WebKit browsers */
+    -moz-appearance: none; /* Remove default arrow in Firefox */
+    appearance: none; /* Remove default arrow in other browsers */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2714%27%20height%3D%2714%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27%23333%27%3E%3Cpath%20d%3D%27M7%2010l5%205%205-5z%27/%3E%3C/svg%3E'); /* Custom arrow icon */
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Position the arrow with margin-right 10px */
+    background-size: 25px 25px; /* Size of the arrow icon */
+    background-image: 
+        linear-gradient(to right, #33333358 1px, transparent 1px), /* Vertical line */
+        url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2714%27%20height%3D%2714%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27%23333%27%3E%3Cpath%20d%3D%27M7%2010l5%205%205-5z%27/%3E%3C/svg%3E'); /* Custom arrow icon */
+    background-repeat: no-repeat;
+    background-position: right 40px center, right 10px center; /* Position the arrow with margin-right 10px and the line with margin-right 20px */
+    background-size: 1px 15px, 25px 25px; /* Size of the line and the arrow icon */
+}
+
+.listing-dropbox:focus {
+    border-color: #5EA91E; /* Change border color when focused */
+    outline: none; /* Remove default outline */
+}
+
+.listing-dropbox option[value="placeholder"] {
+    color: #333;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+}
+
+.vitamin-dropbox-container {
+  width: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 1270px;
+    margin-top: 30px;
+}
+
+.vitamin-dropbox {
+  width: 100%;
+    max-width: 513px;
+    padding: 10px 20px;
+    height: 45px;
+    border: 2px solid #f5f5f5;
+    border-radius: 5px;
+    background-color: #f5f5f5; /* Slightly grey background */
+    font-size: 14px;
+    color: #333;
+    font-family: "Inter", sans-serif;
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+    -webkit-appearance: none; /* Remove default arrow in WebKit browsers */
+    -moz-appearance: none; /* Remove default arrow in Firefox */
+    appearance: none; /* Remove default arrow in other browsers */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2714%27%20height%3D%2714%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27%23333%27%3E%3Cpath%20d%3D%27M7%2010l5%205%205-5z%27/%3E%3C/svg%3E'); /* Custom arrow icon */
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Position the arrow with margin-right 10px */
+    background-size: 25px 25px; /* Size of the arrow icon */
+    background-image: 
+        linear-gradient(to right, #33333358 1px, transparent 1px), /* Vertical line */
+        url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2714%27%20height%3D%2714%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27%23333%27%3E%3Cpath%20d%3D%27M7%2010l5%205%205-5z%27/%3E%3C/svg%3E'); /* Custom arrow icon */
+    background-repeat: no-repeat;
+    background-position: right 40px center, right 10px center; /* Position the arrow with margin-right 10px and the line with margin-right 20px */
+    background-size: 1px 15px, 25px 25px; /* Size of the line and the arrow icon */
+}
+
+.vitamin-dropbox:focus {
+  border-color: #5EA91E; /* Change border color when focused */
+  outline: none; /* Remove default outline */
+}
+
+.image-container {
+  width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1270px;
+    margin-top: 30px;
+}
+
+.image-upload-box {
+    width: 100%;
+    max-width: 470px;
+    height: 200px;
+    border: 2px dashed #5fa91e8d;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 0px;
+    padding: 20px;
+}
+
+.image-upload-box i {
+    font-size: 60px;
+    color: #5fa91e;
+    margin-bottom: 0px;
+}
+
+.image-upload-box p {
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.language-button-container {
+  width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1270px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.language-button i {
+  margin-right: 8px;
+}
+
+.language-button {
+  width: 120px;
+    height: 35px;
+    border: 1px solid #f5f5f5;
+    background-color: #f5f5f5;
+    border-radius: 43px;
+    outline: none;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;;
+    color: #333;
+    display: flex;
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    padding: 22px;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+    cursor: pointer;
+}
+
+.language-button:hover {
+    background-color: #e3e3e3; /* Darker color when hovered */
+}
+
+.next-button-container {
+width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 1270px;
+    margin-top: 30px;
+    gap: 30px;
+}
+
+.upload-button {
+    width: 120px;
+    height: 35px;
+    border: 1px solid #5EA91E;
+    background-color: #5EA91E;
+    border-radius: 43px;
+    outline: none;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    padding: 22px;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+    cursor: pointer;
+}
+
+.upload-button:hover {
+    background-color: #4e921a; /* Darker color when hovered */
+}
+
+.next-button {
+  width: 140px;
+    height: 35px;
+    border: 1px solid #f5f5f5;
+    background-color: #f5f5f5;
+    border-radius: 43px;
+    outline: none;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;;
+    color: #5EA91E;
+    display: flex;
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    padding: 22px;
+    transition: background-color 0.3s ease, font-size 0.3s ease; /* Add transition for smooth hover effect */  
+    cursor: pointer;
+}
+
+.next-button:hover {
+  background-color: #e3e3e3; /* Darker color when hovered */
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.review-button {
+    width: 220px;
+    height: 35px;
+    border: 1px solid #5EA91E; /* Green border */
+    background-color: #5EA91E; /* White background */
+    border-radius: 43px;
+    outline: none;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;
+    color: white; /* Green text color */
+    display: flex;
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    padding: 22px;
+    transition: background-color 0.3s ease, font-size 0.3s ease; /* Add transition for smooth hover effect */ 
+    cursor: pointer;
+}
+
+.review-button i {
+    margin-left: 15px; /* Add space between the text and icon */
+}
+
+.review-button:hover {
+    font-size: 17px; /* Slightly bigger text size on hover */
+    font-weight: 600;
+    background-color: #4e921a;
+}
+
+.small-image-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.upper, .lower {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.small-image-box {
+    width: 250px;
+    height: 150px;
+    border: 2px dashed #5fa91e8d;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+}
+
+.small-upload-button {
+    width: 85px; /* Smaller button size */
+    height: 35px; /* Smaller button size */
+    padding: 0; /* Adjust padding as needed */
+    font-size: 13px;
+}
+
+.upload-text {
+    font-weight: 700;
+    margin-bottom: 5px; /* Add some spacing between text and button */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.small-image-box i {
+    font-size: 24px;
+    color: #5fa91e;
+    margin-bottom: 0px;
+}
+
+.listing-description-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1270px;
+    margin-top: 30px;
+}
+
+.description-input {
+    width: 100%;
+    max-width: 470px;
+    padding: 10px 20px;
+    height: 100px; /* Bigger height for description */
+    border: 2px solid #f5f5f5;
+    border-radius: 5px;
+    background-color: #f5f5f5; /* Slightly grey background */
+    font-size: 14px;
+    color: #333;
+    font-family: "Inter", sans-serif;
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+.description-input::placeholder {
+    color: #999;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+}
+
+.description-input:focus {
+    border-color: #5EA91E; /* Change border color when focused */
+    outline: none; /* Remove default outline */
+}
+
+.vitamin-grid {
+  display: flex;
+  flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 508px;
+}
+
+.vitamin-input-container {
+  width: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1270px;
+    margin-top: 30px;
+}
+
+.vitamin-input-container input {
+  width: 82%;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.vitamin-input-container::placeholder {
+  color: #999;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+}
+
+.vitamin-input-container:focus {
+  border-color: #5EA91E; /* Change border color when focused */
+  outline: none; /* Remove default outline */
+}
+
+.features-title {
+    width: 100%;
+    max-width: 510px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between; /* Align text to the left */
+    margin-top: 20px;
+}
+
+.features-title h3 {
+    font-size: 18px;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    color: #333;
+}
+
+.tips {
+font-size: 10px;
+font-family: "Inter", sans-serif;
+justify-content: flex-end;
+align-items: center;
+
+}
+
+.nav-hr-bottom {
+  margin-top: 50px;
+  height: 0.3px;
+  width: 100%;
+}
+
+.content {
+  text-align: center; /* Center text horizontally */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  font-size: 20px;
+  color: black;
+  font-weight: bolder;
+  font-family: Arial;
+}
+
+.image-item {
+  text-align: center;
+  margin: 0 50px;
+}
+.image-item {
+    text-align: center;
+    margin: 0 15px;
+    padding: 25px;
+    width: 100%;
+    max-width: 242px;
+    border-radius: 30px;
+    height: 100%;
+    min-height: 432px;
+}
+.image-item h3 {
+    font-size: 16px;
+    color: black;
+    text-align: center;
+    font-weight: 700;
+    line-height: 25px;
+}
+.image-item img {
+  margin-bottom: 30px; /* Adjust margin between image and text box */
+  width: 155px; /* Set width to 165 pixels */
+  height: 130px; /* Set height to 185 pixels */
+  margin-top: 20px;
+}
+.image-item:nth-child(4) img {
+  height: 130px; /* Adjust the height for the fourth image */
+  width: 145px;
+}
+.text-box {
+  width: 225px; /* Adjust width of the text box 195px */
+}
+
+.text-box p {
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  text-align: center;
+  line-height: 1.6; /* Adjust this value for desired line spacing */
+}
+.image-item h3 {
+  font-size: 18px;
+  color: black;
+  text-align: center;
+  font-weight: 800;
+  font-family: "Inter", sans-serif;
+}
+.introduction {
+  height: 100vh; /* Make the image responsive */
+            width: 100vw; /* Make the image responsive */
+            object-fit: cover; /* Ensure the image covers the entire header */
+            filter: brightness(0.);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+}
+
+    .feed-section {
+  /* Styles for the feed section container */
+  padding: 20px;
+  background-color: #F9FFE2;
+  margin-top: 100px;
+  min-height: 100vh; /* Ensure the section takes up at least 100% of the viewport height */
+      display: flex;
+      flex-direction: column; /* Align content vertically */
+      justify-content: flex-start; /* !!!<--Use this always in the beginning of the sections-->!!! */
+        align-items: center;
+}
+
+.feed-section-title h2 {
+  /* Styles for the feed section title */
+  font-size: 45px;
+  font-weight: bolder;
+  font-family: "Mochiy Pop One", sans-serif;
+  color: black;
+  margin-top: 40px;  /* Adjust if needed */
+  text-align: center; /* Center text horizontally */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+ /* margin-top: 20vh;  Adjust as needed to position content below header */
+  /* Add padding as well */
+}
+
+.feed-section-content {
+  /* Styles for the feed section content */
+  display: flex;
+  align-items: center;
+  width: 80%;
+  max-width: 1200px;
+  margin-bottom: 0px;
+  margin-top: 60px;
+  /* flex-wrap: wrap;  Use them again */
+  /* justify-content: center;  Use them again */
+  /* flex-grow: 1; Use them again */
+}
+
+.feed-image {
+  flex: 1; /* Take up half of the available space */
+  display: flex;
+  justify-content: center; /* Center image horizontally */
+  align-items: center; /* Center image vertically */
+}
+
+.feed-image img {
+  max-width: 100%; /* Ensure image fits within its container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+.feed-details {
+  flex: 1; /* Take up half of the available space */
+  padding: 40px; /* Add some padding around the details (20px default)*/
+}
+
+.feed-title {
+  font-size: 30px;
+  font-weight: bolder;
+  text-align: center;
+  font-family: "Mochiy Pop One", sans-serif;
+  color: black;
+  margin-bottom: 30px; /* Space between title and description */
+  margin-top: 30px;
+}
+
+.feed-description {
+  font-size: 16px;
+  line-height: 1.6; /* Adjust this value for desired line spacing */
+  font-family: "Inter", sans-serif;
+  text-align: center;
+}
+
+.call-action {
+  font-size: 20px;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  /* font-weight: bold; (Optional)*/
+  color: #4d5149e0;
+  display: flex;
+  align-items: center; /* Center vertically */
+  text-align: center;
+  justify-content: center;
+}
+
+.feed-price img {
+  height: 6.5%;
+  width: 6.5%;
+  margin-right: 10px; /* Space between icon and text, adjust as needed */
+}
+
+.stars img {
+  height: 5%;
+  width: 5%;
+  margin-bottom: 10px;
+}
+
+.feed-details button {
+  width: 238px;
+      height: 35px;
+      border: 1px solid #5EA91E;
+      background-color: #5EA91E;
+      border-radius: 43px;
+      outline: none;
+      font-size: 16px;
+      font-weight: 500;
+      font-family: "Inter", sans-serif;;
+      color: whitesmoke;
+      display: flex;
+      justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    padding: 22px;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+    cursor: pointer;
+}
+
+.feed-details button[type=submit]:hover {
+   background-color: #4e921a; /* Darker color when hovered */
+    }
+
+.support-icon {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.sell-us-section-title h2 {
+    /* Styles for the feed section title */
+    font-size: 32px;
+  font-weight: bolder;
+  color: black;
+  text-align: center; /* Center text horizontally */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  margin-bottom: -15px;
+  font-weight: 550;
+  font-family: "Mochiy Pop One", sans-serif;
+ /* margin-top: 20vh;  Adjust as needed to position content below header */
+  /* Add padding as well */
+}
+
+.sell-us-section-title {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1270px;
+    margin-bottom: 60px;
+}
+
+.sell-us-section {
+    /*  padding: 20px;  Add some padding around the section remove by logic */
+      min-height: 100vh; /* Ensure the section takes up at least 100% of the viewport height */
+      display: flex;
+      flex-direction: column; /* Align content vertically */
+      align-items: center; /* Center content horizontally */
+      justify-content: flex-start; /* Start content at the top */
+      margin-bottom: 0px;
+    }
+
+    .sell-us-content {
+      display: flex;
+      align-items: center; /* Center content vertically within each column */
+      justify-content: space-between; /* Space between image and details */
+      width: 100%; /* Adjust as needed for desired width */
+      max-width: 1270px; /* Adjust as needed for desired max width */
+      /* align-items: flex-start; /*Test*/
+    }
+
+    .sell-us-details {
+      flex: 1; /* Take up half of the available space */
+      padding: 10px; /* Add some padding around the details */
+      display: flex; /*Test*/
+      flex-direction: column; /*Test*/
+      flex-grow: 1; /*Test*/
+    }
+
+    .sell-us-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 35px; /* Adjust as needed for spacing */
+  align-items: center; /* This centers the items vertically */
+}
+
+.sell-us-item img {
+  margin-right: 30px; /* Adjust as needed for spacing */
+  width: 200px; /* Adjust as needed for size */
+  height: auto;
+  /* margin-top: 50px; (Adjusts the image vertically)*/
+}
+
+.sell-us-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.step {
+    font-size: 12px;
+    margin-top: -8px;
+    margin-bottom: -8px;
+    font-family: "Mochiy Pop One", sans-serif;
+    font-weight: 550;
+    color: #C74343;
+}
+
+    .sell-us-title, .second-sell-us-title {
+      font-size: 20px;
+      font-weight: 599;
+      font-family: Arial;
+      color: black;
+      margin-bottom: 0px; /* Space between title and description */
+      margin-top: 20px;
+      font-family: "Mochiy Pop One", sans-serif;
+      /* margin: 0; /*New*/
+    }
+
+    .sell-us-description, .second-sell-us-title-description {
+      font-size: 14px;
+      margin-bottom: -10px; /* Space between description and next element */
+      line-height: 1.6; /* Adjust this value for desired line spacing */
+      font-family: "Inter", sans-serif;
+      /* margin: 0; /*New*/
+    }
+
+    .sell-us-image {
+      flex: 1; /* Take up half of the available space */
+      display: flex;
+      justify-content: center; /* Center image horizontally */
+      align-items: center; /* Center image vertically */
+    }
+
+    .sell-us-image img {
+      max-width: 100%; /* Ensure image fits within its container */
+      height: auto; /* Maintain aspect ratio */
+      border-radius: 20px; /* Smooth edges */
+      margin-top: 20px;
+      max-width: 100%; /*New*/
+      height: auto; /*New*/
+    }
+
+    .get-started {
+      display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1270px;
+    margin-top: 10px;
+    }
+
+    .get-started button {
+      width: 276px;
+      height: 47px;
+      border: 1px solid #5EA91E;
+      background-color: #5EA91E;
+      border-radius: 43px;
+      outline: none;
+      font-size: 16px;
+      font-weight: 500;
+      font-family: "Inter", sans-serif;;
+      color: whitesmoke;
+      display: flex;
+      justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    padding: 23px;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+    cursor: pointer;
+    }
+
+    .get-started button[type=submit]:hover {
+    background-color: #4e921a; /* Darker color when hovered */
+    }
+
+.contact-us-button {
+  width: 542.4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+    footer {
+        background-color: #43662e; /* Dark green background color */
+        color: #ffffff;
+        text-align: center;
+        padding: 50px 0; /* Adjust padding to fit within 600px height */
+        height: 580px; /* Set height to 600px */
+        position: relative;
+    }
+
+    footer .footer-content {
+    padding: 0 50px; /* Add horizontal padding to match the sell-us-section */
+}
+
+    .footer-logo {
+        display: block;
+        margin: 0 auto;
+        height: auto;
+        width: 350px; /* Adjust width as necessary */
+        margin-bottom: 20px;
+    }
+
+    .footer-columns {
+        display: flex;
+        justify-content: space-around;
+        /* align-items: flex-start; /* Align items to the start to fit better within the height */
+        /* align-items: center; /*Change that perhaps?*/
+        margin-top: 5%;
+        height: calc(100% - 100px); /* Ensure columns take up the full height of the footer, accounting for padding */
+}
+
+    .footer-box {
+        max-width: 250px;
+        text-align: left;
+        font-size: 16px; /* Adjust font size to fit within the height */
+        display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    height: 100%; /* Ensure footer-box takes up the full height of the parent */
+    line-height: 1.8; /* Adjust this value for desired line spacing */
+    }
+
+    .footer-box h4 {
+        color: #ffffff;
+        margin-bottom: 15px;
+        font-size: 20px;
+    }
+
+    .footer-box p {
+        color: #d2d2d2;
+        margin: 5px 0;
+        line-height: 1.8; /* Adjust this value for desired line spacing */
+    }
+
+    .footer-nav,
+    .footer-bottom-nav {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-nav li,
+    .footer-bottom-nav li {
+        margin-bottom: 10px; /* Reduce margin to fit better */
+    }
+
+    .footer-nav a,
+    .footer-bottom-nav a {
+        color: #e1e1e1;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .footer-nav a:hover,
+    .footer-bottom-nav a:hover {
+        color: #ffffff;
+    }
+
+    .footer-box input[type=email] {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1.2px solid #e1e1e1;
+        color: #ffffff;
+        padding: 10px 0; /* Remove left padding to align placeholder */
+        width: 235px;
+        margin-top: 15px;
+        outline: none;
+        text-align: left; /* Align text to the left */
+        position: relative;
+}
+
+.email-container {
+    position: relative;
+    display: inline-block;
+}
+
+.email-container::before {
+  content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABdUlEQVR4nO3cPUoDYRRG4UEQV2NjZ6GSqAj+bEBsrWzcnI2L0NbeRgQridHGI8JIJEyKQMi9H/c8CxheOEwymRnSdZIkSZIkSZIkSZIkSZIkSVoxYBu4B+6AnVUfX0sCHph5B/aWPYZWCHj+F8Qo0YDruSB/Ufajt5UF3ALfc1EmwCh6W1ksjjKO3lYWRskHo+SDUZqKchi9rSyMkg9GaSrKUfS2shiO8mGUQEZJCM+UfBZE+QTOoreVhVHyMUpbUc6jt5WFUZqJ8gVcdBkAV8DrwOPRaqbASXSMzf5XrGa3WQ4ig2z1I5QhSB/lEnjpB1U2Df/IKvylPs/L3wjGaCOG97XWzRj5Y/xe6h9HbyuHxTF8pLtuxkgEz4z0MSZ+TOWK4VuM62aMNmKMo7eVgzHywBh5YIw8MEYTMUbR28rBGHkANwNnhn8cEPh2zGQghv93EhRkA3gzRiLAKfAEPAK70XskSZIkSZIkSZIkSZIkSZK6cD+4pa0FeKE3zwAAAABJRU5ErkJggg==');
+    position: absolute;
+    right: -15px; /* Adjust the position as needed */
+    bottom: 25px; /* Adjust the position as needed */
+    height: 15px; /* Adjust size as needed */
+    pointer-events: none; /* Ensure the icon does not interfere with input interactions */
+    color: white;
+    size: 1px;
+    transform: scale(0.3); /* Scale the image to 50% of its original size */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 25px; /* Space between the input field and social media icons */
+    gap: 10px;
+}
+
+.social-icon {
+    width: 30px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
+}
+
+.footer-box img {
+height: 35px;
+width: 35px;
+color: white;
+}
+
+    .footer-box input[type=email]::placeholder {
+        color: #b9b9b98b;
+        font-size: 16px;
+    }
+
+    hr {
+        border: 0;
+        height: 1.2px;
+        background-color: #e1e1e1;
+        margin: 80px 0;
+        margin: 120px auto 10px auto; /* Increase the top margin to move the hr line down */
+        width: 90%; /* Set the width to 1320px */
+    }
+
+    .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 12px; /* Adjust font size to fit within the height */
+        width: 90%;
+        margin: 0 auto; /* Center align the footer-bottom container */
+        color: #e1e1e1;
+        padding: 0 60px; /* Add padding to the sides */
+        padding-top: 10px; /* Add some padding at the top */
+    }
+
+    .footer-bottom p {
+        margin: 0px;
+        color: #e1e1e1;
+    }
+
+    .footer-bottom-nav {
+        display: flex;
+        gap: 20px; /* Adjust gap to fit within the height */ /*Use this on navbar as well.*/
+        color: #e1e1e1;
+    }
+
+
+  /***logicdigger css  for mobile***/
+
+
+@media only screen and (max-width: 768px) {
+    
+      footer {
+    height: unset !important;
+}
+.footer-columns {
+    display: unset !important;
+ 
+} 
+.feed-details {
+    padding: 10px !important;
+}
+.feed-section-content {
+    display: block !important;
+    width: 85%;
+}
+.rectangle {
+    margin: auto;
+    margin-bottom: 20px;
+}
+.rectangle-container {
+    display: block !important;
+}
+.listing-title .title , .feed-section-title h2, .sell-us-section-title h2{
+    text-align: center !important;
+    font-size: 25px;
+}
+.sell-us-title, .second-sell-us-title{
+  font-size: 20px;
+}
+.footer-logo {
+    width: 250px;
+    margin-bottom: 20px;
+}
+.feed-title{
+  font-size: 25px;
+}
+
+.heor-content {
+    padding: 30px;
+}
+
+
+.navbar-nav a {
+    text-decoration: none;
+    color: #000;
+    padding: 10px 20px;
+    text-align: center;
+    margin: auto;
+    font-weight: 500;
+}
+
+
+.sell-us-content {
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1200px;
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.sell-us-item {
+    display: block !important;
+}
+.footer-bottom {
+    display: block !important;
+     width: unset !important;
+}
+hr {
+    width: 100%;
+}
+.footer-bottom-nav {
+    display: block !important;
+    margin-top: 10px;
+}
+.main-title {
+    font-size: 25px;
+}
+
+.h4-title {
+    font-size: 18px;
+    padding-top: 15px;
+}
+
+.submit-container {
+    margin: unset;
+    padding: 0;
+}
+
+.search-container input[type=text] {
+    margin-bottom: 10px;
+}
+
+.hero-iner {
+    background-position: center !important;
+}
+
+}
+
+    div#navbarNavAltMarkup {
+    margin-left: 30px;
+}   
+
+  /***logicdigger css  for mobile end ***/
+</style>
+</head>
+<body>
+
+    <!-- Header -->
+  <header>
+
+    <section class="logo-section">
+        <div class="logo">
+        <img src="farmifylogo.png" alt="logo">
+        </div>
+        <hr class="nav-hr">
+
+</header>
+
+      <main>
+
+<!-- Pagination Section -->
+<section class="pagination-section">
+    <div class="pagination-dots">
+      <span class="dot"></span>
+      <span class="dot active"></span>
+      <span class="dot"></span>
+    </div>
+  </section>
+
+  <section class="message-box">
+    <div class="message-content">
+        <div class="message-title">
+          <img src="data:image/png;base64,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">
+            <h3>Delivery service</h3>
+        </div>
+        <p>Please provide the information below to receive a price quote and delivery availability. We will promptly contact you via email or phone to confirm the details.</p>
+            
+    </div>
+
+    
+    <div class="listing-input-container">
+      <p class="guiding-text">First name</p>
+      <input type="text" placeholder="Jon" class="listing-input">
+    </div>
+
+    <div class="listing-input-container">
+      <p class="guiding-text">Last name</p>
+      <input type="text" placeholder="Doe" class="listing-input">
+    </div>
+
+    <div class="listing-input-container">
+      <p class="guiding-text">Phone</p>
+      <input type="text" placeholder="+63-2-8123-4567" class="listing-input">
+    </div>
+
+    <div class="listing-input-container">
+      <p class="guiding-text">Email</p>
+      <input type="text" placeholder="jondoe@gmail.com" class="listing-input">
+    </div>
+
+    <div class="listing-input-container">
+      <p class="guiding-text">Address from</p>
+      <input type="text" placeholder="Sudlon 2 Barangay Rd, Bonbon, 6000 Cebu" class="listing-input">
+    </div>
+
+<!-- Pin 'From' location -->
+<div class="map-drops">
+    <button id="pinFromLocationButton" class="map-button">
+        <span>Pin the location</span>
+        <i class="bi bi-chevron-down" id="pinFromLocationIcon"></i>
+    </button>
+</div>
+
+<!-- Google Map iframe for 'From' address -->
+<div id="iframeFromContainer" class="iframe-container show">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d16751.59546411061!2d6.274996799999999!3d58.343654449999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sno!4v1726575545382!5m2!1sen!2sno" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+    <div class="listing-input-container">
+      <p class="guiding-text">Address to</p>
+      <input type="text" placeholder="Singson Rd, Cebu City, 6000 Cebu" class="listing-input">
+    </div>
+
+<!-- Pin 'To' location -->
+<div class="map-drops">
+    <button id="pinToLocationButton" class="map-button">
+        <span>Pin the location</span>
+        <i class="bi bi-chevron-down" id="pinToLocationIcon"></i>
+    </button>
+</div>
+
+<!-- Google Map iframe for 'To' address -->
+<div id="iframeToContainer" class="iframe-container show">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d16751.59546411061!2d6.274996799999999!3d58.343654449999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sno!4v1726575545382!5m2!1sen!2sno" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+
+
+<div class="next-button-container">
+    
+    <button type="submit" class="review-button">Request availability</button>
+    
+</div>
+
+
+<hr class="nav-hr-bottom">
+
+<div class="language-button-container">
+  <button type="submit" class="language-button"><i class="bi bi-globe-asia-australia"></i> English</button>
+</div>
+
+</section>    
+
+<script>
+
+
+// Function to toggle the class between 'show' and 'none'
+function toggleIframeVisibility(containerId, iconId) {
+    var iframeContainer = document.getElementById(containerId);
+    var buttonIcon = document.getElementById(iconId);
+
+    // Toggle the visibility of the iframe
+    if (iframeContainer.classList.contains("show")) {
+        iframeContainer.classList.remove("show");
+        iframeContainer.classList.add("none");
+        buttonIcon.classList.replace("bi-chevron-down", "bi-chevron-up");
+    } else {
+        iframeContainer.classList.remove("none");
+        iframeContainer.classList.add("show");
+        buttonIcon.classList.replace("bi-chevron-up", "bi-chevron-down");
+    }
+}
+
+// Event listeners for 'From' location
+document.getElementById("pinFromLocationButton").addEventListener("click", function () {
+    toggleIframeVisibility("iframeFromContainer", "pinFromLocationIcon");
+});
+
+// Event listeners for 'To' location
+document.getElementById("pinToLocationButton").addEventListener("click", function () {
+    toggleIframeVisibility("iframeToContainer", "pinToLocationIcon");
+});
+
+  
+</script>
+
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+</script>
+
+</main>
+</body>
