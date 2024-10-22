@@ -292,7 +292,7 @@ body {
     position: absolute;
     background-color: white;
     width: 300px;
-    height: 550px;
+    height: 600px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1000;
@@ -362,8 +362,8 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-top: 25px;
-    margin-bottom: 25px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 .login-submit:hover {
@@ -373,6 +373,7 @@ body {
 .login-p {
     font-family: "Inter", sans-serif;
     margin-bottom: 25px;
+    margin-top: 0px;
     font-size: 13px;
     font-weight: 500;
     text-align: center;
@@ -424,6 +425,7 @@ body {
     display: flex;
     align-items: center;
     margin: 0px 0;
+    margin-bottom: 25px;
 }
 
 .checkbox-wrapper input[type="checkbox"] {
@@ -587,8 +589,8 @@ background-color: #ff4632c8;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-top: 25px;
-    margin-bottom: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .signup-submit:hover {
@@ -613,8 +615,21 @@ background-color: #ff4632c8;
 .signup-p {
     display: flex;
     font-family: "Inter", sans-serif;
+    margin-bottom: 0px;
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-upper-p {
+  display: flex;
+    font-family: "Inter", sans-serif;
+    margin-bottom: 0px;
+    margin-top: 10px;
     margin-bottom: 10px;
-    margin-top: 0px;
     font-size: 13px;
     font-weight: 500;
     text-align: center !important;
@@ -700,6 +715,7 @@ padding: 19px;
     align-items: center; /* Center the text vertically */
     padding: 19px;
     transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+    cursor: pointer;
     }
     .submit-container button[type=submit]:hover {
     background-color: #ff4632e6; /* Darker color when hovered */
@@ -726,13 +742,29 @@ padding: 19px;
       font-size: 20px;
       font-weight: 900;
       padding-right: 5px;
+      margin-left: -10px;
     }
-    .bi-envelope {
+
+    .bi-heart {
+      text-shadow: 1px 1px 2px black; /* Adds shadow to make it look bolder */
+}
+
+#navBarEnvelope {
       cursor: pointer;
       font-size: 20px;
       font-weight: 900px;
       padding-right: 10px;
-    }
+      text-shadow: 1px 1px 2px black; /* Adds shadow to make it look bolder */
+}
+
+.bi-bell {
+  cursor: pointer;
+      font-size: 20px;
+      font-weight: 900;
+      padding-right: 5px;
+      margin-left: 0px;
+      text-shadow: 1px 1px 2px black; /* Adds shadow to make it look bolder */
+}
    
         main {
         /* Can use flex here */
@@ -863,6 +895,7 @@ padding: 19px;
   position: relative; /* Delete */
   box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.05), /* Left shadow (smaller and lighter) */
   2px 2px 5px rgba(0, 0, 0, 0.1);   /* Right and bottom shadow */
+  cursor: pointer;
 }
 
 .rectangle img {
@@ -1207,8 +1240,13 @@ text-align: center;
     font-size: 18px;
     font-weight: 900;
     color: black;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
+    transition: font-size 0.3s ease;
   }
+
+.favorites-dropdown-content h4:hover {
+  font-size: 21px; /* Increase the font size on hover */
+}
 
   .favorites-p {
     font-family: "Inter", sans-serif;
@@ -1342,6 +1380,7 @@ text-align: center;
     padding: 40px;
     padding-bottom: 0;
     justify-content: center;
+    cursor: pointer;
 }
 
 
@@ -1358,6 +1397,304 @@ text-align: center;
 
 .close-btn:hover {
     color: #e03e2b;
+}
+
+.edit-button {
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  color: #1877F2;
+}
+
+.edit-button {
+    background-color: #43B572; /* Green background */
+    border: none; /* No border */
+    color: white; /* White text */
+    padding: 8px 16px; /* Padding for button size */
+    font-size: 14px; /* Font size */
+    font-family: "Inter", sans-serif; /* Font family */
+    font-weight: bold; /* Bold text */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+    width: 240px;
+}
+
+.edit-button:hover {
+    background-color: #37925d; /* Darker green on hover */
+}
+
+.title-wrapper {
+  display: flex;
+  flex-direction: row;
+justify-content: center;
+align-items: center;
+margin-bottom: 20px;
+gap: 5px;
+}
+
+/*small-rectangle style*/
+.small-rectangle {
+    width: 276px;
+    height: 540px;
+    border: 1px solid #e7e7e7;
+    border-radius: 16px;
+    background-color: #ffffff; /* Assuming a white background */
+    box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.05), /* Left shadow (smaller and lighter) */
+    2px 2px 5px rgba(0, 0, 0, 0.1);   /* Right and bottom shadow */
+}
+
+.message-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.message-header h4 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.message-header i {
+    font-size: 18px;
+    color: #333;
+}
+
+.bi-three-dots::before {
+    content: "\f5d4";
+}
+
+.message-search {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #FAFAFA;
+    border-top: 1px solid #F2F1F3;
+    border-bottom: 1px solid #F2F1F3;
+}
+
+.message-search i {
+    font-size: 16px;
+    color: #c5c5ca;
+    margin-right: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.message-search input {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-size: 14px;
+    color: #000000;
+    width: 100%;
+    margin-left: 20px;
+}
+
+.scrollable-rectangles-review {
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.small-message-box {
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #F2F1F3;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.small-message-box:hover {
+    background-color: #F0F0F0; /* Background color on hover */
+}
+
+.image-info-wrap {
+    display: flex;
+    flex-direction: row;
+}
+
+.notification-image-wrap {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.profile-container {
+    position: relative;
+    display: inline-block;
+}
+
+.notification-profile {
+  display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.notification-profile {
+  position: relative; /* Ensure child elements can be positioned relative to this container */
+}
+
+.price-icon-container {
+  position: absolute;
+  bottom: 1px;
+  right: 5px;
+  width: 35px; /* Set the width of the circle */
+  height: 35px; /* Set the height of the circle */
+  background: linear-gradient(145deg, rgb(142, 180, 230), rgb(0, 110, 255)); /* Gradient from darker to lighter blue */
+  border-radius: 50%; /* Make it a circle */
+  display: flex; /* Center the icon inside the circle */
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 3px 6px rgba(128, 128, 128, 0.6), /* Slight darker shadow for depth */
+              0px 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for better visibility */
+}
+
+.price-icon {
+  width: 20px; /* Make the icon smaller */
+  height: 20px;
+}
+
+.profile-image {
+    border-radius: 20px;
+    width: 38px;
+    height: 38px;
+    margin-right: 15px;
+}
+
+.notification-image {
+  border-radius: 30px;
+    width: 55px;
+    height: 55px;
+    margin-right: 15px;
+}
+
+.verified-icon {
+    position: absolute;
+    bottom: -6px;
+    right: 12px;
+    font-size: 14px;
+    color: #007BFF;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+.message-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.notification-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+    font-weight: bold;
+    color: #333;
+}
+
+.message-time {
+    font-size: 12px;
+    color: #888;
+    margin-top: 3px;
+}
+
+.last-message {
+    font-size: 14px;
+    color: #555;
+    margin-top: 15px;
+    width: 246px;
+}
+
+.notification-message {
+  font-size: 14px;
+    color: #555;
+    margin-top: 3px;
+    width: 200px;
+  word-wrap: break-word;  /* Allows words to break and wrap */
+  word-break: break-word;  /* Ensures long words also break */
+}
+
+.review-profile-container {
+    position: relative;
+    display: inline-block;
+}
+
+.review-profile-container .profile-placeholder {
+    width: 38px;
+    height: 38px;
+    background-color: #1c8aff;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.notification-profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notification-profile-container .profile-placeholder {
+    width: 55px;
+    height: 55px;
+    background-color: #1c8aff;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+
+/* Custom scrollbar styles */
+.scrollable-rectangles-review::-webkit-scrollbar {
+  width: 8px; /* Width of the entire scrollbar */
+}
+
+.scrollable-rectangles-review::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the scrollbar track */
+  border-radius: 10px; /* Rounded corners for the track */
+}
+
+.scrollable-rectangles-review::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+/* Add hover effect for the scrollbar thumb */
+.scrollable-rectangles-review::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darker color when hovered */
+}
+
+/* Scrollable container for the small-message-box elements */
+.scrollable-rectangles-review {
+  max-height: 490px; /* Adjust the height as necessary */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding-right: 10px; /* Space for the scrollbar */
+}
+
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
 }
 
 
@@ -1663,8 +2000,10 @@ hr {
               <div class="favorites-dropdown-content">
                 <button class="close-btn">x</button>
                 <div class="favorites-header">
-                  <h4>Saved Items</h4>
-                  <p class="favorites-p">Here are your saved items. Review them or contact the seller anytime.</p>
+                  <div class="title-wrapper">
+                  <i class="bi bi-heart"></i><h4>Saved Items</h4>
+                </div>
+                  <p class="favorites-p">Here are your saved items. Click here to edit or manage them all.</p>
                 </div>
                 
                 <!-- Modal Rectangle Container -->
@@ -1739,10 +2078,128 @@ hr {
 </div>
 
                 </div> <!-- End of modal-rectangle-container -->
+                <div class="edit-button">Edit all</div>
               </div>
             </div>
   
-            <i class="bi bi-envelope"></i>
+<!-- Envelope Popup HTML -->
+<div id="envelopePopup" class="login-popup"> <!-- You can reuse the login-popup class for consistent styling -->
+  <button class="close-btn">x</button>
+    <div class="message-header">
+      <h4>Messages</h4>
+      
+    </div>
+    <div class="message-search">
+      <i class="bi bi-search"></i>
+      <input type="text" placeholder="Search message">
+    </div>
+  
+    <!-- Scrollable container for messages -->
+    <div class="scrollable-rectangles-review">
+        <div class="small-message-box" data-user-id="RS67890">
+        <div class="image-info-wrap">
+          <div class="profile-container">
+            <img src="Rectangle 401.png" alt="Profile Image" class="profile-image">
+            <i class="bi bi-patch-check-fill verified-icon"></i>
+          </div>
+          <div class="message-info">
+            <div class="user-name">Rhea_Rabago</div>
+            <div class="message-time">12:28pm</div>
+          </div>
+        </div>
+        <div class="last-message">Last message from Rhea_Rabago</div>
+      </div>
+  
+      <div class="small-message-box" data-user-id="JD12345">
+        <div class="image-info-wrap">
+          <div class="profile-container">
+            <img src="Rectangle 402.png" alt="Profile Image" class="profile-image">
+            <i class="bi bi-patch-check-fill verified-icon"></i>
+          </div>
+          <div class="message-info">
+            <div class="user-name">John_Doe</div>
+            <div class="message-time">11:45am</div>
+          </div>
+        </div>
+        <div class="last-message">Last message from John_Doe</div>
+      </div>
+  
+      <div class="small-message-box" data-user-id="JS23456">
+        <div class="image-info-wrap">
+          <div class="profile-container">
+            <img src="Rectangle 403.png" alt="Profile Image" class="profile-image">
+            <i class="bi bi-patch-check-fill verified-icon"></i>
+          </div>
+          <div class="message-info">
+            <div class="user-name">Jane_Smith</div>
+            <div class="message-time">10:30am</div>
+          </div>
+        </div>
+        <div class="last-message">Last message from Jane_Smith</div>
+      </div>
+  
+      <div class="small-message-box" data-user-id="AW34567">
+        <div class="image-info-wrap">
+          <div class="profile-container">
+            <img src="Rectangle 404.png" alt="Profile Image" class="profile-image">
+            <i class="bi bi-patch-check-fill verified-icon"></i>
+          </div>
+          <div class="message-info">
+            <div class="user-name">Alice_Walker</div>
+            <div class="message-time">09:15am</div>
+          </div>
+        </div>
+        <div class="last-message">Last message from Alice_Walker</div>
+      </div>
+
+      <div class="small-message-box" data-user-id="JA45678">
+          <div class="image-info-wrap">
+            <div class="review-profile-container">
+              <div class="profile-placeholder">J</div> <!-- Placeholder Profile Picture -->
+              <i class="bi bi-patch-check-fill verified-icon"></i>
+            </div>
+            <div class="message-info">
+              <div class="user-name">James_Anderson</div>
+              <div class="message-time">08:10am</div>
+            </div>
+          </div>
+          <div class="last-message">Last message from James_Anderson</div>
+        </div>
+    
+        <div class="small-message-box" data-user-id="JR56789">
+          <div class="image-info-wrap">
+            <div class="review-profile-container">
+              <div class="profile-placeholder" style="background-color: #f28c28;">J</div> <!-- Placeholder Profile Picture -->
+              <i class="bi bi-patch-check-fill verified-icon"></i>
+            </div>
+            <div class="message-info">
+              <div class="user-name">Jessica_Rogers</div>
+              <div class="message-time">07:45am</div>
+            </div>
+          </div>
+          <div class="last-message">Last message from Jessica_Rogers</div>
+        </div>
+
+        <div class="small-message-box" data-user-id="MT67890">
+          <div class="image-info-wrap">
+            <div class="review-profile-container">
+              <div class="profile-placeholder" style="background-color: #4caf50;">M</div> <!-- Placeholder Profile Picture -->
+              <i class="bi bi-patch-check-fill verified-icon"></i>
+            </div>
+            <div class="message-info">
+              <div class="user-name">Michael_Turner</div>
+              <div class="message-time">06:30am</div>
+            </div>
+          </div>
+          <div class="last-message">Last message from Michael_Turner</div>
+        </div>
+
+      </div>
+    </div>
+
+
+            <i class="bi bi-bell"></i>
+            <i class="bi bi-envelope" id="navBarEnvelope"></i>
             <a class="nav-link login-button">Login</a>
             <a class="nav-link signup-button">Sign up</a>
           </div>
@@ -1752,6 +2209,169 @@ hr {
 
 
 </header>
+
+
+
+<!-- Notification Popup HTML -->
+<div id="notificationPopup" class="favorites-dropdown">
+  <button class="close-btn">x</button>
+  <div class="message-header">
+    <h4>Notifications</h4>
+    
+  </div>
+  <div class="message-search">
+    <i class="bi bi-search"></i>
+    <input type="text" placeholder="Search">
+  </div>
+
+  <div class="scrollable-rectangles-review">
+    <div class="small-message-box" data-user-id="RS67890">
+      <div class="image-info-wrap">
+        <div class="notification-profile">
+          <img src="farm img.png" alt="Profile Image" class="notification-image">
+          <!-- Add the price icon here -->
+          <div class="price-icon-container">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEF0lEQVR4nO2Ub0wbZRzHz0T3wsSYuEivbZb4Tt1esmWQKGaiW1ASibIQX0xNFuMLfbcsMXNhCWN2tDg3EjRD7Ch/S4G20D/0T0qBVmDIEqLbhE2ic1sp7YDrtde73rX3NXdl/HEDtlH2ym/yTZ577u75PL/vPb8jiP+1iWDavQNG9Xswqb6R3UGWSHPEdgpGsghWdQhmNdCpWrFRNSM055VtD9SkKoRdJcC2BLXsyXoJzjcpee684uvcQkE8A6v6JuxL0PFjwJ/NWUvjThXEdiUSWjIlPZs7cDu5F+5V8f6mAXxlWQc+W55nakgkzuWdyB3YRB5Bz6pveuVEttobesC27/53lioGoyO9OQSrKtYcJslStf5y4HqdfJ02qJD4lgSjzXPkDtyheGUNNPDpStRS7EYVuB+UoE4qwJwjy3MGlgSjsncZLB2omZasx48hdVGJhIZErCqPJXItNO58lW9QLmRalRA7VBC79yDdvhtcvRLxMwosnlSIyQvkW8R2iLmgLmC05JxUXVxDgq5WyPHSVQqa0an3P/HCh3TJIwdr2QXJb9fQ1OHvI5UAHuhLrp58Pa4jNXEtqeXqdr723/vSO+FK7eehwg/uhQrKFu7kly5Ov7z/x3XBB3XJykO1LCS/U0ND0zsvLlLUbDganQDw/GYbB7CDounvYrHYP+EuO0KFZbLv7C3F1Ev7Bh4ZfLZ3AdF78wjNhjEW8Ic8Pt/vVq9/0OQd6mz2Dtf+5Al8NejzfZgOdlcIQbNOGLEOUzGKj9E0oub+rYHDcxHcDYWEdNAMyfyAEUKgRx4/zPG7fy9K4Hmr+8nBGmu22siNq+L9hTlvK+KWi2AcerCeFnkj6cAKmLs2Km4ZfMYSlcGpy841VfH+TrCuZjA2PeKWBjB2/TJcGO0DRVHpxwYfrufQ/IuAkloa1WY55vR6scoOmMG6WsD2G1binr1NSeDZonLQDe0IFX+8OfiLJg635kV8VBfH6Z45hG9OLce8kRlnE1hPqzxmr18WJXC45BMIf93GXMWXjx518VlaBqcmPPJimZG+TeEJd6vIeduQGrEhbFrVTvnvbww+oFk8/ubpCFdUHRGKqkJiozdMJYMWZMadEMYcEIJWZMbd4Ae71oVz/s5Mou9nMdTWFZve9UZmmiwU/ngxn59SFJwnHkemgZGjmckBME4DxEkfkq4WpMcc4DdoqaTTICRd+l3EVoRg8AXG3XYrNtqfFEZs4AMWZH51gXW3PbyP7ZcEpk8/Cf+pZ4lcKDVoroo7DUx6ckCUq7/iAT/Y/cABS/Q1zhC5FiYmnmO8bVfjQTsjjNrlNpJ7d7gHKV+HBI0Q26nUkOVowmGYD3u7o/xQl/z3itv006zzUjHxtJRwGUoTtsZrrEP/7lODbkX/AsdikRWuognAAAAAAElFTkSuQmCC">
+          </div>
+        </div>
+        <div class="notification-info">
+          <div class="message-time">Now</div>
+          <div class="notification-message">
+            One of your listings has received a price offer from 
+            <div class="user-name">John Carter</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="small-message-box" data-user-id="JD12345">
+      <div class="image-info-wrap">
+        <div class="notification-profile">
+          <img src="Rectangle 402.png" alt="Profile Image" class="notification-image">
+                  <!-- Add the price icon here -->
+                  <div class="price-icon-container">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAACXBIWXMAAAsTAAALEwEAmpwYAAACOUlEQVR4nOXVO2/TUBgGYEOBxolvufiiclFFJWCAoQMDVDCxoU5cfkP/AQsS6gYM8A86dCwjQ3pLXCfNzc3NThADC12RWIKoVIVzXmQ7TR1kGltKBoSlb/LR95zznnNshvkvH4CZQVd7hQ1mZnqIrT5HRwNs7dn0kI5aga0ClmxOCZDve4ACtBWgodybPGIrHzxABloy0EhvTBZoqfOwlP4QaGaARuYXTOX65JC2/N5tPgTSQD0NmMl34ZuAOY9Pc4voqMuwtRVY6iosZQ2WkkU700VTPnab+4GDFFBLHaMqdVGVsqQqrZGKuIqysIIiv4ySuAgw506Rz3M30dX66KgYbq4/fy8euM1PADMJ1JKgVQm04pQIWhZBSwLovgBS5Pso8DdGV2Mrj2CpveHpCYrnwGkeALjNTwAepMD9hME/Do6tqd1FO/NtZPZ/AjU/MDr7AfAdBW7p7P2pywtopr9EjYcWeRCD+wqduxXuINRkDfVUK2w81AO60NkroYDTFSVFmMmjcfFQDziCLkqRgAFybVw8tOAUB2okACN2NTpSTT09Kx7qNudA9xJuIc8+iYyQivT2b/FQP6A7FQfJsW+iI2VBDzg9hzC4l2QvcegBcdB8HDTHOogeCXA+M6Qk9PyXixiJ19Blzn1fZljk4y9Iju05AN1lQXZiPyL9MVFO3BleriL3Ebo4Hzhul71MdmbXyXaM0u1ZYOvi7fBIiXtICnxx7M1lBuO3Yktk89I+shcehEb+yec37cuKdVhlFpsAAAAASUVORK5CYII=">                  
+                  </div>
+                </div>
+        <div class="notification-info">
+          <div class="message-time">1 h ago</div>
+          <div class="notification-message">
+            <div class="user-name">John Doe</div></div>has written a review for you
+        </div>
+        </div>
+      </div>
+
+      <div class="small-message-box" data-user-id="JD12345">
+        <div class="image-info-wrap">
+          <div class="notification-profile">
+            <img src="hilux img.png" alt="Profile Image" class="notification-image">
+                    <!-- Add the price icon here -->
+                    <div class="price-icon-container">
+                      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAACXBIWXMAAAsTAAALEwEAmpwYAAACuUlEQVR4nO1VW08TURDu39Af4gOJiVFoE00fTKnXhN0aFRWQBKiK4SIvovbB25MK9CZtEajyQCrEFrrb0lRKk7ZiUFrFVOXS0lhsKNjLmDl2t+1SBPFFE75kcjJnZmfON2fmrEi0i/8So13le21PT9SwJlrnfHZ2mDHSWtRx/6+D27THJC5zDRMYV4Wjn73Z5PdFyKTXAVfUcd9lrrVb9TLxjk4+MVA9EpzSRzEohx+pDCzHk2TlkEmtQ9Cjj070V7+0PJLs2VaCsd5T5e6hhtBaIsoH8oeWoVU9BY2PvXCl209W1AMfYrxPMhEB91DDJ7vh9JHfJrAbKeVb9sFiNps/6SDzEZq6/XB7OAYqyzcid0fjoHHEQdntBzM7x/vid9PM/UXWQDWWTMD2KW6EvL354+cYYAIuuConoaUUsY/PJIn9TQEjBJbPYVS0FScw0vVoKPIEgBb1FM+goy8IUuoalFVUwqRvhk+C9jaNV/gpzE6qow7TmTqSwKqTH/RZO78KnfBysfbc6THBvgNSIvslMqhvf8jbmp54IZXOl5iDz3ZrAeOLWAP1Lp1KbnDALrraky9VmbiST4JSJpbzNvSLraxtiIFxMX6Oyc0vWzKh80xQpIrmrZlYO+cJEwRjoC4HPdqI0KlVeCeKZsJISl+Hjr4Q2d/sTt67eyKska4tunzGRLcLuwvnoFR3qQoE7dNzxd0169FEWVNVyyZzUtWEfV44JzgHwjlR5Rgou/zwwiGck3ubzwkHm/74IdfzutDqyjz/Mc4BlgRrjxOPK+qFDJKJJTLx470nD4u2+3Y5B86PIG18mzik0hnSRYWXjPbZ1+qIs/+cZdtvVyGsGpnYNXiJCdjuhCNhT3Z1ZYG8wriijvsuc439le5oxR8HL8VsTCe/yBgpza//CaUZ08ov7Ojku/gn8BNb4sIkvsesZQAAAABJRU5ErkJggg==">
+                    </div>
+                  </div>
+          <div class="notification-info">
+            <div class="message-time">2 d ago</div>
+            <div class="notification-message">
+              <div class="user-name">Jane Smith</div></div>has visited one of your listings
+          </div>
+          </div>
+        </div>
+
+        <div class="small-message-box" data-user-id="JS23456">
+          <div class="image-info-wrap">
+            <div class="notification-profile">
+              <img src="chatbot.jpg" alt="Profile Image" class="notification-image">
+                      <!-- Add the price icon here -->
+          <div class="price-icon-container">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAACXBIWXMAAAsTAAALEwEAmpwYAAADdUlEQVR4nO2V72sbdRzH90j/jT1RhA0d4hN1TFhFUYsPBHETq6gT+kB8IIjTwRDBul+tpSrtpC3M4VYw64/YTvpruaTNmrtc0ibNkvTaNHfNXZJL0+QuuXTpluQt3y+9s9fNsUHBJ/vCi+NzfL/v1/c+92vfvsfjUYcgCE+KotgsSdK7e4Esy4TmSCTyhCVJpVJDiqLAJJ1O28hkMhbZbNaGqqoWuVxuN9csiaqqxXw+D8LGxoZFoVCwUSwWLTRNs6HrukWpVKJomla0JIODgzVZltcNwwChUqnYCOcr+Dlexue+Io7fyOGDqSxOzqpwCgWUN2+jWq1abG1tUVRVLZBcSzI9PY3h4WGwLCvVajWY3KnV0Zu8jfe8Gr4P6fgrWcKMXMbfqzrOsDkcHVhFi1NCtnwHjUaDUq/XwXFciuRNTU3BkrjdbrhcLoyNjWFoaKi0ublZI7vqT1TQMqfjZsaw7ba6TSJvoPnKMt65sgRNpy1qOJ3OIskheSTXkjAMUyUnGIbBxMQEHA5H3beiFI95NYyKJRoYWzfQzq/jLKsiqpbR6csikNKxIOt4pmMe3a644XA4auPj4zRne+NbO6/EMCXkSNr33WQYLYza0MsGVvMlvDki4zWHiI9HJbw1sIJDPVFc4tP0Hr7eE6y93eWm7TFztrOMeyQ7RV/cEHH6Zpo+Lb0LORwZSGIsnqP1hZk1HOgKo8+XonXr1UW8fG7Wtn6b+0tMTkyIaJtT6KPbNqvgxcsriKTWaT0SUvBU+zwuzoi0/uT3EJrO29c/lKT1uoCvXCn6UvWwMl7oi+Mqv0br09eXsf9HPzomBaSzKp79YQ4nuplHk3g8Hpx1LeENRxJrSgZRUcFLvVE890sYr/62iFd+ncfTbRwOtrE42unH/m89YNjQw0u8Xi8EQQAvSDh8eRkXmFXIsgw2LuHUaBxfXouCjYkY4RL4sD+I1ktBzC0mIEkSXUfWP1DCcRxEUaShhK6ZJA5138KZSQErSYkG7caca0LO+f3+eyUej8eIRCK2D6FJlzuBAx3zeP6nID77I4xTg4s4+WcIH/UF7jvfJBqNkrb/K0kkErXdX9ed3EoqOD++hPf7F9DUyaGp3YdP+4P/Od+E5FqSWCx2l/Rzr4nFYnctic/n+4bneT0QCFT2Cp7ndZZlv37g3/Lx+N/GP83eby91vmAFAAAAAElFTkSuQmCC">          </div>
+        </div>
+            <div class="notification-info">
+              <div class="message-time">1 m ago</div>
+              <div class="notification-message">
+                <div class="user-name">Farmify</div></div>Please verify your email address
+            </div>
+            </div>
+          </div>
+
+          <div class="small-message-box" data-user-id="JS23456">
+            <div class="image-info-wrap">
+              <div class="notification-profile">
+                <img src="pig img.png" alt="Profile Image" class="notification-image">
+                        <!-- Add the price icon here -->
+          <div class="price-icon-container">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAACXBIWXMAAAsTAAALEwEAmpwYAAAD0klEQVR4nOXUSWwbVRgHcHPoBQRF6gVxKEpiUjVpgu2p3diO992e8VLHWxekKBJCQr2wHpAoB1AQVGypWhSWKrSUA6eqhEOFUBW1IWkbkgqoQAKpxvZ4xuNtZmykLPYf2ZFdJ3a6kBPiu77R+823PYnkfxNZ5+HHBDIWLPh8j4uuUIR3hX4VHcFw3hraWbD4gpzG++i2EYGKnhPJCHh3OMM7Q8uCM4iiLbBctPozRYsfBZP37L+6+G/y6O4SFbslUNElwRNZFtxhCK4QagBvPwjeFkANKJq9yBvJ5byeXMzrPLfyWnL3fSMlb2xUpKKoZXA3oGCiUDCQyOs9yA+7kFXbR+95Oe8/ukv0Rs+IZPSPBsC7Qig4DqLYAci3ADmtE9kh+5+cynqGV1p2bZ0BdWisNQM2cAS5L7+G8MMMMicnQVvvAPTIs8hOnUdy7FgdyKntyB6wIau0IEMYx7ZEBDJmaAB55wjK1xewymVRvDCN6uoquM+mkDOSYIwelJd+rp8lbIENAEeYkJEZDZ1LRcYo0RMRGj1g/YdQC+7jT5Az+yDOzqN88xcwejfY9ybqZ6lX36j1YSOgMIKV6YX0oJZqQ0RP5HRrkxkqBlSryJz8FKyRRPmnJYhz1xH3H0GlXAb//WUwQ7Y2ICPTgx3UgdmnPdWGFKhQF+8aWWlMUc7qR2l2HhWxhNLCIlCp4q/XjkOcvYa1Io+kc2RroF+7wgwMd7eXyxUa3zymnCMI7sQEsl+cA/38i6DffGe9TMffRmLsGLjJKTDvfoi4xt4E2H1aMP0aMHuHxtub7gj+frc9SHnCWOMFiFd+RPyl1+ulFK8tYE0sQZy/gcTAcCuAdK/qt/ZMHH510eqnOwEZrbPeg0qphLg7DPHqPEo3FpGUG8B+cKqe3W21vQnQvSqa6VGq2xAQz+0oWnyJzUBu2FWfolqkx99Her8ZpcWbEK7OIfWMbr2E1SpuK83rGexRIS3dnwRB7GhDOKv3yYKJqmx+KpK2QH0fan+eUpqRIUxgPjpd35vcNxewQjPgL19Bcu+BdeBpJVJSosI+pXyi467kTB53wUDOtD4VidEXwH1+Fkl3uDlFSYUR6bdOoDB9CezEJOJyQxOge4gZuptwdwSakM79cgNobDLXeQ9A92uQbpSoBkgJpLsVr0juFXmdW5/TOMW2p0JxB9gwRS1AqksupLoGdJL7jazK3PcgAC2V9UkeNCCRPMQpjOczcsMcK9N/2xGQKqdTPcQc3S3/qva9ZDuRIoiHmX7Nd0yf5iKzZ2iA7lVdrAHpwcFHtnXxfy7+AeCthCS3MUbeAAAAAElFTkSuQmCC">          </div>
+        </div>
+              <div class="notification-info">
+                <div class="message-time">1 m ago</div>
+                <div class="notification-message">
+                  <div class="user-name">Price Alert</div></div>One of your saved items has had a price reduction!
+              </div>
+              </div>
+            </div>
+
+            <div class="small-message-box" data-user-id="JS23456">
+              <div class="image-info-wrap">
+                <div class="notification-profile">
+                  <img src="Rectangle 404.png" alt="Profile Image" class="notification-image">
+                          <!-- Add the price icon here -->
+                          <div class="price-icon-container">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAACXBIWXMAAAsTAAALEwEAmpwYAAACOUlEQVR4nOXVO2/TUBgGYEOBxolvufiiclFFJWCAoQMDVDCxoU5cfkP/AQsS6gYM8A86dCwjQ3pLXCfNzc3NThADC12RWIKoVIVzXmQ7TR1kGltKBoSlb/LR95zznnNshvkvH4CZQVd7hQ1mZnqIrT5HRwNs7dn0kI5aga0ClmxOCZDve4ACtBWgodybPGIrHzxABloy0EhvTBZoqfOwlP4QaGaARuYXTOX65JC2/N5tPgTSQD0NmMl34ZuAOY9Pc4voqMuwtRVY6iosZQ2WkkU700VTPnab+4GDFFBLHaMqdVGVsqQqrZGKuIqysIIiv4ySuAgw506Rz3M30dX66KgYbq4/fy8euM1PADMJ1JKgVQm04pQIWhZBSwLovgBS5Pso8DdGV2Mrj2CpveHpCYrnwGkeALjNTwAepMD9hME/Do6tqd1FO/NtZPZ/AjU/MDr7AfAdBW7p7P2pywtopr9EjYcWeRCD+wqduxXuINRkDfVUK2w81AO60NkroYDTFSVFmMmjcfFQDziCLkqRgAFybVw8tOAUB2okACN2NTpSTT09Kx7qNudA9xJuIc8+iYyQivT2b/FQP6A7FQfJsW+iI2VBDzg9hzC4l2QvcegBcdB8HDTHOogeCXA+M6Qk9PyXixiJ19Blzn1fZljk4y9Iju05AN1lQXZiPyL9MVFO3BleriL3Ebo4Hzhul71MdmbXyXaM0u1ZYOvi7fBIiXtICnxx7M1lBuO3Yktk89I+shcehEb+yec37cuKdVhlFpsAAAAASUVORK5CYII=">                  
+                          </div>
+                        </div>
+                <div class="notification-info">
+                  <div class="message-time">4 m ago</div>
+                  <div class="notification-message">
+                    <div class="user-name">Alice Walker</div></div>has written a review for you
+                </div>
+                </div>
+              </div>
+
+              <div class="small-message-box" data-user-id="JS23456">
+                <div class="image-info-wrap">
+                  <div class="notification-profile">
+                    <img src="tractor img.png" alt="Profile Image" class="notification-image">
+                            <!-- Add the price icon here -->
+          <div class="price-icon-container">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAACXBIWXMAAAsTAAALEwEAmpwYAAABrUlEQVR4nO3TzytEURQH8Ft+ZGFMmXfulBTDNDGTpFmY/DiHlX/ALBWSrEisNMzChpWNDcqvQmbuRaLsZBBKWSg2UjaKjVJSMp7e80bCxps7O986q3s7n879wdh/MpmpIMuRxOcF8q2MAQJ5XBLXl+q0eeVALMyyJMKyASyEXIlImeM10ek7Ou8PVCsHFkPa/pDHkUx0+vSLwSr9vD/wdDlQFUwbEQgTJlDr2vsKpEoJJAja4g0wGvHkX30HlEJGTnoqI78BqTro8p2mjejhcNZZr3/jN+Cou0If8TqTK/Xm3W3bRmJ+f+5ak3vpsN37A4h6nW8LIe3YuDuBMGML2KhzOSTyHaPJGvHN1EQmUF7wCUjiq7vEsu0ARQL5mdUkMUclebtRyj7u8UdHyh3XaQPxZndAEtyYx0BwEQsVF35dF43amAkgLBv/6c+AQHezQP7wAfDbdXKX/thD0CaJj9sCJEGrRHi2gMc4ajVMZQTyPkk8aZ3zi2iCFmXNjZEF8UmruTHBmyToYCojEKZTgFXDSgEjguDucwqEaZaJSNR6JcG9QD5r673/hynIO4/wCQB23iOSAAAAAElFTkSuQmCC">          </div>
+        </div>
+                  <div class="notification-info">
+                    <div class="message-time">6 m ago</div>
+                    <div class="notification-message">
+                      <div class="user-name">Sales Status Update</div></div>One of your saved items has been sold.
+                  </div>
+                  </div>
+                </div>
+
+                <div class="small-message-box" data-user-id="JS23456">
+                  <div class="image-info-wrap">
+                    <div class="notification-profile-container">
+                      <div class="profile-placeholder">J</div> <!-- Placeholder Profile Picture -->
+                    </div>
+                    <div class="notification-info">
+                      <div class="message-time">7 m ago</div>
+                      <div class="notification-message">
+                        <div class="user-name">James Anderson</div></div>has written a review for you
+                    </div>
+                    </div>
+                  </div>
+
+                  <div class="small-message-box" data-user-id="JS23456">
+                    <div class="image-info-wrap">
+                      <div class="notification-profile-container">
+                      <div class="profile-placeholder" style="background-color: #f28c28;">M</div> <!-- Placeholder Profile Picture -->
+                    </div>
+                      <div class="notification-info">
+                        <div class="message-time">1 y ago</div>
+                        <div class="notification-message">
+                          <div class="user-name">Michael Turner</div></div>has sent you a message
+                      </div>
+                      </div>
+                    </div>
+
+    </div>
+  </div>
 
 <!-- Login Popup HTML -->
 <div id="loginPopup" class="login-popup">
@@ -1774,6 +2394,7 @@ hr {
     </div>
 
         <button type="submit" class="login-submit">Login</button>
+        <button type="submit" class="signup-submit">Sign up</button>
         <p class="login-p">or login with</p>
 
 <div class="social-container">
@@ -1796,7 +2417,7 @@ hr {
     <div class="signup-popup-content">
         <button class="close-btn">x</button>
         <h4>SIGN UP</h4>
-        <p class="signup-p">Get alerts when prices drop, sell your pigs or products with us, and enjoy other features to save and search efficiently.</p>
+        <p class="signup-upper-p">Get alerts when prices drop, sell your pigs or products with us, and enjoy other features to save and search efficiently.</p>
         <div class="signup-input-wrapper">
             <i class="bi bi-person"></i>
             <input type="text" placeholder="First Name" class="signup-input">
@@ -1822,6 +2443,7 @@ hr {
             <input type="password" placeholder="Confrm password" class="signup-input">
         </div>
         <button type="submit" class="signup-submit">Sign up</button>
+        <button type="submit" class="login-submit">Login</button>
         <p class="signup-p">or signup with</p>
 
         <div class="social-container">
@@ -2066,8 +2688,18 @@ function toggleNav() {
     nav.classList.toggle('show');
 }
 
+// Function to close all popups/dropdowns
+function closeAllPopups() {
+    document.getElementById('loginPopup').style.display = 'none';
+    document.getElementById('signupPopup').style.display = 'none';
+    document.getElementById('favoritesDropdown').style.display = 'none';
+    document.getElementById('notificationPopup').style.display = 'none'; // Close notification popup too
+    document.getElementById('envelopePopup').style.display = 'none';
+}
+
 // Show or hide the login popup
 function toggleLoginPopup() {
+    closeAllPopups();  // Close other popups first
     const loginPopup = document.getElementById('loginPopup');
     const loginButton = document.querySelector('.login-button');
 
@@ -2076,7 +2708,6 @@ function toggleLoginPopup() {
     } else {
         // Get the position of the login button and position the popup under it
         const buttonRect = loginButton.getBoundingClientRect();
-        
         loginPopup.style.top = `${buttonRect.bottom + window.scrollY}px`; // Position below the button
         loginPopup.style.left = `${buttonRect.left}px`; // Align with the button
         loginPopup.style.display = 'block';
@@ -2091,18 +2722,147 @@ document.querySelector('.login-popup-content').addEventListener('click', functio
     event.stopPropagation();
 });
 
-// Hide popup when clicked outside of the login popup
+// Close the login popup when the "X" button is clicked
+document.querySelector('#loginPopup .close-btn').addEventListener('click', function() {
+    document.getElementById('loginPopup').style.display = 'none';
+});
+
+// Show or hide the signup popup
+function toggleSignupPopup() {
+    closeAllPopups();  // Close other popups first
+    const signupPopup = document.getElementById('signupPopup');
+    const signupOverlay = document.getElementById('signupOverlay');
+
+    if (signupPopup.style.display === 'block') {
+        signupPopup.style.display = 'none';
+        signupOverlay.style.display = 'none';
+    } else {
+        signupPopup.style.display = 'block';
+        signupOverlay.style.display = 'block';
+    }
+}
+
+// Attach event listener to the signup button
+document.querySelector('.signup-button').addEventListener('click', toggleSignupPopup);
+
+// Close the signup popup when the "X" button is clicked
+document.querySelector('#signupPopup .close-btn').addEventListener('click', function() {
+    toggleSignupPopup();
+});
+
+// Show or hide the favorites dropdown
+function toggleFavoritesDropdown() {
+    closeAllPopups();  // Close other popups first
+    const favoritesDropdown = document.getElementById('favoritesDropdown');
+    const favoritesButton = document.querySelector('.bi-heart');
+
+    if (favoritesDropdown.style.display === 'block') {
+        favoritesDropdown.style.display = 'none';
+    } else {
+        // Get the position of the heart icon and position the dropdown under it
+        const buttonRect = favoritesButton.getBoundingClientRect();
+        favoritesDropdown.style.top = `${buttonRect.bottom + window.scrollY}px`; // Position below the heart icon
+        favoritesDropdown.style.left = `${buttonRect.left}px`; // Align with the icon
+        favoritesDropdown.style.display = 'block';
+    }
+}
+
+// Attach event listener to the favorites heart icon
+document.querySelector('.bi-heart').addEventListener('click', toggleFavoritesDropdown);
+
+// Stop propagation of clicks inside the favorites dropdown to prevent closing
+document.querySelector('.favorites-dropdown-content').addEventListener('click', function(event) {
+    event.stopPropagation();
+});
+
+// Close the favorites dropdown when the "X" button is clicked
+document.querySelector('#favoritesDropdown .close-btn').addEventListener('click', function() {
+    document.getElementById('favoritesDropdown').style.display = 'none';
+});
+
+// Show or hide the notification popup
+function toggleNotificationPopup() {
+    closeAllPopups();  // Close other popups first
+    const notificationPopup = document.getElementById('notificationPopup');
+    const bellIcon = document.querySelector('.bi-bell');
+
+    if (notificationPopup.style.display === 'block') {
+        notificationPopup.style.display = 'none';
+    } else {
+        // Get the position of the bell icon and position the popup under it
+        const buttonRect = bellIcon.getBoundingClientRect();
+        notificationPopup.style.top = `${buttonRect.bottom + window.scrollY}px`; // Position below the bell icon
+        notificationPopup.style.left = `${buttonRect.left}px`; // Align with the bell icon
+        notificationPopup.style.display = 'block';
+    }
+}
+
+// Attach event listener to the bell icon for notifications
+document.querySelector('.bi-bell').addEventListener('click', toggleNotificationPopup);
+
+// Stop propagation of clicks inside the notification popup to prevent closing
+document.querySelector('#notificationPopup').addEventListener('click', function(event) {
+    event.stopPropagation();
+});
+
+// Close the notification popup when the "X" button is clicked
+document.querySelector('#notificationPopup .close-btn').addEventListener('click', function() {
+    document.getElementById('notificationPopup').style.display = 'none';
+});
+
+// Show or hide the envelope popup
+function toggleEnvelopePopup() {
+    closeAllPopups();  // Close other popups first
+    const envelopePopup = document.getElementById('envelopePopup');
+    const envelopeButton = document.querySelector('#navBarEnvelope'); // Make sure the selector matches your envelope icon ID
+
+    if (envelopePopup.style.display === 'block') {
+        envelopePopup.style.display = 'none';
+    } else {
+        const buttonRect = envelopeButton.getBoundingClientRect();
+        envelopePopup.style.top = `${buttonRect.bottom + window.scrollY}px`;
+        envelopePopup.style.left = `${buttonRect.left}px`;
+        envelopePopup.style.display = 'block';
+    }
+}
+
+// Attach event listener to the envelope icon
+document.querySelector('#navBarEnvelope').addEventListener('click', toggleEnvelopePopup);
+
+// Close the envelope popup when the "X" button is clicked
+document.querySelector('#envelopePopup .close-btn').addEventListener('click', function() {
+    document.getElementById('envelopePopup').style.display = 'none';
+});
+
+// Hide all popups when clicking outside
 window.onclick = function(event) {
     const loginPopup = document.getElementById('loginPopup');
+    const signupPopup = document.getElementById('signupPopup');
+    const favoritesDropdown = document.getElementById('favoritesDropdown');
+    const notificationPopup = document.getElementById('notificationPopup');
+    const envelopePopup = document.getElementById('envelopePopup'); 
+
     if (!loginPopup.contains(event.target) && event.target !== document.querySelector('.login-button')) {
         loginPopup.style.display = 'none';
     }
-};
 
-// Close the popup when the "X" button is clicked
-document.querySelector('.close-btn').addEventListener('click', function() {
-    document.getElementById('loginPopup').style.display = 'none';
-});
+    if (!signupPopup.contains(event.target) && event.target !== document.querySelector('.signup-button')) {
+        signupPopup.style.display = 'none';
+        document.getElementById('signupOverlay').style.display = 'none';
+    }
+
+    if (!favoritesDropdown.contains(event.target) && event.target !== document.querySelector('.bi-heart')) {
+        favoritesDropdown.style.display = 'none';
+    }
+
+    if (!notificationPopup.contains(event.target) && event.target !== document.querySelector('.bi-bell')) {
+        notificationPopup.style.display = 'none';
+    }
+
+    if (!envelopePopup.contains(event.target) && event.target !== document.querySelector('#navBarEnvelope')) {
+        envelopePopup.style.display = 'none';
+    }
+};
 
 
 // Show or hide the signup popup
@@ -2122,136 +2882,49 @@ function toggleSignupPopup() {
 // Attach event listener to the signup button
 document.querySelector('.signup-button').addEventListener('click', toggleSignupPopup);
 
-// Hide popup when clicked outside or close button is clicked
+// Close the signup popup when clicking outside the popup (overlay)
 document.getElementById('signupOverlay').onclick = function() {
     toggleSignupPopup();
 };
 
-document.querySelector('.signup-popup .close-btn').addEventListener('click', function() {
-    toggleSignupPopup();
-});
-
-
-// Show or hide the favorites dropdown
-function toggleFavoritesDropdown() {
-    const favoritesDropdown = document.getElementById('favoritesDropdown');
-    const favoritesButton = document.querySelector('.bi-heart');
-
-    if (favoritesDropdown.style.display === 'block') {
-        favoritesDropdown.style.display = 'none';
-    } else {
-        // Get the position of the heart icon and position the dropdown under it
-        const buttonRect = favoritesButton.getBoundingClientRect();
-        
-        favoritesDropdown.style.top = `${buttonRect.bottom + window.scrollY}px`; // Position below the heart icon
-        favoritesDropdown.style.left = `${buttonRect.left}px`; // Align with the icon
-        favoritesDropdown.style.display = 'block';
-    }
-}
-
-// Attach event listener to the favorites heart icon
-document.querySelector('.bi-heart').addEventListener('click', toggleFavoritesDropdown);
-
-// Stop propagation of clicks inside the favorites dropdown to prevent closing
-document.querySelector('.favorites-dropdown-content').addEventListener('click', function(event) {
-    event.stopPropagation();
-});
-
-// Hide favorites dropdown when clicking outside of it
-window.onclick = function(event) {
-    const favoritesDropdown = document.getElementById('favoritesDropdown');
-    if (!favoritesDropdown.contains(event.target) && event.target !== document.querySelector('.bi-heart')) {
-        favoritesDropdown.style.display = 'none';
-    }
-};
-
-// Close the favorites dropdown when the "X" button is clicked
-document.querySelector('.favorites-dropdown .close-btn').addEventListener('click', function() {
-    document.getElementById('favoritesDropdown').style.display = 'none';
-});
-
-
-// Function to close all popups/dropdowns
-function closeAllPopups() {
-    document.getElementById('loginPopup').style.display = 'none';
+// Close the signup popup when the "X" button is clicked
+document.querySelector('#signupPopup .close-btn').addEventListener('click', function() {
     document.getElementById('signupPopup').style.display = 'none';
-    document.getElementById('favoritesDropdown').style.display = 'none';
     document.getElementById('signupOverlay').style.display = 'none';
-}
-
-// Show or hide the login popup
-function toggleLoginPopup() {
-    closeAllPopups();  // Close any other open popups
-    const loginPopup = document.getElementById('loginPopup');
-    const loginButton = document.querySelector('.login-button');
-
-    if (loginPopup.style.display === 'block') {
-        loginPopup.style.display = 'none';
-    } else {
-        const buttonRect = loginButton.getBoundingClientRect();
-        loginPopup.style.top = `${buttonRect.bottom + window.scrollY}px`;
-        loginPopup.style.left = `${buttonRect.left}px`;
-        loginPopup.style.display = 'block';
-    }
-}
-
-// Show or hide the signup popup
-function toggleSignupPopup() {
-    closeAllPopups();  // Close any other open popups
-    const signupPopup = document.getElementById('signupPopup');
-    const signupOverlay = document.getElementById('signupOverlay');
-
-    signupPopup.style.display = 'block';
-    signupOverlay.style.display = 'block';
-}
-
-// Show or hide the favorites dropdown
-function toggleFavoritesDropdown() {
-    closeAllPopups();  // Close any other open popups
-    const favoritesDropdown = document.getElementById('favoritesDropdown');
-    const favoritesButton = document.querySelector('.bi-heart');
-
-    if (favoritesDropdown.style.display === 'block') {
-        favoritesDropdown.style.display = 'none';
-    } else {
-        const buttonRect = favoritesButton.getBoundingClientRect();
-        favoritesDropdown.style.top = `${buttonRect.bottom + window.scrollY}px`;
-        favoritesDropdown.style.left = `${buttonRect.left}px`;
-        favoritesDropdown.style.display = 'block';
-    }
-}
-
-// Attach event listeners
-document.querySelector('.login-button').addEventListener('click', toggleLoginPopup);
-document.querySelector('.signup-button').addEventListener('click', toggleSignupPopup);
-document.querySelector('.bi-heart').addEventListener('click', toggleFavoritesDropdown);
-
-// Close button for each popup
-document.querySelectorAll('.close-btn').forEach(button => {
-    button.addEventListener('click', closeAllPopups);
 });
 
-// Hide all popups when clicking outside
-window.onclick = function(event) {
-    const loginPopup = document.getElementById('loginPopup');
-    const signupPopup = document.getElementById('signupPopup');
-    const favoritesDropdown = document.getElementById('favoritesDropdown');
-    const target = event.target;
 
-    if (!loginPopup.contains(target) && target !== document.querySelector('.login-button')) {
-        loginPopup.style.display = 'none';
-    }
+// Function to search messages
+function searchMessages() {
+    const searchTerm = document.querySelector('.message-search input').value.trim().toLowerCase();
+    const messageBoxes = document.querySelectorAll('.small-message-box');
+    let matchCount = 0;
 
-    if (!signupPopup.contains(target) && target !== document.querySelector('.signup-button')) {
-        signupPopup.style.display = 'none';
-        document.getElementById('signupOverlay').style.display = 'none';
-    }
+    messageBoxes.forEach(box => {
+        const lastMessage = box.querySelector('.last-message');
+        const userName = box.querySelector('.user-name');
 
-    if (!favoritesDropdown.contains(target) && target !== document.querySelector('.bi-heart')) {
-        favoritesDropdown.style.display = 'none';
-    }
-};
+        // Reset highlights and visibility
+        lastMessage.innerHTML = lastMessage.textContent;
+        userName.innerHTML = userName.textContent;
+        box.style.display = '';
 
+        // Highlight matches or hide message boxes without matches
+        if (searchTerm && !(lastMessage.textContent.toLowerCase().includes(searchTerm) || userName.textContent.toLowerCase().includes(searchTerm))) {
+            box.style.display = 'none';
+        }
+    });
+
+    console.log(`Search results: ${matchCount} match${matchCount !== 1 ? 'es' : ''}.`);
+}
+
+
+// Attach the search function to the input's keyup event
+document.querySelector('.message-search input').addEventListener('keyup', searchMessages);
+
+
+// Attach the search function to the input's keyup event
+document.querySelector('.message-search input').addEventListener('keyup', searchMessages);
 
 
 </script>
