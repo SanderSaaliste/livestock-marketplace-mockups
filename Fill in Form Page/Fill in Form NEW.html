@@ -489,6 +489,16 @@ margin-left: -30px;
   margin-bottom: 7px;
 }
 
+.guiding-text-box {
+  display: flex;
+  width: 508px;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 7px;
+  margin-top: 35px;
+}
+
 .guiding-text-vitamin {
   display: flex;
   width: 55%;
@@ -666,6 +676,95 @@ color: #999;
     font-family: "Inter", sans-serif;
     font-weight: 500;
   }
+
+  #dropdown-text-sales-status {
+    color: #999;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+  }
+
+.tickbox-option {
+  display: flex;               /* Use flexbox to manage alignment */
+  align-items: center;         /* Center items vertically */
+  margin-top: 10px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.tickbox-wrapper {
+  padding: 5px;
+  background-color: #f5f5f5;
+  border: 2px solid #f5f5f5;
+  border-radius: 5px;
+  color: #999;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+.tickbox-wrapper:focus {
+  border-color: #5EA91E;
+}
+
+label[for="payment-gcash"] {
+  display: flex;
+  align-items: center;
+}
+
+label[for="payment-cash"] {
+  display: flex;
+  align-items: center;
+}
+
+label[for="payment-credit-card"] {
+  display: flex;
+  align-items: center;
+}
+
+.tickbox-wrapper img {
+  margin-left: 2px;
+}
+
+.tickbox-wrapper text {
+  margin-left: 25px;
+}
+
+.tickbox-p {
+  border-radius: 5px;
+  color: #999;
+    font-family: "Inter", sans-serif;
+    margin-left: 5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+input[type="checkbox"] {
+  width: 12px; /* Adjust the size of the checkbox */
+  height: 12px; /* Adjust the size of the checkbox */
+  border-radius: 50%; /* Make the checkbox circular */
+  appearance: none; /* Remove default checkbox styles */
+  -webkit-appearance: none; /* Remove default checkbox styles in Webkit browsers */
+  outline: none; /* Remove outline */
+  border: 1px solid #888888; /* Border color of the checkbox */
+  background-color: #fff; /* Background color of the checkbox */
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+input[type="checkbox"]:checked::after {
+  content: '';
+  width: 6px; /* Size of the small dot */
+  height: 6px; /* Size of the small dot */
+  border-radius: 50%; /* Make the dot circular */
+  background-color: #4d4d4d; /* Color of the dot */
+  position: absolute;
+  top: 52%;
+  left: 49%;
+  transform: translate(-50%, -50%);
+}
+
 
 .listing-dropbox-container {
     width: 100%;
@@ -865,7 +964,7 @@ color: #999;
     justify-content: center;
     align-items: center;
     max-width: 1270px;
-    margin-top: 10px;
+    margin-top: 40px;
 }
 
 .language-button i {
@@ -1097,8 +1196,12 @@ align-items: center;
 }
 
 .nav-hr-bottom {
-  margin-top: 60px;
-  height: 0.3px;
+  width: 100% !important;
+  height: 0.3px !important;
+  background-color: #e1e1e1 !important;
+  border: none !important;
+  margin-top: 40px !important;
+  z-index: 999 !important;
 }
 
 .content {
@@ -1889,6 +1992,27 @@ hr {
 </div> 
 Old version of dropbox ends here -->
 
+<!-- Sales status: Initially, this dropdown should be hidden when the user creates a listing. However, if they access the "Edit Listing" button from the My Profile page, it will redirect them to the Fill in Form, where the dropdown will be visible here.-->
+<div class="listing-dropbox-container">
+  <p class="guiding-text">Edit your listing's sales status</p>
+  <div class="custom-dropdown" tabindex="0" onclick="toggleDropdown('sales-status')">
+    <div class="dropdown-selected">
+      <span id="dropdown-text-sales-status">Please select an option</span>
+    </div>
+    <div class="dropdown-options" id="dropdown-options-sales-status" style="display: none;">
+      <div class="dropdown-option" onclick="selectOption('sales-status', 'for sale', 'For Sale', '')">
+        For Sale
+      </div>
+      <div class="dropdown-option" onclick="selectOption('sales-status', 'pending', 'Pending', '')">
+        Pending
+      </div>
+      <div class="dropdown-option" onclick="selectOption('sales-status', 'sold', 'Sold', '')">
+        Sold
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- What Are You Selling Dropdown -->
 <div class="listing-dropbox-container">
   <p class="guiding-text">What are you selling?</p>
@@ -1898,35 +2022,35 @@ Old version of dropbox ends here -->
       <span id="dropdown-text-selling">Please select an option</span>
     </div>
     <div class="dropdown-options" id="dropdown-options-selling" style="display: none;">
-      <div class="dropdown-option" onclick="selectOption('selling', 'livestock', 'Livestock', 'https://img.icons8.com/ios/50/cattle-sign.png')">
+      <div class="dropdown-option" onclick="selectOption('livestock', 'Livestock', 'https://img.icons8.com/ios/50/cattle-sign.png')">
         <img src="https://img.icons8.com/ios/50/cattle-sign.png" alt="cattle-sign" style="width: 20px; height: 20px;">
         <span class="bold-category">Livestock</span>
       </div>
-      <div class="dropdown-option" onclick="selectOption('cattle', 'Cattle', '')">
+      <div class="dropdown-option" onclick="selectOption('selling', 'cattle', 'Cattle', '')">
         Cattle
       </div>
-      <div class="dropdown-option" onclick="selectOption('pigs', 'Pigs', '')">
+      <div class="dropdown-option" onclick="selectOption('selling', 'pigs', 'Pigs', '')">
         Pigs
       </div>
-      <div class="dropdown-option" onclick="selectOption('piglets', 'Piglets', '')">
+      <div class="dropdown-option" onclick="selectOption('selling', 'piglets', 'Piglets', '')">
         Piglets
       </div>
-      <div class="dropdown-option" onclick="selectOption('poultry', 'Poultry', '')">
+      <div class="dropdown-option" onclick="selectOption('selling', 'poultry', 'Poultry', '')">
         Poultry
       </div>
-      <div class="dropdown-option" onclick="selectOption('goats', 'Goats', '')">
+      <div class="dropdown-option" onclick="selectOption('selling', 'goats', 'Goats', '')">
         Goats
       </div>
-      <div class="dropdown-option" onclick="selectOption('caraboas', 'Carabaos', '')">
+      <div class="dropdown-option" onclick="selectOption('selling', 'caraboas', 'Carabaos', '')">
         Carabaos
       </div>
-      <div class="dropdown-option" onclick="selectOption('sheep', 'Sheep', '')">
+      <div class="dropdown-option" onclick="selectOption('selling', 'sheep', 'Sheep', '')">
         Sheep
       </div>
-      <div class="dropdown-option" onclick="selectOption('horses', 'Horses', '')">
+      <div class="dropdown-option" onclick="selectOption('selling', 'horses', 'Horses', '')">
         Horses
       </div>
-      <div class="dropdown-option" onclick="selectOption('other-livestock', 'Other', '')">
+      <div class="dropdown-option" onclick="selectOption('selling', 'other-livestock', 'Other', '')">
         Other
       </div>
 
@@ -1934,16 +2058,16 @@ Old version of dropbox ends here -->
       <div class="dropdown-option" onclick="selectOption('vehicles', 'Vehicles', 'https://img.icons8.com/ios/50/tractor.png')">
         <img src="https://img.icons8.com/ios/50/tractor.png" style="width: 20px; height: 20px;" alt=""><span class="bold-category">Vehicles</span>
       </div>
-      <div class="dropdown-option" onclick="selectOption('cars', 'Cars', '')">
+      <div class="dropdown-option" onclick="selectOption('selling', 'cars', 'Cars', '')">
         Cars
       </div>
-      <div class="dropdown-option" onclick="selectOption('motorcycles', 'Motorcycles and Scooters', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','motorcycles', 'Motorcycles and Scooters', '')">
         Motorcycles and Scooters
       </div>
-      <div class="dropdown-option" onclick="selectOption('trucks', 'Trucks', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','trucks', 'Trucks', '')">
         Trucks
       </div>
-      <div class="dropdown-option" onclick="selectOption('other-vehicles', 'Other', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','other-vehicles', 'Other', '')">
         Other
       </div>
 
@@ -1951,22 +2075,22 @@ Old version of dropbox ends here -->
       <div class="dropdown-option" onclick="selectOption('services-jobs', 'Services / Jobs', 'https://img.icons8.com/ios/50/work.png')">
         <img src="https://img.icons8.com/ios/50/work.png" style="width: 20px; height: 20px;" alt=""><span class="bold-category">Services / Jobs</span>
       </div>
-      <div class="dropdown-option" onclick="selectOption('mechanic', 'Mechanic', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','mechanic', 'Mechanic', '')">
         Mechanic
       </div>
-      <div class="dropdown-option" onclick="selectOption('plumber', 'Plumber', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','plumber', 'Plumber', '')">
         Plumber
       </div>
-      <div class="dropdown-option" onclick="selectOption('farm-hand', 'Farm Hand', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','farm-hand', 'Farm Hand', '')">
         Farm Hand
       </div>
-      <div class="dropdown-option" onclick="selectOption('electrician', 'Electrician', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','electrician', 'Electrician', '')">
         Electrician
       </div>
-      <div class="dropdown-option" onclick="selectOption('builder', 'Builder', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','builder', 'Builder', '')">
         Builder
       </div>
-      <div class="dropdown-option" onclick="selectOption('veterinarian', 'Veterinarian', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','veterinarian', 'Veterinarian', '')">
         Veterinarian
       </div>
 
@@ -1974,19 +2098,19 @@ Old version of dropbox ends here -->
       <div class="dropdown-option" onclick="selectOption('real-estate', 'Real Estate', 'https://img.icons8.com/ios/20/real-estate.png')">
         <img src="https://img.icons8.com/ios/20/real-estate.png" alt=""><span class="bold-category">Real Estate</span>
       </div>
-      <div class="dropdown-option" onclick="selectOption('land-plots', 'Land Plots', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','land-plots', 'Land Plots', '')">
         Land Plots
       </div>
-      <div class="dropdown-option" onclick="selectOption('ranches', 'Ranches', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','ranches', 'Ranches', '')">
         Ranches
       </div>
-      <div class="dropdown-option" onclick="selectOption('vineyards', 'Vineyards', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','vineyards', 'Vineyards', '')">
         Vineyards
       </div>
-      <div class="dropdown-option" onclick="selectOption('farmland', 'Farmland', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','farmland', 'Farmland', '')">
         Farmland
       </div>
-      <div class="dropdown-option" onclick="selectOption('other-real-estate', 'Other', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','other-real-estate', 'Other', '')">
         Other
       </div>
 
@@ -1994,16 +2118,16 @@ Old version of dropbox ends here -->
       <div class="dropdown-option" onclick="selectOption('heavy-equipment', 'Heavy Equipment', 'https://img.icons8.com/ios/20/digger.png')">
         <img src="https://img.icons8.com/ios/20/digger.png" alt=""><span class="bold-category">Heavy Equipment</span>
       </div>
-      <div class="dropdown-option" onclick="selectOption('tractors', 'Tractors', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','tractors', 'Tractors', '')">
         Tractors
       </div>
-      <div class="dropdown-option" onclick="selectOption('plows', 'Plows', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','plows', 'Plows', '')">
         Plows
       </div>
-      <div class="dropdown-option" onclick="selectOption('seeders', 'Seeders/Planters', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','seeders', 'Seeders/Planters', '')">
         Seeders/Planters
       </div>
-      <div class="dropdown-option" onclick="selectOption('other-heavy-equipment', 'Other', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','other-heavy-equipment', 'Other', '')">
         Other
       </div>
 
@@ -2011,25 +2135,25 @@ Old version of dropbox ends here -->
       <div class="dropdown-option" onclick="selectOption('aquaculture', 'Aquaculture', 'https://img.icons8.com/ios/20/fish-food.png')">
         <img src="https://img.icons8.com/ios/20/fish-food.png" alt=""><span class="bold-category">Aquaculture</span>
       </div>
-      <div class="dropdown-option" onclick="selectOption('nets', 'Nets (Pukot/Net)', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','nets', 'Nets (Pukot/Net)', '')">
         Nets (Pukot/Net)
       </div>
-      <div class="dropdown-option" onclick="selectOption('lines', 'Lines (Lambat)', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','lines', 'Lines (Lambat)', '')">
         Lines (Lambat)
       </div>
-      <div class="dropdown-option" onclick="selectOption('aggregating-devices', 'Aggregating Devices (Payao)', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','aggregating-devices', 'Aggregating Devices (Payao)', '')">
         Aggregating Devices (Payao)
       </div>
-      <div class="dropdown-option" onclick="selectOption('traps', 'Traps (Bubo/Trap)', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','traps', 'Traps (Bubo/Trap)', '')">
         Traps (Bubo/Trap)
       </div>
-      <div class="dropdown-option" onclick="selectOption('spears', 'Spears and Harpoons (Pana/Hasa)', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','spears', 'Spears and Harpoons (Pana/Hasa)', '')">
         Spears and Harpoons (Pana/Hasa)
       </div>
-      <div class="dropdown-option" onclick="selectOption('boats', 'Boats (Bangka/Banca)', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','boats', 'Boats (Bangka/Banca)', '')">
         Boats (Bangka/Banca)
       </div>
-      <div class="dropdown-option" onclick="selectOption('other-aquaculture', 'Other', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','other-aquaculture', 'Other', '')">
         Other
       </div>
 
@@ -2037,10 +2161,10 @@ Old version of dropbox ends here -->
       <div class="dropdown-option" onclick="selectOption('tools', 'Tools', 'https://img.icons8.com/dotty/20/maintenance.png')">
         <img src="https://img.icons8.com/dotty/20/maintenance.png" alt=""><span class="bold-category">Tools</span>
       </div>
-      <div class="dropdown-option" onclick="selectOption('hand-tools', 'Hand Tools', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','hand-tools', 'Hand Tools', '')">
         Hand Tools
       </div>
-      <div class="dropdown-option" onclick="selectOption('power-tools', 'Power Tools', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','power-tools', 'Power Tools', '')">
         Power Tools
       </div>
 
@@ -2048,19 +2172,19 @@ Old version of dropbox ends here -->
       <div class="dropdown-option" onclick="selectOption('home-garden', 'Home & Garden', 'https://img.icons8.com/ios/20/house-with-a-garden.png')">
         <img src="https://img.icons8.com/ios/20/house-with-a-garden.png" alt=""><span class="bold-category">Home & Garden</span>
       </div>
-      <div class="dropdown-option" onclick="selectOption('plants', 'Plants', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','plants', 'Plants', '')">
         Plants
       </div>
-      <div class="dropdown-option" onclick="selectOption('furniture', 'Furniture', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','furniture', 'Furniture', '')">
         Furniture
       </div>
-      <div class="dropdown-option" onclick="selectOption('gardening-tools', 'Gardening Tools', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','gardening-tools', 'Gardening Tools', '')">
         Gardening Tools
       </div>
-      <div class="dropdown-option" onclick="selectOption('cleaning-supplies', 'Cleaning Supplies', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','cleaning-supplies', 'Cleaning Supplies', '')">
         Cleaning Supplies
       </div>
-      <div class="dropdown-option" onclick="selectOption('other-home-garden', 'Other', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','other-home-garden', 'Other', '')">
         Other
       </div>
 
@@ -2068,34 +2192,34 @@ Old version of dropbox ends here -->
       <div class="dropdown-option" onclick="selectOption('animal-feed', 'Animal Feed', 'https://img.icons8.com/ios/20/pig-food.png')">
         <img src="https://img.icons8.com/ios/20/pig-food.png" alt=""><span class="bold-category">Animal Feed</span>
       </div>
-      <div class="dropdown-option" onclick="selectOption('hay-silage', 'Hay and Silage', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','hay-silage', 'Hay and Silage', '')">
         Hay and Silage
       </div>
-      <div class="dropdown-option" onclick="selectOption('pellets', 'Pellets', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','pellets', 'Pellets', '')">
         Pellets
       </div>
-      <div class="dropdown-option" onclick="selectOption('grains', 'Grains', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','grains', 'Grains', '')">
         Grains
       </div>
-      <div class="dropdown-option" onclick="selectOption('pig-feed', 'Pig Feed', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','pig-feed', 'Pig Feed', '')">
         Pig Feed
       </div>
-      <div class="dropdown-option" onclick="selectOption('chicken-feed', 'Chicken Feed', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','chicken-feed', 'Chicken Feed', '')">
         Chicken Feed
       </div>
-      <div class="dropdown-option" onclick="selectOption('cattle-feed', 'Cattle Feed', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','cattle-feed', 'Cattle Feed', '')">
         Cattle Feed
       </div>
-      <div class="dropdown-option" onclick="selectOption('poultry-feed', 'Poultry Feed', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','poultry-feed', 'Poultry Feed', '')">
         Poultry Feed
       </div>
-      <div class="dropdown-option" onclick="selectOption('horse-feed', 'Horse Feed', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','horse-feed', 'Horse Feed', '')">
         Horse Feed
       </div>
-      <div class="dropdown-option" onclick="selectOption('aquafeeds', 'Aquafeeds', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','aquafeeds', 'Aquafeeds', '')">
         Aquafeeds
       </div>
-      <div class="dropdown-option" onclick="selectOption('other-animal-feed', 'Other', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','other-animal-feed', 'Other', '')">
         Other
       </div>
 
@@ -2103,10 +2227,10 @@ Old version of dropbox ends here -->
       <div class="dropdown-option" onclick="selectOption('fertilizers', 'Fertilizers', 'https://img.icons8.com/external-wanicon-lineal-wanicon/20/external-fertilizer-farming-and-agriculture-wanicon-lineal-wanicon.png')">
         <img src="https://img.icons8.com/external-wanicon-lineal-wanicon/20/external-fertilizer-farming-and-agriculture-wanicon-lineal-wanicon.png" alt=""><span class="bold-category">Fertilizers</span>
       </div>
-      <div class="dropdown-option" onclick="selectOption('organic-fertilizers', 'Organic Fertilisers', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','organic-fertilizers', 'Organic Fertilisers', '')">
         Organic Fertilisers
       </div>
-      <div class="dropdown-option" onclick="selectOption('chemical-fertilizers', 'Chemical Fertilisers', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','chemical-fertilizers', 'Chemical Fertilisers', '')">
         Chemical Fertilisers
       </div>
 
@@ -2114,37 +2238,37 @@ Old version of dropbox ends here -->
       <div class="dropdown-option" onclick="selectOption('fruits-vegetables-growables', 'Fruits, Vegetables & Growables', 'https://img.icons8.com/external-vitaliy-gorbachev-lineal-vitaly-gorbachev/20/external-vegetables-health-vitaliy-gorbachev-lineal-vitaly-gorbachev.png')">
         <img src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-vitaly-gorbachev/20/external-vegetables-health-vitaliy-gorbachev-lineal-vitaly-gorbachev.png" alt=""><span class="bold-category">Fruits, Vegetables & Growables</span>
       </div>
-      <div class="dropdown-option" onclick="selectOption('mango', 'Mango', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','mango', 'Mango', '')">
         Mango
       </div>
-      <div class="dropdown-option" onclick="selectOption('banana', 'Banana', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','banana', 'Banana', '')">
         Banana
       </div>
-      <div class="dropdown-option" onclick="selectOption('pineapple', 'Pineapple', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','pineapple', 'Pineapple', '')">
         Pineapple
       </div>
-      <div class="dropdown-option" onclick="selectOption('papaya', 'Papaya', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','papaya', 'Papaya', '')">
         Papaya
       </div>
-      <div class="dropdown-option" onclick="selectOption('coconut', 'Coconut', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','coconut', 'Coconut', '')">
         Coconut
       </div>
-      <div class="dropdown-option" onclick="selectOption('eggplant', 'Eggplant', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','eggplant', 'Eggplant', '')">
         Eggplant
       </div>
-      <div class="dropdown-option" onclick="selectOption('tomato', 'Tomato', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','tomato', 'Tomato', '')">
         Tomato
       </div>
-      <div class="dropdown-option" onclick="selectOption('squash', 'Squash', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','squash', 'Squash', '')">
         Squash
       </div>
-      <div class="dropdown-option" onclick="selectOption('bitter-melon', 'Bitter Melon', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','bitter-melon', 'Bitter Melon', '')">
         Bitter Melon
       </div>
-      <div class="dropdown-option" onclick="selectOption('string-beans', 'String Beans', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','string-beans', 'String Beans', '')">
         String Beans
       </div>
-      <div class="dropdown-option" onclick="selectOption('other-fruits-vegetables', 'Other', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','other-fruits-vegetables', 'Other', '')">
         Other
       </div>
 
@@ -2152,31 +2276,31 @@ Old version of dropbox ends here -->
       <div class="dropdown-option" onclick="selectOption('building-materials', 'Building Materials', 'https://img.icons8.com/wired/20/construction-materials.png')">
         <img src="https://img.icons8.com/wired/20/construction-materials.png" alt=""><span class="bold-category">Building Materials</span>
       </div>
-      <div class="dropdown-option" onclick="selectOption('steel', 'Steel', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','steel', 'Steel', '')">
         Steel
       </div>
-      <div class="dropdown-option" onclick="selectOption('wood', 'Wood', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','wood', 'Wood', '')">
         Wood
       </div>
-      <div class="dropdown-option" onclick="selectOption('bamboo', 'Bamboo', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','bamboo', 'Bamboo', '')">
         Bamboo
       </div>
-      <div class="dropdown-option" onclick="selectOption('glass', 'Glass', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','glass', 'Glass', '')">
         Glass
       </div>
-      <div class="dropdown-option" onclick="selectOption('roofing-materials', 'Roofing Materials', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','roofing-materials', 'Roofing Materials', '')">
         Roofing Materials
       </div>
-      <div class="dropdown-option" onclick="selectOption('sand-gravel', 'Sand & Gravel', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','sand-gravel', 'Sand & Gravel', '')">
         Sand & Gravel
       </div>
-      <div class="dropdown-option" onclick="selectOption('bricks', 'Bricks', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','bricks', 'Bricks', '')">
         Bricks
       </div>
-      <div class="dropdown-option" onclick="selectOption('cement', 'Cement', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','cement', 'Cement', '')">
         Cement
       </div>
-      <div class="dropdown-option" onclick="selectOption('other-building-materials', 'Other', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','other-building-materials', 'Other', '')">
         Other
       </div>
 
@@ -2184,31 +2308,31 @@ Old version of dropbox ends here -->
       <div class="dropdown-option" onclick="selectOption('seeds', 'Seeds', 'https://img.icons8.com/ios/20/paper-bag-with-seeds.png')">
         <img src="https://img.icons8.com/ios/20/paper-bag-with-seeds.png" alt=""><span class="bold-category">Seeds</span>
       </div>
-      <div class="dropdown-option" onclick="selectOption('rice-seeds', 'Rice Seeds', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','rice-seeds', 'Rice Seeds', '')">
         Rice Seeds
       </div>
-      <div class="dropdown-option" onclick="selectOption('corn-seeds', 'Corn Seeds', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','corn-seeds', 'Corn Seeds', '')">
         Corn Seeds
       </div>
-      <div class="dropdown-option" onclick="selectOption('mung-bean-seeds', 'Mung Bean Seeds (Munggo)', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','mung-bean-seeds', 'Mung Bean Seeds (Munggo)', '')">
         Mung Bean Seeds (Munggo)
       </div>
-      <div class="dropdown-option" onclick="selectOption('coconut-seeds', 'Coconut Seeds (Niyog)', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','coconut-seeds', 'Coconut Seeds (Niyog)', '')">
         Coconut Seeds (Niyog)
       </div>
-      <div class="dropdown-option" onclick="selectOption('peanut-seeds', 'Peanut Seeds', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','peanut-seeds', 'Peanut Seeds', '')">
         Peanut Seeds
       </div>
-      <div class="dropdown-option" onclick="selectOption('okra-seeds', 'Okra Seeds', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','okra-seeds', 'Okra Seeds', '')">
         Okra Seeds
       </div>
-      <div class="dropdown-option" onclick="selectOption('bitter-melon-seeds', 'Ampalaya (Bitter Melon) Seeds', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','bitter-melon-seeds', 'Ampalaya (Bitter Melon) Seeds', '')">
         Ampalaya (Bitter Melon) Seeds
       </div>
-      <div class="dropdown-option" onclick="selectOption('tomato-seeds', 'Tomato Seeds (Kamatis)', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','tomato-seeds', 'Tomato Seeds (Kamatis)', '')">
         Tomato Seeds (Kamatis)
       </div>
-      <div class="dropdown-option" onclick="selectOption('other-seeds', 'Other', '')">
+      <div class="dropdown-option" onclick="selectOption('selling','other-seeds', 'Other', '')">
         Other
       </div>
 
@@ -2222,7 +2346,27 @@ Old version of dropbox ends here -->
   </div>
 </div>
 
-
+<div class="listing-tickbox-container">
+  <p class="guiding-text-box">How would you like to receive your payments?</p>
+  <div class="tickbox-wrapper">
+  <div class="tickbox-option">
+    <input type="checkbox" id="payment-cash" name="payment-method" value="cash">
+    <label for="payment-cash"><img src="https://img.icons8.com/color/27/get-cash.png" alt="Cash Icon"><p class="tickbox-p">Cash</p></label>
+  </div>
+  <div class="tickbox-option">
+    <input type="checkbox" id="payment-gcash" name="payment-method" value="gcash">
+    <label for="payment-gcash"><img src="gcash icon appstore.webp"  style="width: 20px; height: 20px;"><p class="tickbox-p">GCash</p></label>
+  </div>
+  <div class="tickbox-option">
+    <input type="checkbox" id="payment-maya" name="payment-method" value="maya">
+    <label for="payment-gcash"><img src="maya icon.webp"  style="width: 20px; height: 20px;"><p class="tickbox-p">Maya</p></label>
+  </div>
+  <div class="tickbox-option">
+    <input type="checkbox" id="payment-credit-card" name="payment-method" value="credit-card">
+    <label for="payment-credit-card"><img width="28" height="28" src="https://img.icons8.com/color/48/visa.png" alt="visa" style="width: 25px; height: 25px;"><img width="28" height="28" src="https://img.icons8.com/color/48/mastercard.png" alt="mastercard" style="width: 25px; height: 25px;"><p class="tickbox-p">Credit Card</p></label>
+  </div>
+</div>
+</div>
 
 <div class="image-container">
   <p class="guiding-text">Please upload 5 images</p>
@@ -2418,7 +2562,8 @@ Old version of dropbox ends here -->
   </a>
 </div>
 
-<hr class="nav-hr-bottom">
+  <div class="nav-hr-bottom">
+  
 
 <div class="language-button-container">
   <button type="submit" class="language-button"><i class="bi bi-globe-asia-australia"></i> English</button>
