@@ -294,8 +294,14 @@ body {
     width: 300px;
     height: 600px;
     border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.8);
     z-index: 1000;
+}
+
+.login-logo {
+ display: flex;
+ justify-content: center;
+ margin-right: 20px;
 }
 
 /* The content inside the login popup */
@@ -519,7 +525,7 @@ background-color: #ff4632c8;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1001;
     padding: 60px;
-    padding-top: 40px;
+    padding-top: 50px;
 }
 
 /* Signup popup content */
@@ -539,8 +545,8 @@ background-color: #ff4632c8;
     font-size: 18px;
     font-weight: 900;
     color: black;
-    margin-bottom: 25px;
-    margin-top: 0px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .signup-input {
@@ -978,6 +984,7 @@ padding: 19px;
     align-items: center; /* Center the text vertically */
     padding: 15px;
     transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+    cursor: pointer;
 }
 
 .rectangle button[type=submit]:hover {
@@ -1095,6 +1102,7 @@ padding: 19px;
     align-items: center; /* Center the text vertically */
     padding: 15px;
     transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+    cursor: pointer;
 }
 
 .feed-details button[type=submit]:hover {
@@ -1213,6 +1221,7 @@ padding: 19px;
     align-items: center; /* Center the text vertically */
     padding: 15px;
     transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+    cursor: pointer;
     }
 
     .get-started button[type=submit]:hover {
@@ -1228,7 +1237,7 @@ padding: 19px;
     width: 300px;
     height: 600px;
     border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.8);
     z-index: 1000;
 }
 
@@ -1297,7 +1306,7 @@ text-align: center;
     color: #000;
 }
 
-.weight-container, .price-container {
+.weight-container, .price-container, .location-container {
     display: flex;
     align-items: center;
     list-style-type: none;
@@ -1697,6 +1706,27 @@ align-items: center;
     font-weight: bold;
 }
 
+.link-underline {
+        text-decoration: underline;
+        color: #888;
+        transition: color 0.3s ease;
+    }
+    .link-underline:hover {
+        cursor: pointer;
+        color: #007BFF;
+    }
+
+    .checkbox-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .checkbox-container label {
+margin-top: 13px;
+margin-left: 25px;
+font-size: 13px;
+    }
 
     footer {
         background-color: #43662e; /* Dark green background color */
@@ -2011,13 +2041,13 @@ hr {
                   
                   <!-- First Modal Rectangle -->
                   <div id="modal-rectangle" class="modal-rectangle">
-                    <img src="Rectangle 34.png" alt="Image" class="rectangle-image">
+                    <img src="farm img.png" alt="Image" class="rectangle-image">
                     <div class="details-container">
                       <div class="icon-title-container">
-                        <span class="title">01 Pig for Sale in Cebu</span>
+                        <span class="title">100m2 Farmland for Sale</span>
                       </div>
                       <div class="weight-container">
-                        <li><img width="20" height="20" src="https://img.icons8.com/color/96/weight-kg.png" alt="weight-kg"/>Weight: <span id="weight-value">80kg</span></li>
+                        <li><img width="20" height="20" src="https://img.icons8.com/color/96/marker--v1.png" alt="marker--v1"/>Location: Cebu</li>
                       </div>
                       <div class="price-container">
                         <img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>
@@ -2031,7 +2061,7 @@ hr {
                     <img src="Rectangle 35.png" alt="Image" class="rectangle-image">
                     <div class="details-container">
                       <div class="icon-title-container">
-                        <span class="title">02 Pig for Sale in Manila</span>
+                        <span class="title">02 Pig for Sale in...</span>
                       </div>
                       <div class="weight-container">
                         <li><img width="20" height="20" src="https://img.icons8.com/color/96/weight-kg.png" alt="weight-kg"/>Weight: <span id="weight-value">90kg</span></li>
@@ -2103,25 +2133,25 @@ hr {
             <i class="bi bi-patch-check-fill verified-icon"></i>
           </div>
           <div class="message-info">
-            <div class="user-name">Rhea_Rabago</div>
+            <div class="user-name">Rhea Rabago</div>
             <div class="message-time">12:28pm</div>
           </div>
         </div>
-        <div class="last-message">Last message from Rhea_Rabago</div>
+        <div class="last-message">Sounds great!</div>
       </div>
   
       <div class="small-message-box" data-user-id="JD12345">
         <div class="image-info-wrap">
           <div class="profile-container">
-            <img src="Rectangle 402.png" alt="Profile Image" class="profile-image">
+            <img src="hilux img.png" alt="Profile Image" class="profile-image">
             <i class="bi bi-patch-check-fill verified-icon"></i>
           </div>
           <div class="message-info">
-            <div class="user-name">John_Doe</div>
+            <div class="user-name">Hilux for Sale</div>
             <div class="message-time">11:45am</div>
           </div>
         </div>
-        <div class="last-message">Last message from John_Doe</div>
+        <div class="last-message">Let’s meet up at that spot.</div>
       </div>
   
       <div class="small-message-box" data-user-id="JS23456">
@@ -2131,25 +2161,25 @@ hr {
             <i class="bi bi-patch-check-fill verified-icon"></i>
           </div>
           <div class="message-info">
-            <div class="user-name">Jane_Smith</div>
+            <div class="user-name">Jane Smith</div>
             <div class="message-time">10:30am</div>
           </div>
         </div>
-        <div class="last-message">Last message from Jane_Smith</div>
+        <div class="last-message">Yeah, it's still available.</div>
       </div>
   
       <div class="small-message-box" data-user-id="AW34567">
         <div class="image-info-wrap">
           <div class="profile-container">
-            <img src="Rectangle 404.png" alt="Profile Image" class="profile-image">
+            <img src="harvester img.png" alt="Profile Image" class="profile-image">
             <i class="bi bi-patch-check-fill verified-icon"></i>
           </div>
           <div class="message-info">
-            <div class="user-name">Alice_Walker</div>
+            <div class="user-name">100m2 Farmland for Sale </div>
             <div class="message-time">09:15am</div>
           </div>
         </div>
-        <div class="last-message">Last message from Alice_Walker</div>
+        <div class="last-message">Current price is 1,400,000 PHP</div>
       </div>
 
       <div class="small-message-box" data-user-id="JA45678">
@@ -2159,11 +2189,11 @@ hr {
               <i class="bi bi-patch-check-fill verified-icon"></i>
             </div>
             <div class="message-info">
-              <div class="user-name">James_Anderson</div>
+              <div class="user-name">James Anderson</div>
               <div class="message-time">08:10am</div>
             </div>
           </div>
-          <div class="last-message">Last message from James_Anderson</div>
+          <div class="last-message">Perfect, see you there!</div>
         </div>
     
         <div class="small-message-box" data-user-id="JR56789">
@@ -2173,11 +2203,11 @@ hr {
               <i class="bi bi-patch-check-fill verified-icon"></i>
             </div>
             <div class="message-info">
-              <div class="user-name">Jessica_Rogers</div>
+              <div class="user-name">Jessica Rogers</div>
               <div class="message-time">07:45am</div>
             </div>
           </div>
-          <div class="last-message">Last message from Jessica_Rogers</div>
+          <div class="last-message">All clear, let’s move forward</div>
         </div>
 
         <div class="small-message-box" data-user-id="MT67890">
@@ -2187,11 +2217,11 @@ hr {
               <i class="bi bi-patch-check-fill verified-icon"></i>
             </div>
             <div class="message-info">
-              <div class="user-name">Michael_Turner</div>
+              <div class="user-name">Michael Turner</div>
               <div class="message-time">06:30am</div>
             </div>
           </div>
-          <div class="last-message">Last message from Michael_Turner</div>
+          <div class="last-message">Noted, I’ll be ready!</div>
         </div>
 
       </div>
@@ -2377,6 +2407,9 @@ hr {
 <div id="loginPopup" class="login-popup">
     <div class="login-popup-content">
         <button class="close-btn">x</button>
+        <div class="login-logo">
+        <img src="farmifylogo.png" alt="Logo" display="flex" justify-content="center" align-items="center" width="110px" height="30"> <!-- Adjust the height as needed -->
+      </div>
         <h4>LOGIN</h4>
         <p class="login-p">Time to dive into the club! Drop your details to join the party!</p>
         <div class="input-wrapper">
@@ -2415,9 +2448,10 @@ hr {
 <!-- Signup Popup HTML (Place here) -->
 <div id="signupPopup" class="signup-popup">
     <div class="signup-popup-content">
+      <img src="farmifylogo.png" alt="Logo" style="margin-top: -20px;" margin-left="20px" height="30"> <!-- Adjust the height as needed -->
         <button class="close-btn">x</button>
         <h4>SIGN UP</h4>
-        <p class="signup-upper-p">Get alerts when prices drop, sell your pigs or products with us, and enjoy other features to save and search efficiently.</p>
+        <p class="signup-upper-p"></p>
         <div class="signup-input-wrapper">
             <i class="bi bi-person"></i>
             <input type="text" placeholder="First Name" class="signup-input">
@@ -2444,6 +2478,14 @@ hr {
         </div>
         <button type="submit" class="signup-submit">Sign up</button>
         <button type="submit" class="login-submit">Login</button>
+
+        <div class="checkbox-container">
+          <label>
+              <input type="checkbox" name="terms" required>
+              I accept the <a href="#" class="link-underline">Terms and Conditions</a> and <a href="#" class="link-underline">Privacy Policy</a>
+          </label>
+      </div>
+
         <p class="signup-p">or signup with</p>
 
         <div class="social-container">
