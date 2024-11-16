@@ -58,9 +58,19 @@
         .navbar-nav a {
     margin: 0 10px;
     text-decoration: none;
-    color: #3c5823;
+    color: #FFFFFF;
     font-weight: 600;
 }
+
+#signup-link {
+    color: #000 !important; /* Makes the text black */
+    text-decoration: none; /* Optional, to remove underline */
+}
+
+#signup-link:hover {
+    color: #fff !important; /* Turns the text white on hover */
+}
+
         .navbar-nav .icons a {
             margin: 0 5px;
         }
@@ -250,6 +260,7 @@ body {
         color: rgb(79, 79, 79);
         width: 100%; /* Make the image responsive */
         height: 100%; /* Make the image responsive */
+        background-color: #F0F6F2;
     } 
 
 .inter-font {
@@ -275,10 +286,11 @@ body {
     }
     .signup-button {
       color: rgba(255, 255, 255, 0.952) !important;
-      background-color: #000000ce; /* Change background color to a prominent color */
+      background-color: #FFFFFF; /* Change background color to a prominent color */
       border-radius: 20px; /* Add rounded corners */
       padding: 10px 20px; /* Add padding to increase button size */
-      transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+      transition: background-color 0.3s ease; /* Add transition for smooth hover effect */
+      cursor: pointer; 
     }
     .signup-button:hover {
 background-color: #ff4632c8;
@@ -291,9 +303,20 @@ margin-top: 38px; /* Adjust the value to move the navbar down further */
       font-size: 45px; /*Default 48px*/
       font-weight: bold;
       font-family: "Mochiy Pop One", sans-serif;
-      color: black;
+      color: #FFFFFF;
       text-align: center;
     }
+
+    .first-letter {
+    text-shadow: 0px 4px 10.4px rgba(0, 0, 0, 0.4);
+}
+
+    .text-shadow {
+        box-shadow: 0px 4px 10.4px 0px #00000063;
+    }
+
+    
+    
     .h4-title {
       margin-top: -20px;
       font-size: 23px;
@@ -307,7 +330,7 @@ margin-top: 38px; /* Adjust the value to move the navbar down further */
             position: relative;
             top: 10px;
             width: 100%;
-            max-width: 1270px;
+            max-width: 1000px;
             margin: auto;
         }
 
@@ -316,11 +339,11 @@ margin-top: 38px; /* Adjust the value to move the navbar down further */
             display: flex;
             flex-direction: column;
             align-items: center;
-            background-color: rgb(255, 255, 255);
+            background-color: #F0F6F2;
             padding: 20px;
             border-radius: 10px;
             width: 100%;
-            max-width: 800px;
+            max-width: 100%;
             height: 100%;
         }
 
@@ -333,7 +356,10 @@ margin-top: 38px; /* Adjust the value to move the navbar down further */
         .search-container-below-row {
           display: flex;
             width: 100%;
-            margin-bottom: 10px;
+            margin-bottom: 0px;
+            border: 20px solid rgba(76, 124, 76, 0.195);
+            /* border: 20px solid #b9c5bc78; */
+            border-radius: 7.5px;
 }
 
 .search-container-below-row input[type=text] {
@@ -342,20 +368,91 @@ width: 10px;
 
 .search-container-below-row input[type=text]:nth-child(3) {
     flex: 0.95; /* Adjust width to be slightly shorter */
-    margin-right: 10px; /* Ensure margin is applied */
 }
 
-        .search-container input[type=text] {
+.custom-dropdown {
+    position: relative;
+    width: 100%;
+    max-width: 175px;
+    height: max-content;
+    border: 1px solid #ccc;
+    outline: none;
+    background-color: #fafbf266;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    justify-content: center;
+    padding: 19px;
+    color: #c5c5c5;
+    font-family: "Inter", sans-serif;
+    transition: border-color 0.3s ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2714%27%20height%3D%2714%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27%23333%27%3E%3Cpath%20d%3D%27M7%2010l5%205%205-5z%27/%3E%3C/svg%3E);
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 25px 25px;
+    background-image: linear-gradient(to right, #33333358 1px, transparent 1px), /* Vertical line */ url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2714%27%20height%3D%2714%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27%23333%27%3E%3Cpath%20d%3D%27M7%2010l5%205%205-5z%27/%3E%3C/svg%3E);
+    background-repeat: no-repeat;
+    background-position: right 40px center, right 10px center;
+    background-size: 1px 15px, 25px 25px;
+}
+
+.bi-search {
+      position: absolute;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      padding: 19px;
+    }
+
+    .bi-geo-alt-fill {
+        position: absolute;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      padding: 19px;
+    }
+
+        .search-container input[type=location] {
+            position: relative;
+            width: 180px;
             padding: 19px;
             border: 1px solid #ccc;
-            border-radius: 7.5px;
             outline: none;
             background-color: #fafbf266;
-            font-family: Arial;
+            font-family: "Inter", sans-serif;
             font-size: 15px;
             font-weight: 500;
-            margin-left: 10px;
             flex: 1;
+            text-indent: 25px;
+        }
+
+        .search-container input[type=location]::placeholder {
+            color: #c5c5c5;
+            font-weight: 600;
+        }
+
+        .search-container input[type=search] {
+            width: 400px;
+            position: relative;
+            padding: 19px;
+            border: 1px solid #ccc;
+            outline: none;
+            background-color: #fafbf266;
+            font-family: "Inter", sans-serif;
+            font-size: 15px;
+            font-weight: 500;
+            flex: 1;
+            text-indent: 25px;
+        }
+
+        .search-container input[type=search]::placeholder {
+            color: #c5c5c5;
+            font-weight: 600;
+            
         }
 
         .search-container input[type=text]::placeholder {
@@ -374,9 +471,8 @@ width: 10px;
 
         .submit-container button[type=submit] {
             width: 149.33px;
-            border: 1px solid #ff4632c8;
-            background-color: #ff4632c8;
-            border-radius: 7.5px;
+            border: 1px solid #0e9a3dc8;
+            background-color: #0e9a3dc8;
             outline: none;
             padding-top: 38px;
             font-size: 15px;
@@ -388,14 +484,15 @@ width: 10px;
             padding: 19px;
             transition: background-color 0.3s ease;
             margin-left: 0px;
+            cursor: pointer;
         }
 
         .submit-container button[type=submit]:hover {
-            background-color: #ff4632e6;
+            background-color: #0b7a30c8;
         }
 
         .available-listings-section {
-        background-color: #ffffff; /* Adjust background color as needed */
+        background-color: #F0F6F2; /* Adjust background color as needed */
         padding: 20px 0; /* Adjust padding as needed */
         display: flex;
         justify-content: flex-start; /* Center the content horizontally */
@@ -501,31 +598,309 @@ width: 10px;
     gap: 20px; /* Add space between rectangles */
 }
 
+
+/*New listing style*/
+.details-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 368px; /* 20% smaller width (460px -> 368px) */
+    height: 160px;
+}
+
+.icon-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.for-sale-badge {
+    display: flex;
+    background-color: #DDEDCB;
+    color: #000;
+    padding: 1px;
+    border-radius: 6px;
+    margin-right: 0px;
+    font-size: 14px;
+    font-weight: bold;
+    width: 70px;
+    height: 35px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; /* Prevent the badge from shrinking */
+}
+
+.pending-badge {
+    display: flex;
+    background-color: #ffd02652;
+    color: #000;
+    padding: 7px 10px;
+    border-radius: 6px;
+    margin-right: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    width: 60px;
+    align-items: center;
+    justify-content: center;
+}
+
+.already-sold-badge {
+    display: flex;
+    background-color: #ff21216a;
+    color: #000;
+    padding: 7px 10px;
+    border-radius: 6px;
+    margin-right: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    width: 60px;
+    align-items: center;
+    justify-content: center;
+}
+
+.sold-band {
+    position: absolute;
+    top: 15px;
+    left: -40px;
+    width: 150px;
+    height: 30px;
+    background-color: red;
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    transform: rotate(-45deg);
+    line-height: 30px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    clip-path: polygon(0 0, 70% 0, calc(100% - 15px) 100%, 0 100%);
+    background: linear-gradient(to right, rgb(230, 0, 0) 0%, rgba(255, 0, 0, 1) 100%);
+}
+
+.icon-title-container .title {
+    display: flex;
+    flex-grow: 1;
+    text-align: left;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-weight: 700;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    color: #000;
+    margin-left: 10px;
+    cursor: pointer;
+    text-decoration: none; /* Ensures there's no underline by default */
+}
+
+.icon-title-container .title:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+
+.location-container {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.location-container li, .weight-container li, .price-container li {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    font-weight: 500;
+}
+
+.location-container li img, .price-container li img, .weight-container li img {
+    margin-right: 5px;
+}
+
+.pig-details .description {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: rgb(79, 79, 79);
+    line-height: 1.7;
+    font-weight: 420;
+    height: 75px;
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: left;
+}
+
+.description-p {
+  font-family: "Inter", sans-serif;
+    font-size: 13px;
+    color: rgb(79, 79, 79);
+    line-height: 1.2;
+    font-weight: 420;
+    height: 65px;
+    width: 95%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: left;
+    margin-left: 5px;
+}
+
+.user-accepts {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: rgb(79, 79, 79);
+    line-height: 1.7;
+    font-weight: 420;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    align-items: center;
+}
+
+.weight-container, .price-container {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.weight-container-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between !important;
+  width: 90%;
+  gap: 30px;
+}
+
+.weight-container-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between !important;
+}
+
+.price-container-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between !important;
+  width: 90%;
+  gap: 30px;
+}
+
+.price-container-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between !important;
+}
+
+.price-value {
+    font-weight: 700;
+    font-size: 16px;
+    margin-left: 5px;
+    color: #000;
+}
+
+.container-with-x {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    height: 160px;
+    width: 240px;
+    position: relative;
+}
+
+.container-with-x .bi-x {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 26px;
+    cursor: pointer;
+    color: #000000a3;
+}
+
+.bottom-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 0px;
+    margin-top: 0px;
+    align-items: flex-end;
+    gap: 10px;
+    margin-top: 0px;
+    height: 160px;
+}
+
+.small-edit-button {
+    width: 110px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: #43B572;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.small-next-button {
+  width: 110px;
+  height: 50px;
+    border: none;
+    border-radius: 5px;
+    color: #666666;
+    font-weight: 500;
+    font-size: 14px;
+    background-color: #E1E1E1;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
 .rectangle:hover {
     border-color: #88888837;
   background-color: #f0f0f0;
 }
 
 .rectangle {
+    flex-shrink: 0;
+    background-color: #FFFFFF;
+    position: relative;
+    overflow: hidden;
     display: flex;
-    background-color: #ffffff;
-    border: 1px solid #ccccccac;
-    border-radius: 20px;
-    width: 800px; /* Set width of the rectangle */
-    height: 200px; /* Set height of the rectangle */
-    padding: 20px;
-    box-sizing: border-box; /* Include padding in width and height */
-    position: relative; /* Make the rectangle a reference point for absolute positioning */
+    align-items: center;
+    width: 800px;
+    height: 180px;
+    border: 1px solid #E0E0E0;
+    border-radius: 5px;
+    /*border-radius 15px*/
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 0.1px;
+    box-sizing: border-box;
+    box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.05), 2px 2px 5px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
-    box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.05), /* Left shadow (smaller and lighter) */
-    2px 2px 5px rgba(0, 0, 0, 0.1);   /* Right and bottom shadow */
+    cursor: pointer;
 }
 
-.rectangle img {
-    width: 180px; /* Set width of the image */
-    height: 160px; /* Set height of the image */
-    border-radius: 10px;
-    margin-right: 20px;
+.rectangle-image {
+    width: 200px;
+    height: 160px;
+    border-radius: 8px;
+    margin-right: 10px;
 }
 
 .listing-details {
@@ -561,21 +936,6 @@ width: 10px;
     align-items: center;
 }
 
-.rectangle button {
-    margin-top: auto;
-    align-self: flex-end;
-    width: 179.33px;
-    margin-bottom: 20px;
-    border: 1px solid #0e9a3dc8;
-    background-color: #0e9a3dc8;
-    border-radius: 7.5px;
-    outline: none;
-    padding: 15px;
-    font-size: 13px;
-    font-weight: 520;
-    color: whitesmoke;
-    transition: background-color 0.3s ease;
-}
 
 .rectangle button[type=submit]:hover {
     background-color: #0e9a3de5; /* Darker color when hovered */
@@ -626,7 +986,7 @@ width: 10px;
 
 .save-icon {
     display: flex;
-    align-items: center;
+    justify-content: flex-end;
     top: 0;
     right: 0;
     font-size: 14px; /* Font size for "Save" text */
@@ -700,7 +1060,8 @@ width: 10px;
     align-items: center;
     padding: 20px;
     border: 1px solid #ccccccac;
-    border-radius: 20px;
+    border-radius: 5px;
+    /* border-radius: 20px; */
     background-color: #ffffff;
     margin-right: 20px;
     margin-left: 00px; /* Adjust this as needed for spacing */
@@ -734,8 +1095,8 @@ width: 10px;
     height: 54px;
     border: none;
     margin-top: 10px;
-    border-color: #ff4632c8;
-    background-color: #ff4632c8;
+    border-color: #0e9a3dc8;
+    background-color: #0e9a3dc8;
     color: white;
     border-radius: 7.5px;
     font-size: 14px;
@@ -745,7 +1106,7 @@ width: 10px;
 }
 
 .filter-box button:hover {
-    background-color: #ff4632e6;
+    background-color: #0b752ec8;
 }
 
 .filter-box .input-group {
@@ -814,11 +1175,19 @@ width: 10px;
 
         .bi-search {
           position: absolute;
-      font-size: 20px;
+      font-size: 17px;
       display: flex;
       align-items: center;
       padding: 19px;
         }
+
+        img[src="https://img.icons8.com/windows/32/sorting-answers.png"] {
+            position: absolute;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      padding: 19px;
+}
 
         input.wide::placeholder {
     padding-left: 0px;
@@ -842,11 +1211,13 @@ input.wide {
       font-size: 20px;
       font-weight: 900;
       padding-right: 5px;
+      color: #FFFFFF;
     }
     .bi-cart3 {
       font-size: 20px;
       font-weight: 900px;
       padding-right: 10px;
+      color: #FFFFFF;
     }
    
         main {
@@ -1464,7 +1835,7 @@ hr {
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
       <a class="navbar-brand" href="#"></a> <!-- Logo -->
-      <img src="farmifylogo.png" alt="Logo" height="50"> <!-- Adjust the height as needed -->
+      <img src="Group 193.png" alt="Logo" height="50"> <!-- Adjust the height as needed -->
             </a>
         <span class="navbar-toggler-icon">   <button class="navbar-toggler" onclick="toggleNav()">
           &#9776;
@@ -1487,7 +1858,7 @@ hr {
           <i class="bi bi-heart"></i>
           <i class="bi bi-cart3"></i>
           <a class="nav-link disabled">Login</a>
-          <a class="nav-link signup-button">Sign up</a>
+          <a id="signup-link" class="nav-link signup-button">Sign up</a>
         </div>
       </div>
     </div>
@@ -1497,10 +1868,15 @@ hr {
 </header>
 
 <div class="hero-section">
-   <div class="hero-iner" style="background-image: url(listing-background.png);">
+   <div class="hero-iner" style="background-image: url(Group\ 326.png);">
     <div class="heor-content">
       <!-- Main title -->
-<h1 class="main-title">Find Your Perfect Big</h1>
+      <h1 class="main-title">
+        <span class="first-letter">F</span><span class="first-letter">i</span><span class="first-letter">n</span><span class="first-letter">d</span> 
+        <span class="first-letter">Y</span><span class="first-letter">o</span><span class="first-letter">u</span><span class="first-letter">r</span> 
+        <span class="first-letter">P</span><span class="first-letter">e</span><span class="first-letter">r</span><span class="first-letter">f</span><span class="first-letter">e</span><span class="first-letter">c</span><span class="first-letter">t</span> 
+        <span class="first-letter">P</span><span class="first-letter">r</span><span class="first-letter">o</span><span class="first-letter">d</span><span class="first-letter">u</span><span class="first-letter">c</span><span class="first-letter">t</span>
+    </h1>
 </div>
 </div> <!--iner hero-->
 </div><!--hero end-->
@@ -1509,15 +1885,344 @@ hr {
     <!-- Search Container Section -->
     <section class="search-container-section">
         <div class="search-container">
-            <div class="search-container-row">
-              <i class="bi bi-search"></i>
-                <input type="text" class="wide" placeholder="Search...">
-                <input type="text" placeholder="Location">
-            </div>
             <div class="search-container-below-row">
-                <input type="text" placeholder="Type">
-                <input type="text" placeholder="Age">
-                <input type="text" placeholder="Weight">
+                <img width="20" height="20" src="https://img.icons8.com/windows/32/sorting-answers.png" alt="sorting-answers"/>
+                <div class="custom-dropdown" tabindex="0" onclick="toggleDropdown('selling')">
+                    <div class="dropdown-selected">
+                      <img id="dropdown-icon-selling" src="" alt="" style="width: 20px; height: 20px; display: none;">
+                      <span id="dropdown-text-selling">All categories</span>
+                    </div>
+                    <div class="dropdown-options" id="dropdown-options-selling" style="display: none;">
+                      <div class="dropdown-option" onclick="selectOption('livestock', 'Livestock', 'https://img.icons8.com/ios/50/cattle-sign.png')">
+                        <img src="https://img.icons8.com/ios/50/cattle-sign.png" alt="cattle-sign" style="width: 20px; height: 20px;">
+                        <span class="bold-category">Livestock</span>
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling', 'cattle', 'Cattle', '')">
+                        Cattle
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling', 'pigs', 'Pigs', '')">
+                        Pigs
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling', 'piglets', 'Piglets', '')">
+                        Piglets
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling', 'poultry', 'Poultry', '')">
+                        Poultry
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling', 'goats', 'Goats', '')">
+                        Goats
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling', 'caraboas', 'Carabaos', '')">
+                        Carabaos
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling', 'sheep', 'Sheep', '')">
+                        Sheep
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling', 'horses', 'Horses', '')">
+                        Horses
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling', 'other-livestock', 'Other', '')">
+                        Other
+                      </div>
+                
+                      <!-- Vehicles -->
+                      <div class="dropdown-option" onclick="selectOption('vehicles', 'Vehicles', 'https://img.icons8.com/ios/50/tractor.png')">
+                        <img src="https://img.icons8.com/ios/50/tractor.png" style="width: 20px; height: 20px;" alt=""><span class="bold-category">Vehicles</span>
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling', 'cars', 'Cars', '')">
+                        Cars
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','motorcycles', 'Motorcycles and Scooters', '')">
+                        Motorcycles and Scooters
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','trucks', 'Trucks', '')">
+                        Trucks
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','other-vehicles', 'Other', '')">
+                        Other
+                      </div>
+                
+                      <!-- Services / Jobs -->
+                      <div class="dropdown-option" onclick="selectOption('services-jobs', 'Services / Jobs', 'https://img.icons8.com/ios/50/work.png')">
+                        <img src="https://img.icons8.com/ios/50/work.png" style="width: 20px; height: 20px;" alt=""><span class="bold-category">Services / Jobs</span>
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','mechanic', 'Mechanic', '')">
+                        Mechanic
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','plumber', 'Plumber', '')">
+                        Plumber
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','farm-hand', 'Farm Hand', '')">
+                        Farm Hand
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','electrician', 'Electrician', '')">
+                        Electrician
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','builder', 'Builder', '')">
+                        Builder
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','veterinarian', 'Veterinarian', '')">
+                        Veterinarian
+                      </div>
+                
+                      <!-- Real Estate -->
+                      <div class="dropdown-option" onclick="selectOption('real-estate', 'Real Estate', 'https://img.icons8.com/ios/20/real-estate.png')">
+                        <img src="https://img.icons8.com/ios/20/real-estate.png" alt=""><span class="bold-category">Real Estate</span>
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','land-plots', 'Land Plots', '')">
+                        Land Plots
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','ranches', 'Ranches', '')">
+                        Ranches
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','vineyards', 'Vineyards', '')">
+                        Vineyards
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','farmland', 'Farmland', '')">
+                        Farmland
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','other-real-estate', 'Other', '')">
+                        Other
+                      </div>
+                
+                      <!-- Heavy Equipment -->
+                      <div class="dropdown-option" onclick="selectOption('heavy-equipment', 'Heavy Equipment', 'https://img.icons8.com/ios/20/digger.png')">
+                        <img src="https://img.icons8.com/ios/20/digger.png" alt=""><span class="bold-category">Heavy Equipment</span>
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','tractors', 'Tractors', '')">
+                        Tractors
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','plows', 'Plows', '')">
+                        Plows
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','seeders', 'Seeders/Planters', '')">
+                        Seeders/Planters
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','other-heavy-equipment', 'Other', '')">
+                        Other
+                      </div>
+                
+                      <!-- Aquaculture -->
+                      <div class="dropdown-option" onclick="selectOption('aquaculture', 'Aquaculture', 'https://img.icons8.com/ios/20/fish-food.png')">
+                        <img src="https://img.icons8.com/ios/20/fish-food.png" alt=""><span class="bold-category">Aquaculture</span>
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','nets', 'Nets (Pukot/Net)', '')">
+                        Nets (Pukot/Net)
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','lines', 'Lines (Lambat)', '')">
+                        Lines (Lambat)
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','aggregating-devices', 'Aggregating Devices (Payao)', '')">
+                        Aggregating Devices (Payao)
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','traps', 'Traps (Bubo/Trap)', '')">
+                        Traps (Bubo/Trap)
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','spears', 'Spears and Harpoons (Pana/Hasa)', '')">
+                        Spears and Harpoons (Pana/Hasa)
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','boats', 'Boats (Bangka/Banca)', '')">
+                        Boats (Bangka/Banca)
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','other-aquaculture', 'Other', '')">
+                        Other
+                      </div>
+                
+                      <!-- Tools -->
+                      <div class="dropdown-option" onclick="selectOption('tools', 'Tools', 'https://img.icons8.com/dotty/20/maintenance.png')">
+                        <img src="https://img.icons8.com/dotty/20/maintenance.png" alt=""><span class="bold-category">Tools</span>
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','hand-tools', 'Hand Tools', '')">
+                        Hand Tools
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','power-tools', 'Power Tools', '')">
+                        Power Tools
+                      </div>
+                
+                      <!-- Home & Garden -->
+                      <div class="dropdown-option" onclick="selectOption('home-garden', 'Home &amp; Garden', 'https://img.icons8.com/ios/20/house-with-a-garden.png')">
+                        <img src="https://img.icons8.com/ios/20/house-with-a-garden.png" alt=""><span class="bold-category">Home &amp; Garden</span>
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','plants', 'Plants', '')">
+                        Plants
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','furniture', 'Furniture', '')">
+                        Furniture
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','gardening-tools', 'Gardening Tools', '')">
+                        Gardening Tools
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','cleaning-supplies', 'Cleaning Supplies', '')">
+                        Cleaning Supplies
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','other-home-garden', 'Other', '')">
+                        Other
+                      </div>
+                
+                      <!-- Animal Feed -->
+                      <div class="dropdown-option" onclick="selectOption('animal-feed', 'Animal Feed', 'https://img.icons8.com/ios/20/pig-food.png')">
+                        <img src="https://img.icons8.com/ios/20/pig-food.png" alt=""><span class="bold-category">Animal Feed</span>
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','hay-silage', 'Hay and Silage', '')">
+                        Hay and Silage
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','pellets', 'Pellets', '')">
+                        Pellets
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','grains', 'Grains', '')">
+                        Grains
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','pig-feed', 'Pig Feed', '')">
+                        Pig Feed
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','chicken-feed', 'Chicken Feed', '')">
+                        Chicken Feed
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','cattle-feed', 'Cattle Feed', '')">
+                        Cattle Feed
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','poultry-feed', 'Poultry Feed', '')">
+                        Poultry Feed
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','horse-feed', 'Horse Feed', '')">
+                        Horse Feed
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','aquafeeds', 'Aquafeeds', '')">
+                        Aquafeeds
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','other-animal-feed', 'Other', '')">
+                        Other
+                      </div>
+                
+                      <!-- Fertilizers -->
+                      <div class="dropdown-option" onclick="selectOption('fertilizers', 'Fertilizers', 'https://img.icons8.com/external-wanicon-lineal-wanicon/20/external-fertilizer-farming-and-agriculture-wanicon-lineal-wanicon.png')">
+                        <img src="https://img.icons8.com/external-wanicon-lineal-wanicon/20/external-fertilizer-farming-and-agriculture-wanicon-lineal-wanicon.png" alt=""><span class="bold-category">Fertilizers</span>
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','organic-fertilizers', 'Organic Fertilisers', '')">
+                        Organic Fertilisers
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','chemical-fertilizers', 'Chemical Fertilisers', '')">
+                        Chemical Fertilisers
+                      </div>
+                
+                      <!-- Fruits, Vegetables & Growables -->
+                      <div class="dropdown-option" onclick="selectOption('fruits-vegetables-growables', 'Fruits, Vegetables &amp; Growables', 'https://img.icons8.com/external-vitaliy-gorbachev-lineal-vitaly-gorbachev/20/external-vegetables-health-vitaliy-gorbachev-lineal-vitaly-gorbachev.png')">
+                        <img src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-vitaly-gorbachev/20/external-vegetables-health-vitaliy-gorbachev-lineal-vitaly-gorbachev.png" alt=""><span class="bold-category">Fruits, Vegetables &amp; Growables</span>
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','mango', 'Mango', '')">
+                        Mango
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','banana', 'Banana', '')">
+                        Banana
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','pineapple', 'Pineapple', '')">
+                        Pineapple
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','papaya', 'Papaya', '')">
+                        Papaya
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','coconut', 'Coconut', '')">
+                        Coconut
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','eggplant', 'Eggplant', '')">
+                        Eggplant
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','tomato', 'Tomato', '')">
+                        Tomato
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','squash', 'Squash', '')">
+                        Squash
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','bitter-melon', 'Bitter Melon', '')">
+                        Bitter Melon
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','string-beans', 'String Beans', '')">
+                        String Beans
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','other-fruits-vegetables', 'Other', '')">
+                        Other
+                      </div>
+                
+                      <!-- Building Materials -->
+                      <div class="dropdown-option" onclick="selectOption('building-materials', 'Building Materials', 'https://img.icons8.com/wired/20/construction-materials.png')">
+                        <img src="https://img.icons8.com/wired/20/construction-materials.png" alt=""><span class="bold-category">Building Materials</span>
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','steel', 'Steel', '')">
+                        Steel
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','wood', 'Wood', '')">
+                        Wood
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','bamboo', 'Bamboo', '')">
+                        Bamboo
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','glass', 'Glass', '')">
+                        Glass
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','roofing-materials', 'Roofing Materials', '')">
+                        Roofing Materials
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','sand-gravel', 'Sand &amp; Gravel', '')">
+                        Sand &amp; Gravel
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','bricks', 'Bricks', '')">
+                        Bricks
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','cement', 'Cement', '')">
+                        Cement
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','other-building-materials', 'Other', '')">
+                        Other
+                      </div>
+                
+                      <!-- Seeds -->
+                      <div class="dropdown-option" onclick="selectOption('seeds', 'Seeds', 'https://img.icons8.com/ios/20/paper-bag-with-seeds.png')">
+                        <img src="https://img.icons8.com/ios/20/paper-bag-with-seeds.png" alt=""><span class="bold-category">Seeds</span>
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','rice-seeds', 'Rice Seeds', '')">
+                        Rice Seeds
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','corn-seeds', 'Corn Seeds', '')">
+                        Corn Seeds
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','mung-bean-seeds', 'Mung Bean Seeds (Munggo)', '')">
+                        Mung Bean Seeds (Munggo)
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','coconut-seeds', 'Coconut Seeds (Niyog)', '')">
+                        Coconut Seeds (Niyog)
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','peanut-seeds', 'Peanut Seeds', '')">
+                        Peanut Seeds
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','okra-seeds', 'Okra Seeds', '')">
+                        Okra Seeds
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','bitter-melon-seeds', 'Ampalaya (Bitter Melon) Seeds', '')">
+                        Ampalaya (Bitter Melon) Seeds
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','tomato-seeds', 'Tomato Seeds (Kamatis)', '')">
+                        Tomato Seeds (Kamatis)
+                      </div>
+                      <div class="dropdown-option" onclick="selectOption('selling','other-seeds', 'Other', '')">
+                        Other
+                      </div>
+                
+                      <div class="dropdown-option" onclick="selectOption('other-tools', 'Other', 'https://img.icons8.com/ios/20/connection-status-off.png')">
+                        <img src="https://img.icons8.com/ios/20/connection-status-off.png" alt=""><span class="bold-category">Other</span>
+                      </div>
+                
+                      <!-- Additional Categories -->
+                      <!-- Add similar structure for other categories from your original dropdown -->
+                    </div>
+                  </div>
+                  <div class="icon-wrapper">
+                    <i class="bi bi-search"></i>
+                    <input type="search" placeholder="I'm looking for...">
+                </div>
+                <div class="icon-wrapper">
+                <i class="bi bi-geo-alt-fill"></i>
+                <input type="location" placeholder="Location">
+            </div>
                 <div class="submit-container">
                     <button type="submit">SEARCH</button>
                 </div>
@@ -1570,95 +2275,173 @@ hr {
       <button type="submit">Filter</button>
   </div>
     <div class="rectangle-container">
-        <div class="rectangle">
-            <img src="Rectangle 23.png" alt="Example 1">
-            <div class="listing-details">
-                <div class="title-container">
-                    <h4>12 Piglets for Sale</h4>
-                    <div class="save-icon" onclick="toggleSaveIcon(this)">
-                        <i class="bi bi-heart-fill"></i>
-                        <span>Save</span>
-                    </div>
-                </div>
-                <ul>
-                    <li><img width="24" height="24" src="https://img.icons8.com/color/96/marker--v1.png" alt="marker--v1"/>Location: Cebu</li>
-                    <li><img width="24" height="24" src="https://img.icons8.com/color/96/weight-kg.png" alt="weight-kg"/>Weight: 120kg</li>
-                    <li class="price"><img width="24" height="24" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>Price: 42,000</li>
-                </ul>
-                <button type="submit">Check Availability</button>
-            </div>
-        </div>
-        <div class="rectangle">
-            <img src="Rectangle 22.png" alt="Example 2">
-            <div class="listing-details">
-                <div class="title-container">
-                    <h4>Mother Pig for Sale</h4>
-                    <div class="save-icon" onclick="toggleSaveIcon(this)">
-                        <i class="bi bi-heart-fill"></i>
-                        <span>Save</span>
-                    </div>
-                </div>
-                <ul>
-                    <li><img width="24" height="24" src="https://img.icons8.com/color/96/marker--v1.png" alt="marker--v1"/>Location: Cebu</li>
-                    <li><img width="24" height="24" src="https://img.icons8.com/color/96/weight-kg.png" alt="weight-kg"/>Weight: 90kg</li>
-                    <li class="price"><img width="24" height="24" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>Price: 16,200</li>
-                </ul>
-                <button type="submit">Check Availability</button>
-            </div>
-        </div>
-        <div class="rectangle">
-          <img src="Rectangle 33.png" alt="Example 2">
-          <div class="listing-details">
-              <div class="title-container">
-                  <h4>8 Well-Cared Pigs for Sale</h4>
-                  <div class="save-icon" onclick="toggleSaveIcon(this)">
-                    <i class="bi bi-heart-fill"></i>
-                      <span>Save</span>
-                  </div>
-              </div>
-              <ul>
-                  <li><img width="24" height="24" src="https://img.icons8.com/color/96/marker--v1.png" alt="marker--v1"/>Location: Cebu</li>
-                  <li><img width="24" height="24" src="https://img.icons8.com/color/96/weight-kg.png" alt="weight-kg"/>Weight: 280kg</li>
-                  <li class="price"><img width="24" height="24" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>Price: 70,000</li>
-              </ul>
-              <button type="submit">Check Availability</button>
+      <div class="rectangle">
+        <img src="cattle img.png" alt="Image" class="rectangle-image">
+        <div class="details-container">
+          <div class="icon-title-container">
+            <div class="for-sale-badge">For Sale</div>
+            <span style="margin-left: 10px;" class="title" id="rectangle-title">Cattles for Sale - Quality Livestock For Your Farm</span>
           </div>
+
+          <div class="user-accepts">
+          <div class="location-container">
+            <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAADMklEQVR4nO1aO2hUQRQd/4pGS/ELigp+S8VC8RNRC7WwsxXFEEnQJjayCGKXYsm+Oee+rCQsVtsoNjaiBCUYgo1JsBIFNUrEf4IaiStDniTIusy8376ABy4s7y1nzrkzc9+8mafUf0zC87w1JM+SLAF4DOAdyZ8AxgGMAOgH0A3gdEdHx0qVFZA8QvI+yQmSFcuYAHBXRBrrLbzPQXTVANCbqhERWUbyRlThVYx0F4vFhkTFA9gI4Gnc4jkVQ4VCYUMi4kVkO4C3CYqvBD0x7Hne5ljFm6oB4GXS4jll4rXv+6tjES8i80wJTEs8p0w8yuVycyMbIHklbfEMQkQuR83+WgDfHDP3BECr7/tbS6XSYhPmt7lGcsCRawzAqijZ9xwa/C4iTblcbva/+Mrl8hySzQB+OJjIhxJvajKALw7i99tya60P2JoA8Mn0orMBrfVJh+yfc+UHcN6hF044G+AkrMZ8rWFTazgBGLRsQ4cxYLXOEZEWFRIALlj2wsMw5COW2dkS1oDWepulgTfO5GZi2pAXCoUlYQ0Ui8UG2yLhTG5qsA15lBVkPp9famngqzM5yecZGkLPnMkB9FgaaE16EgO450xO8ppldgZMSXTlD57KQ5ZtXHU2ICJHLclNNIfgb7Hl11ofdjaQz+cXkPxg2cVmWXDQQXyj2a2gHff7crk8X4UBSd82S8aEWR7UGk7mnsm8rXhOBkOJDzK1y6GhP0YGzeQ0FcY8I0wE1eaiw5ivTOPbqaIAwAPXRuMKAD0qKrTWx+tlgOSxyAaCXuitg/i+SqUyKxYDJPembUAcXpBsTdxKcezfVHEjeMEfTUH8mO/762I3EJi4lEIPtKmkYDaakpzQAPrNRppKElrr9Q67FS7iR33f36TSQHASE7eBMypNALgdo/g7sdV8W3R2di43W+ExiB82XKoeILnbZZuwivhxrfWeuoifZqI5rAERaVJZAMnrIQyUVFbQ3t6+yOUQxPy3q6trocoSRGQFyRcWBl7FdnwUN8weEYCPNcR/9jxvh8oyAOyrVpmCTw4OqZkAETn116cHE+aamkkQkaYg87/CHICoLMAsv00k2chv+Sf6eNc6OVcAAAAASUVORK5CYII=" alt="marker--v1">Location: Manila</li>
+          </div>
+            <div class="location-container">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAACLklEQVR4nI2UzatNYRTGt4EQgxuhDMSI8nm5oshnhm4GuvIZSf4DUxmQ0qHbvuf9PWufjqObMGDAVBSDyzW7RIkY3IGPmBj45mjpPbXvPtu5Z9Vqv3u96332Ws+z3p0kOQshHBocHJyW/MfMbCpwOOnWgHuSroQQ5pnZUuCJewhhSb1enwtcAka6BpR0SlLTHfgaQlju7utWXNLZjiCNRqMnhNDv7ZrZOklPJb2VtCtHRT/wTtLzEMIGz/WYn01K2hzPfd0re1Sr1WY7IHDG3ddpms6RNFrIHS9rs1pIOiBpLB+LPgbsKcTSNsBmszlF0g5gAHhsZttKwFre5zmS9oYQtvvZZBJR7oYQegsg34Ajkg5Gge5PJu6E9s1si6TTwI9IQSWqfy1N0wXAyaRgjUajR9JDF2rChpltAq77GrgcK9wMfIrgI8CiqPpxp6dara4EXsf9O2VV3jKz9b7pSWa2pkDB74KIv3LvL9sAsyxb5sTnWt4p6U0HoZo5v9EGWKvV5gN/ckkPgI1x2DuBjTnHbYDAqmIycAw41wkQGGgDi4pNl/Qsl/w+hLC2wNUX4IWkn7nYR79NpaDDw8MzJR2VdN6fwMXcwbrPKrAvy7LVTkmuyhOlgCU0/FMceAVsBb7nqu9tVe8z2y3gzQhwVdIFrxz44LNqZvtj+w7YNvSllmXZ4sjrqJntzl9LM1sBfAZuVyqVGV0BusWfSN/Q0NCseFMqfgHMbKFPRivxL4tGf2TNpbfsAAAAAElFTkSuQmCC" style="margin-right: 5px;" alt="livestock">Quantity: 4
+          </div>
+        </div>
+
+          <div class="user-accepts">
+            <div class="location-container">
+              <img style="margin-right: 5px;" width="20" height="20" src="https://img.icons8.com/plumpy/48/bank-card-back-side.png" alt="bank-card-back-side"/>User accepts:
+          </div>
+           <label for="payment-cash"><img width="26" height="26" src="https://img.icons8.com/color/48/get-cash.png" alt="get-cash"/>
+                <label for="payment-gcash"><img src="gcash icon appstore.webp"  style="width: 20px; height: 20px; border-radius: 2px;">
+                    <label for="payment-gcash"><img src="maya icon.webp"  style="width: 20px; height: 20px; border-radius: 2px;">
+                        <label for="payment-credit-card"><img width="28" height="28" src="https://img.icons8.com/color/48/visa.png" alt="visa" style="width: 25px; height: 25px;"><img width="28" height="28" src="https://img.icons8.com/color/48/mastercard.png" alt="mastercard" style="width: 25px; height: 25px;"></label>
+          </div>
+
+          <div class="weight-container-row">
+            <div class="weight-container-wrapper">
+          <div class="weight-container">
+            <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAADTklEQVR4nO2YT2gTQRTGVzx5UFGxJz3rRQ961osIehOqHvWsdz1X60npoZTMe9OkhaTQQqmHQttEaUsbSw+FVNtLm2IIWClNWggJwfRPmpE3ZtNtbHZ3tokZIQ8+yL59DN9v573ZJIbRila0oq7BGGtDxHcA8BUA8iREXASATrpn6Byc8ycAkENEcZzoHgA8NjQ2X6pl3gJR0g6CMdZW9eR/MMbaA4HAWRLn/BEirlruZ/v6+i4bugT1vNW83++/WF3DGLtA9yw78dbQJRDxm2mMnrxdm1lAFw1dwto+1DK16rq7u89ZB9r43wA45+etc2DoEnTmm8ZoYG3qnuraQp0WY6s0sNU1PT09lwBg3VL3puHGfD7fTQBYdjrbGyUAWOac3/AMgIifm2UeDyE+eQYAgIwGABkhxCll8z6f72qzzWNZvb29V5QBOOcPm20cD/VAGQAAXmtgXJT1ShkAEUMaGBdlBb0ALGpgXJAAIKZkfnh4+DQi/nKzuBljY2OVXDgcruQXFhbqAVAgT64BOOfX3S5eDTA0NCR2d3dlLplM1m0XGGPXXAPQLyYvAH6/X2xtbcnrTCYj+vv76wnQrgLQ4QUgHo/Lzzs7O3InrHXz8/OiUChILS0tiVQqJbLZrEobdagAfFQFWFtbq3weHx8/UjM1NSXzBwcHYmNjQ0KYge53YUQFIK4KYI3p6ekjNZubmzIfjUbl9eDgoBeAVVfmu7q6zgBA0QsAtYTZQqFQqFJjDrWZo9lQBQCAInlzBGCM3VYZLjNWVlaksXw+/9cJtLe3J3PBYNAzAP75sXTLEYBz/twLgHmMRiKRSm5yclLm0un0keuBgQFPAADwzBEAET+cBICUSCRkjoaVnvrMzIy83t/fl/dyuZxXgPduACInBaBepzmgIMOUi8ViolgsSpknVqlUUgUIuwH4qbKoW42OjtL3eimCNV92qAawbmu+/O9Z3c1PTExIwzQLtCPmUM/NzSmvddy/ftanf7cRAIFAQL596YSiFtre3hazs7Oe1mKM3akJAAAvGwFQT3HOX9gBsGYbRGf57AC+aGBQOChqB5DWwKBwUMpuiJMaGBQOStjtwH0q0MCkOE4A8B0R79UEaEUrWtEK41/HbyhBH3bFLA18AAAAAElFTkSuQmCC" alt="weight-kg">Avg head: 105kg</li>
+          </div>
+        </div>
+        <div class="weight-container-wrapper">
+          <div class="weight-container">
+            <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAADTklEQVR4nO2YT2gTQRTGVzx5UFGxJz3rRQ961osIehOqHvWsdz1X60npoZTMe9OkhaTQQqmHQttEaUsbSw+FVNtLm2IIWClNWggJwfRPmpE3ZtNtbHZ3tokZIQ8+yL59DN9v573ZJIbRila0oq7BGGtDxHcA8BUA8iREXASATrpn6Byc8ycAkENEcZzoHgA8NjQ2X6pl3gJR0g6CMdZW9eR/MMbaA4HAWRLn/BEirlruZ/v6+i4bugT1vNW83++/WF3DGLtA9yw78dbQJRDxm2mMnrxdm1lAFw1dwto+1DK16rq7u89ZB9r43wA45+etc2DoEnTmm8ZoYG3qnuraQp0WY6s0sNU1PT09lwBg3VL3puHGfD7fTQBYdjrbGyUAWOac3/AMgIifm2UeDyE+eQYAgIwGABkhxCll8z6f72qzzWNZvb29V5QBOOcPm20cD/VAGQAAXmtgXJT1ShkAEUMaGBdlBb0ALGpgXJAAIKZkfnh4+DQi/nKzuBljY2OVXDgcruQXFhbqAVAgT64BOOfX3S5eDTA0NCR2d3dlLplM1m0XGGPXXAPQLyYvAH6/X2xtbcnrTCYj+vv76wnQrgLQ4QUgHo/Lzzs7O3InrHXz8/OiUChILS0tiVQqJbLZrEobdagAfFQFWFtbq3weHx8/UjM1NSXzBwcHYmNjQ0KYge53YUQFIK4KYI3p6ekjNZubmzIfjUbl9eDgoBeAVVfmu7q6zgBA0QsAtYTZQqFQqFJjDrWZo9lQBQCAInlzBGCM3VYZLjNWVlaksXw+/9cJtLe3J3PBYNAzAP75sXTLEYBz/twLgHmMRiKRSm5yclLm0un0keuBgQFPAADwzBEAET+cBICUSCRkjoaVnvrMzIy83t/fl/dyuZxXgPduACInBaBepzmgIMOUi8ViolgsSpknVqlUUgUIuwH4qbKoW42OjtL3eimCNV92qAawbmu+/O9Z3c1PTExIwzQLtCPmUM/NzSmvddy/ftanf7cRAIFAQL596YSiFtre3hazs7Oe1mKM3akJAAAvGwFQT3HOX9gBsGYbRGf57AC+aGBQOChqB5DWwKBwUMpuiJMaGBQOStjtwH0q0MCkOE4A8B0R79UEaEUrWtEK41/HbyhBH3bFLA18AAAAAElFTkSuQmCC" alt="weight-kg">Total: 420kg</li>
+          </div>
+        </div>
+      </div>
+      
+
+          <div class="price-container-row">
+            <div class="price-container-wrapper">
+              <div class="price-container">
+                <img style="margin-right: 5px;" width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>
+                Price: <span class="price-value">54,000</span>
+              </div>
+            </div>
+            <div class="price-container-wrapper">
+              <div class="price-container">
+                <img style="margin-right: 5px;" width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>
+                Per/kg: <span class="price-value">514</span>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+        <div class="container-with-x">
+          <div class="save-icon" onclick="toggleSaveIcon(this)">
+            <i class="bi bi-heart-fill"></i>
+            <span>Save</span>
+        </div>
+          <div class="bottom-button-container">
+            <button class="small-edit-button">Offer</button>
+            <button class="small-next-button">View</button>
+          </div>
+        </div>
       </div>
       <div class="rectangle">
-        <img src="Rectangle 37.png" alt="Example 2">
-        <div class="listing-details">
-            <div class="title-container">
-                <h4>10 Full-Grown Pigs for Sale</h4>
-                <div class="save-icon" onclick="toggleSaveIcon(this)">
-                    <i class="bi bi-heart-fill"></i>
-                    <span>Save</span>
-                </div>
-            </div>
-            <ul>
-                <li><img width="24" height="24" src="https://img.icons8.com/color/96/marker--v1.png" alt="marker--v1"/>Location: Cebu</li>
-                <li><img width="24" height="24" src="https://img.icons8.com/color/96/weight-kg.png" alt="weight-kg"/>Weight: 800kg</li>
-                <li class="price"><img width="24" height="24" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>Price: 144,000</li>
-            </ul>
-            <button type="submit">Check Availability</button>
+        <img src="farm img.png" alt="Image" class="rectangle-image">
+        <div class="details-container">
+          <div class="icon-title-container">
+            <div class="for-sale-badge">For Sale</div>
+            <span style="margin-left: 10px;" class="title" id="rectangle-title">Charming Farmhouse for Sale in Cebu</span>
+          </div>
+
+          <div class="user-accepts">
+          <div class="location-container">
+            <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAADMklEQVR4nO1aO2hUQRQd/4pGS/ELigp+S8VC8RNRC7WwsxXFEEnQJjayCGKXYsm+Oee+rCQsVtsoNjaiBCUYgo1JsBIFNUrEf4IaiStDniTIusy8376ABy4s7y1nzrkzc9+8mafUf0zC87w1JM+SLAF4DOAdyZ8AxgGMAOgH0A3gdEdHx0qVFZA8QvI+yQmSFcuYAHBXRBrrLbzPQXTVANCbqhERWUbyRlThVYx0F4vFhkTFA9gI4Gnc4jkVQ4VCYUMi4kVkO4C3CYqvBD0x7Hne5ljFm6oB4GXS4jll4rXv+6tjES8i80wJTEs8p0w8yuVycyMbIHklbfEMQkQuR83+WgDfHDP3BECr7/tbS6XSYhPmt7lGcsCRawzAqijZ9xwa/C4iTblcbva/+Mrl8hySzQB+OJjIhxJvajKALw7i99tya60P2JoA8Mn0orMBrfVJh+yfc+UHcN6hF044G+AkrMZ8rWFTazgBGLRsQ4cxYLXOEZEWFRIALlj2wsMw5COW2dkS1oDWepulgTfO5GZi2pAXCoUlYQ0Ui8UG2yLhTG5qsA15lBVkPp9famngqzM5yecZGkLPnMkB9FgaaE16EgO450xO8ppldgZMSXTlD57KQ5ZtXHU2ICJHLclNNIfgb7Hl11ofdjaQz+cXkPxg2cVmWXDQQXyj2a2gHff7crk8X4UBSd82S8aEWR7UGk7mnsm8rXhOBkOJDzK1y6GhP0YGzeQ0FcY8I0wE1eaiw5ivTOPbqaIAwAPXRuMKAD0qKrTWx+tlgOSxyAaCXuitg/i+SqUyKxYDJPembUAcXpBsTdxKcezfVHEjeMEfTUH8mO/762I3EJi4lEIPtKmkYDaakpzQAPrNRppKElrr9Q67FS7iR33f36TSQHASE7eBMypNALgdo/g7sdV8W3R2di43W+ExiB82XKoeILnbZZuwivhxrfWeuoifZqI5rAERaVJZAMnrIQyUVFbQ3t6+yOUQxPy3q6trocoSRGQFyRcWBl7FdnwUN8weEYCPNcR/9jxvh8oyAOyrVpmCTw4OqZkAETn116cHE+aamkkQkaYg87/CHICoLMAsv00k2chv+Sf6eNc6OVcAAAAASUVORK5CYII=" alt="marker--v1">Location: Manila</li>
+          </div>
+            <div class="location-container">
+              <li><img style="width: 22px; height: 22px;" style="margin-right: 20px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAABgElEQVR4nO2WvUoDQRSFo2BhoWgjWNmKWugjiG8Q9RX8eYFY5gkCBpZ7zl0C26fXTkEUtJMUlgoa0LSBtDoyuMUim81siLsS5sDt5sz5drh3ZisVLy+vKVYYhpskq6p6+BdFsgpgIzdYs9lcBHBJ0hRUF61Wa8EZEIAUCGdsAQjyAL4XDUjywxlwyAb3IrIfBMFao9GYF5EtkmcAehmn0gNQs71sPdYL4ADAQ9r6sQEBoF6vz6atFZEVkp2UwCdVXU3zGGNmSJ5PCrBjN8xar6rrJD8TH/Q1ajrtngAexwXsJ4wnLh4A1wnPlYtHVU8THzXIA2h7awDgJoqiJUfPHsk3AK+quuviEZFlmxFn1ZwBvaZaqjpnB4NkBKBdRPEn69hmu8DdlfCKmHiSbzMh45MzJddRFmD0DwCjoYBxP5QKCKDtAelPkL4HjR8S+mtmxEUNoFvUzwKAbu6LOnPhhAXX3F9v8fA3ccKia66I7AB4IfkchuF2UYBSUq6X11ToG7TWUWLkW6VSAAAAAElFTkSuQmCC" alt="bedroom">Bedroom: 5</li>
+          </div>
         </div>
-    </div>
-        <div class="rectangle">
-            <img src="Rectangle 22.png" alt="Example 3">
-            <div class="listing-details">
-                <div class="title-container">
-                    <h4>3-50kg Pigs for Sale  (Price Reduced!)</h4>
-                    <div class="save-icon" onclick="toggleSaveIcon(this)">
-                        <i class="bi bi-heart-fill"></i>
-                        <span>Save</span>
-                    </div>
-                </div>
-                <ul>
-                    <li><img width="24" height="24" src="https://img.icons8.com/color/96/marker--v1.png" alt="marker--v1"/>Location: Cebu</li>
-                    <li><img width="24" height="24" src="https://img.icons8.com/color/96/weight-kg.png" alt="weight-kg"/>Weight: 150kg</li>
-                    <li class="price"><img width="24" height="24" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>Price: 39,000</li>
-                </ul>
-                <button type="submit">Check Availability</button>
+
+          <div class="user-accepts">
+            <div class="price-container">
+              <img style="margin-right: 5px;" width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>
+              Price: <span class="price-value">11,400,000</span>
             </div>
+            <div class="location-container">
+              <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAABeUlEQVR4nO2YTU7DMBBGfQUkkDgUS1AXcA+WdMkBonzjRU6Qq7Bhw2WoBAolIliO4xmPrRbmSV1UTe3v+S+2nTMMwzhJiOiD8XkSlP/IqaOmADu8RMJVEhCH50q4CgLF4TkSjstGgSO7wO36xmYCAA5E9KAV3nt/R0TvTYeQloTPCK8lMEYqmr7vpOGJaLdS5qgt8DVhAdyGFUp7ItbyAA4A7mMTu0Tg12qjIbEVfmYp4biklsoSidzwoYTjAmAvGb9939+s/Wf6TTKPsJFFTKQnXr33lwmBCyJ6yWn5ZiwkkuFDiZMIvxwaOeFnpmdTQ80wDOOf0Z/zMup/9jZvXdddbz0/DMPV9NLTPhSJiGzMkhJz+Fonu7+1maNjCz1rbIlLtuIA9kUHmlCiJDxXAt/hi4+Us4RG+FwJLMLboZ5WrlU09vOI9ET1eyHtwwgyJFQFzv5qkRJLrAQEE7aJgJYEMsJXEyiVQGb4qgJSCU54kggYhmG4FnwCwGVfFhyUXp4AAAAASUVORK5CYII=" alt="expand--v1">m2: 195</li>
+          </div>
+        </div>
+
+        <div class="description">
+          <p class="description-p"><strong>Description:</strong> Hello everyone! We have a charming and well-maintained farmhouse for sale, featuring a spacious layout 
+            <span class="read-more-link"><a href="#description">Read More</a></span>
+          </p>
+        </div>
+      
+
+ 
+
+
+          
+        </div>
+        <div class="container-with-x">
+          <div class="save-icon" onclick="toggleSaveIcon(this)">
+            <i class="bi bi-heart-fill"></i>
+            <span>Save</span>
+        </div>
+          <div class="bottom-button-container">
+            <button class="small-edit-button">Offer</button>
+            <button class="small-next-button">View</button>
+          </div>
+        </div>
+      </div>
+      <div class="rectangle">
+        <img src="hilux img.png" alt="Image" class="rectangle-image">
+        <div class="details-container">
+          <div class="icon-title-container">
+            <div class="pending-badge">Pending</div>
+            <span class="title" id="rectangle-title">Hilux 2022 for Sale</span>
+          </div>
+          <div class="location-container">
+            <li><img width="20" height="20" src="https://img.icons8.com/color/96/marker--v1.png" alt="marker--v1"/>Location: Cebu</li>
+          </div>
+          <div class="price-container">
+            <img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>
+                Price: <span class="price-value">674,00</span>
+          </div>
+        </div>
+        <div class="container-with-x">
+          <div class="save-icon" onclick="toggleSaveIcon(this)">
+            <i class="bi bi-heart-fill"></i>
+            <span>Save</span>
+         </div>
+          <div class="bottom-button-container">
+            <button class="small-edit-button">Offer</button>
+            <button class="small-next-button">View</button>
+          </div>
+        </div>
+      </div>
+        <div class="rectangle">
+          <img src="harvester img.png" alt="Image" class="rectangle-image"> 
+          <div class="details-container">
+            <div class="icon-title-container">
+              <div class="for-sale-badge">For Sale</div>
+              <span class="title" id="rectangle-title">Rice Harvester for Sale</span>
+            </div>
+            <div class="location-container">
+              <li><img width="20" height="20" src="https://img.icons8.com/color/96/marker--v1.png" alt="marker--v1"/>Location: Cebu</li>
+            </div>
+            <div class="price-container">
+              <img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>
+              Price: <span class="price-value">129,000</span>
+            </div>
+          </div>
+          <div class="container-with-x">
+              <i class="bi bi-x"></i>
+            <div class="bottom-button-container">
+              <button class="small-edit-button">Offer</button>
+              <button class="small-next-button">View</button>
+            </div>
+          </div>
         </div>
         <div class="pagination">
             <button class="pagination-button prev-next previous">
@@ -1785,6 +2568,10 @@ hr {
         const icon = element.querySelector('i.bi-heart-fill');
         icon.classList.toggle('red');
     }
+
+
+    
+
 
   </script>
   </main>
