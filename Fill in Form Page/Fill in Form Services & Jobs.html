@@ -1,0 +1,2601 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fill in Form</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<style>
+
+        /* Header styles */
+        header {
+            /* background-image: url(header.png);   logicdigger css remove this
+            height: 100vh; /* Make the image responsive logicdigger css remove this */
+            width: 100%; 
+            object-fit: cover; /* Ensure the image covers the entire header */
+            filter: brightness(0.);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 99;
+        }
+
+        /***logicdigger css***/
+
+.heor-content {
+    width: 100%;
+    max-width: 1270px;
+    margin: 0 auto;
+    padding: 12px 25px;
+}
+
+  /***logicdigger css ***/
+        .navbar-toggler, .navbar-close {
+            display: none;
+            background-color: transparent;
+            border: none;
+            font-size: 35px;
+            cursor: pointer;
+        }
+        .navbar-nav {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            flex: 1;
+            justify-content: space-between;
+        }
+        .navbar-nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #3c5823;
+    font-weight: 600;
+}
+        .navbar-nav .icons a {
+            margin: 0 5px;
+        }
+        .navbar-collapse {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            flex: 1;
+        }
+
+        @media only screen and (min-width: 1024px) and (max-width: 1350px)  {
+          .image-item {
+            margin-bottom: 20px !important;
+          }
+          .navbar-nav .nav-link:nth-child(6) {
+            margin: 0 !important;
+          }
+          .rectangle-container{
+            display: block !important;
+            text-align: center;
+          }
+          .rectangle {
+    width: 25% !important;
+    display:inline-block !important;
+  }
+  .rectangle li img {
+    height: 10%;
+    width: 10% !important;
+    padding-right: 3%;
+}
+  .rectangle img {
+    width: 100% !important;
+  }
+        }
+        @media only screen and (min-width: 768px) and (max-width: 1024px)  {
+        .rectangle-container  .rectangle img {
+    width: 310px !important;
+}
+.sell-us-content{
+  display: block !important;
+  margin-bottom: 20px;
+}
+.rectangle-container .rectangle {
+    width: 300px !important;
+}
+.rectangle-container {
+    flex-wrap: wrap;
+}
+.rectangle-container .rectangle li img {
+    width: 10% !important;
+}
+footer {
+    height: unset !important;
+}
+.footer-columns {
+    display: block !important;
+}
+main .listing-title .title{
+  text-align: center !important;
+}
+  }
+  @media (max-width: 400px) { 
+  .search-container input[type=text] {
+    padding: 10px;
+    width: 200px !important;
+}
+.rectangle {
+        max-width: 80% !important;
+        margin: 0 auto !important;
+        margin-bottom: 20px !important;
+    }
+    .rectangle img {
+    width: 100% !important;
+    max-width: 350px;
+}
+.rectangle li img {
+    height: 10%;
+    width: 10% !important;
+    padding-right: 3%;
+}
+  }
+        @media (max-width: 1024px) {
+            .navbar-nav {
+               
+                flex-direction: column;
+                background-color: #f8f9fa;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                padding: 10px 0;
+            }
+            .navbar-collapse.show {
+  display: block !important;
+}
+.navbar-collapse {
+    display: none;
+}
+.navbar .container {
+    display: block;
+}
+.image-item {
+    margin-bottom: 20px !important;
+}
+            .navbar-nav .nav-link:nth-child(6){
+              margin: 0 !important;
+            }
+            .navbar-nav a {
+              padding: 10px 15px;
+          }
+            .navbar-nav.show {
+                display: flex;
+            }
+            .navbar-toggler {
+                display: block;
+            }
+            .navbar-close {
+                display: block;
+                align-self: flex-end;
+                margin: 10px 20px;
+                position: absolute;
+            }
+
+            span.navbar-toggler-icon {
+    float: right;
+    margin-right: 20px;
+}
+.navbar {
+    margin-top: 20px !important;
+}
+.navbar img {
+    margin-left: 20px;
+}
+        }
+
+
+body {
+    margin: 0;
+    padding: 0;
+}   
+.navbar .container {
+    width: 100%;
+    max-width: 1270px;
+    margin: auto;
+} 
+.heor-content {
+    width: 100%;
+    max-width: 1270px;
+    margin: 0 auto;
+}
+
+.hero-iner {
+    display: flex;
+    align-items: center;
+    height: 20vh;
+    background-size: cover;
+    background-position: bottom center;
+}
+
+.hero-section {
+    position: relative;
+}
+
+.image-item1 {
+    background: #39b84e1c;
+}
+.image-item2 {
+    background: #ffa8262c;
+}
+.image-item3 {
+    background: #2c91bd29;
+}
+.image-item4 {
+    background: #5aa3fc2b;
+}
+
+  /***logicdigger css end ***/
+
+    body  {
+      font-family: "Inter", sans-serif;
+        font-weight: 450;
+        font-size: 14px;
+        color: rgb(79, 79, 79);
+        width: 100%; /* Make the image responsive */
+        height: 100%; /* Make the image responsive */
+    } 
+
+.inter-font {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+    body {
+    height: 00px;
+    }
+    .mochiy-pop-one-regular {
+  font-family: "Mochiy Pop One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+    .navbar-nav .nav-link:nth-child(6) {
+        margin-right: 280px; /*Adjust logo*/
+    }
+    .navbar-nav .nav-link:nth-child(1) {
+        margin-right: px;
+    }
+    .signup-button {
+      color: rgba(255, 255, 255, 0.952) !important;
+      background-color: #000000ce; /* Change background color to a prominent color */
+      border-radius: 20px; /* Add rounded corners */
+      padding: 10px 20px; /* Add padding to increase button size */
+      transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+    }
+    .signup-button:hover {
+background-color: #ff4632c8;
+    }
+    .navbar {
+margin-top: 38px; /* Adjust the value to move the navbar down further */
+}
+    .main-title {
+      margin-top: 30px;
+      font-size: 48px;
+      font-weight: bolder;
+      font-family: "Mochiy Pop One", sans-serif;
+      color: black;
+    }
+    .h4-title {
+      margin-top: -20px;
+      font-size: 23px;
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+    }
+    .search-container {
+      margin-top: -0px;
+    }
+
+    .submit-container {
+      margin-top: -57px;
+      margin-left: 305px;
+      padding-left: 10px;
+    }
+    .submit-container button[type=submit] {
+      width: 149.33px;
+      border: 1px solid #ff4632c8;
+      background-color: #ff4632c8;
+      border-radius: 7.5px;
+      outline: none;
+      padding-top: 38px;
+      font-size: 15px;
+      font-weight: 600;
+      color: whitesmoke;
+      display: flex;
+      justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    padding: 19px;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+    }
+    .submit-container button[type=submit]:hover {
+    background-color: #ff4632e6; /* Darker color when hovered */
+    }
+    .bi-search {
+      position: absolute;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      padding: 19px;
+    }
+    .navbar-brand {
+      margin-right: 0px;
+      position: fixed;
+      height: auto;
+    }
+    .container { 
+  display:flex; /* Use flexbox */
+  justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    }
+    .bi-heart {
+      font-size: 20px;
+      font-weight: 900;
+      padding-right: 5px;
+    }
+    .bi-cart3 {
+      font-size: 20px;
+      font-weight: 900px;
+      padding-right: 10px;
+    }
+   
+        main {
+        /* Can use flex here */
+  height: 100vh; /* Set main height to full viewport height */
+}
+
+.logo-section {
+    max-width: 1270px; /* Ensure container matches navbar width */
+    margin: 0 auto; /* Center the container */
+    padding: 20px 0; /* Adjust padding as needed */
+    text-align: center; /* Align text to the left */
+}
+
+.nav-hr {
+    width: 100%;
+    border: none;
+    border-top: 0,3px solid #00000043; /* Adjust the color and thickness as needed */
+    margin-top: 10px; /* Adjust the spacing above the hr */
+}
+
+.pagination-section {
+  max-width: 1270px; /* Ensure container matches navbar width */
+    margin: 0 auto; /* Center the container */
+    padding: 20px 0; /* Adjust padding as needed */
+    text-align: left; /* Align text to the left */
+    margin-top: 70px;
+    padding-bottom: 0px;
+}
+
+.pagination-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.pagination-dots .dot {
+    height: 4px;
+    width: 55px;
+    background-color: #D9D9D9;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 0 3px;
+    transition: background-color 0.3s;
+}
+
+.pagination-dots .dot.active {
+    background-color: #5EA91E;
+}
+
+.message-box {
+    width: 100%;
+    display: flex;
+    max-width: 1270px;
+    margin: 0 auto;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 0px;
+    flex-direction: column;
+    height: 2910px;
+}
+
+.message-content {
+    background-color: #ffffff; /* Light gray background */
+    border: 1px solid #00000023; /* Green border */
+    border-radius: 30px; /* Rounded corners */
+    padding: 20px 30px; /* Padding inside the box */
+    text-align: center; /* Center the text */
+    max-width: 450px; /* Maximum width of the box */
+    width: 100%; /* Responsive width */
+}
+
+.message-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.message-title i {
+    margin-right: 10px; /* Space between icon and text */
+    font-size: 30px;
+}
+
+.message-content h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #000000; /* Green text color */
+    font-family: "Inter", sans-serif;
+}
+
+.message-content p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333; /* Dark gray text color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Inter", sans-serif;
+}
+
+.message-content i {
+font-size: 30px;
+color: #000;
+margin-left: -30px;
+}
+
+.listing-info {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.listing-input-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1270px;
+    margin-top: 30px;
+}
+
+.listing-display-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1270px;
+    margin-top: 30px;
+}
+
+.guiding-text {
+  display: flex;
+  width: 508px;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 7px;
+}
+
+.guiding-text-box {
+  display: flex;
+  width: 508px;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 7px;
+  margin-top: 35px;
+}
+
+.guiding-text-vitamin {
+  display: flex;
+  width: 55%;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 7px;
+}
+
+.listing-display {
+    width: 100%;
+    max-width: 470px;
+    padding: 10px 20px;
+    height: 25px;
+    border: 2px solid #f5f5f5;
+    border-radius: 5px;
+    background-color: #f5f5f5; /* Slightly grey background */
+    font-size: 14px;
+    color: #333;
+    font-family: "Inter", sans-serif;
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+        pointer-events: none;
+    user-select: none;
+}
+
+.listing-display::placeholder {
+    color: #999;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+}
+
+.listing-display:focus {
+    border-color: #5EA91E; /* Change border color when focused */
+    outline: none; /* Remove default outline */
+}
+
+.listing-input {
+    width: 100%;
+    max-width: 470px;
+    padding: 10px 20px;
+    height: 25px;
+    border: 2px solid #f5f5f5;
+    border-radius: 5px;
+    background-color: #f5f5f5; /* Slightly grey background */
+    font-size: 14px;
+    color: #333;
+    font-family: "Inter", sans-serif;
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+.listing-input::placeholder {
+    color: #999;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+}
+
+.listing-input:focus {
+    border-color: #5EA91E; /* Change border color when focused */
+    outline: none; /* Remove default outline */
+}
+
+
+/*New version of dropdown*/
+.custom-dropdown {
+  position: relative;
+  width: 100%;
+  max-width: 470px;
+  height: 22px;
+  border: 2px solid #f5f5f5;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-family: "Inter", sans-serif;
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+    -webkit-appearance: none; /* Remove default arrow in WebKit browsers */
+    -moz-appearance: none; /* Remove default arrow in Firefox */
+    appearance: none; /* Remove default arrow in other browsers */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2714%27%20height%3D%2714%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27%23333%27%3E%3Cpath%20d%3D%27M7%2010l5%205%205-5z%27/%3E%3C/svg%3E'); /* Custom arrow icon */
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Position the arrow with margin-right 10px */
+    background-size: 25px 25px; /* Size of the arrow icon */
+    background-image: 
+        linear-gradient(to right, #33333358 1px, transparent 1px), /* Vertical line */
+        url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2714%27%20height%3D%2714%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27%23333%27%3E%3Cpath%20d%3D%27M7%2010l5%205%205-5z%27/%3E%3C/svg%3E'); /* Custom arrow icon */
+    background-repeat: no-repeat;
+    background-position: right 40px center, right 10px center; /* Position the arrow with margin-right 10px and the line with margin-right 20px */
+    background-size: 1px 15px, 25px 25px; /* Size of the line and the arrow icon */
+}
+
+.custom-dropdown.focus {
+    border-color: #5EA91E; /* Change border color when focused */
+    outline: none; /* Remove default outline */
+}
+
+.dropdown-selected {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropdown-selected img {
+  margin-right: 10px;
+}
+
+.dropdown-options {
+  position: absolute;
+  top: 105%;
+  left: calc(0% - 1px); /* Moves the dropdown 1 pixel to the left */
+  width: 100%;
+  background: #fcfbfb; /* White background */
+  border: 1px solid #f5f5f5;
+  z-index: 100;
+  max-height: 200px; /* Set the maximum height to control when scrolling starts */
+  overflow-y: auto; /* Enable vertical scrolling if content exceeds max height */
+  box-shadow:  0 8px 24px rgba(0, 0, 0, 0.15),  /* Larger, softer shadow */
+    0 4px 16px rgba(0, 0, 0, 0.1),   /* Subtle, closer shadow */
+    0 0 3px rgba(0, 0, 0, 0.2);      /* Slight outline for better definition */
+}
+
+.bold-category {
+  font-weight: bold;
+}
+
+.dropdown-option {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.dropdown-option img {
+  margin-right: 10px;
+}
+
+.dropdown-option:hover {
+  background-color: #e9e9e9;
+}
+
+#dropdown-text {
+color: #999;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+  }
+
+  #dropdown-text-selling {
+    color: #999;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+  }
+
+  #dropdown-text-harvest {
+    color: #999;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+  }
+
+  #dropdown-text-gender {
+    color: #999;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+  }
+
+  #dropdown-text-sick {
+    color: #999;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+  }
+
+  #dropdown-text-temperament {
+    color: #999;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+  }
+
+  #dropdown-text-sales-status {
+    color: #999;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+  }
+
+  #dropdown-text-sales {
+    color: #999;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+  }
+
+  #dropdown-text-job-seeking {
+    color: #999;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+  }
+
+.tickbox-option {
+  display: flex;               /* Use flexbox to manage alignment */
+  align-items: center;         /* Center items vertically */
+  margin-top: 10px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.tickbox-wrapper {
+  padding: 5px;
+  background-color: #f5f5f5;
+  border: 2px solid #f5f5f5;
+  border-radius: 5px;
+  color: #999;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+.tickbox-wrapper:focus {
+  border-color: #5EA91E;
+}
+
+label[for="payment-gcash"] {
+  display: flex;
+  align-items: center;
+}
+
+label[for="payment-cash"] {
+  display: flex;
+  align-items: center;
+}
+
+label[for="payment-credit-card"] {
+  display: flex;
+  align-items: center;
+}
+
+.tickbox-wrapper img {
+  margin-left: 2px;
+  border-radius: 2px;
+}
+
+.tickbox-wrapper text {
+  margin-left: 25px;
+}
+
+.tickbox-p {
+  border-radius: 5px;
+  color: #999;
+    font-family: "Inter", sans-serif;
+    margin-left: 5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+input[type="checkbox"] {
+  width: 12px; /* Adjust the size of the checkbox */
+  height: 12px; /* Adjust the size of the checkbox */
+  border-radius: 50%; /* Make the checkbox circular */
+  appearance: none; /* Remove default checkbox styles */
+  -webkit-appearance: none; /* Remove default checkbox styles in Webkit browsers */
+  outline: none; /* Remove outline */
+  border: 1px solid #888888; /* Border color of the checkbox */
+  background-color: #fff; /* Background color of the checkbox */
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+input[type="checkbox"]:checked::after {
+  content: '';
+  width: 6px; /* Size of the small dot */
+  height: 6px; /* Size of the small dot */
+  border-radius: 50%; /* Make the dot circular */
+  background-color: #4d4d4d; /* Color of the dot */
+  position: absolute;
+  top: 52%;
+  left: 49%;
+  transform: translate(-50%, -50%);
+}
+
+
+.listing-dropbox-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1270px;
+    margin-top: 30px;
+}
+
+.listing-dropbox {
+    width: 100%;
+    max-width: 513px;
+    padding: 10px 20px;
+    height: 45px;
+    border: 2px solid #f5f5f5;
+    border-radius: 5px;
+    background-color: #f5f5f5; /* Slightly grey background */
+    font-size: 14px;
+    color: #333;
+    font-family: "Inter", sans-serif;
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+    -webkit-appearance: none; /* Remove default arrow in WebKit browsers */
+    -moz-appearance: none; /* Remove default arrow in Firefox */
+    appearance: none; /* Remove default arrow in other browsers */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2714%27%20height%3D%2714%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27%23333%27%3E%3Cpath%20d%3D%27M7%2010l5%205%205-5z%27/%3E%3C/svg%3E'); /* Custom arrow icon */
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Position the arrow with margin-right 10px */
+    background-size: 25px 25px; /* Size of the arrow icon */
+    background-image: 
+        linear-gradient(to right, #33333358 1px, transparent 1px), /* Vertical line */
+        url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2714%27%20height%3D%2714%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27%23333%27%3E%3Cpath%20d%3D%27M7%2010l5%205%205-5z%27/%3E%3C/svg%3E'); /* Custom arrow icon */
+    background-repeat: no-repeat;
+    background-position: right 40px center, right 10px center; /* Position the arrow with margin-right 10px and the line with margin-right 20px */
+    background-size: 1px 15px, 25px 25px; /* Size of the line and the arrow icon */
+    max-height: 200px; /* Set max height */
+    overflow-y: auto;  /* Enable vertical scrolling */
+}
+
+.listing-dropbox:focus {
+    border-color: #5EA91E; /* Change border color when focused */
+    outline: none; /* Remove default outline */
+}
+
+.listing-dropbox option[value="placeholder"] {
+    color: #333;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+}
+
+.listing-dropbox option[value="livestock"] {
+    color: #333;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+}
+
+.listing-category-dropbox-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1270px;
+    margin-top: 30px;
+}
+
+.listing-category-dropbox {
+  width: 100%;
+    max-width: 513px;
+    padding: 10px 20px;
+    height: 45px;
+    border: 2px solid #f5f5f5;
+    border-radius: 5px;
+    background-color: #f5f5f5; /* Slightly grey background */
+    font-size: 14px;
+    color: #333;
+    font-family: "Inter", sans-serif;
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+    -webkit-appearance: none; /* Remove default arrow in WebKit browsers */
+    -moz-appearance: none; /* Remove default arrow in Firefox */
+    appearance: none; /* Remove default arrow in other browsers */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2714%27%20height%3D%2714%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27%23333%27%3E%3Cpath%20d%3D%27M7%2010l5%205%205-5z%27/%3E%3C/svg%3E'); /* Custom arrow icon */
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Position the arrow with margin-right 10px */
+    background-size: 25px 25px; /* Size of the arrow icon */
+    background-image: 
+        linear-gradient(to right, #33333358 1px, transparent 1px), /* Vertical line */
+        url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2714%27%20height%3D%2714%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27%23333%27%3E%3Cpath%20d%3D%27M7%2010l5%205%205-5z%27/%3E%3C/svg%3E'); /* Custom arrow icon */
+    background-repeat: no-repeat;
+    background-position: right 40px center, right 10px center; /* Position the arrow with margin-right 10px and the line with margin-right 20px */
+    background-size: 1px 15px, 25px 25px; /* Size of the line and the arrow icon */
+}
+
+.listing-category-dropbox:focus {
+    border-color: #5EA91E; /* Change border color when focused */
+    outline: none; /* Remove default outline */
+}
+
+.listing-category-dropbox option[value="placeholder"] {
+    color: #333;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+}
+
+.listing-category-dropbox option[value="livestock"] {
+    color: #333;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+}
+
+.vitamin-dropbox-container {
+  width: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 1270px;
+    margin-top: 30px;
+}
+
+.vitamin-dropbox {
+  width: 100%;
+    max-width: 513px;
+    padding: 10px 20px;
+    height: 45px;
+    border: 2px solid #f5f5f5;
+    border-radius: 5px;
+    background-color: #f5f5f5; /* Slightly grey background */
+    font-size: 14px;
+    color: #333;
+    font-family: "Inter", sans-serif;
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+    -webkit-appearance: none; /* Remove default arrow in WebKit browsers */
+    -moz-appearance: none; /* Remove default arrow in Firefox */
+    appearance: none; /* Remove default arrow in other browsers */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2714%27%20height%3D%2714%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27%23333%27%3E%3Cpath%20d%3D%27M7%2010l5%205%205-5z%27/%3E%3C/svg%3E'); /* Custom arrow icon */
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Position the arrow with margin-right 10px */
+    background-size: 25px 25px; /* Size of the arrow icon */
+    background-image: 
+        linear-gradient(to right, #33333358 1px, transparent 1px), /* Vertical line */
+        url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2714%27%20height%3D%2714%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27%23333%27%3E%3Cpath%20d%3D%27M7%2010l5%205%205-5z%27/%3E%3C/svg%3E'); /* Custom arrow icon */
+    background-repeat: no-repeat;
+    background-position: right 40px center, right 10px center; /* Position the arrow with margin-right 10px and the line with margin-right 20px */
+    background-size: 1px 15px, 25px 25px; /* Size of the line and the arrow icon */
+}
+
+.vitamin-dropbox:focus {
+  border-color: #5EA91E; /* Change border color when focused */
+  outline: none; /* Remove default outline */
+}
+
+.image-container {
+  width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1270px;
+    margin-top: 30px;
+}
+
+.image-upload-box {
+    width: 100%;
+    max-width: 470px;
+    height: 200px;
+    border: 2px dashed #5fa91e8d;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 0px;
+    padding: 20px;
+}
+
+.image-upload-box i {
+    font-size: 60px;
+    color: #5fa91e;
+    margin-bottom: 0px;
+}
+
+.image-upload-box p {
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.language-button-container {
+  width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1270px;
+    margin-top: 40px;
+}
+
+.language-button i {
+  margin-right: 8px;
+}
+
+.language-button {
+  width: 120px;
+    height: 35px;
+    border: 1px solid #f5f5f5;
+    background-color: #f5f5f5;
+    border-radius: 43px;
+    outline: none;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;;
+    color: #333;
+    display: flex;
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    padding: 22px;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+    cursor: pointer;
+}
+
+.language-button:hover {
+    background-color: #e3e3e3; /* Darker color when hovered */
+}
+
+.next-button-container {
+width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1270px;
+    margin-top: 60px;
+}
+
+.upload-button {
+    width: 120px;
+    height: 35px;
+    border: 1px solid #5EA91E;
+    background-color: #5EA91E;
+    border-radius: 43px;
+    outline: none;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    padding: 22px;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+    cursor: pointer;
+}
+
+.upload-button:hover {
+    background-color: #4e921a; /* Darker color when hovered */
+}
+
+.next-button {
+  width: 120px;
+    height: 35px;
+    border: 1px solid #5EA91E;
+    background-color: #5EA91E;
+    border-radius: 43px;
+    outline: none;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    padding: 22px;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+    cursor: pointer;
+}
+
+.next-button:hover {
+  background-color: #4e921a; /* Darker color when hovered */
+}
+
+.small-image-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.upper, .lower {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.small-image-box {
+    width: 250px;
+    height: 150px;
+    border: 2px dashed #5fa91e8d;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+}
+
+.small-upload-button {
+    width: 85px; /* Smaller button size */
+    height: 35px; /* Smaller button size */
+    padding: 0; /* Adjust padding as needed */
+    font-size: 13px;
+}
+
+.upload-text {
+    font-weight: 700;
+    margin-bottom: 5px; /* Add some spacing between text and button */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.small-image-box i {
+    font-size: 24px;
+    color: #5fa91e;
+    margin-bottom: 0px;
+}
+
+.listing-description-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1270px;
+    margin-top: 30px;
+}
+
+.description-input {
+    width: 100%;
+    max-width: 470px;
+    padding: 10px 20px;
+    height: 100px; /* Bigger height for description */
+    border: 2px solid #f5f5f5;
+    border-radius: 5px;
+    background-color: #f5f5f5; /* Slightly grey background */
+    font-size: 14px;
+    color: #333;
+    font-family: "Inter", sans-serif;
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+.description-input::placeholder {
+    color: #999;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+}
+
+.description-input:focus {
+    border-color: #5EA91E; /* Change border color when focused */
+    outline: none; /* Remove default outline */
+}
+
+.vitamin-grid {
+  display: flex;
+  flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 508px;
+}
+
+.vitamin-input-container {
+  width: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1270px;
+    margin-top: 30px;
+}
+
+.vitamin-input-container input {
+  width: 82%;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.vitamin-input-container::placeholder {
+  color: #999;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+}
+
+.vitamin-input-container:focus {
+  border-color: #5EA91E; /* Change border color when focused */
+  outline: none; /* Remove default outline */
+}
+
+.features-title {
+    width: 100%;
+    max-width: 510px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between; /* Align text to the left */
+    margin-top: 20px;
+}
+
+.features-title h3 {
+    font-size: 18px;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    color: #333;
+}
+
+.tips {
+font-size: 10px;
+font-family: "Inter", sans-serif;
+justify-content: flex-end;
+align-items: center;
+
+}
+
+.nav-hr-bottom {
+  width: 100% !important;
+  height: 0.3px !important;
+  background-color: #e1e1e1 !important;
+  border: none !important;
+  margin-top: 40px !important;
+  z-index: 999 !important;
+}
+
+.content {
+  text-align: center; /* Center text horizontally */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  font-size: 20px;
+  color: black;
+  font-weight: bolder;
+  font-family: Arial;
+}
+
+.image-item {
+  text-align: center;
+  margin: 0 50px;
+}
+.image-item {
+    text-align: center;
+    margin: 0 15px;
+    padding: 25px;
+    width: 100%;
+    max-width: 242px;
+    border-radius: 30px;
+    height: 100%;
+    min-height: 432px;
+}
+.image-item h3 {
+    font-size: 16px;
+    color: black;
+    text-align: center;
+    font-weight: 700;
+    line-height: 25px;
+}
+.image-item img {
+  margin-bottom: 30px; /* Adjust margin between image and text box */
+  width: 155px; /* Set width to 165 pixels */
+  height: 130px; /* Set height to 185 pixels */
+  margin-top: 20px;
+}
+.image-item:nth-child(4) img {
+  height: 130px; /* Adjust the height for the fourth image */
+  width: 145px;
+}
+.text-box {
+  width: 225px; /* Adjust width of the text box 195px */
+}
+
+.text-box p {
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  text-align: center;
+  line-height: 1.6; /* Adjust this value for desired line spacing */
+}
+.image-item h3 {
+  font-size: 18px;
+  color: black;
+  text-align: center;
+  font-weight: 800;
+  font-family: "Inter", sans-serif;
+}
+.introduction {
+  height: 100vh; /* Make the image responsive */
+            width: 100vw; /* Make the image responsive */
+            object-fit: cover; /* Ensure the image covers the entire header */
+            filter: brightness(0.);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+}
+
+    .feed-section {
+  /* Styles for the feed section container */
+  padding: 20px;
+  background-color: #F9FFE2;
+  margin-top: 100px;
+  min-height: 100vh; /* Ensure the section takes up at least 100% of the viewport height */
+      display: flex;
+      flex-direction: column; /* Align content vertically */
+      justify-content: flex-start; /* !!!<--Use this always in the beginning of the sections-->!!! */
+        align-items: center;
+}
+
+.feed-section-title h2 {
+  /* Styles for the feed section title */
+  font-size: 45px;
+  font-weight: bolder;
+  font-family: "Mochiy Pop One", sans-serif;
+  color: black;
+  margin-top: 40px;  /* Adjust if needed */
+  text-align: center; /* Center text horizontally */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+ /* margin-top: 20vh;  Adjust as needed to position content below header */
+  /* Add padding as well */
+}
+
+.feed-section-content {
+  /* Styles for the feed section content */
+  display: flex;
+  align-items: center;
+  width: 80%;
+  max-width: 1200px;
+  margin-bottom: 0px;
+  margin-top: 60px;
+  /* flex-wrap: wrap;  Use them again */
+  /* justify-content: center;  Use them again */
+  /* flex-grow: 1; Use them again */
+}
+
+.feed-image {
+  flex: 1; /* Take up half of the available space */
+  display: flex;
+  justify-content: center; /* Center image horizontally */
+  align-items: center; /* Center image vertically */
+}
+
+.feed-image img {
+  max-width: 100%; /* Ensure image fits within its container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+.feed-details {
+  flex: 1; /* Take up half of the available space */
+  padding: 40px; /* Add some padding around the details (20px default)*/
+}
+
+.feed-title {
+  font-size: 30px;
+  font-weight: bolder;
+  text-align: center;
+  font-family: "Mochiy Pop One", sans-serif;
+  color: black;
+  margin-bottom: 30px; /* Space between title and description */
+  margin-top: 30px;
+}
+
+.feed-description {
+  font-size: 16px;
+  line-height: 1.6; /* Adjust this value for desired line spacing */
+  font-family: "Inter", sans-serif;
+  text-align: center;
+}
+
+.call-action {
+  font-size: 20px;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  /* font-weight: bold; (Optional)*/
+  color: #4d5149e0;
+  display: flex;
+  align-items: center; /* Center vertically */
+  text-align: center;
+  justify-content: center;
+}
+
+.feed-price img {
+  height: 6.5%;
+  width: 6.5%;
+  margin-right: 10px; /* Space between icon and text, adjust as needed */
+}
+
+.stars img {
+  height: 5%;
+  width: 5%;
+  margin-bottom: 10px;
+}
+
+.feed-details button {
+  width: 238px;
+      height: 35px;
+      border: 1px solid #5EA91E;
+      background-color: #5EA91E;
+      border-radius: 43px;
+      outline: none;
+      font-size: 16px;
+      font-weight: 500;
+      font-family: "Inter", sans-serif;;
+      color: whitesmoke;
+      display: flex;
+      justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    padding: 22px;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+    cursor: pointer;
+}
+
+.feed-details button[type=submit]:hover {
+   background-color: #4e921a; /* Darker color when hovered */
+    }
+
+.support-icon {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.sell-us-section-title h2 {
+    /* Styles for the feed section title */
+    font-size: 32px;
+  font-weight: bolder;
+  color: black;
+  text-align: center; /* Center text horizontally */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  margin-bottom: -15px;
+  font-weight: 550;
+  font-family: "Mochiy Pop One", sans-serif;
+ /* margin-top: 20vh;  Adjust as needed to position content below header */
+  /* Add padding as well */
+}
+
+.sell-us-section-title {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1270px;
+    margin-bottom: 60px;
+}
+
+.sell-us-section {
+    /*  padding: 20px;  Add some padding around the section remove by logic */
+      min-height: 100vh; /* Ensure the section takes up at least 100% of the viewport height */
+      display: flex;
+      flex-direction: column; /* Align content vertically */
+      align-items: center; /* Center content horizontally */
+      justify-content: flex-start; /* Start content at the top */
+      margin-bottom: 0px;
+    }
+
+    .sell-us-content {
+      display: flex;
+      align-items: center; /* Center content vertically within each column */
+      justify-content: space-between; /* Space between image and details */
+      width: 100%; /* Adjust as needed for desired width */
+      max-width: 1270px; /* Adjust as needed for desired max width */
+      /* align-items: flex-start; /*Test*/
+    }
+
+    .sell-us-details {
+      flex: 1; /* Take up half of the available space */
+      padding: 10px; /* Add some padding around the details */
+      display: flex; /*Test*/
+      flex-direction: column; /*Test*/
+      flex-grow: 1; /*Test*/
+    }
+
+    .sell-us-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 35px; /* Adjust as needed for spacing */
+  align-items: center; /* This centers the items vertically */
+}
+
+.sell-us-item img {
+  margin-right: 30px; /* Adjust as needed for spacing */
+  width: 200px; /* Adjust as needed for size */
+  height: auto;
+  /* margin-top: 50px; (Adjusts the image vertically)*/
+}
+
+.sell-us-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.step {
+    font-size: 12px;
+    margin-top: -8px;
+    margin-bottom: -8px;
+    font-family: "Mochiy Pop One", sans-serif;
+    font-weight: 550;
+    color: #C74343;
+}
+
+    .sell-us-title, .second-sell-us-title {
+      font-size: 20px;
+      font-weight: 599;
+      font-family: Arial;
+      color: black;
+      margin-bottom: 0px; /* Space between title and description */
+      margin-top: 20px;
+      font-family: "Mochiy Pop One", sans-serif;
+      /* margin: 0; /*New*/
+    }
+
+    .sell-us-description, .second-sell-us-title-description {
+      font-size: 14px;
+      margin-bottom: -10px; /* Space between description and next element */
+      line-height: 1.6; /* Adjust this value for desired line spacing */
+      font-family: "Inter", sans-serif;
+      /* margin: 0; /*New*/
+    }
+
+    .sell-us-image {
+      flex: 1; /* Take up half of the available space */
+      display: flex;
+      justify-content: center; /* Center image horizontally */
+      align-items: center; /* Center image vertically */
+    }
+
+    .sell-us-image img {
+      max-width: 100%; /* Ensure image fits within its container */
+      height: auto; /* Maintain aspect ratio */
+      border-radius: 20px; /* Smooth edges */
+      margin-top: 20px;
+      max-width: 100%; /*New*/
+      height: auto; /*New*/
+    }
+
+    .get-started {
+      display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1270px;
+    margin-top: 10px;
+    }
+
+    .get-started button {
+      width: 276px;
+      height: 47px;
+      border: 1px solid #5EA91E;
+      background-color: #5EA91E;
+      border-radius: 43px;
+      outline: none;
+      font-size: 16px;
+      font-weight: 500;
+      font-family: "Inter", sans-serif;;
+      color: whitesmoke;
+      display: flex;
+      justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    padding: 23px;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+    cursor: pointer;
+    }
+
+    .get-started button[type=submit]:hover {
+    background-color: #4e921a; /* Darker color when hovered */
+    }
+
+.contact-us-button {
+  width: 542.4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.green-guiding-text {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    color: rgb(0, 184, 0);
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 508px;
+}
+
+    footer {
+        background-color: #43662e; /* Dark green background color */
+        color: #ffffff;
+        text-align: center;
+        padding: 50px 0; /* Adjust padding to fit within 600px height */
+        height: 580px; /* Set height to 600px */
+        position: relative;
+    }
+
+    footer .footer-content {
+    padding: 0 50px; /* Add horizontal padding to match the sell-us-section */
+}
+
+    .footer-logo {
+        display: block;
+        margin: 0 auto;
+        height: auto;
+        width: 350px; /* Adjust width as necessary */
+        margin-bottom: 20px;
+    }
+
+    .footer-columns {
+        display: flex;
+        justify-content: space-around;
+        /* align-items: flex-start; /* Align items to the start to fit better within the height */
+        /* align-items: center; /*Change that perhaps?*/
+        margin-top: 5%;
+        height: calc(100% - 100px); /* Ensure columns take up the full height of the footer, accounting for padding */
+}
+
+    .footer-box {
+        max-width: 250px;
+        text-align: left;
+        font-size: 16px; /* Adjust font size to fit within the height */
+        display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    height: 100%; /* Ensure footer-box takes up the full height of the parent */
+    line-height: 1.8; /* Adjust this value for desired line spacing */
+    }
+
+    .footer-box h4 {
+        color: #ffffff;
+        margin-bottom: 15px;
+        font-size: 20px;
+    }
+
+    .footer-box p {
+        color: #d2d2d2;
+        margin: 5px 0;
+        line-height: 1.8; /* Adjust this value for desired line spacing */
+    }
+
+    .footer-nav,
+    .footer-bottom-nav {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-nav li,
+    .footer-bottom-nav li {
+        margin-bottom: 10px; /* Reduce margin to fit better */
+    }
+
+    .footer-nav a,
+    .footer-bottom-nav a {
+        color: #e1e1e1;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .footer-nav a:hover,
+    .footer-bottom-nav a:hover {
+        color: #ffffff;
+    }
+
+    .footer-box input[type=email] {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1.2px solid #e1e1e1;
+        color: #ffffff;
+        padding: 10px 0; /* Remove left padding to align placeholder */
+        width: 235px;
+        margin-top: 15px;
+        outline: none;
+        text-align: left; /* Align text to the left */
+        position: relative;
+}
+
+.email-container {
+    position: relative;
+    display: inline-block;
+}
+
+.email-container::before {
+  content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABdUlEQVR4nO3cPUoDYRRG4UEQV2NjZ6GSqAj+bEBsrWzcnI2L0NbeRgQridHGI8JIJEyKQMi9H/c8CxheOEwymRnSdZIkSZIkSZIkSZIkSZIkSVoxYBu4B+6AnVUfX0sCHph5B/aWPYZWCHj+F8Qo0YDruSB/Ufajt5UF3ALfc1EmwCh6W1ksjjKO3lYWRskHo+SDUZqKchi9rSyMkg9GaSrKUfS2shiO8mGUQEZJCM+UfBZE+QTOoreVhVHyMUpbUc6jt5WFUZqJ8gVcdBkAV8DrwOPRaqbASXSMzf5XrGa3WQ4ig2z1I5QhSB/lEnjpB1U2Df/IKvylPs/L3wjGaCOG97XWzRj5Y/xe6h9HbyuHxTF8pLtuxkgEz4z0MSZ+TOWK4VuM62aMNmKMo7eVgzHywBh5YIw8MEYTMUbR28rBGHkANwNnhn8cEPh2zGQghv93EhRkA3gzRiLAKfAEPAK70XskSZIkSZIkSZIkSZIkSZK6cD+4pa0FeKE3zwAAAABJRU5ErkJggg==');
+    position: absolute;
+    right: -15px; /* Adjust the position as needed */
+    bottom: 25px; /* Adjust the position as needed */
+    height: 15px; /* Adjust size as needed */
+    pointer-events: none; /* Ensure the icon does not interfere with input interactions */
+    color: white;
+    size: 1px;
+    transform: scale(0.3); /* Scale the image to 50% of its original size */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 25px; /* Space between the input field and social media icons */
+    gap: 10px;
+}
+
+.social-icon {
+    width: 30px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
+}
+
+.footer-box img {
+height: 35px;
+width: 35px;
+color: white;
+}
+
+    .footer-box input[type=email]::placeholder {
+        color: #b9b9b98b;
+        font-size: 16px;
+    }
+
+    hr {
+        border: 0;
+        height: 1.2px;
+        background-color: #e1e1e1;
+        margin: 80px 0;
+        margin: 120px auto 10px auto; /* Increase the top margin to move the hr line down */
+        width: 90%; /* Set the width to 1320px */
+    }
+
+    .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 12px; /* Adjust font size to fit within the height */
+        width: 90%;
+        margin: 0 auto; /* Center align the footer-bottom container */
+        color: #e1e1e1;
+        padding: 0 60px; /* Add padding to the sides */
+        padding-top: 10px; /* Add some padding at the top */
+    }
+
+    .footer-bottom p {
+        margin: 0px;
+        color: #e1e1e1;
+    }
+
+    .footer-bottom-nav {
+        display: flex;
+        gap: 20px; /* Adjust gap to fit within the height */ /*Use this on navbar as well.*/
+        color: #e1e1e1;
+    }
+
+
+  /***logicdigger css  for mobile***/
+
+
+@media only screen and (max-width: 768px) {
+    
+      footer {
+    height: unset !important;
+}
+.footer-columns {
+    display: unset !important;
+ 
+} 
+.feed-details {
+    padding: 10px !important;
+}
+.feed-section-content {
+    display: block !important;
+    width: 85%;
+}
+.rectangle {
+    margin: auto;
+    margin-bottom: 20px;
+}
+.rectangle-container {
+    display: block !important;
+}
+.listing-title .title , .feed-section-title h2, .sell-us-section-title h2{
+    text-align: center !important;
+    font-size: 25px;
+}
+.sell-us-title, .second-sell-us-title{
+  font-size: 20px;
+}
+.footer-logo {
+    width: 250px;
+    margin-bottom: 20px;
+}
+.feed-title{
+  font-size: 25px;
+}
+
+.heor-content {
+    padding: 30px;
+}
+
+
+.navbar-nav a {
+    text-decoration: none;
+    color: #000;
+    padding: 10px 20px;
+    text-align: center;
+    margin: auto;
+    font-weight: 500;
+}
+
+
+.sell-us-content {
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1200px;
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.sell-us-item {
+    display: block !important;
+}
+.footer-bottom {
+    display: block !important;
+     width: unset !important;
+}
+hr {
+    width: 100%;
+}
+.footer-bottom-nav {
+    display: block !important;
+    margin-top: 10px;
+}
+.main-title {
+    font-size: 25px;
+}
+
+.h4-title {
+    font-size: 18px;
+    padding-top: 15px;
+}
+
+.submit-container {
+    margin: unset;
+    padding: 0;
+}
+
+.search-container input[type=text] {
+    margin-bottom: 10px;
+}
+
+.hero-iner {
+    background-position: center !important;
+}
+
+}
+
+    div#navbarNavAltMarkup {
+    margin-left: 30px;
+}   
+
+  /***logicdigger css  for mobile end ***/
+</style>
+</head>
+<body>
+
+    <!-- Header -->
+  <header>
+
+    <section class="logo-section">
+        <div class="logo">
+        <img src="farmifylogo.png" alt="logo">
+        </div>
+        <hr class="nav-hr">
+
+</header>
+
+      <main>
+
+<!-- Pagination Section -->
+<section class="pagination-section">
+    <div class="pagination-dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+    </div>
+  </section>
+
+  <section class="message-box">
+    <div class="message-content">
+        <div class="message-title">
+            <i class="bi bi-check-circle-fill"></i>
+            <h3>Your listing has been created</h3>
+        </div>
+        <p>Please fill in the information below to complete your profile and attract more potential buyers.</p>
+    </div>
+
+    
+
+
+  <!-- Old version of dropbox
+   <div class="listing-dropbox-container">
+    <p class="guiding-text">What are you selling?</p>
+    <select class="listing-dropbox">
+        <option value="placeholder" disabled selected></option>
+        <option style="font-size: 16px;" value="livestock">Livestock</option>
+        <option value="cattle">Cattle</option>
+        <option value="pigs">Pigs</option>
+        <option value="piglets">Piglets</option>
+        <option value="poultry">Poultry</option>
+        <option value="goats">Goats</option>
+        <option value="caraboas">Caraboas</option>
+        <option value="caraboas">Sheep</option>
+        <option value="horses">Horses</option>
+        <option value="caraboas">Sheep</option>
+        <option value="caraboas">Other</option>
+        <option style="font-size: 16px;" value="vehicles">Vehicles</option>
+        <option value="cars">Cars</option>
+        <option value="caraboas">Motorcycles and Scooters</option>
+        <option value="trucks">Trucks</option>
+        <option value="other">Other</option>
+        <option style="font-size: 16px;" value="services / jobs">Services / Jobs</option>
+        <option value="mechanic">Mechanic</option>
+        <option value="plumber">Plumber</option>
+        <option value="farm hand">Farm Hand</option>
+        <option value="electrician">Electrician</option>
+        <option value="builder">Builder</option>
+        <option value="veterinarian">Veterinarian</option>
+        <option style="font-size: 16px;" value="real estate">Real Estate</option>
+        <option value="Other">Land plots</option>
+        <option value="Other">Raches</option>
+        <option value="Other">Vineyards</option>
+        <option value="Other">Farmland</option>
+        <option value="Other">Other</option>
+        <option style="font-size: 16px;" value="heavy equipment">Heavy Equipment</option>
+        <option value="Other">Tractors</option>
+        <option value="Other">Plows</option>
+        <option value="Other">Seeders/Planters</option>
+        <option value="Other">Other</option>
+        <option style="font-size: 16px;" value="aquaculture">Aquaculture</option>
+        <option value="Other">Nets (Pukot/Net)</option>
+        <option value="Other">Lines (Lambat)</option>
+        <option value="Other">Aggregating Devices (Payao)</option>
+        <option value="Other">Traps (Bubo/Trap)</option>
+        <option value="Other">Spears and Harpoons (Pana/Hasa)</option>
+        <option value="Other">Boats (Bangka/Banca)</option>
+        <option value="Other">Other</option>
+        <option style="font-size: 16px;" value="tools">Tools</option>
+        <option value="Other">Hand Tools</option>
+        <option value="Other">Power Tools</option>
+        <option value="Other">Other</option>
+        <option style="font-size: 16px;" value="home & garden">Home & Garden</option>
+        <option value="Other">Plants</option>
+        <option value="Other">Furniture</option>
+        <option value="Other">Gardening Tools</option>
+        <option value="Other">Cleaning Supplies</option>
+        <option value="Other">Other</option>
+        <option style="font-size: 16px;" value="animal feed">Animal Feed</option>
+        <option value="Other">Hay and Silage</option>
+        <option value="Other">Pellets</option>
+        <option value="Other">Grains</option>
+        <option value="Other">Pig Feed</option>
+        <option value="Other">Chicken Feed</option>
+        <option value="Other">Cattle Feed</option>
+        <option value="Other">Poultry Feed</option>
+        <option value="Other">Horse Feed</option>
+        <option value="Other">Aquafeeds</option>
+        <option value="Other">Other</option>
+        <option style="font-size: 16px;" value="fertilizers">Fertilizers</option>
+        <option value="Other">Organic Fertilisers</option>
+        <option value="Other">Chemical Fertilisers</option>
+        <option style="font-size: 16px;" value="fruits, vegetables & growables">Fruits, Vegetables & Growables</option>
+        <option value="Other">Mango</option>
+        <option value="Other">Banana</option>
+        <option value="Other">Pineapple</option>
+        <option value="Other">Papaya</option>
+        <option value="Other">Coconut</option>
+        <option value="Other">Eggplant </option>
+        <option value="Other">Tomato</option>
+        <option value="Other">Squash</option>
+        <option value="Other">Bitter Melon</option>
+        <option value="Other">String Beans</option>
+        <option value="Other">Other</option>
+        <option style="font-size: 16px;" value="building materials">Building Materials</option>
+        <option value="Other">Steel</option>
+        <option value="Other">Wood</option>
+        <option value="Other">Bamboo</option>
+        <option value="Other">Glass</option>
+        <option value="Other">Roofing Materials</option>
+        <option value="Other">Sand & Gravel</option>
+        <option value="Other">Bricks</option>
+        <option value="Other">Cement</option>
+        <option value="Other">Other</option>
+        <option style="font-size: 16px;" value="seeds">Seeds</option>
+        <option value="Other">Rice Seeds</option>
+        <option value="Other">Corn Seeds</option>
+        <option value="Other">Mung Bean Seeds (Munggo)</option>
+        <option value="Other">Coconut Seeds (Niyog)</option>
+        <option value="Other">Peanut Seeds</option>
+        <option value="Other">Okra Seeds</option>
+        <option value="Other">Ampalaya (Bitter Melon) Seeds</option>
+        <option value="Other">Tomato Seeds (Kamatis)</option>
+        <option value="Other">Other</option>
+        <option style="font-size: 16px;" value="category-other">Other</option>
+    </select>
+</div> 
+Old version of dropbox ends here -->
+
+<!-- Sales status: Initially, this dropdown should be hidden when the user creates a listing. However, if they access the "Edit Listing" button from the My Profile page, it will redirect them to the Fill in Form, where the dropdown will be visible here.-->
+<div class="listing-dropbox-container">
+  <p class="guiding-text">Edit your listing's sales status</p>
+  <div class="custom-dropdown" tabindex="0" onclick="toggleDropdown('sales-status')">
+    <div class="dropdown-selected">
+      <span id="dropdown-text-sales-status">Please select an option</span>
+    </div>
+    <div class="dropdown-options" id="dropdown-options-sales-status" style="display: none;">
+      <div class="dropdown-option" onclick="selectOption('sales-status', 'active', 'Active', '')">
+        Active
+      </div>
+      <div class="dropdown-option" onclick="selectOption('sales-status', 'active', 'Inactive', '')">
+        Inactive
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- What Are You Selling Dropdown -->
+<div class="listing-dropbox-container">
+  <p class="guiding-text">What are you selling?</p>
+  <div class="custom-dropdown" tabindex="0" onclick="toggleDropdown('selling')">
+    <div class="dropdown-selected">
+      <img id="dropdown-icon-selling" src="" alt="" style="width: 20px; height: 20px; display: none;">
+      <span id="dropdown-text-selling">Please select an option</span>
+    </div>
+    <div class="dropdown-options" id="dropdown-options-selling" style="display: none;">
+      <div class="dropdown-option" onclick="selectOption('livestock', 'Livestock', 'https://img.icons8.com/ios/50/cattle-sign.png')">
+        <img src="https://img.icons8.com/ios/50/cattle-sign.png" alt="cattle-sign" style="width: 20px; height: 20px;">
+        <span class="bold-category">Livestock</span>
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling', 'cattle', 'Cattle', '')">
+        Cattle
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling', 'pigs', 'Pigs', '')">
+        Pigs
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling', 'piglets', 'Piglets', '')">
+        Piglets
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling', 'poultry', 'Poultry', '')">
+        Poultry
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling', 'goats', 'Goats', '')">
+        Goats
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling', 'caraboas', 'Carabaos', '')">
+        Carabaos
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling', 'sheep', 'Sheep', '')">
+        Sheep
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling', 'horses', 'Horses', '')">
+        Horses
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling', 'other-livestock', 'Other', '')">
+        Other
+      </div>
+
+      <!-- Vehicles -->
+      <div class="dropdown-option" onclick="selectOption('vehicles', 'Vehicles', 'https://img.icons8.com/ios/50/tractor.png')">
+        <img src="https://img.icons8.com/ios/50/tractor.png" style="width: 20px; height: 20px;" alt=""><span class="bold-category">Vehicles</span>
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling', 'cars', 'Cars', '')">
+        Cars
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','motorcycles', 'Motorcycles and Scooters', '')">
+        Motorcycles and Scooters
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','trucks', 'Trucks', '')">
+        Trucks
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','other-vehicles', 'Other', '')">
+        Other
+      </div>
+
+      <!-- Services / Jobs -->
+      <div class="dropdown-option" onclick="selectOption('services-jobs', 'Services / Jobs', 'https://img.icons8.com/ios/50/work.png')">
+        <img src="https://img.icons8.com/ios/50/work.png" style="width: 20px; height: 20px;" alt=""><span class="bold-category">Services / Jobs</span>
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','mechanic', 'Mechanic', '')">
+        Mechanic
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','plumber', 'Plumber', '')">
+        Plumber
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','farm-hand', 'Farm Hand', '')">
+        Farm Hand
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','electrician', 'Electrician', '')">
+        Electrician
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','builder', 'Builder', '')">
+        Builder
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','veterinarian', 'Veterinarian', '')">
+        Veterinarian
+      </div>
+
+      <!-- Real Estate -->
+      <div class="dropdown-option" onclick="selectOption('real-estate', 'Real Estate', 'https://img.icons8.com/ios/20/real-estate.png')">
+        <img src="https://img.icons8.com/ios/20/real-estate.png" alt=""><span class="bold-category">Real Estate</span>
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','land-plots', 'Land Plots', '')">
+        Land Plots
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','ranches', 'Ranches', '')">
+        Ranches
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','vineyards', 'Vineyards', '')">
+        Vineyards
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','farmland', 'Farmland', '')">
+        Farmland
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','other-real-estate', 'Other', '')">
+        Other
+      </div>
+
+      <!-- Heavy Equipment -->
+      <div class="dropdown-option" onclick="selectOption('heavy-equipment', 'Heavy Equipment', 'https://img.icons8.com/ios/20/digger.png')">
+        <img src="https://img.icons8.com/ios/20/digger.png" alt=""><span class="bold-category">Heavy Equipment</span>
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','tractors', 'Tractors', '')">
+        Tractors
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','plows', 'Plows', '')">
+        Plows
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','seeders', 'Seeders/Planters', '')">
+        Seeders/Planters
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','other-heavy-equipment', 'Other', '')">
+        Other
+      </div>
+
+      <!-- Aquaculture -->
+      <div class="dropdown-option" onclick="selectOption('aquaculture', 'Aquaculture', 'https://img.icons8.com/ios/20/fish-food.png')">
+        <img src="https://img.icons8.com/ios/20/fish-food.png" alt=""><span class="bold-category">Aquaculture</span>
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','nets', 'Nets (Pukot/Net)', '')">
+        Nets (Pukot/Net)
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','lines', 'Lines (Lambat)', '')">
+        Lines (Lambat)
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','aggregating-devices', 'Aggregating Devices (Payao)', '')">
+        Aggregating Devices (Payao)
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','traps', 'Traps (Bubo/Trap)', '')">
+        Traps (Bubo/Trap)
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','spears', 'Spears and Harpoons (Pana/Hasa)', '')">
+        Spears and Harpoons (Pana/Hasa)
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','boats', 'Boats (Bangka/Banca)', '')">
+        Boats (Bangka/Banca)
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','other-aquaculture', 'Other', '')">
+        Other
+      </div>
+
+      <!-- Tools -->
+      <div class="dropdown-option" onclick="selectOption('tools', 'Tools', 'https://img.icons8.com/dotty/20/maintenance.png')">
+        <img src="https://img.icons8.com/dotty/20/maintenance.png" alt=""><span class="bold-category">Tools</span>
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','hand-tools', 'Hand Tools', '')">
+        Hand Tools
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','power-tools', 'Power Tools', '')">
+        Power Tools
+      </div>
+
+      <!-- Home & Garden -->
+      <div class="dropdown-option" onclick="selectOption('home-garden', 'Home & Garden', 'https://img.icons8.com/ios/20/house-with-a-garden.png')">
+        <img src="https://img.icons8.com/ios/20/house-with-a-garden.png" alt=""><span class="bold-category">Home & Garden</span>
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','plants', 'Plants', '')">
+        Plants
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','furniture', 'Furniture', '')">
+        Furniture
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','gardening-tools', 'Gardening Tools', '')">
+        Gardening Tools
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','cleaning-supplies', 'Cleaning Supplies', '')">
+        Cleaning Supplies
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','other-home-garden', 'Other', '')">
+        Other
+      </div>
+
+      <!-- Animal Feed -->
+      <div class="dropdown-option" onclick="selectOption('animal-feed', 'Animal Feed', 'https://img.icons8.com/ios/20/pig-food.png')">
+        <img src="https://img.icons8.com/ios/20/pig-food.png" alt=""><span class="bold-category">Animal Feed</span>
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','hay-silage', 'Hay and Silage', '')">
+        Hay and Silage
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','pellets', 'Pellets', '')">
+        Pellets
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','grains', 'Grains', '')">
+        Grains
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','pig-feed', 'Pig Feed', '')">
+        Pig Feed
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','chicken-feed', 'Chicken Feed', '')">
+        Chicken Feed
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','cattle-feed', 'Cattle Feed', '')">
+        Cattle Feed
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','poultry-feed', 'Poultry Feed', '')">
+        Poultry Feed
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','horse-feed', 'Horse Feed', '')">
+        Horse Feed
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','aquafeeds', 'Aquafeeds', '')">
+        Aquafeeds
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','other-animal-feed', 'Other', '')">
+        Other
+      </div>
+
+      <!-- Fertilizers -->
+      <div class="dropdown-option" onclick="selectOption('fertilizers', 'Fertilizers', 'https://img.icons8.com/external-wanicon-lineal-wanicon/20/external-fertilizer-farming-and-agriculture-wanicon-lineal-wanicon.png')">
+        <img src="https://img.icons8.com/external-wanicon-lineal-wanicon/20/external-fertilizer-farming-and-agriculture-wanicon-lineal-wanicon.png" alt=""><span class="bold-category">Fertilizers</span>
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','organic-fertilizers', 'Organic Fertilisers', '')">
+        Organic Fertilisers
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','chemical-fertilizers', 'Chemical Fertilisers', '')">
+        Chemical Fertilisers
+      </div>
+
+      <!-- Fruits, Vegetables & Growables -->
+      <div class="dropdown-option" onclick="selectOption('fruits-vegetables-growables', 'Fruits, Vegetables & Growables', 'https://img.icons8.com/external-vitaliy-gorbachev-lineal-vitaly-gorbachev/20/external-vegetables-health-vitaliy-gorbachev-lineal-vitaly-gorbachev.png')">
+        <img src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-vitaly-gorbachev/20/external-vegetables-health-vitaliy-gorbachev-lineal-vitaly-gorbachev.png" alt=""><span class="bold-category">Fruits, Vegetables & Growables</span>
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','mango', 'Mango', '')">
+        Mango
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','banana', 'Banana', '')">
+        Banana
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','pineapple', 'Pineapple', '')">
+        Pineapple
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','papaya', 'Papaya', '')">
+        Papaya
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','coconut', 'Coconut', '')">
+        Coconut
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','eggplant', 'Eggplant', '')">
+        Eggplant
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','tomato', 'Tomato', '')">
+        Tomato
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','squash', 'Squash', '')">
+        Squash
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','bitter-melon', 'Bitter Melon', '')">
+        Bitter Melon
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','string-beans', 'String Beans', '')">
+        String Beans
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','other-fruits-vegetables', 'Other', '')">
+        Other
+      </div>
+
+      <!-- Building Materials -->
+      <div class="dropdown-option" onclick="selectOption('building-materials', 'Building Materials', 'https://img.icons8.com/wired/20/construction-materials.png')">
+        <img src="https://img.icons8.com/wired/20/construction-materials.png" alt=""><span class="bold-category">Building Materials</span>
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','steel', 'Steel', '')">
+        Steel
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','wood', 'Wood', '')">
+        Wood
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','bamboo', 'Bamboo', '')">
+        Bamboo
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','glass', 'Glass', '')">
+        Glass
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','roofing-materials', 'Roofing Materials', '')">
+        Roofing Materials
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','sand-gravel', 'Sand & Gravel', '')">
+        Sand & Gravel
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','bricks', 'Bricks', '')">
+        Bricks
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','cement', 'Cement', '')">
+        Cement
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','other-building-materials', 'Other', '')">
+        Other
+      </div>
+
+      <!-- Seeds -->
+      <div class="dropdown-option" onclick="selectOption('seeds', 'Seeds', 'https://img.icons8.com/ios/20/paper-bag-with-seeds.png')">
+        <img src="https://img.icons8.com/ios/20/paper-bag-with-seeds.png" alt=""><span class="bold-category">Seeds</span>
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','rice-seeds', 'Rice Seeds', '')">
+        Rice Seeds
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','corn-seeds', 'Corn Seeds', '')">
+        Corn Seeds
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','mung-bean-seeds', 'Mung Bean Seeds (Munggo)', '')">
+        Mung Bean Seeds (Munggo)
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','coconut-seeds', 'Coconut Seeds (Niyog)', '')">
+        Coconut Seeds (Niyog)
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','peanut-seeds', 'Peanut Seeds', '')">
+        Peanut Seeds
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','okra-seeds', 'Okra Seeds', '')">
+        Okra Seeds
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','bitter-melon-seeds', 'Ampalaya (Bitter Melon) Seeds', '')">
+        Ampalaya (Bitter Melon) Seeds
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','tomato-seeds', 'Tomato Seeds (Kamatis)', '')">
+        Tomato Seeds (Kamatis)
+      </div>
+      <div class="dropdown-option" onclick="selectOption('selling','other-seeds', 'Other', '')">
+        Other
+      </div>
+
+      <div class="dropdown-option" onclick="selectOption('other-tools', 'Other', 'https://img.icons8.com/ios/20/connection-status-off.png')">
+        <img src="https://img.icons8.com/ios/20/connection-status-off.png" alt=""><span class="bold-category">Other</span>
+      </div>
+
+      <!-- Additional Categories -->
+      <!-- Add similar structure for other categories from your original dropdown -->
+    </div>
+  </div>
+</div>
+
+<!-- Sales status: Initially, this dropdown should be hidden when the user creates a listing. However, if they access the "Edit Listing" button from the My Profile page, it will redirect them to the Fill in Form, where the dropdown will be visible here.-->
+<div class="listing-dropbox-container">
+    <p class="guiding-text">Are you seeking a job or offering one?</p>
+    <div class="custom-dropdown" tabindex="0" onclick="toggleDropdown('sales')">
+      <div class="dropdown-selected">
+        <span id="dropdown-text-sales">Please select an option</span>
+      </div>
+      <div class="dropdown-options" id="dropdown-options-sales" style="display: none;">
+        <div class="dropdown-option" onclick="selectOption('sales', 'jobseeker', 'Jobseeker', '')">
+          Jobseeker
+        </div>
+        <div class="dropdown-option" onclick="selectOption('sales', 'offering', 'Offering', '')">
+          Offering
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="image-container">
+  <p class="guiding-text">Upload your profile picture</p>
+  <div class="image-upload-box">
+      <i class="bi bi-cloud-upload"></i>
+      <p class="upload-text">Browse files</p>
+      <button type="submit" class="upload-button">Upload</button>
+  </div>
+      </div>
+  </div>
+</div>
+
+<div class="listing-input-container">
+  <p class="guiding-text">Please choose title</p>
+  <input type="text" placeholder="Example: Experienced builder seeking employment" class="listing-input">
+</div>
+
+<div class="listing-input-container">
+  <p class="guiding-text">Location</p>
+  <input type="text" placeholder="Enter your location" class="listing-input">
+</div>
+
+<div class="listing-dropbox-container">
+    <p class="guiding-text">What is your profession?</p>
+    <div class="custom-dropdown" tabindex="0" onclick="toggleDropdown('job-seeking')">
+      <div class="dropdown-selected">
+        <span id="dropdown-text-job-seeking">Please select an option</span>
+      </div>
+      <div class="dropdown-options" id="dropdown-options-job-seeking" style="display: none;">
+        <div class="dropdown-option" onclick="selectOption('job-seeking', 'mechanic', 'Mechanic', '')">
+          Mechanic
+        </div>
+        <div class="dropdown-option" onclick="selectOption('job-seeking', 'plumber', 'Plumber', '')">
+          Plumber
+        </div>
+        <div class="dropdown-option" onclick="selectOption('job-seeking', 'farm hand', 'Farm hand', '')">
+            Farm hand
+          </div>
+          <div class="dropdown-option" onclick="selectOption('job-seeking', 'electrician', 'Electrician', '')">
+            Electrician
+          </div>
+          <div class="dropdown-option" onclick="selectOption('job-seeking', 'builder', 'Builder', '')">
+            Builder
+          </div>
+          <div class="dropdown-option" onclick="selectOption('job-seeking', 'veterinarian', 'Veterinarian', '')">
+            Veterinarian
+          </div>
+          <div class="dropdown-option" onclick="selectOption('job-seeking', 'other', 'Other', '')">
+            Other
+          </div>
+      </div>
+    </div>
+  </div>
+
+<div id="weightInput" class="listing-input-container">
+    <p class="guiding-text">What is your preferred hourly rate?</p>
+    <input type="text" placeholder="Example: ₱75 - ₱100 per/h" class="listing-input">
+    <p class="green-guiding-text"></p>
+</div>
+
+<div class="listing-description-container">
+  <p class="guiding-text">Provide a brief description of yourself </p>
+  <textarea placeholder="E.g., experience, education, etc." class="description-input"></textarea>
+</div>
+
+<div class="next-button-container">
+  <a href="http://127.0.0.1:3000/Payment%20Details%20Original.html">
+    <button type="button" class="next-button">Next</button>
+  </a>
+</div>
+
+  <div class="nav-hr-bottom">
+  
+
+<div class="language-button-container">
+  <button type="submit" class="language-button"><i class="bi bi-globe-asia-australia"></i> English</button>
+</div>
+
+</section>    
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Update event listeners for custom dropdowns
+    document.querySelectorAll('.custom-dropdown').forEach(dropdown => {
+        dropdown.addEventListener('click', function(event) {
+            toggleDropdown(this.getAttribute('id').replace('dropdown-options-', ''));
+            event.stopPropagation(); // Prevent click from propagating and accidentally closing the dropdown
+        });
+    });
+
+    // Close dropdowns if clicking outside
+    document.addEventListener('click', function(event) {
+        document.querySelectorAll('.dropdown-options').forEach(dropdownOptions => {
+            if (!dropdownOptions.parentNode.contains(event.target)) {
+                dropdownOptions.style.display = 'none';
+            }
+        });
+    });
+
+    // Update focus styles for dropdowns
+    document.querySelectorAll('.custom-dropdown').forEach(dropdown => {
+        dropdown.addEventListener('focus', function() {
+            this.classList.add('focus');
+        });
+
+        dropdown.addEventListener('blur', function() {
+            this.classList.remove('focus');
+        });
+    });
+});
+
+// Function to toggle dropdown visibility
+function toggleDropdown(dropdownType) {
+    const dropdownOptions = document.getElementById(`dropdown-options-${dropdownType}`);
+    const allDropdowns = document.querySelectorAll('.dropdown-options');
+    
+    // Hide other open dropdowns
+    allDropdowns.forEach(drop => {
+        if (drop !== dropdownOptions) {
+            drop.style.display = 'none';
+        }
+    });
+    
+    // Toggle current dropdown
+    if (dropdownOptions) {
+        dropdownOptions.style.display = (dropdownOptions.style.display === 'block') ? 'none' : 'block';
+    }
+}
+
+// Function to handle dropdown selection
+function selectOption(dropdownType, value, text, iconUrl) {
+    const dropdownTextElement = document.getElementById(`dropdown-text-${dropdownType}`);
+    const dropdownIcon = document.getElementById(`dropdown-icon-${dropdownType}`);
+
+    dropdownTextElement.innerText = text;
+
+    if (iconUrl) {
+        dropdownIcon.src = iconUrl;
+        dropdownIcon.style.display = 'inline';
+    } else {
+        dropdownIcon.style.display = 'none';
+    }
+
+    // Hide the dropdown options after selection
+    const dropdownOptions = document.getElementById(`dropdown-options-${dropdownType}`);
+    dropdownOptions.style.display = 'none';
+
+    // Prevent dropdown from re-opening immediately after selecting an option
+    event.stopPropagation();
+}
+
+// Update weight, price, and quantity calculations if necessary
+document.addEventListener('DOMContentLoaded', function() {
+    // Select input elements
+    const weightInput = document.querySelector('#weightInput input');
+    const perKgInput = document.querySelector('#perKgInput input');
+    const totalPriceInput = document.querySelector('#totalPriceInput input');
+    const quantityInput = document.querySelector('#quantityInput input');
+    const avgHeadDisplay = document.querySelector('#avgHeadDisplay input');
+    const perKgDisplay = document.querySelector('#perKgDisplay input');
+    const avgWeightDisplay = document.querySelector('#avgWeightDisplay input');
+    const totalWeightDisplay = document.querySelector('#totalWeightDisplay input');
+
+    // Function to calculate and update total price
+    function updateTotalPrice() {
+        const weight = parseFloat(weightInput.value) || 0;
+        const pricePerKg = parseFloat(perKgInput.value) || 0;
+        const totalPrice = weight * pricePerKg;
+        totalPriceInput.value = totalPrice > 0 ? totalPrice.toLocaleString() + ' PHP' : '';
+        updateAvgHead();
+        updateAvgWeight();
+    }
+
+    // Function to calculate and update price per kg
+    function updatePricePerKg() {
+        const weight = parseFloat(weightInput.value) || 0;
+        const totalPrice = parseFloat(totalPriceInput.value.replace(/[^0-9.-]+/g, "")) || 0;
+        const pricePerKg = weight > 0 ? totalPrice / weight : 0;
+        perKgInput.value = pricePerKg > 0 ? pricePerKg.toFixed(3) : '';
+        perKgDisplay.value = pricePerKg > 0 ? pricePerKg.toFixed(3) + ' PHP' : ''; // Added "PHP"
+    }
+
+    // Function to calculate and update average price per head
+    function updateAvgHead() {
+        const totalPrice = parseFloat(totalPriceInput.value.replace(/[^0-9.-]+/g, "")) || 0;
+        const quantity = parseFloat(quantityInput.value) || 0;
+        const avgHead = quantity > 0 ? totalPrice / quantity : 0;
+        avgHeadDisplay.value = avgHead > 0 ? avgHead.toLocaleString() + ' PHP' : '';
+    }
+
+    // Function to calculate and update average weight per head
+    function updateAvgWeight() {
+        const weight = parseFloat(weightInput.value) || 0;
+        const quantity = parseFloat(quantityInput.value) || 0;
+        const avgWeight = quantity > 0 ? weight / quantity : 0;
+        avgWeightDisplay.value = avgWeight > 0 ? avgWeight.toFixed(2) + ' kg' : '';
+    }
+
+    // Add event listeners to weightInput and perKgInput
+    weightInput.addEventListener('input', function() {
+        updateTotalPrice();
+        updateAvgWeight();
+        totalWeightDisplay.value = weightInput.value ? weightInput.value + ' kg' : '';
+    });
+
+    perKgInput.addEventListener('input', function() {
+        updateTotalPrice();
+        perKgDisplay.value = perKgInput.value ? perKgInput.value + ' PHP' : ''; // Added "PHP"
+    });
+
+    // Add event listener to totalPriceInput
+    totalPriceInput.addEventListener('input', function() {
+        updatePricePerKg();
+        updateAvgHead();
+    });
+
+    // Add event listener to quantityInput
+    quantityInput.addEventListener('input', function() {
+        updateAvgHead();
+        updateAvgWeight();
+    });
+});
+
+
+
+
+  
+</script>
+</main>
+</body>
