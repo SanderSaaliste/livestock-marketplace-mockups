@@ -1,0 +1,3890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Listing Page</title>
+    
+    <!-- Styles for EmojioneArea and Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/emojionearea/3.4.2/emojionearea.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+    
+    <!-- jQuery and EmojioneArea Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/emojionearea/3.4.2/emojionearea.js"></script>
+<style>
+
+        /* Header styles */
+        header {
+            /* background-image: url(header.png);   logicdigger css remove this
+            height: 100vh; /* Make the image responsive logicdigger css remove this */
+            width: 100%; 
+            object-fit: cover; /* Ensure the image covers the entire header */
+            filter: brightness(0.);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 99;
+        }
+
+        /***logicdigger css***/
+        .listing-title {
+    width: 100%;
+    max-width: 85%;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.heor-content {
+    width: 100%;
+    max-width: 1270px;
+    margin: 0 auto;
+    padding: 12px 25px;
+}
+
+  /***logicdigger css ***/
+        .navbar-toggler, .navbar-close {
+            display: none;
+            background-color: transparent;
+            border: none;
+            font-size: 35px;
+            cursor: pointer;
+        }
+        .navbar-nav {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            flex: 1;
+            justify-content: space-between;
+        }
+        .navbar-nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #3c5823;
+    font-weight: 600;
+}
+        .navbar-nav .icons a {
+            margin: 0 5px;
+        }
+        .navbar-collapse {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            flex: 1;
+        }
+
+        @media only screen and (min-width: 1024px) and (max-width: 1350px)  {
+          .image-item {
+            margin-bottom: 20px !important;
+          }
+          .navbar-nav .nav-link:nth-child(6) {
+            margin: 0 !important;
+          }
+          .rectangle-container{
+            display: block !important;
+            text-align: center;
+          }
+          .rectangle {
+    width: 25% !important;
+    display:inline-block !important;
+  }
+  .rectangle li img {
+    height: 10%;
+    width: 10% !important;
+    padding-right: 3%;
+}
+  .rectangle img {
+    width: 100% !important;
+  }
+        }
+        @media only screen and (min-width: 768px) and (max-width: 1024px)  {
+        .rectangle-container  .rectangle img {
+    width: 310px !important;
+}
+.sell-us-content{
+  display: block !important;
+  margin-bottom: 20px;
+}
+.rectangle-container .rectangle {
+    width: 300px !important;
+}
+.rectangle-container {
+    flex-wrap: wrap;
+}
+.rectangle-container .rectangle li img {
+    width: 10% !important;
+}
+footer {
+    height: unset !important;
+}
+.footer-columns {
+    display: block !important;
+}
+main .listing-title .title{
+  text-align: center !important;
+}
+  }
+  @media (max-width: 400px) { 
+  .search-container input[type=text] {
+    padding: 10px;
+    width: 200px !important;
+}
+.rectangle {
+        max-width: 80% !important;
+        margin: 0 auto !important;
+        margin-bottom: 20px !important;
+    }
+    .rectangle img {
+    width: 100% !important;
+    max-width: 350px;
+}
+.rectangle li img {
+    height: 10%;
+    width: 10% !important;
+    padding-right: 3%;
+}
+  }
+        @media (max-width: 1024px) {
+            .navbar-nav {
+               
+                flex-direction: column;
+                background-color: #f8f9fa;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                padding: 10px 0;
+            }
+            .navbar-collapse.show {
+  display: block !important;
+}
+.navbar-collapse {
+    display: none;
+}
+.navbar .container {
+    display: block;
+}
+.image-item {
+    margin-bottom: 20px !important;
+}
+            .navbar-nav .nav-link:nth-child(6){
+              margin: 0 !important;
+            }
+            .navbar-nav a {
+              padding: 10px 15px;
+          }
+            .navbar-nav.show {
+                display: flex;
+            }
+            .navbar-toggler {
+                display: block;
+            }
+            .navbar-close {
+                display: block;
+                align-self: flex-end;
+                margin: 10px 20px;
+                position: absolute;
+            }
+
+            span.navbar-toggler-icon {
+    float: right;
+    margin-right: 20px;
+}
+.navbar {
+    margin-top: 20px !important;
+}
+.navbar img {
+    margin-left: 20px;
+}
+        }
+
+.listing-title .title {
+    text-align: left !important;
+}
+body {
+    margin: 0;
+    padding: 0;
+}   
+.navbar .container {
+    width: 100%;
+    max-width: 1270px;
+    margin: auto;
+} 
+.heor-content {
+    width: 100%;
+    max-width: 1270px;
+    margin: 0 auto;
+}
+
+.hero-iner {
+    display: flex;
+    align-items: center;
+    height: 20vh;
+    background-size: cover;
+    background-position: bottom center;
+}
+
+.hero-section {
+    position: relative;
+}
+
+
+  /***logicdigger css end ***/
+
+    body  {
+      font-family: "Inter", sans-serif;
+        font-weight: 450;
+        font-size: 14px;
+        color: rgb(79, 79, 79);
+        width: 100%; /* Make the image responsive */
+        height: 100%; /* Make the image responsive */
+    } 
+
+.inter-font {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+    body {
+    height: 3400px;
+    }
+    .mochiy-pop-one-regular {
+  font-family: "Mochiy Pop One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+    .navbar-nav .nav-link:nth-child(6) {
+        margin-right: 280px; /*Adjust logo*/
+    }
+    .navbar-nav .nav-link:nth-child(1) {
+        margin-right: px;
+    }
+    .signup-button {
+      color: rgba(255, 255, 255, 0.952) !important;
+      background-color: #000000ce; /* Change background color to a prominent color */
+      border-radius: 20px; /* Add rounded corners */
+      padding: 10px 20px; /* Add padding to increase button size */
+      transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+    }
+    .signup-button:hover {
+background-color: #ff4632c8;
+    }
+    .navbar {
+margin-top: 38px; /* Adjust the value to move the navbar down further */
+}
+    .main-title {
+      margin-top: 30px;
+      font-size: 48px;
+      font-weight: bolder;
+      font-family: "Mochiy Pop One", sans-serif;
+      color: black;
+    }
+    .h4-title {
+      margin-top: -20px;
+      font-size: 23px;
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+    }
+    .search-container {
+      margin-top: -0px;
+    }
+    .search-container input[type=text] {
+padding: 10px;
+width: 268px;
+border: 1px solid #ccc;
+border-radius: 7.5px;
+outline: none;
+padding-top: 30px;
+background-color: rgb(252, 252, 252);
+font-family: Arial;
+font-size: 15px;
+font-weight: 500;
+text-align: center; /* Center the text vertically */
+justify-content: center; /* Center the text horizontally */
+padding: 19px;
+}
+.search-container input[type=text]::placeholder {
+    color: #c5c5c5; /* Light gray color */
+    display: flex;
+    padding: 50px;
+    font-weight: 600;
+}
+    .submit-container {
+      margin-top: -57px;
+      margin-left: 305px;
+      padding-left: 10px;
+    }
+    .submit-container button[type=submit] {
+      width: 149.33px;
+      border: 1px solid #ff4632c8;
+      background-color: #ff4632c8;
+      border-radius: 7.5px;
+      outline: none;
+      padding-top: 38px;
+      font-size: 15px;
+      font-weight: 600;
+      color: whitesmoke;
+      display: flex;
+      justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    padding: 19px;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+    }
+    .submit-container button[type=submit]:hover {
+    background-color: #ff4632e6; /* Darker color when hovered */
+    }
+    .bi-search {
+      position: absolute;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      padding: 19px;
+    }
+    .navbar-brand {
+      margin-right: 0px;
+      position: fixed;
+      height: auto;
+    }
+    .container { 
+    display:flex; /* Use flexbox */
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    }
+
+    
+    .bi-heart {
+      font-size: 20px;
+      font-weight: 900;
+      padding-right: 5px;
+    }
+    .bi-cart3 {
+      font-size: 20px;
+      font-weight: 900px;
+      padding-right: 10px;
+    }
+   
+        main {
+        /* Can use flex here */
+  height: 100vh; /* Set main height to full viewport height */
+}
+
+.heor-content {
+    padding-top: 20px; /* Adjust padding as needed to ensure breadcrumb is below the navbar */
+    padding-left: 15px; /* Adjust padding as needed */
+
+}
+
+.breadcrumb-section {
+    max-width: 1270px; /* Ensure container matches navbar width */
+    margin: 0 auto; /* Center the container */
+    padding-left: 0px; /* Align with other sections if necessary */
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.breadcrumb-container {
+    display:flex; /* Use flexbox */
+    justify-content: flex-start; /* Center the text horizontally */
+    align-items: flex-start; /* Center the text vertically */
+}
+
+.breadcrumb {
+    background: none;
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    display: flex; /* Make the breadcrumb horizontal */
+    list-style: none; /* Remove default list styles */
+}
+
+.breadcrumb-item {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: "/";
+    margin: 0 5px; /* Space between the items */
+    color: #6c757d9d; /* Color for the slash */
+}
+
+.breadcrumb a {
+    color: #6c757d9d;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb .breadcrumb-item.active {
+    color: #0f0f0f;
+    font-weight: bold;
+}
+
+/* Main Content Section */
+.main-content-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1270px; /* Ensure container matches navbar width */
+    margin: 0 auto; /* Center the container */
+    padding-left: 0px; /* Align with other sections if necessary */
+    margin-top: 30px;
+}
+
+.main-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%; /* Ensure the container takes full width */
+}
+
+.image-gallery {
+    display: flex;
+    flex-direction: row; /* Change to column to stack thumbnails and main image vertically */
+    align-items: flex-start;
+    margin-right: 20px; /* Space between image gallery and pig details */
+}
+
+.main-image img {
+    transition: opacity 0.3s ease;
+}
+
+.thumbnail-images img:hover {
+    /*cursor: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"%3E%3Cpath d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.415l-3.85-3.85a1.007 1.007 0 0 0-.115-.098zm-5.442.656a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11z"/%3E%3C/svg%3E'), auto; */
+    cursor: pointer;
+}
+
+.thumbnail-images {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between thumbnails */
+    margin-right: 20px; /* Space between thumbnails and main image */
+}
+
+.thumbnail-images img {
+    width: 108px; /* Adjust the size as needed */
+    height: 106.5px;
+    border-radius: 0px;
+}
+
+.main-image img {
+    width: 450px; /* Adjust the size as needed */
+    /* height: auto; */
+    height: 456px; /*414px*/
+    border-radius: 0px;
+}
+
+.pig-details {
+    max-width: 650px; /* Adjust the width as needed */
+    margin-left: 30px; /* Add margin to separate from the image gallery */
+}
+
+.location img {
+  height: 4%;
+  width: 4%;
+  align-items: center;
+  justify-content: center;
+  padding-right: 5px;
+}
+
+.save-icon {
+  display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 470px;
+    top: 0;
+    right: 0;
+    font-size: 14px; /* Font size for "Save" text */
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    color: black;
+}
+
+.save-icon i.bi-heart-fill {
+    margin-right: 5px; /* Space between icon and text */
+    color: #ccc;
+    cursor: pointer;
+}
+
+.save-icon i.bi-heart-fill.red {
+            color: red; /* Set the heart icon color to red */
+        }
+
+.weight img {
+  height: 6%;
+  width: 6%;
+  align-items: center;
+  justify-content: center;
+}
+
+.price-icon img {
+  height: 7%;
+  width: 7%;
+  align-items: center;
+  justify-content: center;
+  padding-right: 5px;
+}
+
+.per-kg {
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 14px;
+}
+
+.price-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.price-icon {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.user-profile {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+
+.user-accepts {
+    display: flex;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: rgb(79, 79, 79);
+    line-height: 1.7;
+    font-weight: 420;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    align-items: center;
+}
+
+.payment-cash {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-profile img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 10px; /* Space between the image and the text */
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column; /* Stack name and rating vertically */
+    display: flex;
+    align-items: left;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.user-profile h4 {
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    color: rgb(79, 79, 79);
+    margin: 0; /* Remove margin */
+}
+
+.user-rating {
+    display: flex;
+    align-items: center;
+    margin-top: 5px; /* Add margin to separate from the name */
+}
+
+.user-rating img {
+    width: 20px; /* Adjust the size of the star icon */
+    height: 20px;
+    margin-right: 5px; /* Space between the star and the rating text */
+}
+
+.user-rating span {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: rgb(79, 79, 79);
+    font-weight: 700;
+}
+
+.location {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.pig-details ul {
+  list-style-type: none;
+  justify-content: left;
+  padding: 0;
+  margin: 0px;
+}
+
+.pig-details ul li {
+  align-items: center;
+  justify-content: left;
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.pig-details h3 {
+    font-family: "Mochiy Pop One", sans-serif;
+    font-size: 30px;
+    color: black;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.pig-details .description {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: rgb(79, 79, 79);
+    line-height: 1.7;
+    font-weight: 420;
+    height: 96px;
+    width: 509px;
+}
+
+.button-icon-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.icon-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.icon-wrapper img[alt="instagram-new--v1"] {
+  transition: all 0.3s ease; /* Smooth transition for size change */
+}
+
+.icon-wrapper img[alt="instagram-new--v1"]:hover {
+width: 42px;
+height: 42px;
+}
+
+.icon-wrapper img[alt="twitterx--v1"] {
+    transition: all 0.3s ease; /* Smooth transition for size change */
+}
+
+.icon-wrapper img[alt="twitterx--v1"]:hover {
+width: 42px;
+height: 42px;
+}
+
+.icon-wrapper img[alt="facebook-new"] {
+  transition: all 0.3s ease; /* Smooth transition for size change */
+}
+
+.icon-wrapper img[alt="facebook-new"]:hover {
+  width: 42px; /* Increase width on hover */
+  height: 42px; /* Increase height on hover */
+}
+
+.read-more-link {
+  color: #6c757d9d;
+  font-family: "Inter", sans-serif;
+  margin-left: 10px;
+}
+
+.read-more-link a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.read-more-link a:hover {
+  text-decoration: underline;
+  color: #5EA91E; /* Slightly darker color for hover */
+}
+
+.button-container {
+    display: flex;
+    gap: 11px; /* Horizontal gap between buttons */
+    margin-top: 20px; /* Add some margin above the buttons */
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px; /* Vertical padding: 10, Horizontal padding: 16 */
+    border: none;
+    border-radius: 43px;
+    color: #FFFFFF;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    width: 159px;
+    height: 44px;
+}
+
+
+
+.add-to-cart {
+    background-color: #182110; /* Button color */
+}
+
+.contact-seller {
+    background-color: #5EA91E; /* Button color */
+}
+
+.contact-seller:hover {
+    background-color: #4e921a; /* Slightly darker green on hover */
+}
+
+.nav-links-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 0;
+    padding-bottom: 50px;
+    align-items: center;
+    max-width: 1270px; /* Ensure container matches navbar width */
+    margin: 0 auto; /* Center the container */
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+    padding: 0;
+    text-align: left;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #707070;
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    font-weight: 460;
+    padding: 0;
+    transition: color 0.3s ease, font-weight 0.3s ease, text-decoration 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #5EA91E;
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 10px; /* Adjust the offset value as needed */
+}
+
+.nav-links a:hover {
+    color: #5EA91E;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.nav-hr {
+    width: 100%;
+    border: none;
+    border-top: 1px solid #000000; /* Adjust the color and thickness as needed */
+    margin-top: 60px; /* Adjust the spacing above the hr */
+}
+
+.features-section {
+  max-width: 1270px; /* Ensure container matches navbar width */
+    margin: 0 auto; /* Center the container */
+    padding-left: 0px; /* Align with other sections if necessary */
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.features-container {
+    max-width: 1270px; /* Container width */
+    margin: 0 auto; /* Center align */
+}
+
+.feature-title {
+    font-size: 36px;
+    font-family: "Mochiy Pop One", sans-serif;
+    color: #333;
+    margin-bottom: 40px;
+    margin-top: 0px;
+}
+
+.features-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.feature-item {
+    background-color: #FFFCFB;
+    border-radius: 17px;
+    border: 1.5px solid #F3E7E3; /* Border width and color */
+    border-color: #F3E7E3;
+    width: 400px;
+    height: 104px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 23px;
+    box-sizing: border-box;
+}
+
+.feature-item img {
+    width: 84px; /* Adjust width as needed */
+    height: 84px; /* Adjust height as needed */
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.feature-item h4 {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 900;
+    color: #333;
+    margin: 0;
+}
+
+.feature-item span {
+     font-family: "Inter", sans-serif;
+     font-size: 15px;
+     margin-left: 10px;
+     font-weight: 900;
+
+}
+
+.description-section {
+    max-width: 1270px; /* Ensure container matches navbar width */
+    margin: 0 auto; /* Center the container */
+    padding: 20px 0; /* Adjust padding as needed */
+    text-align: left; /* Align text to the left */
+}
+
+.description-container {
+    max-width: 1270px; /* Container width */
+    margin: 0 auto; /* Center align */
+}
+
+.description-title {
+    font-size: 36px;
+    font-family: "Mochiy Pop One", sans-serif;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.description-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 48px; /* Space between the image and the product details */
+  margin-bottom: 80px;
+}
+
+.product-image img {
+  width: 376px; /* Image width */
+  height: 334px; /* Image height */
+  object-fit: cover;
+  border-radius: 15px; /* Optional: Add some border-radius if needed */
+  border: 1.5px solid;
+  border-color: #F3E7E3;
+}
+
+.product-details {
+  flex: 1; /* Take the remaining space */
+}
+
+.product-title {
+  font-size: 26px;
+  font-family: "Mochiy Pop One", sans-serif;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.description-text-box {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  color: rgb(79, 79, 79);
+  line-height: 1.7;
+  text-align: left;
+  font-weight: 420;
+}
+
+.description-text-box p {
+  margin: 0;
+}
+
+.adjusted-br {
+  margin-bottom: -5px; /* Adjust this value to control the space */
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between buttons */
+}
+
+.button {
+    padding: 0px 0px;
+    border-radius: 43px;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+.contact-seller {
+    background-color: #5EA91E;
+    width: 159px;
+    height: 44px;
+}
+
+.contact-seller:hover {
+  background-color: #4e921ae2;
+}
+
+.icon-only {
+    background-color: #5EA91E;
+    width: 59px;
+    height: 44px;
+}
+
+.icon-only:hover {
+    background-color: #4e921ae2; /* Slightly darker green on hover */
+}
+
+.icon-only img {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-right: 0px;
+  height: 20px;
+  width: 20px;
+}
+
+.icon-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px; /* Size of the circle */
+    height: 25px; /* Size of the circle */
+    border: 1px solid #ffffff; /* Border color */
+    border-radius: 50%; /* Makes the shape a circle */
+    color: #ffffff; /* Color of the icon */
+}
+/*Review section starts here*/
+.review-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 1270px;
+    margin: 0 auto;
+    padding-left: 0px;
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 1270px;
+    margin-bottom: 30px;
+}
+
+.review-title {
+    display: flex;
+    flex-direction: row;
+    font-size: 36px;
+    font-weight: 700;
+    width: 722px;
+    color: #182110;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/* Custom scrollbar styles */
+.scrollable-rectangles::-webkit-scrollbar {
+  width: 8px; /* Width of the entire scrollbar */
+}
+
+.scrollable-rectangles::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the scrollbar track */
+  border-radius: 10px; /* Rounded corners for the track */
+}
+
+.scrollable-rectangles::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+/* Add hover effect for the scrollbar thumb */
+.scrollable-rectangles::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darker color when hovered */
+}
+
+.scroll-bar-review-container {
+    display: flex;
+    flex-direction: row;
+    width: 1270px;
+}
+
+.scrollable-rectangles-review {
+    height: 550px;
+    overflow-y: scroll;
+    padding-right: 20px;
+    width: 735px;
+}
+
+.review-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.review-box {
+    padding: 50px 0 50px 0;
+    background-color: #ffffff;
+    border-radius: 0px;
+    width: 100%;
+    max-width: 725px;
+    margin-bottom: 20px;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    border-left: none;
+    border-right: none;
+}
+
+.review-profile-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.review-profile-container .profile-placeholder {
+    width: 40px;
+    height: 40px;
+    background-color: #1c8aff;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.review-column-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.username {
+    font-weight: 600;
+    font-family: "Inter", sans-serif;
+    color: #333;
+    margin-right: 10px;
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+}
+
+.review-rating {
+    display: flex;
+    align-items: center;
+    margin-left: 0px;
+}
+
+.review-rating i.bi-star-fill {
+    color: #FFCA28;
+    font-size: 14px;
+    margin-right: 2px;
+}
+
+.rating-number {
+    font-weight: 600;
+    margin-left: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.divider-vertical {
+    width: 1px;
+    height: 15px;
+    background-color: #ccc;
+    margin: 0 10px;
+}
+
+.review-time {
+    color: #999;
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+}
+
+.review-description {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+    margin: 10px 0;
+    padding: 20px 0;
+}
+
+.review-footer {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.helpful-text {
+    color: #333;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.helpful-button {
+    border: none;
+    background-color: transparent;
+    color: #333;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.helpful-button i {
+    margin-left: 5px;
+}
+
+.reviews-title {
+    font-size: 36px;
+    font-family: "Mochiy Pop One", sans-serif;
+    color: #333;
+    margin-bottom: 40px;
+    margin-top: 0px;
+}
+
+.review-numbers-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px; /* Adjust margin as needed */
+}
+
+.star-icon {
+    width: 24px; /* Adjust the size as needed */
+    height: 24px; /* Adjust the size as needed */
+    margin-right: 10px; /* Space between icon and text */
+    margin-bottom: 5px;
+}
+
+.review-numbers {
+    font-family: "Inter", sans-serif;
+    font-size: 22.5px;
+    font-weight: 500;
+    color: #333;
+}
+
+.review-rightside-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+}
+
+.review-span {
+    display: flex;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    text-align: flex-start;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: #000;
+    padding: 0px;
+    margin-top: 0px !important;
+}
+
+.review-search-result, .review-dropbox-container, .review-span, .review-average, .review-stars, .review-word-searchbox {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 335px;
+    text-align: center;
+}
+
+.review-dropbox-container {
+    margin-bottom: 10px;
+}
+
+.review-average {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.review-average i {
+    color: #FFCA28;
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.review-average span {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.review-average span {
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.review-dropbox-container {
+    margin-bottom: 10px;
+}
+
+.review-dropbox {
+    display: flex;
+    width: 100%;
+    width: 254px;
+    height: 18.8px;
+    border: 2px solid #f5f5f5;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    font-size: 14px;
+    color: #333;
+    justify-content: flex-start;
+    font-family: "Inter", sans-serif;
+    transition: border-color 0.3s ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2714%27%20height%3D%2714%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27%23333%27%3E%3Cpath%20d%3D%27M7%2010l5%205%205-5z%27/%3E%3C/svg%3E);
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 25px 25px;
+}
+
+.review-stars {
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+}
+
+.star-bar-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+
+.star-bar {
+    height: 8px;
+    width: 100%;
+    max-width: 254px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.star-bar-fill {
+    height: 100%;
+    background-color: #000000;
+}
+
+.star-label {
+    display: flex;
+    width: 70px;
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.star-bar-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+
+.star-bar {
+    height: 8px;
+    width: 100%;
+    max-width: 254px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.star-bar-fill {
+    height: 100%;
+    background-color: #000000;
+}
+
+.review-word-searchbox {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.review-word-searchbox input[type="text"] {
+    width: 240px;
+    height: 19px;
+    border: 1px solid #ccccccac;
+    border-radius: 15px 0 0 15px;
+    margin-right: 0;
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    border-right: none;
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+}
+
+.review-word-searchbox button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 50px;
+    height: 100%;
+    border: none;
+    background-color: #000000c8;
+    color: white;
+    border-radius: 0 15px 15px 0;
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.review-word-searchbox button i {
+    font-size: 14px;
+    color: white;
+    margin-right: 3px;
+}
+
+.bi-search {
+    position: absolute;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    padding: 19px;
+}
+
+
+
+.review-count {
+    color: #3333334b;
+}
+
+.review-rectangles-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 58px; /* Space between rectangles */
+}
+
+.review-rectangle {
+    width: 274px;
+    height: 312px;
+    border: 1px solid #EFEFEF;
+    border-radius: 18px;
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.user-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.user-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.user-info-details {
+    display: flex;
+    align-items: left;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column; /* Stack name and rating vertically */
+}
+
+.username {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 3px;
+}
+
+.stars {
+    display: flex;
+    gap: 3px;
+}
+
+.bi.bi-star-fill {
+    font-size: 18px; /* Adjust the size as needed */
+    color: #ff9d00; /* Gold color for the stars */
+}
+
+.bi.bi-star-fill:last-of-type {
+    color: #D3D3D3; /* Light grey color for the last star */
+}
+
+.review-description {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+.review-date {
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    color: #c0bebe;
+}
+
+.pagination-section {
+  max-width: 1270px; /* Ensure container matches navbar width */
+    margin: 0 auto; /* Center the container */
+    padding: 20px 0; /* Adjust padding as needed */
+    text-align: left; /* Align text to the left */
+}
+
+.pagination-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: -5px;
+}
+
+.pagination-dots .dot {
+    height: 14px;
+    width: 14px;
+    background-color: #D9D9D9;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 10px;
+    transition: background-color 0.3s;
+}
+
+.pagination-dots .dot.active {
+    background-color: #5EA91E;
+}
+
+.content {
+  text-align: center; /* Center text horizontally */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  font-size: 20px;
+  color: black;
+  font-weight: bolder;
+  font-family: Arial;
+}
+
+.text-box {
+  width: 225px; /* Adjust width of the text box 195px */
+}
+
+.text-box p {
+  font-size: 14px;
+  margin: 0;
+  text-align: left;
+  line-height: 1.6; /* Adjust this value for desired line spacing */
+}
+
+.introduction {
+  height: 100vh; /* Make the image responsive */
+            width: 100vw; /* Make the image responsive */
+            object-fit: cover; /* Ensure the image covers the entire header */
+            filter: brightness(0.);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+}
+.listings {
+  height: 100vh; /* Make the image responsive */
+            width: 100vw; /* Make the image responsive */
+            object-fit: cover; /* Ensure the image covers the entire header */
+            filter: brightness(0.);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+}
+.listing-title h2 {
+  text-align: left; /* Center text horizontally */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  max-width: 1270px;
+  font-size: 36px;
+  color: #333;
+  margin: 0 auto;
+  padding-left: 0px;
+  font-weight: bold;
+  font-family: "Mochiy Pop One", sans-serif;
+ /*  margin-top: 20vh; Adjust as needed to position content below header remove from logicdiger */
+  margin-bottom: 40px;
+  /* Add padding as well */
+}
+.rectangle-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Adjust the gap between the rectangles */
+  margin-top: 50px; /* Adjust the margin as needed */
+  margin-bottom: 50px;
+}
+
+.rectangle {
+  background-color: #ffffff;
+  border: 1px solid #cfcfcf;
+  border-radius: 20px;
+  padding: 20px; /* 95px */
+  width: 350px; /* Adjust the width as needed */
+  height: 550px; /* Adjust the height as needed */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 10px;
+  transition: all 0.3s ease; /* Delete */
+  position: relative; /* Delete */
+  box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.05), /* Left shadow (smaller and lighter) */
+  2px 2px 5px rgba(0, 0, 0, 0.1);   /* Right and bottom shadow */
+  cursor: pointer;
+}
+
+.rectangle img {
+  width: 350px; /* Make the image responsive */
+  height: auto;
+  /* max-height: 50%; /* Adjust the maximum height of the image */
+  border-radius: 20px 20px 20px 20px;
+  margin-bottom: 0px;
+}
+
+.rectangle ul {
+  list-style-type: none;
+  padding-right: px; /* padding-left/right: 20px;/60px; */ 
+  text-align: left;
+  margin-top: -10px; /* Adjust the margin as needed */
+  font-size: 15px;
+}
+
+.rectangle ul li {
+  margin-bottom: 20px; /* Adjust the margin between list items */
+  display: flex;
+  align-items: center;
+}
+
+.rectangle h4 {
+  font-size: 20px;
+  font-family: "Mochiy Pop One", sans-serif;
+  font-weight: bolder;
+  color: black;
+  position: relative; /* Delete */
+  margin-bottom: 30px; /* Delete */
+}
+/* Delete */
+.rectangle h4::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0.5px;
+  background-color: rgba(0, 0, 0, 0.353);
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+/* Delete */
+.rectangle:hover {
+  border-color: #88888837;
+  background-color: #f0f0f0;
+}
+/* Delete */
+.rectangle:hover h4::after {
+  width: 100%;
+}
+
+.rectangle li img {
+  height: 10%;
+  width: 10%;
+  padding-right: 3%;
+}
+
+.price {
+  font-weight: bolder;
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+}
+
+.rectangle button {
+  width: 149.33px;
+      border: 1px solid #ff4632c8;
+      background-color: #ff4632c8;
+      border-radius: 7.5px;
+      outline: none;
+      padding-top: 38px;
+      font-size: 15px;
+      font-weight: 600;
+      color: whitesmoke;
+      display: flex;
+      justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    padding: 15px;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+    cursor: pointer;
+}
+
+.rectangle button[type=submit]:hover {
+    background-color: #ff4632e6; /* Darker color when hovered */
+    }
+
+    /*Chatbox CSS*/
+    .chatbox {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 310px;
+    height: 450px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 -2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 40px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.chatbox-header {
+    background-color: #5EA91E; /* Customizable color for the header */
+    color: #ffffff;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer; /* Add pointer cursor to indicate the header is clickable */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.chatbox-content {
+    padding: 10px;
+    flex-grow: 1;
+    overflow-y: auto;
+    transition: all 0.3s ease;
+}
+
+.chatbox-input {
+    border: none;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    width: calc(100% - 20px);
+    margin: 10px;
+    border-radius: 20px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+.chatbox-input:focus {
+    border-color: #5EA91E;
+}
+
+.chatbox.collapsed {
+    height: auto; /* Only show the header when collapsed */
+}
+
+.chatbox.collapsed .chatbox-content,
+.chatbox.collapsed .chatbox-input,
+.chatbox.collapsed .icons-button-container {
+    display: none; /* Hide content, input, and icons-button-container when collapsed */
+}
+
+.chatbox.collapsed .chatbox-header {
+    background-color: #ffffff;
+    color: #000000;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.profile-container {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-image {
+    border-radius: 20px;
+    width: 38px;
+    height: 38px;
+    margin-right: 15px;
+}
+
+.green-dot {
+    position: absolute;
+    bottom: 1px;
+    right: 15px;
+    width: 11px;
+    height: 11px;
+    background-color: #21CF2F;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.online-status {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 12px;
+    color: #333333;
+    font-weight: 500;
+    margin-top: 3px;
+    font-family: "Inter", sans-serif;
+}
+
+
+
+.chatbox-close {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: auto; /* Align close button to the right */
+}
+
+
+/*Copied from Inbox*/
+.icons-button-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.chat-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.chat-input-wrapper i {
+    position: absolute;
+    left: 10px; /* Adjusted for proper spacing */
+    z-index: 2; /* Make sure the icon stays on top */
+    font-size: 1.2em;
+    color: #888;
+    pointer-events: none; /* Clicks pass through to textarea */
+}
+
+.chat-input-field {
+    width: 100%;
+    padding: 10px 10px 10px 50px; /* Padding-left increased to create space for the icon */
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 1rem;
+    outline: none;
+    box-sizing: border-box;
+    resize: none;
+    z-index: 1; /* Make sure the input stays behind the icon */
+    background-color: white; /* Ensure it's not transparent */
+}
+
+
+.emojionearea, .emojionearea.form-control {
+  display: flex;
+  align-items: center; /* Vertically centers the caret and text */
+    min-height: 40px;
+    max-height: 40px;
+    overflow-y: auto;
+    padding: 10px 15px;
+    line-height: normal; /* Reset line-height to ensure it behaves properly */
+    width: 260px;
+    border-radius: 20px;
+    background-color: #f7f7f8; /* Light grey background */
+    border: none;
+    overflow: visible;
+    padding: 10px 15px; /* Adjust the padding to center the text */
+  font-family: "Inter", sans-serif;
+  color: #333;
+  outline: none;
+  box-sizing: border-box;
+  line-height: normal;
+}
+
+#message-input {
+    width: 580px; /* Set the width for the message input */
+    word-wrap: break-word; /* Ensure the text wraps to the next line */
+    white-space: normal; /* Allow text to break to the next line */
+}
+
+.emojionearea .emojionearea-editor {
+    display: flex;
+    align-items: center; /* Vertically centers the caret and text */
+    min-height: 40px;
+    max-height: 40px;
+    overflow-y: auto;
+    padding: 10px 15px;
+    line-height: 0%;
+    width: 590px;
+    border: 20px;
+    line-height: normal;
+}
+
+.emojionearea .emojionearea-button {
+    z-index: 5;
+    position: absolute;
+    right: 3px;
+    top: 6px;
+    width: 24px;
+    height: 24px;
+    opacity: 0.6;
+    cursor: pointer;
+    -moz-transition: opacity 300ms ease-in-out;
+    -o-transition: opacity 300ms ease-in-out;
+    -webkit-transition: opacity 300ms ease-in-out;
+    transition: opacity 300ms ease-in-out;
+}
+
+.send-button {
+  display: none;
+    width: 90px;
+    height: 40px;
+    background-color: #5EA91E;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease !important;
+}
+
+.icons-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.icons-container {
+display: flex;
+gap: 10px;
+}
+
+
+.second-small-chat-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 10px 30px;
+  max-width: 100%; /* Optional: Set max-width if necessary */
+  min-height: 80px; /* Ensure a minimum height when there's little content */
+  height: auto; /* Allow the height to adjust based on content */
+}
+
+.line-with-date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.line {
+    width: 190px;
+    border: none;
+    border-top: 1px solid #F2F1F3;
+    margin: 0 30px;
+}
+
+.date {
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    color: #A9A7B0; /* You can adjust the text color as needed */
+    width: 65px;
+}
+
+.small-chat-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 10px 30px;
+  max-width: 100%; /* Optional: Set max-width if necessary */
+  min-height: 80px; /* Ensure a minimum height when there's little content */
+  height: auto; /* Allow the height to adjust based on content */
+}
+
+.message-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.second-message-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-right: 15px;
+}
+
+.image-info-wrap {
+  display: flex;
+  flex-direction: row;
+}
+
+.chat-image-info-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.second-chat-image-info-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.message-info-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+    font-weight: bold;
+    color: #333; /* Adjust the color as needed */
+}
+
+.second-user-name {
+  display: flex;
+  font-weight: bold;
+  color: #333; /* Adjust the color as needed */
+  justify-content: flex-end;
+}
+
+.message-time {
+    font-size: 12px;
+    color: #888; /* Lighter color for the time */
+    margin-top: 3px; /* Space between username and time */
+}
+
+.chat-message-time {
+  font-size: 12px;
+    color: #888; /* Lighter color for the time */
+    margin-top: 3px; /* Space between username and time */
+}
+
+.second-chat-message-time {
+  display: flex;
+  font-size: 12px;
+    color: #888; /* Lighter color for the time */
+    margin-top: 3px; /* Space between username and time */
+    justify-content: flex-end;
+}
+
+.last-message {
+    font-size: 14px;
+    color: #555; /* Adjust the color as needed */
+    margin-top: 15px; /* Space between time and last message */
+    width: 246px;
+}
+
+/* Custom scrollbar styles */
+.scrollable-rectangles-review::-webkit-scrollbar {
+  width: 8px; /* Width of the entire scrollbar */
+}
+
+.scrollable-rectangles-review::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the scrollbar track */
+  border-radius: 10px; /* Rounded corners for the track */
+}
+
+.scrollable-rectangles-review::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+/* Add hover effect for the scrollbar thumb */
+.scrollable-rectangles-review::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darker color when hovered */
+}
+
+/* Custom scrollbar styles for chatbox-content */
+.chatbox-content::-webkit-scrollbar {
+    width: 8px; /* Width of the entire scrollbar */
+}
+
+.chatbox-content::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color of the scrollbar track */
+    border-radius: 10px; /* Rounded corners for the track */
+}
+
+.chatbox-content::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+.chatbox-content::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Darker color when hovered */
+}
+
+
+    footer {
+        background-color: #43662e; /* Dark green background color */
+        color: #ffffff;
+        text-align: center;
+        padding: 50px 0; /* Adjust padding to fit within 600px height */
+        height: 580px; /* Set height to 600px */
+        position: relative;
+    }
+
+    footer .footer-content {
+    padding: 0 50px; /* Add horizontal padding to match the sell-us-section */
+}
+
+    .footer-logo {
+        display: block;
+        margin: 0 auto;
+        height: auto;
+        width: 350px; /* Adjust width as necessary */
+        margin-bottom: 20px;
+    }
+
+    .footer-columns {
+        display: flex;
+        justify-content: space-around;
+        /* align-items: flex-start; /* Align items to the start to fit better within the height */
+        /* align-items: center; /*Change that perhaps?*/
+        margin-top: 5%;
+        height: calc(100% - 100px); /* Ensure columns take up the full height of the footer, accounting for padding */
+}
+
+    .footer-box {
+        max-width: 250px;
+        text-align: left;
+        font-size: 16px; /* Adjust font size to fit within the height */
+        display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    height: 100%; /* Ensure footer-box takes up the full height of the parent */
+    line-height: 1.8; /* Adjust this value for desired line spacing */
+    }
+
+    .footer-box h4 {
+        color: #ffffff;
+        margin-bottom: 15px;
+        font-size: 20px;
+    }
+
+    .footer-box p {
+        color: #d2d2d2;
+        margin: 5px 0;
+        line-height: 1.8; /* Adjust this value for desired line spacing */
+    }
+
+    .footer-nav,
+    .footer-bottom-nav {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-nav li,
+    .footer-bottom-nav li {
+        margin-bottom: 10px; /* Reduce margin to fit better */
+    }
+
+    .footer-nav a,
+    .footer-bottom-nav a {
+        color: #e1e1e1;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .footer-nav a:hover,
+    .footer-bottom-nav a:hover {
+        color: #ffffff;
+    }
+
+    .footer-box input[type=email] {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1.2px solid #e1e1e1;
+        color: #ffffff;
+        padding: 10px 0; /* Remove left padding to align placeholder */
+        width: 235px;
+        margin-top: 15px;
+        outline: none;
+        text-align: left; /* Align text to the left */
+        position: relative;
+}
+
+.email-container {
+    position: relative;
+    display: inline-block;
+}
+
+.email-container::before {
+  content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABdUlEQVR4nO3cPUoDYRRG4UEQV2NjZ6GSqAj+bEBsrWzcnI2L0NbeRgQridHGI8JIJEyKQMi9H/c8CxheOEwymRnSdZIkSZIkSZIkSZIkSZIkSVoxYBu4B+6AnVUfX0sCHph5B/aWPYZWCHj+F8Qo0YDruSB/Ufajt5UF3ALfc1EmwCh6W1ksjjKO3lYWRskHo+SDUZqKchi9rSyMkg9GaSrKUfS2shiO8mGUQEZJCM+UfBZE+QTOoreVhVHyMUpbUc6jt5WFUZqJ8gVcdBkAV8DrwOPRaqbASXSMzf5XrGa3WQ4ig2z1I5QhSB/lEnjpB1U2Df/IKvylPs/L3wjGaCOG97XWzRj5Y/xe6h9HbyuHxTF8pLtuxkgEz4z0MSZ+TOWK4VuM62aMNmKMo7eVgzHywBh5YIw8MEYTMUbR28rBGHkANwNnhn8cEPh2zGQghv93EhRkA3gzRiLAKfAEPAK70XskSZIkSZIkSZIkSZIkSZK6cD+4pa0FeKE3zwAAAABJRU5ErkJggg==');
+    position: absolute;
+    right: -15px; /* Adjust the position as needed */
+    bottom: 25px; /* Adjust the position as needed */
+    height: 15px; /* Adjust size as needed */
+    pointer-events: none; /* Ensure the icon does not interfere with input interactions */
+    color: white;
+    size: 1px;
+    transform: scale(0.3); /* Scale the image to 50% of its original size */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 25px; /* Space between the input field and social media icons */
+    gap: 10px;
+}
+
+.social-icon {
+    width: 30px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
+}
+
+.footer-box img {
+height: 35px;
+width: 35px;
+color: white;
+}
+
+    .footer-box input[type=email]::placeholder {
+        color: #b9b9b98b;
+        font-size: 16px;
+    }
+
+    hr {
+        border: 0;
+        height: 1.2px;
+        background-color: #e1e1e1;
+        margin: 80px 0;
+        margin: 120px auto 10px auto; /* Increase the top margin to move the hr line down */
+        width: 90%; /* Set the width to 1320px */
+    }
+
+    .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 12px; /* Adjust font size to fit within the height */
+        width: 90%;
+        margin: 0 auto; /* Center align the footer-bottom container */
+        color: #e1e1e1;
+        padding: 0 60px; /* Add padding to the sides */
+        padding-top: 10px; /* Add some padding at the top */
+    }
+
+    .footer-bottom p {
+        margin: 0px;
+        color: #e1e1e1;
+    }
+
+    .footer-bottom-nav {
+        display: flex;
+        gap: 20px; /* Adjust gap to fit within the height */ /*Use this on navbar as well.*/
+        color: #e1e1e1;
+    }
+
+
+  /***logicdigger css  for mobile***/
+
+
+@media only screen and (max-width: 768px) {
+    
+      footer {
+    height: unset !important;
+}
+.footer-columns {
+    display: unset !important;
+ 
+} 
+.feed-details {
+    padding: 10px !important;
+}
+.feed-section-content {
+    display: block !important;
+    width: 85%;
+}
+.rectangle {
+    margin: auto;
+    margin-bottom: 20px;
+}
+.rectangle-container {
+    display: block !important;
+}
+.listing-title .title , .feed-section-title h2, .sell-us-section-title h2{
+    text-align: center !important;
+    font-size: 25px;
+}
+.sell-us-title, .second-sell-us-title{
+  font-size: 20px;
+}
+.footer-logo {
+    width: 250px;
+    margin-bottom: 20px;
+}
+.feed-title{
+  font-size: 25px;
+}
+
+.heor-content {
+    padding: 30px;
+}
+
+
+.navbar-nav a {
+    text-decoration: none;
+    color: #000;
+    padding: 10px 20px;
+    text-align: center;
+    margin: auto;
+    font-weight: 500;
+}
+
+
+.sell-us-content {
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1200px;
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.sell-us-item {
+    display: block !important;
+}
+.footer-bottom {
+    display: block !important;
+     width: unset !important;
+}
+hr {
+    width: 100%;
+}
+.footer-bottom-nav {
+    display: block !important;
+    margin-top: 10px;
+}
+.main-title {
+    font-size: 25px;
+}
+
+.h4-title {
+    font-size: 18px;
+    padding-top: 15px;
+}
+
+.submit-container {
+    margin: unset;
+    padding: 0;
+}
+
+.search-container input[type=text] {
+    margin-bottom: 10px;
+}
+
+.hero-iner {
+    background-position: center !important;
+}
+
+}
+
+    div#navbarNavAltMarkup {
+    margin-left: 30px;
+}   
+
+  /***logicdigger css  for mobile end ***/
+</style>
+</head>
+<body>
+
+    <!-- Header -->
+  <header>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#"></a> <!-- Logo -->
+      <img src="farmifylogo.png" alt="Logo" height="50"> <!-- Adjust the height as needed -->
+            </a>
+        <span class="navbar-toggler-icon">   <button class="navbar-toggler" onclick="toggleNav()">
+          &#9776;
+      </button></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+    
+
+        <div class="navbar-nav">
+
+          <button class="navbar-close" onclick="toggleNav()">
+            &times;
+        </button>
+          <a class="nav-link disabled">Home</a>
+          <a class="nav-link disabled">Pigs for Sale</a>
+          <a class="nav-link disabled">Sell your Pig</a>
+          <a class="nav-link disabled">About us</a>
+          <a class="nav-link disabled">Contact us</a>
+          <i class="bi bi-heart"></i>
+          <i class="bi bi-cart3"></i>
+          <a class="nav-link disabled">Login</a>
+          <a class="nav-link signup-button">Sign up</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+</header>
+
+<div class="hero-section">
+   <div class="hero-iner" style="background-image: url();">
+    <div class="heor-content">
+    </div>
+      </div> <!--iner hero-->
+</div><!--hero end-->
+      <main>
+
+        <!-- Breadcrumb Section -->
+<section class="breadcrumb-section">
+    <div class="breadcrumb-container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Pigs for Sale</a></li>
+                <li class="breadcrumb-item"><a href="#">Search Results</a></li>
+                <li class="breadcrumb-item active" aria-current="page">10 Pigs for Sale in Cebu</li>
+            </ol>
+        </nav>
+    </div>
+</section>
+
+<!-- Main Content Section -->
+<section class="main-content-section">
+    <div class="main-container">
+        <div class="image-gallery">
+            <div class="thumbnail-images">
+                <img src="Rectangle 41.png" alt="Thumbnail 1" data-image="Rectangle 41.png">
+                <img src="Pig57.png" alt="Thumbnail 2" data-image="Pig57.png">
+                <img src="Pig58.png" alt="Thumbnail 3" data-image="Pig58.png">
+                <img src="Pig56.png" alt="Thumbnail 4" data-image="Pig56.png">
+            </div>
+            <div class="main-image">
+                <img src="Rectangle 41.png" alt="Main Pig Image" id="main-image">
+            </div>
+        </div>
+        <div class="pig-details">
+          <ul>
+              <li class="location">
+                  <img width="96" height="96" src="https://img.icons8.com/color/96/marker--v1.png" alt="marker--v1"/>Cebu
+                  <div class="save-icon" onclick="toggleSaveIcon(this)">
+                    <i class="bi bi-heart-fill"></i>
+                    <span>Save</span>
+                </div>
+              </li>
+          </ul>
+          <h3>10 Pigs for Sale in Cebu</h3>
+          <ul>
+              <li class="price-icon">
+                  <img width="96" height="96" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/><div class="price-wrapper">Price: 20,000 <p class="per-kg">Per/kg: 250</p></div>
+                  <img width="96" height="96" src="https://img.icons8.com/color/96/weight-kg.png" style="margin-left: 20px;" alt="weight-kg"/><div class="price-wrapper">Avg head: 80kg<p class="per-kg">Total: 800kg</p></div>
+              </li>
+          </ul>
+          <div class="user-profile">
+              <img src="Rectangle 46.png" alt="User Profile Picture">
+              <div class="user-info-details">
+                  <h4>Darwin Rabago</h4>
+                  <div class="user-rating">
+                      <img src="https://img.icons8.com/fluency/96/star--v1.png" alt="star--v1">
+                      <span>5.0</span>
+                  </div>
+              </div>
+          </div>
+          
+          <div class="user-accepts">
+            <strong>User Accepts:</strong> <label for="payment-cash"><img src="https://img.icons8.com/color/27/get-cash.png" alt="Cash Icon">
+                <label for="payment-gcash"><img src="gcash icon appstore.webp"  style="width: 20px; height: 20px; border-radius: 2px;">
+                    <label for="payment-gcash"><img src="maya icon.webp"  style="width: 20px; height: 20px; border-radius: 2px;">
+                        <label for="payment-credit-card"><img width="28" height="28" src="https://img.icons8.com/color/48/visa.png" alt="visa" style="width: 25px; height: 25px;"><img width="28" height="28" src="https://img.icons8.com/color/48/mastercard.png" alt="mastercard" style="width: 25px; height: 25px;"></label>
+          </div>
+        
+            <div class="description">
+                <p><strong>Description:</strong> Hello everyone! We have 10 robust and well-raised pigs available for sale, each weighing between 70-80kg. These pigs are perfect for various needs such as lechon, business stock, or personal needs. Raised in a clean and caring environment, our pigs are of the 
+                  <span class="read-more-link"><a href="#description">Read More</a></span>
+                </p>
+               <!--  <div class="button-container">
+                  <button class="button add-to-cart">
+                      <i class="bi bi-cart-plus"></i>
+                      Offer
+                  </button> -->
+                  <div class="button-icon-wrapper">
+                  <button class="button contact-seller">
+                     <!-- <i class="bi bi-chat-dots"></i> -->
+                      Make an Offer
+                  </button>
+                  <div class="icon-wrapper">
+                    <img width="40" height="40" style="cursor: pointer;" src="https://img.icons8.com/ios-filled/40/facebook-new.png" alt="facebook-new"/>
+                    <img width="40" height="40" style="cursor: pointer;" src="https://img.icons8.com/ios-filled/50/twitterx--v1.png" alt="twitterx--v1"/>
+                    <img width="40" height="40" style="cursor: pointer;" src="https://img.icons8.com/ios-filled/40/instagram-new--v1.png" alt="instagram-new--v1"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="chatbox">
+        <div class="chatbox-header">
+            <div class="image-info-wrap">
+                <div class="profile-container">
+                  <img src="Rectangle 46.png" alt="Profile Image" class="profile-image">
+                  <div class="green-dot"></div>
+                  <!--<i class="bi bi-dot"></i>-->
+                </div>
+                <div class="message-info">
+                  <div class="user-name">Darwin Rabago</div>
+                  <div class="online-status">Online</div>
+                </div>
+                </div>
+
+            <button class="chatbox-close">X</button>
+        </div>
+        <div class="chatbox-content">
+          <div class="small-chat-box">
+            <div class="image-info-wrap">
+              <div class="profile-container">
+                <img src="Rectangle 403.png" alt="Profile Image" class="profile-image">
+              </div>
+              <div class="message-info">
+                <div class="user-name">Me</div>
+                <div class="chat-message-time">10:15am</div>
+                <div class="chat-message">Hey Darwin, is 01 Pig still available?</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="line-with-date">
+            <div class="line"></div> 
+            <span class="date">02/May/24</span>
+            <div class="line"></div> 
+        </div>
+
+        <div class="second-small-chat-box">
+          <div class="second-chat-image-info-wrap">
+              <div class="second-message-info">
+                  <div class="second-user-name">Darwin Rabago</div>
+                  <div class="second-chat-message-time">11:32am</div>
+                  <div class="second-chat-message">Yes it is, it's ready to pick up!</div>
+              </div>
+              <div class="profile-container">
+                <img src="Rectangle 46.png" alt="Profile Image" class="profile-image">
+            </div>
+          </div>
+      </div>
+
+      <div class="line-with-date">
+        <div class="line"></div> 
+        <span class="date">Today</span>
+        <div class="line"></div> 
+    </div>
+
+    <div class="small-chat-box">
+      <div class="image-info-wrap">
+        <div class="profile-container">
+          <img src="Rectangle 403.png" alt="Profile Image" class="profile-image">
+        </div>
+        <div class="message-info">
+          <div class="user-name">Me</div>
+          <div class="chat-message-time">10:15am</div>
+          <div class="chat-message">Great, I'm on my way!</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="icons-button-container">
+    <div class="chat-input-wrapper">
+        <i class="bi bi-paperclip"></i>
+        <textarea class="chat-input-field" id="message-input" placeholder="Type a message..." rows="1"></textarea>
+    </div>
+    <button class="send-button">Send</button>
+</div>
+    </div>
+        </div>
+        
+    </div>
+
+</section>
+<!-- Nav-Links section -->
+<section class="nav-links-section">
+  <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#description">Descriptions</a>
+      <a href="#reviews">Reviews</a>
+  </div>
+  <hr class="nav-hr">
+</section>
+
+<!-- Features Section -->
+<section id="features" class="features-section">
+  <div class="features-container">
+    <h2 class="feature-title">Features</h2>
+    <div class="features-grid">
+      <!-- Example feature item -->
+      <div class="feature-item">
+        <img src="Group 234.png" alt="Feature Image">
+        <h4>Age:</h4><span>12 Weeks</span>
+      </div>
+      <div class="feature-item">
+        <img src="Group 231 (1).png" alt="Feature Image">
+        <h4>Vitamins:</h4><span>Piglet Booster</span>
+      </div>
+      <div class="feature-item">
+        <img src="Group 228.png" alt="Feature Image">
+        <h4>Temperament:</h4><span>Easy to handle</span>
+      </div>
+      <div class="feature-item">
+        <img src="Group 233.png" alt="Feature Image">
+        <h4>Gender:</h4><span>Female</span>
+      </div>
+      <div class="feature-item">
+        <img src="Group 230.png" alt="Feature Image">
+        <h4>Vaccination:</h4><span>Vaccinated 01.04.24</span>
+      </div>
+      <div class="feature-item">
+        <img src="Group 227.png" alt="Feature Image">
+        <h4>Reproduction:</h4><span>7 Piglets</span>
+      </div>
+      <div class="feature-item">
+        <img src="Group 232.png" alt="Feature Image">
+        <h4>Weight:</h4><span>85kg</span>
+      </div>
+      <div class="feature-item">
+        <img src="Group 229.png" alt="Feature Image">
+        <h4>Health History:</h4><span>Mostly healthy</span>
+      </div>
+      <div class="feature-item">
+        <img src="Group 226.png" alt="Feature Image">
+        <h4>Diet & Freedom:</h4><span>VIEPro</span>
+      </div>
+    </div>
+  </div>
+  <hr class="nav-hr">
+</section>
+
+<!-- Description Section -->
+<section id="description" class="description-section">
+  <div class="description-container">
+    <h2 class="description-title">Description</h2>
+    <div class="description-content">
+      <div class="product-image">
+        <img src="Rectangle 41.png" alt="Product Image">
+      </div>
+      <div class="product-details">
+        <h3 class="product-title">10 Pigs for Sale in Cebu</h3>
+        <div class="description-text-box">
+          <p>
+            Hello everyone! We have 10 robust and well-raised pigs available for sale, each weighing between 70-80kg. These pigs are perfect for various needs such as lechon, business stock, or personal needs. Our pigs are raised in a clean and caring environment to ensure the highest quality and health.<br>
+            💉 Health Care: All pigs are vaccinated.<br class="adjusted-br"> 
+            💰 Price: 185 per kg (negotiable)<br class="adjusted-br">
+            📅 Available: Immediately<br class="adjusted-br">
+            For more details or to schedule a visit, please PM me or contact me at 9105761963 🙏</p>
+            <div class="button-container">
+              <button class="button contact-seller">
+                  <i class="bi bi-chat-dots"></i>
+                  Contact Seller
+              </button>
+<button class="button icon-only" id="phone-button" onclick="showPhoneNumber()">
+    <i class="bi bi-telephone-fill"></i>
+</button>
+<span id="phone-number" class="phone-number" style="display: none;">9123 457 890</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="nav-hr">
+</section>
+
+
+<section class="review-section">
+    <div class="title-container">
+        <h3 class="review-title">Reviews</h3>
+        <!-- <h3 class="username-title">Darwinrabago12</h3> -->
+    </div>
+    <div class="scroll-bar-review-container">
+      <div class="scrollable-rectangles-review">
+        <div class="review-container">
+          <div class="review-box">
+            <div class="review-profile-container">
+              <div class="profile-placeholder">J</div> <!-- Placeholder Profile Picture -->
+              <div class="review-column-container">
+                <span class="username">John Doe</span>
+                <div class="review-header">
+                  <div class="review-rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <span class="rating-number">5</span>
+                  </div>
+                  <div class="divider-vertical"></div>
+                  <span class="review-time">2 months ago</span>
+                </div>
+              </div>
+            </div>
+            <p class="review-description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet nulla in lacus pellentesque, at suscipit erat dignissim. Integer auctor sapien non est laoreet, et vehicula orci euismod.
+            </p>
+            <div class="review-footer">
+              <span class="helpful-text">Helpful?</span>
+              <button class="helpful-button">
+                Yes <i class="bi bi-hand-thumbs-up"></i>
+              </button>
+              <button class="helpful-button">
+                No <i class="bi bi-hand-thumbs-down"></i>
+              </button>
+            </div>
+          </div>
+  
+          <!-- Add other review-boxes here as needed -->
+          
+          <!-- Second review-box -->
+          <div class="review-box">
+            <div class="review-profile-container">
+              <div class="profile-placeholder" style="background-color: red;">S</div>
+              <div class="review-column-container">
+                <span class="username">Sarah Parker</span>
+                <div class="review-header">
+                  <div class="review-rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star"></i>
+                    <span class="rating-number">4</span>
+                  </div>
+                  <div class="divider-vertical"></div>
+                  <span class="review-time">1 month ago</span>
+                </div>
+              </div>
+            </div>
+            <p class="review-description">
+              The product quality is quite good. The transaction was smooth, and the seller was responsive. There were some minor issues, but overall, it was a positive experience. Would recommend to others!
+            </p>
+            <div class="review-footer">
+              <span class="helpful-text">Helpful?</span>
+              <button class="helpful-button">
+                Yes <i class="bi bi-hand-thumbs-up"></i>
+              </button>
+              <button class="helpful-button">
+                No <i class="bi bi-hand-thumbs-down"></i>
+              </button>
+            </div>
+          </div>
+  
+          <!-- Third review-box -->
+          <div class="review-box">
+            <div class="review-profile-container">
+              <div class="profile-placeholder" style="background-color: green;">M</div>
+              <div class="review-column-container">
+                <span class="username">Michael Brown</span>
+                <div class="review-header">
+                  <div class="review-rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <span class="rating-number">5</span>
+                  </div>
+                  <div class="divider-vertical"></div>
+                  <span class="review-time">2 weeks ago</span>
+                </div>
+              </div>
+            </div>
+            <p class="review-description">
+              Excellent service and product quality! The seller was very accommodating and the transaction was seamless. I would definitely recommend this seller to others.
+            </p>
+            <div class="review-footer">
+              <span class="helpful-text">Helpful?</span>
+              <button class="helpful-button">
+                Yes <i class="bi bi-hand-thumbs-up"></i>
+              </button>
+              <button class="helpful-button">
+                No <i class="bi bi-hand-thumbs-down"></i>
+              </button>
+            </div>
+          </div>
+  
+          <!-- Add more review-boxes as needed -->
+  
+          <!-- New 5-Star Review -->
+          <div class="review-box">
+            <div class="review-profile-container">
+              <div class="profile-placeholder" style="background-color: blue;">A</div>
+              <div class="review-column-container">
+                <span class="username">Alice Johnson</span>
+                <div class="review-header">
+                  <div class="review-rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <span class="rating-number">5</span>
+                  </div>
+                  <div class="divider-vertical"></div>
+                  <span class="review-time">1 week ago</span>
+                </div>
+              </div>
+            </div>
+            <p class="review-description">
+              Amazing service! The pig arrived in perfect health and was exactly as described. I highly recommend this seller to everyone.
+            </p>
+            <div class="review-footer">
+              <span class="helpful-text">Helpful?</span>
+              <button class="helpful-button">
+                Yes <i class="bi bi-hand-thumbs-up"></i>
+              </button>
+              <button class="helpful-button">
+                No <i class="bi bi-hand-thumbs-down"></i>
+              </button>
+            </div>
+          </div>
+  
+          <!-- New 4-Star Review -->
+          <div class="review-box">
+            <div class="review-profile-container">
+              <div class="profile-placeholder" style="background-color: orange;">B</div>
+              <div class="review-column-container">
+                <span class="username">Bob Williams</span>
+                <div class="review-header">
+                  <div class="review-rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star"></i>
+                    <span class="rating-number">4</span>
+                  </div>
+                  <div class="divider-vertical"></div>
+                  <span class="review-time">3 weeks ago</span>
+                </div>
+              </div>
+            </div>
+            <p class="review-description">
+              The pig was in great condition and the transaction was smooth. However, the delivery was delayed by a day, so I’m giving it 4 stars.
+            </p>
+            <div class="review-footer">
+              <span class="helpful-text">Helpful?</span>
+              <button class="helpful-button">
+                Yes <i class="bi bi-hand-thumbs-up"></i>
+              </button>
+              <button class="helpful-button">
+                No <i class="bi bi-hand-thumbs-down"></i>
+              </button>
+            </div>
+          </div>
+  
+          <!-- New 3-Star Review -->
+          <div class="review-box">
+            <div class="review-profile-container">
+              <div class="profile-placeholder" style="background-color: rgb(212, 212, 0);">C</div>
+              <div class="review-column-container">
+                <span class="username">Charlie Davis</span>
+                <div class="review-header">
+                  <div class="review-rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                    <span class="rating-number">3</span>
+                  </div>
+                  <div class="divider-vertical"></div>
+                  <span class="review-time">1 month ago</span>
+                </div>
+              </div>
+            </div>
+            <p class="review-description">
+              The pig was okay, but it wasn’t as healthy as I expected. The seller could improve the quality control process.
+            </p>
+            <div class="review-footer">
+              <span class="helpful-text">Helpful?</span>
+              <button class="helpful-button">
+                Yes <i class="bi bi-hand-thumbs-up"></i>
+              </button>
+              <button class="helpful-button">
+                No <i class="bi bi-hand-thumbs-down"></i>
+              </button>
+            </div>
+          </div>
+  
+          <!-- New 1-Star Review with Humor -->
+          <div class="review-box">
+            <div class="review-profile-container">
+              <div class="profile-placeholder" style="background-color: red;">D</div>
+              <div class="review-column-container">
+                <span class="username">David Lee</span>
+                <div class="review-header">
+                  <div class="review-rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                    <span class="rating-number">1</span>
+                  </div>
+                  <div class="divider-vertical"></div>
+                  <span class="review-time">2 days ago</span>
+                </div>
+              </div>
+            </div>
+            <p class="review-description">
+              Well, the pig which I supposed to receive... was already dead. Thank you!
+            </p>
+            <div class="review-footer">
+              <span class="helpful-text">Helpful?</span>
+              <button class="helpful-button">
+                Yes <i class="bi bi-hand-thumbs-up"></i>
+              </button>
+              <button class="helpful-button">
+                No <i class="bi bi-hand-thumbs-down"></i>
+              </button>
+            </div>
+          </div>
+  
+          <!-- Additional Reviews -->
+          <!-- Continue adding more reviews as needed -->
+           
+              <!-- Add New Review Here -->
+      <div class="review-box">
+          <div class="review-profile-container">
+            <div class="profile-placeholder" style="background-color: purple;">E</div>
+            <div class="review-column-container">
+              <span class="username">Emily White</span>
+              <div class="review-header">
+                <div class="review-rating">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <span class="rating-number">5</span>
+                </div>
+                <div class="divider-vertical"></div>
+                <span class="review-time">3 days ago</span>
+              </div>
+            </div>
+          </div>
+          <p class="review-description">
+            Excellent experience! The seller was very responsive, and the pig was in perfect condition upon arrival. I highly recommend this seller to others.
+          </p>
+          <div class="review-footer">
+            <span class="helpful-text">Helpful?</span>
+            <button class="helpful-button">
+              Yes <i class="bi bi-hand-thumbs-up"></i>
+            </button>
+            <button class="helpful-button">
+              No <i class="bi bi-hand-thumbs-down"></i>
+            </button>
+          </div>
+        </div>
+  
+  
+        <div class="review-box">
+          <div class="review-profile-container">
+            <div class="profile-placeholder" style="background-color: teal;">J</div>
+            <div class="review-column-container">
+              <span class="username">Jessica Adams</span>
+              <div class="review-header">
+                <div class="review-rating">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star"></i>
+                  <span class="rating-number">4</span>
+                </div>
+                <div class="divider-vertical"></div>
+                <span class="review-time">2 days ago</span>
+              </div>
+            </div>
+          </div>
+          <p class="review-description">
+            The product was as described, and the customer service was helpful. The delivery could have been quicker, but overall, I am satisfied with the purchase.
+          </p>
+          <div class="review-footer">
+            <span class="helpful-text">Helpful?</span>
+            <button class="helpful-button">
+              Yes <i class="bi bi-hand-thumbs-up"></i>
+            </button>
+            <button class="helpful-button">
+              No <i class="bi bi-hand-thumbs-down"></i>
+            </button>
+          </div>
+        </div>
+  
+  
+        </div>
+      </div>
+  
+      <div class="review-rightside-container">
+    
+        <div class="review-span">This user currently has 7 reviews</div>
+    
+        <div class="review-average">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+            <i class="bi bi-star"></i>
+            <span>3.86</span>
+        </div>
+  
+        <div class="review-dropbox-container">
+          <select class="review-dropbox">
+              <option value="placeholder" disabled selected>Sort by</option>
+              <option value="most-recent">Most Recent</option>
+              <option value="highest-rated">Highest Rated</option>
+              <option value="lowest-rated">Lowest Rated</option>
+          </select>
+      </div>
+    
+        <div class="review-stars">
+            <div class="star-bar-container">
+                <div class="star-bar">
+                    <div class="star-bar-fill" style="width: 60%;"></div>
+                </div>
+                <span class="star-label">5 stars (3)</span>
+            </div>
+            <div class="star-bar-container">
+                <div class="star-bar">
+                    <div class="star-bar-fill" style="width: 40%;"></div>
+                </div>
+                <span class="star-label">4 stars (2)</span>
+            </div>
+            <div class="star-bar-container">
+                <div class="star-bar">
+                    <div class="star-bar-fill" style="width: 20%;"></div>
+                </div>
+                <span class="star-label">3 stars (1)</span>
+            </div>
+            <div class="star-bar-container">
+                <div class="star-bar">
+                    <div class="star-bar-fill" style="width: 0%;"></div>
+                </div>
+                <span class="star-label">2 stars (0)</span>
+            </div>
+            <div class="star-bar-container">
+                <div class="star-bar">
+                    <div class="star-bar-fill" style="width: 20%;"></div>
+                </div>
+                <span class="star-label">1 star (1)</span>
+            </div>
+        </div>
+    
+        <div class="review-word-searchbox">
+            <input type="text" placeholder="Search reviews..." class="listing-display-box">
+            <button type="submit">
+                <i class="bi bi-search"></i>
+            </button>
+        </div>
+  
+  <div class="review-search-result">Search results: "The word 'Y' was found X times."</div>
+  
+    </div>
+  
+  
+  
+  </section>
+
+  <section class="pagination-section">
+<!-- Pagination Section 
+<section class="pagination-section">
+  <div class="pagination-dots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div> -->
+  <hr class="nav-hr">
+</section>
+
+    <!-- Listing section -->
+    <section id="listings">
+      <div class="listing-title">
+        <h2 class="title">Related sales and products</h2>
+      </div>
+      <div class="rectangle-container">
+        <div class="rectangle">
+          <img src="Rectangle 23.png" alt="Example 1">
+          <h4>Pig for Sale in Cebu</h4>
+          <ul>
+
+            <li><img width="96" height="96" src="https://img.icons8.com/color/96/marker--v1.png" alt="marker--v1"/>Location: Cebu</li>
+            <li><img width="96" height="96" src="https://img.icons8.com/color/96/weight-kg.png" alt="weight-kg"/>Weight: 80kg</li>
+            <li class="price"><img width="96" height="96" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>Price: 20,000 </li>
+            <button type="submit">More Details</button>
+          </ul>
+        </div>
+        <div class="rectangle">
+          <img src="Rectangle 33.png" alt="Example 2">
+          <h4>Pig for Sale in Cebu</h4>
+          <ul>
+            
+            <li><img width="96" height="96" src="https://img.icons8.com/color/96/marker--v1.png" alt="marker--v1"/>Location: Cebu</li>
+            <li><img width="96" height="96" src="https://img.icons8.com/color/96/weight-kg.png" alt="weight-kg"/>Weight: 80kg</li>
+            <li class="price"><img width="96" height="96" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>Price: 20,000 </li>
+            <button type="submit">More Details</button>
+          </ul>
+        </div>
+        <div class="rectangle">
+          <img src="Rectangle 22.png" alt="Example 3">
+          <h4>Pig for Sale in Cebu</h4>
+          <ul>
+            
+            <li><img width="96" height="96" src="https://img.icons8.com/color/96/marker--v1.png" alt="marker--v1"/>Location: Cebu</li>
+            <li><img width="96" height="96" src="https://img.icons8.com/color/96/weight-kg.png" alt="weight-kg"/>Weight: 80kg</li>
+            <li class="price"><img width="96" height="96" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>Price: 20,000 </li>
+            <button type="submit">More Details</button>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+
+<footer>
+  <div class="footer-content">
+      <img src="Group 193.png" alt="Piggery Logo" class="footer-logo">
+      <div class="footer-columns">
+          <div class="footer-box">
+            <h4>Our Mission</h4>
+              <p class="brand-statement">
+                Farmify piggery marketplace aims to revolutionize pig farming by providing a reliable and user-friendly platform where farmers and buyers can connect, trade, and thrive together.
+              </p>
+          </div>
+          <div class="footer-box">
+              <h4>Navigation</h4>
+              <ul class="footer-nav">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Pigs for Sale</a></li>
+                  <li><a href="#">Sell your Pig</a></li>
+                  <li><a href="#">About us</a></li>
+                  <li><a href="#">Contact</a></li>
+              </ul>
+          </div>
+          <div class="footer-box">
+              <h4>Contact</h4>
+              <p>Phone: (123) 456-7890</p>
+              <p>FAX: (123) 456-7891</p>
+              <p>123 Example Address, City, Country</p>
+          </div>
+          <div class="footer-box">
+              <h4>Stay Connected</h4>
+              <p>Stay connected with our latest news and price alerts to never miss a great deal.</p>
+              <div class="email-container">
+                <input type="email" placeholder="Email address" class="email-input">
+          </div>
+          <div class="social-icons">
+            <img src="Group 149.png" alt="Facebook" class="social-icon">
+            <img src="Group 148.png" alt="Twitter" class="social-icon">
+            <img src="Group 147.png" alt="Instagram" class="social-icon">
+        </div>
+      </div>
+  </div>
+
+  <hr>
+  <div class="footer-bottom">
+      <p>&copy; 2024 All rights reserved.</p>
+      <ul class="footer-bottom-nav">
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+      </ul>
+  </div>
+</footer>
+
+<script>
+  function toggleNav() {
+      var nav = document.querySelector('.navbar-collapse');
+      nav.classList.toggle('show');
+  }
+
+  function toggleSaveIcon(element) {
+        const icon = element.querySelector('i.bi-heart-fill');
+        icon.classList.toggle('red');
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const thumbnails = document.querySelectorAll('.thumbnail-images img');
+        const mainImage = document.getElementById('main-image');
+
+        thumbnails.forEach(function(thumb) {
+            thumb.addEventListener('mouseover', function() {
+                mainImage.src = this.getAttribute('data-image');
+            });
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+    const links = document.querySelectorAll('.nav-links a');
+
+    links.forEach(function(link) {
+        link.addEventListener('click', function() {
+            links.forEach(function(link) {
+                link.classList.remove('active');
+            });
+            this.classList.add('active');
+        });
+    });
+
+    // Handle smooth scrolling for Read More link
+    const readMoreLink = document.querySelector('.read-more-link a');
+    readMoreLink.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default anchor behavior
+        const targetSection = document.querySelector(this.getAttribute('href')); // Get the target section
+
+        if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const dots = document.querySelectorAll('.pagination-dots .dot');
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      // Remove 'active' class from all dots
+      dots.forEach(dot => dot.classList.remove('active'));
+
+      // Add 'active' class to the clicked dot
+      dot.classList.add('active');
+
+      // Implement logic to show the corresponding review rectangle set
+      // For example: hide all review rectangles and show the corresponding set
+    });
+  });
+})
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const chatbox = document.querySelector('.chatbox');
+    const closeButton = document.querySelector('.chatbox-close');
+    const chatboxHeader = document.querySelector('.chatbox-header');
+
+    // Add event listener to the close button to collapse the chatbox
+    closeButton.addEventListener('click', function (event) {
+        event.stopPropagation(); // Prevent triggering the header click event
+        chatbox.classList.add('collapsed');
+    });
+
+    // Add event listener to the header to expand the chatbox when clicked
+    chatboxHeader.addEventListener('click', function () {
+        if (chatbox.classList.contains('collapsed')) {
+            chatbox.classList.remove('collapsed');
+        }
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const reviewBoxes = document.querySelectorAll('.review-box');
+
+    reviewBoxes.forEach((box, index) => {
+        // Remove all borders first
+        box.style.borderTop = 'none';
+        box.style.borderBottom = '1px solid #e0e0e0';
+
+        // If it's the first review, add a top border
+        if (index === 0) {
+            box.style.borderTop = '1px solid #e0e0e0';
+        }
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const reviewDropdown = document.querySelector('.review-dropbox');
+    const reviewContainer = document.querySelector('.scrollable-rectangles-review');
+    const reviewBoxes = Array.from(document.querySelectorAll('.review-box'));
+
+    function sortReviews(sortType) {
+        let sortedReviews;
+
+        if (sortType === 'most-recent') {
+            sortedReviews = reviewBoxes.sort((a, b) => {
+                const dateA = new Date(a.querySelector('.review-time').textContent);
+                const dateB = new Date(b.querySelector('.review-time').textContent);
+                return dateB - dateA;
+            });
+        } else if (sortType === 'highest-rated') {
+            sortedReviews = reviewBoxes.sort((a, b) => {
+                const ratingA = parseFloat(a.querySelector('.rating-number').textContent);
+                const ratingB = parseFloat(b.querySelector('.rating-number').textContent);
+                return ratingB - ratingA;
+            });
+        } else if (sortType === 'lowest-rated') {
+            sortedReviews = reviewBoxes.sort((a, b) => {
+                const ratingA = parseFloat(a.querySelector('.rating-number').textContent);
+                const ratingB = parseFloat(b.querySelector('.rating-number').textContent);
+                return ratingA - ratingB;
+            });
+        }
+
+        // Clear the container and append the sorted reviews
+        reviewContainer.innerHTML = '';
+        sortedReviews.forEach(review => reviewContainer.appendChild(review));
+    }
+
+    reviewDropdown.addEventListener('change', function() {
+        const selectedOption = this.value;
+        sortReviews(selectedOption);
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const reviewDropdown = document.querySelector('.review-dropbox');
+    const reviewContainer = document.querySelector('.scrollable-rectangles-review');
+    const reviewBoxes = Array.from(document.querySelectorAll('.review-box'));
+
+    function parseTimeAgo(timeAgo) {
+        const timeParts = timeAgo.split(' ');
+        const number = parseInt(timeParts[0], 10);
+        const unit = timeParts[1].toLowerCase();
+
+        let milliseconds = 0;
+        if (unit.includes('second')) {
+            milliseconds = number * 1000;
+        } else if (unit.includes('minute')) {
+            milliseconds = number * 1000 * 60;
+        } else if (unit.includes('hour')) {
+            milliseconds = number * 1000 * 60 * 60;
+        } else if (unit.includes('day')) {
+            milliseconds = number * 1000 * 60 * 60 * 24;
+        } else if (unit.includes('week')) {
+            milliseconds = number * 1000 * 60 * 60 * 24 * 7;
+        } else if (unit.includes('month')) {
+            milliseconds = number * 1000 * 60 * 60 * 24 * 30; // Approximate
+        } else if (unit.includes('year')) {
+            milliseconds = number * 1000 * 60 * 60 * 24 * 365; // Approximate
+        }
+
+        return Date.now() - milliseconds;
+    }
+
+    function sortReviews(sortType) {
+        let sortedReviews;
+
+        if (sortType === 'most-recent') {
+            sortedReviews = reviewBoxes.sort((a, b) => {
+                const timeA = parseTimeAgo(a.querySelector('.review-time').textContent);
+                const timeB = parseTimeAgo(b.querySelector('.review-time').textContent);
+                return timeB - timeA;
+            });
+        } else if (sortType === 'highest-rated') {
+            sortedReviews = reviewBoxes.sort((a, b) => {
+                const ratingA = parseFloat(a.querySelector('.rating-number').textContent);
+                const ratingB = parseFloat(b.querySelector('.rating-number').textContent);
+                return ratingB - ratingA;
+            });
+        } else if (sortType === 'lowest-rated') {
+            sortedReviews = reviewBoxes.sort((a, b) => {
+                const ratingA = parseFloat(a.querySelector('.rating-number').textContent);
+                const ratingB = parseFloat(b.querySelector('.rating-number').textContent);
+                return ratingA - ratingB;
+            });
+        }
+
+        // Clear the container and append the sorted reviews
+        reviewContainer.innerHTML = '';
+        sortedReviews.forEach(review => reviewContainer.appendChild(review));
+    }
+
+    reviewDropdown.addEventListener('change', function() {
+        const selectedOption = this.value;
+        sortReviews(selectedOption);
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const searchBox = document.querySelector('.review-word-searchbox input[type="text"]');
+    const searchButton = document.querySelector('.review-word-searchbox button');
+    const reviewBoxes = document.querySelectorAll('.review-box');
+    const searchResult = document.querySelector('.review-search-result');
+
+    searchButton.addEventListener('click', function() {
+        const searchTerm = searchBox.value.trim().toLowerCase();
+        let matchCount = 0;
+
+        // Clear previous highlights and show all reviews
+        reviewBoxes.forEach(box => {
+            const description = box.querySelector('.review-description');
+            const originalText = description.textContent;
+            description.innerHTML = originalText; // Remove any previous highlights
+            box.style.display = ''; // Show all reviews initially
+        });
+
+        if (searchTerm) {
+            reviewBoxes.forEach(box => {
+                const description = box.querySelector('.review-description');
+                const originalText = description.textContent.toLowerCase();
+                let highlightedText = description.textContent;
+                const regex = new RegExp(`(${searchTerm})`, 'gi'); // Case-insensitive match
+
+                if (originalText.includes(searchTerm)) {
+                    matchCount += (originalText.match(regex) || []).length; // Count matches
+                    highlightedText = description.textContent.replace(regex, '<span class="highlight">$1</span>'); // Highlight matches
+                    description.innerHTML = highlightedText; // Update description with highlighted text
+                } else {
+                    box.style.display = 'none'; // Hide reviews without the search term
+                }
+            });
+
+            // Display the search result with correct grammar
+            const resultText = `Search results: The word '${searchTerm}' was found ${matchCount} time${matchCount !== 1 ? 's' : ''}.`;
+            searchResult.textContent = resultText;
+        } else {
+            searchResult.textContent = ''; // Clear result if search term is empty
+            reviewBoxes.forEach(box => box.style.display = ''); // Show all reviews if search term is empty
+        }
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const searchBox = document.querySelector('.review-word-searchbox input[type="text"]');
+    const searchButton = document.querySelector('.review-word-searchbox button');
+
+    // Add an event listener for the Enter key on the search box
+    searchBox.addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault(); // Prevent the default form submission
+            searchButton.click(); // Trigger the click event on the search button
+        }
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const starLabels = document.querySelectorAll('.star-label');
+    const reviewBoxes = Array.from(document.querySelectorAll('.review-box'));
+    let activeLabel = null;
+
+    starLabels.forEach(label => {
+        label.addEventListener('mouseover', function() {
+            this.classList.add('hovered');
+        });
+
+        label.addEventListener('mouseout', function() {
+            this.classList.remove('hovered');
+        });
+
+        label.addEventListener('click', function() {
+            // Remove active class from any previously selected label
+            if (activeLabel) {
+                activeLabel.classList.remove('active');
+            }
+
+            // Add active class to the clicked label
+            this.classList.add('active');
+            activeLabel = this;
+
+            // Get the number of stars from the label text
+            const starRating = parseInt(this.textContent[0]);
+
+            // Filter reviews based on the selected star rating
+            reviewBoxes.forEach(box => {
+                const rating = parseInt(box.querySelector('.rating-number').textContent);
+                if (rating === starRating) {
+                    box.style.display = 'block'; // Show matching reviews
+                } else {
+                    box.style.display = 'none'; // Hide non-matching reviews
+                }
+            });
+        });
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const reviewContainer = document.querySelector('.scrollable-rectangles-review');
+    const reviewCountSpan = document.querySelector('.review-span');
+    const reviewAverageSpan = document.querySelector('.review-average span');
+    const reviewStars = document.querySelector('.review-stars');
+    const starBars = document.querySelectorAll('.star-bar-fill');
+    const reviewDropdown = document.querySelector('.review-dropbox');
+    const reviewBoxes = Array.from(document.querySelectorAll('.review-box'));
+    const searchBox = document.querySelector('.review-word-searchbox input[type="text"]');
+    const searchButton = document.querySelector('.review-word-searchbox button');
+    const searchResult = document.querySelector('.review-search-result');
+
+    // Function to update review count
+    function updateReviewCount() {
+        const reviewCount = reviewBoxes.length;
+        reviewCountSpan.textContent = `This user currently has ${reviewCount} reviews`;
+    }
+
+    // Function to calculate and update the average rating
+    function updateReviewAverage() {
+        const totalReviews = reviewBoxes.length;
+        let sumRatings = 0;
+        reviewBoxes.forEach(review => {
+            sumRatings += parseFloat(review.querySelector('.rating-number').textContent);
+        });
+        const averageRating = (sumRatings / totalReviews).toFixed(2);
+        reviewAverageSpan.textContent = averageRating;
+
+        // Update star icons based on the average
+        const stars = reviewAverageSpan.parentElement.querySelectorAll('i');
+        const fullStars = Math.floor(averageRating);
+        const halfStar = averageRating % 1 >= 0.5;
+
+        stars.forEach((star, index) => {
+            star.className = 'bi';
+            if (index < fullStars) {
+                star.classList.add('bi-star-fill');
+            } else if (index === fullStars && halfStar) {
+                star.classList.add('bi-star-half');
+            } else {
+                star.classList.add('bi-star');
+            }
+        });
+    }
+
+    // Function to update star bar fill percentages
+    function updateStarBars() {
+        const starCounts = [0, 0, 0, 0, 0];
+        reviewBoxes.forEach(review => {
+            const rating = parseInt(review.querySelector('.rating-number').textContent);
+            starCounts[rating - 1]++;
+        });
+        const totalReviews = reviewBoxes.length;
+        starBars.forEach((bar, index) => {
+            const percentage = ((starCounts[5 - index - 1] / totalReviews) * 100).toFixed(1);
+            bar.style.width = `${percentage}%`;
+            bar.nextElementSibling.textContent = `${5 - index} stars (${starCounts[5 - index - 1]})`;
+        });
+    }
+
+    // Function to sort reviews based on dropdown selection
+    function sortReviews(sortType) {
+        let sortedReviews;
+
+        if (sortType === 'most-recent') {
+            sortedReviews = reviewBoxes.sort((a, b) => {
+                const dateA = new Date(a.querySelector('.review-time').textContent);
+                const dateB = new Date(b.querySelector('.review-time').textContent);
+                return dateB - dateA;
+            });
+        } else if (sortType === 'highest-rated') {
+            sortedReviews = reviewBoxes.sort((a, b) => {
+                const ratingA = parseFloat(a.querySelector('.rating-number').textContent);
+                const ratingB = parseFloat(b.querySelector('.rating-number').textContent);
+                return ratingB - ratingA;
+            });
+        } else if (sortType === 'lowest-rated') {
+            sortedReviews = reviewBoxes.sort((a, b) => {
+                const ratingA = parseFloat(a.querySelector('.rating-number').textContent);
+                const ratingB = parseFloat(b.querySelector('.rating-number').textContent);
+                return ratingA - ratingB;
+            });
+        }
+
+        // Clear the container and append the sorted reviews
+        reviewContainer.innerHTML = '';
+        sortedReviews.forEach(review => reviewContainer.appendChild(review));
+    }
+
+    // Function to search reviews
+    function searchReviews() {
+        const searchTerm = searchBox.value.trim().toLowerCase();
+        let matchCount = 0;
+
+        // Clear previous highlights and show all reviews
+        reviewBoxes.forEach(box => {
+            const description = box.querySelector('.review-description');
+            const originalText = description.textContent;
+            description.innerHTML = originalText; // Remove any previous highlights
+            box.style.display = ''; // Show all reviews initially
+        });
+
+        if (searchTerm) {
+            reviewBoxes.forEach(box => {
+                const description = box.querySelector('.review-description');
+                const originalText = description.textContent.toLowerCase();
+                let highlightedText = description.textContent;
+                const regex = new RegExp(`(${searchTerm})`, 'gi'); // Case-insensitive match
+
+                if (originalText.includes(searchTerm)) {
+                    matchCount += (originalText.match(regex) || []).length; // Count matches
+                    highlightedText = description.textContent.replace(regex, '<span class="highlight">$1</span>'); // Highlight matches
+                    description.innerHTML = highlightedText; // Update description with highlighted text
+                } else {
+                    box.style.display = 'none'; // Hide reviews without the search term
+                }
+            });
+
+            // Display the search result with correct grammar
+            const resultText = `Search results: The word '${searchTerm}' was found ${matchCount} time${matchCount !== 1 ? 's' : ''}.`;
+            searchResult.textContent = resultText;
+        } else {
+            searchResult.textContent = ''; // Clear result if search term is empty
+            reviewBoxes.forEach(box => box.style.display = ''); // Show all reviews if search term is empty
+        }
+    }
+
+    // Function to add a new review
+    function addNewReview(newReview) {
+        // Append the new review to the review container
+        reviewContainer.appendChild(newReview);
+        reviewBoxes.push(newReview);
+
+        // Update all necessary components
+        updateReviewCount();
+        updateReviewAverage();
+        updateStarBars();
+        sortReviews(reviewDropdown.value); // Sort based on selected option
+        searchReviews(); // Ensure new reviews are searchable
+    }
+
+    // Event listeners
+    reviewDropdown.addEventListener('change', function() {
+        sortReviews(this.value);
+    });
+
+    searchButton.addEventListener('click', function() {
+        searchReviews();
+    });
+
+    searchBox.addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault(); // Prevent the default form submission
+            searchButton.click(); // Trigger the click event on the search button
+        }
+    });
+
+    // Example: Adding a new review dynamically (you can replace this part with your actual new review creation logic)
+    const newReviewHTML = `
+<div class="review-box">
+  <div class="review-profile-container">
+    <div class="profile-placeholder" style="background-color: navy;">K</div>
+    <div class="review-column-container">
+      <span class="username">Kevin Smith</span>
+      <div class="review-header">
+        <div class="review-rating">
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star"></i>
+          <span class="rating-number">4</span>
+        </div>
+        <div class="divider-vertical"></div>
+        <span class="review-time">1 week ago</span>
+      </div>
+    </div>
+  </div>
+  <p class="review-description">
+    The overall experience was positive, but the product arrived slightly later than expected. The seller was responsive and addressed my concerns promptly.
+  </p>
+  <div class="review-footer">
+    <span class="helpful-text">Helpful?</span>
+    <button class="helpful-button">
+      Yes <i class="bi bi-hand-thumbs-up"></i>
+    </button>
+    <button class="helpful-button">
+      No <i class="bi bi-hand-thumbs-down"></i>
+    </button>
+  </div>
+</div>
+    `;
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = newReviewHTML;
+    const newReviewElement = tempDiv.firstElementChild;
+    addNewReview(newReviewElement); // Add the new review
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const reviewDropdown = document.querySelector('.review-dropbox');
+    const reviewContainer = document.querySelector('.scrollable-rectangles-review');
+    const reviewBoxes = Array.from(document.querySelectorAll('.review-box'));
+
+    function parseTimeAgo(timeAgo) {
+        const timeParts = timeAgo.split(' ');
+        const number = parseInt(timeParts[0], 10);
+        const unit = timeParts[1].toLowerCase();
+
+        let milliseconds = 0;
+        if (unit.includes('second')) {
+            milliseconds = number * 1000;
+        } else if (unit.includes('minute')) {
+            milliseconds = number * 1000 * 60;
+        } else if (unit.includes('hour')) {
+            milliseconds = number * 1000 * 60 * 60;
+        } else if (unit.includes('day')) {
+            milliseconds = number * 1000 * 60 * 60 * 24;
+        } else if (unit.includes('week')) {
+            milliseconds = number * 1000 * 60 * 60 * 24 * 7;
+        } else if (unit.includes('month')) {
+            milliseconds = number * 1000 * 60 * 60 * 24 * 30; // Approximate
+        } else if (unit.includes('year')) {
+            milliseconds = number * 1000 * 60 * 60 * 24 * 365; // Approximate
+        }
+
+        return Date.now() - milliseconds;
+    }
+
+    function sortReviews(sortType) {
+        let sortedReviews;
+
+        if (sortType === 'most-recent') {
+            sortedReviews = reviewBoxes.sort((a, b) => {
+                const timeA = parseTimeAgo(a.querySelector('.review-time').textContent);
+                const timeB = parseTimeAgo(b.querySelector('.review-time').textContent);
+                return timeB - timeA;
+            });
+        } else if (sortType === 'highest-rated') {
+            sortedReviews = reviewBoxes.sort((a, b) => {
+                const ratingA = parseFloat(a.querySelector('.rating-number').textContent);
+                const ratingB = parseFloat(b.querySelector('.rating-number').textContent);
+                return ratingB - ratingA;
+            });
+        } else if (sortType === 'lowest-rated') {
+            sortedReviews = reviewBoxes.sort((a, b) => {
+                const ratingA = parseFloat(a.querySelector('.rating-number').textContent);
+                const ratingB = parseFloat(b.querySelector('.rating-number').textContent);
+                return ratingA - ratingB;
+            });
+        }
+
+        // Clear the container and append the sorted reviews
+        reviewContainer.innerHTML = '';
+        sortedReviews.forEach(review => reviewContainer.appendChild(review));
+    }
+
+    reviewDropdown.addEventListener('change', function() {
+        const selectedOption = this.value;
+        sortReviews(selectedOption);
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const starLabels = document.querySelectorAll('.star-label');
+    const starBars = document.querySelectorAll('.star-bar-fill');
+    let reviewBoxArray = Array.from(document.querySelectorAll('.review-box'));
+
+    function updateStarLabels() {
+        const starCounts = [0, 0, 0, 0, 0];
+        reviewBoxArray.forEach(review => {
+            const rating = parseInt(review.querySelector('.rating-number').textContent);
+            starCounts[rating - 1]++;
+        });
+
+        starLabels.forEach((label, index) => {
+            const starRating = 5 - index;
+            label.textContent = `${starRating} stars (${starCounts[starRating - 1]})`;
+        });
+
+        updateStarBars(starCounts);
+    }
+
+    function updateStarBars(starCounts) {
+        const totalReviews = reviewBoxArray.length;
+        starBars.forEach((bar, index) => {
+            const percentage = ((starCounts[5 - index - 1] / totalReviews) * 100).toFixed(1);
+            bar.style.width = `${percentage}%`;
+            bar.nextElementSibling.textContent = `${5 - index} stars (${starCounts[5 - index - 1]})`;
+        });
+    }
+
+    function addNewReview(newReview) {
+        reviewBoxArray.push(newReview);
+        updateStarLabels(); // Update star labels and bars when a new review is added
+    }
+
+    // Initial call to update star labels and bars based on existing reviews
+    updateStarLabels();
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const starLabels = document.querySelectorAll('.star-label');
+    let reviewBoxes = Array.from(document.querySelectorAll('.review-box'));
+    let activeLabel = null;
+
+    starLabels.forEach(label => {
+        label.addEventListener('click', function() {
+            // Remove active class from any previously selected label
+            if (activeLabel) {
+                activeLabel.classList.remove('active');
+            }
+
+            // Add active class to the clicked label
+            this.classList.add('active');
+            activeLabel = this;
+
+            // Get the number of stars from the label text
+            const starRating = parseInt(this.textContent[0]);
+
+            // Filter and display reviews based on the selected star rating
+            reviewBoxes.forEach(box => {
+                const rating = parseInt(box.querySelector('.rating-number').textContent);
+                if (rating === starRating) {
+                    box.style.display = 'block'; // Show matching reviews
+                } else {
+                    box.style.display = 'none'; // Hide non-matching reviews
+                }
+            });
+        });
+    });
+});
+
+
+// Function to send a message
+function sendMessage() {
+    const inputField = $("#message-input").data("emojioneArea");  // Reference the emojioneArea instance
+    const message = inputField.getText().trim();  // Get the content of the EmojioneArea editor
+
+    if (!message || !activeUserId) return;
+
+    const chatArea = document.querySelector('.chat-area');
+    const newMessageBox = document.createElement('div');
+    newMessageBox.classList.add('second-small-chat-box');
+
+    newMessageBox.innerHTML = `
+        <div class="second-chat-image-info-wrap">
+            <div class="second-message-info">
+                <div class="second-user-name">Me</div>
+                <div class="second-chat-message-time">${getCurrentTime()}</div>
+                <div class="second-chat-message">${message}</div>
+            </div>
+            <div class="profile-container">
+                <img src="Rectangle 405.png" alt="Profile Image" class="profile-image">
+            </div>
+        </div>
+    `;
+
+    const lineWithDate = document.createElement('div');
+    lineWithDate.classList.add('line-with-date');
+    lineWithDate.innerHTML = `
+        <div class="line"></div>
+        <span class="date">${getCurrentDate()}</span>
+        <div class="line"></div>
+    `;
+
+    chatArea.appendChild(lineWithDate);
+    chatArea.appendChild(newMessageBox);
+
+    updateLastMessage(activeUserId, `Me: ${message}`);
+    inputField.setText('');  // Clear the EmojioneArea editor
+    chatArea.scrollTop = chatArea.scrollHeight;  // Scroll to the bottom
+}
+
+// Event listener for sending the message
+document.querySelector('.send-button').addEventListener('click', sendMessage);
+
+document.querySelector('.chat-input-field').addEventListener('keydown', function (event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        sendMessage();
+    }
+});
+
+
+$(document).ready(function() {
+    // Initialize EmojioneArea
+    const emojioneArea = $("#message-input").emojioneArea({
+        pickerPosition: "bottom",
+        tonesStyle: "bullet",
+    });
+
+    // Attach event listener to EmojioneArea editor for Enter key
+    emojioneArea[0].emojioneArea.on('keydown', function(editor, event) {
+        if (event.key === "Enter") {
+            event.preventDefault();  // Prevents default behavior like adding a new line
+            sendMessage();  // Calls sendMessage function
+        }
+    });
+});
+
+
+function showPhoneNumber() {
+    const phoneButton = document.getElementById('phone-button');
+    const phoneNumberElement = document.getElementById('phone-number');
+
+    // Hide the button
+    phoneButton.style.display = "none";
+
+    // Show the phone number text
+    phoneNumberElement.style.display = "inline";
+}
+
+
+</script>
+</main>
+</body>
