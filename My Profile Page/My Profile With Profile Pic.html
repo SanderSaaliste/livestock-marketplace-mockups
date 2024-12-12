@@ -1,0 +1,4563 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Profile</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<style>
+
+        /* Header styles */
+        header {
+            /* background-image: url(header.png);   logicdigger css remove this
+            height: 100vh; /* Make the image responsive logicdigger css remove this */
+            width: 100%; 
+            object-fit: cover; /* Ensure the image covers the entire header */
+            filter: brightness(0.);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 99;
+        }
+
+        /***logicdigger css***/
+        .listing-title {
+    width: 100%;
+    max-width: 85%;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.heor-content {
+    width: 100%;
+    max-width: 1270px;
+    margin: 0 auto;
+    padding: 12px 25px;
+}
+
+  /***logicdigger css ***/
+        .navbar-toggler, .navbar-close {
+            display: none;
+            background-color: transparent;
+            border: none;
+            font-size: 35px;
+            cursor: pointer;
+        }
+        .navbar-nav {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            flex: 1;
+            justify-content: space-between;
+        }
+        .navbar-nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #3c5823;
+    font-weight: 600;
+}
+        .navbar-nav .icons a {
+            margin: 0 5px;
+        }
+        .navbar-collapse {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            flex: 1;
+        }
+
+        @media only screen and (min-width: 1024px) and (max-width: 1350px)  {
+          .image-item {
+            margin-bottom: 20px !important;
+          }
+          .navbar-nav .nav-link:nth-child(6) {
+            margin: 0 !important;
+          }
+          .rectangle-container{
+            display: block !important;
+            text-align: center;
+          }
+          .rectangle {
+    width: 25% !important;
+    display:inline-block !important;
+  }
+  .rectangle li img {
+    height: 10%;
+    width: 10% !important;
+    padding-right: 3%;
+}
+  .rectangle img {
+    width: 100% !important;
+  }
+        }
+        @media only screen and (min-width: 768px) and (max-width: 1024px)  {
+        .rectangle-container  .rectangle img {
+    width: 310px !important;
+}
+.sell-us-content{
+  display: block !important;
+  margin-bottom: 20px;
+}
+.rectangle-container .rectangle {
+    width: 300px !important;
+}
+.rectangle-container {
+    flex-wrap: wrap;
+}
+.rectangle-container .rectangle li img {
+    width: 10% !important;
+}
+footer {
+    height: unset !important;
+}
+.footer-columns {
+    display: block !important;
+}
+main .listing-title .title{
+  text-align: center !important;
+}
+  }
+  @media (max-width: 400px) { 
+  .search-container input[type=text] {
+    padding: 10px;
+    width: 200px !important;
+}
+.rectangle {
+        max-width: 80% !important;
+        margin: 0 auto !important;
+        margin-bottom: 20px !important;
+    }
+    .rectangle img {
+    width: 100% !important;
+    max-width: 350px;
+}
+.rectangle li img {
+    height: 10%;
+    width: 10% !important;
+    padding-right: 3%;
+}
+  }
+        @media (max-width: 1024px) {
+            .navbar-nav {
+               
+                flex-direction: column;
+                background-color: #f8f9fa;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                padding: 10px 0;
+            }
+            .navbar-collapse.show {
+  display: block !important;
+}
+.navbar-collapse {
+    display: none;
+}
+.navbar .container {
+    display: block;
+}
+.image-item {
+    margin-bottom: 20px !important;
+}
+            .navbar-nav .nav-link:nth-child(6){
+              margin: 0 !important;
+            }
+            .navbar-nav a {
+              padding: 10px 15px;
+          }
+            .navbar-nav.show {
+                display: flex;
+            }
+            .navbar-toggler {
+                display: block;
+            }
+            .navbar-close {
+                display: block;
+                align-self: flex-end;
+                margin: 10px 20px;
+                position: absolute;
+            }
+
+            span.navbar-toggler-icon {
+    float: right;
+    margin-right: 20px;
+}
+.navbar {
+    margin-top: 20px !important;
+}
+.navbar img {
+    margin-left: 20px;
+}
+        }
+
+.listing-title .title {
+    text-align: left !important;
+}
+body {
+    margin: 0;
+    padding: 0;
+}   
+.navbar .container {
+    width: 100%;
+    max-width: 1270px;
+    margin: auto;
+} 
+.heor-content {
+    width: 100%;
+    max-width: 1270px;
+    margin: 0 auto;
+}
+
+.hero-iner {
+    display: flex;
+    align-items: center;
+    height: 20vh;
+    background-size: cover;
+    background-position: bottom center;
+}
+
+.hero-section {
+    position: relative;
+}
+
+
+  /***logicdigger css end ***/
+
+    body  {
+      font-family: "Inter", sans-serif;
+        font-weight: 450;
+        font-size: 14px;
+        color: rgb(79, 79, 79);
+        width: 100%; /* Make the image responsive */
+        height: 100%; /* Make the image responsive */
+    } 
+
+.inter-font {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+    body {
+    height: 3400px;
+    }
+    .mochiy-pop-one-regular {
+  font-family: "Mochiy Pop One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+    .navbar-nav .nav-link:nth-child(6) {
+        margin-right: 280px; /*Adjust logo*/
+    }
+    .navbar-nav .nav-link:nth-child(1) {
+        margin-right: px;
+    }
+    .signup-button {
+      color: rgba(255, 255, 255, 0.952) !important;
+      background-color: #000000ce; /* Change background color to a prominent color */
+      border-radius: 20px; /* Add rounded corners */
+      padding: 10px 20px; /* Add padding to increase button size */
+      transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+    }
+    .signup-button:hover {
+background-color: #ff4632c8;
+    }
+    .navbar {
+margin-top: 38px; /* Adjust the value to move the navbar down further */
+}
+    .main-title {
+      margin-top: 30px;
+      font-size: 48px;
+      font-weight: bolder;
+      font-family: "Mochiy Pop One", sans-serif;
+      color: black;
+    }
+    .h4-title {
+      margin-top: -20px;
+      font-size: 23px;
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+    }
+    .search-container {
+      margin-top: -0px;
+    }
+    .search-container input[type=text] {
+padding: 10px;
+width: 268px;
+border: 1px solid #ccc;
+border-radius: 7.5px;
+outline: none;
+padding-top: 30px;
+background-color: rgb(252, 252, 252);
+font-family: Arial;
+font-size: 15px;
+font-weight: 500;
+text-align: center; /* Center the text vertically */
+justify-content: center; /* Center the text horizontally */
+padding: 19px;
+}
+.search-container input[type=text]::placeholder {
+    color: #c5c5c5; /* Light gray color */
+    display: flex;
+    padding: 50px;
+    font-weight: 600;
+}
+    .submit-container {
+      margin-top: -57px;
+      margin-left: 305px;
+      padding-left: 10px;
+    }
+    .submit-container button[type=submit] {
+      width: 149.33px;
+      border: 1px solid #ff4632c8;
+      background-color: #ff4632c8;
+      border-radius: 7.5px;
+      outline: none;
+      padding-top: 38px;
+      font-size: 15px;
+      font-weight: 600;
+      color: whitesmoke;
+      display: flex;
+      justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    padding: 19px;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+    }
+    .submit-container button[type=submit]:hover {
+    background-color: #ff4632e6; /* Darker color when hovered */
+    }
+    .bi-search {
+      position: absolute;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      padding: 19px;
+    }
+    .navbar-brand {
+      margin-right: 0px;
+      position: fixed;
+      height: auto;
+    }
+    .container { 
+    display:flex; /* Use flexbox */
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    }
+
+    
+    .bi-heart {
+      font-size: 20px;
+      font-weight: 900;
+      padding-right: 5px;
+    }
+    .bi-cart3 {
+      font-size: 20px;
+      font-weight: 900px;
+      padding-right: 10px;
+    }
+   
+        main {
+        /* Can use flex here */
+  height: 100vh; /* Set main height to full viewport height */
+}
+
+.heor-content {
+    padding-top: 20px; /* Adjust padding as needed to ensure breadcrumb is below the navbar */
+    padding-left: 15px; /* Adjust padding as needed */
+
+}
+
+.breadcrumb-section {
+    max-width: 1270px; /* Ensure container matches navbar width */
+    margin: 0 auto; /* Center the container */
+    padding-left: 0px; /* Align with other sections if necessary */
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.breadcrumb-container {
+    display:flex; /* Use flexbox */
+    justify-content: flex-start; /* Center the text horizontally */
+    align-items: flex-start; /* Center the text vertically */
+}
+
+.breadcrumb {
+    background: none;
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    display: flex; /* Make the breadcrumb horizontal */
+    list-style: none; /* Remove default list styles */
+}
+
+.breadcrumb-item {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: "/";
+    margin: 0 5px; /* Space between the items */
+    color: #6c757d9d; /* Color for the slash */
+}
+
+.breadcrumb a {
+    color: #6c757d9d;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb .breadcrumb-item.active {
+    color: #0f0f0f;
+    font-weight: bold;
+}
+
+/* Main Content Section */
+.main-content-section {
+    display: flex;
+    align-items: flex-start;
+    max-width: 1270px; /* Ensure container matches navbar width */
+    margin: 0 auto; /* Center the container */
+    padding-left: 0px; /* Align with other sections if necessary */
+    margin-top: 0px;
+}
+
+.main-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start; /* Ensure the container takes full width */
+    margin-right: 30px;
+}
+
+.image-gallery {
+    display: flex;
+    flex-direction: row; /* Change to column to stack thumbnails and main image vertically */
+    align-items: flex-start;
+    margin-right: 20px; /* Space between image gallery and pig details */
+}
+
+.main-image img {
+    transition: opacity 0.3s ease;
+}
+
+.thumbnail-images img:hover {
+    /*cursor: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"%3E%3Cpath d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.415l-3.85-3.85a1.007 1.007 0 0 0-.115-.098zm-5.442.656a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11z"/%3E%3C/svg%3E'), auto; */
+    cursor: pointer;
+}
+
+.thumbnail-images {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between thumbnails */
+    margin-right: 20px; /* Space between thumbnails and main image */
+}
+
+.thumbnail-images img {
+    width: 108px; /* Adjust the size as needed */
+    height: 106.5px;
+    border-radius: 0px;
+}
+
+.main-image img {
+    width: 450px; /* Adjust the size as needed */
+    /* height: auto; */
+    height: 456px; /*414px*/
+    border-radius: 0px;
+}
+
+.pig-details {
+  display: flex;
+    max-width: 1270px; /* Adjust the width as needed */
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 30px;
+}
+
+.location img {
+  height: 4%;
+  width: 4%;
+  align-items: center;
+  justify-content: center;
+  padding-right: 5px;
+}
+
+.save-icon {
+  display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 470px;
+    top: 0;
+    right: 0;
+    font-size: 14px; /* Font size for "Save" text */
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    color: black;
+}
+
+.save-icon i.bi-heart-fill {
+    margin-right: 5px; /* Space between icon and text */
+    color: #ccc;
+}
+
+.save-icon i.bi-heart-fill.red {
+            color: red; /* Set the heart icon color to red */
+        }
+
+.weight img {
+  height: 6%;
+  width: 6%;
+  align-items: center;
+  justify-content: center;
+}
+
+.price-icon img {
+  height: 6%;
+  width: 6%;
+  align-items: center;
+  justify-content: center;
+  padding-right: 5px;
+}
+
+.price-icon {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.user-profile {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.user-profile img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 10px; /* Space between the image and the text */
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column; /* Stack name and rating vertically */
+    display: flex;
+    align-items: left;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.user-profile h4 {
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    color: rgb(79, 79, 79);
+    margin: 0; /* Remove margin */
+}
+
+.user-rating {
+    display: flex;
+    align-items: center;
+    margin-top: 5px; /* Add margin to separate from the name */
+}
+
+.user-rating img {
+    width: 20px; /* Adjust the size of the star icon */
+    height: 20px;
+    margin-right: 5px; /* Space between the star and the rating text */
+}
+
+.user-rating span {
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+}
+
+.location {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.pig-details ul {
+  list-style-type: none;
+  justify-content: left;
+  padding: 0;
+  margin: 0px;
+}
+
+.pig-details ul li {
+  align-items: center;
+  justify-content: left;
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.pig-details h3 {
+    font-family: "Mochiy Pop One", sans-serif;
+    font-size: 30px;
+    color: black;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.pig-details .description {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: rgb(79, 79, 79);
+    line-height: 1.7;
+    font-weight: 420;
+    height: 96px;
+    width: 509px;
+}
+
+.read-more-link {
+  color: #6c757d9d;
+  font-family: "Inter", sans-serif;
+  margin-left: 10px;
+}
+
+.read-more-link a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.read-more-link a:hover {
+  text-decoration: underline;
+  color: #5EA91E; /* Slightly darker color for hover */
+}
+
+.button-container {
+    display: flex;
+    gap: 11px; /* Horizontal gap between buttons */
+    margin-top: 20px; /* Add some margin above the buttons */
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px; /* Vertical padding: 10, Horizontal padding: 16 */
+    border: none;
+    border-radius: 43px;
+    color: #FFFFFF;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    width: 159px;
+    height: 44px;
+}
+
+.button i {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+.add-to-cart {
+    background-color: #182110; /* Button color */
+}
+
+.contact-seller {
+    background-color: #5EA91E; /* Button color */
+}
+
+.contact-seller:hover {
+    background-color: #4e921a; /* Slightly darker green on hover */
+}
+
+.nav-links-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -20px;
+    padding: 10px;
+    padding-bottom: 50px;
+    align-items: center;
+    max-width: 1270px; /* Ensure container matches navbar width */
+    margin: 0 auto; /* Center the container */
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+    padding: 0;
+    text-align: left;
+}
+
+.nav-links a {
+    text-decoration: none;
+    /* color: #707070; */
+    color: #AEAEAE;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 460;
+    padding: 0;
+    transition: color 0.3s ease, font-weight 0.3s ease, text-decoration 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #5EA91E;
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 10px; /* Adjust the offset value as needed */
+}
+
+.nav-links a:hover {
+    color: #5EA91E;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.nav-hr {
+    width: 100%;
+    border: none;
+    border-top: 1px solid #000000; /* Adjust the color and thickness as needed */
+    margin-top: 60px; /* Adjust the spacing above the hr */
+}
+
+
+
+
+
+.product-image img {
+  width: 376px; /* Image width */
+  height: 334px; /* Image height */
+  object-fit: cover;
+  border-radius: 15px; /* Optional: Add some border-radius if needed */
+  border: 1.5px solid;
+  border-color: #F3E7E3;
+}
+
+.product-details {
+  flex: 1; /* Take the remaining space */
+}
+
+.product-title {
+  font-size: 26px;
+  font-family: "Mochiy Pop One", sans-serif;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+
+
+
+
+.adjusted-br {
+  margin-bottom: -5px; /* Adjust this value to control the space */
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between buttons */
+}
+
+.button {
+    padding: 0px 0px;
+    border-radius: 43px;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+.contact-seller {
+    background-color: #5EA91E;
+    width: 159px;
+    height: 44px;
+}
+
+.contact-seller:hover {
+  background-color: #4e921ae2;
+}
+
+.icon-only {
+    background-color: #5EA91E;
+    width: 59px;
+    height: 44px;
+}
+
+.icon-only:hover {
+    background-color: #4e921ae2; /* Slightly darker green on hover */
+}
+
+.icon-only img {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-right: 0px;
+  height: 20px;
+  width: 20px;
+}
+
+.icon-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px; /* Size of the circle */
+    height: 25px; /* Size of the circle */
+    border: 1px solid #ffffff; /* Border color */
+    border-radius: 50%; /* Makes the shape a circle */
+    color: #ffffff; /* Color of the icon */
+}
+
+
+
+.star-icon {
+    width: 24px; /* Adjust the size as needed */
+    height: 24px; /* Adjust the size as needed */
+    margin-right: 10px; /* Space between icon and text */
+    margin-bottom: 5px;
+}
+
+
+
+.user-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.user-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.user-info-details {
+    display: flex;
+    align-items: left;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column; /* Stack name and rating vertically */
+}
+
+.username {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 3px;
+}
+
+.stars {
+    display: flex;
+    gap: 3px;
+}
+
+
+.bi.bi-star-fill:last-of-type {
+    color: #FFCA28; /* Light grey color for the last star */
+}
+
+
+
+.content {
+  text-align: center; /* Center text horizontally */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  font-size: 20px;
+  color: black;
+  font-weight: bolder;
+  font-family: Arial;
+}
+
+.text-box {
+  width: 225px; /* Adjust width of the text box 195px */
+}
+
+.text-box p {
+  font-size: 14px;
+  margin: 0;
+  text-align: left;
+  line-height: 1.6; /* Adjust this value for desired line spacing */
+}
+
+.introduction {
+  height: 100vh; /* Make the image responsive */
+            width: 100vw; /* Make the image responsive */
+            object-fit: cover; /* Ensure the image covers the entire header */
+            filter: brightness(0.);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+}
+.listings {
+  height: 100vh; /* Make the image responsive */
+            width: 100vw; /* Make the image responsive */
+            object-fit: cover; /* Ensure the image covers the entire header */
+            filter: brightness(0.);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+}
+
+
+.nav-links-section h2 {
+  text-align: left; /* Center text horizontally */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  max-width: 1270px;
+  font-size: 36px;
+  color: #333;
+  margin: 0 auto;
+  font-weight: bold;
+  font-family: "Inter", sans-serif;
+ /*  margin-top: 20vh; Adjust as needed to position content below header remove from logicdiger */
+ margin-top: -25px;
+  margin-bottom: 20px;
+  /* Add padding as well */
+}
+
+
+
+    .user-profile-rectangle {
+    background-color: #EFF2F4;
+    height: 440px;
+    width: 390px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 20px;
+    border-radius: 17px;
+}
+
+.user-image {
+    width: 186px;
+    height: 186px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-right: 0px;
+    margin-top: 20px;
+}
+
+.user-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    margin-top: 25px;
+    font-weight: 700;
+    font-family: "Inter", sans-serif;
+    color: #000;
+}
+
+.user-rating {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.user-rating i {
+    color: #FFCA28; /* Gold color for star */
+    margin-right: 5px;
+}
+
+.user-rating rate {
+  font-size: 28px;
+}
+
+.user-membership {
+    color: #FF3D00;
+    font-size: 22px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    margin-right: 5px;
+    
+
+}.membership-icon {
+  display: flex;
+  flex-direction: row;
+}
+
+.user-sold {
+    color: #2E68BD;
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.user-bought {
+    color: #2C8F67;
+    font-size: 20px;
+    margin-top: 0px;
+    font-weight: 600;
+}
+
+.credit-input-container {
+  width: 100%;
+    max-width: 643px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    justify-content: flex-start;
+}
+
+
+.listing-input-container {
+    width: 100%;
+    max-width: 1270px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    margin-left: 0px;
+}
+
+.credit-display-box {
+  width: 369px;
+    padding: 10px 20px;
+    height: 35px;
+    border: 2px solid #f5f5f5;
+    border-radius: 5px;
+    background-color: #f5f5f5; /* Slightly grey background */
+    font-size: 14px;
+    color: #333;
+    font-family: "Inter", sans-serif;
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+    align-items: flex-end;
+}
+
+.listing-display-box {
+    width: 600px;
+    padding: 10px 20px;
+    height: 35px;
+    border: 2px solid #f5f5f5;
+    border-radius: 5px;
+    background-color: #f5f5f5; /* Slightly grey background */
+    font-size: 14px;
+    color: #333;
+    font-family: "Inter", sans-serif;
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+.placeholder-text {
+  display: flex;
+  color: #999; /* Placeholder text color */
+  align-items: center;
+  margin-left: 0px;
+  text-indent: 20px;
+  border-radius: 10px;
+  border: 1.8px solid #d7d7d7; 
+}
+
+.small-placeholder-text {
+  display: flex;
+  color: #999; /* Placeholder text color */
+  align-items: center;
+  margin-left: 0px;
+  text-indent: 20px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+
+
+.small-review-button {
+  width: 100px;
+    height: 43px;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    color: white;
+    border: 1px solid #434EB5;
+    background-color: #434EB5;
+    font-family: "Inter", sans-serif;;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.small-review-button:hover {
+  background-color: #353f92; /* Darker color when hovered */
+}
+
+.small-view-button {
+  width: 100px;
+    height: 43px;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #666666;
+    border: 1px solid #E1E1E1;
+    background-color: #E1E1E1;
+    font-family: "Inter", sans-serif;;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.small-view-button:hover {
+  background-color: #d6d6d6; /* Darker color when hovered */
+}
+
+.next-button-container {
+width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1270px;
+    margin-top: 0px;
+}
+
+.next-button {
+  width: 190px;
+    height: 40px;
+    border: 1px solid #5EA91E;
+    background-color: #5EA91E;
+    border-radius: 10px; /*43px*/
+    outline: none;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    padding: 24px;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+    cursor: pointer;
+}
+
+.next-button:hover {
+  background-color: #4e921a; /* Darker color when hovered */
+}
+
+.edit-button {
+  width: 100px;
+    height: 40px;
+    border: 1px solid #292C49;
+    background-color: #292C49;
+    border-radius: 43px;
+    outline: none;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.edit-button:hover {
+  background-color: #191b2c; /* Darker color when hovered */
+}
+
+
+.nav-button-container {
+  display: flex;
+  flex-direction: row;
+  height: 55px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.card-number-container {
+    position: relative;
+width: 412px;
+    border-bottom: 2.5px solid #292C49;
+    border-radius: 10px 10px 10px 10px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+.bi.bi-credit-card-fill {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    font-size: 16px; /* Adjust icon size as needed */
+    color: #999;
+    align-items: center;
+    margin-left: 0px;
+}
+
+.history-section {
+  display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 1270px;
+    margin: 0 auto;
+    padding-left: 0px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.my-listing-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 1270px; /* Ensure container matches navbar width */
+    margin: 0 auto; /* Center the container */
+    padding-left: 0px; /* Align with other sections if necessary */
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+
+.scroll-bar-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.scrollable-rectangles {
+  height: 480px; /* Set a fixed height to enable scrolling */
+  overflow-y: scroll;
+  padding-right: 20px;
+}
+
+/* Custom scrollbar styles */
+.scrollable-rectangles::-webkit-scrollbar {
+  width: 8px; /* Width of the entire scrollbar */
+}
+
+.scrollable-rectangles::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the scrollbar track */
+  border-radius: 10px; /* Rounded corners for the track */
+}
+
+.scrollable-rectangles::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+/* Add hover effect for the scrollbar thumb */
+.scrollable-rectangles::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darker color when hovered */
+}
+
+.rectangle-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Add space between the rectangles */
+}
+
+/* Hide scrollbar for client-container */
+.client-container.scrollable-rectangles::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+.client-container.scrollable-rectangles {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  padding: 0px;
+}
+
+.client-container {
+  display: flex;
+  flex-direction: column;
+    width: 1270px;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-left: 20px;
+    gap: 20px;
+}
+
+.client-rectangle {
+    display: flex;
+    align-items: center;
+    width: 470px;
+    height: 142px;
+    border: 1px solid #E0E0E0;
+    border-radius: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.rectangle-image-client {
+    width: 146px;
+    height: 122px;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.details-container-client {
+  display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 370px;
+}
+
+.details-container-client .title {
+    font-weight: 700;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    color: #000;
+}
+
+.client-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.rectangle-sold {
+  position: relative; /*Make container relative*/
+  display: flex;
+    align-items: center;
+    width: 725px;
+    height: 142px;
+    border: 1px solid #E0E0E0;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 0.1px;
+    box-sizing: border-box;
+}
+
+.sold-band {
+  position: absolute;
+  top: 15px; /* Adjust to position the band */
+  left: -30px; /* Adjust to position the band */
+  width: 150px; /* Adjust to fit the band */
+  height: 30px; /* Adjust to fit the band */
+  background-color: red; /* Base color */
+  color: white; /* White text color */
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  transform: rotate(-45deg); /* Rotate the band */
+  line-height: 30px; /* Center the text vertically */
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow */
+  opacity: 1; /* Ensure no transparency */
+  clip-path: polygon(0 0, 70% 0, calc(100% - 15px) 100%, 0 100%); /* Clip path to "cut" the band */
+  background: linear-gradient(to right, rgb(230, 0, 0) 0%, rgba(255,0,0,1) 100%);
+}
+
+.rectangle {
+    display: flex;
+    align-items: center;
+    width: 725px;
+    height: 142px;
+    border: 1px solid #E0E0E0;
+    border-radius: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.rectangle-image {
+    width: 146px;
+    height: 122px;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.rectangle-image-sold {
+    width: 146px;
+    height: 122px;
+    border-radius: 8px;
+    margin-right: 10px;
+    opacity: 1; /* Set opacity to 50% */
+}
+
+.details-container-sold {
+  display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 390px;
+    opacity: 0.5;
+}
+
+.details-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 370px;
+}
+
+.icon-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.icon-title-container i {
+    margin-right: 5px;
+    font-weight: 600;
+}
+
+.icon-title-container .title {
+  flex-grow: 1;
+    text-align: center;
+    font-weight: 700;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    color: #000;
+}
+
+.views {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;
+}
+
+.h4-sold {
+  display: flex;
+  color: red;
+  font-weight: 800;
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  justify-content: center;
+  align-items: center;
+  width: 190px;
+}
+
+.sold-container-wrap {
+  display: flex;
+  flex-direction: row;
+}
+
+.sold-container {
+ display: flex;
+ flex-direction: column;
+}
+
+.weight-container,
+.price-container {
+    display: flex;
+    align-items: center;
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    height: 100%; /* Ensure full height of parent */
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.li {
+    display: flex;
+    align-items: center;
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    height: 100%; /* Ensure full height of parent */
+}
+
+.weight-container li,
+.price-container li {
+    display: flex;
+    align-items: center;
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    height: 100%; /* Ensure full height of parent */
+    font-weight: 500;
+}
+
+.price-container li img,
+.weight-container li img {
+    /* Your CSS properties here */
+margin-right: 5px;
+}
+
+.bottom-button-container-sold {
+  display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-top: 0px;
+    align-items: flex-end;
+    gap: 10px;
+    margin-top: 5px;
+    height: 100px;
+    opacity: 0.5;
+}
+
+.bottom-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-top: 0px;
+    align-items: flex-end;
+    gap: 10px;
+    margin-top: 5px;
+    height: 100px;
+}
+
+.sold-container-with-x {
+  display: flex;
+  justify-content: flex-end;  
+  position: relative;
+    height: 115px;
+    width: 300px;
+}
+
+.container-with-x {
+  display: flex;
+  justify-content: flex-end;  
+  position: relative;
+    height: 115px;
+    width: 300px;
+}
+
+.sold-container-with-x .bi-x {
+  position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 26px; /* Adjust the size of the X icon as needed */
+    cursor: pointer;
+    color: #000000a3;
+}
+
+
+.container-with-x .bi-x {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 26px; /* Adjust the size of the X icon as needed */
+    cursor: pointer;
+    color: #000000a3;
+}
+
+.bi-x {
+    cursor: pointer; /* Add cursor pointer */
+}
+
+.button-container-wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.sold-button-container-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.small-edit-button {
+    width: 100px;
+    height: 43px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: #43B572;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.small-edit-button:hover {
+    background-color: #3da368;
+}
+
+.small-next-button {
+    width: 100px;
+    height: 43px;
+    border: none;
+    border-radius: 10px;
+    color: #666666;
+    font-weight: 500;
+    font-size: 14px;
+    background-color: #E1E1E1;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.small-next-button:hover {
+    background-color: #d6d6d6;
+}
+
+.small-sold-button,
+.small-delete-button {
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    background-color: #FF5F4A;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.small-sold-button:hover,
+.small-delete-button:hover {
+    background-color: #e45643;
+}
+
+.upper-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-top: 0px;
+    align-items: flex-end;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.scroll-bar-graph-container {
+  display: flex;
+  flex-direction: row;
+  width: 1270px;
+}
+
+.title-container {
+  display: flex;
+  flex-direction:row;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 1270px;
+  margin-bottom: 30px;
+}
+
+.listings-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #182110;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-family: "Inter", sans-serif;
+}
+
+.client-title {
+  font-size: 36px;
+    font-weight: 700;
+    color: #182110;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-family: "Inter", sans-serif;
+    width: 470px;
+}
+
+.graph-container {
+  display: flex;
+  width: 1270px;
+  justify-content: flex-end;
+  margin-left: 20px;
+}
+
+.graph-rectangle {
+  width: 430px;
+    height: 425px;
+    border: 1px solid #E0E0E0;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.listing-dropbox {
+    width: 100%;
+    width: 115px;
+    height: 18.8px;
+    border: 2px solid #f5f5f5;
+    border-radius: 5px;
+    background-color: #f5f5f5; /* Slightly grey background */
+    font-size: 14px;
+    color: #333;
+    font-family: "Inter", sans-serif;
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+    -webkit-appearance: none; /* Remove default arrow in WebKit browsers */
+    -moz-appearance: none; /* Remove default arrow in Firefox */
+    appearance: none; /* Remove default arrow in other browsers */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2714%27%20height%3D%2714%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27%23333%27%3E%3Cpath%20d%3D%27M7%2010l5%205%205-5z%27/%3E%3C/svg%3E'); /* Custom arrow icon */
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Position the arrow with margin-right 10px */
+    background-size: 25px 25px; /* Size of the arrow icon */
+    background-image: 
+        linear-gradient(to right, #33333358 1px, transparent 1px), /* Vertical line */
+        url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2714%27%20height%3D%2714%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27%23333%27%3E%3Cpath%20d%3D%27M7%2010l5%205%205-5z%27/%3E%3C/svg%3E'); /* Custom arrow icon */
+    background-repeat: no-repeat;
+    background-position: right 25px center, right 1px center; /* Position the arrow with margin-right 10px and the line with margin-right 20px */
+    background-size: 1px 10px, 25px 25px; /* Size of the line and the arrow icon */
+}
+
+.listing-dropbox:focus {
+    border-color: #5EA91E; /* Change border color when focused */
+    outline: none; /* Remove default outline */
+}
+
+.listing-dropbox option[value="placeholder"] {
+    color: #333;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+}
+
+.feeds-listing-dropbox {
+  width: 100%;
+    width: 150px;
+    height: 18.8px;
+    border: 2px solid #E0E0E0;
+    border-radius: 5px;
+    background-color: #ffffff; /* Slightly grey background */
+    font-size: 14px;
+    color: #333;
+    font-family: "Inter", sans-serif;
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+    -webkit-appearance: none; /* Remove default arrow in WebKit browsers */
+    -moz-appearance: none; /* Remove default arrow in Firefox */
+    appearance: none; /* Remove default arrow in other browsers */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2714%27%20height%3D%2714%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27%23333%27%3E%3Cpath%20d%3D%27M7%2010l5%205%205-5z%27/%3E%3C/svg%3E'); /* Custom arrow icon */
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Position the arrow with margin-right 10px */
+    background-size: 25px 25px; /* Size of the arrow icon */
+    background-image: 
+        linear-gradient(to right, #33333358 1px, transparent 1px), /* Vertical line */
+        url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2714%27%20height%3D%2714%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27%23333%27%3E%3Cpath%20d%3D%27M7%2010l5%205%205-5z%27/%3E%3C/svg%3E'); /* Custom arrow icon */
+    background-repeat: no-repeat;
+    background-position: right 25px center, right 1px center; /* Position the arrow with margin-right 10px and the line with margin-right 20px */
+    background-size: 1px 10px, 25px 25px; /* Size of the line and the arrow icon */
+}
+
+.feeds-listing-dropbox:focus {
+    border-color: #5EA91E; /* Change border color when focused */
+    outline: none; /* Remove default outline */
+}
+
+.feeds-listing-dropbox option[value="placeholder"] {
+    color: #333;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+}
+
+.title-price-container {
+  display: flex;
+  width: 400px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 80px;
+}
+
+.title-dropbox-container {
+  display: flex;
+  flex-direction: column;
+  width: 115px;
+  align-items: flex-start;
+  margin-left: 0px;
+}
+
+.market-title {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 10px;
+  margin-top: 0px;
+  margin-left: 0px;
+  justify-content: center;
+  align-items: center;
+}
+
+.market-price {
+  display: flex;
+  align-items: center;
+}
+
+.market-price-container {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.price-background {
+  display: inline-flex;
+  background-color: #2c91bd29; /*#DDEDCB;*/
+  padding: 7px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 18px;
+  align-items: center;
+}
+
+.lowest-price-background {
+  display: inline-flex;
+  background-color: #DDEDCB;
+  padding: 7px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 18px;
+  align-items: center;
+}
+
+.bottom-span {
+  display: flex;
+  flex-direction: column;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: #757575a3;
+  align-items: center;
+  justify-content: center;
+}
+
+.price-label img {
+  margin-right: 5px;
+}
+
+.background-price img {
+  margin-right: 5px;
+}
+
+.graph-content {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%; /* Ensure it takes full width of the container */
+    height: 100%; /* Ensure it takes full height of the container */
+}
+
+.y-axis {
+  display: flex;
+  width: 400px;
+  flex-direction: column;
+  gap: 34px;
+  margin-bottom: 20px;
+}
+
+.price-label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.38);
+}
+
+.x-axis-container {
+  display: flex;
+  width: 450px;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.horizontal-line {
+  width: 325px;
+  height: 0.3px;
+  background-color: #cacacaa3;
+  margin-left: 0px;
+  margin-right: 10px;
+}
+
+    /* Add this CSS for vertical lines */
+    .vertical-lines {
+  position: absolute;
+  top: 0;
+  left: 50px; /* Adjust to align with your y-axis */
+  height: 100%;
+  width: calc(100% - 60px); /* Adjust to match the graph width */
+  display: flex;
+  justify-content: space-between;
+}
+
+.vertical-line-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.vertical-lines span {
+  font-family: "Inter", sans-serif;
+  margin-top: 5px; /* Adjust to position the text below the line */
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.344);
+  font-weight: 550;
+}
+
+
+.vertical-lines .line {
+    width: 1px;
+    height: 100%;
+    background-color: #cacacaa3;
+    opacity: 0; /* Make the vertical lines invisible */
+}
+
+.vertical-lines .mon { left: 0%; }
+.vertical-lines .tue { left: 16.6%; }
+.vertical-lines .wed { left: 33.3%; }
+.vertical-lines .thur { left: 50%; }
+.vertical-lines .fri { left: 66.6%; }
+.vertical-lines .sat { left: 83.3%; }
+.vertical-lines .sun { left: 100%; }
+
+.x-axis {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.344);
+}
+
+.graph-dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #ff4632c8;
+  border-radius: 50%;
+  z-index: 10; /* Ensure dots appear above lines */
+}
+
+.graph-line {
+  stroke: rgb(0, 140, 255);
+  stroke-width: 5;
+  fill: none;
+}
+
+.lowest-graph-line {
+  stroke: #7CB342; /*rgb(0, 140, 255);*/
+  stroke-width: 5px;
+  fill: none;
+}
+
+.tooltip {
+        position: absolute;
+        padding: 5px;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        border-radius: 3px;
+        pointer-events: none;
+        display: none;
+        font-size: 12px;
+    }
+
+    .comparison-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1270px;
+    margin-top: 30px;
+    }
+
+    .comparison-rectangle {
+  height: 240px;
+  width: 684px;
+  border: 1px solid #E0E0E0;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.checkbox-container {
+  display: flex;
+  gap: 20px;
+  padding: 5px;
+  padding-left: 0px;
+}
+
+.checkbox-question-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-item label {
+  font-weight: 600;
+  font-size: 16px;
+  color: #000;
+  font-family: "Inter", sans-serif;
+  margin-left: 5px;
+}
+
+input[type="checkbox"]#previous {
+  width: 18px;
+  height: 18px;
+  appearance: none; /* Remove default styling */
+  background-color: #fff; /* White background */
+  border: 2px solid #ababab;; /* Black border */
+  border-radius: 4px; /* Optional: rounded corners */
+  cursor: pointer;
+  position: relative;
+}
+
+/* Checkbox checked state */
+input[type="checkbox"]#previous:checked {
+  background-color: #ffffff; /* Black background when checked */
+  border: 2px solid #000; /* Black border */
+}
+
+/* Checkmark styling */
+input[type="checkbox"]#previous:checked::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 10px; /* Width of the checkmark */
+  height: 5px; /* Height of the checkmark */
+  border: solid rgb(0, 0, 0);
+  border-width: 0 2px 2px 0;
+  width: 4px; /* Adjusted width for longer right wing */
+  height: 8px; /* Adjusted height for shorter left wing */
+}
+
+input[type="checkbox"]#current {
+  width: 18px;
+  height: 18px;
+  appearance: none; /* Remove default styling */
+  background-color: #fff; /* White background */
+  border: 2px solid #ababab;; /* Black border */
+  border-radius: 4px; /* Optional: rounded corners */
+  cursor: pointer;
+  position: relative;
+}
+
+/* Checkbox checked state */
+input[type="checkbox"]#current:checked {
+  background-color: #ffffff; /* Black background when checked */
+  border: 2px solid #000; /* Black border */
+}
+
+/* Checkmark styling */
+input[type="checkbox"]#current:checked::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 10px; /* Width of the checkmark */
+  height: 5px; /* Height of the checkmark */
+  border: solid rgb(0, 0, 0);
+  border-width: 0 2px 2px 0;
+  width: 4px; /* Adjusted width for longer right wing */
+  height: 8px; /* Adjusted height for shorter left wing */
+}
+
+.divider {
+  display: flex;
+  border: none;
+  border-top: 1px solid #E0E0E0; /* Adjust the color and thickness as needed */
+  margin: 20px 0;
+  margin-left: -20px;
+  text-align: left;
+  width: 724px;
+}
+
+.column-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  margin-top: 10px;
+}
+
+.comparison-price {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 18px;
+  font-weight: 750;
+  color: #000;
+  font-family: "Inter", sans-serif;
+}
+
+.earnings-container {
+  display: flex;
+  width: 400px;
+  flex-direction: row;
+}
+
+.earnings-container p {
+  margin: 5px;
+  margin-left: 0px;
+  font-weight: 750;
+  font-family: "Inter", sans-serif;
+  color: #000;
+  font-size: 18px;
+}
+
+.comparison-details {
+  display: flex;
+  width: 400px;
+  flex-direction: column;
+  gap: 0px;
+  margin-bottom: 30px;
+}
+
+.comparison-details p {
+  margin: 2px;
+  margin-left: 0px;
+  font-weight: 750;
+  font-family: "Inter", sans-serif;
+  color: #000;
+  font-size: 18px;
+}
+
+.comparison-chart-rectangle {
+        height: 240px;
+        width: 425px;
+        border: 1px solid #E0E0E0;
+        border-radius: 16px;
+        background-color: #F9F9F9;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .comparison-chart-rectangle .title {
+        font-size: 24px;
+        font-weight: 700;
+        font-family: "Inter", sans-serif;
+        color: #000000;
+        margin-bottom: 20px;
+        text-align: center;
+        align-self: center;
+        margin-top: 5px;
+    }
+
+    .comparison-chart-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .price-chart-wrapper .mini-current-rectangle {
+  color: #FFFFFF; /* Color for 7 Pigs */ /*#4B6576;*/
+  width: 160px;
+}
+
+.price-chart-wrapper .mini-previous-rectangle {
+  color: #4B6576; /* Color for 6 Pigs */ /*#FFFFFF;*/
+  opacity: 0.5;
+}
+
+.mini-current-rectangle,
+.mini-previous-rectangle {
+    transition: width 0.5s ease; /* Smooth transition for width */
+    width: 1px; /* Start width */
+}
+
+.price-chart-wrapper .mini-current-rectangle {
+    width: 160px; /* Final width when expanded */
+}
+
+.price-chart-wrapper .mini-previous-rectangle {
+    width: 150px; /* Final width when expanded */
+}
+
+    .mini-current-rectangle,
+    .mini-previous-rectangle {
+        width: 150px;
+        height: 36px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        padding-left: 15px;
+        color: #fff;
+        font-weight: 400;
+        font-family: "Inter", sans-serif;
+        font-size: 16px;
+    }
+
+    .mini-current-rectangle {
+        background-color: #2c91bd; /*#A1D1F0;*/
+    }
+
+    .mini-previous-rectangle {
+        background-color: #a1d0f0; /*#2c91bd;*/
+    }
+
+    .price-chart-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        align-items: flex-start;
+    }
+
+    .price-chart-container li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+
+    .price-chart-container img {
+        margin-right: 10px;
+    }
+
+    .price-chart-wrapper:nth-child(2) li {
+  opacity: 0.4;
+}
+
+    .price-chart-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.price-chart-wrapper li {
+  margin-left: 20px;
+  width: 80px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.comparison-weight-container {
+  display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+.calculator-section {
+  display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 1270px;
+    margin: 0 auto;
+    padding-left: 0px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+#calculator-title {
+  display: flex;
+  font-size: 36px;
+    font-weight: 700;
+    width: 1270px;
+    color: #182110;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+}
+
+.calculator-rectangle {
+  position: relative; /* Ensures relative positioning for absolute children */
+  padding-bottom: 60px; /* Add some padding to make space for the conclusion rectangle */
+}
+
+.conclusion-rectangle {
+  position: absolute;
+  bottom: 0; /* Align it to the bottom of the calculator-rectangle */
+  left: 50%; /* Start at the center horizontally */
+  transform: translateX(-50%); /* Center it horizontally */
+  width: 500px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid #7CB342; /* Only a bottom border */
+  background-color: #5fa91e1F; /* No background color */
+  border-radius: 0px; /* No border radius */
+}
+
+#conclusionDisplay {
+  color: #5EA91E; /* Text color to match the border color */
+  font-size: 22px;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  font-weight: 700;
+}
+
+#conclusionText {
+  margin: 0;
+  color: #000;
+  font-size: 18px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+}
+
+.calculator-rectangle {
+  height: 590px;
+  width: 1230px;
+  background-color: #F9FFE2;
+  border: 1px solid #E0E0E0;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  position: relative;
+  box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.05), /* Left shadow (smaller and lighter) */
+  2px 2px 5px rgba(0, 0, 0, 0.1);   /* Right and bottom shadow */
+}
+
+.pig-container, .feed-container, .profit-container {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.feeds-container-title {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #182110;
+  font-family: "Inter", sans-serif;
+}
+
+.container-title {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #182110;
+  font-family: "Inter", sans-serif;
+}
+
+.vertical-line {
+  width: 1px;
+  height: 485px; /* Height of the vertical line */
+  background-color: #E0E0E0;
+  align-self: center;
+}
+
+.box-input {
+  width: 128px;
+  height: 48px;
+  border-radius: 9px;
+  border: 1.9px solid #E0E0E0;
+  background-color: #FFFFFF;
+  padding: 2px;
+  font-size: 16px;
+  color: #000000;
+  text-align: center;
+  margin-top: 0px;
+  font-family: "Inter", sans-serif;
+  transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+.box-input:focus {
+    border-color: #5EA91E; /* Change border color when focused */
+    outline: none; /* Remove default outline */
+}
+
+.box-display {
+  width: 128px; /*134px*/
+  height: 48px; /*52px*/
+  border-radius: 9px;
+  border: 1.9px solid #E0E0E0;
+  background-color: #F1F6DC; /* Updated background color */
+  padding: 2px;
+  font-size: 16px;
+  color: #000000;
+  text-align: center;
+  margin-top: 0px;
+  display: flex;
+  pointer-events: none; /* Disable all mouse interactions */
+  user-select: none; /* Prevent text selection */
+  font-family: "Inter", sans-serif;
+}
+
+.special-input-container {
+  display: flex;
+  align-items: flex-start;
+  width: 140px;
+  flex-direction: column;
+  margin-top: 0px;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.special-display-container {
+  display: flex;
+  align-items: flex-end;
+  width: 140px;
+  flex-direction: column;
+  margin-top: 0px;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.input-display-container {
+  display: flex;
+  align-items: center;
+  width: 370px;
+  flex-direction: row;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+
+.input-display-container img {
+  margin-top: 12px;
+}
+
+.total-input-display-container {
+  display: flex;
+    align-items: center;
+    width: 370px;
+    flex-direction: row;
+    margin-top: 40px;
+    justify-content: space-between;
+}
+
+.total-input-display-container img {
+  margin-top: 12px;
+}
+
+.main-guiding-text {
+  display: flex;
+  height: 40px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #000;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 0px;
+}
+
+.guiding-text {
+  font-size: 13px;
+  font-weight: 600;
+  color: #000;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 5px;
+  margin-top: 0px;
+  margin-left: 5px;
+}
+
+.display-guiding-text {
+  font-size: 13px;
+  font-weight: 600;
+  color: #000;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 5px;
+  margin-top: 0px;
+  margin-left: 5px;
+}
+
+.input-guiding-container {
+  display: flex;
+  flex-direction: column;
+  width: 140px;
+  align-items: flex-start;
+}
+
+.icon-container {
+  position: relative;
+  display: inline-block;
+}
+
+.guiding-text-question-container {
+  display: flex;
+  flex-direction: row;
+  width: 140px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.bi-question-circle.info-icon {
+  margin-right: 10px;
+    font-weight: bold; /* or any other value like 400, 700, etc. */
+}
+
+#comparison-info-icon {
+      font-size: 18px; /* Increase this value to make it bigger */
+  }
+
+.info-box {
+    display: none; /* Hide the box by default */
+    position: absolute;
+    background-color: #f9f9f9;
+    font-family: "Inter", sans-serif;
+    color: #333;
+    text-align: left;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 250px;
+    margin-top: 5px;
+    z-index: 1;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.icon-container:hover .info-box {
+  display: block; /* Show the box on hover */
+}
+
+.calc-title {
+  display: flex;
+  margin: 0px;
+  color: #000;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  margin-top: 10px;
+  width: 140px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+/*Profile initials starts here*/
+.icon-circle {
+    width: 200px; /* Adjust as needed */
+    height: 200px; /* Adjust as needed */
+    margin-top: 5px;
+    background-color: #1c8aff; /* Gray background */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.icon-circle i {
+    font-size: 40px; /* Adjust as needed */
+    color: #7d7d7d; /* Icon color */
+}
+
+.verified-badge {
+  display: flex;
+  padding: 5px 45px;
+  border: 1px solid #8ccd53; /*#8eb5e7;*/
+  background-color: #8ccd53;/*#8eb5e7;*/
+  border-radius: 10px;
+  font-family: "Inter", sans-serif;
+  position: absolute; /* Make it moveable relative to the icon-circle */
+  bottom: -0%; /* Adjust this to control how far below the circle it appears */
+}
+
+.pic-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#profile-picture {
+    width: 200px; /* Adjust as needed */
+    height: 200px; /* Adjust as needed */
+    margin-top: 5px;
+    background-color: #1c8aff; /* Gray background */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.unverified-badge {
+  display: flex;
+  padding: 5px 20px;
+  border: 1px solid #df5353; /*#8eb5e7;*/
+  background-color: #f2f4ff;/*#8eb5e7;*/
+  border-radius: 10px;
+  font-family: "Inter", sans-serif;
+  position: absolute; /* Make it moveable relative to the icon-circle */
+  bottom: 35%; /* Adjust this to control how far below the circle it appears */
+}
+
+#badge-p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: #3e6b16;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+#no-badge-p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: #df5353; 
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.initials-text {
+    font-size: 18px; /* Adjust as needed */
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+    color: #333;
+}
+
+#profile-name {
+  font-size: 24px; /* Adjust as needed */
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    color: #333;
+}
+
+#name-initials {
+  font-size: 50px; /* Adjust as needed */
+    font-weight: 300;
+    color: white;
+    font-family: "Inter", sans-serif;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.icon-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #color-picker {
+            position: absolute;
+            top: 72%; /* Adjust as needed to place under the button */
+            left: 50%;
+            transform: translateX(-50%);
+            display: none; /* Initially hidden */
+            z-index: 1000; /* Ensure it's above other content */
+            cursor: pointer;
+        }
+
+        /* Hide the color picker behind the icon initially */
+        .hide-behind {
+            position: absolute;
+            left: -9999px;
+        }
+
+.image-upload-box {
+  flex-direction: column;
+    width: 100%;
+    max-width: 470px;
+    border: 2px dashed #5fa91e8d;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 0px;
+    padding: 20px;
+}
+
+.image-upload-box i {
+  display: flex;
+    font-size: 30px;
+    color: #5fa91e;
+    margin-bottom: 0px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.image-upload-box p {
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    color: #333;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.profile-p {
+display: flex;
+color: #999999;
+font-family: "Inter", sans-serif;
+font-size: 16px;
+margin-top: 10px;
+margin-bottom: 10px;
+}
+
+#upload-photo {
+  display: flex;
+  width: 190px;
+  margin-top: 20px;
+    height: 40px;
+    border: 1px solid #4387b5; /*#43B572;*/
+    background-color: #4387b5; /*#43B572;*/
+    border-radius: 10px;
+    outline: none;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    padding: 24px;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+    cursor: pointer;
+}
+
+#upload-photo:hover {
+background-color: #34698d;
+}
+/*Profile initials ends here*/
+
+#color-button {
+            padding: 8px 18px;
+            font-size: 16px;
+            font-family: "Inter", sans-serif;
+            cursor: pointer;
+            border: 2px solid #e0e3f1;
+            background-color: #f2f4ff; /* Light gray */
+            color: #df5353;
+            border-radius: 10px;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        #color-button:hover {
+            background-color: #df5353; /* Slightly darker gray */
+            border-color: #df5353; /* Slightly darker green */
+            color: white;
+        }
+
+        #verify-button {
+                      padding: 8px 18px;
+            font-size: 16px;
+            font-family: "Inter", sans-serif;
+            cursor: pointer;
+            border: 2px solid #e0e3f1;
+            background-color: #f2f4ff; /* Light gray */
+            color: #5fa91e;
+            border-radius: 10px;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        #verify-button:hover {
+            background-color: #5fa91e; /* Slightly darker gray */
+            border-color: #5fa91e; /* Slightly darker green */
+            color: white;
+        }
+
+
+
+    footer {
+        background-color: #43662e; /* Dark green background color */
+        color: #ffffff;
+        text-align: center;
+        padding: 50px 0; /* Adjust padding to fit within 600px height */
+        height: 580px; /* Set height to 600px */
+        position: relative;
+    }
+
+    footer .footer-content {
+    padding: 0 50px; /* Add horizontal padding to match the sell-us-section */
+}
+
+    .footer-logo {
+        display: block;
+        margin: 0 auto;
+        height: auto;
+        width: 350px; /* Adjust width as necessary */
+        margin-bottom: 20px;
+    }
+
+    .footer-columns {
+        display: flex;
+        justify-content: space-around;
+        /* align-items: flex-start; /* Align items to the start to fit better within the height */
+        /* align-items: center; /*Change that perhaps?*/
+        margin-top: 5%;
+        height: calc(100% - 100px); /* Ensure columns take up the full height of the footer, accounting for padding */
+}
+
+    .footer-box {
+        max-width: 250px;
+        text-align: left;
+        font-size: 16px; /* Adjust font size to fit within the height */
+        display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    height: 100%; /* Ensure footer-box takes up the full height of the parent */
+    line-height: 1.8; /* Adjust this value for desired line spacing */
+    }
+
+    .footer-box h4 {
+        color: #ffffff;
+        margin-bottom: 15px;
+        font-size: 20px;
+    }
+
+    .footer-box p {
+        color: #d2d2d2;
+        margin: 5px 0;
+        line-height: 1.8; /* Adjust this value for desired line spacing */
+    }
+
+    .footer-nav,
+    .footer-bottom-nav {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-nav li,
+    .footer-bottom-nav li {
+        margin-bottom: 10px; /* Reduce margin to fit better */
+    }
+
+    .footer-nav a,
+    .footer-bottom-nav a {
+        color: #e1e1e1;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .footer-nav a:hover,
+    .footer-bottom-nav a:hover {
+        color: #ffffff;
+    }
+
+    .footer-box input[type=email] {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1.2px solid #e1e1e1;
+        color: #ffffff;
+        padding: 10px 0; /* Remove left padding to align placeholder */
+        width: 235px;
+        margin-top: 15px;
+        outline: none;
+        text-align: left; /* Align text to the left */
+        position: relative;
+}
+
+.email-container {
+    position: relative;
+    display: inline-block;
+}
+
+.email-container::before {
+  content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABdUlEQVR4nO3cPUoDYRRG4UEQV2NjZ6GSqAj+bEBsrWzcnI2L0NbeRgQridHGI8JIJEyKQMi9H/c8CxheOEwymRnSdZIkSZIkSZIkSZIkSZIkSVoxYBu4B+6AnVUfX0sCHph5B/aWPYZWCHj+F8Qo0YDruSB/Ufajt5UF3ALfc1EmwCh6W1ksjjKO3lYWRskHo+SDUZqKchi9rSyMkg9GaSrKUfS2shiO8mGUQEZJCM+UfBZE+QTOoreVhVHyMUpbUc6jt5WFUZqJ8gVcdBkAV8DrwOPRaqbASXSMzf5XrGa3WQ4ig2z1I5QhSB/lEnjpB1U2Df/IKvylPs/L3wjGaCOG97XWzRj5Y/xe6h9HbyuHxTF8pLtuxkgEz4z0MSZ+TOWK4VuM62aMNmKMo7eVgzHywBh5YIw8MEYTMUbR28rBGHkANwNnhn8cEPh2zGQghv93EhRkA3gzRiLAKfAEPAK70XskSZIkSZIkSZIkSZIkSZK6cD+4pa0FeKE3zwAAAABJRU5ErkJggg==');
+    position: absolute;
+    right: -15px; /* Adjust the position as needed */
+    bottom: 25px; /* Adjust the position as needed */
+    height: 15px; /* Adjust size as needed */
+    pointer-events: none; /* Ensure the icon does not interfere with input interactions */
+    color: white;
+    size: 1px;
+    transform: scale(0.3); /* Scale the image to 50% of its original size */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 25px; /* Space between the input field and social media icons */
+    gap: 10px;
+}
+
+.social-icon {
+    width: 30px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
+}
+
+.footer-box img {
+height: 35px;
+width: 35px;
+color: white;
+}
+
+    .footer-box input[type=email]::placeholder {
+        color: #b9b9b98b;
+        font-size: 16px;
+    }
+
+    .footer-divider {
+        border: 0;
+        height: 1.2px;
+        background-color: #e1e1e1;
+        margin: 80px 0;
+        margin: 120px auto 10px auto; /* Increase the top margin to move the hr line down */
+        width: 90%; /* Set the width to 1320px */
+    }
+
+    .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 12px; /* Adjust font size to fit within the height */
+        width: 90%;
+        margin: 0 auto; /* Center align the footer-bottom container */
+        color: #e1e1e1;
+        padding: 0 60px; /* Add padding to the sides */
+        padding-top: 10px; /* Add some padding at the top */
+    }
+
+    .footer-bottom p {
+        margin: 0px;
+        color: #e1e1e1;
+    }
+
+    .footer-bottom-nav {
+        display: flex;
+        gap: 20px; /* Adjust gap to fit within the height */ /*Use this on navbar as well.*/
+        color: #e1e1e1;
+    }
+
+
+  /***logicdigger css  for mobile***/
+
+
+@media only screen and (max-width: 768px) {
+    
+      footer {
+    height: unset !important;
+}
+.footer-columns {
+    display: unset !important;
+ 
+} 
+.feed-details {
+    padding: 10px !important;
+}
+.feed-section-content {
+    display: block !important;
+    width: 85%;
+}
+.rectangle {
+    margin: auto;
+    margin-bottom: 20px;
+}
+.rectangle-container {
+    display: block !important;
+}
+.listing-title .title , .feed-section-title h2, .sell-us-section-title h2{
+    text-align: center !important;
+    font-size: 25px;
+}
+.sell-us-title, .second-sell-us-title{
+  font-size: 20px;
+}
+.footer-logo {
+    width: 250px;
+    margin-bottom: 20px;
+}
+.feed-title{
+  font-size: 25px;
+}
+
+.heor-content {
+    padding: 30px;
+}
+
+
+.navbar-nav a {
+    text-decoration: none;
+    color: #000;
+    padding: 10px 20px;
+    text-align: center;
+    margin: auto;
+    font-weight: 500;
+}
+
+
+.sell-us-content {
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1200px;
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.sell-us-item {
+    display: block !important;
+}
+.footer-bottom {
+    display: block !important;
+     width: unset !important;
+}
+hr {
+    width: 100%;
+}
+.footer-bottom-nav {
+    display: block !important;
+    margin-top: 10px;
+}
+.main-title {
+    font-size: 25px;
+}
+
+.h4-title {
+    font-size: 18px;
+    padding-top: 15px;
+}
+
+.submit-container {
+    margin: unset;
+    padding: 0;
+}
+
+.search-container input[type=text] {
+    margin-bottom: 10px;
+}
+
+.hero-iner {
+    background-position: center !important;
+}
+
+}
+
+    div#navbarNavAltMarkup {
+    margin-left: 30px;
+}   
+
+  /***logicdigger css  for mobile end ***/
+</style>
+</head>
+<body>
+
+    <!-- Header -->
+  <header>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#"></a> <!-- Logo -->
+      <img src="farmifylogo.png" alt="Logo" height="50"> <!-- Adjust the height as needed -->
+            </a>
+        <span class="navbar-toggler-icon">   <button class="navbar-toggler" onclick="toggleNav()">
+          &#9776;
+      </button></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+    
+
+        <div class="navbar-nav">
+
+          <button class="navbar-close" onclick="toggleNav()">
+            &times;
+        </button>
+          <a class="nav-link disabled">Home</a>
+          <a class="nav-link disabled">Pigs for Sale</a>
+          <a class="nav-link disabled">Sell your Pig</a>
+          <a class="nav-link disabled">About us</a>
+          <a class="nav-link disabled">Contact us</a>
+          <i class="bi bi-heart"></i>
+          <i class="bi bi-cart3"></i>
+          <a class="nav-link disabled">Login</a>
+          <a class="nav-link signup-button">Sign up</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+</header>
+
+<div class="hero-section">
+   <div class="hero-iner" style="background-image: url();">
+    <div class="heor-content">
+    </div>
+      </div> <!--iner hero-->
+</div><!--hero end-->
+      <main>
+
+<!-- Nav-Links section -->
+<section class="nav-links-section">
+  <h2 class="title">My Profile</h2>
+  <div class="nav-links">
+      <a href="#My Listings">My Listings</a>
+      <a href="#Transaction history">Transaction history</a>
+      <a href="#Calculator">Calculator</a>
+  </div>
+</section>
+
+<!-- Main Content Section -->
+<section class="main-content-section">
+    <div class="main-container">
+        <div class="user-profile-rectangle">
+          <div class="pic-wrapper">
+          <img id="profile-picture" class="profile-picture" src="profile pic.webp" alt="Profile Picture">
+            <div class="verified-badge">
+              <p id="badge-p" class="badge-p">Verified</p>
+            </div>
+          </div>
+          <h3 class="user-title">Darwin Rabago</h3>
+          <p class="profile-p">Joined April 2024</p>
+          <p class="profile-p">Location: Cebu City</p>
+          <button id="upload-photo" type="submit">Upload Photo</button>
+      </div>
+      </div>
+
+      <div class="pig-details">
+        <div class="listing-input-container">
+          <p class="main-guiding-text">First name</p>
+          <div class="listing-display-box placeholder-text">Darwin</div>
+        </div>
+        
+        <div class="listing-input-container">
+          <p class="main-guiding-text">Last name</p>
+          <div class="listing-display-box placeholder-text">Rabago</div>
+        </div>
+        
+        <div class="listing-input-container">
+          <p class="main-guiding-text">Email</p>
+          <div class="listing-display-box placeholder-text">darwinrabago@gmail.com</div>
+        </div>
+
+              <div class="listing-input-container">
+                <p class="main-guiding-text">Phone</p>
+                <div class="listing-display-box placeholder-text">+96 123 456 789</div>
+              </div>
+
+                <div class="credit-input-container">
+                  <div class="nav-button-container">
+                    <div class="next-button-container">
+                    <!-- <button type="submit" class="edit-button">Message</button> -->
+                    </div>
+                      <div class="next-button-container">
+                        <button type="submit" class="next-button">Edit</button>
+                      </div>
+                    </div>
+                  <div>
+              </div>
+
+                  
+                </div>
+
+
+</section>
+
+
+<section class="my-listing-section">
+  <div class="title-container">
+  <div class="listings-title">My Listings</div>
+</div>
+<div class="scroll-bar-graph-container">
+  <div class="scroll-bar-container">
+    <div class="rectangle-column scrollable-rectangles">
+      
+      <div class="rectangle">
+        <img src="Rectangle 34.png" alt="Image" class="rectangle-image">
+        <div class="details-container">
+          <div class="icon-title-container">
+            <i class="bi bi-eye"></i>
+            <span class="views">27</span>
+            <span class="title">01 Pig for Sale in Cebu</span>
+          </div>
+          <div class="weight-container">
+            <li><img width="20" height="20" src="https://img.icons8.com/color/96/weight-kg.png" alt="weight-kg"/>Weight: 80kg</li>
+          </div>
+          <div class="price-container">
+            <li class="price"><img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>Price: 20,000</li>
+          </div>
+        </div>
+        <div class="container-with-x">
+          <i class="bi bi-x"></i>
+          <div class="bottom-button-container">
+            <button class="small-edit-button">Edit</button>
+            <button class="small-next-button">View</button>
+          </div>
+        </div>
+      </div>
+      <!-- Duplicate the rectangle block to add more rectangles -->
+      <div class="rectangle">
+        <img src="Rectangle 34.png" alt="Image" class="rectangle-image">
+        <div class="details-container">
+          <div class="icon-title-container">
+            <i class="bi bi-eye"></i>
+            <span class="views">27</span>
+            <span class="title">01 Pig for Sale in Cebu</span>
+          </div>
+          <div class="weight-container">
+            <li><img width="20" height="20" src="https://img.icons8.com/color/96/weight-kg.png" alt="weight-kg"/>Weight: 80kg</li>
+          </div>
+          <div class="price-container">
+            <li class="price"><img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>Price: 20,000</li>
+          </div>
+        </div>
+        <div class="container-with-x">
+          <i class="bi bi-x"></i>
+          <div class="bottom-button-container">
+            <button class="small-edit-button">Edit</button>
+            <button class="small-next-button">View</button>
+          </div>
+        </div>
+      </div>
+      <div class="rectangle">
+        <img src="Rectangle 34.png" alt="Image" class="rectangle-image">
+        <div class="details-container">
+          <div class="icon-title-container">
+            <i class="bi bi-eye"></i>
+            <span class="views">27</span>
+            <span class="title">01 Pig for Sale in Cebu</span>
+          </div>
+          <div class="weight-container">
+            <li><img width="20" height="20" src="https://img.icons8.com/color/96/weight-kg.png" alt="weight-kg"/>Weight: 80kg</li>
+          </div>
+          <div class="price-container">
+            <li class="price"><img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>Price: 20,000</li>
+          </div>
+        </div>
+        <div class="container-with-x">
+          <i class="bi bi-x"></i>
+          <div class="bottom-button-container">
+            <button class="small-edit-button">Edit</button>
+            <button class="small-next-button">View</button>
+          </div>
+        </div>
+      </div>
+      <!-- Add more rectangles if needed -->
+
+      <div class="rectangle">
+        <img src="Rectangle 34.png" alt="Image" class="rectangle-image">
+        <div class="details-container">
+          <div class="icon-title-container">
+            <i class="bi bi-eye"></i>
+            <span class="views">27</span>
+            <span class="title">01 Pig for Sale in Cebu</span>
+          </div>
+          <div class="weight-container">
+            <li><img width="20" height="20" src="https://img.icons8.com/color/96/weight-kg.png" alt="weight-kg"/>Weight: 80kg</li>
+          </div>
+          <div class="price-container">
+            <li class="price"><img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>Price: 20,000</li>
+          </div>
+        </div>
+        <div class="container-with-x">
+          <i class="bi bi-x"></i>
+          <div class="bottom-button-container">
+            <button class="small-edit-button">Edit</button>
+            <button class="small-next-button">View</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="rectangle">
+        <img src="Rectangle 34.png" alt="Image" class="rectangle-image">
+        <div class="details-container">
+          <div class="icon-title-container">
+            <i class="bi bi-eye"></i>
+            <span class="views">27</span>
+            <span class="title">01 Pig for Sale in Cebu</span>
+          </div>
+          <div class="weight-container">
+            <li><img width="20" height="20" src="https://img.icons8.com/color/96/weight-kg.png" alt="weight-kg"/>Weight: 80kg</li>
+          </div>
+          <div class="price-container">
+            <li class="price"><img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>Price: 20,000</li>
+          </div>
+        </div>
+        <div class="container-with-x">
+          <i class="bi bi-x"></i>
+          <div class="bottom-button-container">
+            <button class="small-edit-button">Edit</button>
+            <button class="small-next-button">View</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="rectangle">
+        <img src="Rectangle 34.png" alt="Image" class="rectangle-image">
+        <div class="details-container">
+          <div class="icon-title-container">
+            <i class="bi bi-eye"></i>
+            <span class="views">27</span>
+            <span class="title">01 Pig for Sale in Cebu</span>
+          </div>
+          <div class="weight-container">
+            <li><img width="20" height="20" src="https://img.icons8.com/color/96/weight-kg.png" alt="weight-kg"/>Weight: 80kg</li>
+          </div>
+          <div class="price-container">
+            <li class="price"><img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>Price: 20,000</li>
+          </div>
+        </div>
+        <div class="container-with-x">
+          <i class="bi bi-x"></i>
+          <div class="bottom-button-container">
+            <button class="small-edit-button">Edit</button>
+            <button class="small-next-button">View</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+    
+  <div id="chart"></div>
+  <div class="tooltip" id="tooltip"></div>
+
+  <div class="graph-container">
+    <div class="graph-rectangle">
+        <div class="title-price-container">
+          <div class="title-dropbox-container">
+            <span class="market-title">Market Price</span>
+            <div class="listing-dropbox-container">
+              <select class="listing-dropbox">
+                  <option value="placeholder" disabled selected></option>
+                  <option value="pigs">Pigs</option>
+                  <option value="piglets">Piglets</option>
+                  <option value="lechon">Lechon</option>
+                  <option value="products">Products</option>
+              </select>
+          </div>
+        </div>
+            <div class="market-price-container">
+              <div class="span-market-price">
+                <span class="bottom-span">Average/kg</span>
+            <li class="market-price">
+                <span class="price-background">
+                    <img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>
+                    250
+                </span>
+            </li>
+          </div>
+            <div class="span-market-price">
+              <span class="bottom-span">Lowest/kg</span>
+            <li class="market-price">
+              <span class="lowest-price-background">
+                  <img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>
+                  250
+              </span>
+          </li>
+        </div>
+        </div>
+        </div>
+        <div class="graph-content">
+            <div class="y-axis">
+                <div class="price-label">
+                    <img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>230<div class="horizontal-line"></div>
+                </div>
+                <div class="price-label">
+                    <img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>220<div class="horizontal-line"></div>
+                </div>
+                <div class="price-label">
+                    <img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>210<div class="horizontal-line"></div>
+                </div>
+                <div class="price-label">
+                    <img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>200<div class="horizontal-line"></div>
+                </div>
+                <div class="price-label">
+                    <img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>190<div class="horizontal-line"></div>
+                </div>
+                <div class="price-label">
+                    <img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>180<div class="horizontal-line"></div>
+                </div>
+                <div class="price-label">
+                    <img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>170<div class="horizontal-line"></div>
+                </div>
+            </div>
+            <div class="vertical-lines">
+                <div class="vertical-line-container">
+                    <div class="line mon"></div>
+                    <span>Mon</span>
+                </div>
+                <div class="vertical-line-container">
+                    <div class="line tue"></div>
+                    <span>Tue</span>
+                </div>
+                <div class="vertical-line-container">
+                    <div class="line wed"></div>
+                    <span>Wed</span>
+                </div>
+                <div class="vertical-line-container">
+                    <div class="line thur"></div>
+                    <span>Thur</span>
+                </div>
+                <div class="vertical-line-container">
+                    <div class="line fri"></div>
+                    <span>Fri</span>
+                </div>
+                <div class="vertical-line-container">
+                    <div class="line sat"></div>
+                    <span>Sat</span>
+                </div>
+                <div class="vertical-line-container">
+                    <div class="line sun"></div>
+                    <span>Sun</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+</section>
+
+
+<section class="history-section">
+  <div class="title-container">
+    <div class="listings-title">Transaction history</div>
+    <div class="client-title">Client who bought</div>
+  </div>
+  <div class="scroll-bar-graph-container">
+    <div class="scroll-bar-container">
+      <div class="rectangle-column scrollable-rectangles">
+        <div class="rectangle-sold">
+          <div class="sold-band">SOLD</div>
+          <img src="Rectangle 34.png" alt="Image" class="rectangle-image-sold">
+          <div class="details-container-sold">
+            <div class="icon-title-container">
+              <i class="bi bi-eye"></i>
+              <span class="views">27</span>
+              <span class="title">01 Pig for Sale in Cebu</span>
+            </div>
+            <div class="weight-container">
+              <li><img width="20" height="20" src="https://img.icons8.com/color/96/weight-kg.png" alt="weight-kg"/>Weight: 80kg</li>
+            </div>
+            <div class="price-container">
+              <li class="price"><img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>Price: 20,000</li>
+            </div>
+          </div>
+          <div class="sold-container-with-x">
+            <i class="bi bi-x"></i>
+            <div class="bottom-button-container-sold">
+              <button class="small-edit-button">Edit</button>
+              <button class="small-next-button">View</button>
+            </div>
+          </div>
+        </div>
+        <!-- Duplicate the rectangle block to add more rectangles -->
+        <div class="rectangle-sold">
+          <div class="sold-band">SOLD</div>
+          <img src="Rectangle 34.png" alt="Image" class="rectangle-image-sold">
+          <div class="details-container-sold">
+            <div class="icon-title-container">
+              <i class="bi bi-eye"></i>
+              <span class="views">27</span>
+              <span class="title">01 Pig for Sale in Cebu</span>
+            </div>
+            <div class="weight-container">
+              <li><img width="20" height="20" src="https://img.icons8.com/color/96/weight-kg.png" alt="weight-kg"/>Weight: 80kg</li>
+            </div>
+            <div class="price-container">
+              <li class="price"><img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>Price: 20,000</li>
+            </div>
+          </div>
+          <div class="sold-container-with-x">
+            <i class="bi bi-x"></i>
+            <div class="bottom-button-container-sold">
+              <button class="small-edit-button">Edit</button>
+              <button class="small-next-button">View</button>
+            </div>
+          </div>
+        </div>
+        <div class="rectangle-sold">
+          <div class="sold-band">SOLD</div>
+          <img src="Rectangle 34.png" alt="Image" class="rectangle-image-sold">
+          <div class="details-container-sold">
+            <div class="icon-title-container">
+              <i class="bi bi-eye"></i>
+              <span class="views">27</span>
+              <span class="title">01 Pig for Sale in Cebu</span>
+            </div>
+            <div class="weight-container">
+              <li><img width="20" height="20" src="https://img.icons8.com/color/96/weight-kg.png" alt="weight-kg"/>Weight: 80kg</li>
+            </div>
+            <div class="price-container">
+              <li class="price"><img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>Price: 20,000</li>
+            </div>
+          </div>
+          <div class="sold-container-with-x">
+            <i class="bi bi-x"></i>
+            <div class="bottom-button-container-sold">
+              <button class="small-edit-button">Edit</button>
+              <button class="small-next-button">View</button>
+            </div>
+          </div>
+        </div>
+        <!-- Add more rectangles if needed -->
+        <div class="rectangle-sold">
+          <div class="sold-band">SOLD</div>
+          <img src="Rectangle 34.png" alt="Image" class="rectangle-image-sold">
+          <div class="details-container-sold">
+            <div class="icon-title-container">
+              <i class="bi bi-eye"></i>
+              <span class="views">27</span>
+              <span class="title">01 Pig for Sale in Cebu</span>
+            </div>
+            <div class="weight-container">
+              <li><img width="20" height="20" src="https://img.icons8.com/color/96/weight-kg.png" alt="weight-kg"/>Weight: 80kg</li>
+            </div>
+            <div class="price-container">
+              <li class="price"><img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>Price: 20,000</li>
+            </div>
+          </div>
+          <div class="sold-container-with-x">
+            <i class="bi bi-x"></i>
+            <div class="bottom-button-container-sold">
+              <button class="small-edit-button">Edit</button>
+              <button class="small-next-button">View</button>
+            </div>
+          </div>
+        </div>
+        <div class="rectangle-sold">
+          <div class="sold-band">SOLD</div>
+          <img src="Rectangle 34.png" alt="Image" class="rectangle-image-sold">
+          <div class="details-container-sold">
+            <div class="icon-title-container">
+              <i class="bi bi-eye"></i>
+              <span class="views">27</span>
+              <span class="title">01 Pig for Sale in Cebu</span>
+            </div>
+            <div class="weight-container">
+              <li><img width="20" height="20" src="https://img.icons8.com/color/96/weight-kg.png" alt="weight-kg"/>Weight: 80kg</li>
+            </div>
+            <div class="price-container">
+              <li class="price"><img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>Price: 20,000</li>
+            </div>
+          </div>
+          <div class="sold-container-with-x">
+            <i class="bi bi-x"></i>
+            <div class="bottom-button-container-sold">
+              <button class="small-edit-button">Edit</button>
+              <button class="small-next-button">View</button>
+            </div>
+          </div>
+        </div>
+        <div class="rectangle-sold">
+          <div class="sold-band">SOLD</div>
+          <img src="Rectangle 34.png" alt="Image" class="rectangle-image-sold">
+          <div class="details-container-sold">
+            <div class="icon-title-container">
+              <i class="bi bi-eye"></i>
+              <span class="views">27</span>
+              <span class="title">01 Pig for Sale in Cebu</span>
+            </div>
+            <div class="weight-container">
+              <li><img width="20" height="20" src="https://img.icons8.com/color/96/weight-kg.png" alt="weight-kg"/>Weight: 80kg</li>
+            </div>
+            <div class="price-container">
+              <li class="price"><img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>Price: 20,000</li>
+            </div>
+          </div>
+          <div class="sold-container-with-x">
+            <i class="bi bi-x"></i>
+            <div class="bottom-button-container-sold">
+              <button class="small-edit-button">Edit</button>
+              <button class="small-next-button">View</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="client-container scrollable-rectangles">
+      <div class="client-rectangle">
+        <img src="Rectangle 97.png" alt="Client Image" class="rectangle-image-client">
+        <div class="details-container-client">
+          <div class="icon-title-container">
+            <span class="title">@Rosialie Simonis</span>
+          </div>
+          <div class="client-buttons">
+            <button class="small-review-button">Review</button>
+            <button class="small-view-button">Chat</button>
+          </div>
+        </div>
+      </div>
+      <div class="client-rectangle">
+        <img src="Rectangle 98.png" alt="Client Image" class="rectangle-image-client">
+        <div class="details-container-client">
+          <div class="icon-title-container">
+            <span class="title">@Timmy Zemlak</span>
+          </div>
+          <div class="client-buttons">
+            <button class="small-review-button">Review</button>
+            <button class="small-view-button">Chat</button>
+          </div>
+        </div>
+      </div>
+      <div class="client-rectangle">
+        <img src="Rectangle 99.png" alt="Client Image" class="rectangle-image-client">
+        <div class="details-container-client">
+          <div class="icon-title-container">
+            <span class="title">@Virginia Feil</span>
+          </div>
+          <div class="client-buttons">
+            <button class="small-review-button">Review</button>
+            <button class="small-view-button">Chat</button>
+          </div>
+        </div>
+      </div>
+      <div class="client-rectangle">
+        <img src="Rectangle 97.png" alt="Client Image" class="rectangle-image-client">
+        <div class="details-container-client">
+          <div class="icon-title-container">
+            <span class="title">@Rosialie Simonis</span>
+          </div>
+          <div class="client-buttons">
+            <button class="small-review-button">Review</button>
+            <button class="small-view-button">Chat</button>
+          </div>
+        </div>
+      </div>
+      <div class="client-rectangle">
+        <img src="Rectangle 98.png" alt="Client Image" class="rectangle-image-client">
+        <div class="details-container-client">
+          <div class="icon-title-container">
+            <span class="title">@Timmy Zemlak</span>
+          </div>
+          <div class="client-buttons">
+            <button class="small-review-button">Review</button>
+            <button class="small-view-button">Chat</button>
+          </div>
+        </div>
+      </div>
+      <div class="client-rectangle">
+        <img src="Rectangle 99.png" alt="Client Image" class="rectangle-image-client">
+        <div class="details-container-client">
+          <div class="icon-title-container">
+            <span class="title">@Virginia Feil</span>
+          </div>
+          <div class="client-buttons">
+            <button class="small-review-button">Review</button>
+            <button class="small-view-button">Chat</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="comparison-container">
+    <div class="comparison-rectangle">
+      <div class="checkbox-question-container">
+      <div class="checkbox-container">
+        <div class="checkbox-item">
+          <input type="checkbox" id="previous" name="previous">
+          <label for="previous">Previous</label>
+        </div>
+        <div class="checkbox-item">
+          <input type="checkbox" id="current" name="current">
+          <label for="current">Current</label>
+        </div>
+      </div>
+      <div class="icon-container">
+      <i id="comparison-info-icon" class="bi bi-question-circle info-icon"></i>
+      <div class="info-box">When you click on "Previous" or "Current," the stats will appear in the right box, allowing you to compare your previous sales statistics with your current ones. The left container provides an overview of your total sales, weight, and earnings.</div>
+    </div>
+    </div>
+      <hr class="divider">
+      <div class="column-container">
+        <div class="comparison-details">
+        <p>Total Sales: 13 qty</p>
+        <p>Total Weight: 1,096 kg</p>
+        <p>Avg. Weight: 84.3 kg</p>
+      </div>
+        <div class="earnings-container">
+        <p>Total Earning: <li class="comparison-price">
+          <img width="22" height="22" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>
+          268,917
+        </li></p>
+      </div>
+      </div>
+    </div>
+
+    <div class="comparison-chart-rectangle">
+      <div class="title">Sold at price: 250/kg PHP</div>
+      <div class="comparison-chart-container">
+          <div class="price-chart-wrapper">
+              <div class="mini-current-rectangle">7 Pigs</div>
+              <li><img width="22" height="22" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>147,525</li>
+          </div>
+          <div class="price-chart-wrapper">
+              <div class="mini-previous-rectangle">6 Pigs</div>
+              <li><img width="22" height="22" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>121,392</li>
+          </div>
+      </div>
+
+<div class="comparison-weight-container">
+  <div class="price-chart-wrapper">
+    <div class="mini-current-rectangle">7 Pigs</div>
+    <li><img width="22" height="22" src="https://img.icons8.com/color/96/weight-kg.png" alt="weight-kg"/>590.1</li>
+</div>
+<div class="price-chart-wrapper">
+    <div class="mini-previous-rectangle">6 Pigs</div>
+    <li><img width="22" height="22" src="https://img.icons8.com/color/96/weight-kg.png" alt="weight-kg"/>505.8</li>
+</div>
+</div>
+</div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section class="calculator-section">
+  <div class="title-container">
+    <div id="calculator-title" class="listings-title">Calculator</div>
+  </div>
+  <div class="calculator-rectangle">
+    <div class="pig-container">
+      <h3 class="container-title">Pigs</h3>
+      <div class="input-display-container">
+        <div class="input-guiding-container">
+        <p class="guiding-text">How many pigs?</p>
+        <input type="text" class="box-input" id="pigAmount" placeholder="Enter value" oninput="updateBoxDisplay(this)">
+      </div>
+      <img width="30" height="30" src="https://img.icons8.com/parakeet/48/pig.png" alt="pig"/>
+        <div class="input-guiding-container">
+        <p class="guiding-text">Total pigs</p>
+        <input type="text" class="box-display" id="pigAmountDisplay" placeholder="10 pcs" readonly>
+      </div>
+      </div>
+
+      <div class="input-display-container">
+        <div class="input-guiding-container">
+          <div class="guiding-text-question-container">
+            <p class="guiding-text">Average KG</p>
+            <div class="icon-container">
+              <i class="bi bi-question-circle info-icon"></i>
+              <div class="info-box">What is your estimated weight for one pig at the time of sale?</div>
+            </div>
+          </div>
+          <input type="text" class="box-input" id="averageKg" placeholder="Enter value" oninput="updateBoxDisplay(this)">
+        </div>
+        <img width="30" height="30" src="https://img.icons8.com/material-rounded/24/scales.png" alt="scales"/>
+        <div class="input-guiding-container">
+          <p class="guiding-text">Total weight</p>
+          <input type="text" class="box-display" id="averageKgDisplay" placeholder="800 kg" readonly>
+        </div>
+      </div>
+
+      <div class="input-display-container">
+        <div class="input-guiding-container">
+        <p class="guiding-text">Market price</p>
+        <input type="text" class="box-input" id="marketPrice" placeholder="Enter value" oninput="updateBoxDisplay(this)">
+      </div>
+      <img width="30" height="30" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>
+        <div class="input-guiding-container">
+        <p class="guiding-text">Cost of a pig</p>
+        <input type="text" class="box-display" id="costPigDisplay" placeholder="20,000" readonly>
+      </div>
+      </div>
+
+      <div class="total-input-display-container">
+<h4 class="calc-title">Total revenue</h4>
+      <img width="30" height="30" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>
+        <div class="input-guiding-container">
+        <p class="guiding-text">Total amount</p>
+        <input type="text" class="box-display" id="revenueDisplay" placeholder="200,000" readonly>
+      </div>
+      </div>
+
+    </div>
+    <div class="vertical-line"></div> <!-- Vertical line between pig-container and feed-container -->
+    <div class="feed-container">
+      <h3 class="feeds-container-title">Feeds</h3>
+      <div class="listing-dropbox-container">
+        <p class="guiding-text">When are you selling?</p>
+        <select class="feeds-listing-dropbox">
+            <option value="placeholder" disabled selected></option>
+            <option value="months">1st Month</option>
+            <option value="months">2nd Month</option>
+            <option value="months">3rd Month</option>
+            <option value="months">4th Month</option>
+            <option value="months">5th Month</option>
+            <option value="months">6th Month</option>
+            <option value="months">7th Month</option>
+            <option value="months">8th Month</option>
+            <option value="months">9th Month</option>
+            <option value="months">10th Month</option>
+            <option value="months">11th Month</option>
+            <option value="months">12th Month</option>
+        </select>
+    </div>
+      <div class="input-display-container">
+        <div class="input-guiding-container">
+          <div class="guiding-text-question-container">
+        <p class="guiding-text">Qty in 1 month</p>
+        <div class="icon-container">
+          <i class="bi bi-question-circle info-icon"></i>
+          <div class="info-box">How many feed bags will they consume each month?</div>
+        </div>
+      </div>
+        <input type="text" class="box-input" id="monthlyQty" placeholder="Enter value" oninput="updateBoxDisplay(this)">
+      </div>
+      <img width="30" height="30" src="https://img.icons8.com/fluency/48/pig-food.png" alt="pig-food"/>
+        <div class="input-guiding-container">
+        <p class="display-guiding-text">Qty in 3 months</p>
+        <input type="text" class="box-display" id="qtyDisplay" placeholder="30 pcs" readonly>
+      </div>
+      </div>
+
+      <div class="input-display-container">
+        <div class="input-guiding-container">
+        <p class="guiding-text">Cost of 1 bag</p>
+        <input type="text" class="box-input" id="bagCost" placeholder="Enter value" oninput="updateBoxDisplay(this)">
+      </div>
+      <img width="30" height="30" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>
+      <div class="special-display-container">
+        <div class="input-guiding-container">
+        <p class="guiding-text">Cost in 1 month</p>
+        <input type="text" class="box-display" id="bagCostDisplay" placeholder="21,000" readonly>
+      </div>
+      <div class="input-guiding-container">
+        <p class="display-guiding-text">Cost in 3 month</p>
+        <input type="text" class="box-display" id="bagsCostDisplay" placeholder="63,000" readonly>
+      </div>
+      </div>
+      </div>
+
+      <div class="total-input-display-container">
+        <h4 class="calc-title">Total leftover</h4>
+              <img width="30" height="30" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>
+                <div class="input-guiding-container">
+                <p class="guiding-text">Total amount</p>
+                <input type="text" class="box-display" id="leftoverDisplay" placeholder="137,000" readonly>
+              </div>
+              </div>
+
+      <!-- Add content for feed-container here -->
+    </div>
+
+    <div class="vertical-line"></div> <!-- Vertical line between feed-container and profit-container -->
+
+    <div class="profit-container">
+      <h3 class="container-title">Profit</h3>
+      <div class="input-display-container">
+        <div class="special-input-container">
+        <div class="input-guiding-container">
+        <p class="guiding-text">How many pigs?</p>
+        <input type="text" class="box-input" id="howManyPigs" placeholder="Enter value" oninput="updateBoxDisplay(this)">
+      </div>
+
+      <div class="input-guiding-container">
+        <div class="guiding-text-question-container">
+        <p class="guiding-text">Price bought</p>
+        <div class="icon-container">
+          <i class="bi bi-question-circle info-icon"></i>
+          <div class="info-box">What was the cost of one pig when you bought it?</div>
+        </div>
+      </div>
+        <input type="text" class="box-input" id="priceBought" placeholder="Enter value" oninput="updateBoxDisplay(this)">
+      </div>
+
+      <div class="input-guiding-container">
+        <p class="guiding-text">Additional expenses</p>
+        <input type="text" class="box-input" id="additionalExpenses" placeholder="Enter value" oninput="updateBoxDisplay(this)">
+      </div>
+
+    </div>
+      <img width="30" height="30" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>
+        <div class="input-guiding-container">
+        <p class="guiding-text">Total cost of pigs</p>
+        <input type="text" class="box-display" id="totalPigDisplay" placeholder="44,340" readonly>
+      </div>
+      </div>
+
+      <div class="total-input-display-container">
+        <h4 class="calc-title">Total profit</h4>
+        <img width="30" height="30" src="https://img.icons8.com/color/48/25-percents--v1.png" alt="25-percents--v1"/>
+                <div class="input-guiding-container">
+                <p class="guiding-text">Total amount</p>
+                <input type="text" class="box-display" id="profitDisplay" placeholder="92,660" readonly>
+              </div>
+              </div>
+      
+      <!-- Add content for profit-container here -->
+    </div>
+
+    <div class="conclusion-rectangle">
+      <p id="conclusionText">You can invest</p>
+      <img width="30" height="30" style="margin-left: 10px; margin-right: 10px;" src="https://img.icons8.com/color/48/total-sales-1.png" alt="total-sales-1"/>
+      <p id="conclusionDisplay">
+        <span id="investmentAmount">0 PHP</span>
+        <span style="font-weight: 500; font-size: 18px; color: #5EA91E;">in</span> 
+        <span id="pigletCount" style="font-weight: 700; font-size: 22px;">0</span> 
+        <span style="font-weight: 500; font-size: 18px; color: #5EA91E;">piglets</span>
+      </p>
+    </div>
+  </div>
+
+  </div>
+</section>
+
+
+<footer>
+  <div class="footer-content">
+      <img src="Group 193.png" alt="Piggery Logo" class="footer-logo">
+      <div class="footer-columns">
+          <div class="footer-box">
+            <h4>Our Mission</h4>
+              <p class="brand-statement">
+                Farmify piggery marketplace aims to revolutionize pig farming by providing a reliable and user-friendly platform where farmers and buyers can connect, trade, and thrive together.
+              </p>
+          </div>
+          <div class="footer-box">
+              <h4>Navigation</h4>
+              <ul class="footer-nav">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Pigs for Sale</a></li>
+                  <li><a href="#">Sell your Pig</a></li>
+                  <li><a href="#">About us</a></li>
+                  <li><a href="#">Contact</a></li>
+              </ul>
+          </div>
+          <div class="footer-box">
+              <h4>Contact</h4>
+              <p>Phone: (123) 456-7890</p>
+              <p>FAX: (123) 456-7891</p>
+              <p>123 Example Address, City, Country</p>
+          </div>
+          <div class="footer-box">
+              <h4>Stay Connected</h4>
+              <p>Stay connected with our latest news and price alerts to never miss a great deal.</p>
+              <div class="email-container">
+                <input type="email" placeholder="Email address" class="email-input">
+          </div>
+          <div class="social-icons">
+            <img src="Group 149.png" alt="Facebook" class="social-icon">
+            <img src="Group 148.png" alt="Twitter" class="social-icon">
+            <img src="Group 147.png" alt="Instagram" class="social-icon">
+        </div>
+      </div>
+  </div>
+
+  <hr class="footer-divider">
+  <div class="footer-bottom">
+      <p>&copy; 2024 All rights reserved.</p>
+      <ul class="footer-bottom-nav">
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+      </ul>
+  </div>
+</footer>
+
+<script>
+  function toggleNav() {
+      var nav = document.querySelector('.navbar-collapse');
+      nav.classList.toggle('show');
+  }
+
+  function toggleSaveIcon(element) {
+        const icon = element.querySelector('i.bi-heart-fill');
+        icon.classList.toggle('red');
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const thumbnails = document.querySelectorAll('.thumbnail-images img');
+        const mainImage = document.getElementById('main-image');
+
+        thumbnails.forEach(function(thumb) {
+            thumb.addEventListener('mouseover', function() {
+                mainImage.src = this.getAttribute('data-image');
+            });
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+    const links = document.querySelectorAll('.nav-links a');
+
+    links.forEach(function(link) {
+        link.addEventListener('click', function() {
+            links.forEach(function(link) {
+                link.classList.remove('active');
+            });
+            this.classList.add('active');
+        });
+    });
+
+    // Handle smooth scrolling for Read More link
+    const readMoreLink = document.querySelector('.read-more-link a');
+    readMoreLink.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default anchor behavior
+        const targetSection = document.querySelector(this.getAttribute('href')); // Get the target section
+
+        if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const dots = document.querySelectorAll('.pagination-dots .dot');
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      // Remove 'active' class from all dots
+      dots.forEach(dot => dot.classList.remove('active'));
+
+      // Add 'active' class to the clicked dot
+      dot.classList.add('active');
+
+      // Implement logic to show the corresponding review rectangle set
+      // For example: hide all review rectangles and show the corresponding set
+    });
+  });
+})
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const graphContainer = document.querySelector('.graph-content');
+  const verticalLines = document.querySelectorAll('.vertical-lines .line');
+  const horizontalLines = document.querySelectorAll('.y-axis .horizontal-line');
+
+  verticalLines.forEach((vLine, vIndex) => {
+    horizontalLines.forEach((hLine, hIndex) => {
+      const dot = document.createElement('div');
+      dot.classList.add('graph-dot');
+
+      // Calculate the position
+      const vLineRect = vLine.getBoundingClientRect();
+      const hLineRect = hLine.getBoundingClientRect();
+      const graphContainerRect = graphContainer.getBoundingClientRect();
+
+      const left = vLineRect.left - graphContainerRect.left - 4; // Adjust for half the dot's width
+      const top = hLineRect.top - graphContainerRect.top - 4; // Adjust for half the dot's height
+
+      dot.style.left = `${left}px`;
+      dot.style.top = `${top}px`;
+
+      graphContainer.appendChild(dot);
+    });
+  });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const graphContainer = document.querySelector('.graph-content');
+    const verticalLines = document.querySelectorAll('.vertical-lines .line');
+    const yAxisLabels = [230, 220, 210, 200, 190, 180, 170];
+    const maxPrice = Math.max(...yAxisLabels);
+    const minPrice = Math.min(...yAxisLabels);
+
+    const tooltip = document.getElementById('tooltip');
+    const marketPriceContainer = document.querySelector('.market-price .price-background');
+    const lowestPriceContainer = document.querySelector('.market-price .lowest-price-background');
+
+    const svgNS = "http://www.w3.org/2000/svg"; 
+
+    const svg = document.createElementNS(svgNS, "svg");
+    svg.setAttribute('class', 'graph-line-svg');
+    svg.style.position = 'absolute';
+    svg.style.top = 0;
+    svg.style.left = 0;
+    svg.style.width = '100%';
+    svg.style.height = '100%';
+
+    const line = document.createElementNS(svgNS, "polyline");
+    line.setAttribute('class', 'graph-line');
+    svg.appendChild(line);
+
+    const lowestLine = document.createElementNS(svgNS, "polyline");
+    lowestLine.setAttribute('class', 'lowest-graph-line');
+    svg.appendChild(lowestLine);
+
+    graphContainer.appendChild(svg);
+
+    const dayLabels = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+    function getRandomPrice() {
+        return Math.floor(Math.random() * (maxPrice - minPrice + 1)) + minPrice;
+    }
+
+    function getLowestPrice(averagePrice) {
+        return averagePrice - Math.floor(Math.random() * 10 + 5); // Ensure lowest price is always smaller
+    }
+
+    function updateGraph(dayIndex, prices, lowestPrices) {
+        const points = [];
+        const lowestPoints = [];
+        const dots = graphContainer.querySelectorAll('.graph-dot');
+        dots.forEach(dot => dot.remove()); // Remove existing dots
+
+        verticalLines.forEach((vLine, index) => {
+            const vLineRect = vLine.getBoundingClientRect();
+            const graphContainerRect = graphContainer.getBoundingClientRect();
+            const left = vLineRect.left - graphContainerRect.left + vLine.offsetWidth / 2; // Adjusting to the center of the line
+            const price = prices[index];
+            const lowestPrice = lowestPrices[index];
+            const top = ((maxPrice - price) / (maxPrice - minPrice)) * (graphContainer.clientHeight - 40) + 10; // Adding padding
+            const lowestTop = ((maxPrice - lowestPrice) / (maxPrice - minPrice)) * (graphContainer.clientHeight - 40) + 10; // Adding padding
+            points.push(`${left},${top}`);
+            lowestPoints.push(`${left},${lowestTop}`);
+
+            // Add dot element for average price
+            if (index <= dayIndex) {
+                const dot = document.createElement('div');
+                dot.classList.add('graph-dot');
+                dot.style.left = `${left - 4}px`; // Adjust for half the dot's width
+                dot.style.top = `${top - 4}px`; // Adjust for half the dot's height
+                dot.dataset.price = price;
+                dot.dataset.day = dayLabels[index];
+
+                dot.addEventListener('mouseover', function() {
+                    tooltip.style.display = 'block';
+                    tooltip.innerText = `${dot.dataset.day} ${dot.dataset.price}`;
+                    tooltip.style.left = `${dot.style.left}`;
+                    tooltip.style.top = `${parseInt(dot.style.top) - 20}px`; // Position above the dot
+                });
+
+                dot.addEventListener('mouseout', function() {
+                    tooltip.style.display = 'none';
+                });
+
+                graphContainer.appendChild(dot);
+            }
+
+            // Add dot element for lowest price
+            if (index <= dayIndex) {
+                const dot = document.createElement('div');
+                dot.classList.add('graph-dot');
+                dot.style.left = `${left - 4}px`; // Adjust for half the dot's width
+                dot.style.top = `${lowestTop - 4}px`; // Adjust for half the dot's height
+                dot.dataset.price = lowestPrice;
+                dot.dataset.day = dayLabels[index];
+
+                dot.addEventListener('mouseover', function() {
+                    tooltip.style.display = 'block';
+                    tooltip.innerText = `${dot.dataset.day} ${dot.dataset.price}`;
+                    tooltip.style.left = `${dot.style.left}`;
+                    tooltip.style.top = `${parseInt(dot.style.top) - 20}px`; // Position above the dot
+                });
+
+                dot.addEventListener('mouseout', function() {
+                    tooltip.style.display = 'none';
+                });
+
+                graphContainer.appendChild(dot);
+            }
+        });
+
+        line.setAttribute('points', points.slice(0, dayIndex + 1).join(' '));
+        lowestLine.setAttribute('points', lowestPoints.slice(0, dayIndex + 1).join(' '));
+
+        // Update the market price
+        marketPriceContainer.innerHTML = `
+            <img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>
+            ${prices[dayIndex]}
+        `;
+
+        // Update the lowest price
+        lowestPriceContainer.innerHTML = `
+            <img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>
+            ${lowestPrices[dayIndex]}
+        `;
+    }
+
+    function startUpdateCycle() {
+        const prices = Array.from({ length: 7 }, getRandomPrice);
+        const lowestPrices = prices.map(price => getLowestPrice(price));
+        let dayIndex = 0;
+
+        function updateDay() {
+            updateGraph(dayIndex, prices, lowestPrices);
+            dayIndex = (dayIndex + 1) % 7;
+            if (dayIndex === 0) {
+                prices.length = 0;
+                lowestPrices.length = 0;
+                prices.push(...Array.from({ length: 7 }, getRandomPrice));
+                lowestPrices.push(...prices.map(price => getLowestPrice(price)));
+            }
+        }
+
+        updateDay(); // Initial graph update
+        setInterval(updateDay, 5000); // Update graph every 5 seconds
+    }
+
+    startUpdateCycle();
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollableRectangles = document.querySelector('.history-section .scrollable-rectangles');
+    const rectangleColumn = document.querySelector('.history-section .rectangle-column');
+    const clientContainer = document.querySelector('.history-section .client-container');
+
+    scrollableRectangles.addEventListener('scroll', function() {
+      const scrollLeft = scrollableRectangles.scrollLeft;
+      rectangleColumn.scrollLeft = scrollLeft;
+      clientContainer.scrollLeft = scrollLeft;
+    });
+
+    rectangleColumn.addEventListener('scroll', function() {
+      const scrollLeft = rectangleColumn.scrollLeft;
+      scrollableRectangles.scrollLeft = scrollLeft;
+      clientContainer.scrollLeft = scrollLeft;
+    });
+
+    clientContainer.addEventListener('scroll', function() {
+      const scrollLeft = clientContainer.scrollLeft;
+      scrollableRectangles.scrollLeft = scrollLeft;
+      rectangleColumn.scrollLeft = scrollLeft;
+    });
+  });
+
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const scrollableRectangles = document.querySelectorAll('.history-section .scrollable-rectangles');
+
+    function syncScroll(e) {
+      scrollableRectangles.forEach(el => {
+        if (el !== e.target) {
+          el.scrollTop = e.target.scrollTop;
+        }
+      });
+    }
+
+    scrollableRectangles.forEach(el => el.addEventListener('scroll', syncScroll));
+  });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const currentCheckbox = document.getElementById('current');
+    const previousCheckbox = document.getElementById('previous');
+
+    const currentRectangles = document.querySelectorAll('.mini-current-rectangle');
+    const previousRectangles = document.querySelectorAll('.mini-previous-rectangle');
+    const priceTitleElement = document.querySelector('.comparison-chart-rectangle .title');
+    const comparisonContainer = document.querySelector('.comparison-container');
+
+    // Set the initial transition and width for the rectangles
+    currentRectangles.forEach(rectangle => {
+        rectangle.style.transition = 'width 1s ease, opacity 0.5s ease, background-color 0.5s ease, color 0.5s ease';
+        rectangle.style.width = '1px'; // Initial width set to 1px
+    });
+    previousRectangles.forEach(rectangle => {
+        rectangle.style.transition = 'width 1s ease, opacity 0.5s ease, background-color 0.5s ease, color 0.5s ease';
+        rectangle.style.width = '1px'; // Initial width set to 1px
+    });
+
+    // Function to grow rectangles without checking checkbox status
+    function growRectanglesAutomatically() {
+        currentRectangles.forEach(rectangle => {
+            rectangle.style.width = '160px'; // Grow to full width
+        });
+        previousRectangles.forEach(rectangle => {
+            rectangle.style.width = '150px'; // Grow to full width
+        });
+    }
+
+    // Function to update rectangles based on checkbox selection
+    function updateComparison() {
+        if (currentCheckbox.checked) {
+            previousRectangles.forEach(rectangle => {
+                rectangle.style.opacity = '0.5';
+                rectangle.style.backgroundColor = '#a1d0f0';
+                rectangle.style.color = '#4B6576';
+
+                const li = rectangle.closest('.price-chart-wrapper').querySelector('li');
+                li.style.opacity = '0.4';
+            });
+            
+            currentRectangles.forEach(rectangle => {
+                rectangle.style.opacity = '1';
+                rectangle.style.backgroundColor = '#2c91bd';
+                rectangle.style.color = '#FFFFFF';
+
+                const li = rectangle.closest('.price-chart-wrapper').querySelector('li');
+                li.style.opacity = '1';
+            });
+
+            // Change the price title back to 250/kg PHP
+            priceTitleElement.textContent = 'Sold at price: 250/kg PHP';
+        }
+
+        if (previousCheckbox.checked) {
+            currentRectangles.forEach(rectangle => {
+                rectangle.style.opacity = '0.5';
+                rectangle.style.backgroundColor = '#a1d0f0';
+                rectangle.style.color = '#4B6576';
+
+                const li = rectangle.closest('.price-chart-wrapper').querySelector('li');
+                li.style.opacity = '0.4';
+            });
+            
+            previousRectangles.forEach(rectangle => {
+                rectangle.style.opacity = '1';
+                rectangle.style.backgroundColor = '#2c91bd';
+                rectangle.style.color = '#FFFFFF';
+
+                const li = rectangle.closest('.price-chart-wrapper').querySelector('li');
+                li.style.opacity = '1';
+            });
+
+            // Change the price title to 240/kg PHP
+            priceTitleElement.textContent = 'Sold at price: 240/kg PHP';
+        }
+    }
+
+    // IntersectionObserver to detect when the comparison-container is in view
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                growRectanglesAutomatically();
+            }
+        });
+    }, {
+        threshold: 0.5 // Trigger when 50% of the container is visible
+    });
+
+    observer.observe(comparisonContainer);
+
+    // Checkbox change events
+    currentCheckbox.addEventListener('change', function() {
+        if (currentCheckbox.checked) {
+            previousCheckbox.checked = false;
+        }
+        updateComparison();
+    });
+
+    previousCheckbox.addEventListener('change', function() {
+        if (previousCheckbox.checked) {
+            currentCheckbox.checked = false;
+        }
+        updateComparison();
+    });
+
+    // Initial update based on the default state
+    updateComparison();
+});
+
+
+
+
+
+function updateBoxDisplay(input) {
+    // Get the values from the input fields
+    let pigCount = document.getElementById('pigAmount').value * 1;
+    let averageKg = document.getElementById('averageKg').value * 1;
+    let marketPrice = document.getElementById('marketPrice').value * 1;
+    let monthlyQty = document.getElementById('monthlyQty').value * 1;
+    let bagCost = document.getElementById('bagCost').value * 1;
+    let howManyPigs = document.getElementById('howManyPigs').value * 1;
+    let priceBought = document.getElementById('priceBought').value * 1;
+    let additionalExpenses = document.getElementById('additionalExpenses').value * 1;
+
+    // Get the selected month value from the dropdown
+    let selectedMonthDropdown = document.querySelector('.feeds-listing-dropbox');
+    let selectedMonth = selectedMonthDropdown.options[selectedMonthDropdown.selectedIndex].text;
+    let monthNumber = parseInt(selectedMonth); // Convert the month name to a number
+
+    // Calculate intermediate values
+    let totalWeight = pigCount * averageKg;
+    let costPerPig = marketPrice * averageKg;
+    let totalQty = monthlyQty * (isNaN(monthNumber) ? 3 : monthNumber); // Default to 3 if no valid month is selected
+    let totalBagCost = monthlyQty * bagCost;
+    let totalBagsCost = bagCost * totalQty;
+    let revenue = pigCount * costPerPig;
+
+    // Calculate total pig cost (howManyPigs * priceBought + additionalExpenses)
+    let totalPigCost = (howManyPigs * priceBought) + additionalExpenses;
+
+    // Calculate leftover and profit
+    let leftover = revenue - totalBagsCost;
+    let profit = leftover - totalPigCost;
+
+    // Update the display fields
+    if (input.id === 'pigAmount' || input.id === 'averageKg') {
+        document.getElementById('averageKgDisplay').placeholder = totalWeight + " kg";
+    }
+
+    if (input.id === 'marketPrice' || input.id === 'averageKg') {
+        document.getElementById('costPigDisplay').placeholder = costPerPig.toLocaleString() + " PHP";
+    }
+
+    if (input.id === 'pigAmount') {
+        document.getElementById('pigAmountDisplay').placeholder = pigCount + " pcs";
+    }
+
+    if (input.id === 'monthlyQty' || input.className === 'feeds-listing-dropbox') {
+        document.getElementById('qtyDisplay').placeholder = totalQty + " pcs";
+        document.getElementById('bagCostDisplay').placeholder = totalBagCost.toLocaleString() + " PHP";
+        document.getElementById('bagsCostDisplay').placeholder = totalBagsCost.toLocaleString() + " PHP";
+
+        // Update the guiding texts with the selected month
+        document.querySelector('.display-guiding-text').textContent = `Qty in ${monthNumber} months`;
+        document.querySelectorAll('.display-guiding-text')[1].textContent = `Cost in ${monthNumber} months`;
+    }
+
+    if (input.id === 'bagCost') {
+        document.getElementById('bagCostDisplay').placeholder = totalBagCost.toLocaleString() + " PHP";
+        document.getElementById('bagsCostDisplay').placeholder = totalBagsCost.toLocaleString() + " PHP";
+    }
+
+    if (input.id === 'howManyPigs' || input.id === 'priceBought' || input.id === 'additionalExpenses') {
+        document.getElementById('totalPigDisplay').placeholder = totalPigCost.toLocaleString() + " PHP";
+    }
+
+    // Update revenue and profit displays
+    document.getElementById('revenueDisplay').placeholder = revenue.toLocaleString() + " PHP";
+    document.getElementById('leftoverDisplay').placeholder = leftover.toLocaleString() + " PHP";
+    document.getElementById('profitDisplay').placeholder = profit.toLocaleString() + " PHP";
+}
+
+// Initialize display with current values of input fields
+document.addEventListener('DOMContentLoaded', function() {
+    let initialPigAmount = document.getElementById('pigAmount').value;
+    let initialAverageKg = document.getElementById('averageKg').value;
+    let initialMarketPrice = document.getElementById('marketPrice').value;
+    let initialMonthlyQty = document.getElementById('monthlyQty').value;
+    let initialBagCost = document.getElementById('bagCost').value;
+    let initialHowManyPigs = document.getElementById('howManyPigs').value;
+    let initialPriceBought = document.getElementById('priceBought').value;
+    let initialAdditionalExpenses = document.getElementById('additionalExpenses').value;
+
+    updateBoxDisplay({ id: 'pigAmount', value: initialPigAmount });
+    updateBoxDisplay({ id: 'averageKg', value: initialAverageKg });
+    updateBoxDisplay({ id: 'marketPrice', value: initialMarketPrice });
+    updateBoxDisplay({ id: 'monthlyQty', value: initialMonthlyQty });
+    updateBoxDisplay({ id: 'bagCost', value: initialBagCost });
+    updateBoxDisplay({ id: 'howManyPigs', value: initialHowManyPigs });
+    updateBoxDisplay({ id: 'priceBought', value: initialPriceBought });
+    updateBoxDisplay({ id: 'additionalExpenses', value: initialAdditionalExpenses });
+});
+
+// Update display when dropdown value changes
+document.querySelector('.feeds-listing-dropbox').addEventListener('change', function() {
+    updateBoxDisplay(this);
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const profitDisplay = document.getElementById('profitDisplay');
+    const investmentAmount = document.getElementById('investmentAmount');
+    const pigletCount = document.getElementById('pigletCount');
+
+    function updateConclusion() {
+        const profit = parseFloat(profitDisplay.placeholder.replace(/[^0-9.-]+/g, ""));
+        if (!isNaN(profit)) {
+            investmentAmount.textContent = profit.toLocaleString() + ' PHP';
+            const piglets = Math.round(profit / 3500);
+            pigletCount.textContent = piglets;
+        } else {
+            investmentAmount.textContent = '0 PHP';
+            pigletCount.textContent = '0';
+        }
+    }
+
+    updateConclusion();
+});
+
+
+function updateBoxDisplay(input) {
+    // Get the values from the input fields
+    let pigCount = document.getElementById('pigAmount').value * 1;
+    let averageKg = document.getElementById('averageKg').value * 1;
+    let marketPrice = document.getElementById('marketPrice').value * 1;
+    let monthlyQty = document.getElementById('monthlyQty').value * 1;
+    let bagCost = document.getElementById('bagCost').value * 1;
+    let howManyPigs = document.getElementById('howManyPigs').value * 1;
+    let priceBought = document.getElementById('priceBought').value * 1;
+    let additionalExpenses = document.getElementById('additionalExpenses').value * 1;
+
+    // Get the selected month value from the dropdown
+    let selectedMonthDropdown = document.querySelector('.feeds-listing-dropbox');
+    let selectedMonth = selectedMonthDropdown.options[selectedMonthDropdown.selectedIndex].text;
+    let monthNumber = parseInt(selectedMonth); // Convert the month name to a number
+
+    // Calculate intermediate values
+    let totalWeight = pigCount * averageKg;
+    let costPerPig = marketPrice * averageKg;
+    let totalQty = monthlyQty * (isNaN(monthNumber) ? 3 : monthNumber); // Default to 3 if no valid month is selected
+    let totalBagCost = monthlyQty * bagCost;
+    let totalBagsCost = bagCost * totalQty;
+    let revenue = pigCount * costPerPig;
+
+    // Calculate total pig cost (howManyPigs * priceBought + additionalExpenses)
+    let totalPigCost = (howManyPigs * priceBought) + additionalExpenses;
+
+    // Calculate leftover and profit
+    let leftover = revenue - totalBagsCost;
+    let profit = leftover - totalPigCost;
+
+    // Update the display fields
+    if (input.id === 'pigAmount' || input.id === 'averageKg') {
+        document.getElementById('averageKgDisplay').placeholder = totalWeight + " kg";
+    }
+
+    if (input.id === 'marketPrice' || input.id === 'averageKg') {
+        document.getElementById('costPigDisplay').placeholder = costPerPig.toLocaleString() + " PHP";
+    }
+
+    if (input.id === 'pigAmount') {
+        document.getElementById('pigAmountDisplay').placeholder = pigCount + " pcs";
+    }
+
+    if (input.id === 'monthlyQty' || input.className === 'feeds-listing-dropbox') {
+        document.getElementById('qtyDisplay').placeholder = totalQty + " pcs";
+        document.getElementById('bagCostDisplay').placeholder = totalBagCost.toLocaleString() + " PHP";
+        document.getElementById('bagsCostDisplay').placeholder = totalBagsCost.toLocaleString() + " PHP";
+
+        // Update the guiding texts with the selected month
+        document.querySelector('.display-guiding-text').textContent = `Qty in ${monthNumber} months`;
+        document.querySelectorAll('.display-guiding-text')[1].textContent = `Cost in ${monthNumber} months`;
+    }
+
+    if (input.id === 'bagCost') {
+        document.getElementById('bagCostDisplay').placeholder = totalBagCost.toLocaleString() + " PHP";
+        document.getElementById('bagsCostDisplay').placeholder = totalBagsCost.toLocaleString() + " PHP";
+    }
+
+    if (input.id === 'howManyPigs' || input.id === 'priceBought' || input.id === 'additionalExpenses') {
+        document.getElementById('totalPigDisplay').placeholder = totalPigCost.toLocaleString() + " PHP";
+    }
+
+    // Update revenue and profit displays
+    document.getElementById('revenueDisplay').placeholder = revenue.toLocaleString() + " PHP";
+    document.getElementById('leftoverDisplay').placeholder = leftover.toLocaleString() + " PHP";
+    document.getElementById('profitDisplay').placeholder = profit.toLocaleString() + " PHP";
+
+    // Update the conclusion rectangle
+    let profitDisplayValue = profit || 0;
+    document.getElementById('investmentAmount').textContent = profitDisplayValue.toLocaleString() + ' PHP';
+    let piglets = Math.round(profitDisplayValue / 3500);
+    document.getElementById('pigletCount').textContent = piglets;
+}
+
+// Initialize display with current values of input fields
+document.addEventListener('DOMContentLoaded', function() {
+    let initialPigAmount = document.getElementById('pigAmount').value;
+    let initialAverageKg = document.getElementById('averageKg').value;
+    let initialMarketPrice = document.getElementById('marketPrice').value;
+    let initialMonthlyQty = document.getElementById('monthlyQty').value;
+    let initialBagCost = document.getElementById('bagCost').value;
+    let initialHowManyPigs = document.getElementById('howManyPigs').value;
+    let initialPriceBought = document.getElementById('priceBought').value;
+    let initialAdditionalExpenses = document.getElementById('additionalExpenses').value;
+
+    updateBoxDisplay({ id: 'pigAmount', value: initialPigAmount });
+    updateBoxDisplay({ id: 'averageKg', value: initialAverageKg });
+    updateBoxDisplay({ id: 'marketPrice', value: initialMarketPrice });
+    updateBoxDisplay({ id: 'monthlyQty', value: initialMonthlyQty });
+    updateBoxDisplay({ id: 'bagCost', value: initialBagCost });
+    updateBoxDisplay({ id: 'howManyPigs', value: initialHowManyPigs });
+    updateBoxDisplay({ id: 'priceBought', value: initialPriceBought });
+    updateBoxDisplay({ id: 'additionalExpenses', value: initialAdditionalExpenses });
+});
+
+// Update display when dropdown value changes
+document.querySelector('.feeds-listing-dropbox').addEventListener('change', function() {
+    updateBoxDisplay(this);
+});
+
+
+</script>
+</main>
+</body>
