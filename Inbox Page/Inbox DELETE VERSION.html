@@ -1,0 +1,2946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inbox</title>
+    
+    <!-- Styles for EmojioneArea and Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/emojionearea/3.4.2/emojionearea.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+    
+    <!-- jQuery and EmojioneArea Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/emojionearea/3.4.2/emojionearea.js"></script>
+<style>
+
+        /* Header styles */
+        header {
+            /* background-image: url(header.png);   logicdigger css remove this
+            height: 100vh; /* Make the image responsive logicdigger css remove this */
+            width: 100%; 
+            object-fit: cover; /* Ensure the image covers the entire header */
+            filter: brightness(0.);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 99;
+        }
+
+        /***logicdigger css***/
+
+.heor-content {
+    width: 100%;
+    max-width: 1270px;
+    margin: 0 auto;
+    padding: 12px 25px;
+}
+
+  /***logicdigger css ***/
+        .navbar-toggler, .navbar-close {
+            display: none;
+            background-color: transparent;
+            border: none;
+            font-size: 35px;
+            cursor: pointer;
+        }
+        .navbar-nav {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            flex: 1;
+            justify-content: space-between;
+        }
+        .navbar-nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #3c5823;
+    font-weight: 600;
+}
+        .navbar-nav .icons a {
+            margin: 0 5px;
+        }
+        .navbar-collapse {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            flex: 1;
+        }
+
+        @media only screen and (min-width: 1024px) and (max-width: 1350px)  {
+          .image-item {
+            margin-bottom: 20px !important;
+          }
+          .navbar-nav .nav-link:nth-child(6) {
+            margin: 0 !important;
+          }
+          .rectangle-container{
+            display: block !important;
+            text-align: center;
+          }
+          .rectangle {
+    width: 25% !important;
+    display:inline-block !important;
+  }
+  .rectangle li img {
+    height: 10%;
+    width: 10% !important;
+    padding-right: 3%;
+}
+  .rectangle img {
+    width: 100% !important;
+  }
+        }
+        @media only screen and (min-width: 768px) and (max-width: 1024px)  {
+        .rectangle-container  .rectangle img {
+    width: 310px !important;
+}
+.sell-us-content{
+  display: block !important;
+  margin-bottom: 20px;
+}
+.rectangle-container .rectangle {
+    width: 300px !important;
+}
+.rectangle-container {
+    flex-wrap: wrap;
+}
+.rectangle-container .rectangle li img {
+    width: 10% !important;
+}
+footer {
+    height: unset !important;
+}
+.footer-columns {
+    display: block !important;
+}
+main .listing-title .title{
+  text-align: center !important;
+}
+  }
+  @media (max-width: 400px) { 
+  .search-container input[type=text] {
+    padding: 10px;
+    width: 200px !important;
+}
+.rectangle {
+        max-width: 80% !important;
+        margin: 0 auto !important;
+        margin-bottom: 20px !important;
+    }
+    .rectangle img {
+    width: 100% !important;
+    max-width: 350px;
+}
+.rectangle li img {
+    height: 10%;
+    width: 10% !important;
+    padding-right: 3%;
+}
+  }
+        @media (max-width: 1024px) {
+            .navbar-nav {
+               
+                flex-direction: column;
+                background-color: #f8f9fa;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                padding: 10px 0;
+            }
+            .navbar-collapse.show {
+  display: block !important;
+}
+.navbar-collapse {
+    display: none;
+}
+.navbar .container {
+    display: block;
+}
+.image-item {
+    margin-bottom: 20px !important;
+}
+            .navbar-nav .nav-link:nth-child(6){
+              margin: 0 !important;
+            }
+            .navbar-nav a {
+              padding: 10px 15px;
+          }
+            .navbar-nav.show {
+                display: flex;
+            }
+            .navbar-toggler {
+                display: block;
+            }
+            .navbar-close {
+                display: block;
+                align-self: flex-end;
+                margin: 10px 20px;
+                position: absolute;
+            }
+
+            span.navbar-toggler-icon {
+    float: right;
+    margin-right: 20px;
+}
+.navbar {
+    margin-top: 20px !important;
+}
+.navbar img {
+    margin-left: 20px;
+}
+        }
+
+
+body {
+    margin: 0;
+    padding: 0;
+}   
+.navbar .container {
+    width: 100%;
+    max-width: 1270px;
+    margin: auto;
+} 
+.heor-content {
+    width: 100%;
+    max-width: 1270px;
+    margin: 0 auto;
+}
+
+.hero-iner {
+    display: flex;
+    align-items: center;
+    height: 20vh;
+    background-size: cover;
+    background-position: bottom center;
+}
+
+.hero-section {
+    position: relative;
+}
+
+  /***logicdigger css end ***/
+
+    body  {
+      font-family: "Inter", sans-serif;
+        font-weight: 450;
+        font-size: 14px;
+        color: rgb(79, 79, 79);
+        width: 100%; /* Make the image responsive */
+        height: 100%; /* Make the image responsive */
+    } 
+
+.inter-font {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+    body {
+    height: 00px;
+    }
+    .mochiy-pop-one-regular {
+  font-family: "Mochiy Pop One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+    .navbar-nav .nav-link:nth-child(6) {
+        margin-right: 280px; /*Adjust logo*/
+    }
+    .navbar-nav .nav-link:nth-child(1) {
+        margin-right: px;
+    }
+    .signup-button {
+      color: rgba(255, 255, 255, 0.952) !important;
+      background-color: #000000ce; /* Change background color to a prominent color */
+      border-radius: 20px; /* Add rounded corners */
+      padding: 10px 20px; /* Add padding to increase button size */
+      transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+    }
+    .signup-button:hover {
+background-color: #ff4632c8;
+    }
+    .navbar {
+margin-top: 38px; /* Adjust the value to move the navbar down further */
+}
+    .main-title {
+      margin-top: 30px;
+      font-size: 48px;
+      font-weight: bolder;
+      font-family: "Mochiy Pop One", sans-serif;
+      color: black;
+    }
+    .h4-title {
+      margin-top: -20px;
+      font-size: 23px;
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+    }
+    .search-container {
+      margin-top: -0px;
+    }
+
+    .submit-container {
+      margin-top: -57px;
+      margin-left: 305px;
+      padding-left: 10px;
+    }
+    .bi-search {
+      position: absolute;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      padding: 19px;
+    }
+    .navbar-brand {
+      margin-right: 0px;
+      position: fixed;
+      height: auto;
+    }
+    .container { 
+  display:flex; /* Use flexbox */
+  justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    }
+    .bi-heart {
+      font-size: 20px;
+      font-weight: 900;
+      padding-right: 5px;
+    }
+    .bi-cart3 {
+      font-size: 20px;
+      font-weight: 900px;
+      padding-right: 10px;
+    }
+   
+        main {
+        /* Can use flex here */
+  height: 100vh; /* Set main height to full viewport height */
+}
+
+.content {
+  text-align: center; /* Center text horizontally */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  font-size: 20px;
+  color: black;
+  font-weight: bolder;
+  font-family: Arial;
+}
+
+    .support-section {
+  /* Styles for the feed section container */
+  padding: 20px;
+  background-color: #F0F6F2;
+  margin-top: 100px;
+  min-height: 100vh; /* Ensure the section takes up at least 100% of the viewport height */
+      display: flex;
+      flex-direction: column; /* Align content vertically */
+      justify-content: flex-start; /* !!!<--Use this always in the beginning of the sections-->!!! */
+        align-items: center;
+}
+
+.support-section-title h2 {
+  /* Styles for the feed section title */
+  font-size: 45px;
+  font-weight: bolder;
+  font-family: "Inter", sans-serif;
+  color: black;
+  margin-top: 0px;  /* Adjust if needed */
+  text-align: center; /* Center text horizontally */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+ /* margin-top: 20vh;  Adjust as needed to position content below header */
+  /* Add padding as well */
+}
+
+.support-section-content {
+  /* Styles for the feed section content */
+  display: flex;
+  align-items: center;
+  width: 80%;
+  max-width: 1200px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  /* flex-wrap: wrap;  Use them again */
+  /* justify-content: center;  Use them again */
+  /* flex-grow: 1; Use them again */
+}
+
+
+.support-details {
+  flex: 1; /* Take up half of the available space */
+  padding: 40px; /* Add some padding around the details (20px default)*/
+}
+
+.support-title {
+  font-size: 36px;
+  font-weight: 700;
+  font-weight: bolder;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  color: #182110;
+  margin-bottom: 30px; /* Space between title and description */
+  margin-top: 30px;
+}
+
+.call-action {
+  font-size: 18px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: #6D6D6D;
+  display: flex;
+  align-items: center; /* Center vertically */
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.feed-price img {
+  height: 6.5%;
+  width: 6.5%;
+  margin-right: 10px; /* Space between icon and text, adjust as needed */
+}
+
+.stars img {
+  height: 5%;
+  width: 5%;
+  margin-bottom: 10px;
+}
+
+.support-icon {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+}
+
+    .sell-us-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 35px; /* Adjust as needed for spacing */
+  align-items: center; /* This centers the items vertically */
+}
+
+.sell-us-item img {
+  margin-right: 30px; /* Adjust as needed for spacing */
+  width: 200px; /* Adjust as needed for size */
+  height: auto;
+  /* margin-top: 50px; (Adjusts the image vertically)*/
+}
+
+    .sell-us-title, .second-sell-us-title {
+      font-size: 20px;
+      font-weight: 599;
+      font-family: Arial;
+      color: black;
+      margin-bottom: 0px; /* Space between title and description */
+      margin-top: 20px;
+      font-family: "Mochiy Pop One", sans-serif;
+      /* margin: 0; /*New*/
+    }
+
+    .sell-us-image {
+      flex: 1; /* Take up half of the available space */
+      display: flex;
+      justify-content: center; /* Center image horizontally */
+      align-items: center; /* Center image vertically */
+    }
+
+    .sell-us-image img {
+      max-width: 100%; /* Ensure image fits within its container */
+      height: auto; /* Maintain aspect ratio */
+      border-radius: 20px; /* Smooth edges */
+      margin-top: 20px;
+      max-width: 100%; /*New*/
+      height: auto; /*New*/
+    }
+
+    .get-started {
+      display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1270px;
+    margin-top: 10px;
+    }
+
+
+.support-section-content {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    max-width: 1200px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    flex-direction: row;
+}
+
+
+.main-content-section {
+    display: flex;
+    align-items: flex-start;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 0px;
+    margin-top: 0px;
+    flex-direction: column;
+}
+
+.main-content-container {
+  display: flex;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+    margin-bottom: 0px;
+    margin-top: 60px;
+}
+
+.details-title {
+  font-family: "Inter", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  width: 600px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.main-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.main-details {
+  display: flex;
+    max-width: 1270px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.support-icon {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.rotate-icon {
+  transform: rotate(270deg);
+}
+
+.description-box {
+  display: flex;
+  width: 480px;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: #6D6D6D;
+  font-family: "Inter", sans-serif;
+}
+
+.small-input-group {
+  display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px; /* Spacing between each group */
+    width: 376px;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px; /* Spacing between each group */
+    width: 796px;
+}
+
+.text-input-group {
+  display: flex;
+    justify-content: space-between;
+    width: 796px;
+    flex-direction: column;
+}
+
+.small-text-input-group {
+    display: flex;
+    justify-content: space-between;
+    width: 376px;
+    flex-direction: column;
+}
+
+.small-input-group input[type="text"],
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group textarea {
+    border: 1.5px solid #CCD3CF;
+    border-radius: 8.7px;
+    background-color: #F9FFFB;
+    padding: 10px; /* Padding inside the input fields */
+    font-size: 16px; /* Adjustable based on your design */
+    transition: border-color 0.3s ease;
+    height: 40px;
+}
+
+.small-input-group input[type="text"]:focus,
+.input-group input[type="text"]:focus,
+.input-group input[type="email"]:focus,
+.input-group textarea:focus {
+    border-color: #5EA91E; /* Change border color when focused */
+    outline: none; /* Remove default outline */
+}
+
+.input-group input[type="text"] {
+    width: 355px; /* Width for First and Last Name */
+    height: 40px; /* Height for all inputs except textarea */
+}
+
+.small-input-group input[type="text"] {
+  width: 376px;
+}
+
+.input-group input[type="email"] {
+    width: 775px; /* Width for Email input */
+    height: 40px;
+}
+
+.input-group textarea {
+    width: 775px; /* Width for Message textarea */
+    height: 155px; /* Height for Message textarea */
+    resize: none; /* Prevent resizing of textarea */
+}
+
+.listing-dropbox {
+    width: 100%;
+    max-width: 350px;
+    padding: 3px 20px;
+    height: 34px;
+    border: 2px solid #f5f5f5;
+    border-radius: 5px;
+    background-color: #f5f5f5; /* Slightly grey background */
+    font-size: 14px;
+    color: #333;
+    font-family: "Inter", sans-serif;
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+    -webkit-appearance: none; /* Remove default arrow in WebKit browsers */
+    -moz-appearance: none; /* Remove default arrow in Firefox */
+    appearance: none; /* Remove default arrow in other browsers */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2714%27%20height%3D%2714%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27%23333%27%3E%3Cpath%20d%3D%27M7%2010l5%205%205-5z%27/%3E%3C/svg%3E'); /* Custom arrow icon */
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Position the arrow with margin-right 10px */
+    background-size: 25px 25px; /* Size of the arrow icon */
+    background-image: 
+        linear-gradient(to right, #33333358 1px, transparent 1px), /* Vertical line */
+        url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2714%27%20height%3D%2714%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27%23333%27%3E%3Cpath%20d%3D%27M7%2010l5%205%205-5z%27/%3E%3C/svg%3E'); /* Custom arrow icon */
+    background-repeat: no-repeat;
+    background-position: right 40px center, right 10px center; /* Position the arrow with margin-right 10px and the line with margin-right 20px */
+    background-size: 1px 15px, 25px 25px; /* Size of the line and the arrow icon */
+}
+
+.listing-dropbox:focus {
+    border-color: #5EA91E; /* Change border color when focused */
+    outline: none; /* Remove default outline */
+}
+
+.listing-dropbox option[value="placeholder"] {
+    color: #333;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+}
+
+.small-listing-dropbox {
+    width: 100%;
+    max-width: 110px;
+    padding: 3px 20px;
+    height: 34px;
+    border: 2px solid #f5f5f5;
+    border-radius: 5px;
+    background-color: #f5f5f5; /* Slightly grey background */
+    font-size: 14px;
+    color: #333;
+    font-family: "Inter", sans-serif;
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+    -webkit-appearance: none; /* Remove default arrow in WebKit browsers */
+    -moz-appearance: none; /* Remove default arrow in Firefox */
+    appearance: none; /* Remove default arrow in other browsers */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2714%27%20height%3D%2714%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27%23333%27%3E%3Cpath%20d%3D%27M7%2010l5%205%205-5z%27/%3E%3C/svg%3E'); /* Custom arrow icon */
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Position the arrow with margin-right 10px */
+    background-size: 25px 25px; /* Size of the arrow icon */
+    background-image: 
+        linear-gradient(to right, #33333358 1px, transparent 1px), /* Vertical line */
+        url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2714%27%20height%3D%2714%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27%23333%27%3E%3Cpath%20d%3D%27M7%2010l5%205%205-5z%27/%3E%3C/svg%3E'); /* Custom arrow icon */
+    background-repeat: no-repeat;
+    background-position: right 40px center, right 10px center; /* Position the arrow with margin-right 10px and the line with margin-right 20px */
+    background-size: 1px 15px, 25px 25px; /* Size of the line and the arrow icon */
+}
+
+.small-listing-dropbox:focus {
+    border-color: #5EA91E; /* Change border color when focused */
+    outline: none; /* Remove default outline */
+}
+
+.small-listing-dropbox option[value="placeholder"] {
+    color: #333;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+}
+
+.submit-btn-container {
+display: flex;
+width: 100%;
+justify-content: flex-end;
+margin-top: 30px;
+}
+
+.submit-request-btn {
+    background-color: #43B572;
+    color: white;
+    font-weight: 500;
+    height: 40px;
+    width: 180px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: "Inter", sans-serif;
+}
+
+.submit-request-btn:hover {
+    background-color: #389d61; /* Darker shade of the original color */
+}
+
+.budget-input-container {
+  display: flex;
+  width: 350px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 10px;
+  flex-direction: column;
+}
+
+.budget-input {
+  display: flex;
+width: 135px;
+height: 30px;
+padding-left: 25px; /* Space for the peso icon */
+border: 1px solid #E0E0E0;
+border-radius: 5px;
+transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+.budget-input:focus {
+    border-color: #5EA91E; /* Change border color when focused */
+    outline: none; /* Remove default outline */
+}
+
+.budget-input::placeholder {
+    color: #b2b2b2; /* Change the color */
+    font-family: "Inter", sans-serif;
+    padding-left: 10px;
+}
+
+.peso-icon {
+    position: absolute;
+    left: 10px;
+    font-size: 14px;
+    color: #929292;
+    pointer-events: none; /* Makes sure the icon doesn't block input clicks */
+}
+
+.arrow-icon {
+    margin-left: -30px; /* Adjust the space between the input and icon */
+    cursor: pointer;
+}
+
+.budget-dropdown {
+    position: absolute;
+    top: 100%; /* Position the dropdown directly below the input */
+    left: 0;
+    width: 135px;
+    border: 1px solid #ccc;
+    background-color: white;
+}
+
+.budget-dropdown select {
+  width: 135px;
+  height: 30px;
+  border: 2px solid #33333358;
+  width: 100%; /* Make the select full width */
+  height: 30px; /* Adjust to fit the input */
+}
+
+.budget-input-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 30px;
+    border-bottom: 0.1px solid #e3e3e3;
+}
+
+
+.modal-main {
+  display: flex;
+  max-width: 350px;
+  flex-direction: column;
+  height: auto;
+  justify-content: flex-start;
+  margin: 0 auto;
+}
+
+.budget-guiding-text {
+  display: flex;
+  width: 240px;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 7px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.guiding-text {
+  display: flex;
+  width: 508px;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 7px;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-wrap {
+  display: flex;
+  flex-direction: row;
+  width: 796px;
+  justify-content: space-between;
+}
+
+
+.inbox-section {
+    display: flex;
+    width: 1180px;
+    flex-direction: row;
+    justify-content: space-between; /* Ensures there is some space between the two rectangles */
+    align-items: center; /* Aligns the rectangles vertically in the center */
+    margin: 0 auto; /* Centers the section horizontally */
+    padding: 20px 0; /* Provides some padding above and below the section */
+}
+
+.small-rectangle {
+    width: 276px;
+    height: 540px;
+    border: 1px solid #e7e7e7;
+    border-radius: 16px;
+    background-color: #ffffff; /* Assuming a white background */
+    box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.05), /* Left shadow (smaller and lighter) */
+    2px 2px 5px rgba(0, 0, 0, 0.1);   /* Right and bottom shadow */
+}
+
+.large-rectangle {
+    width: 876px;
+    height: 540px;
+    border: 1px solid #e7e7e7;
+    border-radius: 16px;
+    background-color: #ffffff; /* Assuming a white background */
+    margin-left: 20px; /* Optional: adds some space between the rectangles */
+    box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.05), /* Left shadow (smaller and lighter) */
+    2px 2px 5px rgba(0, 0, 0, 0.1);   /* Right and bottom shadow */
+}
+
+.message-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px; /* Adjust the padding as needed */
+}
+
+.message-header h4 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333; /* Adjust the color as needed */
+}
+
+.message-header i {
+    font-size: 18px;
+    color: #333; /* Adjust the color as needed */
+}
+
+.message-search {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px; /* Adjust padding as needed */
+    background-color: #FAFAFA;
+    border-top: 1px solid #F2F1F3;
+    border-bottom: 1px solid #F2F1F3;
+}
+
+.message-search i {
+    font-size: 16px;
+    color: #c5c5ca; /* Adjust the color as needed */
+    margin-right: 10px; /* Space between icon and input */
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.message-search input::placeholder {
+      color: #c5c5ca; /* Lighter grey color for the placeholder */
+  }
+
+.message-search input {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-size: 14px;
+    color: #000000; /* Placeholder and input text color */
+    width: 100%;
+    margin-left: 20px;
+}
+
+
+.small-message-box {
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 10px 20px; /* Adjust padding as needed */
+    border-bottom: 1px solid #F2F1F3; /* Bottom border only */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.small-message-box:hover {
+    background-color: #F0F0F0; /* Background color on hover */
+}
+
+.profile-image {
+    border-radius: 20px;
+    width: 38px;
+    height: 38px;
+    margin-right: 15px; /* Space between image and text */
+}
+
+.message-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.second-message-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-right: 15px;
+}
+
+.image-info-wrap {
+  display: flex;
+  align-items: center; /* Vertically align the profile image and text */
+  gap: 10px; /* Space between the image and text */
+  width: 100%;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input[type="checkbox"] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    border: 1px solid #888888;
+    background-color: #fff;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.chat-image-info-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.second-chat-image-info-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.message-info-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+    font-weight: bold;
+    color: #333; /* Adjust the color as needed */
+}
+
+.second-user-name {
+  display: flex;
+  font-weight: bold;
+  color: #333; /* Adjust the color as needed */
+  justify-content: flex-end;
+}
+
+.message-time {
+    font-size: 12px;
+    color: #888; /* Lighter color for the time */
+    margin-top: 3px; /* Space between username and time */
+}
+
+.chat-message-time {
+  font-size: 12px;
+    color: #888; /* Lighter color for the time */
+    margin-top: 3px; /* Space between username and time */
+}
+
+.second-chat-message-time {
+  display: flex;
+  font-size: 12px;
+    color: #888; /* Lighter color for the time */
+    margin-top: 3px; /* Space between username and time */
+    justify-content: flex-end;
+}
+
+.last-message {
+    font-size: 14px;
+    color: #555; /* Adjust the color as needed */
+    margin-top: 15px; /* Space between time and last message */
+    width: 246px;
+}
+
+
+.profile-container {
+  position: relative;
+  display: inline-block;
+}
+
+.verified-icon {
+  position: absolute;
+  bottom: -6px;
+  right: 12px;
+  font-size: 14px;
+  color: #007BFF; /* Blue color for the verified badge */
+  background-color: white;
+  border-radius: 50%;
+  border: 1px solid white; /* 1px white border around the icon */
+}
+
+.bi-dot {
+  position: absolute;
+  bottom: -30px;
+  right: -8px;
+    color: #21CF2F; /* Example: changing the color */
+    font-size: 60px; /* Example: changing the font size */
+}
+
+  .green-dot {
+    position: absolute;
+    bottom: 1px;
+    right: 15px;
+    width: 11px;
+    height: 11px;
+    background-color: #21CF2F;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.small-chat-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 10px 30px;
+  max-width: 100%; /* Optional: Set max-width if necessary */
+  min-height: 80px; /* Ensure a minimum height when there's little content */
+  height: auto; /* Allow the height to adjust based on content */
+}
+
+.second-small-chat-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 10px 30px;
+  max-width: 100%; /* Optional: Set max-width if necessary */
+  min-height: 80px; /* Ensure a minimum height when there's little content */
+  height: auto; /* Allow the height to adjust based on content */
+}
+
+.chat-message {
+  display: flex;
+      font-size: 14px;
+    color: #555;
+    margin-top: 15px;
+    width: 680px;
+    word-wrap: break-word; /* Allow words to wrap */
+    word-break: break-word; /* Break long words if needed */
+    white-space: normal; /* Ensure text wraps to the next line */
+}
+
+.second-chat-message {
+  display: flex;
+  font-size: 14px;
+    color: #555;
+    margin-top: 15px;
+    width: 680px;
+    justify-content: flex-end !important;
+    word-wrap: break-word; /* Allow words to wrap */
+    word-break: break-word; /* Break long words if needed */
+    white-space: normal; /* Ensure text wraps to the next line */
+}
+
+.line-with-date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.line {
+    width: 190px;
+    border: none;
+    border-top: 1px solid #F2F1F3;
+    margin: 0 30px;
+}
+
+.date {
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    color: #A9A7B0; /* You can adjust the text color as needed */
+    width: 65px;
+}
+
+
+
+/* Custom scrollbar styles */
+.scrollable-rectangles-review::-webkit-scrollbar {
+  width: 8px; /* Width of the entire scrollbar */
+}
+
+.scrollable-rectangles-review::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the scrollbar track */
+  border-radius: 10px; /* Rounded corners for the track */
+}
+
+.scrollable-rectangles-review::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+/* Add hover effect for the scrollbar thumb */
+.scrollable-rectangles-review::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darker color when hovered */
+}
+
+/* Scrollable container for the small-message-box elements */
+.scrollable-rectangles-review {
+  max-height: 400px; /* Adjust the height as necessary */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding-right: 10px; /* Space for the scrollbar */
+}
+
+.review-profile-container {
+  position: relative;
+    display: inline-block;
+}
+
+.review-profile-container .profile-placeholder {
+  width: 38px; /* Size of the circle */
+  height: 38px;
+  background-color: #1c8aff; /* Blue color */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; /* Make it a circle */
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 10px; /* Space between the circle and the username */
+}
+
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+.modal-header {
+  display: flex;
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    border-bottom: 0.1px solid #e3e3e3;
+}
+
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between; /* Ensures children are spaced */
+  width: 100%; /* Take full width of the header */
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between; /* Push children to opposite sides */
+  align-items: center; /* Vertically center content */
+  padding: 10px 20px; /* Optional: Add some padding */
+  border-bottom: 1px solid #F2F1F3; /* Border for separation */
+}
+
+.modal-description {
+  font-size: 14px;
+    color: #333;
+    margin-top: 3px;
+}
+
+.online-status {
+  font-size: 12px;
+    color: #888;
+    margin-top: 3px;
+}
+
+.chat-rectangle-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.chat-rectangle {
+  width: 800px;
+  height: 100px;
+ /* border: 1.5px solid #e7e7e7; */
+  /* border-radius: 16px; */
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+  position: relative;
+}
+
+.chat-line {
+  width: 750px;
+  height: 0.5px;
+  background-color: #e7e7e7;
+  margin-bottom: 15px;
+}
+
+.icons-button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.chat-input-container i {
+  font-size: 18px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.send-button {
+  width: 115px;
+  height: 40px;
+  background-color: #5EA91E; /* Initial color */
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease !important; /* 3-second smooth transition for background-color */
+}
+
+.send-button:hover {
+  background-color: #4e921a !important; /* Color to transition to on hover */
+}
+
+#chat-delete {
+    display: flex;
+    width: 92%;
+    justify-content: center;
+    align-items: center;
+  background-color: #e74c3c; /* Red color */
+  color: white; /* Text color */
+  font-family: 'Inter', sans-serif; /* Modern font */
+  font-size: 14px; /* Text size */
+  font-weight: 600; /* Slightly bold text */
+  padding: 8px 20px; /* Padding for size */
+  border: none; /* Remove border */
+  border-radius: 8px; /* Smooth rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  transition: all 0.3s ease; /* Smooth hover effects */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+#chat-delete:hover {
+  background-color: #c0392b; /* Darker red on hover */
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); /* Deeper shadow */
+}
+
+#chat-delete:active {
+  background-color: #a93226; /* Even darker red on click */
+  transform: translateY(0); /* Return to original position */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.delete-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons-container {
+display: flex;
+gap: 10px;
+}
+
+.emojionearea, .emojionearea.form-control {
+  display: flex;
+  align-items: center; /* Vertically centers the caret and text */
+    min-height: 40px;
+    max-height: 40px;
+    overflow-y: auto;
+    padding: 10px 15px;
+    line-height: normal; /* Reset line-height to ensure it behaves properly */
+    width: 590px;
+    border-radius: 20px;
+    background-color: #f7f7f8; /* Light grey background */
+    border: none;
+    overflow: visible;
+    padding: 10px 15px; /* Adjust the padding to center the text */
+  font-family: "Inter", sans-serif;
+  color: #333;
+  outline: none;
+  box-sizing: border-box;
+  line-height: normal;
+}
+
+#message-input {
+    width: 580px; /* Set the width for the message input */
+    word-wrap: break-word; /* Ensure the text wraps to the next line */
+    white-space: normal; /* Allow text to break to the next line */
+}
+
+
+
+.emojionearea .emojionearea-editor {
+    display: flex;
+    align-items: center; /* Vertically centers the caret and text */
+    min-height: 40px;
+    max-height: 40px;
+    overflow-y: auto;
+    padding: 10px 15px;
+    line-height: 0%;
+    width: 590px;
+    border: 20px;
+    line-height: normal;
+}
+
+.emojionearea .emojionearea-button {
+    z-index: 5;
+    position: absolute;
+    right: 3px;
+    top: 6px;
+    width: 24px;
+    height: 24px;
+    opacity: 0.6;
+    cursor: pointer;
+    -moz-transition: opacity 300ms ease-in-out;
+    -o-transition: opacity 300ms ease-in-out;
+    -webkit-transition: opacity 300ms ease-in-out;
+    transition: opacity 300ms ease-in-out;
+}
+
+.negotiation-text {
+  margin: 0px 0;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  color: #555;
+  text-align: center;
+}
+
+.click-here {
+  font-weight: 700;
+  color: #5EA91E;
+  cursor: pointer;
+  transition: font-weight 0.3s ease;
+}
+
+.click-here:hover {
+  font-weight: 900;
+  font-size: 105%; /* Slightly increase the font size on hover */
+}
+
+.chat-area {
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 325.6px; /* Define the maximum height for the chat area */
+}
+
+
+#negotiation-modal {
+    width: 550px !important; /* Override inline width */
+    height: 700px !important; /* Override inline height */
+}
+
+.modal-title h4 {
+  display: flex;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding: 20px;
+    border-bottom: 1px solid #F2F1F3;
+    font-family: "Inter", sans-serif;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #F2F1F3;
+}
+
+.listing-dropbox-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1270px;
+    margin-top: 15px;
+}
+
+.rectangle {
+  position: relative;
+    display: flex;
+    align-items: center;
+    width: 350px;
+    height: 142px;
+    border: 1px solid #E0E0E0;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0.1px;
+    box-sizing: border-box;
+    margin-top: 15px;
+}
+
+.details-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 460px;
+}
+
+.icon-title-container .title {
+  display: flex;
+    text-align: left;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-weight: 700;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    color: #000;
+}
+
+.icon-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.for-sale-badge {
+  display: flex;
+  background-color: #DDEDCB;
+  color: #000; /* Adjust the text color if needed */
+  padding: 7px 10px; /* Adjust padding for size */
+  border-radius: 6px; /* Optional: rounded corners */
+  margin-right: 10px; /* Space between badge and title */
+  font-size: 14px; /* Adjust font size */
+  font-weight: bold; /* Make text bold */
+  width: 60px;
+  align-items: center;
+  justify-content: center;
+}
+
+.price-container li img,
+.weight-container li img {
+    /* Your CSS properties here */
+margin-right: 5px;
+}
+
+.weight-container, .price-container {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.price-value {
+  font-weight: 700;
+  font-size: 16px;
+  margin-left: 5px;
+  color: #000;
+}
+
+.container-with-x .bi-x {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 26px; /* Adjust the size of the X icon as needed */
+    cursor: pointer;
+    color: #000000a3;
+}
+
+.bottom-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-top: 0px;
+    align-items: flex-end;
+    gap: 10px;
+    margin-top: 5px;
+    height: 100px;
+}
+
+.small-edit-button {
+    width: 100px;
+    height: 43px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: #43B572;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.small-edit-button:hover {
+    background-color: #3da368;
+}
+
+.small-next-button {
+    width: 100px;
+    height: 43px;
+    border: none;
+    border-radius: 10px;
+    color: #666666;
+    font-weight: 500;
+    font-size: 14px;
+    background-color: #E1E1E1;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.small-next-button:hover {
+    background-color: #d6d6d6;
+}
+
+.rectangle-image {
+    width: 146px;
+    height: 122px;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.modal-rectangle-container {
+  display: flex; /*flex*/
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.button-container {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+}
+
+.button-container button {
+  display: none;
+  height: 40px;
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-container .accept-button {
+    background-color: #4caf50; /* Lighter green */
+}
+
+.button-container .accept-button:hover {
+    background-color: #388e3c; /* Darker green on hover */
+}
+
+.button-container .change-price {
+    background-color: #fdd835; /* Lighter yellow */
+    color: black;
+}
+
+.button-container .change-price:hover {
+    background-color: #fbc02d; /* Darker yellow on hover */
+}
+
+.button-container .decline {
+    background-color: #e57373; /* Lighter red */
+}
+
+.button-container .decline:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+}
+
+
+    footer {
+        background-color: #43662e; /* Dark green background color */
+        color: #ffffff;
+        text-align: center;
+        padding: 50px 0; /* Adjust padding to fit within 600px height */
+        height: 580px; /* Set height to 600px */
+        position: relative;
+    }
+
+    footer .footer-content {
+    padding: 0 50px; /* Add horizontal padding to match the sell-us-section */
+}
+
+    .footer-logo {
+        display: block;
+        margin: 0 auto;
+        height: auto;
+        width: 350px; /* Adjust width as necessary */
+        margin-bottom: 20px;
+    }
+
+    .footer-columns {
+        display: flex;
+        justify-content: space-around;
+        /* align-items: flex-start; /* Align items to the start to fit better within the height */
+        /* align-items: center; /*Change that perhaps?*/
+        margin-top: 5%;
+        height: calc(100% - 100px); /* Ensure columns take up the full height of the footer, accounting for padding */
+}
+
+    .footer-box {
+        max-width: 250px;
+        text-align: left;
+        font-size: 16px; /* Adjust font size to fit within the height */
+        display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    height: 100%; /* Ensure footer-box takes up the full height of the parent */
+    line-height: 1.8; /* Adjust this value for desired line spacing */
+    }
+
+    .footer-box h4 {
+        color: #ffffff;
+        margin-bottom: 15px;
+        font-size: 20px;
+    }
+
+    .footer-box p {
+        color: #d2d2d2;
+        margin: 5px 0;
+        line-height: 1.8; /* Adjust this value for desired line spacing */
+    }
+
+    .footer-nav,
+    .footer-bottom-nav {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-nav li,
+    .footer-bottom-nav li {
+        margin-bottom: 10px; /* Reduce margin to fit better */
+    }
+
+    .footer-nav a,
+    .footer-bottom-nav a {
+        color: #e1e1e1;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .footer-nav a:hover,
+    .footer-bottom-nav a:hover {
+        color: #ffffff;
+    }
+
+    .footer-box input[type=email] {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1.2px solid #e1e1e1;
+        color: #ffffff;
+        padding: 10px 0; /* Remove left padding to align placeholder */
+        width: 235px;
+        margin-top: 15px;
+        outline: none;
+        text-align: left; /* Align text to the left */
+        position: relative;
+}
+
+.email-container {
+    position: relative;
+    display: inline-block;
+}
+
+.email-container::before {
+  content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABdUlEQVR4nO3cPUoDYRRG4UEQV2NjZ6GSqAj+bEBsrWzcnI2L0NbeRgQridHGI8JIJEyKQMi9H/c8CxheOEwymRnSdZIkSZIkSZIkSZIkSZIkSVoxYBu4B+6AnVUfX0sCHph5B/aWPYZWCHj+F8Qo0YDruSB/Ufajt5UF3ALfc1EmwCh6W1ksjjKO3lYWRskHo+SDUZqKchi9rSyMkg9GaSrKUfS2shiO8mGUQEZJCM+UfBZE+QTOoreVhVHyMUpbUc6jt5WFUZqJ8gVcdBkAV8DrwOPRaqbASXSMzf5XrGa3WQ4ig2z1I5QhSB/lEnjpB1U2Df/IKvylPs/L3wjGaCOG97XWzRj5Y/xe6h9HbyuHxTF8pLtuxkgEz4z0MSZ+TOWK4VuM62aMNmKMo7eVgzHywBh5YIw8MEYTMUbR28rBGHkANwNnhn8cEPh2zGQghv93EhRkA3gzRiLAKfAEPAK70XskSZIkSZIkSZIkSZIkSZK6cD+4pa0FeKE3zwAAAABJRU5ErkJggg==');
+    position: absolute;
+    right: -15px; /* Adjust the position as needed */
+    bottom: 25px; /* Adjust the position as needed */
+    height: 15px; /* Adjust size as needed */
+    pointer-events: none; /* Ensure the icon does not interfere with input interactions */
+    color: white;
+    size: 1px;
+    transform: scale(0.3); /* Scale the image to 50% of its original size */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 25px; /* Space between the input field and social media icons */
+    gap: 10px;
+}
+
+.social-icon {
+    width: 30px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
+}
+
+.footer-box img {
+height: 35px;
+width: 35px;
+color: white;
+}
+
+    .footer-box input[type=email]::placeholder {
+        color: #b9b9b98b;
+        font-size: 16px;
+    }
+
+    hr {
+        border: 0;
+        height: 1.2px;
+        background-color: #e1e1e1;
+        margin: 80px 0;
+        margin: 120px auto 10px auto; /* Increase the top margin to move the hr line down */
+        width: 90%; /* Set the width to 1320px */
+    }
+
+    .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 12px; /* Adjust font size to fit within the height */
+        width: 90%;
+        margin: 0 auto; /* Center align the footer-bottom container */
+        color: #e1e1e1;
+        padding: 0 60px; /* Add padding to the sides */
+        padding-top: 10px; /* Add some padding at the top */
+    }
+
+    .footer-bottom p {
+        margin: 0px;
+        color: #e1e1e1;
+    }
+
+    .footer-bottom-nav {
+        display: flex;
+        gap: 20px; /* Adjust gap to fit within the height */ /*Use this on navbar as well.*/
+        color: #e1e1e1;
+    }
+
+
+  /***logicdigger css  for mobile***/
+
+
+@media only screen and (max-width: 768px) {
+    
+      footer {
+    height: unset !important;
+}
+.footer-columns {
+    display: unset !important;
+ 
+} 
+.feed-details {
+    padding: 10px !important;
+}
+.feed-section-content {
+    display: block !important;
+    width: 85%;
+}
+.rectangle {
+    margin: auto;
+    margin-bottom: 20px;
+}
+.rectangle-container {
+    display: block !important;
+}
+.listing-title .title , .feed-section-title h2, .sell-us-section-title h2{
+    text-align: center !important;
+    font-size: 25px;
+}
+.sell-us-title, .second-sell-us-title{
+  font-size: 20px;
+}
+.footer-logo {
+    width: 250px;
+    margin-bottom: 20px;
+}
+.feed-title{
+  font-size: 25px;
+}
+
+.heor-content {
+    padding: 30px;
+}
+
+
+.navbar-nav a {
+    text-decoration: none;
+    color: #000;
+    padding: 10px 20px;
+    text-align: center;
+    margin: auto;
+    font-weight: 500;
+}
+
+
+.sell-us-content {
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1200px;
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.sell-us-item {
+    display: block !important;
+}
+.footer-bottom {
+    display: block !important;
+     width: unset !important;
+}
+hr {
+    width: 100%;
+}
+.footer-bottom-nav {
+    display: block !important;
+    margin-top: 10px;
+}
+.main-title {
+    font-size: 25px;
+}
+
+.h4-title {
+    font-size: 18px;
+    padding-top: 15px;
+}
+
+.submit-container {
+    margin: unset;
+    padding: 0;
+}
+
+.search-container input[type=text] {
+    margin-bottom: 10px;
+}
+
+.hero-iner {
+    background-position: center !important;
+}
+
+}
+
+    div#navbarNavAltMarkup {
+    margin-left: 30px;
+}   
+
+  /***logicdigger css  for mobile end ***/
+</style>
+</head>
+<body>
+
+    <!-- Header -->
+  <header>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#"></a> <!-- Logo -->
+      <img src="farmifylogo.png" alt="Logo" height="50"> <!-- Adjust the height as needed -->
+            </a>
+        <span class="navbar-toggler-icon">   <button class="navbar-toggler" onclick="toggleNav()">
+          &#9776;
+      </button></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+    
+
+        <div class="navbar-nav">
+
+          <button class="navbar-close" onclick="toggleNav()">
+            &times;
+        </button>
+          <a class="nav-link disabled">Home</a>
+          <a class="nav-link disabled">Pigs for Sale</a>
+          <a class="nav-link disabled">Sell your Pig</a>
+          <a class="nav-link disabled">About us</a>
+          <a class="nav-link disabled">Contact us</a>
+          <i class="bi bi-heart"></i>
+          <i class="bi bi-cart3"></i>
+          <a class="nav-link disabled">Login</a>
+          <a class="nav-link signup-button">Sign up</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+</header>
+
+<div class="hero-section">
+    <div class="hero-iner" style="background-image: url();">
+     <div class="heor-content">
+     </div>
+       </div> <!--iner hero-->
+ </div><!--hero end-->
+
+      <main>
+
+        <section class="inbox-section">
+
+          <div class="small-rectangle">
+            <div class="message-header">
+              <h4>Message</h4>
+              <i class="bi bi-three-dots"></i>
+            </div>
+            <div class="message-search">
+              <i class="bi bi-search"></i>
+              <input type="text" placeholder="Search message">
+            </div>
+          
+            <!-- Scrollable container for messages -->
+            <div class="scrollable-rectangles-review">
+                <div class="small-message-box" data-user-id="RS67890">
+                <div class="image-info-wrap">
+                  <div class="profile-container">
+                    <img src="Rectangle 401.png" alt="Profile Image" class="profile-image">
+                    <i class="bi bi-patch-check-fill verified-icon"></i>
+                  </div>
+                  <div class="checkbox-wrapper">
+                  <div class="message-info">
+                    <div class="user-name">Rhea_Rabago</div>
+                    <div class="message-time">12:28pm</div>
+                  </div>
+                  <input type="checkbox" class="message-checkbox" id="checkbox-rhea">
+                </div>
+                </div>
+                <div class="last-message">Last message from Rhea_Rabago</div>
+              </div>
+          
+              <div class="small-message-box" data-user-id="JD12345">
+                <div class="image-info-wrap">
+                  <div class="profile-container">
+                    <img src="hilux img.png" alt="Profile Image" class="profile-image">
+                    <i class="bi bi-patch-check-fill verified-icon"></i>
+                  </div>
+                  <div class="checkbox-wrapper">
+                  <div class="message-info">
+                    <div class="user-name">Hilux for Sale</div>
+                    <div class="message-time">11:45am</div>
+                  </div>
+                  <input type="checkbox" class="message-checkbox" id="checkbox-rhea">
+                </div>
+            </div>
+                <div class="last-message">Last message from Hilux for Sale</div>
+              </div>
+          
+              <div class="small-message-box" data-user-id="JS23456">
+                <div class="image-info-wrap">
+                  <div class="profile-container">
+                    <img src="Rectangle 403.png" alt="Profile Image" class="profile-image">
+                    <i class="bi bi-patch-check-fill verified-icon"></i>
+                  </div>
+                  <div class="checkbox-wrapper">
+                  <div class="message-info">
+                    <div class="user-name">Jane_Smith</div>
+                    <div class="message-time">10:30am</div>
+                  </div>
+                  <input type="checkbox" class="message-checkbox" id="checkbox-rhea">
+                </div>
+            </div>
+                <div class="last-message">Last message from Jane_Smith</div>
+              </div>
+          
+              <div class="small-message-box" data-user-id="AW34567">
+                <div class="image-info-wrap">
+                  <div class="profile-container">
+                    <img src="Rectangle 404.png" alt="Profile Image" class="profile-image">
+                    <i class="bi bi-patch-check-fill verified-icon"></i>
+                  </div>
+                  <div class="checkbox-wrapper">
+                  <div class="message-info">
+                    <div class="user-name">Alice_Walker</div>
+                    <div class="message-time">09:15am</div>
+                  </div>
+                <input type="checkbox" class="message-checkbox" id="checkbox-rhea">
+            </div>
+        </div>
+                <div class="last-message">Last message from Alice_Walker</div>
+              </div>
+
+              <div class="small-message-box" data-user-id="JA45678">
+                  <div class="image-info-wrap">
+                    <div class="review-profile-container">
+                      <div class="profile-placeholder">J</div> <!-- Placeholder Profile Picture -->
+                      <i class="bi bi-patch-check-fill verified-icon"></i>
+                    </div>
+                    <div class="message-info">
+                      <div class="user-name">James_Anderson</div>
+                      <div class="message-time">08:10am</div>
+                    </div>
+                  </div>
+                  <div class="last-message">Last message from James_Anderson</div>
+                </div>
+            
+                <div class="small-message-box" data-user-id="JR56789">
+                  <div class="image-info-wrap">
+                    <div class="review-profile-container">
+                      <div class="profile-placeholder" style="background-color: #f28c28;">J</div> <!-- Placeholder Profile Picture -->
+                      <i class="bi bi-patch-check-fill verified-icon"></i>
+                    </div>
+                    <div class="message-info">
+                      <div class="user-name">Jessica_Rogers</div>
+                      <div class="message-time">07:45am</div>
+                    </div>
+                  </div>
+                  <div class="last-message">Last message from Jessica_Rogers</div>
+                </div>
+
+                <div class="small-message-box" data-user-id="MT67890">
+                  <div class="image-info-wrap">
+                    <div class="review-profile-container">
+                      <div class="profile-placeholder" style="background-color: #4caf50;">M</div> <!-- Placeholder Profile Picture -->
+                      <i class="bi bi-patch-check-fill verified-icon"></i>
+                    </div>
+                    <div class="message-info">
+                      <div class="user-name">Michael_Turner</div>
+                      <div class="message-time">06:30am</div>
+                    </div>
+                  </div>
+                  <div class="last-message">Last message from Michael_Turner</div>
+                </div>
+
+              </div>
+              
+              <div class="delete-container">
+              <button id="chat-delete" type="submit">Delete</button>
+            </div>
+
+            </div>
+          </div>
+
+          <div class="large-rectangle">
+            <div class="chat-header">
+                <div class="header-wrapper">
+                  <!-- First image-info-wrap -->
+                  <div class="image-info-wrap">
+                    <div class="profile-container">
+                      <img src="Rectangle 401.png" alt="Profile Image" class="profile-image">
+                      <div class="green-dot"></div>
+                    </div>
+                    <div class="message-info">
+                      <div class="user-name">Rhea_Rabago</div>
+                      <div class="online-status">Online</div>
+                    </div>
+                  </div>
+              
+                  <!-- Second image-info-wrap -->
+                  <div class="image-info-wrap">
+                    <div class="profile-container">
+                      <img src="farm img.png" alt="Profile Image" class="profile-image">
+                      <div class="green-dot"></div>
+                    </div>
+                    <div class="message-info">
+                      <div class="user-name">Charming Farmhouse for Sale</div>
+                      <div class="online-status">Online</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+          <div class="chat-area">
+          <div class="small-chat-box">
+            <div class="image-info-wrap">
+              <div class="profile-container">
+                <img src="Rectangle 401.png" alt="Profile Image" class="profile-image">
+              </div>
+              <div class="message-info">
+                <div class="user-name">Rhea_Rabago</div>
+                <div class="chat-message-time">10:15am</div>
+                <div class="chat-message">Hey Darwin, is 01 Pig still available?</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="line-with-date">
+            <div class="line"></div> 
+            <span class="date">02/May/24</span>
+            <div class="line"></div> 
+        </div>
+
+        <div class="second-small-chat-box">
+          <div class="second-chat-image-info-wrap">
+              <div class="second-message-info">
+                  <div class="second-user-name">Me</div>
+                  <div class="second-chat-message-time">11:32am</div>
+                  <div class="second-chat-message">Yes it is, it's ready to pick up!</div>
+              </div>
+              <div class="profile-container">
+                <img src="Rectangle 405.png" alt="Profile Image" class="profile-image">
+            </div>
+          </div>
+      </div>
+
+      <div class="line-with-date">
+        <div class="line"></div> 
+        <span class="date">Today</span>
+        <div class="line"></div> 
+    </div>
+
+    <div class="small-chat-box">
+      <div class="image-info-wrap">
+        <div class="profile-container">
+          <img src="Rectangle 401.png" alt="Profile Image" class="profile-image">
+        </div>
+        <div class="message-info">
+          <div class="user-name">Rhea_Rabago</div>
+          <div class="chat-message-time">10:15am</div>
+          <div class="chat-message">Great, I'm on my way!</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="chat-rectangle-container">
+    <div class="chat-rectangle">
+      <div class="chat-line"></div>
+
+      <div class="negotiation-text">
+        Start negotiating and suggest your price. <span class="click-here">Click here</span>
+      </div>
+    
+      <div class="icons-button-container">
+        <div class="icons-container">
+          <i class="bi bi-paperclip" style="font-size: 1.5em;"></i>
+      </div>
+      <textarea class="chat-input-field" id="message-input" placeholder="Type a message..." rows="1"></textarea>
+        <button class="send-button">Send</button>
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+  
+
+      </section>
+
+    
+
+
+<footer>
+  <div class="footer-content">
+      <img src="Group 193.png" alt="Piggery Logo" class="footer-logo">
+      <div class="footer-columns">
+          <div class="footer-box">
+            <h4>Our Mission</h4>
+              <p class="brand-statement">
+                Farmify piggery marketplace aims to revolutionize pig farming by providing a reliable and user-friendly platform where farmers and buyers can connect, trade, and thrive together.
+              </p>
+          </div>
+          <div class="footer-box">
+              <h4>Navigation</h4>
+              <ul class="footer-nav">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Pigs for Sale</a></li>
+                  <li><a href="#">Sell your Pig</a></li>
+                  <li><a href="#">About us</a></li>
+                  <li><a href="#">Contact</a></li>
+              </ul>
+          </div>
+          <div class="footer-box">
+              <h4>Contact</h4>
+              <p>Phone: (123) 456-7890</p>
+              <p>FAX: (123) 456-7891</p>
+              <p>123 Example Address, City, Country</p>
+          </div>
+          <div class="footer-box">
+              <h4>Stay Connected</h4>
+              <p>Stay connected with our latest news and price alerts to never miss a great deal.</p>
+              <div class="email-container">
+                <input type="email" placeholder="Email address" class="email-input">
+          </div>
+          <div class="social-icons">
+            <img src="Group 149.png" alt="Facebook" class="social-icon">
+            <img src="Group 148.png" alt="Twitter" class="social-icon">
+            <img src="Group 147.png" alt="Instagram" class="social-icon">
+        </div>
+      </div>
+  </div>
+
+  <hr>
+  <div class="footer-bottom">
+      <p>&copy; 2024 All rights reserved.</p>
+      <ul class="footer-bottom-nav">
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+      </ul>
+  </div>
+</footer>
+
+<script>
+
+ // Global variable for tracking active user ID
+let activeUserId = null;
+
+// Function to toggle navigation menu
+function toggleNav() {
+    const nav = document.querySelector('.navbar-collapse');
+    nav.classList.toggle('show');
+}
+
+// Truncate last messages if they are too long
+document.querySelectorAll('.last-message').forEach(function (message) {
+    const maxLength = 33;
+    if (message.textContent.length > maxLength) {
+        message.textContent = message.textContent.substring(0, maxLength) + '...';
+    }
+});
+
+// Function to search messages
+function searchMessages() {
+    const searchTerm = document.querySelector('.message-search input').value.trim().toLowerCase();
+    const messageBoxes = document.querySelectorAll('.small-message-box');
+    let matchCount = 0;
+
+    messageBoxes.forEach(box => {
+        const lastMessage = box.querySelector('.last-message');
+        const userName = box.querySelector('.user-name');
+
+        // Reset highlights and visibility
+        lastMessage.innerHTML = lastMessage.textContent;
+        userName.innerHTML = userName.textContent;
+        box.style.display = '';
+
+        // Highlight matches or hide message boxes without matches
+        if (searchTerm && !(lastMessage.textContent.toLowerCase().includes(searchTerm) || userName.textContent.toLowerCase().includes(searchTerm))) {
+            box.style.display = 'none';
+        }
+    });
+
+    console.log(`Search results: ${matchCount} match${matchCount !== 1 ? 'es' : ''}.`);
+}
+
+// Attach the search function to the input's keyup event
+document.querySelector('.message-search input').addEventListener('keyup', searchMessages);
+
+// Function to get current time in the format HH:mm AM/PM
+function getCurrentTime() {
+    const now = new Date();
+    let hours = now.getHours();
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const ampm = hours >= 12 ? 'PM' : 'AM';
+    hours = hours % 12 || 12;
+    return `${hours}:${minutes} ${ampm}`;
+}
+
+// Function to get current date in the format DD/MMM/YYYY
+function getCurrentDate() {
+    const now = new Date();
+    const day = now.getDate().toString().padStart(2, "0");
+    const month = now.toLocaleString('default', { month: 'short' });
+    const year = now.getFullYear();
+    return `${day}/${month}/${year}`;
+}
+
+// Function to send a message
+function sendMessage() {
+    const inputField = document.querySelector('.chat-input-field');
+    const message = inputField.value.trim();
+
+    if (!message || !activeUserId) return;
+
+    const chatArea = document.querySelector('.chat-area');
+    const newMessageBox = document.createElement('div');
+    newMessageBox.classList.add('second-small-chat-box');
+
+    newMessageBox.innerHTML = `
+        <div class="second-chat-image-info-wrap">
+            <div class="second-message-info">
+                <div class="second-user-name">Me</div>
+                <div class="second-chat-message-time">${getCurrentTime()}</div>
+                <div class="second-chat-message">${message}</div>
+            </div>
+            <div class="profile-container">
+                <img src="Rectangle 405.png" alt="Profile Image" class="profile-image">
+            </div>
+        </div>
+    `;
+
+    const lineWithDate = document.createElement('div');
+    lineWithDate.classList.add('line-with-date');
+    lineWithDate.innerHTML = `
+        <div class="line"></div>
+        <span class="date">${getCurrentDate()}</span>
+        <div class="line"></div>
+    `;
+
+    chatArea.appendChild(lineWithDate);
+    chatArea.appendChild(newMessageBox);
+
+    updateLastMessage(activeUserId, `Me: ${message}`);
+    inputField.value = '';
+    chatArea.scrollTop = chatArea.scrollHeight;
+}
+
+// Function to update the last message in the small-rectangle
+function updateLastMessage(userId, newMessage) {
+    const messageBox = document.querySelector(`.small-message-box[data-user-id="${userId}"]`);
+    if (messageBox) {
+        const lastMessageElement = messageBox.querySelector('.last-message');
+        lastMessageElement.textContent = newMessage;
+    }
+}
+
+// Function to display user chat (opens the chat for the selected user)
+function displayUserChat(userId, userName, profileImageSrc) {
+    activeUserId = userId;
+
+    const chatHeader = document.querySelector('.chat-header .image-info-wrap');
+    const chatArea = document.querySelector('.chat-area');
+
+    chatHeader.innerHTML = `
+        <div class="profile-container">
+            <img src="${profileImageSrc}" alt="${userName} Profile Image" class="profile-image">
+            <div class="green-dot"></div>
+        </div>
+        <div class="message-info">
+            <div class="user-name">${userName}</div>
+            <div class="online-status">Online</div>
+        </div>
+    `;
+
+    chatArea.innerHTML = '';
+}
+
+// Event listeners for message box click and message sending
+document.querySelectorAll('.small-message-box').forEach(function (box) {
+    box.addEventListener('click', function () {
+        const userId = box.getAttribute('data-user-id');
+        const userName = box.querySelector('.user-name').textContent.trim();
+        const profileImageSrc = box.querySelector('.profile-image').getAttribute('src');
+        displayUserChat(userId, userName, profileImageSrc);
+    });
+});
+
+document.querySelector('.send-button').addEventListener('click', sendMessage);
+
+document.querySelector('.chat-input-field').addEventListener('keydown', function (event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        sendMessage();
+    }
+});
+
+// Enable scrollbar within chat-area
+function addCustomScrollbar() {
+    const chatArea = document.querySelector('.chat-area');
+    chatArea.style.overflowY = 'auto';
+    chatArea.style.maxHeight = '325.6px';
+}
+
+// Enforce wrapping for long messages
+function enforceMessageWrapping() {
+    const messages = document.querySelectorAll('.chat-message, .second-chat-message');
+    messages.forEach(message => {
+        if (message.scrollWidth > 680) {
+            message.style.whiteSpace = 'normal';
+            message.style.width = '740px';
+        }
+    });
+}
+
+// Call functions to apply scrollbars and wrapping
+addCustomScrollbar();
+enforceMessageWrapping();
+
+
+function enforceChatAreaFixedHeight() {
+    const chatArea = document.querySelector('.chat-area');
+    chatArea.style.height = '325.6px'; // Set fixed height
+    chatArea.style.maxHeight = '325.6px'; // Set maximum height to ensure it's always the same
+    chatArea.style.overflowY = 'auto'; // Enable vertical scrolling if the content exceeds the height
+}
+
+// Call this function to enforce the fixed height when needed
+enforceChatAreaFixedHeight();
+
+
+// Function to highlight the searched words in both last-message and user-name elements
+function highlightSearchedWords() {
+    const searchTerm = document.querySelector('.message-search input').value.trim().toLowerCase();
+    const messageBoxes = document.querySelectorAll('.small-message-box');
+
+    messageBoxes.forEach(box => {
+        const lastMessage = box.querySelector('.last-message');
+        const userName = box.querySelector('.user-name');
+        const originalLastMessageText = lastMessage.textContent;
+        const originalUserNameText = userName.textContent;
+
+        // Reset highlights
+        lastMessage.innerHTML = originalLastMessageText;
+        userName.innerHTML = originalUserNameText;
+
+        if (searchTerm) {
+            const regex = new RegExp(`(${searchTerm})`, 'gi'); // Case-insensitive match
+
+            // Highlight the search term in last-message
+            lastMessage.innerHTML = originalLastMessageText.replace(regex, '<span class="highlight">$1</span>');
+
+            // Highlight the search term in user-name
+            userName.innerHTML = originalUserNameText.replace(regex, '<span class="highlight">$1</span>');
+        }
+    });
+}
+
+// Attach the highlight function to the input's keyup event
+document.querySelector('.message-search input').addEventListener('keyup', highlightSearchedWords);
+
+
+$(document).ready(function() {
+      $("#message-input").emojioneArea({
+        pickerPosition: "bottom",
+        tonesStyle: "bullet"
+      });
+    });
+
+
+// Function to send a message
+function sendMessage() {
+    const inputField = $("#message-input").data("emojioneArea");  // Reference the emojioneArea instance
+    const message = inputField.getText().trim();  // Get the content of the EmojioneArea editor
+
+    if (!message || !activeUserId) return;
+
+    const chatArea = document.querySelector('.chat-area');
+    const newMessageBox = document.createElement('div');
+    newMessageBox.classList.add('second-small-chat-box');
+
+    newMessageBox.innerHTML = `
+        <div class="second-chat-image-info-wrap">
+            <div class="second-message-info">
+                <div class="second-user-name">Me</div>
+                <div class="second-chat-message-time">${getCurrentTime()}</div>
+                <div class="second-chat-message">${message}</div>
+            </div>
+            <div class="profile-container">
+                <img src="Rectangle 405.png" alt="Profile Image" class="profile-image">
+            </div>
+        </div>
+    `;
+
+    const lineWithDate = document.createElement('div');
+    lineWithDate.classList.add('line-with-date');
+    lineWithDate.innerHTML = `
+        <div class="line"></div>
+        <span class="date">${getCurrentDate()}</span>
+        <div class="line"></div>
+    `;
+
+    chatArea.appendChild(lineWithDate);
+    chatArea.appendChild(newMessageBox);
+
+    updateLastMessage(activeUserId, `Me: ${message}`);
+    inputField.setText('');  // Clear the EmojioneArea editor
+    chatArea.scrollTop = chatArea.scrollHeight;  // Scroll to the bottom
+}
+
+// Event listener for sending the message
+document.querySelector('.send-button').addEventListener('click', sendMessage);
+
+document.querySelector('.chat-input-field').addEventListener('keydown', function (event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        sendMessage();
+    }
+});
+
+
+$(document).ready(function() {
+    // Initialize EmojioneArea
+    const emojioneArea = $("#message-input").emojioneArea({
+        pickerPosition: "bottom",
+        tonesStyle: "bullet",
+    });
+
+    // Attach event listener to EmojioneArea editor for Enter key
+    emojioneArea[0].emojioneArea.on('keydown', function(editor, event) {
+        if (event.key === "Enter") {
+            event.preventDefault();  // Prevents default behavior like adding a new line
+            sendMessage();  // Calls sendMessage function
+        }
+    });
+});
+
+
+// Function to open the negotiation modal
+function openNegotiationModal() {
+    // Create overlay to darken background
+    const overlay = document.createElement('div');
+    overlay.style.position = 'fixed';
+    overlay.style.top = '0';
+    overlay.style.left = '0';
+    overlay.style.width = '100%';
+    overlay.style.height = '100%';
+    overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+    overlay.style.zIndex = '1000';
+    overlay.id = 'overlay';
+
+    // Create modal container
+    const modal = document.createElement('div');
+    modal.style.position = 'fixed';
+    modal.style.top = '50%';
+    modal.style.left = '50%';
+    modal.style.transform = 'translate(-50%, -50%)';
+    modal.style.backgroundColor = '#fff';
+    modal.style.width = '400px';
+    modal.style.height = '300px';
+    modal.style.borderRadius = '10px';
+    modal.style.zIndex = '1001';
+    modal.style.padding = '0px';
+    modal.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+    modal.id = 'negotiation-modal';
+
+    // Create modal content with title and line
+    modal.innerHTML = `
+      <div class="modal-body">
+        <div class="modal-title">
+          <h4>Offer a Price</h4>
+        </div>
+        
+        <div class="modal-header">
+          <div class="image-info-wrap">
+            <div class="profile-container">
+              <img src="Rectangle 401.png" alt="Profile Image" class="profile-image">
+            </div>
+            <div class="message-info">
+              <div class="user-name">Rhea_Rabago</div>
+              <div class="modal-description">
+                Hi, please select the product you'd like to purchase from the options below and submit your offer. I'll review it and respond shortly. Thank you!
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-main">
+        <div class="listing-dropbox-container">
+          <p class="guiding-text">Select a seller's product you would like to make an offer</p>
+  <select class="listing-dropbox" id="modal-listing-dropbox">
+    <option id="placeholder-option" value="placeholder" disabled selected></option>
+    <option id="product01-option" value="product01">01 Pigs for Sale in Cebu</option>
+    <option id="product02-option" value="product02">02 Pigs for Sale in Cebu</option>
+    <option id="product03-option" value="product03">03 Pigs for Sale in Cebu</option>
+    <option id="product04-option" value="product04">04 Pigs for Sale in Cebu</option>
+  </select>
+        </div>
+
+        <div id="modal-rectangle-container" class="modal-rectangle-container">
+          <div id="modal-rectangle" class="rectangle">
+            <img src="Rectangle 34.png" alt="Image" class="rectangle-image">
+            <div class="details-container">
+              <div class="icon-title-container">
+                <span class="title">01 Pig for Sale in Cebu</span>
+              </div>
+              <div class="weight-container">
+                <li><img width="20" height="20" src="https://img.icons8.com/color/96/weight-kg.png" alt="weight-kg"/>Weight: <span id="weight-value">80kg</span></li>
+              </div>
+              <div class="price-container">
+                <img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>
+                Price: <span id="price-value">20,000</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="button-container">
+            <button class="accept-button">Accept</button>
+            <button class="change-price">Change price</button>
+            <button class="decline">Decline</button>
+            </div>
+
+        </div>
+
+    <!-- Budget Input Section with Peso Icon -->
+    <div class="budget-input-container">
+      <p class="budget-guiding-text">What is your budget for this product?</p>
+      <div class="budget-input-wrapper" style="position: relative;">
+        <span class="peso-icon">₱</span>
+        <input type="text" class="budget-input" id="budget-input" placeholder="Per/kg">
+        <select id="small-listing-dropbox" class="small-listing-dropbox">
+          <option id="placeholder-option" value="placeholder" disabled selected></option>
+          <option id="total-option" value="total-amount">Total</option>
+          <option id="perkg-option" value="per-kg">Per/kg</option>
+        </select>
+      </div>
+    </div>
+
+        <div class="submit-btn-container">
+          <button class="submit-request-btn">Submit Request</button>
+        </div>
+
+      </div>
+    </div>
+    `;
+
+
+
+
+
+
+     // Create close button
+     const closeButton = document.createElement('span');
+    closeButton.innerHTML = '&times;';
+    closeButton.style.position = 'absolute';
+    closeButton.style.top = '15px';
+    closeButton.style.right = '20px';
+    closeButton.style.fontSize = '24px';
+    closeButton.style.cursor = 'pointer';
+    closeButton.addEventListener('click', closeNegotiationModal);
+
+    // Append elements to modal
+    modal.appendChild(closeButton);
+
+    // Append modal and overlay to the body
+    document.body.appendChild(overlay);
+    document.body.appendChild(modal);
+
+    // Attach event listeners to modal components
+    attachModalListeners();
+}
+
+// Function to attach event listeners to modal components
+function attachModalListeners() {
+    const budgetInput = document.getElementById('budget-input');
+    const dropdown = document.getElementById('small-listing-dropbox');
+    const priceValue = document.getElementById('price-value');
+
+    // Event listener for the dropdown to change the placeholder of the budget input
+    dropdown.addEventListener('change', function() {
+        if (dropdown.value === 'total-amount') {
+            budgetInput.placeholder = 'Total';
+        } else if (dropdown.value === 'per-kg') {
+            budgetInput.placeholder = 'Per/kg';
+        }
+    });
+
+    // Event listener for input changes to update the price-value span
+    budgetInput.addEventListener('input', function() {
+        const inputValue = budgetInput.value;
+        // Update price-value span with the input value
+        if (inputValue) {
+            priceValue.textContent = inputValue;
+        } else {
+            priceValue.textContent = '20,000'; // Reset to default value if input is cleared
+        }
+    });
+}
+
+// Function to close the negotiation modal
+function closeNegotiationModal() {
+    const modal = document.getElementById('negotiation-modal');
+    const overlay = document.getElementById('overlay');
+    if (modal) modal.remove();
+    if (overlay) overlay.remove();
+}
+
+// Event listener to trigger modal on clicking "Click here"
+document.querySelector('.click-here').addEventListener('click', openNegotiationModal);
+
+
+// Function to attach event listeners to modal components
+function attachModalListeners() {
+    const budgetInput = document.getElementById('budget-input');
+    const dropdown = document.getElementById('small-listing-dropbox');
+    const priceValue = document.getElementById('price-value');
+    const weightValue = parseInt(document.getElementById('weight-value').textContent, 10); // Get the weight value from the DOM
+
+    // Event listener for the dropdown to change the placeholder of the budget input
+    dropdown.addEventListener('change', function () {
+        if (dropdown.value === 'total-amount') {
+            budgetInput.placeholder = 'Total';
+        } else if (dropdown.value === 'per-kg') {
+            budgetInput.placeholder = 'Per/kg';
+        }
+    });
+
+    // Event listener for input changes to update the price-value span
+    budgetInput.addEventListener('input', function () {
+        const inputValue = parseFloat(budgetInput.value); // Get the input value and convert it to a number
+
+        // Check if "Per/kg" is selected and if the input value is a valid number
+        if (dropdown.value === 'per-kg' && !isNaN(inputValue)) {
+            // Multiply input value by the weight and update the price-value span
+            const totalPrice = inputValue * weightValue;
+            priceValue.textContent = totalPrice.toLocaleString(); // Display result with thousand separators
+        } else if (dropdown.value === 'total-amount') {
+            // If "Total" is selected, just update the price value with the input value
+            priceValue.textContent = inputValue ? inputValue.toLocaleString() : '0';
+        } else {
+            priceValue.textContent = '20,000'; // Reset to default value if input is cleared or no dropdown option is selected
+        }
+    });
+}
+
+
+// Array to store each rectangle's details separately
+let rectanglesData = [];
+
+// Function to generate a unique ID for each rectangle
+function generateUniqueId(prefix = "MR") {
+    return `${prefix}${Math.floor(Math.random() * 100000)}`;
+}
+
+// Function to handle the submit button click with event delegation
+document.addEventListener('click', function (event) {
+    if (event.target && event.target.classList.contains('submit-request-btn')) {
+        // Find the rectangle inside the modal
+        const modalRectangle = document.querySelector('.modal-rectangle-container .rectangle');
+
+        if (modalRectangle) {
+            // Create a unique ID for this rectangle
+            const uniqueId = generateUniqueId();
+
+            // Extract price and weight values from the modal-rectangle
+            const weightValue = modalRectangle.querySelector('#weight-value').textContent;
+            const priceValue = modalRectangle.querySelector('#price-value').textContent;
+
+            // Save the rectangle details in the array using the unique ID
+            const rectangleDetails = {
+                id: uniqueId,
+                weight: weightValue,
+                price: priceValue
+            };
+
+            rectanglesData.push(rectangleDetails);
+
+            // Create a new message box for the user message
+            const newMessageBox = document.createElement('div');
+            newMessageBox.classList.add('second-small-chat-box');
+
+            // Create the date line
+            const lineWithDate = document.createElement('div');
+            lineWithDate.classList.add('line-with-date');
+            lineWithDate.innerHTML = `
+                <div class="line"></div>
+                <span class="date">${getCurrentDate()}</span>
+                <div class="line"></div>
+            `;
+
+            // Create the user message with profile, name, and time
+            newMessageBox.innerHTML = `
+                <div class="second-chat-image-info-wrap">
+                    <div class="second-message-info">
+                        <div class="second-user-name">Me</div>
+                        <div class="second-chat-message-time">${getCurrentTime()}</div>
+                        <div class="second-chat-message"></div>
+                    </div>
+                    <div class="profile-container">
+                        <img src="Rectangle 405.png" alt="Profile Image" class="profile-image">
+                    </div>
+                </div>
+            `;
+
+            // Deep clone the modal-rectangle to prevent overwriting
+            const clonedRectangle = modalRectangle.cloneNode(true);
+            clonedRectangle.id = uniqueId;  // Set the unique ID for this rectangle
+
+            // Remove any IDs or set them to null inside the cloned rectangle
+            clonedRectangle.querySelectorAll('[id]').forEach(function(element) {
+                element.removeAttribute('id');
+            });
+
+            // Append the cloned rectangle to the message content
+            const messageContent = newMessageBox.querySelector('.second-chat-message');
+            messageContent.appendChild(clonedRectangle);
+
+            // Append the date line and message box to the chat area
+            const chatArea = document.querySelector('.chat-area');
+            chatArea.appendChild(lineWithDate);  // Add the date line first
+            chatArea.appendChild(newMessageBox);  // Add the message box after the date
+
+            // Scroll to the bottom of the chat area to see the new message
+            chatArea.scrollTop = chatArea.scrollHeight;
+
+            // Log the stored rectangle data for debugging
+            console.log('All rectangles:', rectanglesData);
+        }
+
+        // Close the modal after appending the message
+        closeNegotiationModal();
+    }
+});
+
+// Function to get current date and time
+function getCurrentDate() {
+    const now = new Date();
+    const day = now.getDate().toString().padStart(2, "0");
+    const month = now.toLocaleString('default', { month: 'short' });
+    const year = now.getFullYear();
+    return `${day}/${month}/${year}`;
+}
+
+function getCurrentTime() {
+    const now = new Date();
+    let hours = now.getHours();
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const ampm = hours >= 12 ? 'PM' : 'AM';
+    hours = hours % 12 || 12;
+    return `${hours}:${minutes} ${ampm}`;
+}
+
+
+// Function to handle the submit button click with event delegation
+document.addEventListener('click', function (event) {
+    if (event.target && event.target.classList.contains('submit-request-btn')) {
+        // Find the rectangle inside the modal
+        const modalRectangle = document.querySelector('.modal-rectangle-container .rectangle');
+
+        if (modalRectangle) {
+            // Ensure the modal rectangle is visible (set to flex)
+            modalRectangle.style.display = 'flex';
+
+            // Create a unique ID for this rectangle
+            const uniqueId = generateUniqueId();
+
+            // Extract price and weight values from the modal-rectangle
+            const weightValue = modalRectangle.querySelector('#weight-value').textContent;
+            const priceValue = modalRectangle.querySelector('#price-value').textContent;
+
+            // Save the rectangle details in the array using the unique ID
+            const rectangleDetails = {
+                id: uniqueId,
+                weight: weightValue,
+                price: priceValue
+            };
+
+            rectanglesData.push(rectangleDetails);
+
+            // Create a new message box for the user message
+            const newMessageBox = document.createElement('div');
+            newMessageBox.classList.add('second-small-chat-box');
+
+            // Create the date line
+            const lineWithDate = document.createElement('div');
+            lineWithDate.classList.add('line-with-date');
+            lineWithDate.innerHTML = `
+                <div class="line"></div>
+                <span class="date">${getCurrentDate()}</span>
+                <div class="line"></div>
+            `;
+
+            // Create the user message with profile, name, and time
+            newMessageBox.innerHTML = `
+                <div class="second-chat-image-info-wrap">
+                    <div class="second-message-info">
+                        <div class="second-user-name">Me</div>
+                        <div class="second-chat-message-time">${getCurrentTime()}</div>
+                        <div class="second-chat-message"></div>
+                    </div>
+                    <div class="profile-container">
+                        <img src="Rectangle 405.png" alt="Profile Image" class="profile-image">
+                    </div>
+                </div>
+            `;
+
+            // Deep clone the modal-rectangle to prevent overwriting
+            const clonedRectangle = modalRectangle.cloneNode(true);
+            clonedRectangle.id = uniqueId;  // Set the unique ID for this rectangle
+
+            // Remove any IDs or set them to null inside the cloned rectangle
+            clonedRectangle.querySelectorAll('[id]').forEach(function(element) {
+                element.removeAttribute('id');
+            });
+
+            // Append the cloned rectangle to the message content
+            const messageContent = newMessageBox.querySelector('.second-chat-message');
+            messageContent.appendChild(clonedRectangle);
+
+            // Append the date line and message box to the chat area
+            const chatArea = document.querySelector('.chat-area');
+            chatArea.appendChild(lineWithDate);  // Add the date line first
+            chatArea.appendChild(newMessageBox);  // Add the message box after the date
+
+            // Scroll to the bottom of the chat area to see the new message
+            chatArea.scrollTop = chatArea.scrollHeight;
+
+            // Log the stored rectangle data for debugging
+            console.log('All rectangles:', rectanglesData);
+        }
+
+        // Close the modal after appending the message
+        closeNegotiationModal();
+    }
+});
+
+
+</script>
+</main>
+</body>
