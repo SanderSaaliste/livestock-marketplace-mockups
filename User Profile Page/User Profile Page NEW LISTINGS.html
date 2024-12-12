@@ -1,0 +1,4779 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Profile Visit Page</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<style>
+
+        /* Header styles */
+        header {
+            /* background-image: url(header.png);   logicdigger css remove this
+            height: 100vh; /* Make the image responsive logicdigger css remove this */
+            width: 100%; 
+            object-fit: cover; /* Ensure the image covers the entire header */
+            filter: brightness(0.);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 99;
+        }
+
+        /***logicdigger css***/
+        .listing-title {
+    width: 100%;
+    max-width: 85%;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.heor-content {
+    width: 100%;
+    max-width: 1270px;
+    margin: 0 auto;
+    padding: 12px 25px;
+}
+
+  /***logicdigger css ***/
+        .navbar-toggler, .navbar-close {
+            display: none;
+            background-color: transparent;
+            border: none;
+            font-size: 35px;
+            cursor: pointer;
+        }
+        .navbar-nav {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            flex: 1;
+            justify-content: space-between;
+        }
+        .navbar-nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #3c5823;
+    font-weight: 600;
+}
+        .navbar-nav .icons a {
+            margin: 0 5px;
+        }
+        .navbar-collapse {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            flex: 1;
+        }
+
+        @media only screen and (min-width: 1024px) and (max-width: 1350px)  {
+          .image-item {
+            margin-bottom: 20px !important;
+          }
+          .navbar-nav .nav-link:nth-child(6) {
+            margin: 0 !important;
+          }
+          .rectangle-container{
+            display: block !important;
+            text-align: center;
+          }
+          .rectangle {
+    width: 25% !important;
+    display:inline-block !important;
+  }
+  .rectangle li img {
+    height: 10%;
+    width: 10% !important;
+    padding-right: 3%;
+}
+  .rectangle img {
+    width: 100% !important;
+  }
+        }
+        @media only screen and (min-width: 768px) and (max-width: 1024px)  {
+        .rectangle-container  .rectangle img {
+    width: 310px !important;
+}
+.sell-us-content{
+  display: block !important;
+  margin-bottom: 20px;
+}
+.rectangle-container .rectangle {
+    width: 300px !important;
+}
+.rectangle-container {
+    flex-wrap: wrap;
+}
+.rectangle-container .rectangle li img {
+    width: 10% !important;
+}
+footer {
+    height: unset !important;
+}
+.footer-columns {
+    display: block !important;
+}
+main .listing-title .title{
+  text-align: center !important;
+}
+  }
+  @media (max-width: 400px) { 
+  .search-container input[type=text] {
+    padding: 10px;
+    width: 200px !important;
+}
+.rectangle {
+        max-width: 80% !important;
+        margin: 0 auto !important;
+        margin-bottom: 20px !important;
+    }
+    .rectangle img {
+    width: 100% !important;
+    max-width: 350px;
+}
+.rectangle li img {
+    height: 10%;
+    width: 10% !important;
+    padding-right: 3%;
+}
+  }
+        @media (max-width: 1024px) {
+            .navbar-nav {
+               
+                flex-direction: column;
+                background-color: #f8f9fa;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                padding: 10px 0;
+            }
+            .navbar-collapse.show {
+  display: block !important;
+}
+.navbar-collapse {
+    display: none;
+}
+.navbar .container {
+    display: block;
+}
+.image-item {
+    margin-bottom: 20px !important;
+}
+            .navbar-nav .nav-link:nth-child(6){
+              margin: 0 !important;
+            }
+            .navbar-nav a {
+              padding: 10px 15px;
+          }
+            .navbar-nav.show {
+                display: flex;
+            }
+            .navbar-toggler {
+                display: block;
+            }
+            .navbar-close {
+                display: block;
+                align-self: flex-end;
+                margin: 10px 20px;
+                position: absolute;
+            }
+
+            span.navbar-toggler-icon {
+    float: right;
+    margin-right: 20px;
+}
+.navbar {
+    margin-top: 20px !important;
+}
+.navbar img {
+    margin-left: 20px;
+}
+        }
+
+.listing-title .title {
+    text-align: left !important;
+}
+body {
+    margin: 0;
+    padding: 0;
+}   
+.navbar .container {
+    width: 100%;
+    max-width: 1270px;
+    margin: auto;
+} 
+.heor-content {
+    width: 100%;
+    max-width: 1270px;
+    margin: 0 auto;
+}
+
+.hero-iner {
+    display: flex;
+    align-items: center;
+    height: 20vh;
+    background-size: cover;
+    background-position: bottom center;
+}
+
+.hero-section {
+    position: relative;
+}
+
+
+  /***logicdigger css end ***/
+
+    body  {
+      font-family: "Inter", sans-serif;
+        font-weight: 450;
+        font-size: 14px;
+        color: rgb(79, 79, 79);
+        width: 100%; /* Make the image responsive */
+        height: 100%; /* Make the image responsive */
+    } 
+
+.inter-font {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+    body {
+    height: 00px;
+    }
+    .mochiy-pop-one-regular {
+  font-family: "Mochiy Pop One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+    .navbar-nav .nav-link:nth-child(6) {
+        margin-right: 280px; /*Adjust logo*/
+    }
+    .navbar-nav .nav-link:nth-child(1) {
+        margin-right: px;
+    }
+    .signup-button {
+      color: rgba(255, 255, 255, 0.952) !important;
+      background-color: #000000ce; /* Change background color to a prominent color */
+      border-radius: 20px; /* Add rounded corners */
+      padding: 10px 20px; /* Add padding to increase button size */
+      transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+    }
+    .signup-button:hover {
+background-color: #ff4632c8;
+    }
+    .navbar {
+margin-top: 38px; /* Adjust the value to move the navbar down further */
+}
+    .main-title {
+      margin-top: 30px;
+      font-size: 48px;
+      font-weight: bolder;
+      font-family: "Mochiy Pop One", sans-serif;
+      color: black;
+    }
+    .h4-title {
+      margin-top: -20px;
+      font-size: 23px;
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+    }
+    .search-container {
+      margin-top: -0px;
+    }
+    .search-container input[type=text] {
+padding: 10px;
+width: 268px;
+border: 1px solid #ccc;
+border-radius: 7.5px;
+outline: none;
+padding-top: 30px;
+background-color: rgb(252, 252, 252);
+font-family: Arial;
+font-size: 15px;
+font-weight: 500;
+text-align: center; /* Center the text vertically */
+justify-content: center; /* Center the text horizontally */
+padding: 19px;
+}
+.search-container input[type=text]::placeholder {
+    color: #c5c5c5; /* Light gray color */
+    display: flex;
+    padding: 50px;
+    font-weight: 600;
+}
+    .submit-container {
+      margin-top: -57px;
+      margin-left: 305px;
+      padding-left: 10px;
+    }
+
+    .bi-search {
+      position: absolute;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      padding: 19px;
+    }
+    .navbar-brand {
+      margin-right: 0px;
+      position: fixed;
+      height: auto;
+    }
+    .container { 
+    display:flex; /* Use flexbox */
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    }
+
+    
+    .bi-heart {
+      font-size: 20px;
+      font-weight: 900;
+      padding-right: 5px;
+    }
+    .bi-cart3 {
+      font-size: 20px;
+      font-weight: 900px;
+      padding-right: 10px;
+    }
+   
+        main {
+        /* Can use flex here */
+  height: 100vh; /* Set main height to full viewport height */
+}
+
+.heor-content {
+    padding-top: 20px; /* Adjust padding as needed to ensure breadcrumb is below the navbar */
+    padding-left: 15px; /* Adjust padding as needed */
+
+}
+
+.breadcrumb-section {
+    max-width: 1270px; /* Ensure container matches navbar width */
+    margin: 0 auto; /* Center the container */
+    padding-left: 0px; /* Align with other sections if necessary */
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.breadcrumb-container {
+    display:flex; /* Use flexbox */
+    justify-content: flex-start; /* Center the text horizontally */
+    align-items: flex-start; /* Center the text vertically */
+}
+
+.breadcrumb {
+    background: none;
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    display: flex; /* Make the breadcrumb horizontal */
+    list-style: none; /* Remove default list styles */
+}
+
+.breadcrumb-item {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: "/";
+    margin: 0 5px; /* Space between the items */
+    color: #6c757d9d; /* Color for the slash */
+}
+
+.breadcrumb a {
+    color: #6c757d9d;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb .breadcrumb-item.active {
+    color: #0f0f0f;
+    font-weight: bold;
+}
+
+/* Main Content Section */
+.main-content-section {
+    display: flex;
+    align-items: flex-start;
+    max-width: 1270px; /* Ensure container matches navbar width */
+    margin: 0 auto; /* Center the container */
+    padding-left: 0px; /* Align with other sections if necessary */
+    margin-top: 0px;
+}
+
+.main-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start; /* Ensure the container takes full width */
+    margin-right: 30px;
+}
+
+.image-gallery {
+    display: flex;
+    flex-direction: row; /* Change to column to stack thumbnails and main image vertically */
+    align-items: flex-start;
+    margin-right: 20px; /* Space between image gallery and pig details */
+}
+
+.main-image img {
+    transition: opacity 0.3s ease;
+}
+
+.thumbnail-images img:hover {
+    /*cursor: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"%3E%3Cpath d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.415l-3.85-3.85a1.007 1.007 0 0 0-.115-.098zm-5.442.656a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11z"/%3E%3C/svg%3E'), auto; */
+    cursor: pointer;
+}
+
+.thumbnail-images {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between thumbnails */
+    margin-right: 20px; /* Space between thumbnails and main image */
+}
+
+.thumbnail-images img {
+    width: 108px; /* Adjust the size as needed */
+    height: 106.5px;
+    border-radius: 0px;
+}
+
+.main-image img {
+    width: 450px; /* Adjust the size as needed */
+    /* height: auto; */
+    height: 456px; /*414px*/
+    border-radius: 0px;
+}
+
+.pig-details {
+  display: flex;
+    max-width: 1270px; /* Adjust the width as needed */
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 30px;
+}
+
+.location img {
+  height: 4%;
+  width: 4%;
+  align-items: center;
+  justify-content: center;
+  padding-right: 5px;
+}
+
+.save-icon {
+    display: flex;
+    justify-content: flex-end;
+    top: 0;
+    right: 0;
+    font-size: 14px; /* Font size for "Save" text */
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    color: black;
+}
+
+.save-icon i.bi-heart-fill {
+    margin-right: 5px; /* Space between icon and text */
+    color: #ccc;
+}
+
+.save-icon i.bi-heart-fill.red {
+            color: red; /* Set the heart icon color to red */
+        }
+
+        
+
+.weight img {
+  height: 6%;
+  width: 6%;
+  align-items: center;
+  justify-content: center;
+}
+
+.price-icon img {
+  height: 6%;
+  width: 6%;
+  align-items: center;
+  justify-content: center;
+  padding-right: 5px;
+}
+
+.price-icon {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.user-profile {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.user-profile img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 10px; /* Space between the image and the text */
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column; /* Stack name and rating vertically */
+    display: flex;
+    align-items: left;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.user-profile h4 {
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    color: rgb(79, 79, 79);
+    margin: 0; /* Remove margin */
+}
+
+.user-rating {
+    display: flex;
+    align-items: center;
+    margin-top: 5px; /* Add margin to separate from the name */
+}
+
+.user-rating img {
+    width: 20px; /* Adjust the size of the star icon */
+    height: 20px;
+    margin-right: 5px; /* Space between the star and the rating text */
+}
+
+.user-rating span {
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+}
+
+.location {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.pig-details ul {
+  list-style-type: none;
+  justify-content: left;
+  padding: 0;
+  margin: 0px;
+}
+
+.pig-details ul li {
+  align-items: center;
+  justify-content: left;
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.pig-details h3 {
+    font-family: "Mochiy Pop One", sans-serif;
+    font-size: 30px;
+    color: black;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.pig-details .description {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: rgb(79, 79, 79);
+    line-height: 1.7;
+    font-weight: 420;
+    height: 75px;
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: left;
+}
+
+.description-p {
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    color: rgb(79, 79, 79);
+    line-height: 1.2;
+    font-weight: 420;
+    height: 65px;
+    width: 95%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: left;
+    margin-left: 5px;
+}
+
+.read-more-link {
+  color: #6c757d9d;
+  font-family: "Inter", sans-serif;
+  margin-left: 10px;
+}
+
+.read-more-link a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.read-more-link a:hover {
+  text-decoration: underline;
+  color: #5EA91E; /* Slightly darker color for hover */
+}
+
+.button-container {
+    display: flex;
+    gap: 11px; /* Horizontal gap between buttons */
+    margin-top: 20px; /* Add some margin above the buttons */
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px; /* Vertical padding: 10, Horizontal padding: 16 */
+    border: none;
+    border-radius: 43px;
+    color: #FFFFFF;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    width: 159px;
+    height: 44px;
+}
+
+.button i {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+.add-to-cart {
+    background-color: #182110; /* Button color */
+}
+
+.contact-seller {
+    background-color: #5EA91E; /* Button color */
+}
+
+.contact-seller:hover {
+    background-color: #4e921a; /* Slightly darker green on hover */
+}
+
+.nav-links-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -20px;
+    padding: 10px;
+    padding-bottom: 50px;
+    align-items: center;
+    max-width: 1270px; /* Ensure container matches navbar width */
+    margin: 0 auto; /* Center the container */
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+    padding: 0;
+    text-align: left;
+}
+
+.nav-links a {
+    text-decoration: none;
+    /* color: #707070; */
+    color: #AEAEAE;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 460;
+    padding: 0;
+    transition: color 0.3s ease, font-weight 0.3s ease, text-decoration 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #5EA91E;
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 10px; /* Adjust the offset value as needed */
+}
+
+.nav-links a:hover {
+    color: #5EA91E;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.nav-hr {
+    width: 100%;
+    border: none;
+    border-top: 1px solid #000000; /* Adjust the color and thickness as needed */
+    margin-top: 60px; /* Adjust the spacing above the hr */
+}
+
+
+
+
+
+.product-image img {
+  width: 376px; /* Image width */
+  height: 334px; /* Image height */
+  object-fit: cover;
+  border-radius: 15px; /* Optional: Add some border-radius if needed */
+  border: 1.5px solid;
+  border-color: #F3E7E3;
+}
+
+.product-details {
+  flex: 1; /* Take the remaining space */
+}
+
+.product-title {
+  font-size: 26px;
+  font-family: "Mochiy Pop One", sans-serif;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+
+
+
+
+.adjusted-br {
+  margin-bottom: -5px; /* Adjust this value to control the space */
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between buttons */
+}
+
+.button {
+    padding: 0px 0px;
+    border-radius: 43px;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+.contact-seller {
+    background-color: #5EA91E;
+    width: 159px;
+    height: 44px;
+}
+
+.contact-seller:hover {
+  background-color: #4e921ae2;
+}
+
+.icon-only {
+    background-color: #5EA91E;
+    width: 59px;
+    height: 44px;
+}
+
+.icon-only:hover {
+    background-color: #4e921ae2; /* Slightly darker green on hover */
+}
+
+.icon-only img {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-right: 0px;
+  height: 20px;
+  width: 20px;
+}
+
+.icon-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px; /* Size of the circle */
+    height: 25px; /* Size of the circle */
+    border: 1px solid #ffffff; /* Border color */
+    border-radius: 50%; /* Makes the shape a circle */
+    color: #ffffff; /* Color of the icon */
+}
+
+
+
+.star-icon {
+    width: 24px; /* Adjust the size as needed */
+    height: 24px; /* Adjust the size as needed */
+    margin-right: 10px; /* Space between icon and text */
+    margin-bottom: 5px;
+}
+
+
+
+.user-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.user-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.user-info-details {
+    display: flex;
+    align-items: left;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column; /* Stack name and rating vertically */
+}
+
+.username {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 3px;
+}
+
+.stars {
+    display: flex;
+    gap: 3px;
+}
+
+
+.bi.bi-star-fill:last-of-type {
+    color: #FFCA28; /* Light grey color for the last star */
+}
+
+.user-sold {
+    color: #2E68BD;
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.content {
+  text-align: center; /* Center text horizontally */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  font-size: 20px;
+  color: black;
+  font-weight: bolder;
+  font-family: Arial;
+}
+
+.text-box {
+  width: 225px; /* Adjust width of the text box 195px */
+}
+
+.text-box p {
+  font-size: 14px;
+  margin: 0;
+  text-align: left;
+  line-height: 1.6; /* Adjust this value for desired line spacing */
+}
+
+.introduction {
+  height: 100vh; /* Make the image responsive */
+            width: 100vw; /* Make the image responsive */
+            object-fit: cover; /* Ensure the image covers the entire header */
+            filter: brightness(0.);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+}
+.listings {
+  height: 100vh; /* Make the image responsive */
+            width: 100vw; /* Make the image responsive */
+            object-fit: cover; /* Ensure the image covers the entire header */
+            filter: brightness(0.);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+}
+
+
+.nav-links-section h2 {
+  text-align: left; /* Center text horizontally */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  max-width: 1270px;
+  font-size: 36px;
+  color: #333;
+  margin: 0 auto;
+  font-weight: bold;
+  font-family: "Inter", sans-serif;
+ /*  margin-top: 20vh; Adjust as needed to position content below header remove from logicdiger */
+ margin-top: -25px;
+  margin-bottom: 20px;
+  /* Add padding as well */
+}
+
+
+
+    .user-profile-rectangle {
+    background-color: #EFF2F4;
+    height: 440px;
+    width: 390px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 20px;
+    border-radius: 17px;
+    box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.05), 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.user-image {
+    width: 186px;
+    height: 186px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-right: 0px;
+    margin-top: 20px;
+}
+
+.user-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    margin-top: 25px;
+    font-weight: 700;
+    font-family: "Inter", sans-serif;
+    color: #000;
+}
+
+.user-rating {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.user-rating i {
+    color: #FFCA28; /* Gold color for star */
+    margin-right: 5px;
+}
+
+.user-rating rate {
+  font-size: 28px;
+}
+
+.user-membership {
+    color: #FF3D00;
+    font-size: 22px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    margin-right: 5px;
+    
+
+}.membership-icon {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.user-bought {
+    color: #2C8F67;
+    font-size: 20px;
+    margin-top: 0px;
+    font-weight: 600;
+}
+
+.main-guiding-text {
+    display: flex;
+    height: 40px;
+    font-weight: 600;
+    font-size: 18px;
+    color: #000;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 0px;
+}
+
+.credit-input-container {
+  width: 100%;
+    max-width: 643px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    justify-content: flex-start;
+}
+
+
+.listing-input-container {
+    width: 100%;
+    max-width: 1270px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    margin-left: 0px;
+}
+
+.credit-display-box {
+  width: 369px;
+    padding: 10px 20px;
+    height: 35px;
+    border: 2px solid #f5f5f5;
+    border-radius: 5px;
+    background-color: #f5f5f5; /* Slightly grey background */
+    font-size: 14px;
+    color: #333;
+    font-family: "Inter", sans-serif;
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+    align-items: flex-end;
+}
+
+.listing-display-box {
+    width: 600px;
+    padding: 10px 20px;
+    height: 35px;
+    border: 2px solid #f5f5f5;
+    border-radius: 5px;
+    background-color: #f5f5f5; /* Slightly grey background */
+    font-size: 14px;
+    color: #333;
+    font-family: "Inter", sans-serif;
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+    box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.05), 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.placeholder-text {
+  display: flex;
+  color: #999; /* Placeholder text color */
+  align-items: center;
+  margin-left: 0px;
+  text-indent: 20px;
+  border-radius: 10px;
+  border: 1.8px solid #d7d7d7; 
+}
+
+.small-placeholder-text {
+  display: flex;
+  color: #999; /* Placeholder text color */
+  align-items: center;
+  margin-left: 0px;
+  text-indent: 20px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+
+.next-button-container {
+width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1270px;
+    margin-top: 0px;
+}
+
+.next-button {
+  width: 190px;
+    height: 40px;
+    border: 1px solid #5EA91E;
+    background-color: #5EA91E;
+    border-radius: 10px; /*43px*/
+    outline: none;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    padding: 24px;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+    cursor: pointer;
+}
+
+.next-button:hover {
+  background-color: #4e921a; /* Darker color when hovered */
+}
+
+.edit-button {
+  width: 150px;
+    height: 40px;
+    border: 1px solid #43B572;
+    background-color: #43B572;
+    border-radius: 43px;
+    outline: none;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.edit-button:hover {
+  background-color: #38965f; /* Darker color when hovered */
+}
+
+
+.nav-button-container {
+  display: flex;
+  flex-direction: row;
+  height: 55px;
+  margin-right: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-number-container {
+    position: relative;
+width: 412px;
+    border-bottom: 2.5px solid #292C49;
+    border-radius: 10px 10px 10px 10px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+.bi.bi-credit-card-fill {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    font-size: 16px; /* Adjust icon size as needed */
+    color: #999;
+    align-items: center;
+    margin-left: 0px;
+}
+
+
+.my-listing-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 1270px; /* Ensure container matches navbar width */
+    margin: 0 auto; /* Center the container */
+    padding-left: 0px; /* Align with other sections if necessary */
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+
+.scroll-bar-container {
+  display: flex;
+  flex-direction: row;
+  width: 740px;
+}
+
+.scrollable-rectangles {
+  height: 480px; /* Set a fixed height to enable scrolling */
+  overflow-y: scroll;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  padding-right: 20px;
+  width: 740px;
+}
+
+/* Custom scrollbar styles */
+.scrollable-rectangles::-webkit-scrollbar {
+  width: 8px; /* Width of the entire scrollbar */
+}
+
+.scrollable-rectangles::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the scrollbar track */
+  border-radius: 10px; /* Rounded corners for the track */
+}
+
+.scrollable-rectangles::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+/* Add hover effect for the scrollbar thumb */
+.scrollable-rectangles::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darker color when hovered */
+}
+
+.rectangle-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0px; /* Add space between the rectangles */
+  width: 740px;
+}
+
+
+/* New listing types starts here */
+
+.rectangle {
+  transform: scale(0.9); /* Scale down to 70% of the original size */
+  transform-origin: top left; /* Adjust the origin to keep alignment */
+    flex-shrink: 0;
+    background-color: #FFFFFF;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    width: 800px;
+    height: 180px;
+    border: 1px solid #E0E0E0;
+    border-radius: 5px;
+    /*border-radius 15px*/
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 0.1px;
+    box-sizing: border-box;
+    box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.05), 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.rectangle-image {
+    width: 200px;
+    height: 160px;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.container-with-x {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    height: 115px;
+    width: 300px;
+}
+
+.details-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 368px;
+    height: 160px;
+}
+
+.weight-container, .price-container {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.icon-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.icon-title-container i {
+    margin-right: 5px;
+    font-weight: 600;
+}
+
+.icon-title-container .title {
+  display: flex;
+  flex-grow: 1;
+    text-align: right;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-weight: 700;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    color: #000;
+}
+
+.views {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;
+}
+
+.price-value {
+  font-weight: 700;
+  font-size: 16px;
+  margin-left: 5px;
+  color: #000;
+}
+
+.li {
+    display: flex;
+    align-items: center;
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    height: 100%; /* Ensure full height of parent */
+}
+
+.weight-container li,
+.price-container li {
+    display: flex;
+    align-items: center;
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    height: 100%; /* Ensure full height of parent */
+    font-weight: 500;
+}
+
+.price {
+  font-weight: 700;
+}
+
+.price-container li img,
+.weight-container li img {
+    /* Your CSS properties here */
+margin-right: 5px;
+}
+
+
+
+.bottom-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 0px;
+    margin-top: 0px;
+    align-items: flex-end;
+    gap: 10px;
+    margin-top: 0px;
+    height: 160px;
+}
+
+
+
+.container-with-x {
+  display: flex;
+  justify-content: flex-end;  
+  position: relative;
+    height: 115px;
+    width: 300px;
+}
+
+
+
+
+.container-with-x .bi-x {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 26px; /* Adjust the size of the X icon as needed */
+    cursor: pointer;
+    color: #000000a3;
+}
+
+.bi-x {
+    cursor: pointer; /* Add cursor pointer */
+}
+
+.button-container-wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.location-container {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.location-container li, .weight-container li, .price-container li {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    font-weight: 500;
+}
+
+.weight-container-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between !important;
+    width: 90%;
+    gap: 30px;
+}
+
+.weight-container-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between !important;
+}
+
+.price-container-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between !important;
+    width: 90%;
+    gap: 30px;
+}
+
+.price-container-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between !important;
+}
+
+.price-value {
+    font-weight: 700;
+    font-size: 16px;
+    margin-left: 5px;
+    color: #000;
+}
+
+.container-with-x {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    height: 160px;
+    width: 240px;
+    position: relative;
+}
+
+.container-with-x .bi-x {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 26px;
+    cursor: pointer;
+    color: #000000a3;
+}
+
+
+
+.user-accepts {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: rgb(79, 79, 79);
+    line-height: 1.7;
+    font-weight: 420;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    align-items: center;
+}
+
+.for-sale-badge {
+    display: flex;
+    background-color: #DDEDCB;
+    color: #000;
+    padding: 1px;
+    border-radius: 6px;
+    margin-right: 0px;
+    font-size: 14px;
+    font-weight: bold;
+    width: 70px;
+    height: 35px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; /* Prevent the badge from shrinking */
+}
+
+.pending-badge {
+    display: flex;
+    background-color: #ffd02652;
+    color: #000;
+    padding: 1px;
+    border-radius: 6px;
+    margin-right: 0px;
+    font-size: 14px;
+    font-weight: bold;
+    width: 70px;
+    height: 35px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; /* Prevent the badge from shrinking */
+}
+
+.already-sold-badge {
+    display: flex;
+    background-color: #ff21216a;
+    color: #000;
+    padding: 1px;
+    border-radius: 6px;
+    margin-right: 0px;
+    font-size: 14px;
+    font-weight: bold;
+    width: 70px;
+    height: 35px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; /* Prevent the badge from shrinking */
+}
+
+.sold-band {
+    position: absolute;
+    top: 15px;
+    left: -40px;
+    width: 150px;
+    height: 30px;
+    background-color: red;
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    transform: rotate(-45deg);
+    line-height: 30px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    clip-path: polygon(0 0, 70% 0, calc(100% - 15px) 100%, 0 100%);
+    background: linear-gradient(to right, rgb(230, 0, 0) 0%, rgba(255, 0, 0, 1) 100%);
+}
+
+.small-edit-button {
+    width: 110px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: #43B572;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.small-next-button {
+  width: 110px;
+  height: 50px;
+    border: none;
+    border-radius: 5px;
+    color: #666666;
+    font-weight: 500;
+    font-size: 14px;
+    background-color: #E1E1E1;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+
+.small-next-button:hover {
+    background-color: #d6d6d6;
+}
+
+.small-sold-button,
+.small-delete-button {
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    background-color: #FF5F4A;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.small-sold-button:hover,
+.small-delete-button:hover {
+    background-color: #e45643;
+}
+
+.upper-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-top: 0px;
+    align-items: flex-end;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.scroll-bar-graph-container {
+  display: flex;
+  flex-direction: row;
+  width: 1270px;
+}
+
+.title-container {
+  display: flex;
+  flex-direction:row;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 1270px;
+  margin-bottom: 30px;
+}
+
+.listings-title {
+  display: flex;
+  flex-direction: row;
+    font-size: 36px;
+    font-weight: 700;
+    width: 722px;
+    color: #182110;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+}
+
+
+.graph-container {
+  display: flex;
+  width: 1270px;
+  justify-content: flex-end;
+  margin-left: 20px;
+}
+
+.graph-rectangle {
+  width: 430px;
+    height: 425px;
+    border: 1px solid #E0E0E0;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.05), 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.listing-dropbox {
+    width: 100%;
+    width: 115px;
+    height: 18.8px;
+    border: 2px solid #f5f5f5;
+    border-radius: 5px;
+    background-color: #f5f5f5; /* Slightly grey background */
+    font-size: 14px;
+    color: #333;
+    font-family: "Inter", sans-serif;
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+    -webkit-appearance: none; /* Remove default arrow in WebKit browsers */
+    -moz-appearance: none; /* Remove default arrow in Firefox */
+    appearance: none; /* Remove default arrow in other browsers */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2714%27%20height%3D%2714%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27%23333%27%3E%3Cpath%20d%3D%27M7%2010l5%205%205-5z%27/%3E%3C/svg%3E'); /* Custom arrow icon */
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Position the arrow with margin-right 10px */
+    background-size: 25px 25px; /* Size of the arrow icon */
+    background-image: 
+        linear-gradient(to right, #33333358 1px, transparent 1px), /* Vertical line */
+        url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2714%27%20height%3D%2714%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27%23333%27%3E%3Cpath%20d%3D%27M7%2010l5%205%205-5z%27/%3E%3C/svg%3E'); /* Custom arrow icon */
+    background-repeat: no-repeat;
+    background-position: right 25px center, right 1px center; /* Position the arrow with margin-right 10px and the line with margin-right 20px */
+    background-size: 1px 10px, 25px 25px; /* Size of the line and the arrow icon */
+}
+
+.listing-dropbox:focus {
+    border-color: #5EA91E; /* Change border color when focused */
+    outline: none; /* Remove default outline */
+}
+
+.listing-dropbox option[value="placeholder"] {
+    color: #333;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+}
+
+
+.feeds-listing-dropbox {
+  width: 100%;
+    width: 150px;
+    height: 18.8px;
+    border: 2px solid #E0E0E0;
+    border-radius: 5px;
+    background-color: #ffffff; /* Slightly grey background */
+    font-size: 14px;
+    color: #333;
+    font-family: "Inter", sans-serif;
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+    -webkit-appearance: none; /* Remove default arrow in WebKit browsers */
+    -moz-appearance: none; /* Remove default arrow in Firefox */
+    appearance: none; /* Remove default arrow in other browsers */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2714%27%20height%3D%2714%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27%23333%27%3E%3Cpath%20d%3D%27M7%2010l5%205%205-5z%27/%3E%3C/svg%3E'); /* Custom arrow icon */
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Position the arrow with margin-right 10px */
+    background-size: 25px 25px; /* Size of the arrow icon */
+    background-image: 
+        linear-gradient(to right, #33333358 1px, transparent 1px), /* Vertical line */
+        url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2714%27%20height%3D%2714%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27%23333%27%3E%3Cpath%20d%3D%27M7%2010l5%205%205-5z%27/%3E%3C/svg%3E'); /* Custom arrow icon */
+    background-repeat: no-repeat;
+    background-position: right 25px center, right 1px center; /* Position the arrow with margin-right 10px and the line with margin-right 20px */
+    background-size: 1px 10px, 25px 25px; /* Size of the line and the arrow icon */
+}
+
+.feeds-listing-dropbox:focus {
+    border-color: #5EA91E; /* Change border color when focused */
+    outline: none; /* Remove default outline */
+}
+
+.feeds-listing-dropbox option[value="placeholder"] {
+    color: #333;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+}
+
+.title-price-container {
+  display: flex;
+  width: 400px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 80px;
+}
+
+.title-dropbox-container {
+  display: flex;
+  flex-direction: column;
+  width: 115px;
+  align-items: flex-start;
+  margin-left: 0px;
+}
+
+.market-title {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 10px;
+  margin-top: 0px;
+  margin-left: 0px;
+  justify-content: center;
+  align-items: center;
+}
+
+.market-price {
+  display: flex;
+  align-items: center;
+}
+
+.market-price-container {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.price-background {
+  display: inline-flex;
+  background-color: #2c91bd29; /*#DDEDCB;*/
+  padding: 7px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 18px;
+  align-items: center;
+}
+
+.lowest-price-background {
+  display: inline-flex;
+  background-color: #DDEDCB;
+  padding: 7px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 18px;
+  align-items: center;
+}
+
+.bottom-span {
+  display: flex;
+  flex-direction: column;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: #757575a3;
+  align-items: center;
+  justify-content: center;
+}
+
+.price-label img {
+  margin-right: 5px;
+}
+
+.background-price img {
+  margin-right: 5px;
+}
+
+.graph-content {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%; /* Ensure it takes full width of the container */
+    height: 100%; /* Ensure it takes full height of the container */
+}
+
+.y-axis {
+  display: flex;
+  width: 400px;
+  flex-direction: column;
+  gap: 34px;
+  margin-bottom: 20px;
+}
+
+.price-label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.38);
+}
+
+.x-axis-container {
+  display: flex;
+  width: 450px;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.horizontal-line {
+  width: 325px;
+  height: 0.3px;
+  background-color: #cacacaa3;
+  margin-left: 0px;
+  margin-right: 10px;
+}
+
+    /* Add this CSS for vertical lines */
+    .vertical-lines {
+  position: absolute;
+  top: 0;
+  left: 50px; /* Adjust to align with your y-axis */
+  height: 100%;
+  width: calc(100% - 60px); /* Adjust to match the graph width */
+  display: flex;
+  justify-content: space-between;
+}
+
+.vertical-line-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.vertical-lines span {
+  font-family: "Inter", sans-serif;
+  margin-top: 5px; /* Adjust to position the text below the line */
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.344);
+  font-weight: 550;
+}
+
+
+.vertical-lines .line {
+    width: 1px;
+    height: 100%;
+    background-color: #cacacaa3;
+    opacity: 0; /* Make the vertical lines invisible */
+}
+
+.vertical-lines .mon { left: 0%; }
+.vertical-lines .tue { left: 16.6%; }
+.vertical-lines .wed { left: 33.3%; }
+.vertical-lines .thur { left: 50%; }
+.vertical-lines .fri { left: 66.6%; }
+.vertical-lines .sat { left: 83.3%; }
+.vertical-lines .sun { left: 100%; }
+
+.x-axis {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.344);
+}
+
+.graph-dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #ff4632c8;
+  border-radius: 50%;
+  z-index: 10; /* Ensure dots appear above lines */
+}
+
+.graph-line {
+  stroke: rgb(0, 140, 255);
+  stroke-width: 5;
+  fill: none;
+}
+
+.lowest-graph-line {
+  stroke: #7CB342; /*rgb(0, 140, 255);*/
+  stroke-width: 5px;
+  fill: none;
+}
+
+.tooltip {
+        position: absolute;
+        padding: 5px;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        border-radius: 3px;
+        pointer-events: none;
+        display: none;
+        font-size: 12px;
+    }
+
+
+ 
+.review-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 1270px;
+    margin: 0 auto;
+    padding-left: 0px;
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
+.review-title {
+  display: flex;
+    flex-direction: row;
+    font-size: 36px;
+    font-weight: 700;
+    width: 722px;
+    color: #182110;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.review-rightside-container {
+  display: flex;
+    width: 516px;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 0px;
+    flex-direction: column;
+}
+
+
+
+.username-title {
+  display: flex;
+    flex-direction: row;
+    font-size: 36px;
+    font-weight: 700;
+    width: 522px;
+    color: #182110;
+    justify-content: center;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+}
+
+.scroll-bar-review-container {
+    display: flex;
+    flex-direction: row;
+    width: 1270px;
+}
+
+.review-container {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.review-box {
+  padding: 50px 0 50px 0;  /* 20px for top and bottom, 15px for left and right */
+    background-color: #ffffff;
+    border-radius: 0px;
+    width: 100%;
+    max-width: 725px;
+    margin-bottom: 20px;
+    border-top: 1px solid #e0e0e0;  /* Top border */
+    border-bottom: 1px solid #e0e0e0;  /* Bottom border */
+    border-left: none;  /* Remove left border */
+    border-right: none;  /* Remove right border */
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+}
+
+.review-column-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.review-profile-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Ensure alignment */
+}
+
+.review-profile-container .profile-placeholder {
+  width: 40px; /* Size of the circle */
+  height: 40px;
+  background-color: #1c8aff; /* Blue color */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; /* Make it a circle */
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 10px; /* Space between the circle and the username */
+}
+
+.username {
+    font-weight: 600;
+    font-family: "Inter", sans-serif;
+    color: #333;
+    margin-right: 10px;
+}
+
+.review-rating {
+    display: flex;
+    align-items: center;
+    margin-left: 0px;
+}
+
+.review-rating i.bi-star-fill {
+    color: #FFCA28;
+    font-size: 14px;
+    margin-right: 2px;
+}
+
+.rating-number {
+    font-weight: 600;
+    margin-left: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.divider-vertical {
+    width: 1px;
+    height: 15px;
+    background-color: #ccc;
+    margin: 0 10px;
+}
+
+.review-time {
+    color: #999;
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+}
+
+.divider-horizontal {
+    height: 0.3px;
+    background-color: #ccc;
+    border: none;
+    margin: 10px 0;
+}
+
+.review-description {
+  font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+    margin: 10px 0;
+    padding: 20px 0; /* Adds 20px padding to the top and bottom */
+}
+
+.review-footer {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.helpful-text {
+    color: #333;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.helpful-button {
+    border: none;
+    background-color: transparent;
+    color: #333;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.helpful-button i {
+    margin-left: 5px;
+}
+
+.scrollable-rectangles-review {
+  height: 550px; /* Set a fixed height to enable scrolling */
+  overflow-y: scroll;
+  padding-right: 20px;
+width: 735px;
+}
+
+
+/* Custom scrollbar styles */
+.scrollable-rectangles-review::-webkit-scrollbar {
+  width: 8px; /* Width of the entire scrollbar */
+}
+
+.scrollable-rectangles-review::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the scrollbar track */
+  border-radius: 10px; /* Rounded corners for the track */
+}
+
+.scrollable-rectangles-review::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+/* Add hover effect for the scrollbar thumb */
+.scrollable-rectangles-review::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darker color when hovered */
+}
+
+
+.review-rightside-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.review-dropbox-container {
+    margin-bottom: 10px; /* Space between the dropdown and the next element */
+}
+
+.review-dropbox {
+  display: flex;
+    width: 100%;
+    width: 254px;
+    height: 18.8px;
+    border: 2px solid #f5f5f5;
+    border-radius: 5px;
+    background-color: #f5f5f5; /* Slightly grey background */
+    font-size: 14px;
+    color: #333;
+    justify-content: flex-start;
+    font-family: "Inter", sans-serif;
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+    -webkit-appearance: none; /* Remove default arrow in WebKit browsers */
+    -moz-appearance: none; /* Remove default arrow in Firefox */
+    appearance: none; /* Remove default arrow in other browsers */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2714%27%20height%3D%2714%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27%23333%27%3E%3Cpath%20d%3D%27M7%2010l5%205%205-5z%27/%3E%3C/svg%3E'); /* Custom arrow icon */
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Position the arrow with margin-right 10px */
+    background-size: 25px 25px; /* Size of the arrow icon */
+}
+
+.review-span {
+  display: flex;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    text-align: flex-start;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: #000;
+    padding: 0px;
+    margin-top: 0px !important;
+}
+
+.review-average {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.review-average i {
+    color: #FFCA28; /* Gold color for filled stars */
+}
+
+.review-average span {
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.icon-only {
+    width: 50px;
+    height: 35px;
+    background-color: #5EA91E;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.icon-only:hover {
+    background-color: #4e921a; /* Slightly darker green on hover */
+}
+
+.icon-only i {
+    font-size: 18px; /* Adjust size of the search icon */
+}
+
+
+.review-rightside-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px
+}
+
+.review-search-result {
+  display: flex;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+.review-search-result,
+.review-dropbox-container,
+.review-span,
+.review-average,
+.review-stars,
+.review-word-searchbox {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 335px;
+    text-align: center;
+}
+
+.review-average {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.review-average i {
+    color: #FFCA28;
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.review-average span {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.review-stars {
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+}
+
+.star-bar-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+
+.star-bar {
+    height: 8px;
+    width: 100%;
+    max-width: 254px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.star-bar-fill {
+    height: 100%;
+    background-color: #000000;
+}
+
+.star-label {
+  display: flex;
+width: 70px;
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+    padding: 5px 10px; /* Add padding for the label */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.star-label:hover {
+    background-color: #ccc; /* Grey background on hover */
+}
+
+.star-label.active {
+    background-color: #000; /* Black background when active */
+    color: #fff; /* White text when active */
+}
+
+.review-word-searchbox {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.review-word-searchbox input[type="text"] {
+    width: 240px;
+    height: 19px;
+    border: 1px solid #ccccccac;
+    border-radius: 15px 0 0 15px;
+    margin-right: 0;
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    border-right: none;
+}
+
+.review-word-searchbox button {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0; /* Remove padding to ensure the icon is centered */
+    width: 50px; /* Set a fixed width for the button */
+    height: 100%; /* Match the height of the input field */
+    border: none;
+    background-color: #000000c8;
+    color: white;
+    border-radius: 0 15px 15px 0;
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.review-word-searchbox button:hover {
+    background-color: #000000;
+}
+
+.review-word-searchbox button i {
+    font-size: 14px;
+    color: white;
+    margin-right: 3px;
+}
+
+
+/*Profile initials starts here*/
+.icon-circle {
+    width: 200px; /* Adjust as needed */
+    height: 200px; /* Adjust as needed */
+    margin-top: 5px;
+    background-color: #1c8aff; /* Gray background */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.icon-circle i {
+    font-size: 40px; /* Adjust as needed */
+    color: #7d7d7d; /* Icon color */
+}
+
+.verified-badge {
+  display: flex;
+  padding: 5px 45px;
+  border: 1px solid #8ccd53; /*#8eb5e7;*/
+  background-color: #8ccd53;/*#8eb5e7;*/
+  border-radius: 10px;
+  font-family: "Inter", sans-serif;
+  position: absolute; /* Make it moveable relative to the icon-circle */
+  bottom: -0%; /* Adjust this to control how far below the circle it appears */
+}
+
+.unverified-badge {
+  display: flex;
+  padding: 5px 20px;
+  border: 1px solid #df5353; /*#8eb5e7;*/
+  background-color: #f2f4ff;/*#8eb5e7;*/
+  border-radius: 10px;
+  font-family: "Inter", sans-serif;
+  position: absolute; /* Make it moveable relative to the icon-circle */
+  bottom: 35%; /* Adjust this to control how far below the circle it appears */
+}
+
+#badge-p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: #3e6b16;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+#no-badge-p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: #df5353; 
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.initials-text {
+    font-size: 18px; /* Adjust as needed */
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+    color: #333;
+}
+
+#profile-name {
+  font-size: 24px; /* Adjust as needed */
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    color: #333;
+}
+
+#name-initials {
+  font-size: 50px; /* Adjust as needed */
+    font-weight: 300;
+    color: white;
+    font-family: "Inter", sans-serif;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.icon-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #color-picker {
+            position: absolute;
+            top: 72%; /* Adjust as needed to place under the button */
+            left: 50%;
+            transform: translateX(-50%);
+            display: none; /* Initially hidden */
+            z-index: 1000; /* Ensure it's above other content */
+            cursor: pointer;
+        }
+
+        /* Hide the color picker behind the icon initially */
+        .hide-behind {
+            position: absolute;
+            left: -9999px;
+        }
+
+.image-upload-box {
+  flex-direction: column;
+    width: 100%;
+    max-width: 470px;
+    border: 2px dashed #5fa91e8d;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 0px;
+    padding: 20px;
+}
+
+.image-upload-box i {
+  display: flex;
+    font-size: 30px;
+    color: #5fa91e;
+    margin-bottom: 0px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.image-upload-box p {
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    color: #333;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.profile-p {
+display: flex;
+color: #999999;
+font-family: "Inter", sans-serif;
+font-size: 16px;
+margin-top: 10px;
+margin-bottom: 10px;
+}
+
+#upload-photo {
+  display: flex;
+  width: 190px;
+  margin-top: 20px;
+    height: 40px;
+    border: 1px solid #4387b5; /*#43B572;*/
+    background-color: #4387b5; /*#43B572;*/
+    border-radius: 10px;
+    outline: none;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    padding: 24px;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */ 
+    cursor: pointer;
+}
+
+#upload-photo:hover {
+background-color: #34698d;
+}
+/*Profile initials ends here*/
+
+#color-button {
+            padding: 8px 18px;
+            font-size: 16px;
+            font-family: "Inter", sans-serif;
+            cursor: pointer;
+            border: 2px solid #e0e3f1;
+            background-color: #f2f4ff; /* Light gray */
+            color: #df5353;
+            border-radius: 10px;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        #color-button:hover {
+            background-color: #df5353; /* Slightly darker gray */
+            border-color: #df5353; /* Slightly darker green */
+            color: white;
+        }
+
+        #verify-button {
+                      padding: 8px 18px;
+            font-size: 16px;
+            font-family: "Inter", sans-serif;
+            cursor: pointer;
+            border: 2px solid #e0e3f1;
+            background-color: #f2f4ff; /* Light gray */
+            color: #5fa91e;
+            border-radius: 10px;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        #verify-button:hover {
+            background-color: #5fa91e; /* Slightly darker gray */
+            border-color: #5fa91e; /* Slightly darker green */
+            color: white;
+        }
+
+
+    footer {
+        background-color: #43662e; /* Dark green background color */
+        color: #ffffff;
+        text-align: center;
+        padding: 50px 0; /* Adjust padding to fit within 600px height */
+        height: 580px; /* Set height to 600px */
+        position: relative;
+    }
+
+    footer .footer-content {
+    padding: 0 50px; /* Add horizontal padding to match the sell-us-section */
+}
+
+    .footer-logo {
+        display: block;
+        margin: 0 auto;
+        height: auto;
+        width: 350px; /* Adjust width as necessary */
+        margin-bottom: 20px;
+    }
+
+    .footer-columns {
+        display: flex;
+        justify-content: space-around;
+        /* align-items: flex-start; /* Align items to the start to fit better within the height */
+        /* align-items: center; /*Change that perhaps?*/
+        margin-top: 5%;
+        height: calc(100% - 100px); /* Ensure columns take up the full height of the footer, accounting for padding */
+}
+
+    .footer-box {
+        max-width: 250px;
+        text-align: left;
+        font-size: 16px; /* Adjust font size to fit within the height */
+        display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    height: 100%; /* Ensure footer-box takes up the full height of the parent */
+    line-height: 1.8; /* Adjust this value for desired line spacing */
+    }
+
+    .footer-box h4 {
+        color: #ffffff;
+        margin-bottom: 15px;
+        font-size: 20px;
+    }
+
+    .footer-box p {
+        color: #d2d2d2;
+        margin: 5px 0;
+        line-height: 1.8; /* Adjust this value for desired line spacing */
+    }
+
+    .footer-nav,
+    .footer-bottom-nav {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-nav li,
+    .footer-bottom-nav li {
+        margin-bottom: 10px; /* Reduce margin to fit better */
+    }
+
+    .footer-nav a,
+    .footer-bottom-nav a {
+        color: #e1e1e1;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .footer-nav a:hover,
+    .footer-bottom-nav a:hover {
+        color: #ffffff;
+    }
+
+    .footer-box input[type=email] {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1.2px solid #e1e1e1;
+        color: #ffffff;
+        padding: 10px 0; /* Remove left padding to align placeholder */
+        width: 235px;
+        margin-top: 15px;
+        outline: none;
+        text-align: left; /* Align text to the left */
+        position: relative;
+}
+
+.email-container {
+    position: relative;
+    display: inline-block;
+}
+
+.email-container::before {
+  content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABdUlEQVR4nO3cPUoDYRRG4UEQV2NjZ6GSqAj+bEBsrWzcnI2L0NbeRgQridHGI8JIJEyKQMi9H/c8CxheOEwymRnSdZIkSZIkSZIkSZIkSZIkSVoxYBu4B+6AnVUfX0sCHph5B/aWPYZWCHj+F8Qo0YDruSB/Ufajt5UF3ALfc1EmwCh6W1ksjjKO3lYWRskHo+SDUZqKchi9rSyMkg9GaSrKUfS2shiO8mGUQEZJCM+UfBZE+QTOoreVhVHyMUpbUc6jt5WFUZqJ8gVcdBkAV8DrwOPRaqbASXSMzf5XrGa3WQ4ig2z1I5QhSB/lEnjpB1U2Df/IKvylPs/L3wjGaCOG97XWzRj5Y/xe6h9HbyuHxTF8pLtuxkgEz4z0MSZ+TOWK4VuM62aMNmKMo7eVgzHywBh5YIw8MEYTMUbR28rBGHkANwNnhn8cEPh2zGQghv93EhRkA3gzRiLAKfAEPAK70XskSZIkSZIkSZIkSZIkSZK6cD+4pa0FeKE3zwAAAABJRU5ErkJggg==');
+    position: absolute;
+    right: -15px; /* Adjust the position as needed */
+    bottom: 25px; /* Adjust the position as needed */
+    height: 15px; /* Adjust size as needed */
+    pointer-events: none; /* Ensure the icon does not interfere with input interactions */
+    color: white;
+    size: 1px;
+    transform: scale(0.3); /* Scale the image to 50% of its original size */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 25px; /* Space between the input field and social media icons */
+    gap: 10px;
+}
+
+.social-icon {
+    width: 30px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
+}
+
+.footer-box img {
+height: 35px;
+width: 35px;
+color: white;
+}
+
+    .footer-box input[type=email]::placeholder {
+        color: #b9b9b98b;
+        font-size: 16px;
+    }
+
+    .footer-divider {
+        border: 0;
+        height: 1.2px;
+        background-color: #e1e1e1;
+        margin: 80px 0;
+        margin: 120px auto 10px auto; /* Increase the top margin to move the hr line down */
+        width: 90%; /* Set the width to 1320px */
+    }
+
+    .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 12px; /* Adjust font size to fit within the height */
+        width: 90%;
+        margin: 0 auto; /* Center align the footer-bottom container */
+        color: #e1e1e1;
+        padding: 0 60px; /* Add padding to the sides */
+        padding-top: 10px; /* Add some padding at the top */
+    }
+
+    .footer-bottom p {
+        margin: 0px;
+        color: #e1e1e1;
+    }
+
+    .footer-bottom-nav {
+        display: flex;
+        gap: 20px; /* Adjust gap to fit within the height */ /*Use this on navbar as well.*/
+        color: #e1e1e1;
+    }
+
+
+  /***logicdigger css  for mobile***/
+
+
+@media only screen and (max-width: 768px) {
+    
+      footer {
+    height: unset !important;
+}
+.footer-columns {
+    display: unset !important;
+ 
+} 
+.feed-details {
+    padding: 10px !important;
+}
+.feed-section-content {
+    display: block !important;
+    width: 85%;
+}
+.rectangle {
+    margin: auto;
+    margin-bottom: 20px;
+}
+.rectangle-container {
+    display: block !important;
+}
+.listing-title .title , .feed-section-title h2, .sell-us-section-title h2{
+    text-align: center !important;
+    font-size: 25px;
+}
+.sell-us-title, .second-sell-us-title{
+  font-size: 20px;
+}
+.footer-logo {
+    width: 250px;
+    margin-bottom: 20px;
+}
+.feed-title{
+  font-size: 25px;
+}
+
+.heor-content {
+    padding: 30px;
+}
+
+
+.navbar-nav a {
+    text-decoration: none;
+    color: #000;
+    padding: 10px 20px;
+    text-align: center;
+    margin: auto;
+    font-weight: 500;
+}
+
+
+.sell-us-content {
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1200px;
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.sell-us-item {
+    display: block !important;
+}
+.footer-bottom {
+    display: block !important;
+     width: unset !important;
+}
+hr {
+    width: 100%;
+}
+.footer-bottom-nav {
+    display: block !important;
+    margin-top: 10px;
+}
+.main-title {
+    font-size: 25px;
+}
+
+.h4-title {
+    font-size: 18px;
+    padding-top: 15px;
+}
+
+.submit-container {
+    margin: unset;
+    padding: 0;
+}
+
+.search-container input[type=text] {
+    margin-bottom: 10px;
+}
+
+.hero-iner {
+    background-position: center !important;
+}
+
+}
+
+    div#navbarNavAltMarkup {
+    margin-left: 30px;
+}   
+
+  /***logicdigger css  for mobile end ***/
+</style>
+</head>
+<body>
+
+    <!-- Header -->
+  <header>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#"></a> <!-- Logo -->
+      <img src="farmifylogo.png" alt="Logo" height="50"> <!-- Adjust the height as needed -->
+            </a>
+        <span class="navbar-toggler-icon">   <button class="navbar-toggler" onclick="toggleNav()">
+          &#9776;
+      </button></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+    
+
+        <div class="navbar-nav">
+
+          <button class="navbar-close" onclick="toggleNav()">
+            &times;
+        </button>
+          <a class="nav-link disabled">Home</a>
+          <a class="nav-link disabled">Pigs for Sale</a>
+          <a class="nav-link disabled">Sell your Pig</a>
+          <a class="nav-link disabled">About us</a>
+          <a class="nav-link disabled">Contact us</a>
+          <i class="bi bi-heart"></i>
+          <i class="bi bi-cart3"></i>
+          <a class="nav-link disabled">Login</a>
+          <a class="nav-link signup-button">Sign up</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+</header>
+
+<div class="hero-section">
+   <div class="hero-iner" style="background-image: url();">
+    <div class="heor-content">
+    </div>
+      </div> <!--iner hero-->
+</div><!--hero end-->
+      <main>
+
+<!-- Nav-Links section -->
+<section class="nav-links-section">
+  <h2 class="title">Profile</h2>
+  <div class="nav-links">
+      <a href="#available-listings">Listings</a>
+      <a href="#reviews">Reviews</a>
+  </div>
+</section>
+
+<!-- Main Content Section -->
+<section class="main-content-section">
+    <div class="main-container">
+          <div class="user-profile-rectangle">
+            <div class="icon-circle" id="editable-icon-circle">
+              <div class="verified-badge">
+                <p id="badge-p" class="badge-p">Verified</p>
+              </div>
+              <p id="name-initials" class="initials-text-p">DR</p>
+            </div>
+            <h3 class="user-title">Darwin Rabago</h3>
+            <p class="profile-p">Joined April 2024</p>
+            <p class="profile-p">Location: Cebu City</p>
+            <button id="upload-photo" type="submit">Contact me</button>
+        </div>
+        </div>
+
+        <div class="pig-details">
+          <div class="listing-input-container">
+            <p class="main-guiding-text">First name</p>
+            <div class="listing-display-box placeholder-text">Darwin</div>
+          </div>
+          
+          <div class="listing-input-container">
+            <p class="main-guiding-text">Last name</p>
+            <div class="listing-display-box placeholder-text">Rabago</div>
+          </div>
+          
+          <div class="listing-input-container">
+            <p class="main-guiding-text">Location</p>
+            <div class="listing-display-box placeholder-text">Cebu City</div>
+          </div>
+
+                <div class="listing-input-container">
+                  <p class="main-guiding-text">Phone</p>
+                  <div class="listing-display-box placeholder-text">+96 123 456 789</div>
+                </div>
+
+                  <div class="credit-input-container">
+                    <div class="nav-button-container">
+                      <div class="next-button-container">
+                      <!-- <button type="submit" class="edit-button">Message</button> -->
+                      </div>
+                        <div class="next-button-container">
+                         <!-- <button type="submit" class="next-button"><i class="bi bi-chat-dots" style="margin-right: 5px;"></i>Contact me</button> -->
+                        </div>
+                      </div>
+                    <div>
+                </div>
+
+
+</section>
+
+
+<section class="my-listing-section">
+  <div class="title-container">
+  <div class="listings-title">Available Listings 
+    <div class="number-of-listings">6</div>
+</div>
+</div>
+<div class="scroll-bar-graph-container">
+  <div class="scroll-bar-container">
+    <div class="rectangle-column scrollable-rectangles">
+      
+        <div class="rectangle">
+            <img src="cattle img.png" alt="Image" class="rectangle-image">
+            <div class="details-container">
+              <div class="icon-title-container">
+                <div class="for-sale-badge">For Sale</div>
+                <span style="margin-left: 10px;" class="title" id="rectangle-title">Cattles for Sale - Quality Livestock For Your Farm</span>
+              </div>
+    
+              <div class="user-accepts">
+                <div class="location-container">
+                  <img style="margin-right: 5px;" width="16" height="16" src="https://img.icons8.com/plumpy/48/bank-card-back-side.png" alt="bank-card-back-side"/>User accepts:
+              </div>
+               <label for="payment-cash"><img width="16" height="16" src="https://img.icons8.com/color/48/get-cash.png" alt="get-cash"/>
+                    <label for="payment-gcash"><img src="gcash icon appstore.webp"  style="width: 16px; height: 16px; border-radius: 2px;">
+                        <label for="payment-gcash"><img src="maya icon.webp"  style="width: 16px; height: 16px; border-radius: 2px;">
+                            <label for="payment-credit-card"><img width="20" height="20" src="https://img.icons8.com/color/48/visa.png" alt="visa" style="width: 20px; height: 20px;"><img width="16" height="16" src="https://img.icons8.com/color/48/mastercard.png" alt="mastercard" style="width: 20px; height: 20px;"></label>
+              </div>
+    
+              <div class="user-accepts">
+              <div class="location-container">
+                <li><img style="width: 16px; height: 16px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAADMklEQVR4nO1aO2hUQRQd/4pGS/ELigp+S8VC8RNRC7WwsxXFEEnQJjayCGKXYsm+Oee+rCQsVtsoNjaiBCUYgo1JsBIFNUrEf4IaiStDniTIusy8376ABy4s7y1nzrkzc9+8mafUf0zC87w1JM+SLAF4DOAdyZ8AxgGMAOgH0A3gdEdHx0qVFZA8QvI+yQmSFcuYAHBXRBrrLbzPQXTVANCbqhERWUbyRlThVYx0F4vFhkTFA9gI4Gnc4jkVQ4VCYUMi4kVkO4C3CYqvBD0x7Hne5ljFm6oB4GXS4jll4rXv+6tjES8i80wJTEs8p0w8yuVycyMbIHklbfEMQkQuR83+WgDfHDP3BECr7/tbS6XSYhPmt7lGcsCRawzAqijZ9xwa/C4iTblcbva/+Mrl8hySzQB+OJjIhxJvajKALw7i99tya60P2JoA8Mn0orMBrfVJh+yfc+UHcN6hF044G+AkrMZ8rWFTazgBGLRsQ4cxYLXOEZEWFRIALlj2wsMw5COW2dkS1oDWepulgTfO5GZi2pAXCoUlYQ0Ui8UG2yLhTG5qsA15lBVkPp9famngqzM5yecZGkLPnMkB9FgaaE16EgO450xO8ppldgZMSXTlD57KQ5ZtXHU2ICJHLclNNIfgb7Hl11ofdjaQz+cXkPxg2cVmWXDQQXyj2a2gHff7crk8X4UBSd82S8aEWR7UGk7mnsm8rXhOBkOJDzK1y6GhP0YGzeQ0FcY8I0wE1eaiw5ivTOPbqaIAwAPXRuMKAD0qKrTWx+tlgOSxyAaCXuitg/i+SqUyKxYDJPembUAcXpBsTdxKcezfVHEjeMEfTUH8mO/762I3EJi4lEIPtKmkYDaakpzQAPrNRppKElrr9Q67FS7iR33f36TSQHASE7eBMypNALgdo/g7sdV8W3R2di43W+ExiB82XKoeILnbZZuwivhxrfWeuoifZqI5rAERaVJZAMnrIQyUVFbQ3t6+yOUQxPy3q6trocoSRGQFyRcWBl7FdnwUN8weEYCPNcR/9jxvh8oyAOyrVpmCTw4OqZkAETn116cHE+aamkkQkaYg87/CHICoLMAsv00k2chv+Sf6eNc6OVcAAAAASUVORK5CYII=" alt="marker--v1">Manila</li>
+              </div>
+                <div class="location-container">
+                <li><img style="width: 16px; height: 16px;" src="data:image/png;base64,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" alt="livestock">Quantity: 4</li>
+              </div>
+            </div>
+    
+              <div class="weight-container-row">
+                <div class="weight-container-wrapper">
+              <div class="weight-container">
+                <li><img style="width: 16px; height: 16px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAADTklEQVR4nO2YT2gTQRTGVzx5UFGxJz3rRQ961osIehOqHvWsdz1X60npoZTMe9OkhaTQQqmHQttEaUsbSw+FVNtLm2IIWClNWggJwfRPmpE3ZtNtbHZ3tokZIQ8+yL59DN9v573ZJIbRila0oq7BGGtDxHcA8BUA8iREXASATrpn6Byc8ycAkENEcZzoHgA8NjQ2X6pl3gJR0g6CMdZW9eR/MMbaA4HAWRLn/BEirlruZ/v6+i4bugT1vNW83++/WF3DGLtA9yw78dbQJRDxm2mMnrxdm1lAFw1dwto+1DK16rq7u89ZB9r43wA45+etc2DoEnTmm8ZoYG3qnuraQp0WY6s0sNU1PT09lwBg3VL3puHGfD7fTQBYdjrbGyUAWOac3/AMgIifm2UeDyE+eQYAgIwGABkhxCll8z6f72qzzWNZvb29V5QBOOcPm20cD/VAGQAAXmtgXJT1ShkAEUMaGBdlBb0ALGpgXJAAIKZkfnh4+DQi/nKzuBljY2OVXDgcruQXFhbqAVAgT64BOOfX3S5eDTA0NCR2d3dlLplM1m0XGGPXXAPQLyYvAH6/X2xtbcnrTCYj+vv76wnQrgLQ4QUgHo/Lzzs7O3InrHXz8/OiUChILS0tiVQqJbLZrEobdagAfFQFWFtbq3weHx8/UjM1NSXzBwcHYmNjQ0KYge53YUQFIK4KYI3p6ekjNZubmzIfjUbl9eDgoBeAVVfmu7q6zgBA0QsAtYTZQqFQqFJjDrWZo9lQBQCAInlzBGCM3VYZLjNWVlaksXw+/9cJtLe3J3PBYNAzAP75sXTLEYBz/twLgHmMRiKRSm5yclLm0un0keuBgQFPAADwzBEAET+cBICUSCRkjoaVnvrMzIy83t/fl/dyuZxXgPduACInBaBepzmgIMOUi8ViolgsSpknVqlUUgUIuwH4qbKoW42OjtL3eimCNV92qAawbmu+/O9Z3c1PTExIwzQLtCPmUM/NzSmvddy/ftanf7cRAIFAQL596YSiFtre3hazs7Oe1mKM3akJAAAvGwFQT3HOX9gBsGYbRGf57AC+aGBQOChqB5DWwKBwUMpuiJMaGBQOStjtwH0q0MCkOE4A8B0R79UEaEUrWtEK41/HbyhBH3bFLA18AAAAAElFTkSuQmCC" alt="weight-kg">Avg head: 105kg</li>
+              </div>
+            </div>
+            <div class="weight-container-wrapper">
+              <div class="weight-container">
+                <li><img style="width: 16px; height: 16px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAADTklEQVR4nO2YT2gTQRTGVzx5UFGxJz3rRQ961osIehOqHvWsdz1X60npoZTMe9OkhaTQQqmHQttEaUsbSw+FVNtLm2IIWClNWggJwfRPmpE3ZtNtbHZ3tokZIQ8+yL59DN9v573ZJIbRila0oq7BGGtDxHcA8BUA8iREXASATrpn6Byc8ycAkENEcZzoHgA8NjQ2X6pl3gJR0g6CMdZW9eR/MMbaA4HAWRLn/BEirlruZ/v6+i4bugT1vNW83++/WF3DGLtA9yw78dbQJRDxm2mMnrxdm1lAFw1dwto+1DK16rq7u89ZB9r43wA45+etc2DoEnTmm8ZoYG3qnuraQp0WY6s0sNU1PT09lwBg3VL3puHGfD7fTQBYdjrbGyUAWOac3/AMgIifm2UeDyE+eQYAgIwGABkhxCll8z6f72qzzWNZvb29V5QBOOcPm20cD/VAGQAAXmtgXJT1ShkAEUMaGBdlBb0ALGpgXJAAIKZkfnh4+DQi/nKzuBljY2OVXDgcruQXFhbqAVAgT64BOOfX3S5eDTA0NCR2d3dlLplM1m0XGGPXXAPQLyYvAH6/X2xtbcnrTCYj+vv76wnQrgLQ4QUgHo/Lzzs7O3InrHXz8/OiUChILS0tiVQqJbLZrEobdagAfFQFWFtbq3weHx8/UjM1NSXzBwcHYmNjQ0KYge53YUQFIK4KYI3p6ekjNZubmzIfjUbl9eDgoBeAVVfmu7q6zgBA0QsAtYTZQqFQqFJjDrWZo9lQBQCAInlzBGCM3VYZLjNWVlaksXw+/9cJtLe3J3PBYNAzAP75sXTLEYBz/twLgHmMRiKRSm5yclLm0un0keuBgQFPAADwzBEAET+cBICUSCRkjoaVnvrMzIy83t/fl/dyuZxXgPduACInBaBepzmgIMOUi8ViolgsSpknVqlUUgUIuwH4qbKoW42OjtL3eimCNV92qAawbmu+/O9Z3c1PTExIwzQLtCPmUM/NzSmvddy/ftanf7cRAIFAQL596YSiFtre3hazs7Oe1mKM3akJAAAvGwFQT3HOX9gBsGYbRGf57AC+aGBQOChqB5DWwKBwUMpuiJMaGBQOStjtwH0q0MCkOE4A8B0R79UEaEUrWtEK41/HbyhBH3bFLA18AAAAAElFTkSuQmCC" alt="weight-kg">Total: 420kg</li>
+              </div>
+            </div>
+          </div>
+          
+    
+              <div class="price-container-row">
+                <div class="price-container-wrapper">
+                  <div class="price-container">
+                    <img style="margin-right: 5px;" width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>
+                    Head: <span class="price-value">54,000</span>
+                  </div>
+                </div>
+                <div class="price-container-wrapper">
+                  <div class="price-container">
+                    <img style="margin-right: 5px;" width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>
+                    Per/kg: <span class="price-value">514</span>
+                  </div>
+                </div>
+    
+    
+              </div>
+            </div>
+            <div class="container-with-x">
+              <div class="save-icon" onclick="toggleSaveIcon(this)">
+                <i class="bi bi-heart-fill"></i>
+                <span>Save</span>
+            </div>
+              <div class="bottom-button-container">
+                <button class="small-edit-button">Offer</button>
+                <button class="small-next-button">View</button>
+              </div>
+            </div>
+          </div>
+      
+      <!-- Duplicate the rectangle block to add more rectangles -->
+      <div class="rectangle">
+        <img src="farm img.png" alt="Image" class="rectangle-image">
+        <div class="details-container">
+          <div class="icon-title-container">
+            <div class="for-sale-badge">For Sale</div>
+            <span style="margin-left: 10px;" class="title" id="rectangle-title">Charming Farmhouse for Sale in Cebu</span>
+          </div>
+
+          <div class="user-accepts">
+          <div class="location-container">
+            <li><img style="width: 16px; height: 16px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAADMklEQVR4nO1aO2hUQRQd/4pGS/ELigp+S8VC8RNRC7WwsxXFEEnQJjayCGKXYsm+Oee+rCQsVtsoNjaiBCUYgo1JsBIFNUrEf4IaiStDniTIusy8376ABy4s7y1nzrkzc9+8mafUf0zC87w1JM+SLAF4DOAdyZ8AxgGMAOgH0A3gdEdHx0qVFZA8QvI+yQmSFcuYAHBXRBrrLbzPQXTVANCbqhERWUbyRlThVYx0F4vFhkTFA9gI4Gnc4jkVQ4VCYUMi4kVkO4C3CYqvBD0x7Hne5ljFm6oB4GXS4jll4rXv+6tjES8i80wJTEs8p0w8yuVycyMbIHklbfEMQkQuR83+WgDfHDP3BECr7/tbS6XSYhPmt7lGcsCRawzAqijZ9xwa/C4iTblcbva/+Mrl8hySzQB+OJjIhxJvajKALw7i99tya60P2JoA8Mn0orMBrfVJh+yfc+UHcN6hF044G+AkrMZ8rWFTazgBGLRsQ4cxYLXOEZEWFRIALlj2wsMw5COW2dkS1oDWepulgTfO5GZi2pAXCoUlYQ0Ui8UG2yLhTG5qsA15lBVkPp9famngqzM5yecZGkLPnMkB9FgaaE16EgO450xO8ppldgZMSXTlD57KQ5ZtXHU2ICJHLclNNIfgb7Hl11ofdjaQz+cXkPxg2cVmWXDQQXyj2a2gHff7crk8X4UBSd82S8aEWR7UGk7mnsm8rXhOBkOJDzK1y6GhP0YGzeQ0FcY8I0wE1eaiw5ivTOPbqaIAwAPXRuMKAD0qKrTWx+tlgOSxyAaCXuitg/i+SqUyKxYDJPembUAcXpBsTdxKcezfVHEjeMEfTUH8mO/762I3EJi4lEIPtKmkYDaakpzQAPrNRppKElrr9Q67FS7iR33f36TSQHASE7eBMypNALgdo/g7sdV8W3R2di43W+ExiB82XKoeILnbZZuwivhxrfWeuoifZqI5rAERaVJZAMnrIQyUVFbQ3t6+yOUQxPy3q6trocoSRGQFyRcWBl7FdnwUN8weEYCPNcR/9jxvh8oyAOyrVpmCTw4OqZkAETn116cHE+aamkkQkaYg87/CHICoLMAsv00k2chv+Sf6eNc6OVcAAAAASUVORK5CYII=" alt="marker--v1">Manila</li>
+          </div>
+            <div class="location-container">
+              <li><img style="width: 16px; height: 16px;" style="margin-right: 20px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAABgElEQVR4nO2WvUoDQRSFo2BhoWgjWNmKWugjiG8Q9RX8eYFY5gkCBpZ7zl0C26fXTkEUtJMUlgoa0LSBtDoyuMUim81siLsS5sDt5sz5drh3ZisVLy+vKVYYhpskq6p6+BdFsgpgIzdYs9lcBHBJ0hRUF61Wa8EZEIAUCGdsAQjyAL4XDUjywxlwyAb3IrIfBMFao9GYF5EtkmcAehmn0gNQs71sPdYL4ADAQ9r6sQEBoF6vz6atFZEVkp2UwCdVXU3zGGNmSJ5PCrBjN8xar6rrJD8TH/Q1ajrtngAexwXsJ4wnLh4A1wnPlYtHVU8THzXIA2h7awDgJoqiJUfPHsk3AK+quuviEZFlmxFn1ZwBvaZaqjpnB4NkBKBdRPEn69hmu8DdlfCKmHiSbzMh45MzJddRFmD0DwCjoYBxP5QKCKDtAelPkL4HjR8S+mtmxEUNoFvUzwKAbu6LOnPhhAXX3F9v8fA3ccKia66I7AB4IfkchuF2UYBSUq6X11ToG7TWUWLkW6VSAAAAAElFTkSuQmCC" alt="bedroom">Bedroom: 5</li>
+          </div>
+        </div>
+
+          <div class="user-accepts">
+            <div class="location-container">
+                <li><img style="width: 16px; height: 16px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAAAsTAAALEwEAmpwYAAAD50lEQVR4nO2bv6sUVxTHp1L0P5DUsYmpJAGrZ29KBTegjUX+gmcgja0KT9w8vd/vmaTVYtlCC5+ISYqUNhYaSG1+FEEJRoki6sols2Hz4vL27dw7Z2b2+4UDj1cM93w/55yZO3O3KCRJkiRJkiRJkiRJkiRpjszsYwBDAA8BPCc5WeUA8Dx6QfJyCOFQtsIZDod7AQSSb7yTZnsjenN1NBrtyWH+Dy1IcNKR+D4pBABoQVKTLgWAK8lmvsYOlwHwuizLj1JU/9C7mtjduFQbAMmfWpDIpKPxIAWAZy1IZNLFAPBXCgDuibDDIQAUAPcqpDrA3whqBPmbQYfQPYAC4F6FVAf4G0GNIH8z6BC6B1AA3KuQ6oD0JgB4CeB3AL+R/Nvb6JUYQQBeALgZQvjKzD4HMJhGCOFLAGOSrfpO3RsAAO6Z2Rezpr8vyrI8Q/JH7/X2DcCN7RW/U4QQrgN46732PgAY78b42SD5rTeErgMYL2v+THzjCaHLAMYJzHeH0FUA44TmT8M8IHQRwDiD+W4QuvZRfpzR/OmNmQ1CeNqZYykAsps/E2jojGuSYymX+1D5+H98TfJ15qLaqA0gHrmOx+x6UvmDbXElVyckO5pYdcHVHpo/yNkJ8bpFKsWj1vHIdcLFvTWzUQvMn0b8wcmrhPl9l/w3AvGCiVr2WayOFpg+mA2S5wD8UTO3NzG35ObPiuQ6yVskH8XXwwsu7CmAn83sGoAz3mZjTpjZqWqvcB/An4sUW+XBo8qT9SK3vE1Cy0MAIADuVQh1gL8R0AjyNwMOoXsABMC9CqEO8DcCKzyCLpJ8ssAG5gnJC7tN0MzOArgN4JfqcNbL6u/4v7NLmJZ0vW0AsGMyM/F4F0adBnB3h48p8VXAnWpHu+h1k67XHcASL64Gi5i/yw9DDxeFkHq9vQRA8u4S170jAAkA2D8zf5lvuPFF2ro6oH4H3F7C/GncEoCaAEj+WgNAfGWue0DNDnhR8zi7ANTsgEmdEICGDeKqA0i9sWFmAH3ciF1YMKnHAM57A0i9XncAqYP5OyBpCAAFQB2QUxpB8B1BZnZC9wDMA3A8O4AQwmcCgPcCMLNj2QEAOCoAmAdgLTuAzc3NgwKAeSPow+wAzGx/COGk9gH4j/nRk+hN0YQAfCoA2D5+Pima0mg02hfv+NoJ49+nn42NjX1FkzKzA02MIrb8VYSZRQ8+KDxUluXBagErCcDMTkYPCk9F+jnHEdsL4Lhb5W/X1tbW3hDC4RwjiS0DEKue5JHGZ/4iio9h8Vk4btbirjDFaws6A4g5VLmsxdwae9SUJEmSJEmSJEmSJEmSir7pHbLpqvknSdZoAAAAAElFTkSuQmCC" alt="cottage">Interior: 195 m2 </li>
+            </div>
+            <div class="location-container">
+              <li><img style="width: 16px; height: 16px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAABeUlEQVR4nO2YTU7DMBBGfQUkkDgUS1AXcA+WdMkBonzjRU6Qq7Bhw2WoBAolIliO4xmPrRbmSV1UTe3v+S+2nTMMwzhJiOiD8XkSlP/IqaOmADu8RMJVEhCH50q4CgLF4TkSjstGgSO7wO36xmYCAA5E9KAV3nt/R0TvTYeQloTPCK8lMEYqmr7vpOGJaLdS5qgt8DVhAdyGFUp7ItbyAA4A7mMTu0Tg12qjIbEVfmYp4biklsoSidzwoYTjAmAvGb9939+s/Wf6TTKPsJFFTKQnXr33lwmBCyJ6yWn5ZiwkkuFDiZMIvxwaOeFnpmdTQ80wDOOf0Z/zMup/9jZvXdddbz0/DMPV9NLTPhSJiGzMkhJz+Fonu7+1maNjCz1rbIlLtuIA9kUHmlCiJDxXAt/hi4+Us4RG+FwJLMLboZ5WrlU09vOI9ET1eyHtwwgyJFQFzv5qkRJLrAQEE7aJgJYEMsJXEyiVQGb4qgJSCU54kggYhmG4FnwCwGVfFhyUXp4AAAAASUVORK5CYII=" alt="expand--v1">Land: 1,000 m2</li>
+          </div>
+        </div>
+
+        <div class="price-container-row">
+        <div class="price-container">
+            <img style="margin-right: 5px;" width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>
+            Price: <span class="price-value">11,400,000</span>
+          </div>
+          <div class="location-container">
+            <li><img style="width: 16px; height: 16px;" style="width: 22px; height: 22px !important;" src="data:image/png;base64,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" alt="land-plot--v2"> Lot no: 337</li>
+          </div>
+        </div>
+
+        <div style="margin-top: 5px;" class="description">
+          <p class="description-p"><strong>Description:</strong> Hello everyone! We have a charming and well-maintained farmhouse for sale
+            <span class="read-more-link"><a href="#description">Read More</a></span>
+          </p>
+        </div>
+          
+        </div>
+        <div class="container-with-x">
+          <div class="save-icon" onclick="toggleSaveIcon(this)">
+            <i class="bi bi-heart-fill"></i>
+            <span>Save</span>
+        </div>
+          <div class="bottom-button-container">
+            <button class="small-edit-button">Offer</button>
+            <button class="small-next-button">View</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="rectangle">
+        <img src="Company2.png" alt="Image" class="rectangle-image">
+        <div class="details-container">
+          <div class="icon-title-container">
+            <div class="for-sale-badge">Active</div>
+            <span style="margin-left: 10px;" class="title" id="rectangle-title">Offering: Veterinarian (Management Trainee)</span>
+          </div>
+
+          <div class="user-accepts">
+          <div class="location-container">
+            <li><img style="width: 16px; height: 16px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAAAsTAAALEwEAmpwYAAACD0lEQVR4nO2dPU7DQBBGP1HQhntAFeACKalB4jsUCCG4DZwCLsJPCTKy5CqSCWLtzKz3PekrV7Hn7cw6jS0BAAAAAAAAAACMcyTpVNKFpCtJnjlXw2+tJa1aFnMg6UzS9R6K7pFcD9fQX0tT9De8CSy8t7JpTcJ5gqJ7K30nNDPzI8eOfxlHTZwJpwmK7ZH0B/PiuUhQaI+kv7bFs49HTf8zl2qAXUXodmTu9YsHAcEgIBgEBIOAYBAQDAKCQUAw0X+2XPg/Yu58SnqVdCfpBAEKlfEt6VHSIR2gUBHPU0qIHjFOPoLG8oAAhQr4knRMByhUwi0CFCrgBQEKFfC+DwG7LqL19cVE34ArX48AIaDqHWw6QAioeQeaDqi7gGYECQGZ0yXP7I+h0emSBwFCAB1QQvSIMSMovsjmDIgvtDmEc6ZLnmJKC9D6+mKib8CVr0eAEFD1DjYdIATUvANNB9RdQDOChIDM6ZJn9sfQ6HTJgwAhgA4oIXrEmBEUX2RzBsQX2hzCOdMlTzGlBWh9fTHRN+DK1yNACKh6B5sOEAJq3oGmA+ouoBlBalvA5R8uIjJd4rwt/dXFTlDk2V9VsE5QZFcq4GYKAaukr693K6+r0fCxhOhCuzIB91rwJ0ycXMDT1O+Ny/IRHycX8DXs/MmLv30mrPf4GSsnF/AxPO3cTjnzAQAAAAAAAABAi+MHqvPJjxvQNFcAAAAASUVORK5CYII=" alt="company">Company: Bounty Fresh Food, Inc.</li>
+          </div>
+         <!-- Add new feature here -->
+      </div>
+
+      <div class="location-container">
+        <li><img style="width: 16px; height: 16px;" style="width: 20px; height: 20px !important;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAADMklEQVR4nO1aO2hUQRQd/4pGS/ELigp+S8VC8RNRC7WwsxXFEEnQJjayCGKXYsm+Oee+rCQsVtsoNjaiBCUYgo1JsBIFNUrEf4IaiStDniTIusy8376ABy4s7y1nzrkzc9+8mafUf0zC87w1JM+SLAF4DOAdyZ8AxgGMAOgH0A3gdEdHx0qVFZA8QvI+yQmSFcuYAHBXRBrrLbzPQXTVANCbqhERWUbyRlThVYx0F4vFhkTFA9gI4Gnc4jkVQ4VCYUMi4kVkO4C3CYqvBD0x7Hne5ljFm6oB4GXS4jll4rXv+6tjES8i80wJTEs8p0w8yuVycyMbIHklbfEMQkQuR83+WgDfHDP3BECr7/tbS6XSYhPmt7lGcsCRawzAqijZ9xwa/C4iTblcbva/+Mrl8hySzQB+OJjIhxJvajKALw7i99tya60P2JoA8Mn0orMBrfVJh+yfc+UHcN6hF044G+AkrMZ8rWFTazgBGLRsQ4cxYLXOEZEWFRIALlj2wsMw5COW2dkS1oDWepulgTfO5GZi2pAXCoUlYQ0Ui8UG2yLhTG5qsA15lBVkPp9famngqzM5yecZGkLPnMkB9FgaaE16EgO450xO8ppldgZMSXTlD57KQ5ZtXHU2ICJHLclNNIfgb7Hl11ofdjaQz+cXkPxg2cVmWXDQQXyj2a2gHff7crk8X4UBSd82S8aEWR7UGk7mnsm8rXhOBkOJDzK1y6GhP0YGzeQ0FcY8I0wE1eaiw5ivTOPbqaIAwAPXRuMKAD0qKrTWx+tlgOSxyAaCXuitg/i+SqUyKxYDJPembUAcXpBsTdxKcezfVHEjeMEfTUH8mO/762I3EJi4lEIPtKmkYDaakpzQAPrNRppKElrr9Q67FS7iR33f36TSQHASE7eBMypNALgdo/g7sdV8W3R2di43W+ExiB82XKoeILnbZZuwivhxrfWeuoifZqI5rAERaVJZAMnrIQyUVFbQ3t6+yOUQxPy3q6trocoSRGQFyRcWBl7FdnwUN8weEYCPNcR/9jxvh8oyAOyrVpmCTw4OqZkAETn116cHE+aamkkQkaYg87/CHICoLMAsv00k2chv+Sf6eNc6OVcAAAAASUVORK5CYII=" alt="marker--v1">Bohol</li>
+      </div>
+
+          <div class="user-accepts">
+            <div class="price-container">
+              <img style="margin-right: 5px;" width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>
+              Hourly: <span class="price-value">75-100</span>
+            </div>
+<!-- Add new feature here -->
+        </div>
+
+        <div class="description">
+          <p class="description-p"><strong>Description:</strong> Animal care, medical diagnostics, treatments, surgeries, and emergency 
+            <span class="read-more-link"><a href="#description">Read More</a></span>
+          </p>
+        </div>
+          
+        </div>
+        <div class="container-with-x">
+          <div class="save-icon" onclick="toggleSaveIcon(this)">
+            <i class="bi bi-heart-fill"></i>
+            <span>Save</span>
+        </div>
+          <div class="bottom-button-container">
+            <button class="small-edit-button">Offer</button>
+            <button class="small-next-button">View</button>
+          </div>
+        </div>
+      </div>
+      <!-- Add more rectangles if needed -->
+
+      <div class="rectangle">
+        <img src="harvester img.png" alt="Image" class="rectangle-image"> 
+        <div class="details-container">
+          <div class="icon-title-container">
+            <div class="for-sale-badge">For Sale</div>
+            <span style="margin-left: 10px;" class="title" id="rectangle-title">Kubota DC-70 Rice Harvester</span>
+          </div>
+
+          <div class="user-accepts">
+            <div class="location-container">
+              <img style="margin-right: 5px;" width="16" height="16" src="https://img.icons8.com/plumpy/48/bank-card-back-side.png" alt="bank-card-back-side"/>User accepts:
+          </div>
+           <label for="payment-cash"><img width="16" height="16" src="https://img.icons8.com/color/48/get-cash.png" alt="get-cash"/>
+                <label for="payment-gcash"><img src="gcash icon appstore.webp"  style="width: 16px; height: 16px; border-radius: 2px;">
+                    <label for="payment-gcash"><img src="maya icon.webp"  style="width: 16px; height: 16px; border-radius: 2px;">
+                      <label for="payment-credit-card"><img width="20" height="20" src="https://img.icons8.com/color/48/visa.png" alt="visa" style="width: 20px; height: 20px;"><img width="16" height="16" src="https://img.icons8.com/color/48/mastercard.png" alt="mastercard" style="width: 20px; height: 20px;"></label>
+          </div>
+
+          <div class="user-accepts">
+          <div class="location-container">
+            <li><img style="width: 16px; height: 16px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAADMklEQVR4nO1aO2hUQRQd/4pGS/ELigp+S8VC8RNRC7WwsxXFEEnQJjayCGKXYsm+Oee+rCQsVtsoNjaiBCUYgo1JsBIFNUrEf4IaiStDniTIusy8376ABy4s7y1nzrkzc9+8mafUf0zC87w1JM+SLAF4DOAdyZ8AxgGMAOgH0A3gdEdHx0qVFZA8QvI+yQmSFcuYAHBXRBrrLbzPQXTVANCbqhERWUbyRlThVYx0F4vFhkTFA9gI4Gnc4jkVQ4VCYUMi4kVkO4C3CYqvBD0x7Hne5ljFm6oB4GXS4jll4rXv+6tjES8i80wJTEs8p0w8yuVycyMbIHklbfEMQkQuR83+WgDfHDP3BECr7/tbS6XSYhPmt7lGcsCRawzAqijZ9xwa/C4iTblcbva/+Mrl8hySzQB+OJjIhxJvajKALw7i99tya60P2JoA8Mn0orMBrfVJh+yfc+UHcN6hF044G+AkrMZ8rWFTazgBGLRsQ4cxYLXOEZEWFRIALlj2wsMw5COW2dkS1oDWepulgTfO5GZi2pAXCoUlYQ0Ui8UG2yLhTG5qsA15lBVkPp9famngqzM5yecZGkLPnMkB9FgaaE16EgO450xO8ppldgZMSXTlD57KQ5ZtXHU2ICJHLclNNIfgb7Hl11ofdjaQz+cXkPxg2cVmWXDQQXyj2a2gHff7crk8X4UBSd82S8aEWR7UGk7mnsm8rXhOBkOJDzK1y6GhP0YGzeQ0FcY8I0wE1eaiw5ivTOPbqaIAwAPXRuMKAD0qKrTWx+tlgOSxyAaCXuitg/i+SqUyKxYDJPembUAcXpBsTdxKcezfVHEjeMEfTUH8mO/762I3EJi4lEIPtKmkYDaakpzQAPrNRppKElrr9Q67FS7iR33f36TSQHASE7eBMypNALgdo/g7sdV8W3R2di43W+ExiB82XKoeILnbZZuwivhxrfWeuoifZqI5rAERaVJZAMnrIQyUVFbQ3t6+yOUQxPy3q6trocoSRGQFyRcWBl7FdnwUN8weEYCPNcR/9jxvh8oyAOyrVpmCTw4OqZkAETn116cHE+aamkkQkaYg87/CHICoLMAsv00k2chv+Sf6eNc6OVcAAAAASUVORK5CYII=" alt="marker--v1">Negros</li>
+          </div>
+            <div class="location-container">
+              <li><img style="width: 16px; height: 16px; margin-right: 5px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAABcklEQVR4nO2XQU7DMBRELTaIM7DvTYpyAFjkDsAVgoALRJEy85Mb5A7AEljBKYrEtpXKqkGGikZIoNhuGhs80iyjP8//27GVioqKivJaeZ7vi8g5gAcAC5LtkAaw0LVInunaTuEBHJJ8Hjo0f4Z50hmsV37M8OxAWHVCj83Y4bmBODUGIPk4dnBufG8DMPcgeLv23Aag9cnq3wEASH2yigCIHUiDGiERuST5qg3gKqg9ICIXAJadU+StLMvrIABIZt/Cf0G4dELtAuCX8M4QamiAHuE/DMAKQg0J0Dd8B2K5/ib1BeDF9GoAYOYNAIBbACuD8CsANz4BDG4VARA7kHo7QiTvTDcxSa828SzoY5Sh/8gQ+lUCf+EyB9+u0yJy4tGD5tgG4GgbT0oAzk/Kuq6nxgBVVU1cim7TRVFMjAGyLNsjmYwdnmSisygbNU1zMCYEyURnsArf7YRuoZ5Dl43d1/JZY6prWq98VFRUlNqV3gHL6KjtbgBaeAAAAABJRU5ErkJggg==" alt="age">2018</li>
+          </div>
+        </div>
+
+          <div class="weight-container-row">
+            <div class="weight-container-wrapper">
+          <div class="weight-container">
+            <li><img style="width: 16px; height: 16px;" src="data:image/png;base64,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" alt="clock">Hours: 4,900</li>
+          </div>
+        </div>
+        <div class="weight-container-wrapper">
+          <div class="weight-container">
+            <li><img style="width: 16px; height: 16px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAYAAADFeBvrAAAACXBIWXMAAAsTAAALEwEAmpwYAAACaklEQVR4nN3avWsUURQF8Bu/UGIjqIVaKIJG0eB3aWMZFBsLEbRIk8LGQkg3FrFIsRbuzjvnDiyLI4qMSBDUQkSRNIr+A6kkhQqiYgpB8WNk2ASWJbt5C4vz7v7g/QFnzsx7dx8r8h84546SzH0WgN9JkuyRkLHJKxDJWxKyNE2HSS74tuOc2yshAzDew+t2W0IH4JVvO6o6IiFT1YM9tHNHQkey6hnoj3PugISsUqlsIPnVs517EjoAFz3D/C1eTQkdgFnPQJmETlVHiifv004cx6MSOpI3PNt5IKHLsmwdgE8+7RQznoQOwHnPdmbEAgDPPc+eYxI6Vd3tsxmQfCgWkJz2aUdVj0voVHUtyY8e384jsUBVz3luBifEApJPPcI8EQuSJNlVTMwegeZJvl1pAbhSaiCSU55btc/6XK/Xt5QWJoqiNQDe9yuQql6SMqnq2X6FAfAyz/OhUgORfNynMD/jON5XapgkSXYUlxt9CnRNyuac21RMzN1WMbMB+LZCmLlGo7FeLIjjeNSjoVNiBcmrpq9+2wF41uVV++Kc2ypWpM177R9dAo2LJao61iXMbOlnTq8A3Ox05gDYL9YAmOvQ0JRYA2BnhzDvim9LrCE50WH4HBOLAMwsE+iuWBQ1f1K0jzsL1Wp1m1hE8uQy7UyIVQCut4V5HUXRKrGKzbuBpTC/kiQ5JFap6ua2C5NpsQzAhZaJYL5Wq20Uy0imLe2cFsvyPB8C8GExzH2xzjl3eOnMAbBdrFPVycVv57IMApIvALzJsmy1WJem6TCA76p6RAaBc+4MgIoMClWdNH/mSItQ/nz0DxNTUwCoaoD2AAAAAElFTkSuQmCC" alt="lightning-bolt">HP 140</li>
+          </div>
+        </div>
+      </div>
+      
+
+          <div class="price-container-row">
+            <div class="price-container-wrapper">
+              <div class="price-container">
+                <img style="margin-right: 5px;" width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>
+                Price: <span class="price-value">563,000</span>
+              </div>
+            </div>
+            <div class="weight-container-wrapper">
+              <div class="weight-container">
+                <li><img style="width: 16px; height: 16px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAAAsTAAALEwEAmpwYAAAEgElEQVR4nO2dW4hOXRjHfxeOcyduJI2+MlLcmEzJhSluxIUcMhsNwoUrUnKIHPKV4U6TuXQoEnJhQrhwjlDIhRgmuRDp81HkNIxW1tu872vvPfvd77vXYfbzr6fmYk+z1++/17PXetaatUEkEolEIpFIJBKJRCKRSCRyU0OAicAsYD4QGIhFwBygGWgA6sip6oEFhqDHRQvQBAwnR5rkAPjyWAiMIQea7ADsuN6g0pLzUl22E/gIfAauALM9h19sgtM9YSnwHegti1/ANs/hF6cjJ98Ji4EfIfCLY6/n8Auherl38HtDTPARfiEV1fkIv7fIhGrhzwTGAsNq0IZBwEigUbcnyd8fj6fwe4GDVT59WTZ+BDAvwX3MIKfw6w20bUSCnqBmzLmDP85gGxsTjIZyBf8fw+0cleC+cgE/sPTCG+SaAXmCrzTYJQNswW/AnpxJQaq80GMB/gTsqtEFA5oiajtZw5+OXSUZhhoxoNMC/ACYgj0lnYgZMeCjBfiBXg1TOdjkiGdUhaUIIwZ8tgA/8Cgy11WBj1UDZuvFFHnysWOA0nZJO1jrAQVtkpyPVQPKTcjjCzewbYDSToGPVQN8XcMNBkIPsA1/NdAGnAHuAC/0RPGTHqn16J/fAd3AXeA80A4s990AW9sFW4EO4FHKgmAhXgGrfDWg3gL4ZcBR4H0V0MvjrI8GDLGwS3kL8LKG4AvR5aMBEw3Dbwe+ZQBfxWsfDZhlEH5HgrJHNfG/jwaY+s+UNuBnhvBVfPXRABPw16ZYd0gTamVPDOBvCNcNwJceQPjTtzHjvF8canFJegClEC4Zgq/iPzGAvyZblSx5VhuqdCE9gD4IOwzCV3FfDKDkCTxWAbyeKmtBKi6IAZQYkHTB/xywQhfmTldhgJroSQqiD8KjBNAuh0B7ltIAtaInBtAHoasfYE/1vtS0Pac41ERviRhACcgn/ZQN1ocAU2nobQoDrmY0i/e6FHE7BtipiN+5kjL9qFqTGEAphO6YquWKkOsPpYT/NqP043UP2B4D7ETI9et0WkpjwJEM2+GtAddiKpZrKri+v3ij3xtiAH0QWmNKEGGz1Q0p1wpUkW9fhvC97QH7Y6C117BcfTFj+N4acDFm6Lmy7Fr1Mv6SAv7jjFOP1wa8jID2MOTajhTwH0SMosQA/myOisrnJ1OWK4pzfmfE7FkM4A+EthiAe8pAtVawRaVLl7dNgfc2BZ2MANgTkjZ29QNdjaRuAv9aAO+tATcq2DS1FTheFmo2fADYbDjVDBgDnkcYcM8BmLkw4IPBjbMDwoBFNb7hHxEGHHYAZqVh5MCmuTW+6TcRBux2AGilYeTIsuYa3/ShEPjdeotK4FkYObSvocY3vUSnm9d6GHlL7w0NPAwjB0nV6fPabDc2yPPBrU0ONDhwLKZiUMP1G992o4M8H949WlIR1o+vb8j5+6DFhQ84jMlpOlro0ocbhuqjvfLQG1qAaa5+sKFOj4Wb9ayw1mWLwEIUPmM1Q7fNmW8EiEQikUgkEolEIpFIJBKJ8Eq/AUcHalEkRwYnAAAAAElFTkSuQmCC" alt="eco-fuel">~7.5 L/hr</li>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+        <div class="container-with-x">
+          <div class="save-icon" onclick="toggleSaveIcon(this)">
+            <i class="bi bi-heart-fill"></i>
+            <span>Save</span>
+        </div>
+          <div class="bottom-button-container">
+            <button class="small-edit-button">Offer</button>
+            <button class="small-next-button">View</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="rectangle">
+        <img src="tractor img.png" alt="Image" class="rectangle-image"> 
+        <div class="details-container">
+          <div class="icon-title-container">
+            <div class="for-sale-badge">For Sale</div>
+            <span style="margin-left: 10px;" class="title" id="rectangle-title">Powerful John Deere 5075E Tractor for Sale – Exce...</span>
+          </div>
+
+          <div class="user-accepts">
+            <div class="location-container">
+              <img style="margin-right: 5px;" width="16" height="16" src="https://img.icons8.com/plumpy/48/bank-card-back-side.png" alt="bank-card-back-side"/>User accepts:
+          </div>
+           <label for="payment-cash"><img width="16" height="16" src="https://img.icons8.com/color/48/get-cash.png" alt="get-cash"/>
+                <label for="payment-gcash"><img src="gcash icon appstore.webp"  style="width: 16px; height: 16px; border-radius: 2px;">
+                    <label for="payment-gcash"><img src="maya icon.webp"  style="width: 16px; height: 16px; border-radius: 2px;">
+                      <label for="payment-credit-card"><img width="20" height="20" src="https://img.icons8.com/color/48/visa.png" alt="visa" style="width: 20px; height: 20px;"><img width="16" height="16" src="https://img.icons8.com/color/48/mastercard.png" alt="mastercard" style="width: 20px; height: 20px;"></label>
+          </div>
+
+          <div class="user-accepts">
+          <div class="location-container">
+            <li><img style="width: 16px; height: 16px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAADMklEQVR4nO1aO2hUQRQd/4pGS/ELigp+S8VC8RNRC7WwsxXFEEnQJjayCGKXYsm+Oee+rCQsVtsoNjaiBCUYgo1JsBIFNUrEf4IaiStDniTIusy8376ABy4s7y1nzrkzc9+8mafUf0zC87w1JM+SLAF4DOAdyZ8AxgGMAOgH0A3gdEdHx0qVFZA8QvI+yQmSFcuYAHBXRBrrLbzPQXTVANCbqhERWUbyRlThVYx0F4vFhkTFA9gI4Gnc4jkVQ4VCYUMi4kVkO4C3CYqvBD0x7Hne5ljFm6oB4GXS4jll4rXv+6tjES8i80wJTEs8p0w8yuVycyMbIHklbfEMQkQuR83+WgDfHDP3BECr7/tbS6XSYhPmt7lGcsCRawzAqijZ9xwa/C4iTblcbva/+Mrl8hySzQB+OJjIhxJvajKALw7i99tya60P2JoA8Mn0orMBrfVJh+yfc+UHcN6hF044G+AkrMZ8rWFTazgBGLRsQ4cxYLXOEZEWFRIALlj2wsMw5COW2dkS1oDWepulgTfO5GZi2pAXCoUlYQ0Ui8UG2yLhTG5qsA15lBVkPp9famngqzM5yecZGkLPnMkB9FgaaE16EgO450xO8ppldgZMSXTlD57KQ5ZtXHU2ICJHLclNNIfgb7Hl11ofdjaQz+cXkPxg2cVmWXDQQXyj2a2gHff7crk8X4UBSd82S8aEWR7UGk7mnsm8rXhOBkOJDzK1y6GhP0YGzeQ0FcY8I0wE1eaiw5ivTOPbqaIAwAPXRuMKAD0qKrTWx+tlgOSxyAaCXuitg/i+SqUyKxYDJPembUAcXpBsTdxKcezfVHEjeMEfTUH8mO/762I3EJi4lEIPtKmkYDaakpzQAPrNRppKElrr9Q67FS7iR33f36TSQHASE7eBMypNALgdo/g7sdV8W3R2di43W+ExiB82XKoeILnbZZuwivhxrfWeuoifZqI5rAERaVJZAMnrIQyUVFbQ3t6+yOUQxPy3q6trocoSRGQFyRcWBl7FdnwUN8weEYCPNcR/9jxvh8oyAOyrVpmCTw4OqZkAETn116cHE+aamkkQkaYg87/CHICoLMAsv00k2chv+Sf6eNc6OVcAAAAASUVORK5CYII=" alt="marker--v1">Negros</li>
+          </div>
+            <div class="location-container">
+              <li><img style="width: 16px; height: 16px; margin-right: 5px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAABcklEQVR4nO2XQU7DMBRELTaIM7DvTYpyAFjkDsAVgoALRJEy85Mb5A7AEljBKYrEtpXKqkGGikZIoNhuGhs80iyjP8//27GVioqKivJaeZ7vi8g5gAcAC5LtkAaw0LVInunaTuEBHJJ8Hjo0f4Z50hmsV37M8OxAWHVCj83Y4bmBODUGIPk4dnBufG8DMPcgeLv23Aag9cnq3wEASH2yigCIHUiDGiERuST5qg3gKqg9ICIXAJadU+StLMvrIABIZt/Cf0G4dELtAuCX8M4QamiAHuE/DMAKQg0J0Dd8B2K5/ib1BeDF9GoAYOYNAIBbACuD8CsANz4BDG4VARA7kHo7QiTvTDcxSa828SzoY5Sh/8gQ+lUCf+EyB9+u0yJy4tGD5tgG4GgbT0oAzk/Kuq6nxgBVVU1cim7TRVFMjAGyLNsjmYwdnmSisygbNU1zMCYEyURnsArf7YRuoZ5Dl43d1/JZY6prWq98VFRUlNqV3gHL6KjtbgBaeAAAAABJRU5ErkJggg==" alt="age">2024</li>
+          </div>
+        </div>
+
+          <div class="weight-container-row">
+            <div class="weight-container-wrapper">
+          <div class="weight-container">
+            <li><img style="width: 16px; height: 16px;" src="data:image/png;base64,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" alt="clock">Hours: 9,730</li>
+          </div>
+        </div>
+        <div class="weight-container-wrapper">
+          <div class="weight-container">
+            <li><img style="width: 16px; height: 16px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAYAAADFeBvrAAAACXBIWXMAAAsTAAALEwEAmpwYAAACaklEQVR4nN3avWsUURQF8Bu/UGIjqIVaKIJG0eB3aWMZFBsLEbRIk8LGQkg3FrFIsRbuzjvnDiyLI4qMSBDUQkSRNIr+A6kkhQqiYgpB8WNk2ASWJbt5C4vz7v7g/QFnzsx7dx8r8h84546SzH0WgN9JkuyRkLHJKxDJWxKyNE2HSS74tuOc2yshAzDew+t2W0IH4JVvO6o6IiFT1YM9tHNHQkey6hnoj3PugISsUqlsIPnVs517EjoAFz3D/C1eTQkdgFnPQJmETlVHiifv004cx6MSOpI3PNt5IKHLsmwdgE8+7RQznoQOwHnPdmbEAgDPPc+eYxI6Vd3tsxmQfCgWkJz2aUdVj0voVHUtyY8e384jsUBVz3luBifEApJPPcI8EQuSJNlVTMwegeZJvl1pAbhSaiCSU55btc/6XK/Xt5QWJoqiNQDe9yuQql6SMqnq2X6FAfAyz/OhUgORfNynMD/jON5XapgkSXYUlxt9CnRNyuac21RMzN1WMbMB+LZCmLlGo7FeLIjjeNSjoVNiBcmrpq9+2wF41uVV++Kc2ypWpM177R9dAo2LJao61iXMbOlnTq8A3Ox05gDYL9YAmOvQ0JRYA2BnhzDvim9LrCE50WH4HBOLAMwsE+iuWBQ1f1K0jzsL1Wp1m1hE8uQy7UyIVQCut4V5HUXRKrGKzbuBpTC/kiQ5JFap6ua2C5NpsQzAhZaJYL5Wq20Uy0imLe2cFsvyPB8C8GExzH2xzjl3eOnMAbBdrFPVycVv57IMApIvALzJsmy1WJem6TCA76p6RAaBc+4MgIoMClWdNH/mSItQ/nz0DxNTUwCoaoD2AAAAAElFTkSuQmCC" alt="lightning-bolt">HP 740</li>
+          </div>
+        </div>
+      </div>
+      
+
+          <div class="price-container-row">
+            <div class="price-container-wrapper">
+              <div class="price-container">
+                <img style="margin-right: 5px;" width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>
+                Price: <span class="price-value">1,563,000</span>
+              </div>
+            </div>
+            <div class="weight-container-wrapper">
+              <div class="weight-container">
+                <li><img style="width: 16px; height: 16px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAAAsTAAALEwEAmpwYAAAEgElEQVR4nO2dW4hOXRjHfxeOcyduJI2+MlLcmEzJhSluxIUcMhsNwoUrUnKIHPKV4U6TuXQoEnJhQrhwjlDIhRgmuRDp81HkNIxW1tu872vvPfvd77vXYfbzr6fmYk+z1++/17PXetaatUEkEolEIpFIJBKJRCKRSCRyU0OAicAsYD4QGIhFwBygGWgA6sip6oEFhqDHRQvQBAwnR5rkAPjyWAiMIQea7ADsuN6g0pLzUl22E/gIfAauALM9h19sgtM9YSnwHegti1/ANs/hF6cjJ98Ji4EfIfCLY6/n8Auherl38HtDTPARfiEV1fkIv7fIhGrhzwTGAsNq0IZBwEigUbcnyd8fj6fwe4GDVT59WTZ+BDAvwX3MIKfw6w20bUSCnqBmzLmDP85gGxsTjIZyBf8fw+0cleC+cgE/sPTCG+SaAXmCrzTYJQNswW/AnpxJQaq80GMB/gTsqtEFA5oiajtZw5+OXSUZhhoxoNMC/ACYgj0lnYgZMeCjBfiBXg1TOdjkiGdUhaUIIwZ8tgA/8Cgy11WBj1UDZuvFFHnysWOA0nZJO1jrAQVtkpyPVQPKTcjjCzewbYDSToGPVQN8XcMNBkIPsA1/NdAGnAHuAC/0RPGTHqn16J/fAd3AXeA80A4s990AW9sFW4EO4FHKgmAhXgGrfDWg3gL4ZcBR4H0V0MvjrI8GDLGwS3kL8LKG4AvR5aMBEw3Dbwe+ZQBfxWsfDZhlEH5HgrJHNfG/jwaY+s+UNuBnhvBVfPXRABPw16ZYd0gTamVPDOBvCNcNwJceQPjTtzHjvF8canFJegClEC4Zgq/iPzGAvyZblSx5VhuqdCE9gD4IOwzCV3FfDKDkCTxWAbyeKmtBKi6IAZQYkHTB/xywQhfmTldhgJroSQqiD8KjBNAuh0B7ltIAtaInBtAHoasfYE/1vtS0Pac41ERviRhACcgn/ZQN1ocAU2nobQoDrmY0i/e6FHE7BtipiN+5kjL9qFqTGEAphO6YquWKkOsPpYT/NqP043UP2B4D7ETI9et0WkpjwJEM2+GtAddiKpZrKri+v3ij3xtiAH0QWmNKEGGz1Q0p1wpUkW9fhvC97QH7Y6C117BcfTFj+N4acDFm6Lmy7Fr1Mv6SAv7jjFOP1wa8jID2MOTajhTwH0SMosQA/myOisrnJ1OWK4pzfmfE7FkM4A+EthiAe8pAtVawRaVLl7dNgfc2BZ2MANgTkjZ29QNdjaRuAv9aAO+tATcq2DS1FTheFmo2fADYbDjVDBgDnkcYcM8BmLkw4IPBjbMDwoBFNb7hHxEGHHYAZqVh5MCmuTW+6TcRBux2AGilYeTIsuYa3/ShEPjdeotK4FkYObSvocY3vUSnm9d6GHlL7w0NPAwjB0nV6fPabDc2yPPBrU0ONDhwLKZiUMP1G992o4M8H949WlIR1o+vb8j5+6DFhQ84jMlpOlro0ocbhuqjvfLQG1qAaa5+sKFOj4Wb9ayw1mWLwEIUPmM1Q7fNmW8EiEQikUgkEolEIpFIJBKJ8Eq/AUcHalEkRwYnAAAAAElFTkSuQmCC" alt="eco-fuel">15.1 L/hr</li>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+        <div class="container-with-x">
+          <div class="save-icon" onclick="toggleSaveIcon(this)">
+            <i class="bi bi-heart-fill"></i>
+            <span>Save</span>
+        </div>
+          <div class="bottom-button-container">
+            <button class="small-edit-button">Offer</button>
+            <button class="small-next-button">View</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="rectangle">
+        <img src="Cacao2.jpg" alt="Image" class="rectangle-image">
+        <div class="details-container">
+          <div class="icon-title-container">
+            <div class="for-sale-badge">For Sale</div>
+            <span style="margin-left: 10px;" class="title" id="rectangle-title">1 Ton of Cocoa Beans Available for Sale</span>
+          </div>
+
+          <div class="user-accepts">
+            <div class="location-container">
+              <img style="margin-right: 5px;" width="16" height="16" src="https://img.icons8.com/plumpy/48/bank-card-back-side.png" alt="bank-card-back-side"/>User accepts:
+          </div>
+           <label for="payment-cash"><img width="16" height="16" src="https://img.icons8.com/color/48/get-cash.png" alt="get-cash"/>
+                <label for="payment-gcash"><img src="gcash icon appstore.webp"  style="width: 16px; height: 16px; border-radius: 2px;">
+                    <label for="payment-gcash"><img src="maya icon.webp"  style="width: 16px; height: 16px; border-radius: 2px;">
+                        <label for="payment-credit-card"><img width="20" height="20" src="https://img.icons8.com/color/48/visa.png" alt="visa" style="width: 20px; height: 20px;"><img width="16" height="16" src="https://img.icons8.com/color/48/mastercard.png" alt="mastercard" style="width: 20px; height: 20px;"></label>
+          </div>
+
+          <div class="user-accepts">
+            <div class="location-container">
+              <li><img style="width: 16px; height: 16px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAADMklEQVR4nO1aO2hUQRQd/4pGS/ELigp+S8VC8RNRC7WwsxXFEEnQJjayCGKXYsm+Oee+rCQsVtsoNjaiBCUYgo1JsBIFNUrEf4IaiStDniTIusy8376ABy4s7y1nzrkzc9+8mafUf0zC87w1JM+SLAF4DOAdyZ8AxgGMAOgH0A3gdEdHx0qVFZA8QvI+yQmSFcuYAHBXRBrrLbzPQXTVANCbqhERWUbyRlThVYx0F4vFhkTFA9gI4Gnc4jkVQ4VCYUMi4kVkO4C3CYqvBD0x7Hne5ljFm6oB4GXS4jll4rXv+6tjES8i80wJTEs8p0w8yuVycyMbIHklbfEMQkQuR83+WgDfHDP3BECr7/tbS6XSYhPmt7lGcsCRawzAqijZ9xwa/C4iTblcbva/+Mrl8hySzQB+OJjIhxJvajKALw7i99tya60P2JoA8Mn0orMBrfVJh+yfc+UHcN6hF044G+AkrMZ8rWFTazgBGLRsQ4cxYLXOEZEWFRIALlj2wsMw5COW2dkS1oDWepulgTfO5GZi2pAXCoUlYQ0Ui8UG2yLhTG5qsA15lBVkPp9famngqzM5yecZGkLPnMkB9FgaaE16EgO450xO8ppldgZMSXTlD57KQ5ZtXHU2ICJHLclNNIfgb7Hl11ofdjaQz+cXkPxg2cVmWXDQQXyj2a2gHff7crk8X4UBSd82S8aEWR7UGk7mnsm8rXhOBkOJDzK1y6GhP0YGzeQ0FcY8I0wE1eaiw5ivTOPbqaIAwAPXRuMKAD0qKrTWx+tlgOSxyAaCXuitg/i+SqUyKxYDJPembUAcXpBsTdxKcezfVHEjeMEfTUH8mO/762I3EJi4lEIPtKmkYDaakpzQAPrNRppKElrr9Q67FS7iR33f36TSQHASE7eBMypNALgdo/g7sdV8W3R2di43W+ExiB82XKoeILnbZZuwivhxrfWeuoifZqI5rAERaVJZAMnrIQyUVFbQ3t6+yOUQxPy3q6trocoSRGQFyRcWBl7FdnwUN8weEYCPNcR/9jxvh8oyAOyrVpmCTw4OqZkAETn116cHE+aamkkQkaYg87/CHICoLMAsv00k2chv+Sf6eNc6OVcAAAAASUVORK5CYII=" alt="marker--v1">Manila</li>
+            </div>
+              <div class="weight-container">
+                <li><img style="height: 16px; width: 16px;" src="data:image/png;base64,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" alt="big-parcel">MOQ Weight: 10kg</li>
+              </div>
+        </div>
+
+        <div class="price-container-row">
+          <div class="price-container-wrapper">
+            <div class="price-container">
+              <img style="margin-right: 5px;" width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>
+              MOQ Price: <span class="price-value">1,500</span>
+            </div>
+          </div>
+          <div class="price-container-wrapper">
+            <div class="price-container">
+              <img style="margin-right: 5px;" width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>
+              Per kg: <span class="price-value">150</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="description">
+          <p class="description-p"><strong>Description:</strong> 
+            Standard listing descriptions should follow this format. These types 
+            <span class="read-more-link"><a href="#description">Read More</a></span>
+          </p>
+        </div>
+          
+        </div>
+        <div class="container-with-x">
+          <div class="save-icon" onclick="toggleSaveIcon(this)">
+            <i class="bi bi-heart-fill"></i>
+            <span>Save</span>
+        </div>
+          <div class="bottom-button-container">
+            <button class="small-edit-button">Offer</button>
+            <button class="small-next-button">View</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+    
+  <div id="chart"></div>
+  <div class="tooltip" id="tooltip"></div>
+
+  <div class="graph-container">
+    <div class="graph-rectangle">
+        <div class="title-price-container">
+          <div class="title-dropbox-container">
+            <span class="market-title">Market Price</span>
+            <div class="listing-dropbox-container">
+              <select class="listing-dropbox">
+                  <option value="placeholder" disabled selected></option>
+                  <option value="pigs">Pigs</option>
+                  <option value="piglets">Piglets</option>
+                  <option value="lechon">Lechon</option>
+                  <option value="products">Products</option>
+              </select>
+          </div>
+        </div>
+            <div class="market-price-container">
+              <div class="span-market-price">
+                <span class="bottom-span">Average/kg</span>
+            <li class="market-price">
+                <span class="price-background">
+                    <img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>
+                    250
+                </span>
+            </li>
+          </div>
+            <div class="span-market-price">
+              <span class="bottom-span">Lowest/kg</span>
+            <li class="market-price">
+              <span class="lowest-price-background">
+                  <img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>
+                  250
+              </span>
+          </li>
+        </div>
+        </div>
+        </div>
+        <div class="graph-content">
+            <div class="y-axis">
+                <div class="price-label">
+                    <img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>230<div class="horizontal-line"></div>
+                </div>
+                <div class="price-label">
+                    <img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>220<div class="horizontal-line"></div>
+                </div>
+                <div class="price-label">
+                    <img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>210<div class="horizontal-line"></div>
+                </div>
+                <div class="price-label">
+                    <img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>200<div class="horizontal-line"></div>
+                </div>
+                <div class="price-label">
+                    <img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>190<div class="horizontal-line"></div>
+                </div>
+                <div class="price-label">
+                    <img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>180<div class="horizontal-line"></div>
+                </div>
+                <div class="price-label">
+                    <img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>170<div class="horizontal-line"></div>
+                </div>
+            </div>
+            <div class="vertical-lines">
+                <div class="vertical-line-container">
+                    <div class="line mon"></div>
+                    <span>Mon</span>
+                </div>
+                <div class="vertical-line-container">
+                    <div class="line tue"></div>
+                    <span>Tue</span>
+                </div>
+                <div class="vertical-line-container">
+                    <div class="line wed"></div>
+                    <span>Wed</span>
+                </div>
+                <div class="vertical-line-container">
+                    <div class="line thur"></div>
+                    <span>Thur</span>
+                </div>
+                <div class="vertical-line-container">
+                    <div class="line fri"></div>
+                    <span>Fri</span>
+                </div>
+                <div class="vertical-line-container">
+                    <div class="line sat"></div>
+                    <span>Sat</span>
+                </div>
+                <div class="vertical-line-container">
+                    <div class="line sun"></div>
+                    <span>Sun</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+</section>
+
+<section class="review-section">
+  <div class="title-container">
+      <h3 class="review-title">Reviews</h3>
+      <!-- <h3 class="username-title">Darwinrabago12</h3> -->
+  </div>
+  <div class="scroll-bar-review-container">
+    <div class="scrollable-rectangles-review">
+      <div class="review-container">
+        <div class="review-box">
+          <div class="review-profile-container">
+            <div class="profile-placeholder">J</div> <!-- Placeholder Profile Picture -->
+            <div class="review-column-container">
+              <span class="username">John Doe</span>
+              <div class="review-header">
+                <div class="review-rating">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <span class="rating-number">5</span>
+                </div>
+                <div class="divider-vertical"></div>
+                <span class="review-time">2 months ago</span>
+              </div>
+            </div>
+          </div>
+          <p class="review-description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet nulla in lacus pellentesque, at suscipit erat dignissim. Integer auctor sapien non est laoreet, et vehicula orci euismod.
+          </p>
+          <div class="review-footer">
+            <span class="helpful-text">Helpful?</span>
+            <button class="helpful-button">
+              Yes <i class="bi bi-hand-thumbs-up"></i>
+            </button>
+            <button class="helpful-button">
+              No <i class="bi bi-hand-thumbs-down"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Add other review-boxes here as needed -->
+        
+        <!-- Second review-box -->
+        <div class="review-box">
+          <div class="review-profile-container">
+            <div class="profile-placeholder" style="background-color: red;">S</div>
+            <div class="review-column-container">
+              <span class="username">Sarah Parker</span>
+              <div class="review-header">
+                <div class="review-rating">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star"></i>
+                  <span class="rating-number">4</span>
+                </div>
+                <div class="divider-vertical"></div>
+                <span class="review-time">1 month ago</span>
+              </div>
+            </div>
+          </div>
+          <p class="review-description">
+            The product quality is quite good. The transaction was smooth, and the seller was responsive. There were some minor issues, but overall, it was a positive experience. Would recommend to others!
+          </p>
+          <div class="review-footer">
+            <span class="helpful-text">Helpful?</span>
+            <button class="helpful-button">
+              Yes <i class="bi bi-hand-thumbs-up"></i>
+            </button>
+            <button class="helpful-button">
+              No <i class="bi bi-hand-thumbs-down"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Third review-box -->
+        <div class="review-box">
+          <div class="review-profile-container">
+            <div class="profile-placeholder" style="background-color: green;">M</div>
+            <div class="review-column-container">
+              <span class="username">Michael Brown</span>
+              <div class="review-header">
+                <div class="review-rating">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <span class="rating-number">5</span>
+                </div>
+                <div class="divider-vertical"></div>
+                <span class="review-time">2 weeks ago</span>
+              </div>
+            </div>
+          </div>
+          <p class="review-description">
+            Excellent service and product quality! The seller was very accommodating and the transaction was seamless. I would definitely recommend this seller to others.
+          </p>
+          <div class="review-footer">
+            <span class="helpful-text">Helpful?</span>
+            <button class="helpful-button">
+              Yes <i class="bi bi-hand-thumbs-up"></i>
+            </button>
+            <button class="helpful-button">
+              No <i class="bi bi-hand-thumbs-down"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Add more review-boxes as needed -->
+
+        <!-- New 5-Star Review -->
+        <div class="review-box">
+          <div class="review-profile-container">
+            <div class="profile-placeholder" style="background-color: blue;">A</div>
+            <div class="review-column-container">
+              <span class="username">Alice Johnson</span>
+              <div class="review-header">
+                <div class="review-rating">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <span class="rating-number">5</span>
+                </div>
+                <div class="divider-vertical"></div>
+                <span class="review-time">1 week ago</span>
+              </div>
+            </div>
+          </div>
+          <p class="review-description">
+            Amazing service! The pig arrived in perfect health and was exactly as described. I highly recommend this seller to everyone.
+          </p>
+          <div class="review-footer">
+            <span class="helpful-text">Helpful?</span>
+            <button class="helpful-button">
+              Yes <i class="bi bi-hand-thumbs-up"></i>
+            </button>
+            <button class="helpful-button">
+              No <i class="bi bi-hand-thumbs-down"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- New 4-Star Review -->
+        <div class="review-box">
+          <div class="review-profile-container">
+            <div class="profile-placeholder" style="background-color: orange;">B</div>
+            <div class="review-column-container">
+              <span class="username">Bob Williams</span>
+              <div class="review-header">
+                <div class="review-rating">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star"></i>
+                  <span class="rating-number">4</span>
+                </div>
+                <div class="divider-vertical"></div>
+                <span class="review-time">3 weeks ago</span>
+              </div>
+            </div>
+          </div>
+          <p class="review-description">
+            The pig was in great condition and the transaction was smooth. However, the delivery was delayed by a day, so I’m giving it 4 stars.
+          </p>
+          <div class="review-footer">
+            <span class="helpful-text">Helpful?</span>
+            <button class="helpful-button">
+              Yes <i class="bi bi-hand-thumbs-up"></i>
+            </button>
+            <button class="helpful-button">
+              No <i class="bi bi-hand-thumbs-down"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- New 3-Star Review -->
+        <div class="review-box">
+          <div class="review-profile-container">
+            <div class="profile-placeholder" style="background-color: rgb(212, 212, 0);">C</div>
+            <div class="review-column-container">
+              <span class="username">Charlie Davis</span>
+              <div class="review-header">
+                <div class="review-rating">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star"></i>
+                  <i class="bi bi-star"></i>
+                  <span class="rating-number">3</span>
+                </div>
+                <div class="divider-vertical"></div>
+                <span class="review-time">1 month ago</span>
+              </div>
+            </div>
+          </div>
+          <p class="review-description">
+            The pig was okay, but it wasn’t as healthy as I expected. The seller could improve the quality control process.
+          </p>
+          <div class="review-footer">
+            <span class="helpful-text">Helpful?</span>
+            <button class="helpful-button">
+              Yes <i class="bi bi-hand-thumbs-up"></i>
+            </button>
+            <button class="helpful-button">
+              No <i class="bi bi-hand-thumbs-down"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- New 1-Star Review with Humor -->
+        <div class="review-box">
+          <div class="review-profile-container">
+            <div class="profile-placeholder" style="background-color: red;">D</div>
+            <div class="review-column-container">
+              <span class="username">David Lee</span>
+              <div class="review-header">
+                <div class="review-rating">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star"></i>
+                  <i class="bi bi-star"></i>
+                  <i class="bi bi-star"></i>
+                  <i class="bi bi-star"></i>
+                  <span class="rating-number">1</span>
+                </div>
+                <div class="divider-vertical"></div>
+                <span class="review-time">2 days ago</span>
+              </div>
+            </div>
+          </div>
+          <p class="review-description">
+            Well, the pig which I supposed to receive... was already dead. Thank you!
+          </p>
+          <div class="review-footer">
+            <span class="helpful-text">Helpful?</span>
+            <button class="helpful-button">
+              Yes <i class="bi bi-hand-thumbs-up"></i>
+            </button>
+            <button class="helpful-button">
+              No <i class="bi bi-hand-thumbs-down"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Additional Reviews -->
+        <!-- Continue adding more reviews as needed -->
+         
+            <!-- Add New Review Here -->
+    <div class="review-box">
+        <div class="review-profile-container">
+          <div class="profile-placeholder" style="background-color: purple;">E</div>
+          <div class="review-column-container">
+            <span class="username">Emily White</span>
+            <div class="review-header">
+              <div class="review-rating">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <span class="rating-number">5</span>
+              </div>
+              <div class="divider-vertical"></div>
+              <span class="review-time">3 days ago</span>
+            </div>
+          </div>
+        </div>
+        <p class="review-description">
+          Excellent experience! The seller was very responsive, and the pig was in perfect condition upon arrival. I highly recommend this seller to others.
+        </p>
+        <div class="review-footer">
+          <span class="helpful-text">Helpful?</span>
+          <button class="helpful-button">
+            Yes <i class="bi bi-hand-thumbs-up"></i>
+          </button>
+          <button class="helpful-button">
+            No <i class="bi bi-hand-thumbs-down"></i>
+          </button>
+        </div>
+      </div>
+
+
+      <div class="review-box">
+        <div class="review-profile-container">
+          <div class="profile-placeholder" style="background-color: teal;">J</div>
+          <div class="review-column-container">
+            <span class="username">Jessica Adams</span>
+            <div class="review-header">
+              <div class="review-rating">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+                <span class="rating-number">4</span>
+              </div>
+              <div class="divider-vertical"></div>
+              <span class="review-time">2 days ago</span>
+            </div>
+          </div>
+        </div>
+        <p class="review-description">
+          The product was as described, and the customer service was helpful. The delivery could have been quicker, but overall, I am satisfied with the purchase.
+        </p>
+        <div class="review-footer">
+          <span class="helpful-text">Helpful?</span>
+          <button class="helpful-button">
+            Yes <i class="bi bi-hand-thumbs-up"></i>
+          </button>
+          <button class="helpful-button">
+            No <i class="bi bi-hand-thumbs-down"></i>
+          </button>
+        </div>
+      </div>
+
+
+      </div>
+    </div>
+
+    <div class="review-rightside-container">
+  
+      <div class="review-span">This user currently has 7 reviews</div>
+  
+      <div class="review-average">
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-half"></i>
+          <i class="bi bi-star"></i>
+          <span>3.86</span>
+      </div>
+
+      <div class="review-dropbox-container">
+        <select class="review-dropbox">
+            <option value="placeholder" disabled selected>Sort by</option>
+            <option value="most-recent">Most Recent</option>
+            <option value="highest-rated">Highest Rated</option>
+            <option value="lowest-rated">Lowest Rated</option>
+        </select>
+    </div>
+  
+      <div class="review-stars">
+          <div class="star-bar-container">
+              <div class="star-bar">
+                  <div class="star-bar-fill" style="width: 60%;"></div>
+              </div>
+              <span class="star-label">5 stars (3)</span>
+          </div>
+          <div class="star-bar-container">
+              <div class="star-bar">
+                  <div class="star-bar-fill" style="width: 40%;"></div>
+              </div>
+              <span class="star-label">4 stars (2)</span>
+          </div>
+          <div class="star-bar-container">
+              <div class="star-bar">
+                  <div class="star-bar-fill" style="width: 20%;"></div>
+              </div>
+              <span class="star-label">3 stars (1)</span>
+          </div>
+          <div class="star-bar-container">
+              <div class="star-bar">
+                  <div class="star-bar-fill" style="width: 0%;"></div>
+              </div>
+              <span class="star-label">2 stars (0)</span>
+          </div>
+          <div class="star-bar-container">
+              <div class="star-bar">
+                  <div class="star-bar-fill" style="width: 20%;"></div>
+              </div>
+              <span class="star-label">1 star (1)</span>
+          </div>
+      </div>
+  
+      <div class="review-word-searchbox">
+          <input type="text" placeholder="Search reviews..." class="listing-display-box">
+          <button type="submit">
+              <i class="bi bi-search"></i>
+          </button>
+      </div>
+
+<div class="review-search-result">Search results: "The word 'Y' was found X times."</div>
+
+  </div>
+
+
+
+</section>
+
+
+
+
+
+<footer>
+  <div class="footer-content">
+      <img src="Group 193.png" alt="Piggery Logo" class="footer-logo">
+      <div class="footer-columns">
+          <div class="footer-box">
+            <h4>Our Mission</h4>
+              <p class="brand-statement">
+                Farmify piggery marketplace aims to revolutionize pig farming by providing a reliable and user-friendly platform where farmers and buyers can connect, trade, and thrive together.
+              </p>
+          </div>
+          <div class="footer-box">
+              <h4>Navigation</h4>
+              <ul class="footer-nav">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Pigs for Sale</a></li>
+                  <li><a href="#">Sell your Pig</a></li>
+                  <li><a href="#">About us</a></li>
+                  <li><a href="#">Contact</a></li>
+              </ul>
+          </div>
+          <div class="footer-box">
+              <h4>Contact</h4>
+              <p>Phone: (123) 456-7890</p>
+              <p>FAX: (123) 456-7891</p>
+              <p>123 Example Address, City, Country</p>
+          </div>
+          <div class="footer-box">
+              <h4>Stay Connected</h4>
+              <p>Stay connected with our latest news and price alerts to never miss a great deal.</p>
+              <div class="email-container">
+                <input type="email" placeholder="Email address" class="email-input">
+          </div>
+          <div class="social-icons">
+            <img src="Group 149.png" alt="Facebook" class="social-icon">
+            <img src="Group 148.png" alt="Twitter" class="social-icon">
+            <img src="Group 147.png" alt="Instagram" class="social-icon">
+        </div>
+      </div>
+  </div>
+
+  <hr class="footer-divider">
+  <div class="footer-bottom">
+      <p>&copy; 2024 All rights reserved.</p>
+      <ul class="footer-bottom-nav">
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+      </ul>
+  </div>
+</footer>
+
+<script>
+  function toggleNav() {
+      var nav = document.querySelector('.navbar-collapse');
+      nav.classList.toggle('show');
+  }
+
+  function toggleSaveIcon(element) {
+        const icon = element.querySelector('i.bi-heart-fill');
+        icon.classList.toggle('red');
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const thumbnails = document.querySelectorAll('.thumbnail-images img');
+        const mainImage = document.getElementById('main-image');
+
+        thumbnails.forEach(function(thumb) {
+            thumb.addEventListener('mouseover', function() {
+                mainImage.src = this.getAttribute('data-image');
+            });
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+    const links = document.querySelectorAll('.nav-links a');
+
+    links.forEach(function(link) {
+        link.addEventListener('click', function() {
+            links.forEach(function(link) {
+                link.classList.remove('active');
+            });
+            this.classList.add('active');
+        });
+    });
+
+    // Handle smooth scrolling for Read More link
+    const readMoreLink = document.querySelector('.read-more-link a');
+    readMoreLink.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default anchor behavior
+        const targetSection = document.querySelector(this.getAttribute('href')); // Get the target section
+
+        if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const dots = document.querySelectorAll('.pagination-dots .dot');
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      // Remove 'active' class from all dots
+      dots.forEach(dot => dot.classList.remove('active'));
+
+      // Add 'active' class to the clicked dot
+      dot.classList.add('active');
+
+      // Implement logic to show the corresponding review rectangle set
+      // For example: hide all review rectangles and show the corresponding set
+    });
+  });
+})
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const graphContainer = document.querySelector('.graph-content');
+  const verticalLines = document.querySelectorAll('.vertical-lines .line');
+  const horizontalLines = document.querySelectorAll('.y-axis .horizontal-line');
+
+  verticalLines.forEach((vLine, vIndex) => {
+    horizontalLines.forEach((hLine, hIndex) => {
+      const dot = document.createElement('div');
+      dot.classList.add('graph-dot');
+
+      // Calculate the position
+      const vLineRect = vLine.getBoundingClientRect();
+      const hLineRect = hLine.getBoundingClientRect();
+      const graphContainerRect = graphContainer.getBoundingClientRect();
+
+      const left = vLineRect.left - graphContainerRect.left - 4; // Adjust for half the dot's width
+      const top = hLineRect.top - graphContainerRect.top - 4; // Adjust for half the dot's height
+
+      dot.style.left = `${left}px`;
+      dot.style.top = `${top}px`;
+
+      graphContainer.appendChild(dot);
+    });
+  });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const graphContainer = document.querySelector('.graph-content');
+    const verticalLines = document.querySelectorAll('.vertical-lines .line');
+    const yAxisLabels = [230, 220, 210, 200, 190, 180, 170];
+    const maxPrice = Math.max(...yAxisLabels);
+    const minPrice = Math.min(...yAxisLabels);
+
+    const tooltip = document.getElementById('tooltip');
+    const marketPriceContainer = document.querySelector('.market-price .price-background');
+    const lowestPriceContainer = document.querySelector('.market-price .lowest-price-background');
+
+    const svgNS = "http://www.w3.org/2000/svg"; 
+
+    const svg = document.createElementNS(svgNS, "svg");
+    svg.setAttribute('class', 'graph-line-svg');
+    svg.style.position = 'absolute';
+    svg.style.top = 0;
+    svg.style.left = 0;
+    svg.style.width = '100%';
+    svg.style.height = '100%';
+
+    const line = document.createElementNS(svgNS, "polyline");
+    line.setAttribute('class', 'graph-line');
+    svg.appendChild(line);
+
+    const lowestLine = document.createElementNS(svgNS, "polyline");
+    lowestLine.setAttribute('class', 'lowest-graph-line');
+    svg.appendChild(lowestLine);
+
+    graphContainer.appendChild(svg);
+
+    const dayLabels = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+    function getRandomPrice() {
+        return Math.floor(Math.random() * (maxPrice - minPrice + 1)) + minPrice;
+    }
+
+    function getLowestPrice(averagePrice) {
+        return averagePrice - Math.floor(Math.random() * 10 + 5); // Ensure lowest price is always smaller
+    }
+
+    function updateGraph(dayIndex, prices, lowestPrices) {
+        const points = [];
+        const lowestPoints = [];
+        const dots = graphContainer.querySelectorAll('.graph-dot');
+        dots.forEach(dot => dot.remove()); // Remove existing dots
+
+        verticalLines.forEach((vLine, index) => {
+            const vLineRect = vLine.getBoundingClientRect();
+            const graphContainerRect = graphContainer.getBoundingClientRect();
+            const left = vLineRect.left - graphContainerRect.left + vLine.offsetWidth / 2; // Adjusting to the center of the line
+            const price = prices[index];
+            const lowestPrice = lowestPrices[index];
+            const top = ((maxPrice - price) / (maxPrice - minPrice)) * (graphContainer.clientHeight - 40) + 10; // Adding padding
+            const lowestTop = ((maxPrice - lowestPrice) / (maxPrice - minPrice)) * (graphContainer.clientHeight - 40) + 10; // Adding padding
+            points.push(`${left},${top}`);
+            lowestPoints.push(`${left},${lowestTop}`);
+
+            // Add dot element for average price
+            if (index <= dayIndex) {
+                const dot = document.createElement('div');
+                dot.classList.add('graph-dot');
+                dot.style.left = `${left - 4}px`; // Adjust for half the dot's width
+                dot.style.top = `${top - 4}px`; // Adjust for half the dot's height
+                dot.dataset.price = price;
+                dot.dataset.day = dayLabels[index];
+
+                dot.addEventListener('mouseover', function() {
+                    tooltip.style.display = 'block';
+                    tooltip.innerText = `${dot.dataset.day} ${dot.dataset.price}`;
+                    tooltip.style.left = `${dot.style.left}`;
+                    tooltip.style.top = `${parseInt(dot.style.top) - 20}px`; // Position above the dot
+                });
+
+                dot.addEventListener('mouseout', function() {
+                    tooltip.style.display = 'none';
+                });
+
+                graphContainer.appendChild(dot);
+            }
+
+            // Add dot element for lowest price
+            if (index <= dayIndex) {
+                const dot = document.createElement('div');
+                dot.classList.add('graph-dot');
+                dot.style.left = `${left - 4}px`; // Adjust for half the dot's width
+                dot.style.top = `${lowestTop - 4}px`; // Adjust for half the dot's height
+                dot.dataset.price = lowestPrice;
+                dot.dataset.day = dayLabels[index];
+
+                dot.addEventListener('mouseover', function() {
+                    tooltip.style.display = 'block';
+                    tooltip.innerText = `${dot.dataset.day} ${dot.dataset.price}`;
+                    tooltip.style.left = `${dot.style.left}`;
+                    tooltip.style.top = `${parseInt(dot.style.top) - 20}px`; // Position above the dot
+                });
+
+                dot.addEventListener('mouseout', function() {
+                    tooltip.style.display = 'none';
+                });
+
+                graphContainer.appendChild(dot);
+            }
+        });
+
+        line.setAttribute('points', points.slice(0, dayIndex + 1).join(' '));
+        lowestLine.setAttribute('points', lowestPoints.slice(0, dayIndex + 1).join(' '));
+
+        // Update the market price
+        marketPriceContainer.innerHTML = `
+            <img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>
+            ${prices[dayIndex]}
+        `;
+
+        // Update the lowest price
+        lowestPriceContainer.innerHTML = `
+            <img width="20" height="20" src="https://img.icons8.com/color/96/peso-symbol.png" alt="peso-symbol"/>
+            ${lowestPrices[dayIndex]}
+        `;
+    }
+
+    function startUpdateCycle() {
+        const prices = Array.from({ length: 7 }, getRandomPrice);
+        const lowestPrices = prices.map(price => getLowestPrice(price));
+        let dayIndex = 0;
+
+        function updateDay() {
+            updateGraph(dayIndex, prices, lowestPrices);
+            dayIndex = (dayIndex + 1) % 7;
+            if (dayIndex === 0) {
+                prices.length = 0;
+                lowestPrices.length = 0;
+                prices.push(...Array.from({ length: 7 }, getRandomPrice));
+                lowestPrices.push(...prices.map(price => getLowestPrice(price)));
+            }
+        }
+
+        updateDay(); // Initial graph update
+        setInterval(updateDay, 5000); // Update graph every 5 seconds
+    }
+
+    startUpdateCycle();
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollableRectangles = document.querySelector('.history-section .scrollable-rectangles');
+    const rectangleColumn = document.querySelector('.history-section .rectangle-column');
+    const clientContainer = document.querySelector('.history-section .client-container');
+
+    scrollableRectangles.addEventListener('scroll', function() {
+      const scrollLeft = scrollableRectangles.scrollLeft;
+      rectangleColumn.scrollLeft = scrollLeft;
+      clientContainer.scrollLeft = scrollLeft;
+    });
+
+    rectangleColumn.addEventListener('scroll', function() {
+      const scrollLeft = rectangleColumn.scrollLeft;
+      scrollableRectangles.scrollLeft = scrollLeft;
+      clientContainer.scrollLeft = scrollLeft;
+    });
+
+    clientContainer.addEventListener('scroll', function() {
+      const scrollLeft = clientContainer.scrollLeft;
+      scrollableRectangles.scrollLeft = scrollLeft;
+      rectangleColumn.scrollLeft = scrollLeft;
+    });
+  });
+
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const scrollableRectangles = document.querySelectorAll('.history-section .scrollable-rectangles');
+
+    function syncScroll(e) {
+      scrollableRectangles.forEach(el => {
+        if (el !== e.target) {
+          el.scrollTop = e.target.scrollTop;
+        }
+      });
+    }
+
+    scrollableRectangles.forEach(el => el.addEventListener('scroll', syncScroll));
+  });
+
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const reviewBoxes = document.querySelectorAll('.review-box');
+
+    reviewBoxes.forEach((box, index) => {
+        // Remove all borders first
+        box.style.borderTop = 'none';
+        box.style.borderBottom = '1px solid #e0e0e0';
+
+        // If it's the first review, add a top border
+        if (index === 0) {
+            box.style.borderTop = '1px solid #e0e0e0';
+        }
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const reviewDropdown = document.querySelector('.review-dropbox');
+    const reviewContainer = document.querySelector('.scrollable-rectangles-review');
+    const reviewBoxes = Array.from(document.querySelectorAll('.review-box'));
+
+    function sortReviews(sortType) {
+        let sortedReviews;
+
+        if (sortType === 'most-recent') {
+            sortedReviews = reviewBoxes.sort((a, b) => {
+                const dateA = new Date(a.querySelector('.review-time').textContent);
+                const dateB = new Date(b.querySelector('.review-time').textContent);
+                return dateB - dateA;
+            });
+        } else if (sortType === 'highest-rated') {
+            sortedReviews = reviewBoxes.sort((a, b) => {
+                const ratingA = parseFloat(a.querySelector('.rating-number').textContent);
+                const ratingB = parseFloat(b.querySelector('.rating-number').textContent);
+                return ratingB - ratingA;
+            });
+        } else if (sortType === 'lowest-rated') {
+            sortedReviews = reviewBoxes.sort((a, b) => {
+                const ratingA = parseFloat(a.querySelector('.rating-number').textContent);
+                const ratingB = parseFloat(b.querySelector('.rating-number').textContent);
+                return ratingA - ratingB;
+            });
+        }
+
+        // Clear the container and append the sorted reviews
+        reviewContainer.innerHTML = '';
+        sortedReviews.forEach(review => reviewContainer.appendChild(review));
+    }
+
+    reviewDropdown.addEventListener('change', function() {
+        const selectedOption = this.value;
+        sortReviews(selectedOption);
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const reviewDropdown = document.querySelector('.review-dropbox');
+    const reviewContainer = document.querySelector('.scrollable-rectangles-review');
+    const reviewBoxes = Array.from(document.querySelectorAll('.review-box'));
+
+    function parseTimeAgo(timeAgo) {
+        const timeParts = timeAgo.split(' ');
+        const number = parseInt(timeParts[0], 10);
+        const unit = timeParts[1].toLowerCase();
+
+        let milliseconds = 0;
+        if (unit.includes('second')) {
+            milliseconds = number * 1000;
+        } else if (unit.includes('minute')) {
+            milliseconds = number * 1000 * 60;
+        } else if (unit.includes('hour')) {
+            milliseconds = number * 1000 * 60 * 60;
+        } else if (unit.includes('day')) {
+            milliseconds = number * 1000 * 60 * 60 * 24;
+        } else if (unit.includes('week')) {
+            milliseconds = number * 1000 * 60 * 60 * 24 * 7;
+        } else if (unit.includes('month')) {
+            milliseconds = number * 1000 * 60 * 60 * 24 * 30; // Approximate
+        } else if (unit.includes('year')) {
+            milliseconds = number * 1000 * 60 * 60 * 24 * 365; // Approximate
+        }
+
+        return Date.now() - milliseconds;
+    }
+
+    function sortReviews(sortType) {
+        let sortedReviews;
+
+        if (sortType === 'most-recent') {
+            sortedReviews = reviewBoxes.sort((a, b) => {
+                const timeA = parseTimeAgo(a.querySelector('.review-time').textContent);
+                const timeB = parseTimeAgo(b.querySelector('.review-time').textContent);
+                return timeB - timeA;
+            });
+        } else if (sortType === 'highest-rated') {
+            sortedReviews = reviewBoxes.sort((a, b) => {
+                const ratingA = parseFloat(a.querySelector('.rating-number').textContent);
+                const ratingB = parseFloat(b.querySelector('.rating-number').textContent);
+                return ratingB - ratingA;
+            });
+        } else if (sortType === 'lowest-rated') {
+            sortedReviews = reviewBoxes.sort((a, b) => {
+                const ratingA = parseFloat(a.querySelector('.rating-number').textContent);
+                const ratingB = parseFloat(b.querySelector('.rating-number').textContent);
+                return ratingA - ratingB;
+            });
+        }
+
+        // Clear the container and append the sorted reviews
+        reviewContainer.innerHTML = '';
+        sortedReviews.forEach(review => reviewContainer.appendChild(review));
+    }
+
+    reviewDropdown.addEventListener('change', function() {
+        const selectedOption = this.value;
+        sortReviews(selectedOption);
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const searchBox = document.querySelector('.review-word-searchbox input[type="text"]');
+    const searchButton = document.querySelector('.review-word-searchbox button');
+    const reviewBoxes = document.querySelectorAll('.review-box');
+    const searchResult = document.querySelector('.review-search-result');
+
+    searchButton.addEventListener('click', function() {
+        const searchTerm = searchBox.value.trim().toLowerCase();
+        let matchCount = 0;
+
+        // Clear previous highlights and show all reviews
+        reviewBoxes.forEach(box => {
+            const description = box.querySelector('.review-description');
+            const originalText = description.textContent;
+            description.innerHTML = originalText; // Remove any previous highlights
+            box.style.display = ''; // Show all reviews initially
+        });
+
+        if (searchTerm) {
+            reviewBoxes.forEach(box => {
+                const description = box.querySelector('.review-description');
+                const originalText = description.textContent.toLowerCase();
+                let highlightedText = description.textContent;
+                const regex = new RegExp(`(${searchTerm})`, 'gi'); // Case-insensitive match
+
+                if (originalText.includes(searchTerm)) {
+                    matchCount += (originalText.match(regex) || []).length; // Count matches
+                    highlightedText = description.textContent.replace(regex, '<span class="highlight">$1</span>'); // Highlight matches
+                    description.innerHTML = highlightedText; // Update description with highlighted text
+                } else {
+                    box.style.display = 'none'; // Hide reviews without the search term
+                }
+            });
+
+            // Display the search result with correct grammar
+            const resultText = `Search results: The word '${searchTerm}' was found ${matchCount} time${matchCount !== 1 ? 's' : ''}.`;
+            searchResult.textContent = resultText;
+        } else {
+            searchResult.textContent = ''; // Clear result if search term is empty
+            reviewBoxes.forEach(box => box.style.display = ''); // Show all reviews if search term is empty
+        }
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const searchBox = document.querySelector('.review-word-searchbox input[type="text"]');
+    const searchButton = document.querySelector('.review-word-searchbox button');
+
+    // Add an event listener for the Enter key on the search box
+    searchBox.addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault(); // Prevent the default form submission
+            searchButton.click(); // Trigger the click event on the search button
+        }
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const starLabels = document.querySelectorAll('.star-label');
+    const reviewBoxes = Array.from(document.querySelectorAll('.review-box'));
+    let activeLabel = null;
+
+    starLabels.forEach(label => {
+        label.addEventListener('mouseover', function() {
+            this.classList.add('hovered');
+        });
+
+        label.addEventListener('mouseout', function() {
+            this.classList.remove('hovered');
+        });
+
+        label.addEventListener('click', function() {
+            // Remove active class from any previously selected label
+            if (activeLabel) {
+                activeLabel.classList.remove('active');
+            }
+
+            // Add active class to the clicked label
+            this.classList.add('active');
+            activeLabel = this;
+
+            // Get the number of stars from the label text
+            const starRating = parseInt(this.textContent[0]);
+
+            // Filter reviews based on the selected star rating
+            reviewBoxes.forEach(box => {
+                const rating = parseInt(box.querySelector('.rating-number').textContent);
+                if (rating === starRating) {
+                    box.style.display = 'block'; // Show matching reviews
+                } else {
+                    box.style.display = 'none'; // Hide non-matching reviews
+                }
+            });
+        });
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const reviewContainer = document.querySelector('.scrollable-rectangles-review');
+    const reviewCountSpan = document.querySelector('.review-span');
+    const reviewAverageSpan = document.querySelector('.review-average span');
+    const reviewStars = document.querySelector('.review-stars');
+    const starBars = document.querySelectorAll('.star-bar-fill');
+    const reviewDropdown = document.querySelector('.review-dropbox');
+    const reviewBoxes = Array.from(document.querySelectorAll('.review-box'));
+    const searchBox = document.querySelector('.review-word-searchbox input[type="text"]');
+    const searchButton = document.querySelector('.review-word-searchbox button');
+    const searchResult = document.querySelector('.review-search-result');
+
+    // Function to update review count
+    function updateReviewCount() {
+        const reviewCount = reviewBoxes.length;
+        reviewCountSpan.textContent = `This user currently has ${reviewCount} reviews`;
+    }
+
+    // Function to calculate and update the average rating
+    function updateReviewAverage() {
+        const totalReviews = reviewBoxes.length;
+        let sumRatings = 0;
+        reviewBoxes.forEach(review => {
+            sumRatings += parseFloat(review.querySelector('.rating-number').textContent);
+        });
+        const averageRating = (sumRatings / totalReviews).toFixed(2);
+        reviewAverageSpan.textContent = averageRating;
+
+        // Update star icons based on the average
+        const stars = reviewAverageSpan.parentElement.querySelectorAll('i');
+        const fullStars = Math.floor(averageRating);
+        const halfStar = averageRating % 1 >= 0.5;
+
+        stars.forEach((star, index) => {
+            star.className = 'bi';
+            if (index < fullStars) {
+                star.classList.add('bi-star-fill');
+            } else if (index === fullStars && halfStar) {
+                star.classList.add('bi-star-half');
+            } else {
+                star.classList.add('bi-star');
+            }
+        });
+    }
+
+    // Function to update star bar fill percentages
+    function updateStarBars() {
+        const starCounts = [0, 0, 0, 0, 0];
+        reviewBoxes.forEach(review => {
+            const rating = parseInt(review.querySelector('.rating-number').textContent);
+            starCounts[rating - 1]++;
+        });
+        const totalReviews = reviewBoxes.length;
+        starBars.forEach((bar, index) => {
+            const percentage = ((starCounts[5 - index - 1] / totalReviews) * 100).toFixed(1);
+            bar.style.width = `${percentage}%`;
+            bar.nextElementSibling.textContent = `${5 - index} stars (${starCounts[5 - index - 1]})`;
+        });
+    }
+
+    // Function to sort reviews based on dropdown selection
+    function sortReviews(sortType) {
+        let sortedReviews;
+
+        if (sortType === 'most-recent') {
+            sortedReviews = reviewBoxes.sort((a, b) => {
+                const dateA = new Date(a.querySelector('.review-time').textContent);
+                const dateB = new Date(b.querySelector('.review-time').textContent);
+                return dateB - dateA;
+            });
+        } else if (sortType === 'highest-rated') {
+            sortedReviews = reviewBoxes.sort((a, b) => {
+                const ratingA = parseFloat(a.querySelector('.rating-number').textContent);
+                const ratingB = parseFloat(b.querySelector('.rating-number').textContent);
+                return ratingB - ratingA;
+            });
+        } else if (sortType === 'lowest-rated') {
+            sortedReviews = reviewBoxes.sort((a, b) => {
+                const ratingA = parseFloat(a.querySelector('.rating-number').textContent);
+                const ratingB = parseFloat(b.querySelector('.rating-number').textContent);
+                return ratingA - ratingB;
+            });
+        }
+
+        // Clear the container and append the sorted reviews
+        reviewContainer.innerHTML = '';
+        sortedReviews.forEach(review => reviewContainer.appendChild(review));
+    }
+
+    // Function to search reviews
+    function searchReviews() {
+        const searchTerm = searchBox.value.trim().toLowerCase();
+        let matchCount = 0;
+
+        // Clear previous highlights and show all reviews
+        reviewBoxes.forEach(box => {
+            const description = box.querySelector('.review-description');
+            const originalText = description.textContent;
+            description.innerHTML = originalText; // Remove any previous highlights
+            box.style.display = ''; // Show all reviews initially
+        });
+
+        if (searchTerm) {
+            reviewBoxes.forEach(box => {
+                const description = box.querySelector('.review-description');
+                const originalText = description.textContent.toLowerCase();
+                let highlightedText = description.textContent;
+                const regex = new RegExp(`(${searchTerm})`, 'gi'); // Case-insensitive match
+
+                if (originalText.includes(searchTerm)) {
+                    matchCount += (originalText.match(regex) || []).length; // Count matches
+                    highlightedText = description.textContent.replace(regex, '<span class="highlight">$1</span>'); // Highlight matches
+                    description.innerHTML = highlightedText; // Update description with highlighted text
+                } else {
+                    box.style.display = 'none'; // Hide reviews without the search term
+                }
+            });
+
+            // Display the search result with correct grammar
+            const resultText = `Search results: The word '${searchTerm}' was found ${matchCount} time${matchCount !== 1 ? 's' : ''}.`;
+            searchResult.textContent = resultText;
+        } else {
+            searchResult.textContent = ''; // Clear result if search term is empty
+            reviewBoxes.forEach(box => box.style.display = ''); // Show all reviews if search term is empty
+        }
+    }
+
+    // Function to add a new review
+    function addNewReview(newReview) {
+        // Append the new review to the review container
+        reviewContainer.appendChild(newReview);
+        reviewBoxes.push(newReview);
+
+        // Update all necessary components
+        updateReviewCount();
+        updateReviewAverage();
+        updateStarBars();
+        sortReviews(reviewDropdown.value); // Sort based on selected option
+        searchReviews(); // Ensure new reviews are searchable
+    }
+
+    // Event listeners
+    reviewDropdown.addEventListener('change', function() {
+        sortReviews(this.value);
+    });
+
+    searchButton.addEventListener('click', function() {
+        searchReviews();
+    });
+
+    searchBox.addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault(); // Prevent the default form submission
+            searchButton.click(); // Trigger the click event on the search button
+        }
+    });
+
+    // Example: Adding a new review dynamically (you can replace this part with your actual new review creation logic)
+    const newReviewHTML = `
+<div class="review-box">
+  <div class="review-profile-container">
+    <div class="profile-placeholder" style="background-color: navy;">K</div>
+    <div class="review-column-container">
+      <span class="username">Kevin Smith</span>
+      <div class="review-header">
+        <div class="review-rating">
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star"></i>
+          <span class="rating-number">4</span>
+        </div>
+        <div class="divider-vertical"></div>
+        <span class="review-time">1 week ago</span>
+      </div>
+    </div>
+  </div>
+  <p class="review-description">
+    The overall experience was positive, but the product arrived slightly later than expected. The seller was responsive and addressed my concerns promptly.
+  </p>
+  <div class="review-footer">
+    <span class="helpful-text">Helpful?</span>
+    <button class="helpful-button">
+      Yes <i class="bi bi-hand-thumbs-up"></i>
+    </button>
+    <button class="helpful-button">
+      No <i class="bi bi-hand-thumbs-down"></i>
+    </button>
+  </div>
+</div>
+    `;
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = newReviewHTML;
+    const newReviewElement = tempDiv.firstElementChild;
+    addNewReview(newReviewElement); // Add the new review
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const reviewDropdown = document.querySelector('.review-dropbox');
+    const reviewContainer = document.querySelector('.scrollable-rectangles-review');
+    const reviewBoxes = Array.from(document.querySelectorAll('.review-box'));
+
+    function parseTimeAgo(timeAgo) {
+        const timeParts = timeAgo.split(' ');
+        const number = parseInt(timeParts[0], 10);
+        const unit = timeParts[1].toLowerCase();
+
+        let milliseconds = 0;
+        if (unit.includes('second')) {
+            milliseconds = number * 1000;
+        } else if (unit.includes('minute')) {
+            milliseconds = number * 1000 * 60;
+        } else if (unit.includes('hour')) {
+            milliseconds = number * 1000 * 60 * 60;
+        } else if (unit.includes('day')) {
+            milliseconds = number * 1000 * 60 * 60 * 24;
+        } else if (unit.includes('week')) {
+            milliseconds = number * 1000 * 60 * 60 * 24 * 7;
+        } else if (unit.includes('month')) {
+            milliseconds = number * 1000 * 60 * 60 * 24 * 30; // Approximate
+        } else if (unit.includes('year')) {
+            milliseconds = number * 1000 * 60 * 60 * 24 * 365; // Approximate
+        }
+
+        return Date.now() - milliseconds;
+    }
+
+    function sortReviews(sortType) {
+        let sortedReviews;
+
+        if (sortType === 'most-recent') {
+            sortedReviews = reviewBoxes.sort((a, b) => {
+                const timeA = parseTimeAgo(a.querySelector('.review-time').textContent);
+                const timeB = parseTimeAgo(b.querySelector('.review-time').textContent);
+                return timeB - timeA;
+            });
+        } else if (sortType === 'highest-rated') {
+            sortedReviews = reviewBoxes.sort((a, b) => {
+                const ratingA = parseFloat(a.querySelector('.rating-number').textContent);
+                const ratingB = parseFloat(b.querySelector('.rating-number').textContent);
+                return ratingB - ratingA;
+            });
+        } else if (sortType === 'lowest-rated') {
+            sortedReviews = reviewBoxes.sort((a, b) => {
+                const ratingA = parseFloat(a.querySelector('.rating-number').textContent);
+                const ratingB = parseFloat(b.querySelector('.rating-number').textContent);
+                return ratingA - ratingB;
+            });
+        }
+
+        // Clear the container and append the sorted reviews
+        reviewContainer.innerHTML = '';
+        sortedReviews.forEach(review => reviewContainer.appendChild(review));
+    }
+
+    reviewDropdown.addEventListener('change', function() {
+        const selectedOption = this.value;
+        sortReviews(selectedOption);
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const starLabels = document.querySelectorAll('.star-label');
+    const starBars = document.querySelectorAll('.star-bar-fill');
+    let reviewBoxArray = Array.from(document.querySelectorAll('.review-box'));
+
+    function updateStarLabels() {
+        const starCounts = [0, 0, 0, 0, 0];
+        reviewBoxArray.forEach(review => {
+            const rating = parseInt(review.querySelector('.rating-number').textContent);
+            starCounts[rating - 1]++;
+        });
+
+        starLabels.forEach((label, index) => {
+            const starRating = 5 - index;
+            label.textContent = `${starRating} stars (${starCounts[starRating - 1]})`;
+        });
+
+        updateStarBars(starCounts);
+    }
+
+    function updateStarBars(starCounts) {
+        const totalReviews = reviewBoxArray.length;
+        starBars.forEach((bar, index) => {
+            const percentage = ((starCounts[5 - index - 1] / totalReviews) * 100).toFixed(1);
+            bar.style.width = `${percentage}%`;
+            bar.nextElementSibling.textContent = `${5 - index} stars (${starCounts[5 - index - 1]})`;
+        });
+    }
+
+    function addNewReview(newReview) {
+        reviewBoxArray.push(newReview);
+        updateStarLabels(); // Update star labels and bars when a new review is added
+    }
+
+    // Initial call to update star labels and bars based on existing reviews
+    updateStarLabels();
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const starLabels = document.querySelectorAll('.star-label');
+    let reviewBoxes = Array.from(document.querySelectorAll('.review-box'));
+    let activeLabel = null;
+
+    starLabels.forEach(label => {
+        label.addEventListener('click', function() {
+            // Remove active class from any previously selected label
+            if (activeLabel) {
+                activeLabel.classList.remove('active');
+            }
+
+            // Add active class to the clicked label
+            this.classList.add('active');
+            activeLabel = this;
+
+            // Get the number of stars from the label text
+            const starRating = parseInt(this.textContent[0]);
+
+            // Filter and display reviews based on the selected star rating
+            reviewBoxes.forEach(box => {
+                const rating = parseInt(box.querySelector('.rating-number').textContent);
+                if (rating === starRating) {
+                    box.style.display = 'block'; // Show matching reviews
+                } else {
+                    box.style.display = 'none'; // Hide non-matching reviews
+                }
+            });
+        });
+    });
+});
+
+
+</script>
+</main>
+</body>
